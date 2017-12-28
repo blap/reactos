@@ -1,6 +1,4 @@
-/* Spanish translation originally by Javier Remacha, proofread Ismael Ferreras Morezuelas (2014-12-30) */
-
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 IDM_MENU MENU
 BEGIN
@@ -265,7 +263,7 @@ BEGIN
     261 "Hardware"
     262 "Ninguno"
     263 "On"
-    264 "Low"
+    264 "Baja"
     265 "V.23 (Minitel)"
     266 "Estándar"
     267 "No estándar (Bell, HST)"
@@ -389,7 +387,7 @@ BEGIN
     3221 "115K Baud"
     3222 "Actualizando"
     3223 "Error"
-    3233 "Success"
+    3233 "Completado"
     3236 "The modem failed to respond. Make sure it is properly connected and turned on.  If it is an internal modem or is connected, verify that the interrupt for the port is properly set."
     3237 "COMANDO NO SOPORTADO"
     3238 "Campo"
@@ -576,7 +574,7 @@ BEGIN
     6321 "Uganda"
     6322 "Ukraine"
     6323 "United Arab Emirates"
-    6324 "United Kingdom"
+    6324 "Inglés (Reino Unido)"
     6325 "United States"
     6326 "Burkina Faso"
     6327 "Uruguay"
