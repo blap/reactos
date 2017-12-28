@@ -1,6 +1,4 @@
-/* Italian translation by Daniele Forsi (dforsi at gmail.com) */
-
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 STRINGTABLE
 BEGIN
