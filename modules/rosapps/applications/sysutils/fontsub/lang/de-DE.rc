@@ -29,11 +29,11 @@ BEGIN
     END
     POPUP "&Bearbeiten"
     BEGIN
-        MENUITEM "&Neues Item\tStrg+N", ID_NEW
+        MENUITEM "&Neues Element\tStrg+N", ID_NEW
         MENUITEM SEPARATOR
-        MENUITEM "B&earbeite Item\tEnter", ID_EDIT
+        MENUITEM "Element &Bearbeiten\tEnter", ID_EDIT
         MENUITEM SEPARATOR
-        MENUITEM "&Lösche Item\tEntf", ID_DELETE
+        MENUITEM "Element &Löschen\tEntf", ID_DELETE
     END
     POPUP "&Hilfe"
     BEGIN
@@ -45,11 +45,11 @@ END
 BEGIN
     POPUP "Popup"
     BEGIN
-        MENUITEM "&Neues Item\tStrg+N", ID_NEW
+        MENUITEM "&Neues Element\tStrg+N", ID_NEW
         MENUITEM SEPARATOR
-        MENUITEM "B&earbeite Item\tEnter", ID_EDIT
+        MENUITEM "Element &Bearbeiten\tEnter", ID_EDIT
         MENUITEM SEPARATOR
-        MENUITEM "&Lösche Item\tDel", ID_DELETE
+        MENUITEM "Element &Löschen\tEntf", ID_DELETE
     END
 END
 
