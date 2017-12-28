@@ -1,22 +1,20 @@
-/* Russian translation by Dmitry Chapyshev, 2007-06-10 */
-
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
-    STRING_HELP "Использование: %s том: [-FS:система] [-V:метка] [-Q] [-A:размер] [-C]\n\n\
-  том:           Указывает букву диска (с последующим двоеточием),\n\
-                 точку подключения или имя тома.\n\
-  -FS:система    Указывает тип файловой системы (%s).\n\
-  -V:метка       Метка тома.\n\
-  -Q             Быстрое форматирование.\n\
-  -A:размер      Заменяет размер кластера по умолчанию. В общих\n\
-                 случаях рекомендуется использовать размеры кластера по умолчанию\n\
-                 NTFS поддерживает 512, 1024, 2048, 4096, 8192, 16K, 32K, 64K.\n\
-                 FAT поддерживает 8192, 16K, 32K, 64K, 128K, 256K.\n\
-                 Для сжатых NTFS-томов не поддерживается размер более 4096.\n\
-  -C             Только для NTFS: Устанавливает режим сжатия по умолчанию для\n\
-                 всех файлов, создаваемых на новом томе.\n\n"
+    STRING_HELP "Usage: %s drive: [-FS:file-system] [-V:label] [-Q] [-A:size] [-C]\n\n\
+  [drive:]         Specifies the drive to format.\n\
+  -FS:file-system  Specifies the type of file system (%s).\n\
+  -V:label         Specifies volume label.\n\
+  -Q               Performs a quick format.\n\
+  -A:size          Overrides the default allocation unit size. Default settings\n\
+                   are strongly recommended for general use\n\
+                   NTFS supports 512, 1024, 2048, 4096, 8192, 16K, 32K, 64K.\n\
+                   FAT supports 8192, 16K, 32K, 64K, 128K, 256K.\n\
+                   NTFS compression is not supported for allocation unit sizes\n\
+                   above 4096.\n\
+  -C               Files created on the new volume will be compressed by\n\
+                   default.\n\n"
     STRING_COMPLETE "%lu процентов выполнено.\r"
     STRING_FORMAT_FAIL "FormatEx завершился неудачей.\n\n"
     STRING_NO_SUPPORT "Операция не поддерживается"
@@ -30,8 +28,8 @@ BEGIN
     STRING_FILESYSTEM "Тип файловой системы %s.\n"
     STRING_LABEL_NAME_EDIT "Введите текущую метку тома %C: "
     STRING_ERROR_LABEL "Неправильная метка тома для этого устройства.\n"
-    STRING_YN_FORMAT "\nВНИМАНИЕ, ВСЕ ДАННЫЕ НА ДИСКЕ NON_REMOVABLE\n\
-  %C: БУДУТ УНИЧТОЖЕНЫ!\nНачать форматирование (Y-Да|N-Нет)? "
+    STRING_YN_FORMAT "\nWARNING, ALL DATA ON NON_REMOVABLE DISK\n\
+DRIVE %C: WILL BE LOST!\nProceed with Format (Y/N)? "
     STRING_YES_NO_FAQ "YN"
     STRING_VERIFYING "Проверка"
     STRING_FAST_FMT "Быстрое форматирование"
