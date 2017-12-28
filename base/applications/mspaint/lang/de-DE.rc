@@ -13,8 +13,8 @@ BEGIN
     POPUP "&Datei"
     BEGIN
         MENUITEM "Neu\tStrg+N", IDM_FILENEW
-        MENUITEM "Öffnen...\tStrg+O", IDM_FILEOPEN
-        MENUITEM "Speichern\tStrg+S", IDM_FILESAVE
+        MENUITEM "&Öffnen...\tStrg+O", IDM_FILEOPEN
+        MENUITEM "&Speichern\tStrg+S", IDM_FILESAVE
         MENUITEM "Speichern &unter...", IDM_FILESAVEAS
         MENUITEM SEPARATOR
         MENUITEM "Von Scanner oder Kamera...", IDM_FILEFROMSCANNERORCAMERA
@@ -39,8 +39,8 @@ BEGIN
         MENUITEM "Wiederholen\tStrg+Y", IDM_EDITREDO
         MENUITEM SEPARATOR
         MENUITEM "Ausschneiden\tStrg+X", IDM_EDITCUT
-        MENUITEM "Kopieren\tStrg+C", IDM_EDITCOPY
-        MENUITEM "Einfügen\tStrg+V", IDM_EDITPASTE
+        MENUITEM "&Kopieren\tStrg+C", IDM_EDITCOPY
+        MENUITEM "&Einfügen\tStrg+V", IDM_EDITPASTE
         MENUITEM "Auswahl löschen\tEntf", IDM_EDITDELETESELECTION
         MENUITEM "Markierung umkehren", IDM_EDITINVERTSELECTION
         MENUITEM "Alles &markieren\tStrg+A", IDM_EDITSELECTALL
@@ -52,7 +52,7 @@ BEGIN
     BEGIN
         MENUITEM "Werkzeugkasten\tStrg+W", IDM_VIEWTOOLBOX, CHECKED
         MENUITEM "Farbpalette\tStrg+F", IDM_VIEWCOLORPALETTE, CHECKED
-        MENUITEM "Statusleiste", IDM_VIEWSTATUSBAR, CHECKED
+        MENUITEM "&Statusleiste", IDM_VIEWSTATUSBAR, CHECKED
         MENUITEM "Formatsymbolleiste", IDM_FORMATICONBAR, CHECKED, GRAYED
         MENUITEM SEPARATOR
         POPUP "Zoom"
@@ -78,7 +78,7 @@ BEGIN
         MENUITEM "Drehen/Spiegeln...\tStrg+D", IDM_IMAGEROTATEMIRROR
         MENUITEM "Strecken/Zerren...\tStrg+K", IDM_IMAGESTRETCHSKEW
         MENUITEM "Zuschneiden", IDM_IMAGECROP
-        MENUITEM "Farben umkehren\tStrg+U", IDM_IMAGEINVERTCOLORS
+        MENUITEM "Farben &invertieren\tStrg+U", IDM_IMAGEINVERTCOLORS
         MENUITEM "Attribute...\tStrg+E", IDM_IMAGEATTRIBUTES
         MENUITEM "Bild löschen\tStrg+Umschalt+N", IDM_IMAGEDELETEIMAGE
         MENUITEM "Deckend zeichnen", IDM_IMAGEDRAWOPAQUE
@@ -94,7 +94,7 @@ BEGIN
     BEGIN
         MENUITEM "Hilfethemen", IDM_HELPHELPTOPICS
         MENUITEM SEPARATOR
-        MENUITEM "Info", IDM_HELPINFO
+        MENUITEM "&Info", IDM_HELPINFO
     END
 END
 
@@ -148,14 +148,14 @@ BEGIN
     LTEXT "Höhe:", IDD_ATTRIBUTESTEXT2, 90, 40, 35, 10
     LTEXT "Dateidatum:", IDD_ATTRIBUTESTEXT3, 10, 5, 60, 10
     LTEXT "Dateigröße:", IDD_ATTRIBUTESTEXT4, 10, 15, 60, 10
-    LTEXT "Auflösung:", IDD_ATTRIBUTESTEXT5, 10, 25, 60, 10
+    LTEXT "&Auflösung:", IDD_ATTRIBUTESTEXT5, 10, 25, 60, 10
     LTEXT "Nicht verfügbar", IDD_ATTRIBUTESTEXT6, 60, 5, 90, 10
     LTEXT "Nicht verfügbar", IDD_ATTRIBUTESTEXT7, 60, 15, 90, 10
     LTEXT "Nicht verfügbar", IDD_ATTRIBUTESTEXT8, 60, 25, 90, 10
     GROUPBOX "Maßeinheit", IDD_ATTRIBUTESGROUP1, 6, 57, 158, 27
-    AUTORADIOBUTTON "Zoll", IDD_ATTRIBUTESRB1, 12, 69, 45, 10, WS_GROUP
+    AUTORADIOBUTTON "&Zoll", IDD_ATTRIBUTESRB1, 12, 69, 45, 10, WS_GROUP
     AUTORADIOBUTTON "cm", IDD_ATTRIBUTESRB2, 62, 69, 45, 10
-    AUTORADIOBUTTON "Pixel", IDD_ATTRIBUTESRB3, 112, 69, 45, 10
+    AUTORADIOBUTTON "&Pixel", IDD_ATTRIBUTESRB3, 112, 69, 45, 10
     GROUPBOX "Farben", IDD_ATTRIBUTESGROUP2, 6, 88, 158, 27
     AUTORADIOBUTTON "Schwarzweiß", IDD_ATTRIBUTESRB4, 12, 100, 70, 10, WS_GROUP
     AUTORADIOBUTTON "Farben", IDD_ATTRIBUTESRB5, 92, 100, 35, 10
