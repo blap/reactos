@@ -1,12 +1,10 @@
-/* Russian language resource file by Kudratov Olimjon (olim98@bk.ru) */
-
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
-    IDS_ACCOUNTS_SYNTAX "Использование:\nNET ACCOUNTS [/FORCELOGOFF:{минуты | NO}] [/MINPWLEN:длина]\n\
-             [/MAXPWAGE:{дни | UNLIMITED}] [/MINPWAGE:дни]\n\
-             [/UNIQUEPW:число] [/DOMAIN]\n"
+    IDS_ACCOUNTS_SYNTAX "Usage:\nNET ACCOUNTS [/FORCELOGOFF:{Minutes|NO}] [/MINPWLEN:Length]\n\
+             [/MAXPWAGE:{Days|UNLIMITED}] [/MINPWAGE:Days]\n\
+             [/UNIQUEPW:Count] [/DOMAIN]\n"
     IDS_ACCOUNTS_HELP "ACCOUNTS\n..."
     IDS_COMPUTER_SYNTAX "Использование:\nNET COMPUTER ..."
     IDS_COMPUTER_HELP "COMPUTER\n..."
@@ -20,9 +18,9 @@ BEGIN
     IDS_GROUP_HELP "GROUP\n..."
     IDS_HELPMSG_SYNTAX "Использование:\nNET HELPMSG <Код ошибки>"
     IDS_HELPMSG_HELP "HELPMSG\n..."
-    IDS_LOCALGROUP_SYNTAX "Использование:\nNET LOCALGROUP [имя_группы [/COMMENT:""текст""]] [/DOMAIN]\n\
-               имя_группы {/ADD [/COMMENT:""текст""] | /DELETE}  [/DOMAIN]\n\
-               имя_группы имя [...] {/ADD | /DELETE} [/DOMAIN]"
+    IDS_LOCALGROUP_SYNTAX "Использование:\nNET LOCALGROUP [имя_группы [/COMMENT:""текст"""]] [/DOMAIN]\n\
+               groupname {/ADD [/COMMENT:""text""] | /DELETE} [/DOMAIN]\n\
+               groupname name [...] {/ADD | /DELETE} [/DOMAIN]"
     IDS_LOCALGROUP_HELP "LOCALGROUP\n..."
     IDS_NAME_SYNTAX "Использование:\nNET NAME ..."
     IDS_NAME_HELP "NAME\n..."
@@ -46,14 +44,14 @@ BEGIN
     IDS_TIME_HELP "TIME\n..."
     IDS_USE_SYNTAX "Использование:\nNET USE ..."
     IDS_USE_HELP "USE\n..."
-    IDS_USER_SYNTAX "Использование:\nNET USER [имя_пользователя [пароль | *] [параметры]] [/DOMAIN]\n\
-         имя_пользователя {пароль | *} /ADD [параметры] [/DOMAIN]\n\
-         имя_пользователя [/DELETE] [/DOMAIN]"
+    IDS_USER_SYNTAX "Usage:\nNET USER [username [password | *] [options]] [/DOMAIN]\n\
+         username {password | *} /ADD [options] [/DOMAIN]\n\
+         username [/DELETE] [/DOMAIN]"
     IDS_USER_HELP "USER\n..."
     IDS_VIEW_SYNTAX "Использование:\nNET VIEW ..."
     IDS_VIEW_HELP "VIEW\n..."
-    IDS_HELP_SYNTAX "Использование:\nNET HELP <Команда>\n   - или -\nNET <Команда> /HELP\n\n\
-   Доступны следующие команды:\n\n\
+    IDS_HELP_SYNTAX "Usage:\nNET HELP <Command>\n   - or -\nNET <Command> /HELP\n\n\
+   The following commands are available:\n\n\
    NET ACCOUNTS             NET HELP                 NET SHARE\n\
    NET COMPUTER             NET HELPMSG              NET START\n\
    NET CONFIG               NET LOCALGROUP           NET STATISTICS\n\
@@ -63,7 +61,7 @@ BEGIN
    NET FILE                 NET SEND                 NET USER\n\
    NET GROUP                NET SESSION              NET VIEW\n\n\
    ..."
-    IDS_NET_SYNTAX "Использование:\nNET [ ACCOUNTS | COMPUTER | CONFIG | CONTINUE | FILE | GROUP | HELP |\n\
+    IDS_NET_SYNTAX "Usage:\nNET [ ACCOUNTS | COMPUTER | CONFIG | CONTINUE | FILE | GROUP | HELP |\n\
       HELPMSG | LOCALGROUP | NAME | PAUSE | PRINT | SEND | SESSION |\n\
       SHARE | START | STATISTICS | STOP | TIME | USE | USER | VIEW ]\n"
 
