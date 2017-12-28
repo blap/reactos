@@ -1,4 +1,4 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 IDC_REACTOS_SNDREC32 ACCELERATORS
 BEGIN
@@ -8,12 +8,12 @@ END
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 196, 75
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Information zum Audiorecorder"
+CAPTION "Über Zeichentabelle"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON IDI_SNDREC32, -1, 19, 14, 21, 20
-    LTEXT "ReactOS Audiorecorder, Version 1.0", IDC_STATIC, 56, 16, 134, 8, SS_NOPREFIX
-    LTEXT "Copyright (C) 2009", IDC_STATIC, 56, 25, 134, 8
+    LTEXT "ReactOS Audiorecorder, Version 1.0", IDC_STATIC, 56, 16, 114, 8, SS_NOPREFIX
+    LTEXT "Copyright (C) 2009", IDC_STATIC, 56, 25, 114, 8
     DEFPUSHBUTTON "OK", IDOK, 139, 54, 50, 14, WS_GROUP
 END
 
@@ -39,17 +39,17 @@ BEGIN
         MENUITEM "&Datei einfügen...", ID_EDIT_INSERTFILE
         MENUITEM "D&atei einmischen...", ID_EDIT_MIXFILE
         MENUITEM SEPARATOR
-        MENUITEM "Vor aktueller Position &löschen",ID_EDIT_DELETEBEFORE, GRAYED
-        MENUITEM "Nach aktueller Position lö&schen",ID_EDIT_DELETEAFTER, GRAYED
+        MENUITEM "Vor aktueller Position &löschen", ID_EDIT_DELETEBEFORE, GRAYED
+        MENUITEM "Nach aktueller Position lö&schen", ID_EDIT_DELETEAFTER, GRAYED
         MENUITEM SEPARATOR
         MENUITEM "A&udioeigenschaften", ID_EDIT_AUDIOPROPS
     END
     POPUP "&Effekte"
     BEGIN
-        MENUITEM "Lautstärke &erhöhen (um 25%)",ID_EFFECTS_INCVOL
+        MENUITEM "Lautstärke &erhöhen (um 25%)", ID_EFFECTS_INCVOL
         MENUITEM "Lautstärke &verringern", ID_EFFECTS_DECVOL
         MENUITEM SEPARATOR
-        MENUITEM "Geschwindigkeit er&höhen (um 100%)",ID_EFFECTS_INCSPD
+        MENUITEM "Geschwindigkeit er&höhen (um 100%)", ID_EFFECTS_INCSPD
         MENUITEM "Geschwindigkeit ver&ringern", ID_EFFECTS_DECSPD
         MENUITEM SEPARATOR
         MENUITEM "E&cho hinzufügen", ID_EFFECTS_ECHO
