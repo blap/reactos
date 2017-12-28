@@ -1,0 +1,27 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+BEGIN
+    IDS_USAGE "\nValid commands :\n\
+               load        Loads a Filter driver\n\
+               unload      Unloads a Filter driver\n\
+               filters     Lists the Filters currently registered in the system\n\n"
+
+    IDS_USAGE_LOAD      "Mengisi driver filter\n"
+    IDS_USAGE_UNLOAD    "Membongkar filter driver\n"
+    IDS_USAGE_FILTERS   "Daftar semua filter terdaftar\n"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DISPLAY_FILTERS1    "Filter Nama                     Num Contoh    Ketinggia   Bingkai\n"
+    IDS_DISPLAY_FILTERS2    "Filter Nama                     Num Contoh    Ketinggia   Bingkai\n"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ERROR_PRIV      "Gagal menyetel hak istimewa pengemudi (0x%X)\n"
+    IDS_ERROR_FILTERS   "Gagal membuat daftar filter (0x%X)\n"
+    IDS_ERROR_LOAD      "Gagal memuat filter (0x%X)\n"
+    IDS_ERROR_UNLOAD    "Gagal membongkar filter (0x%X)\n"
+END
