@@ -1,12 +1,12 @@
 /*
  * PROJECT:     ReactOS VGA Font Editor
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
- * PURPOSE:     Spanish resource file
+ * PURPOSE:     English resource file
  * COPYRIGHT:   Copyright 2008 Colin Finck (colin@reactos.org)
- * TRANSLATOR:  Javier Remacha
+ * TRANSLATOR:  Colin Finck
  */
 
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 IDD_ABOUT DIALOGEX 10, 10, 130, 62
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
@@ -72,22 +72,22 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_OPENFILTER, "Todos los formatos soportados (*.bin,*.psf)|*.bin;*.psf|Archivos binarios de Fuentes (*.bin)|*.bin|Fuente de pantalla de PC Versión 1 (*.psf)|*.psf|"
-    IDS_SAVEFILTER, "Archivos binarios de Fuentes (*.bin)|*.bin|"
-    IDS_OPENERROR, "¡Error al abrir el archivo! (Error número %1!u!)"
-    IDS_READERROR, "¡Error al leer el archivo! (Error número %1!u!)"
-    IDS_WRITEERROR, "¡Error al escribir el archivo! (Error número %1!u!)"
-    IDS_UNSUPPORTEDFORMAT, "¡Formato de archivo no soportado!"
-    IDS_UNSUPPORTEDPSF, "¡Formato de fuente PSF no soportado! El editor sólo soporta fuentes 8x8 fonts sin modos especiales."
-    IDS_DOCNAME, "Fuente %1!u!"
-    IDS_SAVEPROMPT, "El archivo ""%1"" ha sido modificado, pero no guardado.\n\n¿Quiere guardarlo ahora?"
+    IDS_OPENFILTER, "All supported formats (*.bin,*.psf)|*.bin;*.psf|Binary Font Files (*.bin)|*.bin|PC Screen Fonts Version 1 (*.psf)|*.psf|"
+    IDS_SAVEFILTER, "Binary Font Files (*.bin)|*.bin|"
+    IDS_OPENERROR, "Error while opening the file! (Error number %1!u!)"
+    IDS_READERROR, "Error while reading the file! (Error number %1!u!)"
+    IDS_WRITEERROR, "Error while writing the file! (Error number %1!u!)"
+    IDS_UNSUPPORTEDFORMAT, "Unsupported file format!"
+    IDS_UNSUPPORTEDPSF, "Unsupported PSF font format! The editor only supports 8x8 fonts with no special modes."
+    IDS_DOCNAME, "Font %1!u!"
+    IDS_SAVEPROMPT, "The file ""%1"" was modified, but not saved.\n\nDo you want to save it?"
     IDS_APPTITLE, "ReactOS VGA Font Editor"
-    IDS_CLOSEEDIT, "¡Por favor, cierre todas las ventanas de Edición abiertas primero!"
+    IDS_CLOSEEDIT, "Please close all open Edit windows first!"
 
-    IDS_TOOLTIP_NEW, "Nuevo"
-    IDS_TOOLTIP_OPEN, "Abrir"
-    IDS_TOOLTIP_SAVE, "Guardar"
-    IDS_TOOLTIP_EDIT_GLYPH, "Editar Glifo"
-    IDS_TOOLTIP_COPY, "Copiar"
-    IDS_TOOLTIP_PASTE, "Pegar"
+    IDS_TOOLTIP_NEW, "New"
+    IDS_TOOLTIP_OPEN, "Open"
+    IDS_TOOLTIP_SAVE, "Save"
+    IDS_TOOLTIP_EDIT_GLYPH, "Edit Glyph"
+    IDS_TOOLTIP_COPY, "Copy"
+    IDS_TOOLTIP_PASTE, "Paste"
 END
