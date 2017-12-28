@@ -1,6 +1,4 @@
-/* German translation by Friedrich Stange (dj_smith_reactos at online.de) */
-
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 IDD_PROPPAGEKEYBOARD DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -19,7 +17,7 @@ BEGIN
     PUSHBUTTON "E&instellungen", IDC_FILTER_BUTTON, 144, 121, 90, 14
     GROUPBOX "Signalfunktion", -1, 6, 145, 234, 62
     LTEXT "Benutzen Sie die Signalfunktion, wenn Sie einen Signalton hören wollen, wenn Sie Caps-, Num-, oder Scroll-Lock drücken.",
-          -1, 12, 161, 222, 29
+          -1, 12, 161, 222, 20
     AUTOCHECKBOX "&Signalfunktion benutzen", IDC_TOGGLE_BOX, 12, 184, 126, 14
     PUSHBUTTON "Ei&nstellungen", IDC_TOGGLE_BUTTON, 144, 184, 90, 14
     AUTOCHECKBOX "Extra-Tastaturhilfe in &Programmen anzeigen ", IDC_KEYBOARD_EXTRA,
@@ -32,13 +30,13 @@ CAPTION "Sound"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "Darstellungsoptionen", -1, 6, 11, 234, 98
-    LTEXT "Benutzen Sie die Sounddarstellung, wenn ReactOS Sounds visuell darstellen soll.",
-          -1, 12, 22, 222, 29
-    AUTOCHECKBOX "&Darstellungsoption aktivieren", IDC_SENTRY_BOX, 12, 49, 105, 14
+    LTEXT "Use SoundSentry if you want ReactOS to generate visual warnings when your system makes a sound.",
+          -1, 12, 20, 222, 29
+    AUTOCHECKBOX "&Darstellungsoption aktivieren", IDC_SENTRY_BOX, 12, 49, 90, 14
     LTEXT "Zu verwendende Warnsignale:", IDC_SENTRY_TEXT, 12, 72, 222, 11
     COMBOBOX IDC_SENTRY_COMBO, 12, 83, 222, 56,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
-    GROUPBOX "Sounddarstellung", -1, 6, 115, 234, 58
+    GROUPBOX "Sounddarstellung", -1, 6, 115, 234, 67
     LTEXT "Benutzen Sie die Sounddarstellung, damit die Programme Sprachausgaben und Sounds schriftlich darstellen.",
           -1, 12, 125, 222, 29
     AUTOCHECKBOX "&Sounddarstellung aktivieren", IDC_SSHOW_BOX, 12, 148, 222, 14
@@ -88,8 +86,8 @@ CAPTION "Allgemein"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "Automatischer Reset", -1, 6, 11, 234, 47
-    AUTOCHECKBOX "Ei&ngabehilfen automatisch deaktivieren nach:",
-                 IDC_RESET_BOX, 12, 20, 222, 14
+    AUTOCHECKBOX "&Turn off accessibility features after idle for:",
+                 IDC_RESET_BOX, 12, 18, 222, 14
     COMBOBOX IDC_RESET_COMBO, 24, 38, 60, 47,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
     GROUPBOX "Benachrichtigung", -1, 6, 63, 234, 47
@@ -117,7 +115,7 @@ BEGIN
     GROUPBOX "Tastenkombination", -1, 6, 11, 234, 62
     LTEXT "Drücken Sie fünfmal die Umschalttaste, um die Einrastfunktion zu aktivieren.",
           -1, 12, 20, 222, 29
-    AUTOCHECKBOX "Tastenkombination a&ktivieren", IDC_STICKY_ACTIVATE_CHECK, 12, 49, 106, 14
+    AUTOCHECKBOX "Tastenkombination a&ktivieren", IDC_STICKY_ACTIVATE_CHECK, 12, 49, 222, 14
     GROUPBOX "Optionen", -1, 6, 83, 234, 44
     AUTOCHECKBOX "&Zum Einrasten Feststelltaste zweimal drücken.", IDC_STICKY_LOCK_CHECK,
                  12, 94, 222, 14
@@ -200,19 +198,19 @@ BEGIN
     AUTOCHECKBOX "&Tastenkombination verwenden", IDC_MOUSEKEYS_ACTIVATE_CHECK,
                  12, 49, 222, 14
     GROUPBOX "Cursorgeschwindigkeit", -1, 6, 83, 234, 83
-    LTEXT "&Geschwindigkeit:", -1, 12, 96, 53, 11
-    LTEXT "Niedrig", -1, 66, 96, 30, 11
+    LTEXT "&Geschwindigkeit:", -1, 12, 96, 48, 11
+    LTEXT "Niedrig", -1, 66, 96, 18, 11
     CONTROL "", IDC_MOUSEKEYS_SPEED_TRACK, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP,
-            95, 94, 114, 20
-    LTEXT "Hoch", -1, 209, 96, 28, 11
-    LTEXT "&Beschleunigung:", -1, 12, 123, 53, 11
-    LTEXT "Langsam", -1, 66, 123, 30, 11
+            90, 94, 114, 20
+    LTEXT "High", -1, 204, 96, 18, 11
+    LTEXT "&Beschleunigung:", -1, 12, 123, 48, 11
+    LTEXT "Langsam", -1, 66, 123, 18, 11
     CONTROL "", IDC_MOUSEKEYS_ACCEL_TRACK, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP,
-            95, 121, 114, 20
-    LTEXT "Schnell", -1, 209, 123, 28, 11
+            90, 121, 114, 20
+    LTEXT "Schnell", -1, 204, 123, 18, 11
     AUTOCHECKBOX "Strg-, U&mschalttaste zum Beschleunigen/Verlangsamen drücken.", IDC_MOUSEKEYS_SPEED_CHECK,
                  12, 142, 222, 14
-    LTEXT "Tastaturmaus aktivieren, wenn NUM-Lock:", -1, 6, 171, 140, 11
+    LTEXT "Tastaturmaus aktivieren, wenn NUM-Lock:", -1, 6, 171, 120, 11
     AUTORADIOBUTTON "&Ein", IDC_MOUSEKEYS_ON_RADIO, 162, 171, 30, 11
     AUTORADIOBUTTON "&Aus", IDC_MOUSEKEYS_OFF_RADIO, 198, 171, 30, 11
     AUTOCHECKBOX "&Status der Tastaturmaus auf dem Bildschirm anzeigen.", IDC_MOUSEKEYS_STATUS_CHECK,
