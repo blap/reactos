@@ -1,39 +1,41 @@
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "Команда AT предназначена для запуска команд и программ\n\
-в указанное время по определенным дням. Для работы команды необходимо, чтобы\n\
-была запущена служба планировщика (Schedule service).\n\n\
-AT [\\\\имя_компьютера] [ [id] [/DELETE] | /DELETE [/YES]]\n\
-AT [\\\\имя_компьютера] время [/INTERACTIVE]\n\
-    [ /EVERY:день[,...] | /NEXT:день[,...]] ""команда""\n\n\
-\\\\имя_компьютера     Имя удаленного компьютера. Если этот параметр не указан, \n\
-                   используется локальный компьютер.\n\
-id                 Порядковый номер запланированной задачи.\n\
-/DELETE            Отменяет запланированную команду. Если параметр id не указан, то\n\
-                   все команды, запланированные на данном компьютере, будут отменены.\n\
-/YES               Отмена запроса на подтверждение при отмене всех\n\
-                   запланированных задач.\n\
-время              Время запуска команды.\n\
-/INTERACTIVE       Разрешает взаимодействие задачи с пользователем,\n\
-                   работающим на компьютере во время запуска задачи.\n\
-/EVERY:день[,...]  Задача будет выполняться каждый указанный день (дни) или\n\
-                   месяц. Если дата не указана, используется текущий день \n\
-                   месяца.\n\
-/NEXT:день[,...]   Задача будет запущена в следующий указанный день недели\n\
-                   (например, в следующий четверг). Если дата не указана, то \n\
-                   используется текущий день месяца.\n\
-""команда""          Команда или имя пакетного файла для запуска.\n"
+    IDS_USAGE "The AT command schedules commands and programs to run on a computer at\n\
+a specified time and date. The Schedule service must be running to use\n\
+the AT command.\n\n\
+AT [\\\\computername] [ [id] [/DELETE] | /DELETE [/YES]]\n\
+AT [\\\\computername] time [/INTERACTIVE]\n\
+    [ /EVERY:date[,...] | /NEXT:date[,...]] """command"""\n\n\
+\\\\computername     Specifies a remote computer. Commands are scheduled on the \n\
+                   local computer if this parameter is omitted.\n\
+id                 Is an identification number assigned to a scheduled\n\
+                   command.\n\
+/DELETE            Cancels a scheduled command. If id is omitted, all the\n\
+                   scheduled commands on the computer are canceled.\n\
+/YES               Used with cancel all jobs command when no further\n\
+                   confirmation is desired.\n\
+time               Specifies the time when command is to run.\n\
+/INTERACTIVE       Allows the job to interact with the desktop of the user\n\
+                   who is logged on at the time the job runs.\n\
+/EVERY:date[,...]  Runs the command on each specified day(s) of the week or\n\
+                   month. If date is omitted, the current day of the month\n\
+                   is assumed.\n\
+/NEXT:date[,...]   Runs the specified command on the next occurrence of the\n\
+                   day (for example, next Thursday). If date is omitted, the \n\
+                   current day of the month is assumed.\n\
+"""command""          Is the command or batch program to be run.\n"
 
-    IDS_CONFIRM_QUESTION "Продолжить выполнение операции? (Y-да/N-нет) [N] "
-    IDS_CONFIRM_INVALID  "\nНедопустимый ответ.\n"
-    IDS_CONFIRM_YES "Y"
-    IDS_CONFIRM_NO "N"
-
+    IDS_DELETE_ALL "This operation will delete all scheduled jobs.\n"
     IDS_NEW_JOB "Добавлено новое задание с ID = %lu\n"
     IDS_JOBS_LIST "Статус ID   День                     Время          Команда\n"
     IDS_NO_ENTRIES "В списке нет запланированных задач.\n"
+
+    IDS_CONFIRM_QUESTION "Продолжить выполнение операции? (Y-да/N-нет) [N] "
+    IDS_CONFIRM_INVALID  "\nНедопустимый ответ.\n"
+    IDS_CONFIRM_YES "Н"
+    IDS_CONFIRM_NO "T"
 
     IDS_TODAY "Сегодня"
     IDS_TOMORROW "Завтра"
