@@ -1,12 +1,12 @@
 /*
  * PROJECT:     Solitaire
  * LICENSE:     Freeware, permission to use under Public Domain
- * FILE:        base/applications/games/solitaire/lang/de-DE.rc
- * PURPOSE:     German Language File for Solitaire
+ * FILE:        base/applications/games/solitaire/lang/en-US.rc
+ * PURPOSE:     English Language File for Solitaire
  * PROGRAMMERS: Daniel "EmuandCo" Reimer (reimer.daniel@freenet.de)
  */
 
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 /* Dialogs */
 
@@ -22,11 +22,11 @@ BEGIN
     AUTORADIOBUTTON "&Standard", IDC_OPT_STANDARD, 107, 19, 60, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "&Vegas", IDC_OPT_VEGAS, 107, 32, 60, 10
     AUTORADIOBUTTON "Ke&ine", IDC_OPT_NOSCORE, 107, 45, 60, 10
-    AUTOCHECKBOX "&Zeit anzeigen", IDC_OPT_SHOWTIME, 7 ,51 ,65 ,10, WS_TABSTOP
+    AUTOCHECKBOX "&Show Time", IDC_OPT_SHOWTIME, 7 ,51 ,65 ,10, WS_TABSTOP
     AUTOCHECKBOX "S&tatusleiste", IDC_OPT_STATUSBAR, 7, 66, 64, 10, WS_TABSTOP
     AUTOCHECKBOX "P&unkte behalten", IDC_OPT_KEEPSCORE, 100, 66, 65, 10, WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 35, 97, 50, 14
-    PUSHBUTTON "Abbrechen",IDCANCEL,101,97,50,14
+    PUSHBUTTON "Abbrechen", IDCANCEL, 101, 97, 50, 14
 END
 
 IDD_CARDBACK DIALOGEX 6, 6, 345, 185
