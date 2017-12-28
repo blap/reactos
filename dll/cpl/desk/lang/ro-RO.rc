@@ -1,9 +1,4 @@
-/*
- * Translators: Petru Dimitriu (petrimetri at gmail dot com)
- *              Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDD_BACKGROUND DIALOGEX 0, 0, 246, 204
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -105,7 +100,7 @@ BEGIN
     CONTROL "&Rotunjește marginile de text folosind metoda:", IDC_EFFAPPEARANCE_SMOOTHING,
             "button", BS_AUTOCHECKBOX | WS_TABSTOP, 10, 42, 267, 19
     COMBOBOX IDC_EFFAPPEARANCE_SMOOTHINGTYPE, 20, 62, 95, 19, CBS_DROPDOWNLIST |
-             CBS_HASSTRINGS | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+             CBS_HASSTRINGS | WS_CHILD | WS_VSCROLL | WS_TABSTOP
     CONTROL "&Pictograme mari", IDC_EFFAPPEARANCE_LARGEICONS, "button",
             BS_AUTOCHECKBOX | WS_TABSTOP | WS_DISABLED, 10, 80, 267, 19
     CONTROL "Afișează &umbre sub meniuri", IDC_EFFAPPEARANCE_SETDROPSHADOW,
@@ -114,8 +109,8 @@ BEGIN
             "button", BS_AUTOCHECKBOX | WS_TABSTOP, 10, 110, 267, 19
     CONTROL "&Amână sublinierea literelor navigării din tastatură până la apăsarea tastei «Alt»",
             IDC_EFFAPPEARANCE_KEYBOARDCUES, "button", BS_AUTOCHECKBOX | WS_TABSTOP, 10, 125, 267, 19
-    PUSHBUTTON "A&nulează", IDCANCEL, 130, 165, 50, 14
-    DEFPUSHBUTTON "Con&firmă", IDOK, 77, 165, 50, 14
+    PUSHBUTTON "A&nulează", IDCANCEL, 226, 165, 50, 14
+    DEFPUSHBUTTON "Con&firmă", IDOK, 172, 165, 50, 14
 END
 
 IDD_SETTINGS DIALOGEX 0, 0, 246, 204
