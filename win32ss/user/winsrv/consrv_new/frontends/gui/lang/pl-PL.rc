@@ -1,12 +1,4 @@
-/*
- *    Translated by xrogers
- *    xxrogers@users.sourceforge.net
- *    https://sourceforge.net/projects/reactospl
- *    Translation update by Olaf Siejka (Caemyr), Apr 2011
- *    UTF-8 conversion by Caemyr (May, 2011)
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 STRINGTABLE
 BEGIN
