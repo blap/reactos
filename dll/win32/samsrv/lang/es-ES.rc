@@ -1,5 +1,4 @@
-/* Spanish translation created by Ismael Ferreras Morezuelas (2014-12-30) */
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 STRINGTABLE
 BEGIN
