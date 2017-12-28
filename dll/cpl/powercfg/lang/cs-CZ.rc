@@ -1,4 +1,4 @@
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 IDD_PROPPAGEPOWERSCHEMES DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -36,7 +36,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Varování"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Varování o nízkém stavu baterie", -1, 10, 15, 235, 95
+    GROUPBOX "Low battery alarm", -1, 6, 7, 239, 104
     AUTOCHECKBOX "Aktivovat &varování o nízkém stavu baterie, když úroveň nabití dosáhne:", IDC_ALARM1, 15, 17, 190, 15, WS_TABSTOP
     LTEXT "neznámá", IDC_ALARMVALUE1, 215, 20, 20, 10
     LTEXT "0%", -1, 28, 43, 15, 10
@@ -50,7 +50,7 @@ BEGIN
     LTEXT "Spustit program:", -1, 95, 95, 55, 10
     LTEXT "Neznámý", IDC_ALARMPROG1, 154, 95, 84, 10
     GROUPBOX "Varování o kritickém stavu baterie", -1, 6, 120, 239, 106
-    AUTOCHECKBOX "Aktivovat varování o &kritickém stavu baterie, když úroveň nabití dosáhne:", IDC_ALARM2, 15, 131, 180, 15, WS_TABSTOP
+    AUTOCHECKBOX "Aktivovat varování o &kritickém stavu baterie, když úroveň nabití dosáhne:", IDC_ALARM2, 15, 131, 195, 15, WS_TABSTOP
     LTEXT "neznámá", IDC_ALARMVALUE2, 215, 134, 20, 10
     LTEXT "0%", -1, 28, 154, 15, 10
     CONTROL "Slider1", IDC_ALARMBAR2, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 158, 170, 15
@@ -103,8 +103,8 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_CPLNAME_1 "Možnosti napájení"
-    IDS_CPLDESCRIPTION_1 "Nastaví možnosti napájení a šetření energií pro tento počítač."
+    IDS_CPLNAME_1 "Manažer licencí"
+    IDS_CPLDESCRIPTION_1 "Manažer licencí"
     IDS_PROCENT "%i%%"
     IDS_SOUND "Zvuk"
     IDS_TEXT "Text"
