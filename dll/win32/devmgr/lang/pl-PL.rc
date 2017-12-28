@@ -1,14 +1,4 @@
-/*
- *    Translated by (Sebastian Gasiorek,Wiktor Maryniowski, 2005-12-12)
- *    xxrogers@users.sourceforge.net
- *    https://sourceforge.net/projects/reactospl
- *    Updated by xrogers (13.04.2007)
- *    Updated by Caemyr - Olaf Siejka (Jan 2008, Jan 2010)
- *    UTF-8 conversion by Caemyr (May, 2011)
- *    Updated by Saibamen - Adam Stachowicz (saibamenppl@gmail.com) (November, 2011)
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 STRINGTABLE
 BEGIN
@@ -74,9 +64,9 @@ BEGIN
     IDS_DEV_DISABLED "Urządzenie nie zostało uruchomione."
     IDS_DEV_DISABLED2 "Urządzenie jest wyłączone."
     IDS_DEV_DEVLOADER_NOT_READY "Systemy ładowania sprzętu nie mógły załadować wymaganego sterownika."
-    IDS_DEV_DEVLOADER_NOT_READY2 "" /* unused */
+    IDS_DEV_DEVLOADER_NOT_READY2 """ /* unused */
     IDS_DEV_DEVLOADER_NOT_READY3 "" /* unused */
-    IDS_DEV_DEVICE_NOT_THERE "Urządzenie nie jest obecne, nie działa poprawnie lub nie wszystkie sterowniki urządzenia zostały zainstalowane."
+    IDS_DEV_DEVICE_NOT_THERE ""Urządzenie nie jest obecne, nie działa poprawnie lub nie wszystkie sterowniki urządzenia zostały zainstalowane."
     IDS_DEV_MOVED "ReactOS jest w trakcie konfigurowania tego urządzenia."
     IDS_DEV_TOO_EARLY "ReactOS jest w trakcie konfigurowania tego urządzenia."
     IDS_DEV_NO_VALID_LOG_CONF "ReactOS nie potrafił odnaleźć zasobów dla tego urządzenia."
@@ -144,7 +134,7 @@ BEGIN
     LTEXT "", IDC_MANUFACTURER, 14, 88, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_LOCATION, 14, 100, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_STATUS, 14, 112, 183, 30
-    PUSHBUTTON "&Rozwiązywanie problemów...", IDC_TROUBLESHOOT, 85, 140, 54, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
+    PUSHBUTTON "D&iagnostyka", IDC_TROUBLESHOOT, 80, 140, 60, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
     PUSHBUTTON "Właściwości", IDC_PROPERTIES, 146, 140, 50, 14
 END
 
@@ -163,7 +153,7 @@ BEGIN
     EDITTEXT IDC_DEVLOCATION, 100, 67, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     GROUPBOX "Stan urządzenia", IDC_DEVSTATUSGROUP, 7, 83, 238, 100
     EDITTEXT IDC_DEVSTATUS, 14, 96, 224, 61, NOT WS_TABSTOP | ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
-    PUSHBUTTON "&Rozwiązywanie problemów...", IDC_DEVPROBLEM, 98, 163, 140, 15
+    PUSHBUTTON "D&iagnostyka", IDC_DEVPROBLEM, 148, 163, 90, 15
     LTEXT "&Użycie urządzenia:", IDC_DEVUSAGELABEL, 7, 188, 222, 8, WS_DISABLED
     COMBOBOX IDC_DEVUSAGE, 7, 198, 239, 40, CBS_DROPDOWNLIST | WS_VSCROLL | WS_DISABLED
 END
@@ -183,10 +173,10 @@ BEGIN
     EDITTEXT IDC_DRVVERSION, 100, 67, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     LTEXT "Podpis cyfrowy:", -1, 37, 81, 60, 8, SS_NOPREFIX
     EDITTEXT IDC_DIGITALSIGNER, 100, 81, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    PUSHBUTTON "&Szczegóły sterownika...", IDC_DRIVERDETAILS, 7, 106, 90, 15
-    LTEXT "Wyświetla informacje szczegółowe.", -1, 106, 110, 154, 17, SS_NOPREFIX
-    PUSHBUTTON "Akt&ualizuj sterownik...", IDC_UPDATEDRIVER, 7, 126, 90, 15
-    LTEXT "Aktualizuje oprogramowanie sterownika.", -1, 106, 130, 154, 17, SS_NOPREFIX
+    PUSHBUTTON "&Szczegóły sterownika...", IDC_DRIVERDETAILS, 7, 106, 75, 15
+    LTEXT "To view details about the driver files.", -1, 91, 110, 154, 17, SS_NOPREFIX
+    PUSHBUTTON "Akt&ualizuj sterownik...", IDC_UPDATEDRIVER, 7, 126, 75, 15
+    LTEXT "Update the device driver.", -1, 91, 130, 154, 17, SS_NOPREFIX
 END
 
 IDD_DRIVERDETAILS DIALOGEX 0, 0, 224, 230
@@ -245,8 +235,6 @@ BEGIN
     ICON "", IDC_DEVICON, 7, 7, 20, 20
     LTEXT "", IDC_DEVNAME, 37, 9, 174, 16, SS_NOPREFIX
 END
-
-
 
 
 /*
