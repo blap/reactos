@@ -1,80 +1,72 @@
-/*
- * PROJECT:     ReactOS System Information
- * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        rosapps/applications/sysutils/systeminfo/lang/ro-RO.rc
- * PURPOSE:     Romanian Language File for System Information
- * TRANSLATOR:  Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 STRINGTABLE DISCARDABLE
 BEGIN
 
-IDS_USAGE, "SYSTEMINFO [/S sistem [/U nume [/P [parolă]]]] [/FO format] [/NH]\n\n\
-Descriere:\n\
-  Această comandă permite unui administrator interogarea pentru informații\n\
-  de bază referitoare la configurația sistemului.\n\n\
-Lista de parametri:\n\
-  /S      sistem           Specifică sistemul (de la distanță) vizat.\n\n\
-  /U      [domeniu\\]nume  Specifică utilizatorului sub autoritatea\n\
-                           căruia este executată comanda.\n\n\
-  /P      [parolă]         Specifică parola pentru utilizatorul dat.\n\
-                           Urmează solicitare automată dacă este omis.\n\n\
-  /FO     format           Specifică formatul sub care ieșirea va fi\n\
-                           reprezentată.\n\
-                           Valori valide: „TABLE”, „LIST”, „CSV”.\n\n\
-  /NH                      Specifică faptul că „antetul coloanelor” nu\n\
-                           trebuie inclus la ieșire.\n\
-                           Valid doar pentru formatele „TABLE” și „CSV”.\n\n\
-  /?                       Afișează acest manual de utilizare.\n\n\
-Exemple:\n\
+IDS_USAGE, "SYSTEMINFO [/S system [/U username [/P [password]]]] [/FO format] [/NH]\n\n\
+Description:\n\
+  This command line tool enables an administrator to query for basic\n\
+  system configuration information.\n\n\
+Parameter List:\n\
+  /S      system           Specifies the remote system to connect to.\n\n\
+  /U      [domain\\]user   Specifies the user context under which\n\
+                           the command should execute.\n\n\
+  /P      [password]       Specifies the password for the given\n\
+                           user context. Prompts for input if omitted.\n\n\
+  /FO     format           Specifies the format in which the output\n\
+                           is to be displayed.\n\
+                           Valid values: ""TABLE"", ""LIST"", ""CSV"".\n\n\
+  /NH                      Specifies that the ""Column Header"" should\n\
+                           not be displayed in the output.\n\
+                           Valid only for ""TABLE"" and ""CSV"" formats.\n\n\
+  /?                       Displays this help/usage.\n\n\
+Examples:\n\
   SYSTEMINFO\n\
   SYSTEMINFO /?\n\
-  SYSTEMINFO /S sistem\n\
-  SYSTEMINFO /S sistem /U nume\n\
-  SYSTEMINFO /S sistem /U domeniu\\nume /P parolă /FO TABLE\n\
-  SYSTEMINFO /S sistem /FO LIST\n\
-  SYSTEMINFO /S sistem /FO CSV /NH\n"
+  SYSTEMINFO /S system\n\
+  SYSTEMINFO /S system /U user\n\
+  SYSTEMINFO /S system /U domain\\user /P password /FO TABLE\n\
+  SYSTEMINFO /S system /FO LIST\n\
+  SYSTEMINFO /S system /FO CSV /NH\n"
 
-IDS_HOST_NAME,               "Nume gazdă"
-IDS_OS_NAME,                 "Nume SO"
-IDS_OS_VERSION,              "Versiune SO"
-IDS_BUILD,                   "Construcție"
-IDS_OS_BUILD_TYPE,           "Tip construcție SO"
-IDS_REG_OWNER,               "Deținător înregistrat"
-IDS_REG_ORG,                 "Organizație înregistrată"
-IDS_PRODUCT_ID,              "ID produs"
-IDS_INST_DATE,               "Data de instalare"
-IDS_UP_TIME,                 "Timp de operare"
-IDS_UP_TIME_FORMAT,          "%u zile, %u ore, %u minute, %u secunde"
-IDS_SYS_MANUFACTURER,        "Furnizorul sistemului"
-IDS_SYS_MODEL,               "Modelul sistemului"
-IDS_SYS_TYPE,                "Tipul sistemului"
-IDS_PROCESSORS,              "Proceso(a)r(e)"
-IDS_PROCESSORS_FORMAT,       "%u proceso(a)r(e) instalate."
-IDS_BIOS_DATE,               "Dată BIOS"
-IDS_BIOS_VERSION,            "Versiune BIOS"
-IDS_ROS_DIR,                 "Director ReactOS"
-IDS_SYS_DIR,                 "Director System"
-IDS_BOOT_DEV,                "Dispozitiv de inițializare"
-IDS_SYS_LOCALE,              "Localizare sistem"
-IDS_INPUT_LOCALE,            "Localizare intrare"
-IDS_TIME_ZONE,               "Fus orar"
-IDS_TOTAL_PHYS_MEM,          "Memorie fizică totală"
-IDS_AVAIL_PHISICAL_MEM,      "Memorie fizică disponibilă"
-IDS_VIRT_MEM_MAX,            "Memorie virtuală: Maximă"
-IDS_VIRT_MEM_AVAIL,          "Memorie virtuală: Disponibilă"
-IDS_VIRT_MEM_INUSE,          "Memorie virtuală: În uz"
-IDS_PAGEFILE_LOC,            "Amplasare fișiere de paginare"
-IDS_DOMAIN,                  "Domeniu"
-IDS_NETWORK_CARDS,           "Plăci de rețea"
-IDS_NETWORK_CARDS_FORMAT,    "%u instalate."
-IDS_CONNECTION_NAME,         "Nume conexiune"
-IDS_STATUS,                  "Stare"
-IDS_MEDIA_DISCONNECTED,      "Media deconectat"
-IDS_DHCP_ENABLED,            "DHCP activat"
-IDS_NO,                      "Nu"
-IDS_IP_ADDRESSES,            "Adrese IP"
+IDS_HOST_NAME,               "Host Name"
+IDS_OS_NAME,                 "OS Name"
+IDS_OS_VERSION,              "OS Version"
+IDS_BUILD,                   "Build"
+IDS_OS_BUILD_TYPE,           "OS Build Type"
+IDS_REG_OWNER,               "Registered Owner"
+IDS_REG_ORG,                 "Registered Organization"
+IDS_PRODUCT_ID,              "Product ID"
+IDS_INST_DATE,               "Install Date"
+IDS_UP_TIME,                 "System Up Time"
+IDS_UP_TIME_FORMAT,          "%u Days, %u Hours, %u Minutes, %u Seconds"
+IDS_SYS_MANUFACTURER,        "System Manufacturer"
+IDS_SYS_MODEL,               "System Model"
+IDS_SYS_TYPE,                "System type"
+IDS_PROCESSORS,              "Processor(s)"
+IDS_PROCESSORS_FORMAT,       "%u Processor(s) Installed."
+IDS_BIOS_DATE,               "BIOS Date"
+IDS_BIOS_VERSION,            "BIOS Version"
+IDS_ROS_DIR,                 "ReactOS Directory"
+IDS_SYS_DIR,                 "System Directory"
+IDS_BOOT_DEV,                "Boot Device"
+IDS_SYS_LOCALE,              "System Locale"
+IDS_INPUT_LOCALE,            "Input Locale"
+IDS_TIME_ZONE,               "Time zone"
+IDS_TOTAL_PHYS_MEM,          "Total Physical Memory"
+IDS_AVAIL_PHISICAL_MEM,      "Available Physical Memory"
+IDS_VIRT_MEM_MAX,            "Virtual Memory: Max Size"
+IDS_VIRT_MEM_AVAIL,          "Virtual Memory: Available"
+IDS_VIRT_MEM_INUSE,          "Virtual Memory: In Use"
+IDS_PAGEFILE_LOC,            "Page File Location(s)"
+IDS_DOMAIN,                  "Domain"
+IDS_NETWORK_CARDS,           "Network Card(s)"
+IDS_NETWORK_CARDS_FORMAT,    "%u Installed."
+IDS_CONNECTION_NAME,         "Connection Name"
+IDS_STATUS,                  "Status"
+IDS_MEDIA_DISCONNECTED,      "Media disconnected"
+IDS_DHCP_ENABLED,            "DHCP Enabled"
+IDS_NO,                      "No"
+IDS_IP_ADDRESSES,            "IP address(es)"
 
 END
