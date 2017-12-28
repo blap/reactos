@@ -1,12 +1,12 @@
 /*
  * PROJECT:     ReactOS VGA Font Editor
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
- * PURPOSE:     French resource file
+ * PURPOSE:     English resource file
  * COPYRIGHT:   Copyright 2008 Colin Finck (colin@reactos.org)
- * TRANSLATOR:  Pierre Schweitzer (pierre@reactos.org)
+ * TRANSLATOR:  Colin Finck
  */
 
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 IDD_ABOUT DIALOGEX 10, 10, 130, 62
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
@@ -72,22 +72,22 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_OPENFILTER, "Tous les formats supportés (*.bin,*.psf)|*.bin;*.psf|Fichiers police binaires (*.bin)|*.bin|PC Screen Fonts Version 1 (*.psf)|*.psf|"
-    IDS_SAVEFILTER, "Fichiers police binaires (*.bin)|*.bin|"
-    IDS_OPENERROR, "Erreur lors de l'ouverture du fichier ! (Erreur numéro %1!u!)"
-    IDS_READERROR, "Erreur lors de la lecture du fichier ! (Erreur numéro %1!u!)"
-    IDS_WRITEERROR, "Erreur lors de l'écriture du fichier ! (Erreur numéro %1!u!)"
-    IDS_UNSUPPORTEDFORMAT, "Format de fichier non supporté!"
-    IDS_UNSUPPORTEDPSF, "Format de police PSF non supporté ! L'éditeur supporte seulement les polices 8x8 sans aucun mode spécial."
-    IDS_DOCNAME, "Police %1!u!"
-    IDS_SAVEPROMPT, "Le fichier ""%1"" a été modifié mais pas enregistré.\n\nVoulez-vous l'enregistrer ?"
-    IDS_APPTITLE, "Éditeur de police VGA ReactOS"
-    IDS_CLOSEEDIT, "Veuillez d'abord fermer toutes les fenêtres d'édition !"
+    IDS_OPENFILTER, "All supported formats (*.bin,*.psf)|*.bin;*.psf|Binary Font Files (*.bin)|*.bin|PC Screen Fonts Version 1 (*.psf)|*.psf|"
+    IDS_SAVEFILTER, "Binary Font Files (*.bin)|*.bin|"
+    IDS_OPENERROR, "Error while opening the file! (Error number %1!u!)"
+    IDS_READERROR, "Error while reading the file! (Error number %1!u!)"
+    IDS_WRITEERROR, "Error while writing the file! (Error number %1!u!)"
+    IDS_UNSUPPORTEDFORMAT, "Unsupported file format!"
+    IDS_UNSUPPORTEDPSF, "Unsupported PSF font format! The editor only supports 8x8 fonts with no special modes."
+    IDS_DOCNAME, "Font %1!u!"
+    IDS_SAVEPROMPT, "The file ""%1"" was modified, but not saved.\n\nDo you want to save it?"
+    IDS_APPTITLE, "ReactOS VGA Font Editor"
+    IDS_CLOSEEDIT, "Please close all open Edit windows first!"
 
-    IDS_TOOLTIP_NEW, "Nouveau"
-    IDS_TOOLTIP_OPEN, "Ouvrir"
-    IDS_TOOLTIP_SAVE, "Enregistrer"
-    IDS_TOOLTIP_EDIT_GLYPH, "Éditer le glyphe"
-    IDS_TOOLTIP_COPY, "Copier"
-    IDS_TOOLTIP_PASTE, "Coller"
+    IDS_TOOLTIP_NEW, "New"
+    IDS_TOOLTIP_OPEN, "Open"
+    IDS_TOOLTIP_SAVE, "Save"
+    IDS_TOOLTIP_EDIT_GLYPH, "Edit Glyph"
+    IDS_TOOLTIP_COPY, "Copy"
+    IDS_TOOLTIP_PASTE, "Paste"
 END
