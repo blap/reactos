@@ -1,9 +1,4 @@
-/* FILE:       applications/sndrec32/lang/cs-CZ.rc
- * TRANSLATOR: Radek Liska aka Black_Fox (radekliska at gmail dot com)
- * UPDATED:    2011-04-09
- */
-
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 IDC_REACTOS_SNDREC32 ACCELERATORS
 BEGIN
@@ -13,7 +8,7 @@ END
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 196, 75
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Záznam zvuku"
+CAPTION "O správci služeb"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON IDI_SNDREC32, -1, 19, 14, 21, 20
@@ -44,8 +39,8 @@ BEGIN
         MENUITEM "V&ložit soubor...", ID_EDIT_INSERTFILE
         MENUITEM "Sl&oučit se souborem...", ID_EDIT_MIXFILE
         MENUITEM SEPARATOR
-        MENUITEM "Odstranit &před současnou pozicí",ID_EDIT_DELETEBEFORE, GRAYED
-        MENUITEM "Odstranit &za současnou pozicí",ID_EDIT_DELETEAFTER, GRAYED
+        MENUITEM "Odstranit &před současnou pozicí", ID_EDIT_DELETEBEFORE, GRAYED
+        MENUITEM "Odstranit &za současnou pozicí", ID_EDIT_DELETEAFTER, GRAYED
         MENUITEM SEPARATOR
         MENUITEM "Vlas&tnosti zvuku", ID_EDIT_AUDIOPROPS
     END
