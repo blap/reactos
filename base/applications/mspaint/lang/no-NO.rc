@@ -1,12 +1,12 @@
 /*
  * PROJECT:     PAINT for ReactOS
- * LICENSE:     unknown (LGPL assumed)
- * FILE:        base/applications/mspaint/lang/no-NO.rc
- * PURPOSE:     NO-Norwegian Language resource file
- * TRANSLATORS: first times touched from no-NO.rc file by Lars Martin Hambro
+ * LICENSE:     LGPL
+ * FILE:        base/applications/mspaint/lang/en-US.rc
+ * PURPOSE:     US-English Language resource file
+ * TRANSLATORS: first times touched from en-GB.rc file by Mario Kacmar
  */
 
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 ID_MENU MENU
 BEGIN
@@ -154,8 +154,8 @@ BEGIN
     LTEXT "Ikke tilgjengelig", IDD_ATTRIBUTESTEXT8, 60, 25, 90, 10
     GROUPBOX "Enheter", IDD_ATTRIBUTESGROUP1, 6, 57, 158, 27
     AUTORADIOBUTTON "Tommer", IDD_ATTRIBUTESRB1, 12, 69, 45, 10, WS_GROUP
-    AUTORADIOBUTTON "Centimeter", IDD_ATTRIBUTESRB2, 52, 69, 55, 10
-    AUTORADIOBUTTON "Piksler", IDD_ATTRIBUTESRB3, 106, 69, 35, 10
+    AUTORADIOBUTTON "c&m", IDD_ATTRIBUTESRB2, 62, 69, 45, 10
+    AUTORADIOBUTTON "&Pixels", IDD_ATTRIBUTESRB3, 112, 69, 45, 10
     GROUPBOX "Farger", IDD_ATTRIBUTESGROUP2, 6, 88, 158, 27
     AUTORADIOBUTTON "Svart og hvit", IDD_ATTRIBUTESRB4, 12, 100, 70, 10, WS_GROUP
     AUTORADIOBUTTON "Farger", IDD_ATTRIBUTESRB5, 92, 100, 35, 10
