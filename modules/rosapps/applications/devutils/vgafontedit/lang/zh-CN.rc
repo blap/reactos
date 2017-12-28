@@ -1,17 +1,17 @@
 /*
  * PROJECT:     ReactOS VGA Font Editor
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
- * PURPOSE:     Simplified Chinese resource file
+ * PURPOSE:     English resource file
  * COPYRIGHT:   Copyright 2008 Colin Finck (colin@reactos.org)
- * TRANSLATOR:  BinSys (binsys@163.com)
+ * TRANSLATOR:  Colin Finck
  */
 
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+LANGUAGE LANG_CHINESE_SIMPLIFIED, SUBLANG_CHINESE_SIMPLIFIED
 
 IDD_ABOUT DIALOGEX 10, 10, 130, 62
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "关于"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     ICON           IDI_MAIN,                     IDC_STATIC, 10, 10, 20, 20
     LTEXT          "ReactOS VGA 字体 编辑器",    IDC_STATIC, 37, 10, 93, 10
@@ -22,7 +22,7 @@ END
 IDD_EDITGLYPH DIALOGEX 32768, 32768, 246, 197
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "编辑 字形"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "", IDC_EDIT_GLYPH_TOOLBOX, TOOLBARCLASSNAMEA,          CCS_NODIVIDER | CCS_NORESIZE, 5, 5, 24, 82
     CONTROL "", IDC_EDIT_GLYPH_EDIT,    EDIT_GLYPH_EDIT_CLASSW,     0, 39, 5, 160, 160
@@ -72,22 +72,22 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_OPENFILTER, "全部支持的格式 (*.bin,*.psf)|*.bin;*.psf|Binary Font Files (*.bin)|*.bin|PC Screen Fonts Version 1 (*.psf)|*.psf|"
-    IDS_SAVEFILTER, "二进制字体文件 (*.bin)|*.bin|"
-    IDS_OPENERROR, "打开文件时发生错误! (错误码 %1!u!)"
-    IDS_READERROR, "读取文件时发生错误! (错误码 %1!u!)"
-    IDS_WRITEERROR, "写入文件时发生错误! (错误码 %1!u!)"
-    IDS_UNSUPPORTEDFORMAT, "不支持的文件格式!"
-    IDS_UNSUPPORTEDPSF, "不支持的 PSF 字体格式! 编辑器仅支持非特殊模式 8x8 字体。"
-    IDS_DOCNAME, "字体 %1!u!"
-    IDS_SAVEPROMPT, "文件 ""%1"" 已更改，但未保存.\n\n是否保存文件？"
-    IDS_APPTITLE, "ReactOS VGA 字体 编辑器"
-    IDS_CLOSEEDIT, "请先关闭全部打开的编辑窗口。"
+    IDS_OPENFILTER, "All supported formats (*.bin,*.psf)|*.bin;*.psf|Binary Font Files (*.bin)|*.bin|PC Screen Fonts Version 1 (*.psf)|*.psf|"
+    IDS_SAVEFILTER, "Binary Font Files (*.bin)|*.bin|"
+    IDS_OPENERROR, "Error while opening the file! (Error number %1!u!)"
+    IDS_READERROR, "Error while reading the file! (Error number %1!u!)"
+    IDS_WRITEERROR, "Error while writing the file! (Error number %1!u!)"
+    IDS_UNSUPPORTEDFORMAT, "Unsupported file format!"
+    IDS_UNSUPPORTEDPSF, "Unsupported PSF font format! The editor only supports 8x8 fonts with no special modes."
+    IDS_DOCNAME, "Font %1!u!"
+    IDS_SAVEPROMPT, "The file ""%1"" was modified, but not saved.\n\nDo you want to save it?"
+    IDS_APPTITLE, "ReactOS VGA Font Editor"
+    IDS_CLOSEEDIT, "Please close all open Edit windows first!"
 
-    IDS_TOOLTIP_NEW, "新建"
-    IDS_TOOLTIP_OPEN, "打开"
-    IDS_TOOLTIP_SAVE, "保存"
-    IDS_TOOLTIP_EDIT_GLYPH, "编辑 字形"
-    IDS_TOOLTIP_COPY, "复制"
-    IDS_TOOLTIP_PASTE, "粘贴"
+    IDS_TOOLTIP_NEW, "New"
+    IDS_TOOLTIP_OPEN, "Open"
+    IDS_TOOLTIP_SAVE, "Save"
+    IDS_TOOLTIP_EDIT_GLYPH, "Edit Glyph"
+    IDS_TOOLTIP_COPY, "Copy"
+    IDS_TOOLTIP_PASTE, "Paste"
 END
