@@ -1,6 +1,4 @@
-/* Simplified Chinese translation by Henry Tang Ih 2016 (henrytang2@hotmail.com) */
-
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+LANGUAGE LANG_CHINESE_SIMPLIFIED, SUBLANG_CHINESE_SIMPLIFIED
 
 STRINGTABLE
 BEGIN
@@ -39,19 +37,19 @@ BEGIN
     IDS_ERROR_INVALIDSYNTAX "错误: 无效语法。\n输入 ""WHOAMI /?"" 以了解用法。\n"
     IDS_ERROR_INVALIDARG "错误: 无效的参数/选项 - '%s'。\n输入 ""WHOAMI /?"" 以了解用法。\n"
     IDS_ERROR_NH_LIST "错误: /NH 开关不能用的列表格式。\n输入 ""WHOAMI /?"" 以了解用法。\n"
-    IDS_HELP "描述:\n\
-  显示本地登录的用户的用户、 组和权限信息。\n\
-  如果不提供任何参数，显示当前的域和用户名称。\n\
+    IDS_HELP "DESCRIPTION:\n\
+  Display user, group and privileges information for the local logged-on user.\n\
+  If no arguments are provided, displays the current domain and user name.\n\
 \n\
-  可用的输出格式为 '/fo' 选项是 'csv', 'list' 和 'table'.\n\
-  使用 '/nh' 要隐藏页眉。 默认情况下表中显示数据。\n\
+  Available output formats for the '/fo' option are 'csv', 'list' and 'table'.\n\
+  Use '/nh' to hide headers. By default the data is displayed in a table.\n\
 \n\
-语法:\n\
+SYNTAX:\n\
   whoami [/upn | /fqdn | /logonid] \n\
-  whoami {[/user] [/groups] [/priv]} [/fo <格式>] [/nh] \n\
-  whoami /all [/fo <格式>] [/nh] \n\
+  whoami {[/user] [/groups] [/priv]} [/fo <Format>] [/nh] \n\
+  whoami /all [/fo <Format>] [/nh] \n\
 \n\
-例子: \n\
+EXAMPLES: \n\
   whoami /groups /priv /nh /fo csv \n\
   whoami /logonid \n\
   whoami \n"
