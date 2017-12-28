@@ -1,7 +1,5 @@
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
-/* Fixme : Translation could be really improved, with context
-           La traduction pourrait réellement être améliorée grâce au contexte */
 STRINGTABLE
 BEGIN
     IDS_EDIT "Éditer"
