@@ -1,18 +1,18 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "Konfiguriert Geräte im System.\n\n\
-Gerätestatus:           MODE [Gerät] [/STATUS]\n\
-Serieller Anschluss:    MODE COMm[:] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s]\n\
-                        [to=on|off] [xon=on|off] [odsr=on|off]\n\
-                        [octs=on|off] [dtr=on|off|hs]\n\
-                        [rts=on|off|hs|tg] [idsr=on|off]\n\
-Druckausgabe umleiten:  MODE LPTn[:]=COMm[:]\n\
-Codepage auswählen:     MODE CON[:] CP SELECT=yyy\n\
-Codepagestatus:         MODE CON[:] CP [/STATUS]\n\
-Anzeigemodus:           MODE CON[:] [COLS=c] [LINES=n]\n\
-Tastaturwiederholrate:  MODE CON[:] [RATE=r DELAY=d]\n"
+    IDS_USAGE "Configure System Devices.\n\n\
+Device Status:     MODE [device] [/STATUS]\n\
+Serial port:       MODE COMm[:] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s]\n\
+                                [to=on|off] [xon=on|off] [odsr=on|off]\n\
+                                [octs=on|off] [dtr=on|off|hs]\n\
+                                [rts=on|off|hs|tg] [idsr=on|off]\n\
+Redirect printing: MODE LPTn[:]=COMm[:]\n\
+Select code page:  MODE CON[:] CP SELECT=yyy\n\
+Code page status:  MODE CON[:] CP [/STATUS]\n\
+Display mode:      MODE CON[:] [COLS=c] [LINES=n]\n\
+Typematic rate:    MODE CON[:] [RATE=r DELAY=d]\n"
 
     IDS_QUERY_SERIAL_FOUND "    Serieller Anschluss gefunden - %s\n"
     IDS_QUERY_PRINTER_FOUND "    Drucker gefunden - %s\n"
