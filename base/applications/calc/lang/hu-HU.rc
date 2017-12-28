@@ -1,12 +1,4 @@
-/*
- * PROJECT:    ReactOS Calculator
- * LICENSE:    GPL - See COPYING in the top level directory
- * FILE:       base/applications/calc/lang/hu-HU.rc
- * PURPOSE:    Hungarian Language File for ReactOS Calc
- * TRANSLATOR: Nagy Tibor (xnagytibor at gmail dot com)
- */
-
-LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_HUNGARIAN, SUBLANG_HUNGARIAN_HUNGARY
 
 /* Dialogs */
 
@@ -137,13 +129,13 @@ BEGIN
     PUSHBUTTON "F", IDC_BUTTON_F, 286, 140, 24, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
     GROUPBOX "", IDC_STATIC, 147, 14, 163, 20
-    CONTROL "Négyszó", IDC_RADIO_QWORD, "Button", BS_AUTORADIOBUTTON |
+    CONTROL "Qword", IDC_RADIO_QWORD, "Button", BS_AUTORADIOBUTTON |
             NOT WS_VISIBLE, 150, 21, 38, 10
-    CONTROL "Duplaszó", IDC_RADIO_DWORD, "Button", BS_AUTORADIOBUTTON |
+    CONTROL "Dword", IDC_RADIO_DWORD, "Button", BS_AUTORADIOBUTTON |
             NOT WS_VISIBLE, 190, 21, 38, 10
-    CONTROL "Szó", IDC_RADIO_WORD, "Button", BS_AUTORADIOBUTTON |
+    CONTROL "Word", IDC_RADIO_WORD, "Button", BS_AUTORADIOBUTTON |
             NOT WS_VISIBLE, 230, 21, 38, 10
-    CONTROL "Bájt", IDC_RADIO_BYTE, "Button", BS_AUTORADIOBUTTON |
+    CONTROL "Byte", IDC_RADIO_BYTE, "Button", BS_AUTORADIOBUTTON |
             NOT WS_VISIBLE, 270, 21, 38, 10
     CONTROL "Fok", IDC_RADIO_DEG, "Button", BS_AUTORADIOBUTTON, 150, 21, 45, 10
     CONTROL "Radián", IDC_RADIO_RAD, "Button", BS_AUTORADIOBUTTON, 204, 21, 45, 10
@@ -243,7 +235,7 @@ BEGIN
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 276, 24, 40, 17
     CONTROL "CE", IDC_BUTTON_CE, "Button", BS_OWNERDRAW | BS_CENTER |
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 232, 24, 40, 17
-    CONTROL "Vissza", IDC_BUTTON_BACK, "Button", BS_OWNERDRAW | BS_CENTER |
+    CONTROL "Back", IDC_BUTTON_BACK, "Button", BS_OWNERDRAW | BS_CENTER |
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 188, 24, 40,17
     RTEXT "", IDC_TEXT_OUTPUT, 5, 1, 312, 14, SS_CENTERIMAGE, WS_EX_CLIENTEDGE
     CONTROL "7", IDC_BUTTON_7, "Button", BS_OWNERDRAW | BS_CENTER |
@@ -450,12 +442,12 @@ BEGIN
     IDS_AREA_ACRES_FRANCE "Acre (Franciaország)"
     IDS_AREA_ACRES_SCOTS "Acre (Skót)"
     IDS_AREA_ACRES_US "Acre (Egyesült Államok)"
-    IDS_AREA_ARES "Are" // ?
+    IDS_AREA_ARES "Are"
     IDS_AREA_CHOU "Chou"
     IDS_AREA_DANBO "Danbo"
     IDS_AREA_HECTARES "Hektár"
     IDS_AREA_JEONGBO "Jeongbo"
-    IDS_AREA_MORGEN_HUNGARY "Hold (Magyarország)" // ?
+    IDS_AREA_MORGEN_HUNGARY "Hold (Magyarország)"
     IDS_AREA_MU "Mu"
     IDS_AREA_PING "Ping"
     IDS_AREA_PYEONG "Pyeong"
@@ -463,19 +455,19 @@ BEGIN
     IDS_AREA_RAI "Rai"
     IDS_AREA_SE "Se"
     IDS_AREA_SQUARE_CENTIMETERS "Négyzetcentiméter"
-    IDS_AREA_SQUARE_CHR "Négyzetchr" // ?
-    IDS_AREA_SQUARE_FATHOMS "Négyzetöl" // Alt.: Négyszögöl
-    IDS_AREA_SQUARE_FATHOMS_HUNGARY "Négyzetöl (Magyarország)" // Alt.: Négyszögöl (Magyarország)
-    IDS_AREA_SQUARE_FEET "Négyzetláb" // Alt.: Négyszögláb
-    IDS_AREA_SQUARE_INCHES "Négyzethüvelyk" // Alt.: Négyszöghüvelyk
+    IDS_AREA_SQUARE_CHR "Négyzetchr"
+    IDS_AREA_SQUARE_FATHOMS "Négyzetöl"
+    IDS_AREA_SQUARE_FATHOMS_HUNGARY "Négyzetöl (Magyarország)"
+    IDS_AREA_SQUARE_FEET "Négyzetláb"
+    IDS_AREA_SQUARE_INCHES "Négyzethüvelyk"
     IDS_AREA_SQUARE_KILOMETERS "Négyzetkilométer"
-    IDS_AREA_SQUARE_LAR "Négyzetlar" // ?
+    IDS_AREA_SQUARE_LAR "Négyzetlar"
     IDS_AREA_SQUARE_METER "Négyzetméter"
     IDS_AREA_SQUARE_MILES "Négyzetmérföld"
     IDS_AREA_SQUARE_MILLIMETERS "Négyzetmilliméter"
-    IDS_AREA_SQUARE_SHAKU "Négyzetshaku" // ?
-    IDS_AREA_SQUARE_TSUEN "Négyzettsuen" // ?
-    IDS_AREA_SQUARE_VA "Négyzetva" // ?
+    IDS_AREA_SQUARE_SHAKU "Négyzetshaku"
+    IDS_AREA_SQUARE_TSUEN "Négyzettsuen"
+    IDS_AREA_SQUARE_VA "Négyzetva"
     IDS_AREA_SQUARE_YARD "Négyzetyard"
     IDS_AREA_TAN "Tan"
     IDS_AREA_TSUBO "Tsubo"
