@@ -1,0 +1,15 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+BEGIN
+    IDS_USAGE "Displays data page-by-page on the screen.\n\n\
+  MORE < [Drive:][Path]File name\n\
+  Command | MORE \n\
+  MORE [Drive:][Path]File name\n\n\
+  [Drive:][Path]File name    A file, whose content shall be displayed.\n\
+  Command\t\t     A command, whose output shall be displayed.\n\n\
+  At the prompt """- Lanjutan -"" Anda dapat menekan tombol apa saja untuk menampilkan halaman berikutnya.\n"
+    IDS_CONTINUE "-- Lanjutkan --"
+    IDS_CONTINUE_PROGRESS "-- Lanjutkan (%d%%) --"
+    IDS_FILE_ACCESS "Tidak dapat mengakses file %s.\n"
+END
