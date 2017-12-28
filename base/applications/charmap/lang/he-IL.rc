@@ -1,5 +1,4 @@
-/* Translated by Baruch Rutman */
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 IDD_CHARMAP DIALOGEX 6, 6, 292, 224
 FONT 8, "MS Shell Dlg", 0, 0
@@ -16,7 +15,7 @@ BEGIN
             WS_CHILD | WS_VISIBLE | WS_TABSTOP, 74, 186, 114, 13
     DEFPUSHBUTTON "בחר", IDC_SELECT, 194, 186, 44, 13
     PUSHBUTTON "העתק", IDC_COPY, 242, 186, 44, 13, WS_DISABLED
-    CONTROL "תצוגה מתקדמת", IDC_CHECK_ADVANCED, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Ad&vanced view", IDC_CHECK_ADVANCED, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 8, 208, 95, 10
 END
 
@@ -49,7 +48,8 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_LICENSE "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
+    IDS_LICENSE "תוכנית זו היא תוכנה חופשית; אתה יכול להפיצו מחדש ו / או לשנות אותו תחת תנאי הרישיון הציבורי הכללי של גנו כפי שפורסם על ידי קרן התוכנה החופשית; או גירסה 2 של הרישיון, או (לפי בחירתך) כל גרסה מאוחרת יותר. \ r \ n \ r \ n תוכנית זו מופצת בתקווה שזה יהיה שימושי, אך ללא אחריות כלשהי; אפילו ללא אחריות מרומזת של סחירות או התאמה למטרה מסוימת. עיין ברישיון הציבורי הכללי של GNU לפרטים נוספים. \ R \ n \ r \ n היית אמור לקבל עותק של הרישיון הציבורי הכללי של GNU יחד עם תוכנית זו; אם לא, לכתוב את קרן תוכנה חופשית, Inc, 51 פרנקלין רחוב, קומה 5, בוסטון, MA 02110-1301 ארה""ב.
+"
     IDS_ABOUT "&אודות..."
     IDS_TITLE "מפת תווים"
 END
