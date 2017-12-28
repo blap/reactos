@@ -1,4 +1,4 @@
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 STRINGTABLE
 {
@@ -12,26 +12,26 @@ STRINGTABLE
 
 STRINGTABLE
 {
-3000, "Normale"
-3001, "Caratteri grandi"
-3002, "Caratteri molto grandi"
+3000, "Normal"
+3001, "Large Fonts"
+3002, "Extra Large Fonts"
 }
 
 STRINGTABLE
 {
-4000, "Normale"
-4001, "Caratteri grandi"
-4002, "Caratteri molto grandi"
+4000, "Normal"
+4001, "Large Fonts"
+4002, "Extra Large Fonts"
 }
 
 STRINGTABLE
 {
 5000, "Lautus"
-5001, "Stile di visualizzazione"
+5001, "Visual Style"
 5002, "ReactOS Foundation"
-5003, "Pisarz, basato on Luna Inspirat"
-5004, "Distribuito sotto licenza GNU/GPL 2.0, 2011"
+5003, "Pisarz, based on Luna Inspirat"
+5004, "Released under GNU/GPL 2.0, 2011"
 5005, "http://www.reactos.org"
 5006, "1.0"
-5007, "Stile di visualizzazione per ReactOS"
+5007, "Visual Style for ReactOS"
 }
