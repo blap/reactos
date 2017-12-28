@@ -1,6 +1,4 @@
-/* TRANSLATOR: 2013, 2014, 2016 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 IDR_MAINMENU MENU
 BEGIN
@@ -88,7 +86,7 @@ BEGIN
     COMBOBOX IDC_START_TYPE, 70, 107, 176, 40, WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST
     PUSHBUTTON "&Başlat", IDC_START, 6, 155, 54, 15, WS_DISABLED
     PUSHBUTTON "&Durdur", IDC_STOP, 68, 155, 54, 15, WS_DISABLED
-    PUSHBUTTON "D&uraklat", IDC_PAUSE , 130, 155, 54, 15, WS_DISABLED
+    PUSHBUTTON "&Pause", IDC_PAUSE, 130, 155, 54, 15, WS_DISABLED
     PUSHBUTTON "&Sürdür", IDC_RESUME, 192, 155, 54, 15, WS_DISABLED
     LTEXT "Hizmet Adı:", IDC_STATIC, 4, 11, 53, 11
     LTEXT "Görüntülenen Adı:", IDC_STATIC, 4, 29, 53, 11
@@ -318,17 +316,17 @@ BEGIN
     IDS_HINT_HELP " Yardım penceresini görüntüler."
     IDS_HINT_ABOUT " Hizmet Yöneticisi üzerine."
     IDS_HINT_SYS_RESTORE " Bu pencereyi düzgülük boyutlarına döndürür."
-    IDS_HINT_SYS_MOVE     " Bu pencereyi devindirir."
-    IDS_HINT_SYS_SIZE     " Bu pencereyi yeniden boyutlandırır."
+    IDS_HINT_SYS_MOVE " Bu pencereyi devindirir."
+    IDS_HINT_SYS_SIZE " Bu pencereyi yeniden boyutlandırır."
     IDS_HINT_SYS_MINIMIZE " Bu pencereyi bir simgeye küçültür."
     IDS_HINT_SYS_MAXIMIZE " Bu pencereyi, bu görüntülüğü kaplatana dek genişletir."
-    IDS_HINT_SYS_CLOSE    " Bu pencereyi kapatır."
+    IDS_HINT_SYS_CLOSE " Bu pencereyi kapatır."
 END
 
 /* Application title */
 STRINGTABLE
 BEGIN
-    IDS_APPNAME "Hizmet Yöneticisi"
+    IDS_APPNAME "Mayın Tarlası"
 END
 
 STRINGTABLE
