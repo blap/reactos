@@ -1,4 +1,4 @@
-LANGUAGE LANG_INDONESIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
 
 STRINGTABLE
 BEGIN
@@ -24,43 +24,42 @@ STRINGTABLE
 BEGIN
 /* Please keep the spacing/formatting as per En.rc when translating */
     IDS_USAGE
-    "\nPENGGUNAAN:\n \
+    "\nUSAGE:\n \
         ipconfig [/? | /all | /renew [adapter] | /release [adapter] |\n \
                   /flushdns | /displaydns | /registerdns |\n \
                   /showclassid adapter |\n \
                   /setclassid adapter [classid] ]\n \
     \n \
     where\n \
-        adapter         Nama koneksi\n \
-                       (karakter wildcard * dan ? dibolehkan, lihat contoh)\n \
+        adapter         Connection name\n \
+                       (wildcard characters * and ? allowed, see examples)\n \
     \n \
-        Opsi:\n \
-           /?           Menampilkan pesan bantuan ini\n \
-           /all         Menampilkan informasi konfigurasi lengkap.\n \
-           /release     Melepaskan alamat IP untuk adapter tertentu.\n \
-           /renew       Memperbarui alamat IP untuk adapter tertentu.\n \
-           /flushdns    Membersihkan cache DNS Resolver.\n \
-           /registerdns Menyegarkan semua sewa DHCP dan re-register nama DNS.\n \
-           /displaydns  Menampilkan isi DNS Resolver Cache.\n \
-           /showclassid Menampilkan semua dhcp class ID yang dibolehkan pada adapter.\n \
-           /setclassid  Mengubah dhcp class id.\n \
+        Options:\n \
+           /?           Display this help message\n \
+           /all         Display full configuration information.\n \
+           /release     Release the IP address for the specified adapter.\n \
+           /renew       Renew the IP address for the specified adapter.\n \
+           /flushdns    Purges the DNS Resolver cache.\n \
+           /registerdns Refreshes all DHCP leases and re-registers DNS names.\n \
+           /displaydns  Display the contents of the DNS Resolver Cache.\n \
+           /showclassid Displays all the dhcp class IDs allowed for adapter.\n \
+           /setclassid  Modifies the dhcp class id.\n \
     \n \
-    Standarnya adalah hanya menampilkan alamat IP, subnet mask dan\n \
-    gateway standar untuk setiap adapter yang terikat ke TCP/IP.\n \
+    The default is to display only the IP address, subnet mask and\n \
+    default gateway for each adapter bound to TCP/IP.\n \
     \n \
-    Untuk Melepas dan Memperbarui, jika tidak ada nama adapter, maka sewa\n \
-    alamat IP untuk seluruh adapter yang terikat ke TCP/IP akan dilepaskan \n \
-    atau diperbaharui.\n \
+    For Release and Renew, if no adapter name is specified, then the IP address\n \
+    leases for all adapters bound to TCP/IP will be released or renewed.\n \
     \n \
-    Untuk Setclassid, jika tidak ada ClassId yang ditetapkan, maka ClassId dihapus.\n \
+    For Setclassid, if no ClassId is specified, then the ClassId is removed.\n \
     \n \
-    Contoh:\n \
-        > ipconfig                   ... Menampilkan informasi.\n \
-        > ipconfig /all              ... Menampilkan detil informasi\n \
-        > ipconfig /renew            ... Memperbarui semua adapter\n \
-        > ipconfig /renew EL*        ... Memperbarui setiap koneksi yang\n \
-                                         namanya dimulai dengan EL\n \
-        > ipconfig /release *Con*    ... melepaskan semua koneksi yang sama,\n \
-                                          ""Local Area Connection 1"" atau\n \
-                                          ""Local Area Connection 2""\n"
+    Examples:\n \
+        > ipconfig                   ... Show information.\n \
+        > ipconfig /all              ... Show detailed information\n \
+        > ipconfig /renew            ... renew all adapters\n \
+        > ipconfig /renew EL*        ... renew any connection that has its\n \
+                                         name starting with EL\n \
+        > ipconfig /release *Con*    ... release all matching connections,\n \
+                                         eg. """Sambungan Area Lokal 1""" or\n \
+                                             """Local Area Connection 1"""
 END
