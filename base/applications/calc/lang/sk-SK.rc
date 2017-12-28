@@ -1,11 +1,4 @@
-/* TRANSLATOR : Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- * DATE OF TR.: 30-01-2008
- * LAST CHANGE: 09-08-2011
- * ---------------------------------------
- * TODO: pridanie navigačných značiek "&" ?
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 /* Dialogs */
 
@@ -142,7 +135,7 @@ BEGIN
             NOT WS_VISIBLE, 190, 21, 38, 10
     CONTROL "Word", IDC_RADIO_WORD, "Button", BS_AUTORADIOBUTTON |
             NOT WS_VISIBLE, 230, 21, 38, 10
-    CONTROL "Bajt", IDC_RADIO_BYTE, "Button", BS_AUTORADIOBUTTON |
+    CONTROL "Byte", IDC_RADIO_BYTE, "Button", BS_AUTORADIOBUTTON |
             NOT WS_VISIBLE, 270, 21, 38, 10
     CONTROL "Stupne", IDC_RADIO_DEG, "Button", BS_AUTORADIOBUTTON, 150, 21, 45, 10
     CONTROL "Radiány", IDC_RADIO_RAD, "Button", BS_AUTORADIOBUTTON, 204, 21, 45, 10
@@ -242,7 +235,7 @@ BEGIN
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 276, 24, 40, 17
     CONTROL "CE", IDC_BUTTON_CE, "Button", BS_OWNERDRAW | BS_CENTER |
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 232, 24, 40, 17
-    CONTROL "Späť", IDC_BUTTON_BACK, "Button", BS_OWNERDRAW | BS_CENTER |
+    CONTROL "Back", IDC_BUTTON_BACK, "Button", BS_OWNERDRAW | BS_CENTER |
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 188, 24, 40,17
     RTEXT "", IDC_TEXT_OUTPUT, 5, 1, 312, 14, SS_CENTERIMAGE, WS_EX_CLIENTEDGE
     CONTROL "7", IDC_BUTTON_7, "Button", BS_OWNERDRAW | BS_CENTER |
@@ -420,7 +413,7 @@ STRINGTABLE
 BEGIN
     IDS_CONV_ANGLE "Uhol"
     IDS_CONV_AREA "Plocha"
-    IDS_CONV_CONSUMPTION "Spotreba motorov" //Spotreba (motory)
+    IDS_CONV_CONSUMPTION "Spotreba motorov"
     IDS_CONV_CURRENCY "Mena"
     IDS_CONV_ENERGY "Energia"
     IDS_CONV_LENGTH "Dĺžka"
@@ -647,9 +640,9 @@ END
 STRINGTABLE
 BEGIN
     IDS_VOLUME_BARRELS_UK "Barely (UK)"
-    IDS_VOLUME_BARRELS_OIL "Barely ropy" //oleja?
+    IDS_VOLUME_BARRELS_OIL "Barely ropy"
     IDS_VOLUME_BUN "Bun"
-    IDS_VOLUME_BUSHELS_UK "Bušely (UK)" //Bušel, Bušle? Bušly?
+    IDS_VOLUME_BUSHELS_UK "Bušely (UK)"
     IDS_VOLUME_BUSHELS_US "Bušely (USA)"
     IDS_VOLUME_CUBIC_CENTIMETERS "Kubické centimetre"
     IDS_VOLUME_CUBIC_FEET "Kubické stopy"
@@ -669,10 +662,10 @@ BEGIN
     IDS_VOLUME_LITERS "Litre"
     IDS_VOLUME_MAL "Mal"
     IDS_VOLUME_MILLILITERS "Mililitre"
-    IDS_VOLUME_PINTS_UK "Pinty (UK)" //pinta alebo polliter
+    IDS_VOLUME_PINTS_UK "Pinty (UK)"
     IDS_VOLUME_PINTS_DRY_US "Pinty, suché (USA)"
     IDS_VOLUME_PINTS_LIQUID_US "Pinty, tekuté (USA)"
-    IDS_VOLUME_QUARTS_UK "Quarts (UK)" //štvrťgalóny, štvrtiny, štvrťky
+    IDS_VOLUME_QUARTS_UK "Quarts (UK)"
     IDS_VOLUME_QUARTS_DRY_US "Quarts, suché (USA)"
     IDS_VOLUME_QUARTS_LIQUID_US "Quarts, tekuté (USA)"
     IDS_VOLUME_SEKI "Seki"
