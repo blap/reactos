@@ -1,0 +1,19 @@
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+
+STRINGTABLE
+{
+    STRING_USAGE, "A sintaxe deste comando é:\n\nREG [ ADD | DELETE | QUERY ]\nREG comando /?\n"
+    STRING_INVALID_OPTION, "Erro: Opção inválida ou desconhecida para a linha de comando especificada.\n"
+    STRING_INVALID_PARAM, "Erro: Parâmetros da linha de comandos inválidos.\n"
+    STRING_MISSING_OPTION, "Error: One of options /im or /pid must be specified.\n"
+    STRING_MISSING_PARAM, "Erro: Opção %1 espera um parâmetro de linha de comando.\n"
+    STRING_MUTUAL_EXCLUSIVE, "Erro: Opções /im e /pid são mutuamente exclusivas.\n"
+    STRING_CLOSE_PID_SEARCH, "Fechar mensagem enviada para janelas de nível superior do processo com PID %1!u!.\n"
+    STRING_CLOSE_PROC_SRCH, "Fechar mensagem enviada para janelas de nível superior do processo ""%1"" com PID %2!u!.\n"
+    STRING_TERM_PID_SEARCH, "Processo com PID %1!u! foi encerrado forçadamente.\n"
+    STRING_TERM_PROC_SEARCH, "Processo ""%1"" com PID %2!u! foi encerrado forçadamente.\n"
+    STRING_SEARCH_FAILED, "Erro: Não foi possível localizar o processo ""%1"".\n"
+    STRING_ENUM_FAILED, "Erro: Não é possível numerar a lista de processo.\n"
+    STRING_TERMINATE_FAILED, "Erro: Não é possível encerrar o processo ""%1"".\n"
+    STRING_SELF_TERMINATION, "Error: Process self-termination is not permitted.\n"
+}
