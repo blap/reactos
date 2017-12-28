@@ -1,11 +1,4 @@
-/*
- * FILE:        dll/cpl/timedate/lang/sk-SK.rc
- * PURPOSE:     Slovak Language File for timedate
- * TRANSLATOR:  Kario <kario@szm.sk>
- * DATE OF TR.: 27-07-2007
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 IDD_DATETIMEPAGE DIALOGEX 0, 0, 252, 146
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -45,7 +38,7 @@ BEGIN
                  IDC_AUTOSYNC, 11, 7, 241, 10, BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP
     LTEXT "Server:", IDC_SERVERTEXT, 34, 22, 28, 13
     PUSHBUTTON "&Aktualizovať", IDC_UPDATEBUTTON, 187, 22, 49, 14
-    LTEXT "", IDC_SUCSYNC, 16, 54, 214, 23
+    LTEXT "", IDC_SUCSYNC, 12, 54, 214, 23
     LTEXT "", IDC_NEXTSYNC, 12, 96, 137, 12
     LTEXT "Synchronizácia sa môže vykonať iba v takom prípade, ak je počítač pripojený na Internet.", -1, 12, 114, 225, 25
 END
