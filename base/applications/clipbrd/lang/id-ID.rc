@@ -1,0 +1,65 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+ID_ACCEL ACCELERATORS
+BEGIN
+    VK_DELETE, CMD_DELETE, VIRTKEY
+END
+
+MAIN_MENU MENU
+BEGIN
+    POPUP "&Berkas"
+    BEGIN
+        MENUITEM "&Terbuka...", CMD_OPEN
+        MENUITEM "Simpan & Sebagai...", CMD_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Keluar", CMD_EXIT
+    END
+    POPUP "&Sunting"
+    BEGIN
+        MENUITEM "Hapus\t&Del", CMD_DELETE
+    END
+    POPUP "&Tampilan"
+    BEGIN
+        MENUITEM "&Otomatis", CMD_AUTOMATIC
+    END
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Topik-Topik Bantuan", CMD_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "&Tentang", CMD_ABOUT
+    END
+END
+
+STRINGTABLE
+BEGIN
+    STRING_CLIPBOARD "Penonton Papanklip"
+    STRING_CLIPFILE  "Papanklip Elemen"
+    STRING_DELETE_MSG "Hapus isi Papanklip?"
+    STRING_DELETE_TITLE "Hapus Clipboard"
+    STRING_FORMAT_NT "Berkas clipboard untuk ReactOS (*.clp)"
+    STRING_FORMAT_GEN "Berkas clipboard (*.clp)"
+END
+
+STRINGTABLE
+BEGIN
+    STRING_CF_UNKNOWN "Format tidak diketahui"
+    STRING_CF_TEXT "Isi"
+    STRING_CF_BITMAP "Bitmap"
+    STRING_CF_OEMTEXT "Teks OEM"
+    STRING_CF_UNICODETEXT "Teks Unicode"
+    STRING_CF_DIB "DIB Bitmap"
+    STRING_CF_LOCALE "Data lokal"
+    STRING_CF_ENHMETAFILE "Metafile yang disempurnakan"
+    STRING_CF_METAFILEPICT "Metafile"
+    STRING_CF_PALETTE "Palet Warna"
+    STRING_CF_DIBV5 "DIB Bitmap (versi 5)"
+    STRING_CF_SYLK "Link Simbolik Format"
+    STRING_CF_DIF "Format Pertukaran Data"
+    STRING_CF_HDROP "Data Penurunan"
+END
+
+STRINGTABLE
+BEGIN
+    ERROR_UNSUPPORTED_FORMAT "Clipboard berisi data dalam format, yang tidak dapat ditampilkan."
+    ERROR_INVALID_FILE_FORMAT "File yang dipilih adalah tidak sah clipboard file."
+END
