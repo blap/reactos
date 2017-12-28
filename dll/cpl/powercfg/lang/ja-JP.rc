@@ -1,11 +1,9 @@
-/* Japanese translation by Tomoya Kitagawa (jptomoya at yahoo dot co dot jp) */
-
-LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+LANGUAGE LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN
 
 IDD_PROPPAGEPOWERSCHEMES DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "電源設定"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ACDC, IDI_ACDC, 7, 7, 28, 22
     LTEXT "このコンピュータに最も適した電源設定を選択してください。下の設定を変更すると、選択された電源設定も変更される点に注意してください。", -1, 37, 6, 209, 36
@@ -36,13 +34,13 @@ END
 IDD_PROPPAGEALARMS DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "アラーム"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "バッテリ低下アラーム", -1, 6, 7, 239, 104
     AUTOCHECKBOX "電源レベルが次に達したらバッテリ低下アラームで知らせる(&L):", IDC_ALARM1, 15, 17, 190, 15, WS_TABSTOP
     LTEXT "不明", IDC_ALARMVALUE1, 215, 20, 20, 10
     LTEXT "0%", -1, 28, 43, 15, 10
-    CONTROL "Slider1", IDC_ALARMBAR1, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 45, 170, 15
+    CONTROL "スライダー1", IDC_ALARMBAR1, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 45, 170, 15
     LTEXT "100%", -1, 214, 43, 25, 10
     PUSHBUTTON "アラームの動作(&M)...", -1, 17, 69, 70, 14, WS_DISABLED
     LTEXT "通知方法:", -1, 95, 71, 57, 10
@@ -52,10 +50,10 @@ BEGIN
     LTEXT "プログラムの実行:", -1, 95, 95, 55, 10
     LTEXT "不明", IDC_ALARMPROG1, 154, 95, 84, 10
     GROUPBOX "バッテリ限界アラーム", -1, 6, 120, 239, 106
-    AUTOCHECKBOX "電源レベルが次に達したらバッテリ限界アラームで知らせる(&C):", IDC_ALARM2, 15, 131, 180, 15, WS_TABSTOP
+    AUTOCHECKBOX "電源レベルが次に達したらバッテリ限界アラームで知らせる(&C):", IDC_ALARM2, 15, 131, 195, 15, WS_TABSTOP
     LTEXT "不明", IDC_ALARMVALUE2, 215, 134, 20, 10
     LTEXT "0%", -1, 28, 154, 15, 10
-    CONTROL "Slider1", IDC_ALARMBAR2, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 158, 170, 15
+    CONTROL "スライダー1", IDC_ALARMBAR2, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 158, 170, 15
     LTEXT "100%", -1, 214, 154, 25, 10
     PUSHBUTTON "アラームの動作(&M)...", -1, 17, 183, 70, 14, WS_DISABLED
     LTEXT "通知方法:", -1, 95, 185, 50, 10
@@ -69,7 +67,7 @@ END
 IDD_PROPPAGEADVANCED DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "詳細設定"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ACDC, IDI_ACDC, 7, 7, 20, 20
     LTEXT "使用する省電力設定を選択してください。", -1, 37, 6, 207, 20
@@ -89,7 +87,7 @@ END
 IDD_PROPPAGEHIBERNATE DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "休止状態"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_HIBERNATE, IDI_HIBERNATE, 7, 7, 20, 20
     LTEXT "休止状態になると、コンピュータはメモリ上にあるものをすべてハード ディスクに格納してからシャットダウンします。休止状態が解除されると、コンピュータは以前の状態に戻ります。 ", -1, 37, 6, 210, 35
@@ -105,8 +103,8 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_CPLNAME_1 "電源オプション"
-    IDS_CPLDESCRIPTION_1 "コンピュータの省電力設定を構成します。"
+    IDS_CPLNAME_1 "ライセンス マネージャ"
+    IDS_CPLDESCRIPTION_1 "ライセンス マネージャ"
     IDS_PROCENT "%i%%"
     IDS_SOUND "音"
     IDS_TEXT "テキスト"
