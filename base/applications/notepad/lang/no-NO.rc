@@ -1,4 +1,4 @@
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -100,7 +100,7 @@ BEGIN
     EDITTEXT 0x143, 58, 147, 173, 12, WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
     PUSHBUTTON "Help", IDHELP, 8, 170, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 198, 170, 50, 14, BS_PUSHBUTTON
-    PUSHBUTTON "Cancel", IDCANCEL, 254, 170, 50, 14
+    PUSHBUTTON "Avbryt", IDCANCEL, 254, 170, 50, 14
     PUSHBUTTON "P&rinter...", psh3, 310, 170, 50, 14
 END
 
@@ -125,7 +125,7 @@ BEGIN
     EDITTEXT ID_LINENUMBER, 54, 10, 106, 12, WS_CHILD | WS_BORDER | WS_TABSTOP
     LTEXT "Line nummer:", 0x155, 5, 12, 41, 12, WS_CHILD | WS_TABSTOP | ES_NUMBER
     DEFPUSHBUTTON "OK", IDOK, 75, 30, 40, 15, WS_CHILD | WS_TABSTOP
-    PUSHBUTTON "Avbryt", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
 END
 
 IDD_ABOUTBOX DIALOGEX 22, 16, 284, 170
@@ -160,18 +160,17 @@ BEGIN
     STRING_UNTITLED "(uten navn)"
     STRING_ALL_FILES "Alle filer (*.*)"
     STRING_TEXT_FILES_TXT "Tekst filer (*.txt)"
-    STRING_TOOLARGE "Filen '%s' er for stor for notisblokk.\n \
-Vennligst bruk en annen editor."
-    STRING_NOTEXT "Du utfører innskrivet tekst. \
-\nVennligst skriv noe og pr?jen"
-    STRING_DOESNOTEXIST "Filen '%s'\n eksistere ikke\n\n \
-Vil du opprette en ny fil?"
-    STRING_NOTSAVED "Filen '%s'\nhar ikke blitt lagret\n\n \
-Vil du lagre endringen?"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "'%s' ble ikke funnet."
-    STRING_OUT_OF_MEMORY "Ikke nok minne for å åpne \
-oppgaven. \nAvslutt en eller mere applikasjoner for øke mengden  av \nledig \
-minne."
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "Kan ikke finne '%s'"
     STRING_ANSI "ANSI"
     STRING_UNICODE "Unicode"
