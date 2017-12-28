@@ -1,4 +1,4 @@
-LANGUAGE LANG_FRENCH, SUBLANG_DEFAULT
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 IDR_MAINMENU MENU
 BEGIN
@@ -16,7 +16,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Répé&ter\tCtrl+T", IDM_REPEAT
     END
-    POPUP "&View"
+    POPUP "&Affichage"
     BEGIN
         MENUITEM "Single-Window &Mode", IDM_SWITCHVIEW
     END
@@ -54,7 +54,7 @@ BEGIN
     IDS_MODE_NOT_READY "Pas prêt"
     IDS_ALL_TYPES_FILTER "Tous les types supportés"
     IDS_TOOLTIP_PLAY "Lecture"
-    IDS_TOOLTIP_STOP "Stop"
+    IDS_TOOLTIP_STOP "arr"
     IDS_TOOLTIP_EJECT "Éjecter"
     IDS_TOOLTIP_BACKWARD "Précédent"
     IDS_TOOLTIP_SEEKBACK "Retour rapide"
