@@ -1,12 +1,12 @@
 /*
  * PROJECT:    Spider Solitaire
  * LICENSE:    See COPYING in top level directory
- * FILE:       base/applications/games/spider/lang/de-DE.rc
- * PURPOSE:    German Language File for Spider Solitaire
+ * FILE:       base/applications/games/spider/lang/en-US.rc
+ * PURPOSE:    English Language File for Spider Solitaire
  * TRANSLATOR: Gregor Schneider
  */
 
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 /* Dialogs */
 
@@ -31,7 +31,7 @@ BEGIN
     PUSHBUTTON "Abbrechen", IDCANCEL, 176, 165, 54, 14
 END
 
-IDD_DIFFICULTY DIALOGEX 100, 100, 120, 80
+IDD_DIFFICULTY DIALOGEX 100, 100, 106, 80
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_SHELLFONT
 CAPTION "Schwierigkeitsgrad wählen"
 FONT 8, "MS Shell Dlg"
