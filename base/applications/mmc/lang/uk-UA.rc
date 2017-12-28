@@ -1,12 +1,4 @@
-/*
- * PROJECT:    ReactOS Management Console
- * LICENSE:    GPL - See COPYING in the top level directory
- * FILE:       base/applications/mmc/lang/uk-UA.rc
- * PURPOSE:    Ukraianian Language File for MMC
- * TRANSLATOR: Artem Reznikov
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDM_CONSOLE_SMALL MENU
 BEGIN
@@ -34,7 +26,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "В&ихід\tAlt+F4", IDM_FILE_EXIT
     END
-    POPUP "&Windows"
+    POPUP "В&ікна"
     BEGIN
         MENUITEM "List", IDM_WINDOWS_LIST
     END
