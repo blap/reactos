@@ -1,12 +1,4 @@
-/*
- * PROJECT:     Network Connections Shell Folder
- * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        dll/shellext/netshell/lang/uk-UA.rc
- * PURPOSE:     Ukraianian Language File for netshell
- * TRANSLATORS: Artem Reznikov, Igor Paliychuk
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDD_NETPROPERTIES DIALOGEX 0, 0, 246, 246
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
@@ -62,15 +54,15 @@ STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Підтримка"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Стан підключення", -1, 9, 8, 189, 88, BS_GROUPBOX
+    GROUPBOX "Стан підключення", -1, 9, 8, 190, 88, BS_GROUPBOX
     LTEXT "Тип адреси:", -1, 22, 20, 80, 8
     LTEXT "IP-адреса:", -1, 22, 34, 80, 8
     LTEXT "Маска підмережі:", -1, 22, 48, 80, 8
     LTEXT "Основний шлюз:", -1, 22, 62, 80, 8
-    RTEXT "N/A", IDC_DETAILSTYPE, 115, 20, 80, 8
-    RTEXT "000.000.000.000", IDC_DETAILSIP, 115, 34, 80, 8
-    RTEXT "000.000.000.000", IDC_DETAILSSUBNET, 115, 48, 80, 8
-    RTEXT "", IDC_DETAILSGATEWAY, 115, 62, 80, 8
+    RTEXT "N/A", IDC_DETAILSTYPE, 112, 20, 80, 8
+    RTEXT "000.000.000.000", IDC_DETAILSIP, 112, 34, 80, 8
+    RTEXT "000.000.000.000", IDC_DETAILSSUBNET, 112, 48, 80, 8
+    RTEXT "", IDC_DETAILSGATEWAY, 112, 62, 80, 8
     PUSHBUTTON "&Склад...", IDC_DETAILS, 22, 76, 62, 14
 END
 
@@ -86,7 +78,7 @@ END
 
 IDD_NETWORKSETTINGSPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "Встановлення ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_NET_SETUP, IDC_STATIC, 21, 10, 20, 20
@@ -99,22 +91,22 @@ END
 
 IDD_NETWORKCOMPONENTPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "Встановлення ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "For Device:", IDC_STATIC, 33, 2, 100, 20
-    LTEXT "n/a", IDC_NETWORK_DEVICE, 75, 2, 253, 20
-    LTEXT "Components checked are used by this connection:", IDC_STATIC, 33, 12, 253, 20
+    LTEXT "Н/Д", IDC_NETWORK_DEVICE, 75, 2, 253, 20
+    LTEXT "Відмічені компоненти використовуються цим підключенням:", IDC_STATIC, 33, 12, 253, 20
     CONTROL "", IDC_COMPONENT_LIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP, 33, 22, 250, 50
     PUSHBUTTON "&Install...", IDC_NETWORK_INSTALL, 122, 75, 50, 14, WS_DISABLED | WS_TABSTOP
-    PUSHBUTTON "&Uninstall", IDC_NETWORK_UNINSTALL, 177, 75, 50, 14, WS_DISABLED | WS_TABSTOP
+    PUSHBUTTON "В&идалити", IDC_NETWORK_UNINSTALL, 177, 75, 50, 14, WS_DISABLED | WS_TABSTOP
     PUSHBUTTON "&Properties", IDC_NETWORK_PROPERTIES, 232, 75, 50, 14, WS_DISABLED | WS_TABSTOP
-    GROUPBOX "Description", IDC_STATIC, 33, 90, 250, 50, BS_GROUPBOX
+    GROUPBOX "Опис", IDC_STATIC, 33, 90, 250, 50, BS_GROUPBOX
 END
 
 IDD_NETWORKDOMAINPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "Встановлення ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Do you want this computer to be a member of a domain?\n\
@@ -159,7 +151,7 @@ BEGIN
     IDS_NET_REPAIR "Виправити"
     IDS_NET_CREATELINK "Створити ярлик"
     IDS_NET_DELETE "Видалити"
-    IDS_NET_RENAME "Rename"
+    IDS_NET_RENAME "Перейменувати"
     IDS_NET_PROPERTIES "Властивості"
     IDS_FORMAT_BIT "%u біт/с"
     IDS_FORMAT_KBIT "%u Кбіт/с"
@@ -179,6 +171,6 @@ BEGIN
     IDS_NETWORKCOMPONENTSUBTITLE "Determine which networking components are used on your computer. To add new components, click on Install."
     IDS_NETWORKDOMAINTITLE "Workgroup or Computer Domain"
     IDS_NETWORKDOMAINSUBTITLE "A domain is a group of computers defined by a network administrator. A workgroup is a group of computers sharing the same workgroup name."
-    IDS_REACTOS_SETUP "ReactOS Setup"
+    IDS_REACTOS_SETUP "Встановлення ReactOS"
     IDS_WZD_DOMAIN_NAME "Setup cannot continue until you\nenter the name of your domain\nor workgroup."
 END
