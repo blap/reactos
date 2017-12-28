@@ -1,13 +1,12 @@
 /*
- * PROJECT:    PAINT for ReactOS
- * LICENSE:    LGPL
- * FILE:       base/applications/mspaint/lang/pl-PL.rc
- * PURPOSE:    Polish Language resource file
- * TRANSLATOR: Caemyr - Olaf Siejka (May, 2009), Use ReactOS forum PM or IRC to contact me
- * UTF-8 conversion by Caemyr (May, 2011)
+ * PROJECT:     PAINT for ReactOS
+ * LICENSE:     LGPL
+ * FILE:        base/applications/mspaint/lang/en-US.rc
+ * PURPOSE:     US-English Language resource file
+ * TRANSLATORS: first times touched from en-GB.rc file by Mario Kacmar
  */
 
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 ID_MENU MENU
 BEGIN
@@ -154,8 +153,8 @@ BEGIN
     LTEXT "Brak danych", IDD_ATTRIBUTESTEXT7, 60, 15, 90, 10
     LTEXT "Brak danych", IDD_ATTRIBUTESTEXT8, 60, 25, 90, 10
     GROUPBOX "Jednostki", IDD_ATTRIBUTESGROUP1, 6, 57, 158, 27
-    AUTORADIOBUTTON "&Cale", IDD_ATTRIBUTESRB1, 12, 69, 35, 10, WS_GROUP
-    AUTORADIOBUTTON "Centy&metry", IDD_ATTRIBUTESRB2, 52, 69, 55, 10
+    AUTORADIOBUTTON "&Cale", IDD_ATTRIBUTESRB1, 12, 69, 45, 10, WS_GROUP
+    AUTORADIOBUTTON "c&m", IDD_ATTRIBUTESRB2, 62, 69, 45, 10
     AUTORADIOBUTTON "&Piksele", IDD_ATTRIBUTESRB3, 112, 69, 45, 10
     GROUPBOX "Kolory", IDD_ATTRIBUTESGROUP2, 6, 88, 158, 27
     AUTORADIOBUTTON "Czarno-&biały", IDD_ATTRIBUTESRB4, 12, 100, 70, 10, WS_GROUP
