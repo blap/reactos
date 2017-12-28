@@ -1,4 +1,4 @@
-LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+LANGUAGE LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -70,7 +70,7 @@ END
 /* Dialog 'Page setup' */
 DIALOG_PAGESETUP DIALOGEX 0, 0, 365, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU | DS_CONTEXTHELP
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 CAPTION "Page Setup"
 BEGIN
     GROUPBOX "Preview", 0, 240, 6, 120, 153, BS_GROUPBOX
@@ -100,14 +100,14 @@ BEGIN
     EDITTEXT 0x143, 58, 147, 173, 12, WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
     PUSHBUTTON "Help", IDHELP, 8, 170, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 198, 170, 50, 14, BS_PUSHBUTTON
-    PUSHBUTTON "Cancel", IDCANCEL, 254, 170, 50, 14
+    PUSHBUTTON "キャンセル", IDCANCEL, 254, 170, 50, 14
     PUSHBUTTON "P&rinter...", psh3, 310, 170, 50, 14
 END
 
 /* Dialog 'Encoding' */
 DIALOG_ENCODING DIALOGEX 0, 0, 256, 44
 STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 CAPTION "エンコーディング"
 BEGIN
     COMBOBOX ID_ENCODING, 54, 0, 156, 80, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
@@ -119,7 +119,7 @@ END
 /* Dialog 'Go To' */
 DIALOG_GOTO DIALOGEX 0, 0, 165, 50
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 CAPTION "行へ移動"
 BEGIN
     EDITTEXT ID_LINENUMBER, 54, 10, 106, 12, WS_CHILD | WS_BORDER | WS_TABSTOP
@@ -131,7 +131,7 @@ END
 IDD_ABOUTBOX DIALOGEX 22, 16, 284, 170
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "ReactOS メモ帳について"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "ReactOS メモ帳 v1.0\r\nCopyright 1997,98 Marcel Baur\r\nCopyright 2000 Mike McCormack\r\nCopyright 2002 Sylvain Petreolle\r\nCopyright 2002 Andriy Palamarchuk\r\n", -1, "Static", SS_LEFTNOWORDWRAP | WS_GROUP, 46, 7, 232, 39
     CONTROL " ", -1, "Static", 0x50000000, 8, 48, 272, 11
@@ -160,18 +160,17 @@ BEGIN
     STRING_UNTITLED "無題"
     STRING_ALL_FILES "すべてのファイル (*.*)"
     STRING_TEXT_FILES_TXT "テキスト ファイル (*.txt)"
-    STRING_TOOLARGE "ファイル '%s' のサイズは大きすぎるため、メモ帳では編集できません。\n \
-別のエディタを使用して下さい。"
-    STRING_NOTEXT "何も入力されていません。\
-\n何か入力してから実行して下さい。"
-    STRING_DOESNOTEXIST "ファイル '%s'\nは存在しません\n\n \
-新しいファイルを作成しますか ?"
-    STRING_NOTSAVED "ファイル '%s'\nは変更されています\n\n \
-変更を保存しますか ?"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "'%s' は見つかりませんでした"
-    STRING_OUT_OF_MEMORY "この操作を実行するためのメモリが\
-足りません。 \nメモリの空きを増やすためにいくつかのアプリケーションを\n終了して\
-下さい。"
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "'%s' が見つかりませんでした。"
     STRING_ANSI "ANSI"
     STRING_UNICODE "Unicode"
