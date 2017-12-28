@@ -1,33 +1,32 @@
 /*
- * FILE:        base/applications/network/ping/lang/ru-RU.rc
- * PURPOSE:     Russian translations for ReactOS Ping Command
+ * FILE:        base/applications/network/ping/lang/es-US.rc
+ * PURPOSE:     English translations for ReactOS Ping Command
  * TRANSLATORS:
  */
 
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
     IDS_USAGE "\n\
-Использование: ping [-t] [-a] [-n <число>] [-l <размер>] [-f] [-i TTL] [-v TOS]\n\
-                    [-w <тайм-аут>] [-4] [-6] конечный_узел\n\
+Usage: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]\n\
+            [-w timeout] [-4] [-6] target\n\
 \n\
-Параметры:\n\
-    -t            Проверка связи с указанным узлом до прекращения.\n\
-                  Для просмотра статистики и продолжения проверки нажмите\n\
-                  Control-Break;\n\
-                  Для прекращения нажмите Control-C.\n\
-    -a            Определение имен узлов по адресам.\n\
-    -n <число>    Число отправляемых эхо-запросов.\n\
-    -l <размер>   Размер буфера отправки.\n\
-    -f            Установить флаг ""Не фрагментировать"" для IP пакета\n\
-                  (только IPv4).\n\
-    -i TTL        Задание срока жизни пакета (TTL).\n\
-    -v TOS        Тип обслуживания (только IPv4. Этот параметр является\n\
-                  устаревшим и не влияет на поле TOS в заголовке IP).\n\
-    -w <тайм-аут> Тайм-аут для каждого ответа (в миллисекундах).\n\
-    -4            Принудительное использование протокола IPv4.\n\
-    -6            Принудительное использование протокола IPv6.\n\
+Options:\n\
+    -t          Ping the specified host until stopped.\n\
+                To see statistics and continue - type Control-Break;\n\
+                To stop - type Control-C.\n\
+    -a          Resolve addresses to hostnames.\n\
+    -n count    Number of echo requests to send.\n\
+    -l size     Send buffer size.\n\
+    -f          Set Don't Fragment flag in packet (IPv4-only).\n\
+    -i TTL      Time To Live.\n\
+    -v TOS      Type Of Service (IPv4-only. This setting has been deprecated\n\
+                and has no effect on the type of service field in the IP\n\
+                Header).\n\
+    -w timeout  Timeout in milliseconds to wait for each reply.\n\
+    -4          Force using IPv4.\n\
+    -6          Force using IPv6.\n\
 \n"
 
     IDS_CTRL_BREAK "Control-Break\n"
@@ -42,7 +41,7 @@ BEGIN
     IDS_UNKNOWN_HOST "Ping не может найти узел %s. Пожалуйста, проверьте имя и повторите попытку.\n"
     IDS_PINGING_ADDRESS "\nОбмен пакетами с %s "
     IDS_PINGING_HOSTNAME "\nОбмен пакетами с %s [%s] "
-    IDS_SOURCE_ADDRESS "from %s %s"/* unused string */
+    IDS_SOURCE_ADDRESS "from %s %s"
     IDS_PING_SIZE "по %lu байта данных:\n\n"
     IDS_REPLY_FROM "Ответ от %s: "
     IDS_REPLY_BYTES "число байт=%d "
@@ -57,11 +56,11 @@ BEGIN
     IDS_TRANSMIT_FAILED "PING: сбой передачи. (Ошибка %u)\n"
 
     IDS_STATISTICS "\n\
-Статистика Ping для %s:\n\
-    Пакетов: отправлено = %d, получено = %d, потеряно %d (%d%% потерь),\n"
+Ping statistics for %s:\n\
+    Packets: Sent = %d, Received = %d, Lost %d (%d%% loss),\n"
 
-    IDS_APPROXIMATE_RTT "Приблизительное время приема-передачи в мс:\n\
-    Минимальное = %luмс, Максимальное = %luмс, Среднее = %luмс\n"
+    IDS_APPROXIMATE_RTT "Approximate round-trip time in milliseconds:\n\
+    Minimum = %lums, Maximum = %lums, Average = %lums\n"
 
     IDS_WINSOCK_FAIL "Не удалось инициализировать WinSock: %i\n"
 END
