@@ -2,11 +2,11 @@ LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "\nVerwendung: arping [-t] [-n anzahl] -s Quell-IP Ziel-Host\n\n\
+    IDS_USAGE "\nVerwendung: arping [-t] [-n Anzahl] -s Quell-IP Ziel-Host\n\n\
 Options:\n\
     -t             Pinge den spezifizierten Host bis zum Stop\n\
                    Zum Stoppen Strg + C drücken\n\
-    -n anzahl       Anzahl der zu sendenden Probes.\n\
+    -n Anzahl       Anzahl der zu sendenden Probes.\n\
     -s             Diese Quell-IP verwenden.\n\n\0"
     IDS_BAD_OPTION_FORMAT "Ungültiges Options-Format %1.\n\0"
     IDS_BAD_OPTION "Ungültige Option %1.\n\0"
@@ -16,7 +16,7 @@ Options:\n\
     IDS_UNKNOWN_HOST "Unbekannter Host %1.\n\0"
     IDS_SRC_MUST_BE_SPECIFIED "IP Adresse des Quell-Hosts muss angegeben sein.\n\0"
     IDS_BAD_VALUE_OPTION_N "Ungültiger Wert für Option -n, Erlaubter Bereich ist von 1 bis %1!u!.\n\0"
-    IDS_ARPING_TO_FROM "ARPIMG %1 von %2\n\0"
+    IDS_ARPING_TO_FROM "ARPING %1 von %2\n\0"
     IDS_MS "ms\0"
     IDS_1MS "1ms\0"
     IDS_REPLY_FROM "Unicast-Antwort von %1 [%2]  %3%4\n\0"
