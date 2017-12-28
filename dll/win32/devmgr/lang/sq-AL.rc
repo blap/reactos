@@ -1,8 +1,4 @@
-/* TRANSLATOR : Ardit Dani (Ard1t) (ardit.dani@gmail.com)
- * DATE OF TRANSLATION:  18-01-2014
-*/
-
-LANGUAGE LANG_ALBANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ALBANIAN, SUBLANG_ALBANIAN_ALBANIA
 
 STRINGTABLE
 BEGIN
@@ -68,9 +64,9 @@ BEGIN
     IDS_DEV_DISABLED "Kjo pajisje nuk është nisur."
     IDS_DEV_DISABLED2 "Kjo pajisje është gjymtuar."
     IDS_DEV_DEVLOADER_NOT_READY "Ngarkuesit për këtë pajisje nuk mund të ngarkojnë komanduesin e kërkuar."
-    IDS_DEV_DEVLOADER_NOT_READY2 "" /* unused */
+    IDS_DEV_DEVLOADER_NOT_READY2 """ /* unused */
     IDS_DEV_DEVLOADER_NOT_READY3 "" /* unused */
-    IDS_DEV_DEVICE_NOT_THERE "Kjo pajisje ose nuk është e pranishme, nuk punon si duhet, ose nuk ka të gjithë komanduesit e instaluar."
+    IDS_DEV_DEVICE_NOT_THERE ""Kjo pajisje ose nuk është e pranishme, nuk punon si duhet, ose nuk ka të gjithë komanduesit e instaluar."
     IDS_DEV_MOVED "ReactOS është në procesin e krijimit të kësaj pajisje."
     IDS_DEV_TOO_EARLY "ReactOS është në procesin e krijimit të kësaj pajisje."
     IDS_DEV_NO_VALID_LOG_CONF "ReactOS nuk mund të specifikojë burimet për këtë pajisje."
@@ -241,7 +237,6 @@ BEGIN
 END
 
 
-
 /*
  This code relates to the device manager GUI
  */
@@ -250,7 +245,7 @@ IDR_MAINMENU MENU
 BEGIN
   POPUP "&File"
   BEGIN
-    MENUITEM "E&xit",                       IDC_EXIT
+    MENUITEM "dIL",                       IDC_EXIT
   END
   MENUITEM "Action",                        IDC_ACTIONMENU
   POPUP "View"
@@ -278,19 +273,19 @@ END
 STRINGTABLE DISCARDABLE
 BEGIN
   IDS_MENU_UPDATE           "Update driver software..."
-  IDS_MENU_ENABLE           "Enable"
+  IDS_MENU_ENABLE           "Mundëso"
   IDS_MENU_DISABLE          "Disable"
   IDS_MENU_UNINSTALL        "Uninstall"
   IDS_MENU_SCAN             "Scan for hardware changes"
   IDS_MENU_ADD              "Add hardware"
-  IDS_MENU_PROPERTIES       "Properties"
+  IDS_MENU_PROPERTIES       "Tipare"
 END
 
 STRINGTABLE DISCARDABLE
 BEGIN
-  IDS_TOOLTIP_PROPERTIES    "Properties"
+  IDS_TOOLTIP_PROPERTIES    "Tipare"
   IDS_TOOLTIP_SCAN          "Scan for hardware changes"
-  IDS_TOOLTIP_ENABLE        "Enable"
+  IDS_TOOLTIP_ENABLE        "Mundëso"
   IDS_TOOLTIP_DISABLE       "Disable"
   IDS_TOOLTIP_UPDATE        "Update Driver Software"
   IDS_TOOLTIP_UNINSTALL     "Uninstall"
@@ -308,7 +303,7 @@ BEGIN
   IDS_HINT_UNINSTALL    " Uninstalls the driver for the selected device."
   IDS_HINT_ADD          " Adds a legacy (non-Plug and Play) device to the computer." 
   IDS_HINT_ABOUT        " About ReactOS Device Manager."
-  IDS_HINT_EXIT         " Exits the program."
+  IDS_HINT_EXIT         " Del nga programi."
 
   IDS_HINT_DEV_BY_TYPE  " Displays devices by hardware type."
   IDS_HINT_DEV_BY_CONN  " Displays devices by connection."
@@ -316,11 +311,10 @@ BEGIN
   IDS_HINT_RES_BY_CONN  " Displays resources by connection type."
   IDS_HINT_SHOW_HIDDEN  " Displays legacy devices and devices that are no longer installed."
 
-  IDS_HINT_SYS_RESTORE  " Restores this window to normal size."
-  IDS_HINT_SYS_MOVE     " Moves this window."
-  IDS_HINT_SYS_SIZE     " Resizes this window."
-  IDS_HINT_SYS_MINIMIZE " Collapses this window to an icon."
-  IDS_HINT_SYS_MAXIMIZE " Expands this window to fill this screen."
-  IDS_HINT_SYS_CLOSE    " Closes this window."
+  IDS_HINT_SYS_RESTORE  " Kthe kete dritare ne mase normale."
+  IDS_HINT_SYS_MOVE     " Leviz kete dritare."
+  IDS_HINT_SYS_SIZE     " Ndryshon permasen e dritares."
+  IDS_HINT_SYS_MINIMIZE " Ndryshon kete dritare ne ikone."
+  IDS_HINT_SYS_MAXIMIZE " Zgjeron kete dritare te mbush ekranin."
+  IDS_HINT_SYS_CLOSE    " Mbyll dritaren."
 END
-
