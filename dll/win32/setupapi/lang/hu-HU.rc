@@ -1,4 +1,4 @@
-LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_HUNGARIAN, SUBLANG_HUNGARIAN_HUNGARY
 
 COPYFILEDLGORD DIALOGEX 20, 20, 208, 105
 STYLE DS_MODALFRAME | DS_SHELLFONT | WS_POPUP | WS_VISIBLE | WS_CAPTION
@@ -30,7 +30,7 @@ END
 STRINGTABLE
 BEGIN
     IDS_PROMPTDISK   "The file '%1' on %2 is needed"
-    IDS_UNKNOWN      "Unknown"
+    IDS_UNKNOWN      "Ismeretlen"
     IDS_COPYFROM     "Copy files from:"
     IDS_INFO         "Type the path where the file is located, and then click OK."
 END
