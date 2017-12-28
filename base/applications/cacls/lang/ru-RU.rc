@@ -1,6 +1,4 @@
-/* Russian language resource file by Kudratov Olimjon (olim98@bk.ru) */
-
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
@@ -38,10 +36,10 @@ CACLS имя_файла [/T] [/E] [/C] [/G имя:доступ [...]] [/R имя
     IDS_ABBR_OI "(OI)"
     IDS_ABBR_IO "(IO)"
     IDS_ABBR_FULL "F"
-    IDS_ABBR_READ "R"
-    IDS_ABBR_WRITE "W"
+    IDS_ABBR_READ "К"
+    IDS_ABBR_WRITE "Ц"
     IDS_ABBR_CHANGE "C"
-    IDS_ABBR_NONE "N"
+    IDS_ABBR_NONE "T"
     IDS_ALLOW ""
     IDS_DENY "(DENY)"
     IDS_SPECIAL_ACCESS "(специальный доступ:)"
