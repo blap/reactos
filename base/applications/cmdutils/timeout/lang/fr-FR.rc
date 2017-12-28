@@ -1,26 +1,25 @@
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 STRINGTABLE
 BEGIN
     IDS_USAGE "ReactOS Timeout Utility\n\
 \n\
-TIMEOUT [/?] [/T] délai [/NOBREAK]\n\
+TIMEOUT [/?] [/T] delay [/NOBREAK]\n\
 \n\
-Description :\n\
-    Cet outil permet d'attendre jusqu'à ce qu'un délai (en secondes) s'écoule,\n\
-    ou bien jusqu'à ce qu'une touche de clavier soit pressée. Un paramètre\n\
-    permettant d'ignorer l'appui de touche de clavier est accepté.\n\
+Description:\n\
+    This tool waits until a specified time period (in seconds) has elapsed,\n\
+    or until any key is pressed. A parameter to ignore the key press is also\n\
+    accepted.\n\
 \n\
-Liste de paramètres :\n\
-    /?        Affiche cet écran d'aide.\n\
+Parameters:\n\
+    /?        Display this help screen.\n\
 \n\
-    /T délai  Spécifie le délai d'attente en secondes (entre -1 et 99999).\n\
-              La valeur -1 signifie que le programme attend jusqu'à ce qu'une\n\
-              touche soit pressée.\n\
-              Veuillez noter que la spécification ""/T"" est optionnelle, vous\n\
-              pouvez spécifier la valeur de délai sans celle-ci.\n\
+    /T delay  Specify the number of seconds to wait (-1 to 99999).\n\
+              A value of -1 means the program will wait until a key is pressed.\n\
+              Note that the """/T""" specification is optional, you can just\n\
+              specify the delay value without it.\n\
 \n\
-    /NOBREAK  Ignore toute frappe de clavier, sauf pour Ctrl+C.\n\
+    /NOBREAK  Ignore all keyboard input except for Ctrl+C.\n\
 "
     IDS_ERROR_OUT_OF_RANGE "ERREUR: Le délai d'attente doit être compris dans la plage (entre -1 et 99999).\n"
     IDS_ERROR_INVALID_HANDLE_VALUE "ERREUR: Impossible d'obtenir le handle standard pour la console (erreur %lu).\n"
