@@ -1,12 +1,12 @@
 /*
  * PROJECT:         ReactOS Kernel
  * LICENSE:         GPL - See COPYING in the top level directory
- * FILE:            base/applications/osk/lang/tr-TR.rc
- * PURPOSE:         On screen keyboard (Turkish resources).
- * TRANSLATOR:      2014 Erdem Ersoy (eersoy93) (erdemersoy@live.com)
+ * FILE:            base/applications/osk/lang/en-US.rc
+ * PURPOSE:         On screen keyboard (American resources).
+ * PROGRAMMERS:     Denis ROBERT
  */
 
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 MAIN_DIALOG DIALOGEX DISCARDABLE 0, 0, 608, 164
 CAPTION "Görüntülük Düğme Takımı"
@@ -56,7 +56,7 @@ BEGIN
     PUSHBUTTON      "P",SCAN_CODE_26,285,61,23,22
     PUSHBUTTON      "Ğ",SCAN_CODE_27,312,61,23,22
     PUSHBUTTON      "Ü",SCAN_CODE_28,339,61,23,22
-    PUSHBUTTON      ",",SCAN_CODE_29,366,61,35,22
+    PUSHBUTTON      "Ö",SCAN_CODE_29,366,61,35,22
     PUSHBUTTON      "Büyük Harf Kilidi",SCAN_CODE_30,3,87,46,22,BS_ICON
     PUSHBUTTON      "A",SCAN_CODE_31,53,87,23,22
     PUSHBUTTON      "S",SCAN_CODE_32,80,87,23,22
@@ -78,9 +78,9 @@ BEGIN
     PUSHBUTTON      "B",SCAN_CODE_50,172,113,23,22
     PUSHBUTTON      "N",SCAN_CODE_51,199,113,23,22
     PUSHBUTTON      "M",SCAN_CODE_52,226,113,23,22
-    PUSHBUTTON      "Ö",SCAN_CODE_53,253,113,23,22
+    PUSHBUTTON      ",",SCAN_CODE_53,253,113,23,22
     PUSHBUTTON      "Ç",SCAN_CODE_54,280,113,23,22
-    PUSHBUTTON      ".",SCAN_CODE_55,307,113,23,22
+    PUSHBUTTON      "Ç",SCAN_CODE_55,307,113,23,22
     PUSHBUTTON      "Üst Damga",SCAN_CODE_57,334,113,67,22,BS_ICON|BS_PUSHLIKE|BS_AUTOCHECKBOX
     PUSHBUTTON      "Denetim",SCAN_CODE_58,3,139,41,22,BS_PUSHLIKE|BS_AUTOCHECKBOX
     PUSHBUTTON      "ROS",SCAN_CODE_127,48,139,30,22,BS_ICON
