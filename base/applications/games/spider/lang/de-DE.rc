@@ -47,7 +47,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_SPI_NAME "Spider"
+    IDS_SPI_NAME "Spinne"
     IDS_SPI_ABOUT "Spider Solitaire von Gregor Schneider\n\nCardLib Version 1.0"
     IDS_SPI_QUIT "Laufendes Spiel beenden?"
     IDS_SPI_WIN "Glückwunsch, Sie haben gewonnen!"
@@ -66,10 +66,10 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&Beenden", IDM_GAME_EXIT
     END
-    POPUP "&?"
+    POPUP "&Hilfe"
     BEGIN
         MENUITEM "&Inhalt\tF1", IDM_HELP_CONTENTS
-        MENUITEM "Inf&o", IDM_HELP_ABOUT
+        MENUITEM "&Über", IDM_HELP_ABOUT
     END
 END
 
