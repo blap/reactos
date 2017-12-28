@@ -1,12 +1,4 @@
-/*
- * PROJECT:     ReactOS ImageSoft
- * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        rosapps/imagesoft/lang/uk-UA.rc
- * PURPOSE:     Ukraianian Language File for ImageSoft
- * TRANSLATOR:  Rostislav Zabolotny, Artem Reznikov
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 STRINGTABLE DISCARDABLE
 BEGIN
@@ -18,19 +10,19 @@ IDR_MAINMENU MENU
 BEGIN
   POPUP "&Файл"
   BEGIN
-    MENUITEM "&Створити...",        ID_NEW
-    MENUITEM "&Відкрити...",        ID_OPEN
+    MENUITEM "&Створити...",             ID_NEW
+    MENUITEM "&Відкрити...",            ID_OPEN
     MENUITEM SEPARATOR
-    MENUITEM "&Закрити\tCtrl+F4",   ID_CLOSE,   GRAYED
-    MENUITEM "З&акрити все",        ID_CLOSEALL,GRAYED
+    MENUITEM "&Закрити\tCtrl+F4",     ID_CLOSE,   GRAYED
+    MENUITEM "З&акрити все",          ID_CLOSEALL,GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Зб&ерегти",           ID_SAVE,    GRAYED
-    MENUITEM "Зберегти &як...",     ID_SAVEAS,  GRAYED
+    MENUITEM "Зб&ерегти",               ID_SAVE,    GRAYED
+    MENUITEM "Зберегти &як...",         ID_SAVEAS,  GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Попе&редній Перегляд",ID_PRINTPRE,GRAYED
-    MENUITEM "&Друкувати...",       ID_PRINT,   GRAYED
+    MENUITEM "Попе&редній Перегляд",      ID_PRINTPRE,GRAYED
+    MENUITEM "&Друкувати...",           ID_PRINT,   GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "В&ластивості...",     ID_PROP,    GRAYED
+    MENUITEM "В&ластивості...",      ID_PROP,    GRAYED
     MENUITEM SEPARATOR
     MENUITEM "Ви&ід\tAlt+F4",       ID_EXIT
   END
@@ -41,17 +33,17 @@ BEGIN
     MENUITEM SEPARATOR
     MENUITEM "Вирі&зати",                ID_CUT,     GRAYED
     MENUITEM "Ко&піювати",               ID_COPY,    GRAYED
-    MENUITEM "Вс&тавити",                ID_PASTE,   GRAYED
+    MENUITEM "Вс&тавити",              ID_PASTE,   GRAYED
     MENUITEM "Вставити новим &малюнком", ID_PASTENEWIMAGE, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Виділити &Все",            ID_SELALL,  GRAYED
+    MENUITEM "Виділити &Все",         ID_SELALL,  GRAYED
   END
   POPUP "&Вигляд"
   BEGIN
-    MENUITEM "&Інструменти",        ID_TOOLS
-    MENUITEM "&Кольори",            ID_COLOR
+    MENUITEM "&Інструменти",              ID_TOOLS
+    MENUITEM "&Кольори",             ID_COLOR
     MENUITEM "Іс&торія",            ID_HISTORY
-    MENUITEM "&Рядок стану",        ID_STATUSBAR
+    MENUITEM "&Рядок стану",         ID_STATUSBAR
   END
   POPUP "&Редагування"
   BEGIN
@@ -60,19 +52,19 @@ BEGIN
     MENUITEM "Відтінки/Насичення...",   -1, GRAYED
     POPUP "Колір"
     BEGIN
-      MENUITEM "Чорно-білий",       ID_BLACKANDWHITE
-      MENUITEM "Обернути Кольори",  ID_INVERTCOLORS
+      MENUITEM "Чорно-білий",   ID_BLACKANDWHITE
+      MENUITEM "Обернути Кольори",     ID_INVERTCOLORS
     END
     MENUITEM SEPARATOR
-    MENUITEM "Затемнити",           ID_BLUR
-    MENUITEM "Зробити Різкіше",     ID_SHARPEN
-    MENUITEM "Згладити краї",       -1, GRAYED
-    MENUITEM "Додати тінь",         -1, GRAYED
+    MENUITEM "Затемнити",                ID_BLUR
+    MENUITEM "Зробити Різкіше",             ID_SHARPEN
+    MENUITEM "Обернути",        -1, GRAYED
+    MENUITEM "Обернути",          -1, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Розмір малюнка...",   -1, GRAYED
-    MENUITEM "Рухати",              -1, GRAYED
-    MENUITEM "Відобразити",         -1, GRAYED
-    MENUITEM "Обернути",            -1, GRAYED
+    MENUITEM "Обернути",       -1, GRAYED
+    MENUITEM "Обернути",                -1, GRAYED
+    MENUITEM "Обернути",              -1, GRAYED
+    MENUITEM "Обернути",              -1, GRAYED
 
   END
   POPUP "&Кольори"
@@ -81,16 +73,16 @@ BEGIN
   END
   POPUP "&Вікно"
   BEGIN
-    MENUITEM "&Каскадом",               ID_WINDOW_CASCADE
+    MENUITEM "&Каскадом",           ID_WINDOW_CASCADE
     MENUITEM "Викласти &Горизонтально", ID_WINDOW_TILE_HORZ
     MENUITEM "Викласти &Вертикально",   ID_WINDOW_TILE_VERT
-    MENUITEM "Впарядкувати &Іконки",    ID_WINDOW_ARRANGE
+    MENUITEM "Впарядкувати &Іконки",     ID_WINDOW_ARRANGE
     MENUITEM SEPARATOR
     MENUITEM "На&ступний\tCtrl+F6",     ID_WINDOW_NEXT
   END
   POPUP "&Довідка"
   BEGIN
-    MENUITEM "&Про редактор...",        ID_ABOUT
+    MENUITEM "&Про редактор...",       ID_ABOUT
   END
 END
 
@@ -206,7 +198,7 @@ BEGIN
 END
 
 
-/* Підказки */
+/* Hints */
 STRINGTABLE DISCARDABLE
 BEGIN
   IDS_HINT_BLANK        " "
