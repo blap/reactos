@@ -1,0 +1,66 @@
+/*
+ * FILE:        base/applications/network/ping/lang/es-US.rc
+ * PURPOSE:     English translations for ReactOS Ping Command
+ * TRANSLATORS:
+ */
+
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+
+STRINGTABLE
+BEGIN
+    IDS_USAGE "\n\
+Usage: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]\n\
+            [-w timeout] [-4] [-6] target\n\
+\n\
+Options:\n\
+    -t          Ping the specified host until stopped.\n\
+                To see statistics and continue - type Control-Break;\n\
+                To stop - type Control-C.\n\
+    -a          Resolve addresses to hostnames.\n\
+    -n count    Number of echo requests to send.\n\
+    -l size     Send buffer size.\n\
+    -f          Set Don't Fragment flag in packet (IPv4-only).\n\
+    -i TTL      Time To Live.\n\
+    -v TOS      Type Of Service (IPv4-only. This setting has been deprecated\n\
+                and has no effect on the type of service field in the IP\n\
+                Header).\n\
+    -w timeout  Timeout in milliseconds to wait for each reply.\n\
+    -4          Force using IPv4.\n\
+    -6          Force using IPv6.\n\
+\n"
+
+    IDS_CTRL_BREAK "Control-Break\n"
+    IDS_CTRL_C "Control-C\n"
+    IDS_NO_RESOURCES "Sem recursos disponíveis.\n"
+    IDS_MISSING_ADDRESS "O endereço IP deve ser especificado.\n"
+    IDS_MISSING_VALUE "Value must be supplied for option %s.\n"
+    IDS_BAD_OPTION "Bad option %s.\n"
+    IDS_BAD_PARAMETER "Bad parameter %s.\n"
+    IDS_BAD_VALUE "Bad value for option %s, valid range is from %u to %u.\n"
+    IDS_WRONG_FAMILY "A opção %s é suportada apenas por %s.\n"
+    IDS_UNKNOWN_HOST "Ping não encontrou o host %s. Por favor verifique o nome e tente novamente.\n"
+    IDS_PINGING_ADDRESS "\nPinging %s "
+    IDS_PINGING_HOSTNAME "\nPinging %s [%s] "
+    IDS_SOURCE_ADDRESS "de %s %s"
+    IDS_PING_SIZE "com %lu bytes de dados:\n\n"
+    IDS_REPLY_FROM "Resposta de %s: "
+    IDS_REPLY_BYTES "bytes=%d "
+    IDS_REPLY_TIME_MS "tempo=%lums "
+    IDS_REPLY_TIME_0MS "tempo < 1ms "
+    IDS_REPLY_TTL "TTL=%d\n"
+    IDS_REPLY_STATUS "Echo reply returned %lu.\n"
+    IDS_DEST_HOST_UNREACHABLE "Host de destino inacessível.\n"
+    IDS_DEST_NET_UNREACHABLE "Rede de destino inacessível.\n"
+    IDS_REQUEST_TIMED_OUT "Solicitação expirou.\n"
+    IDS_TTL_EXPIRED "TTL expired in transit.\n"
+    IDS_TRANSMIT_FAILED "PING: transmit failed. (Error %u)\n"
+
+    IDS_STATISTICS "\n\
+Ping statistics for %s:\n\
+    Packets: Sent = %d, Received = %d, Lost %d (%d%% loss),\n"
+
+    IDS_APPROXIMATE_RTT "Approximate round-trip time in milliseconds:\n\
+    Minimum = %lums, Maximum = %lums, Average = %lums\n"
+
+    IDS_WINSOCK_FAIL "Falha ao inicializar WinSock: %i\n"
+END
