@@ -1,6 +1,4 @@
-/* Translated by Baruch Rutman (peterooch at gmail dot com) */
-
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 IDD_PROPPAGEPOWERSCHEMES DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -13,7 +11,7 @@ BEGIN
     COMBOBOX IDC_ENERGYLIST, 14, 54, 224, 92, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL
     PUSHBUTTON "שמור בשם...", IDC_SAVEAS_BTN, 109, 72, 70, 14, WS_DISABLED
     PUSHBUTTON "מחק", IDC_DELETE_BTN, 183, 72, 55, 14, WS_DISABLED
-    GROUPBOX "Unknown", IDC_GRPDETAIL, 6, 95, 240, 136
+    GROUPBOX "לא ידוע", IDC_GRPDETAIL, 6, 95, 240, 136
     LTEXT "מתי שהמחשב:", IDC_SAT, 12, 109, 60, 12
     LTEXT "מחובר", IDC_SAC, 123, 110, 45, 15
     ICON IDI_AC, IDC_IAC, 97, 108, 21, 20
@@ -46,24 +44,24 @@ BEGIN
     LTEXT "100%", -1, 214, 43, 25, 10
     PUSHBUTTON "פעולת התראה...", -1, 17, 69, 70, 14, WS_DISABLED
     LTEXT "הודעה:", -1, 95, 71, 57, 10
-    LTEXT "Unknown", IDC_ALARMMSG1, 154, 71, 84, 10
+    LTEXT "לא ידוע", IDC_ALARMMSG1, 154, 71, 84, 10
     LTEXT "פעולה", -1, 95, 83, 55, 10
-    LTEXT "Unknown", IDC_ALARMAKTION1, 154, 83, 84, 10
+    LTEXT "לא ידוע", IDC_ALARMAKTION1, 154, 83, 84, 10
     LTEXT "הפעל תכנית:", -1, 95, 95, 55, 10
-    LTEXT "Unknown", IDC_ALARMPROG1, 154, 95, 84, 10
+    LTEXT "לא ידוע", IDC_ALARMPROG1, 154, 95, 84, 10
     GROUPBOX "התראת סוללה קריטית", -1, 6, 120, 239, 106
-    AUTOCHECKBOX "הפעל התראת סוללה קריטית מתי שכוח הסוללה מגיע ל:", IDC_ALARM2, 15, 131, 180, 15, WS_TABSTOP
+    AUTOCHECKBOX "הפעל התראת סוללה קריטית מתי שכוח הסוללה מגיע ל:", IDC_ALARM2, 15, 131, 195, 15, WS_TABSTOP
     LTEXT "unknown", IDC_ALARMVALUE2, 215, 134, 20, 10
     LTEXT "0%", -1, 28, 154, 15, 10
     CONTROL "Slider1", IDC_ALARMBAR2, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 158, 170, 15
     LTEXT "100%", -1, 214, 154, 25, 10
     PUSHBUTTON "פעולת התראה:", -1, 17, 183, 70, 14, WS_DISABLED
     LTEXT "הודעה:", -1, 95, 185, 50, 10
-    LTEXT "Unknown", IDC_ALARMMSG2, 154, 185, 84, 10
+    LTEXT "לא ידוע", IDC_ALARMMSG2, 154, 185, 84, 10
     LTEXT "פעולה", -1, 95, 198, 45, 10
-    LTEXT "Unknown", IDC_ALARMAKTION2, 154, 198, 84, 10
+    LTEXT "לא ידוע", IDC_ALARMAKTION2, 154, 198, 84, 10
     LTEXT "הפעל תכנית:", -1, 95, 211, 50, 10
-    LTEXT "Unknown", IDC_ALARMPROG2, 154, 211, 84, 10
+    LTEXT "לא ידוע", IDC_ALARMPROG2, 154, 211, 84, 10
 END
 
 IDD_PROPPAGEADVANCED DIALOGEX 0, 0, 252, 237
@@ -97,16 +95,16 @@ BEGIN
     AUTOCHECKBOX "אפשר תרדמת", IDC_HIBERNATEFILE, 17, 55, 210, 10, WS_TABSTOP
     GROUPBOX "שטח כונן לתרדמת", -1, 6, 80, 240, 76
     LTEXT "שטח כונן פנוי:", -1, 15, 95, 140, 10
-    LTEXT "Unknown", IDC_FREESPACE, 160, 95, 80, 10
+    LTEXT "לא ידוע", IDC_FREESPACE, 160, 95, 80, 10
     LTEXT "שטח כונן הדרוש לתרדמת", -1, 15, 115, 140, 10
-    LTEXT "Unknown", IDC_SPACEFORHIBERNATEFILE, 160, 115, 80, 10
+    LTEXT "לא ידוע", IDC_SPACEFORHIBERNATEFILE, 160, 115, 80, 10
     LTEXT "You must free some disk space before your computer can hibernate. ", IDC_TOLESSFREESPACE, 15, 135, 224, 20
 END
 
 STRINGTABLE
 BEGIN
-    IDS_CPLNAME_1 "אפשרויות צריכת חשמל"
-    IDS_CPLDESCRIPTION_1 "Configure energy-saving settings for your computer."
+    IDS_CPLNAME_1 "מנהל הרשיונות"
+    IDS_CPLDESCRIPTION_1 "מנהל הרשיונות"
     IDS_PROCENT "%i%%"
     IDS_SOUND "קול"
     IDS_TEXT "טקסט"
