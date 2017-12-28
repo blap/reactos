@@ -1,0 +1,24 @@
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE
+
+STRINGTABLE
+BEGIN
+    IDS_PROFILEPATH "%SystemDrive%\\Documents and Settings"
+    IDS_APPDATA "Dados de Aplicação"
+    IDS_DESKTOP "Desktop"
+    IDS_FAVORITES "Favoritos"
+    IDS_MYDOCUMENTS "OS Meus Documentos"
+    IDS_NETHOOD "Visinhança na rede"
+    IDS_PRINTHOOD "PrintHood"
+    IDS_RECENT "Recentes"
+    IDS_SENDTO "Enviar Para"
+    IDS_TEMPLATES "Modelos"
+    IDS_STARTMENU "Start Menu"
+    IDS_PROGRAMS "Menu Iniciar\\Programas"
+    IDS_STARTUP "Start Menu\\Programs\\Startup"
+    IDS_LOCALSETTINGS "Local Settings"
+    IDS_LOCALAPPDATA "Definições locais\\Dados de Aplicação"
+    IDS_TEMP "Local Settings\\Temp"
+    IDS_CACHE "Definições locais\\Ficheiros Temporários da Internet"
+    IDS_HISTORY "Definições locais\\Histórico"
+    IDS_COOKIES "Cookies"
+END
