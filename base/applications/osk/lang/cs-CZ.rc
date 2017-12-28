@@ -1,12 +1,12 @@
 /*
  * PROJECT:         ReactOS Kernel
  * LICENSE:         GPL - See COPYING in the top level directory
- * FILE:            base/applications/osk/lang/cs-CZ.rc
+ * FILE:            base/applications/osk/lang/en-US.rc
  * PURPOSE:         On screen keyboard (American resources).
  * PROGRAMMERS:     Denis ROBERT
  */
 
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 MAIN_DIALOG DIALOGEX DISCARDABLE 0, 0, 608, 164
 CAPTION "Klávesnice na obrazovce"
