@@ -1,6 +1,4 @@
-/* Spanish translation by Javier Remacha */
-
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 IDD_PROPPAGECOMPUTER DIALOGEX 0, 0, 256, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -9,17 +7,17 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_COMPNAME, IDC_STATIC, 4, 3, 26, 24, SS_ICON
     LTEXT "ReactOS usa la siguiente información para identificar su equipo en la red.", IDC_STATIC, 40, 5, 204, 20
-    LTEXT "Descripción del equipo:", IDC_STATIC, 6, 40, 85, 9
+    LTEXT "Descripción del equipo:", IDC_STATIC, 6, 40, 90, 9
     EDITTEXT IDC_COMPDESC, 98, 38, 146, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP
-    LTEXT "Nombre completo del equipo:", IDC_STATIC, 6, 66, 64, 16
+    LTEXT "Nombre completo de equipo:", IDC_STATIC, 6, 68, 85, 9
     EDITTEXT IDC_COMPUTERNAME, 98, 68, 144, 12, ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "Grupo de trabajo:", IDC_WORKGROUPDOMAIN, 6, 84, 64, 9
     EDITTEXT IDC_WORKGROUPDOMAIN_NAME, 98, 84, 144, 12, ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
-    LTEXT "Para usar el Asistente para identificación de red para unirse a un dominio y crear una cuenta de usuario local, haga clic en ""Id de red"".", IDC_STATIC, 6, 108, 172, 24
+    LTEXT "To use the Network Identification Wizard to join a domain and create a local user, click ""Network ID"".", IDC_STATIC, 6, 113, 172, 24
     PUSHBUTTON "&Id de red...", IDC_NETWORK_ID, 190, 114, 58, 15
     LTEXT "Para cambiar el nombre de este equipo o unirse a un dominio, haga clic en ""Cambiar"".", IDC_STATIC, 6, 149, 170, 17
     PUSHBUTTON "Cam&biar...", IDC_NETWORK_PROPERTY, 190, 149, 58, 15
-    LTEXT "Nota: Sólo los Administradores pueden cambiar la identificación de este equipo.", IDC_STATIC, 6, 179, 250, 17
+    LTEXT "Nota: Sólo los Administradores pueden cambiar la identificación de este equipo.", IDC_STATIC, 6, 179, 300, 9
 END
 
 IDD_PROPPAGECOMPNAMECHENGE DIALOGEX 0, 0, 232, 222
@@ -30,7 +28,7 @@ BEGIN
     LTEXT "(message goes here)", 1017, 7, 5, 218, 30
     LTEXT "&Nombre de equipo:", -1, 7, 41, 219, 8
     EDITTEXT 1002, 7, 53, 218, 14, ES_AUTOHSCROLL | ES_OEMCONVERT
-    LTEXT "Nombre completo de equipo:", 1016, 7, 72, 218, 10
+    LTEXT "Full computer name:", 1016, 7, 72, 218, 10
     EDITTEXT 1001, 7, 82, 219, 14, ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
     PUSHBUTTON "&Más...", 1003, 150, 102, 75, 14
     GROUPBOX "Miembro de ", 1018, 7, 119, 219, 73
@@ -72,9 +70,11 @@ BEGIN
     25 "Puede cambiar el nombre y la pertenencia de este grupo. Los cambios pueden afectar el acceso a los recursos de red."
     1021 "Nota: Sólo los Administradores pueden cambiar la identificación de este equipo."
     1022 "Nota: La identificación de este equipo no puede ser cambiada porque:"
-    1030 "El nuevo nombre de equipo ""%s"" contiene caracteres no permitidos. Estos caracteres no permitidos incluyen ` ~ ! @ # $ %% ^ & * ( ) = + _ [ ] { } \\ | ; : ' "" , . < > / y ?"
-    3210 "&Detalles >>"
-    3220 "<< &Detalles"
-    4000 "Información"
-    4001 "¡No puede poner un nuevo nombre de equipo!"
+    1030 "The new computer name ""%s"" contains characters which are not allowed. Characters which are not allowed include ` ~ ! @ # $ %% ^ & * ( ) = + _ [ ] { } \\ | ; : ' "" , . < > / and ?"
+    /* Windows allows using these characters, although it displays a warning message.
+       Forbidding the use of these characters means incompatibility with Windows. */
+    3210 "&Details >>"
+    3220 "<< &Details"
+    4000 "Information"
+    4001 "Can't set new a computer name!"
 END
