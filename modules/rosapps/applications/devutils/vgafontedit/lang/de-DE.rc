@@ -56,7 +56,7 @@ BEGIN
 
     POPUP "&Fenster"
     BEGIN
-        MENUITEM "&Überlappend", ID_WINDOW_CASCADE
+        MENUITEM "Übe&rlappend", ID_WINDOW_CASCADE
         MENUITEM "&Horizontal teilen", ID_WINDOW_TILE_HORZ
         MENUITEM "&Vertikal teilen", ID_WINDOW_TILE_VERT
         MENUITEM "&Symbole anordnen", ID_WINDOW_ARRANGE
