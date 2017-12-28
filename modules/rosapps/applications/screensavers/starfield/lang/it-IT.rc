@@ -1,0 +1,8 @@
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_DESCRIPTION "Starfield ScreenSaver"
+    IDS_TITLE       "Informazioni Magnifier"
+    IDS_TEXT        "Nessuna impostazione necessaria."
+END
