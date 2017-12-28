@@ -1,12 +1,12 @@
 /*
  * PROJECT:    Spider Solitaire
  * LICENSE:    See COPYING in top level directory
- * FILE:       base/applications/games/spider/lang/nl-NL.rc
- * PURPOSE:    Dutch Language File for Spider Solitaire
- * TRANSLATOR: Wouter De Vlieger
+ * FILE:       base/applications/games/spider/lang/en-US.rc
+ * PURPOSE:    English Language File for Spider Solitaire
+ * TRANSLATOR: Gregor Schneider
  */
 
-LANGUAGE LANG_DUTCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
 
 /* Dialogs */
 
@@ -66,7 +66,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&Afsluiten", IDM_GAME_EXIT
     END
-    POPUP "&Help"
+    POPUP "&Bestand"
     BEGIN
         MENUITEM "&Help-onder&werpen\tF1", IDM_HELP_CONTENTS
         MENUITEM "&Over Spider Solitaire", IDM_HELP_ABOUT
