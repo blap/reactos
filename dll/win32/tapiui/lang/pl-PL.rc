@@ -1,12 +1,4 @@
-/*
- *    Translated by Caemyr - Olaf Siejka (Jan, 2008)
- *    Use ReactOS forum PM or IRC to contact me
- *    http://www.reactos.org
- *    IRC: irc.freenode.net #reactos-pl;
- *    UTF-8 conversion by Caemyr (May, 2011) 
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 101 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -58,7 +50,7 @@ END
 
 103 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Reguły numerów zamiejscowych"
+CAPTION "Połączenia Sieciowe"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Reguła numerów zamiejscowych określa, w jaki należy dzwonić z twojego obecnego rejonu do innych a także w obrębie twojego rejonu.", 2000, 7, 7, 238, 16
@@ -73,7 +65,7 @@ END
 
 104 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Karta telefoniczna"
+CAPTION "Błędy grupowania linii"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Wybierz kartę telefoniczną, jaką chcesz użyć albo kliknij na Nowa by dodać inną kartę.", 2000, 7, 7, 238, 8
@@ -116,7 +108,7 @@ END
 
 106 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Długi dystans"
+CAPTION "Połączenie aktywne"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Numer dostępowy dla połączeń &międzymiastowych:", -1, 7, 7, 238, 8
@@ -158,7 +150,7 @@ END
 
 108 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Lokalne"
+CAPTION "Zmiana hasła"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Numer dostępowy dla połączeń &lokalnych:", -1, 7, 7, 238, 8
@@ -180,7 +172,7 @@ END
 109 DIALOGEX 0, 0, 252, 257
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Nowa reguła numeru zamiejscowego"
+CAPTION "Zmiana hasła"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Ta reguła numeru zamiejscowego zostanie użyta tylko dla połączeń o podanej poniżej kombinacji numeru zamiejscowego i prefiksu.", 2000, 7, 6, 238, 16
@@ -224,7 +216,7 @@ END
 111 DIALOGEX 0, 0, 252, 124
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Oczekuj"
+CAPTION "Błąd połączenia z %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Wybierz rodzaj znaku zachęty na oczekiwanie przed rozpoczęciem sekwencji wybierania.", 2000, 7, 7, 238, 16
@@ -241,7 +233,7 @@ END
 112 DIALOGEX 0, 0, 252, 111
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Numer docelowy"
+CAPTION "Automatyczne wybieranie i zawieszanie połączeń"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "W tym kroku trzeba podać numer docelowy, który będzie wybierany przy użyciu karty telefonicznej. Wybierz części numeru które mają zostać wybrane automagicznie:", 2000, 7, 7, 238, 24
@@ -268,7 +260,7 @@ END
 
 114 DIALOGEX 20, 15, 252, 127
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
-CAPTION "Dodaj Providera"
+CAPTION "Połączenie Dial-Up"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Wybierz providera, którego chciałbyś zainstalować, z listy poniżej, i naciśnij Dodaj.", 2000, 7, 7, 241, 8
@@ -281,7 +273,7 @@ END
 115 DIALOGEX 10, 10, 303, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Informacje o lokalizacji"
+CAPTION "Połączenie z %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 302, 302, "STATIC", SS_BITMAP, 10, 10, 88, 155
@@ -333,11 +325,11 @@ END
 STRINGTABLE
 BEGIN
     1 "Opcje telefonu i modemu"
-    2 "Ustawienia reguł wybierania i właściwości twojego modemu."
+    2 "GRUPA ROBOCZA"
     3 "Lokalizacja"
-    4 "Aby utworzyć nową lokalizację, naciśnij Nowa."
-    5 "Nowa Lokalizacja"
-    6 "Edytuj Lokalizację"
+    4 "Zmiana nazwy komputera"
+    5 "Grupa Robocza:"
+    6 "Domena:"
     7 "Nowa Karta Telefoniczna"
     8 "Edytuj Kartę Telefoniczną"
     9 "Numer zamiejscowy"
@@ -353,10 +345,10 @@ BEGIN
     19 "Wybieraj tylko numer telefoniczny"
     20 "Wszystkie"
     21 "Wybrane"
-    22 "Edytuj Regułę numerów zamiejscowych"
-    23 "Wybierz regułę z listy powyżej aby przejrzeć jej opis, albo naciśnij Nowa aby dodać regułę."
-    24 "Wybieraj '%2' z numerem międzymiastowym przed numerem telefonicznym, dla wszystkich połączeń w obszarze %1."
-    25 "Wybieraj '%2' przed numerem telefonicznym, dla wszystkich połączeń w obszarze %1."
+    22 "Witamy w grupie roboczej %1."
+    23 "Witamy w domenie %1."
+    24 "Musisz zrestartować komputer aby zmiany odniosły skutek."
+    25 "Możesz zmienić nazwę i członkostwo tego komputera. Zmiany mogą mieć wpływ na dostęp do zasobów sieciowych."
     26 "Wybieraj numer międzymiastowy przed numerem telefonicznym, dla wszystkich połączeń w obszarze %1."
     27 "Wybieraj tylko numer telefoniczny, dla wszystkich połączeń w obszarze %1."
     28 "Wybieraj '%2' z numerem międzymiastowym przed numerem telefonicznym, dla wszystkich połączeń w obszarze %1, zawierających wyznaczone prefiksy."
