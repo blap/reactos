@@ -1,4 +1,4 @@
-LANGUAGE LANG_DUTCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
 
 IDD_BACKGROUND DIALOGEX 0, 0, 246, 204
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -100,7 +100,7 @@ BEGIN
     CONTROL "Randen van letter&s vloeiend op het scherm weergeven, en wel als volgt", IDC_EFFAPPEARANCE_SMOOTHING,
             "button", BS_AUTOCHECKBOX | WS_TABSTOP, 10, 42, 267, 19
     COMBOBOX IDC_EFFAPPEARANCE_SMOOTHINGTYPE, 20, 62, 95, 19, CBS_DROPDOWNLIST |
-             CBS_HASSTRINGS | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+             CBS_HASSTRINGS | WS_CHILD | WS_VSCROLL | WS_TABSTOP
     CONTROL "&Grote pictogrammen gebruiken", IDC_EFFAPPEARANCE_LARGEICONS, "button",
             BS_AUTOCHECKBOX | WS_TABSTOP | WS_DISABLED, 10, 80, 267, 19
     CONTROL "Sch&aduw onder menu's weergeven", IDC_EFFAPPEARANCE_SETDROPSHADOW,
@@ -176,7 +176,7 @@ BEGIN
         MENUITEM "&Primary", ID_MENU_PRIMARY
         MENUITEM SEPARATOR
         MENUITEM "&Identify", ID_MENU_IDENTIFY
-        MENUITEM "P&roperties", ID_MENU_PROPERTIES
+        MENUITEM "&Eigenschappen", ID_MENU_PROPERTIES
     END
 END
 
@@ -204,7 +204,7 @@ BEGIN
     IDS_CPLNAME "Beelscherm"
     IDS_CPLDESCRIPTION "Past het beeldscherm en schermbeveiliging aan."
     IDS_NONE "(None)"
-    IDS_CENTER "Center"
+    IDS_CENTER "Gecentreerd"
     IDS_STRETCH "Stretch"
     IDS_TILE "Tile"
     IDS_FIT "Fit"
