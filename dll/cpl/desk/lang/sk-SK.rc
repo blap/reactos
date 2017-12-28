@@ -1,6 +1,4 @@
-/* Slovak translation by Mário Kačmár aka Kario <kario@szm.sk> */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 IDD_BACKGROUND DIALOGEX 0, 0, 246, 204
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -102,7 +100,7 @@ BEGIN
     CONTROL "Po&užívať nasledovnú metódu vyhladenia okrajov zobrazeného písma", IDC_EFFAPPEARANCE_SMOOTHING,
             "button", BS_AUTOCHECKBOX | WS_TABSTOP, 10, 42, 267, 19
     COMBOBOX IDC_EFFAPPEARANCE_SMOOTHINGTYPE, 20, 62, 95, 19, CBS_DROPDOWNLIST |
-             CBS_HASSTRINGS | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+             CBS_HASSTRINGS | WS_CHILD | WS_VSCROLL | WS_TABSTOP
     CONTROL "Používať &veľké ikony", IDC_EFFAPPEARANCE_LARGEICONS, "button",
             BS_AUTOCHECKBOX | WS_TABSTOP | WS_DISABLED, 10, 80, 267, 19
     CONTROL "&Zobrazovať tiene pod ponukami", IDC_EFFAPPEARANCE_SETDROPSHADOW,
@@ -203,7 +201,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_CPLNAME "Display"
+    IDS_CPLNAME "Obrazovka"
     IDS_CPLDESCRIPTION "Umožňuje prispôsobiť vzhľad, pozadie a šetrič obrazovky."
     IDS_NONE "(Nie je)"
     IDS_CENTER "V strede"
@@ -252,7 +250,7 @@ BEGIN
     IDS_ELEMENT_8 "Posúvač"
     IDS_ELEMENT_9 "Priestorové objekty"
     IDS_ELEMENT_10 "Názov palety"
-    IDS_ELEMENT_11 "Ovládacie tlačidlá" // old=Lišta značiek
+    IDS_ELEMENT_11 "Ovládacie tlačidlá"
     IDS_ELEMENT_12 "Políčko s hlásením"
     IDS_ELEMENT_13 "Pozadie aplikácie"
     IDS_ELEMENT_14 "Rozostup ikon (vodorovne)"
@@ -264,7 +262,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_DISPLAY_SETTINGS "Nastavenia zobrazenia" // obrazovky ?
+    IDS_DISPLAY_SETTINGS "Nastavenia zobrazenia"
     IDS_APPLY_FAILED "Nepodarilo sa aplikovať nové nastavenia..."
     IDS_APPLY_NEEDS_RESTART "Je potrebné reštartovať počítač, aby sa prejavili zmeny."
     IDS_TIMEOUTTEXT "Revert to previous settings in %d seconds."
