@@ -1,29 +1,20 @@
-/*
- *    Translated by xrogers
- *    xxrogers@users.sourceforge.net
- *    https://sourceforge.net/projects/reactospl
- *    UTF-8 conversion by Caemyr (May, 2011) 
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 STRINGTABLE
 BEGIN
-    STRING_HELP "Sposób użycia: %s wolumin: [-FS:syst-plik] [-V:etykieta] [-Q] [-A:rozmiar] [-C]\n\n\
-  [wolumin:]      Określa literę dysku przeznaczonego do formatowania.\n\
-  -FS:syst-plik   Określa rodzaj systemu plików (%s).\n\
-  -V:etykieta     Określa etykietę woluminu.\n\
-  -Q              Przeprowadza szybkie formatowanie.\n\
-  -A:rozmiar      Zastępuje domyślny rozmiar jednostki alokacji. Dla zastosowań\n\
-                  ogólnych zaleca się używanie ustawień domyślnych.\n\
-                  System NTFS obsługuje rozmiary: 512, 1024, 2048, 4096, 8192,\n\
-                  16 KB, 32 KB, 64 KB.\n\
-                  System FAT obsługuje rozmiary: 512, 1024, 2048, 4096, 8192,\n\
-                  16 KB, 32 KB, 64 KB, 128 KB, 256 KB.\n\
-                  Kompresja NTFS nie jest obsługiwana dla jednostek alokacji\n\
-                  większych niż 4096 bajtów.\n\
-  -C              Pliki utworzone na nowym woluminie będą domyślnie poddane\n\
-                  kompresji.\n\n"
+    STRING_HELP "Usage: %s drive: [-FS:file-system] [-V:label] [-Q] [-A:size] [-C]\n\n\
+  [drive:]         Specifies the drive to format.\n\
+  -FS:file-system  Specifies the type of file system (%s).\n\
+  -V:label         Specifies volume label.\n\
+  -Q               Performs a quick format.\n\
+  -A:size          Overrides the default allocation unit size. Default settings\n\
+                   are strongly recommended for general use\n\
+                   NTFS supports 512, 1024, 2048, 4096, 8192, 16K, 32K, 64K.\n\
+                   FAT supports 8192, 16K, 32K, 64K, 128K, 256K.\n\
+                   NTFS compression is not supported for allocation unit sizes\n\
+                   above 4096.\n\
+  -C               Files created on the new volume will be compressed by\n\
+                   default.\n\n"
     STRING_COMPLETE "%lu procent ukończone.\r"
     STRING_FORMAT_FAIL "FormatEx nie mógł zakończyć działania pomyślnie.\n\n"
     STRING_NO_SUPPORT "Operacja niewspierana"
@@ -37,8 +28,8 @@ BEGIN
     STRING_FILESYSTEM "Rodzaj systemu plików to %s.\n"
     STRING_LABEL_NAME_EDIT "Podaj aktualną etykietę woluminu dla dysku %C: "
     STRING_ERROR_LABEL "Nieprawidłowa etykieta woluminu została wpisana dla tego dysku.\n"
-    STRING_YN_FORMAT "\\OSTRZEŻENIE: WSZYSTKIE DANE NA NIEWYJMOWALNYM DYSKU\n\
-W STACJI %C: ZOSTANĄ UTRACONE!\nCzy kontynuować formatowanie (T/N)? "
+    STRING_YN_FORMAT "\nWARNING, ALL DATA ON NON_REMOVABLE DISK\n\
+DRIVE %C: WILL BE LOST!\nProceed with Format (Y/N)? "
     STRING_YES_NO_FAQ "TN"
     STRING_VERIFYING "Sprawdzanie"
     STRING_FAST_FMT "Szybkie formatowanie"
