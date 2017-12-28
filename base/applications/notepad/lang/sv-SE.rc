@@ -1,4 +1,4 @@
-LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -100,7 +100,7 @@ BEGIN
     EDITTEXT 0x143, 58, 147, 173, 12, WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
     PUSHBUTTON "Help", IDHELP, 8, 170, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 198, 170, 50, 14, BS_PUSHBUTTON
-    PUSHBUTTON "Cancel", IDCANCEL, 254, 170, 50, 14
+    PUSHBUTTON "Avbryt", IDCANCEL, 254, 170, 50, 14
     PUSHBUTTON "P&rinter...", psh3, 310, 170, 50, 14
 END
 
@@ -125,7 +125,7 @@ BEGIN
     EDITTEXT ID_LINENUMBER, 54, 10, 106, 12, WS_CHILD | WS_BORDER | WS_TABSTOP
     LTEXT "Radnummer:", 0x155, 5, 12, 41, 12, WS_CHILD | WS_TABSTOP | ES_NUMBER
     DEFPUSHBUTTON "OK", IDOK, 75, 30, 40, 15, WS_CHILD | WS_TABSTOP
-    PUSHBUTTON "Avbryt", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
 END
 
 IDD_ABOUTBOX DIALOGEX 22, 16, 284, 170
@@ -142,17 +142,17 @@ END
 
 STRINGTABLE
 BEGIN
-    STRING_LICENSE "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
+    STRING_LICENSE "Detta programmet är fri programvara; du kan distribuera det och/eller ändra det under villkoren enligt GNU General Public License som är utgivet av Free Software Foundation;  version 2, eller (om du så önskar) alla senare versioner.\r\n\r\nDette programmet er utgivet i hopp om att det skall kunne användas, men DET FINNS INGA GARANTIER; även utan underförstådd garanti om SÄLJBARHET eller LÄMPLIGHET FÖR ETT VISST ÄNDAMÅL.  Se på GNU General Public Licensen för mer detaljer.\r\n\r\nDu skall ha motagit en kopia av GNU General Public Licensen tillsammans med detta programmet; om du inte har fått det, skriv til Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
 END
 
 STRINGTABLE
 BEGIN
-    STRING_PAGESETUP_HEADERVALUE "&n"
-    STRING_PAGESETUP_FOOTERVALUE "Sida &s"
-    STRING_PAGESETUP_LEFTVALUE "20 mm"
-    STRING_PAGESETUP_RIGHTVALUE "20 mm"
-    STRING_PAGESETUP_TOPVALUE "25 mm"
-    STRING_PAGESETUP_BOTTOMVALUE "25 mm"
+    STRING_PAGESETUP_HEADERVALUE "&n" /* FIXME */
+    STRING_PAGESETUP_FOOTERVALUE "Sida &s" /* FIXME */
+    STRING_PAGESETUP_LEFTVALUE "20 mm" /* FIXME */
+    STRING_PAGESETUP_RIGHTVALUE "20 mm" /* FIXME */
+    STRING_PAGESETUP_TOPVALUE "25 mm" /* FIXME */
+    STRING_PAGESETUP_BOTTOMVALUE "25 mm" /* FIXME */
     STRING_NOTEPAD "Anteckningar"
     STRING_ERROR "FEL"
     STRING_WARNING "VARNING"
@@ -160,17 +160,17 @@ BEGIN
     STRING_UNTITLED "Namnlös"
     STRING_ALL_FILES "Alla filer (*.*)"
     STRING_TEXT_FILES_TXT "Textfiler (*.txt)"
-    STRING_TOOLARGE "Filen '%s' är för stor för Anteckningar.\n \
-Använd en annan editor."
-    STRING_NOTEXT "Du skrev inte in någon text. \
-\nSkriv något och försök sedan igen."
-    STRING_DOESNOTEXIST "Filen '%s'\nexisterar inte.\n\n \
-Vill du skapa en ny fil?"
-    STRING_NOTSAVED "Filen '%s'\nhar ändrats.\n\n \
-Vill du spara ändringarna?"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "'%s' hittades inte."
-    STRING_OUT_OF_MEMORY "Det finns inte tillräckligt med minne för att kunna slutföra \
-den här åtgärden. \nAvsluta ett eller flera program för att frigöra mer minne."
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "Cannot find '%s'"
     STRING_ANSI "ANSI"
     STRING_UNICODE "Unicode"
