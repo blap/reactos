@@ -1,6 +1,4 @@
-/* German translation by David Hinz (fRy2oo5) 2005-12-04 and Friedrich Stange (dj_smith_reactos@online.de) 2006-1-20 */
-
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 STRINGTABLE
 BEGIN
@@ -66,9 +64,9 @@ BEGIN
     IDS_DEV_DISABLED "Dieses Gerät ist nicht gestartet."
     IDS_DEV_DISABLED2 "Dieses Gerät ist deaktiviert."
     IDS_DEV_DEVLOADER_NOT_READY "Der Lader für dieses Gerät kann die benötigten Treiber nicht laden."
-    IDS_DEV_DEVLOADER_NOT_READY2 "" /* unused */
+    IDS_DEV_DEVLOADER_NOT_READY2 """ /* unused */
     IDS_DEV_DEVLOADER_NOT_READY3 "" /* unused */
-    IDS_DEV_DEVICE_NOT_THERE "Dieses Gerät ist entweder nicht vorhanden, funktioniert nicht korrekt, oder es sind nicht alle Treiber installiert."
+    IDS_DEV_DEVICE_NOT_THERE ""Dieses Gerät ist entweder nicht vorhanden, funktioniert nicht korrekt, oder es sind nicht alle Treiber installiert."
     IDS_DEV_MOVED "ReactOS ist dabei dieses Gerät zu aktivieren."
     IDS_DEV_TOO_EARLY "ReactOS ist dabei dieses Gerät zu aktivieren."
     IDS_DEV_NO_VALID_LOG_CONF "ReactOS kann die Ressourcen für dieses Gerät nicht feststellen."
@@ -175,9 +173,9 @@ BEGIN
     EDITTEXT IDC_DRVVERSION, 100, 67, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     LTEXT "Signaturgeber:", -1, 37, 81, 60, 8, SS_NOPREFIX
     EDITTEXT IDC_DIGITALSIGNER, 100, 81, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    PUSHBUTTON "&Treiberdetails...", IDC_DRIVERDETAILS, 7, 106, 80, 15
+    PUSHBUTTON "&Treiberdetails...", IDC_DRIVERDETAILS, 7, 106, 75, 15
     LTEXT "Einzelheiten über die Treiberdateien anzeigen.", -1, 91, 110, 154, 17, SS_NOPREFIX
-    PUSHBUTTON "Treiber &aktualisieren...", IDC_UPDATEDRIVER, 7, 126, 80, 15
+    PUSHBUTTON "Treiber &aktualisieren...", IDC_UPDATEDRIVER, 7, 126, 75, 15
     LTEXT "Aktualisiert den Gerätetreiber.", -1, 91, 130, 154, 17, SS_NOPREFIX
 END
 
@@ -239,7 +237,6 @@ BEGIN
 END
 
 
-
 /*
  This code relates to the device manager GUI
  */
@@ -250,19 +247,19 @@ BEGIN
   BEGIN
     MENUITEM "&Beenden",                       IDC_EXIT
   END
-  MENUITEM "Ak&tion",                          IDC_ACTIONMENU
+  MENUITEM "Ak&tion",                        IDC_ACTIONMENU
   POPUP "&Ansicht"
   BEGIN
-    MENUITEM "Geräte nach &Typ",               IDC_DEVBYTYPE
-    MENUITEM "Garäte nach &Verbindung",        IDC_DEVBYCONN
+    MENUITEM "Geräte nach &Typ",             IDC_DEVBYTYPE
+    MENUITEM "Garäte nach &Verbindung",       IDC_DEVBYCONN
     MENUITEM "Ressourcen nac&h Typ",           IDC_RESBYTYPE, GRAYED
-    MENUITEM "Ressourcen nach V&erbindung",    IDC_RESBYCONN, GRAYED
+    MENUITEM "Ressourcen nach V&erbindung",     IDC_RESBYCONN, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Ausgeblendete &Geräte anzeigen", IDC_SHOWHIDDEN
+    MENUITEM "Ausgeblendete &Geräte anzeigen",         IDC_SHOWHIDDEN
   END
   POPUP "&Hilfe"
   BEGIN
-    MENUITEM "Ü&ber",                          IDC_ABOUT
+    MENUITEM "Ü&ber",                       IDC_ABOUT
   END
 END
 
@@ -304,7 +301,7 @@ BEGIN
   IDS_HINT_DISABLE      " Deaktiviert das ausgewählte Gerät."
   IDS_HINT_UPDATE       " Startet den Treibersoftware aktualisieren Assistenten für das ausgewählte Gerät."
   IDS_HINT_UNINSTALL    " Deinstalliert den Treiber für das ausgewählte Gerät."
-  IDS_HINT_ADD          " Fügt ein Legacy (nicht Plug & Play) Gerät dem Computer hinzu."
+  IDS_HINT_ADD          " Fügt ein Legacy (nicht Plug & Play) Gerät dem Computer hinzu." 
   IDS_HINT_ABOUT        " Über ReactOS Geräte-Manager."
   IDS_HINT_EXIT         " Beendet das Programm."
 
