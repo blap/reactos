@@ -1,12 +1,4 @@
-/*
- * PROJECT:     ReactOS Power Configuration Applet
- * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        dll/cpl/powercfg/lang/uk-UA.rc
- * PURPOSE:     Ukraianian Language File for powercfg
- * TRANSLATORS: Artem Reznikov, Igor Paliychuk
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDD_PROPPAGEPOWERSCHEMES DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -39,80 +31,80 @@ BEGIN
     COMBOBOX IDC_HYBERNATEDCLIST, 173, 209, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
 END
 
-IDD_PROPPAGEALARMS DIALOGEX 0, 0, 250, 220
+IDD_PROPPAGEALARMS DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Сигналізація"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Сигнал значної розрядки батарей", -1, 10, 15, 235, 95
-    AUTOCHECKBOX "Подават&и сигнал, якщо рівень живлення досягає:", IDC_ALARM1, 15, 25, 180, 15, WS_TABSTOP
-    LTEXT "немає даних", IDC_ALARMVALUE1, 200, 25, 40, 10
-    LTEXT "0%", -1, 20, 40, 15, 15
-    CONTROL "Slider1", IDC_ALARMBAR1, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 30, 40, 170, 15
-    LTEXT "100%", -1, 215, 40, 25, 10
-    PUSHBUTTON "&Дія...", -1, 20, 70, 70, 15, WS_DISABLED
-    LTEXT "Сповіщення:", -1, 95, 70, 50, 10
-    LTEXT "Немає даних", IDC_ALARMMSG1, 145, 70, 95, 10
-    LTEXT "Дія:", -1, 95, 80, 45, 10
-    LTEXT "Немає даних", IDC_ALARMAKTION1, 145, 80, 95, 10
-    LTEXT "Запуск програми:", -1, 95, 90, 50, 10
-    LTEXT "Немає даних", IDC_ALARMPROG1, 150, 90, 40, 10
-    GROUPBOX "Сигнал критичної розрядки батарей", -1, 10, 115, 235, 95
-    AUTOCHECKBOX "Подавати &сигнал, якщо рівень живлення досягає:", IDC_ALARM2, 15, 125, 180, 15, WS_TABSTOP
-    LTEXT "немає даних", IDC_ALARMVALUE2, 200, 125, 40, 10
-    LTEXT "0%", -1, 20, 140, 15, 15
-    CONTROL "Slider1", IDC_ALARMBAR2, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 30, 140, 170, 15
-    LTEXT "100%", -1, 215, 140, 25, 10
-    PUSHBUTTON "&Дія...", -1, 20, 170, 70, 15, WS_DISABLED
-    LTEXT "Сповіщення:", -1, 95, 170, 50, 10
-    LTEXT "Немає даних", IDC_ALARMMSG2, 145, 170, 95, 10
-    LTEXT "Дія:", -1, 95, 180, 45, 10
-    LTEXT "Немає даних", IDC_ALARMAKTION2, 145, 180, 95, 10
-    LTEXT "Запуск програми:", -1, 95, 190, 50, 10
-    LTEXT "Немає даних", IDC_ALARMPROG2, 150, 190, 40, 10
+    GROUPBOX "Low battery alarm", -1, 6, 7, 239, 104
+    AUTOCHECKBOX "Activate &low battery alarm when power level reaches:", IDC_ALARM1, 15, 17, 190, 15, WS_TABSTOP
+    LTEXT "Невідомий", IDC_ALARMVALUE1, 215, 20, 20, 10
+    LTEXT "0%", -1, 28, 43, 15, 10
+    CONTROL "Slider1", IDC_ALARMBAR1, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 45, 170, 15
+    LTEXT "100%", -1, 214, 43, 25, 10
+    PUSHBUTTON "Alar&m Action...", -1, 17, 69, 70, 14, WS_DISABLED
+    LTEXT "Notification:", -1, 95, 71, 57, 10
+    LTEXT "Невідомо", IDC_ALARMMSG1, 154, 71, 84, 10
+    LTEXT "Action:", -1, 95, 83, 55, 10
+    LTEXT "Невідомо", IDC_ALARMAKTION1, 154, 83, 84, 10
+    LTEXT "Run Program:", -1, 95, 95, 55, 10
+    LTEXT "Невідомо", IDC_ALARMPROG1, 154, 95, 84, 10
+    GROUPBOX "Critical battery alarm", -1, 6, 120, 239, 106
+    AUTOCHECKBOX "Activate &critical battery alarm when power level reaches:", IDC_ALARM2, 15, 131, 195, 15, WS_TABSTOP
+    LTEXT "Невідомий", IDC_ALARMVALUE2, 215, 134, 20, 10
+    LTEXT "0%", -1, 28, 154, 15, 10
+    CONTROL "Slider1", IDC_ALARMBAR2, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 158, 170, 15
+    LTEXT "100%", -1, 214, 154, 25, 10
+    PUSHBUTTON "Alar&m Action...", -1, 17, 183, 70, 14, WS_DISABLED
+    LTEXT "Notification:", -1, 95, 185, 50, 10
+    LTEXT "Невідомо", IDC_ALARMMSG2, 154, 185, 84, 10
+    LTEXT "Action:", -1, 95, 198, 45, 10
+    LTEXT "Невідомо", IDC_ALARMAKTION2, 154, 198, 84, 10
+    LTEXT "Run Program:", -1, 95, 211, 50, 10
+    LTEXT "Невідомо", IDC_ALARMPROG2, 154, 211, 84, 10
 END
 
-IDD_PROPPAGEADVANCED DIALOGEX 0, 0, 250, 220
+IDD_PROPPAGEADVANCED DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Додатково"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    ICON IDI_ACDC, IDI_ACDC, 5, 5, 20, 20
-    LTEXT "Виберіть бажані параметри енергозбереження.", -1, 30, 5, 205, 20
-    GROUPBOX "Параметри", -1, 5, 35, 225, 55
-    AUTOCHECKBOX "За&вжди показувати значок на панелі завдань", IDC_SYSTRAYBATTERYMETER, 15, 45, 200, 10, WS_TABSTOP
-    AUTOCHECKBOX "&Запитувати пароль при виході з режиму очікування", IDC_PASSWORDLOGON, 15, 55, 200, 10, WS_TABSTOP
-    AUTOCHECKBOX "З&меншити яскравість монітора в разі живлення від батарей.", IDC_VIDEODIMDISPLAY, 15, 65, 200, 10, WS_TABSTOP
-    GROUPBOX "Кнопки живлення", -1, 5, 100, 230, 105
-    LTEXT "&При закритті кришки &портативного комп'ютера:", IDC_SLIDCLOSE, 10, 110, 210, 10
-    COMBOBOX IDC_LIDCLOSE, 10, 120, 220, 90, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
-    LTEXT "При нат&исненні вимикача живлення на моєму комп'ютері:", IDC_SPOWERBUTTON, 10, 135, 210, 10
-    COMBOBOX IDC_POWERBUTTON, 10, 150, 220, 90, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
-    LTEXT "При нати&сненні кнопки переходу до сплячого режиму:", IDC_SSLEEPBUTTON, 10, 165, 210, 10
-    COMBOBOX IDC_SLEEPBUTTON, 10, 180, 220, 90, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    ICON IDI_ACDC, IDI_ACDC, 7, 7, 20, 20
+    LTEXT "Select the power-saving settings you want to use.", -1, 37, 6, 207, 20
+    GROUPBOX "Параметри", -1, 6, 30, 240, 65
+    AUTOCHECKBOX "Alway&s show icon on the taskbar", IDC_SYSTRAYBATTERYMETER, 17, 43, 220, 10, WS_TABSTOP
+    AUTOCHECKBOX "&Prompt for password when computer resumes from standby", IDC_PASSWORDLOGON, 17, 60, 220, 10, WS_TABSTOP
+    AUTOCHECKBOX "&Dim display when running on batteries", IDC_VIDEODIMDISPLAY, 17, 78, 220, 10, WS_TABSTOP
+    GROUPBOX "Power buttons", -1, 6, 101, 240, 127
+    LTEXT "&When I close the lid of my portable computer:", IDC_SLIDCLOSE, 15, 115, 222, 10
+    COMBOBOX IDC_LIDCLOSE, 15, 127, 220, 90, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Wh&en I press the power button on my computer:", IDC_SPOWERBUTTON, 15, 153, 222, 10
+    COMBOBOX IDC_POWERBUTTON, 15, 165, 220, 90, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Whe&n I press the sleep button on my computer:", IDC_SSLEEPBUTTON, 15, 191, 222, 10
+    COMBOBOX IDC_SLEEPBUTTON, 15, 203, 220, 90, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
 END
 
-IDD_PROPPAGEHIBERNATE DIALOGEX 0, 0, 250, 220
+IDD_PROPPAGEHIBERNATE DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Сплячий режим"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    ICON IDI_HIBERNATE, IDI_HIBERNATE, 5, 5, 20, 20
-    LTEXT "Коли комп'ютер переходить до сплячого режиму, увесь вміст пам'яті записується на жорсткий диск і робота завершується. Виходячи зі сплячого режиму, комп'ютер повертається до попереднього стану. ", -1, 35, 5, 195, 35
-    GROUPBOX "Сплячий режим", -1, 5, 45, 235, 25
-    AUTOCHECKBOX "Дозволити сплячий &режим", IDC_HIBERNATEFILE, 10, 55, 210, 10, WS_TABSTOP
-    GROUPBOX "Місце на диску для сплячого режиму", -1, 5, 80, 240, 60
-    LTEXT "Доступно на диску:", -1, 10, 90, 100, 10
-    LTEXT "немає даних", IDC_FREESPACE, 120, 90, 70, 10
-    LTEXT "Для сплячого режиму потрібно:", -1, 10, 100, 115, 10
-    LTEXT "Немає даних", IDC_SPACEFORHIBERNATEFILE, 120, 100, 55, 10
-    LTEXT "Перед переведенням комп'ютера до сплячого режиму слід звільнити місце на диску. ", IDC_TOLESSFREESPACE, 10, 115, 220, 20
+    ICON IDI_HIBERNATE, IDI_HIBERNATE, 7, 7, 20, 20
+    LTEXT "When your computer hibernates, it stores whatever it has in memory on your hard disk and then shuts down. When your computer comes out of hibernation, it returns to its previous state. ", -1, 37, 6, 210, 35
+    GROUPBOX "Перехід до сплячого режиму", -1, 6, 41, 240, 32
+    AUTOCHECKBOX "Enable &hibernation", IDC_HIBERNATEFILE, 17, 55, 210, 10, WS_TABSTOP
+    GROUPBOX "Disk space for hibernation", -1, 6, 80, 240, 76
+    LTEXT "Free disk space:", -1, 15, 95, 140, 10
+    LTEXT "Невідомо", IDC_FREESPACE, 160, 95, 80, 10
+    LTEXT "Disk space required to hibernate:", -1, 15, 115, 140, 10
+    LTEXT "Невідомо", IDC_SPACEFORHIBERNATEFILE, 160, 115, 80, 10
+    LTEXT "You must free some disk space before your computer can hibernate. ", IDC_TOLESSFREESPACE, 15, 135, 224, 20
 END
 
 STRINGTABLE
 BEGIN
-    IDS_CPLNAME_1 "Електроживлення"
-    IDS_CPLDESCRIPTION_1 "Налаштування параметрів енергозбереження для комп'ютера."
+    IDS_CPLNAME_1 "Менеджер ліцензій"
+    IDS_CPLDESCRIPTION_1 "Менеджер ліцензій"
     IDS_PROCENT "%i%%"
     IDS_SOUND "Звук"
     IDS_TEXT "Текст"
