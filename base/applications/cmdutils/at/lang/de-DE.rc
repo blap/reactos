@@ -1,32 +1,31 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "Mit dem AT Befehl können Befehle und Programme zu einem vorbestimmten\n\
-Termin gestartet werden. Der Zeitplandienst muss gestartet sein, um den\n\
-Befehl AT zu verwenden.\n\n\
-AT [\\\\Computername] [ [Kennung] [/DELETE] | /DELETE [/YES]]\n\
-AT [\\\\Computername] Zeit [/INTERACTIVE]\n\
-    [ /EVERY:Datum[,...] | /NEXT:Datum[,...]] ""Befehl""\n\n\
-\\\\Computername     Gibt einen Remotecomputer an. Ohne diesen Parameter werden\n\
-                   die Befehle auf dem lokalen Computer ausgeführt.\n\
-Kennung            Eine Identifikationsnummer, die dem geplanten Befehl\n\
-                   zugeteilt wird.\n\
-/DELETE            Löscht geplante Befehle. Ohne Kennung werden alle geplanten\n\
-                   Befehle auf dem Computer gelöscht.\n\
-/YES               In Verbindung mit /DELETE werden die geplanten Befehle ohne\n\
-                   weitere Bestätiging gelöscht.\n\
-Zeit               Gibt die Zeit an, zu der ein Befehl ausgeführt werden soll.\n\
-/INTERACTIVE       Ermöglicht dem Aufrag, Eingaben von dem Benutzer\n\
-                   anzunehmen, der angemeldet ist, wenn der Auftrag ausgeführt\n\
-                   wird.\n\
-/EVERY:Datum[,...] Führt den Befehl zu jedem der angegebenen Tage der Woche\n\
-                   oder des Monats aus. Ohne Angabe eines Datums wird der\n\
-                   aktuelle Tag des Monats angenommen.\n\
-/NEXT:Datum[,...]  Führt den Befehl am nächsten angegebenen Tage der Woche\n\
-                   oder des Monats (z.B. nächsten Montag) aus. Ohne Angabe\n\
-                   eines Datums wird der aktuelle Tag des Monats angenommen.\n\
-""Befehl""           Ist der auszuführende Befehl oder das Stapelprogramm.\n"
+    IDS_USAGE "The AT command schedules commands and programs to run on a computer at\n\
+a specified time and date. The Schedule service must be running to use\n\
+the AT command.\n\n\
+AT [\\\\computername] [ [id] [/DELETE] | /DELETE [/YES]]\n\
+AT [\\\\computername] time [/INTERACTIVE]\n\
+    [ /EVERY:date[,...] | /NEXT:date[,...]] """befehl"""\n\n\
+\\\\computername     Specifies a remote computer. Commands are scheduled on the \n\
+                   local computer if this parameter is omitted.\n\
+id                 Is an identification number assigned to a scheduled\n\
+                   command.\n\
+/DELETE            Cancels a scheduled command. If id is omitted, all the\n\
+                   scheduled commands on the computer are canceled.\n\
+/YES               Used with cancel all jobs command when no further\n\
+                   confirmation is desired.\n\
+time               Specifies the time when command is to run.\n\
+/INTERACTIVE       Allows the job to interact with the desktop of the user\n\
+                   who is logged on at the time the job runs.\n\
+/EVERY:date[,...]  Runs the command on each specified day(s) of the week or\n\
+                   month. If date is omitted, the current day of the month\n\
+                   is assumed.\n\
+/NEXT:date[,...]   Runs the specified command on the next occurrence of the\n\
+                   day (for example, next Thursday). If date is omitted, the \n\
+                   current day of the month is assumed.\n\
+"""command""          Is the command or batch program to be run.\n"
 
     IDS_DELETE_ALL "Dieser Vorgang wird alle geplanten Aufträge löschen.\n"
     IDS_NEW_JOB "Neuer Auftrag hinzugefügt. Kennung = %lu\n"
@@ -45,7 +44,7 @@ Zeit               Gibt die Zeit an, zu der ein Befehl ausgeführt werden soll.\
 
     IDS_YES "Ja"
     IDS_NO "Nein"
-    IDS_ERROR "ERROR"
+    IDS_ERROR "FEHLER"
     IDS_OK "OK"
 
     IDS_TASKID      "Taskkennung:   %lu\n"
