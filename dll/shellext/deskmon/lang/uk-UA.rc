@@ -1,12 +1,4 @@
-/*
- * PROJECT:    ReactOS Advanced display monitor properties
- * LICENSE:    GPL - See COPYING in the top level directory
- * FILE:       dll/shellext/deskmon/lang/uk-UA.rc
- * PURPOSE:    Ukraianian Language File for deskmon.dll
- * TRANSLATOR: Artem Reznikov
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDD_MONITOR DIALOGEX 0, 0, 252, 226
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
