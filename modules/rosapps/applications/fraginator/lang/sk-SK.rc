@@ -1,8 +1,4 @@
-/* TRANSLATOR :  Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- * DATE OF TR.:  04-09-2058
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 IDD_MAIN DIALOGEX 0, 0, 375, 103
 STYLE DS_SHELLFONT | DS_CENTERMOUSE | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE |
@@ -33,7 +29,7 @@ END
 
 IDD_REPORT DIALOGEX  0, 0, 405, 169
 STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION
-CAPTION "Hlásenie" //Report
+CAPTION "Report"
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON   "Bajty",IDC_BYTES,7,148,50,14
@@ -41,14 +37,14 @@ BEGIN
     DEFPUSHBUTTON   "Megabajty",IDC_MEGABYTES,115,148,50,14
     DEFPUSHBUTTON   "Gigabajty",IDC_GIGABYTES,169,148,50,14
     DEFPUSHBUTTON   "OK",IDC_REPORTOK,348,148,50,14
-    LTEXT           "Médium",-1,7,7,75,8 //Volume
+    LTEXT           "Médium",-1,7,7,75,8
     LTEXT           "Kapacita",-1,7,51,75,8
     LTEXT           "(Písmeno jednotky)",IDC_DRIVELETTER,83,7,117,10,SS_SUNKEN
     LTEXT           "(Veľkosť disku, bajty)",IDC_DISKSIZEBYTES,83,51,117,10,
                     SS_SUNKEN
     LTEXT           "(Veľkosť disku, klastre)",IDC_DISKSIZECLUSTERS,83,73,117,
                     10,SS_SUNKEN
-    LTEXT           "Klastrov spolu",-1,7,73,75,8 //Total clusters, Súčet klastrov, Klastrov celkom
+    LTEXT           "Klastrov spolu",-1,7,73,75,8
     LTEXT           "(Veľkosť klastra)",IDC_DISKCLUSTERSIZE,83,84,117,10,
                     SS_SUNKEN
     LTEXT           "Veľkosť klastra",-1,7,84,75,8
