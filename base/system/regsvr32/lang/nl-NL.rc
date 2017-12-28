@@ -1,21 +1,19 @@
-/* Dutch Translation by Cedric Vonck cedricvonck - at - skynet (dot) be */
-
-LANGUAGE LANG_DUTCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
 
 STRINGTABLE
 BEGIN
-    IDS_UsageMessage "%s\n\nSyntaxis: regsvr32 [/u] [/s] [/c] [/n] [/i[:cmdline]] DLL-naam\n\
-/u -   Registratie van server opheffen\n\
-/s -   Stille modus; geen berichten weergeven\n\
-/c -   Geef berichten weer in de console\n\
-/i -   DLLInstall aanroepen en optioneel doorgeven [cmdline]. In combinatie met /u wordt het DLL-bestand verwijderd.\n\
-/n -   DLLRegisterServer niet aanroepen; deze optie moet in combinatie met /i worden gebruikt."
+    IDS_UsageMessage "%s\n\nUsage: regsvr32 [/u] [/s] [/c] [/n] [/i[:cmdline]] dllname\n\
+/u -	Unregister server\n\
+/s -	Silent; display no message boxes\n\
+/c -	Console output\n\
+/i -	Call DllInstall passing it an optional [cmdline]; when used with /u calls dll uninstall\n\
+/n -	Do not call DllRegisterServer; this option must be used with /i"
     IDS_NoDllSpecified "DLL naam werd niet vermeld."
     IDS_InvalidFlag "Niet herkende schakeloptie: %s"
     IDS_SwitchN_NoI "Niet herkende schakeloptie: /n moet in combinatie met /i worden gebruikt."
     IDS_DllNotLoaded "LoadLibrary('%s') failed.\nGetLastError returns 0x%08x."
-    IDS_MissingEntry "%s werd ingeladen, maar het beginpunt %s werd niet gevonden.\n\n\
-%s mag niet geëxporteerd worden, of een corrupte versie van %s is in het geheugen ingeladen. Overweeg het gebruik van PView om %s te detecteren en te verwijderen."
+    IDS_MissingEntry "%s was loaded, but the %s entry point was not found.\n\n\
+%s may not be exported, or a corrupt version of %s may be in memory. Consider using PView to detect and remove it."
     IDS_FailureMessage "%s in %s was niet succesvol.\nFout code: 0x%08x"
     IDS_SuccessMessage "%s in %s is geslaagd."
 END
