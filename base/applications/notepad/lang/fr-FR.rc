@@ -1,4 +1,4 @@
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -71,13 +71,13 @@ END
 DIALOG_PAGESETUP DIALOGEX 0, 0, 365, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU | DS_CONTEXTHELP
 FONT 8, "MS Shell Dlg"
-CAPTION "Page Setup"
+CAPTION "Configuration de page"
 BEGIN
-    GROUPBOX "Preview", 0, 240, 6, 120, 153, BS_GROUPBOX
+    GROUPBOX "Aperçu", 0, 240, 6, 120, 153, BS_GROUPBOX
     CONTROL "", rct1, "Static", SS_WHITERECT, 260, 42, 80, 80
     CONTROL "", rct2, "Static", SS_GRAYRECT, 340, 46, 4, 80
     CONTROL "", rct3, "Static", SS_GRAYRECT, 264, 122, 80, 4
-    GROUPBOX "Paper", grp2, 8, 6, 224, 56, BS_GROUPBOX
+    GROUPBOX "Papier", grp2, 8, 6, 224, 56, BS_GROUPBOX
     LTEXT "&Size:", stc2, 16, 22, 36, 8
     COMBOBOX cmb2, 64, 20, 160, 160, CBS_SIMPLE | CBS_DROPDOWN | CBS_SORT | WS_GROUP | WS_TABSTOP | WS_VSCROLL
     LTEXT "&Tray:", stc3, 16, 42, 36, 8
@@ -98,9 +98,9 @@ BEGIN
     EDITTEXT 0x141, 58, 130, 173, 12, WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "&Footer:", 0x142, 8, 149, 40, 15
     EDITTEXT 0x143, 58, 147, 173, 12, WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
-    PUSHBUTTON "Help", IDHELP, 8, 170, 50, 14
+    PUSHBUTTON "Aide", IDHELP, 8, 170, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 198, 170, 50, 14, BS_PUSHBUTTON
-    PUSHBUTTON "Cancel", IDCANCEL, 254, 170, 50, 14
+    PUSHBUTTON "Annuler", IDCANCEL, 254, 170, 50, 14
     PUSHBUTTON "P&rinter...", psh3, 310, 170, 50, 14
 END
 
@@ -160,18 +160,17 @@ BEGIN
     STRING_UNTITLED "Sans-titre"
     STRING_ALL_FILES "Tous les fichiers (*.*)"
     STRING_TEXT_FILES_TXT "Fichiers texte (*.txt)"
-    STRING_TOOLARGE "Le fichier '%s' est trop grand pour le bloc-notes.\n \
-Veuillez utiliser un autre éditeur."
-    STRING_NOTEXT "Vous n'avez pas entré de texte. \
-Veuillez taper quelque chose et recommencer"
-    STRING_DOESNOTEXIST "Le fichier '%s'\nn'existe pas.\n\n \
-Voulez-vous créer un nouveau fichier ?"
-    STRING_NOTSAVED "Le fichier '%s'\na été modifié\n\n \
-Voulez-vous enregistrer vos modifications ?"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "'%s' non trouvé."
-    STRING_OUT_OF_MEMORY "Pas assez de mémoire pour compléter cette \
-tâche. \nFermez une ou plusieurs applications pour libérer\n\
-de la mémoire."
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "Impossible de trouver '%s'"
     STRING_ANSI "ANSI"
     STRING_UNICODE "Unicode"
