@@ -1,0 +1,37 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+BEGIN
+    IDS_USAGE "\nConfigure a WLAN adapter.\n\n\
+WLANCONF [-c SSID [-w WEP] [-a]] [-d] [-s]\n\n\
+\t-c SSID\t\tConnects to a supplied SSID,\n\
+\t-w WEP\t\tSpecifies a WEP key to use.\n\
+\t-a\t\tSpecifies the target network is ad-hoc\n\
+\t-d\t\tDisconnects from the current AP.\n\
+\t-s\t\tScans and displays a list of access points\n\
+\t\t\tin range.\n\n\
+Passing no parameters will print information about the current WLAN connection\n"
+    IDS_NO_NETWORK "Tidak ada jaringan yang ditemukan di kisaran\n"
+    IDS_NO_WLAN_ADAPTER "Tidak dapat menemukan adaptor WLAN pada sistem\n"
+    IDS_SUCCESS "Operasi selesai dengan sukses.\n"
+    IDS_WLAN_DISCONNECT "\nWLAN terputus\n"
+    IDS_MSG_WEP_ENABLED "WEP diaktifkan: %s \n"
+    IDS_MSG_NETWORK_MODE "Modus jaringan: %s \n"
+    IDS_MSG_CURRENT_WIRELESS "\nInformasi konfigurasi nirkabel saat ini:\n\n"
+    IDS_MSG_ENCRYPTED "Dienkripsi: %s\n"
+    IDS_MSG_NETWORK_TYPE "Jenis Jaringan: %s\n"
+    IDS_MSG_RSSI "RSSI: %i dBm \n"
+    IDS_MSG_SUPPORT_RATE "Tarif yang Didukung (Mbps): "
+    IDS_MSG_TRANSMISSION_POWER "Daya transmisi: %d mW \n"
+    IDS_MSG_ANTENNA_COUNT "Jumlah antena: %d \n"
+    IDS_MSG_TRANSMIT_ANTENNA "Transmit antena: %d \n"
+    IDS_MSG_TRANSMIT_ANTENNA_ANY "Transmit antenna: Any \n"
+    IDS_MSG_RECEIVE_ANTENNA "Menerima antena: %d \n"
+    IDS_MSG_RECEIVE_ANTENNA_ANY "Menerima antena: Any \n"
+    IDS_MSG_FRAGMENT_THRESHOLD "Ambang Fragmentasi: %d bytes\n"
+    IDS_MSG_RTS_THRESHOLD "Ambang RTS: %d byte \n"
+    IDS_YES "Iya"
+    IDS_NO "Tidak"
+    IDS_ADHOC "Ad hoc"
+    IDS_INFRASTRUCTURE "Infrastruktur"
+END
