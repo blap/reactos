@@ -1,5 +1,5 @@
 /*
- * Copyright 2006 by Henning Gerhardt
+ * Copyright 2004 by Krzysztof Foltman
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,80 +16,78 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
 
-#pragma code_page(65001)
-
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 IDM_MAINMENU MENU
 BEGIN
     POPUP "&Datei"
     BEGIN
         MENUITEM "&Neu...\tStrg+N",       ID_FILE_NEW
-        MENUITEM "Ö&ffnen...\tStrg+O",    ID_FILE_OPEN
-        MENUITEM "&Speichern\tStrg+S",    ID_FILE_SAVE
-        MENUITEM "Speichern &unter...",   ID_FILE_SAVEAS
+        MENUITEM "Ö&ffnen...\tStrg+O",      ID_FILE_OPEN
+        MENUITEM "&Speichern\tStrg+S",         ID_FILE_SAVE
+        MENUITEM "Speichern &unter...",           ID_FILE_SAVEAS
         MENUITEM SEPARATOR
-        MENUITEM "&Drucken...\tStrg+P",   ID_PRINT
+        MENUITEM "&Drucken...\tStrg+P",     ID_PRINT
         MENUITEM "Seitenansi&cht",        ID_PREVIEW
-        MENUITEM "Seite ein&richten...",  ID_PRINTSETUP
+        MENUITEM "Seite ein&richten...",        ID_PRINTSETUP
         MENUITEM SEPARATOR
-        MENUITEM "&Beenden",              ID_FILE_EXIT
+        MENUITEM "&Beenden",                 ID_FILE_EXIT
     END
     POPUP "&Bearbeiten"
     BEGIN
-        MENUITEM "&Rückgängig\tStrg+Z",         ID_EDIT_UNDO
-        MENUITEM "&Wiederholen\tStrg+Y",        ID_EDIT_REDO
+        MENUITEM "&Rückgängig\tStrg+Z",               ID_EDIT_UNDO
+        MENUITEM "&Wiederholen\tStrg+Y",               ID_EDIT_REDO
         MENUITEM SEPARATOR
-        MENUITEM "&Ausschneiden\tStrg+X",       ID_EDIT_CUT
-        MENUITEM "&Kopieren\tStrg+C",           ID_EDIT_COPY
-        MENUITEM "&Einfügen\tStrg+V",           ID_EDIT_PASTE
-        MENUITEM "&Löschen\tEntf",              ID_EDIT_CLEAR
-        MENUITEM "Alles &markieren\tStrg+A",    ID_EDIT_SELECTALL
+        MENUITEM "&Ausschneiden\tStrg+X",                ID_EDIT_CUT
+        MENUITEM "&Kopieren\tStrg+C",               ID_EDIT_COPY
+        MENUITEM "&Einfügen\tStrg+V",              ID_EDIT_PASTE
+        MENUITEM "&Löschen\tEntf",                 ID_EDIT_CLEAR
+        MENUITEM "Alles &markieren\tStrg+A",         ID_EDIT_SELECTALL
         MENUITEM SEPARATOR
-        MENUITEM "&Suchen...\tStrg+F",          ID_FIND
-        MENUITEM "&Weitersuchen\tF3",           ID_FIND_NEXT
-        MENUITEM "Erset&zen...\tStrg+H",        ID_REPLACE
+        MENUITEM "&Suchen...\tStrg+F",            ID_FIND
+        MENUITEM "&Weitersuchen\tF3",              ID_FIND_NEXT
+        MENUITEM "Erset&zen...\tStrg+H",         ID_REPLACE
         MENUITEM SEPARATOR
-        MENUITEM "Schreibgeschü&tzt",           ID_EDIT_READONLY
+        MENUITEM "Schreibgeschü&tzt",                  ID_EDIT_READONLY
         MENUITEM "&Geändert",                   ID_EDIT_MODIFIED
         MENUITEM SEPARATOR
         POPUP "&Extras"
         BEGIN
-            MENUITEM "Markierungs&information",     ID_EDIT_SELECTIONINFO
-            MENUITEM "Zeichen&format",              ID_EDIT_CHARFORMAT
-            MENUITEM "&Standardzeichenformat",      ID_EDIT_DEFCHARFORMAT
-            MENUITEM "&Absatzformat",               ID_EDIT_PARAFORMAT
-            MENUITEM "&Text holen",                 ID_EDIT_GETTEXT
+            MENUITEM "Markierungs&information",             ID_EDIT_SELECTIONINFO
+            MENUITEM "Zeichen&format",           ID_EDIT_CHARFORMAT
+            MENUITEM "&Standardzeichenformat",           ID_EDIT_DEFCHARFORMAT
+            MENUITEM "&Absatzformat",           ID_EDIT_PARAFORMAT
+            MENUITEM "&Text holen",                   ID_EDIT_GETTEXT
         END
     END
     POPUP "&Ansicht"
     BEGIN
         MENUITEM "&Symbolleiste",        ID_TOGGLE_TOOLBAR
-        MENUITEM "&Formatierungsleiste", ID_TOGGLE_FORMATBAR
-        MENUITEM "L&ineal",              ID_TOGGLE_RULER
-        MENUITEM "Status&leiste",        ID_TOGGLE_STATUSBAR
+        MENUITEM "&Formatierungsleiste",     ID_TOGGLE_FORMATBAR
+        MENUITEM "L&ineal",          ID_TOGGLE_RULER
+        MENUITEM "Status&leiste",     ID_TOGGLE_STATUSBAR
         MENUITEM SEPARATOR
-        MENUITEM "&Optionen...",         ID_VIEWPROPERTIES
+        MENUITEM "&Optionen...",     ID_VIEWPROPERTIES
     END
     POPUP "&Einfügen"
     BEGIN
-        MENUITEM "&Datum und Uhrzeit...", ID_DATETIME
+        MENUITEM "&Datum und Uhrzeit...",  ID_DATETIME
     END
     POPUP "Forma&t"
     BEGIN
-        MENUITEM "Sch&riftart...",               ID_FONTSETTINGS
-        MENUITEM "Auf&zählungszeichen",          ID_BULLET
-        MENUITEM "&Absatz...",                   ID_PARAFORMAT
-        MENUITEM "&Tabstopps...",                ID_TABSTOPS
+        MENUITEM "Sch&riftart...",                     ID_FONTSETTINGS
+        MENUITEM "Auf&zählungszeichen",               ID_BULLET
+        MENUITEM "&Absatz...",                ID_PARAFORMAT
+        MENUITEM "&Tabstopps...",                     ID_TABSTOPS
         POPUP "&Hintergrund"
         BEGIN
             MENUITEM "&System\tStrg+1",         ID_BACK_1
-            MENUITEM "&PostIt-Notiz\tStrg+2",          ID_BACK_2
+            MENUITEM "&PostIt-Notiz\tStrg+2",    ID_BACK_2
         END
     END
     POPUP "&?"
     BEGIN
-        MENUITEM "Ü&ber Wine Wordpad",       ID_ABOUT
+        MENUITEM "Ü&ber Wine Wordpad",      ID_ABOUT
     END
 END
 
@@ -97,12 +95,12 @@ IDM_POPUP MENU
 BEGIN
     POPUP ""
     BEGIN
-        MENUITEM "Aus&schneiden",       ID_EDIT_CUT
-        MENUITEM "&Kopieren",           ID_EDIT_COPY
-        MENUITEM "&Einfügen",           ID_EDIT_PASTE
+        MENUITEM "Aus&schneiden",                ID_EDIT_CUT
+        MENUITEM "&Kopieren",               ID_EDIT_COPY
+        MENUITEM "&Einfügen",              ID_EDIT_PASTE
         MENUITEM SEPARATOR
-        MENUITEM "Auf&zählungszeichen", ID_BULLET
-        MENUITEM "&Absatz...",          ID_PARAFORMAT
+        MENUITEM "Auf&zählungszeichen",      ID_BULLET
+        MENUITEM "&Absatz...",       ID_PARAFORMAT
     END
 END
 
@@ -110,23 +108,23 @@ IDM_COLOR_POPUP MENU
 BEGIN
     POPUP ""
     BEGIN
-        MENUITEM "Schwarz",        ID_COLOR_BLACK
-        MENUITEM "Kastanienbraun", ID_COLOR_MAROON
-        MENUITEM "Grün",           ID_COLOR_GREEN
-        MENUITEM "Olivgrün",       ID_COLOR_OLIVE
-        MENUITEM "Dunkelblau",     ID_COLOR_NAVY
-        MENUITEM "Lila",           ID_COLOR_PURPLE
+        MENUITEM "Schwarz",      ID_COLOR_BLACK
+        MENUITEM "Kastanienbraun",     ID_COLOR_MAROON
+        MENUITEM "Grün",      ID_COLOR_GREEN
+        MENUITEM "Olivgrün",      ID_COLOR_OLIVE
+        MENUITEM "Dunkelblau",       ID_COLOR_NAVY
+        MENUITEM "Lila",     ID_COLOR_PURPLE
         MENUITEM "Blaugrün",       ID_COLOR_TEAL
-        MENUITEM "Grau",           ID_COLOR_GRAY
-        MENUITEM "Silber",         ID_COLOR_SILVER
-        MENUITEM "Rot",            ID_COLOR_RED
+        MENUITEM "Grau",       ID_COLOR_GRAY
+        MENUITEM "Silber",     ID_COLOR_SILVER
+        MENUITEM "Rot",        ID_COLOR_RED
         MENUITEM "Hellgrün",       ID_COLOR_LIME
-        MENUITEM "Gelb",           ID_COLOR_YELLOW
-        MENUITEM "Blau",           ID_COLOR_BLUE
-        MENUITEM "Pink",           ID_COLOR_FUCHSIA
-        MENUITEM "Aquamarin",      ID_COLOR_AQUA
-        MENUITEM "Weiß",           ID_COLOR_WHITE
-        MENUITEM "Automatisch",    ID_COLOR_AUTOMATIC
+        MENUITEM "Gelb",     ID_COLOR_YELLOW
+        MENUITEM "Blau",       ID_COLOR_BLUE
+        MENUITEM "Pink",    ID_COLOR_FUCHSIA
+        MENUITEM "Aquamarin",       ID_COLOR_AQUA
+        MENUITEM "Weiß",      ID_COLOR_WHITE
+        MENUITEM "Automatisch",  ID_COLOR_AUTOMATIC
     END
 END
 
