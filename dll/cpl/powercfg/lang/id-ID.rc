@@ -1,112 +1,110 @@
-/* Indonesian translation by Zaenal Mutaqin (ade999 at gmail dot com) */
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
 
-LANGUAGE LANG_INDONESIAN, SUBLANG_DEFAULT
-
-IDD_PROPPAGEPOWERSCHEMES DIALOGEX 0, 0, 250, 220
+IDD_PROPPAGEPOWERSCHEMES DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Skema Tenaga"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ACDC, IDI_ACDC, 7, 7, 28, 22
-    LTEXT "Pilih skema tenaga dengan setelan paling benar untuk komputer ini. Catatan bahwa mengubah setelan di bawah akan mengubah skema yang dipilih.", -1, 45, 13, 194, 36
-    GROUPBOX "Skema Tena&ga", -1, 7, 57, 240, 46
-    COMBOBOX IDC_ENERGYLIST, 14, 70, 224, 92, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL
-    PUSHBUTTON "&Simpan Sebagai...", IDC_SAVEAS_BTN, 100, 85, 75, 15, WS_DISABLED
-    PUSHBUTTON "&Hapus", IDC_DELETE_BTN, 180, 85, 55, 15, WS_DISABLED
-    GROUPBOX "Tidak Dikenal", IDC_GRPDETAIL, 7, 108, 240, 105
-    LTEXT "Ketika komputer:", IDC_SAT, 15, 120, 60, 10
-    LTEXT "Dicolok listrik", IDC_SAC, 100, 120, 45, 15
-    ICON IDI_AC, IDC_IAC, 75, 115, 25, 15
-    LTEXT "Berjalan pada batere", IDC_SDC, 197, 120, 45, 15
-    ICON IDI_DC, IDC_IDC, 165, 115, 25, 15
-    LTEXT "Matikan &monitor:", IDC_MONITOR, 15, 145, 80, 10
-    COMBOBOX IDC_MONITORACLIST, 100, 140, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    COMBOBOX IDC_MONITORDCLIST, 175, 140, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    LTEXT "Matikan hard d&isks:", IDC_DISK, 15, 160, 80, 10
-    COMBOBOX IDC_DISKACLIST, 100, 155, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    COMBOBOX IDC_DISKDCLIST, 175, 155, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    LTEXT "Sistem s&tandby:", IDC_STANDBY, 15, 180, 80, 10
-    COMBOBOX IDC_STANDBYACLIST, 100, 175, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    COMBOBOX IDC_STANDBYDCLIST, 175, 175, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    LTEXT "Sistem &hibernasi:", IDC_HYBERNATE, 15, 195, 80, 10
-    COMBOBOX IDC_HYBERNATEACLIST, 100, 190, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    COMBOBOX IDC_HYBERNATEDCLIST, 175, 190, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Pilih skema daya dengan pengaturan yang paling sesuai untuk komputer ini. Perhatikan bahwa mengubah pengaturan di bawah ini akan mengubah skema yang dipilih.", -1, 37, 6, 209, 36
+    GROUPBOX "Skema Tenaga", -1, 6, 43, 240, 50
+    COMBOBOX IDC_ENERGYLIST, 14, 54, 224, 92, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL
+    PUSHBUTTON "&Simpan Sebagai...", IDC_SAVEAS_BTN, 109, 72, 70, 14, WS_DISABLED
+    PUSHBUTTON "&Menghapus", IDC_DELETE_BTN, 183, 72, 55, 14, WS_DISABLED
+    GROUPBOX "Tidak Dikenal", IDC_GRPDETAIL, 6, 95, 240, 136
+    LTEXT "Saat komputer adalah:", IDC_SAT, 12, 109, 60, 12
+    LTEXT "Terpasang", IDC_SAC, 123, 110, 45, 15
+    ICON IDI_AC, IDC_IAC, 97, 108, 21, 20
+    LTEXT "Berjalan dengan baterai", IDC_SDC, 195, 110, 45, 15
+    ICON IDI_DC, IDC_IDC, 170, 108, 21, 20
+    LTEXT "Matikan &monitor:", IDC_MONITOR, 13, 148, 84, 10
+    COMBOBOX IDC_MONITORACLIST, 100, 145, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX IDC_MONITORDCLIST, 173, 145, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Matikan hard d&isks:", IDC_DISK, 13, 171, 84, 10
+    COMBOBOX IDC_DISKACLIST, 100, 167, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX IDC_DISKDCLIST, 173, 167, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Siaga sis&tem:", IDC_STANDBY, 13, 191, 84, 10
+    COMBOBOX IDC_STANDBYACLIST, 100, 188, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX IDC_STANDBYDCLIST, 173, 188, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Sistem &hibernate:", IDC_HYBERNATE, 13, 212, 84, 10
+    COMBOBOX IDC_HYBERNATEACLIST, 100, 209, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX IDC_HYBERNATEDCLIST, 173, 209, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
 END
 
-IDD_PROPPAGEALARMS DIALOGEX 0, 0, 250, 220
+IDD_PROPPAGEALARMS DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Alarm"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Alarm batere renah", -1, 10, 15, 235, 95
-    AUTOCHECKBOX "A&ktifkan alarm batere renah saat tingkat tenaga mencapai:", IDC_ALARM1, 15, 25, 180, 15, WS_TABSTOP
-    LTEXT "tidak dikenal", IDC_ALARMVALUE1, 200, 25, 40, 10
-    LTEXT "0%", -1, 20, 40, 15, 15
-    CONTROL "Slider1", IDC_ALARMBAR1, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 30, 40, 170, 15
-    LTEXT "100%", -1, 215, 40, 25, 10
-    PUSHBUTTON "Aksi Alar&m...", -1, 20, 70, 70, 15, WS_DISABLED
-    LTEXT "Pemberitahuan:", -1, 95, 70, 50, 10
-    LTEXT "Tidak dikenal", IDC_ALARMMSG1, 145, 70, 95, 10
-    LTEXT "Aksi:", -1, 95, 80, 45, 10
-    LTEXT "Tidak dikenal", IDC_ALARMAKTION1, 145, 80, 95, 10
-    LTEXT "Jalankan Program:", -1, 95, 90, 50, 10
-    LTEXT "Tidak dikenal", IDC_ALARMPROG1, 150, 90, 40, 10
-    GROUPBOX "Alarm batere kritis", -1, 10, 115, 235, 95
-    AUTOCHECKBOX "Aktifkan ala&rm batere rendah saat tingkat tenaga mencapai:", IDC_ALARM2, 15, 125, 180, 15, WS_TABSTOP
-    LTEXT "tidak dikenal", IDC_ALARMVALUE2, 200, 125, 40, 10
-    LTEXT "0%", -1, 20, 140, 15, 15
-    CONTROL "Slider1", IDC_ALARMBAR2, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 30, 140, 170, 15
-    LTEXT "100%", -1, 215, 140, 25, 10
-    PUSHBUTTON "Aksi Alar&m...", -1, 20, 170, 70, 15, WS_DISABLED
-    LTEXT "Pemberitahuan:", -1, 95, 170, 50, 10
-    LTEXT "Tidak dikenal", IDC_ALARMMSG2, 145, 170, 95, 10
-    LTEXT "Aksi:", -1, 95, 180, 45, 10
-    LTEXT "Tidak dikenal", IDC_ALARMAKTION2, 145, 180, 95, 10
-    LTEXT "Jalankan Program:", -1, 95, 190, 50, 10
-    LTEXT "Tidak dikenal", IDC_ALARMPROG2, 150, 190, 40, 10
+    GROUPBOX "Baterai rendah alarm", -1, 6, 7, 239, 104
+    AUTOCHECKBOX "Aktifkan &rendah baterai alarm ketika mencapai tingkat daya:", IDC_ALARM1, 15, 17, 190, 15, WS_TABSTOP
+    LTEXT "tidak dikenal", IDC_ALARMVALUE1, 215, 20, 20, 10
+    LTEXT "0%", -1, 28, 43, 15, 10
+    CONTROL "Slider1", IDC_ALARMBAR1, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 45, 170, 15
+    LTEXT "100%", -1, 214, 43, 25, 10
+    PUSHBUTTON "Alar&m Tindakan...", -1, 17, 69, 70, 14, WS_DISABLED
+    LTEXT "Pemberitahuan:", -1, 95, 71, 57, 10
+    LTEXT "Tidak Dikenal", IDC_ALARMMSG1, 154, 71, 84, 10
+    LTEXT "Tindakan:", -1, 95, 83, 55, 10
+    LTEXT "Tidak Dikenal", IDC_ALARMAKTION1, 154, 83, 84, 10
+    LTEXT "Jalankan program:", -1, 95, 95, 55, 10
+    LTEXT "Tidak Dikenal", IDC_ALARMPROG1, 154, 95, 84, 10
+    GROUPBOX "Alarm kritis baterai", -1, 6, 120, 239, 106
+    AUTOCHECKBOX "Aktifkan &kritis baterai alarm ketika mencapai tingkat daya:", IDC_ALARM2, 15, 131, 195, 15, WS_TABSTOP
+    LTEXT "tidak dikenal", IDC_ALARMVALUE2, 215, 134, 20, 10
+    LTEXT "0%", -1, 28, 154, 15, 10
+    CONTROL "Slider1", IDC_ALARMBAR2, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 158, 170, 15
+    LTEXT "100%", -1, 214, 154, 25, 10
+    PUSHBUTTON "Alar&m Tindakan...", -1, 17, 183, 70, 14, WS_DISABLED
+    LTEXT "Pemberitahuan:", -1, 95, 185, 50, 10
+    LTEXT "Tidak Dikenal", IDC_ALARMMSG2, 154, 185, 84, 10
+    LTEXT "Tindakan:", -1, 95, 198, 45, 10
+    LTEXT "Tidak Dikenal", IDC_ALARMAKTION2, 154, 198, 84, 10
+    LTEXT "Jalankan program:", -1, 95, 211, 50, 10
+    LTEXT "Tidak Dikenal", IDC_ALARMPROG2, 154, 211, 84, 10
 END
 
-IDD_PROPPAGEADVANCED DIALOGEX 0, 0, 250, 220
+IDD_PROPPAGEADVANCED DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Lanjutan"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    ICON IDI_ACDC, IDI_ACDC, 5, 5, 20, 20
-    LTEXT "Pilih setelan hemat-tenaga yang ingin anda pakai.", -1, 30, 5, 205, 20
-    GROUPBOX "Opsi", -1, 5, 35, 225, 55
-    AUTOCHECKBOX "Selalu menampilkan ikon pada taskbar", IDC_SYSTRAYBATTERYMETER, 15, 45, 200, 10, WS_TABSTOP
-    AUTOCHECKBOX "&Prompt kata sandi saat komputer melanjutkan dari standby", IDC_PASSWORDLOGON, 15, 55, 200, 10, WS_TABSTOP
-    AUTOCHECKBOX "&Dim tampilan ketika berjalan dengan baterai.", IDC_VIDEODIMDISPLAY, 15, 65, 200, 10, WS_TABSTOP
-    GROUPBOX "Tombol tenaga", -1, 5, 100, 230, 105
-    LTEXT "&Ketika Saya menutup lid komputer portabel saya:", IDC_SLIDCLOSE, 10, 110, 210, 10
-    COMBOBOX IDC_LIDCLOSE, 10, 120, 220, 90, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
-    LTEXT "K&etika Saya menekan tombol tenaga pada komputer saya:", IDC_SPOWERBUTTON, 10, 135, 210, 10
-    COMBOBOX IDC_POWERBUTTON, 10, 150, 220, 90, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
-    LTEXT "Ke&tika Saya menekan tombol tidur pada komputer saya:", IDC_SSLEEPBUTTON, 10, 165, 210, 10
-    COMBOBOX IDC_SLEEPBUTTON, 10, 180, 220, 90, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    ICON IDI_ACDC, IDI_ACDC, 7, 7, 20, 20
+    LTEXT "Pilih pengaturan hemat daya yang ingin Anda gunakan.", -1, 37, 6, 207, 20
+    GROUPBOX "Pilihan", -1, 6, 30, 240, 65
+    AUTOCHECKBOX "&Selalu tampilkan ikon pada taskbar", IDC_SYSTRAYBATTERYMETER, 17, 43, 220, 10, WS_TABSTOP
+    AUTOCHECKBOX "&Prompt untuk kata sandi saat komputer resume dari standby", IDC_PASSWORDLOGON, 17, 60, 220, 10, WS_TABSTOP
+    AUTOCHECKBOX "&Dimainkan saat berjalan pada baterai", IDC_VIDEODIMDISPLAY, 17, 78, 220, 10, WS_TABSTOP
+    GROUPBOX "Tombol daya", -1, 6, 101, 240, 127
+    LTEXT "&Saat saya menutup tutup komputer portabel saya:", IDC_SLIDCLOSE, 15, 115, 222, 10
+    COMBOBOX IDC_LIDCLOSE, 15, 127, 220, 90, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Kapan saya menekan tombol daya di komputer saya:", IDC_SPOWERBUTTON, 15, 153, 222, 10
+    COMBOBOX IDC_POWERBUTTON, 15, 165, 220, 90, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Kapan saya menekan tombol tidur di komputer saya:", IDC_SSLEEPBUTTON, 15, 191, 222, 10
+    COMBOBOX IDC_SLEEPBUTTON, 15, 203, 220, 90, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
 END
 
-IDD_PROPPAGEHIBERNATE DIALOGEX 0, 0, 250, 220
+IDD_PROPPAGEHIBERNATE DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Hibernasi"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    ICON IDI_HIBERNATE, IDI_HIBERNATE, 5, 5, 20, 20
-    LTEXT "Ketika komputer anda hibernasi, ia menyimpan apapun yang ada di memori pada hard disk anda dan kemudian mematikan komputer. Ketika komputer anda keluar dari hibernasi, ia kembali ke keadaan sebelumnya. ", -1, 35, 5, 195, 35
-    GROUPBOX "Hibernasi", -1, 5, 45, 235, 25
-    AUTOCHECKBOX "Hidupkan &hibernasi", IDC_HIBERNATEFILE, 10, 55, 210, 10, WS_TABSTOP
-    GROUPBOX "Ruang disk untuk hibernasi", -1, 5, 80, 240, 60
-    LTEXT "Ruang bebas disk:", -1, 10, 90, 100, 10
-    LTEXT "Tidak dikenal", IDC_FREESPACE, 120, 90, 70, 10
-    LTEXT "Ruang disk diperlukan untuk hibernasi:", -1, 10, 100, 115, 10
-    LTEXT "Tidak dikenal", IDC_SPACEFORHIBERNATEFILE, 120, 100, 55, 10
-    LTEXT "Anda harus membebaskan beberapa ruang disk sebelum komputer anda bisa hibernasi. ", IDC_TOLESSFREESPACE, 10, 115, 220, 20
+    ICON IDI_HIBERNATE, IDI_HIBERNATE, 7, 7, 20, 20
+    LTEXT "When your computer hibernates, it stores whatever it has in memory on your hard disk and then shuts down. When your computer comes out of hibernation, it returns to its previous state. ", -1, 37, 6, 210, 35
+    GROUPBOX "Hibernasi", -1, 6, 41, 240, 32
+    AUTOCHECKBOX "Aktifkan &hibernasi", IDC_HIBERNATEFILE, 17, 55, 210, 10, WS_TABSTOP
+    GROUPBOX "Ruang disk untuk hibernasi", -1, 6, 80, 240, 76
+    LTEXT "Ruang Kandar bebas:", -1, 15, 95, 140, 10
+    LTEXT "Tidak Dikenal", IDC_FREESPACE, 160, 95, 80, 10
+    LTEXT "Ruang disk yang diperlukan untuk hibernate:", -1, 15, 115, 140, 10
+    LTEXT "Tidak Dikenal", IDC_SPACEFORHIBERNATEFILE, 160, 115, 80, 10
+    LTEXT "Anda harus gratis sejumlah ruangan di disk sebelum komputer Anda dapat hibernate. ", IDC_TOLESSFREESPACE, 15, 135, 224, 20
 END
 
 STRINGTABLE
 BEGIN
-    IDS_CPLNAME_1 "Opsi Tenaga"
-    IDS_CPLDESCRIPTION_1 "Mengkonfigurasi setelan hemat-energi untuk komputer anda."
+    IDS_CPLNAME_1 "Manajer Lisensi"
+    IDS_CPLDESCRIPTION_1 "Manajer Lisensi"
     IDS_PROCENT "%i%%"
     IDS_SOUND "Suara"
     IDS_TEXT "Teks"
@@ -115,7 +113,7 @@ BEGIN
     IDS_NOACTION "Tidak melakukan apapun"
     IDS_PowerActionNone1 "Tidak ada aksi"
     IDS_PowerActionUnknown "Tidak dikenal"
-    IDS_PowerActionSleep "Stand by"
+    IDS_PowerActionSleep "Bersiap"
     IDS_PowerActionHibernate "Hibernasi"
     IDS_PowerActionShutdown "Matikan"
     IDS_PowerActionRestart "Mulai lagi"
@@ -138,6 +136,6 @@ BEGIN
     IDS_TIMEOUT14 "Setelah 4 jam"
     IDS_TIMEOUT15 "Setelah 5 jam"
     IDS_TIMEOUT16 "Tidak pernah"
-    IDS_DEL_SCHEME "Are you sure you want to delete the power scheme?"
-    IDS_DEL_SCHEME_TITLE "Delete Scheme"
+    IDS_DEL_SCHEME "Apakah Anda yakin ingin menghapus skema daya?"
+    IDS_DEL_SCHEME_TITLE "Hapus Skema"
 END
