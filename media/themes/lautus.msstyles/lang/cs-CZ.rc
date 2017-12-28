@@ -1,4 +1,4 @@
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 STRINGTABLE
 {
@@ -12,26 +12,26 @@ STRINGTABLE
 
 STRINGTABLE
 {
-3000, "Normální"
-3001, "Velké písmo"
-3002, "Velmi velké písmo"
+3000, "Normal"
+3001, "Large Fonts"
+3002, "Extra Large Fonts"
 }
 
 STRINGTABLE
 {
-4000, "Normální"
-4001, "Velké písmo"
-4002, "Velmi velké písmo"
+4000, "Normal"
+4001, "Large Fonts"
+4002, "Extra Large Fonts"
 }
 
 STRINGTABLE
 {
 5000, "Lautus"
-5001, "Motiv"
-5002, "Nadace ReactOS"
-5003, "Pisarz, založeno na Luna Inspirat"
-5004, "Uvolněno pod licencí GNU/GPL 2.0, 2011"
+5001, "Visual Style"
+5002, "ReactOS Foundation"
+5003, "Pisarz, based on Luna Inspirat"
+5004, "Released under GNU/GPL 2.0, 2011"
 5005, "http://www.reactos.org"
 5006, "1.0"
-5007, "Motiv pro ReactOS"
+5007, "Visual Style for ReactOS"
 }
