@@ -1,6 +1,4 @@
-/* Russian language resource file by Dmitry Chapyshev, 2007-06-10, Kudratov Olimjon (olim98@bk.ru) */
-
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 IDM_CONSOLE_SMALL MENU
 BEGIN
