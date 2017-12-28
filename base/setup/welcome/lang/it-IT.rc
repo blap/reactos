@@ -1,6 +1,4 @@
-/* It.rc by Roberto 'Speekix' Pellegrino */
-
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 /* String Tables */
 
@@ -23,7 +21,7 @@ BEGIN
     IDS_TOPIC_BUTTON2 "&Esci"
 END
 
-/* Topic Titolos */
+/* Topic titles */
 STRINGTABLE
 BEGIN
     IDS_TOPIC_TITLE0 "Installa ReactOS"
@@ -31,7 +29,7 @@ BEGIN
     IDS_TOPIC_TITLE2 "Esci"
 END
 
-/* Descrizione argomentos */
+/* Topic descriptions */
 STRINGTABLE
 BEGIN
     IDS_TOPIC_DESC0 "Crea una nuova installazione di ReactOS sul tuo computer o aggiorna l'installazione esistente."
