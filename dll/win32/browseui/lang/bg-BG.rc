@@ -1,4 +1,22 @@
-LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+/*
+ * Copyright 2009 Andrew Hill
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+ */
+
+LANGUAGE LANG_BULGARIAN, SUBLANG_BULGARIAN_BULGARIA
 
 /* Menus */
 
@@ -39,7 +57,7 @@ BEGIN
         BEGIN
             MENUITEM "&Търсене\tCtrl+E", IDM_EXPLORERBAR_SEARCH
             MENUITEM "&Любимки\tCtrl+I", IDM_EXPLORERBAR_FAVORITES
-            MENUITEM "&Носители" /* неясно */, IDM_EXPLORERBAR_MEDIA
+            MENUITEM "&Media", IDM_EXPLORERBAR_MEDIA
             MENUITEM "&Дневник\tCtrl+H", IDM_EXPLORERBAR_HISTORY
             MENUITEM "&Папки", IDM_EXPLORERBAR_FOLDERS
             MENUITEM "", IDM_EXPLORERBAR_SEPARATOR
@@ -78,7 +96,7 @@ END
 
 IDM_TASKBAR_TOOLBARS MENUEX
 BEGIN
-	POPUP "&Toolbars", -1, MFT_STRING, MFS_ENABLED, 0
+	POPUP "Ленти с &пособия", -1, MFT_STRING, MFS_ENABLED, 0
 	BEGIN
 		MENUITEM "&Desktop", IDM_TASKBAR_TOOLBARS_DESKTOP, MFT_STRING
 		MENUITEM "&Quick Launch", IDM_TASKBAR_TOOLBARS_QUICKLAUNCH, MFT_STRING
@@ -122,7 +140,7 @@ FONT 8, "MS Shell Dlg"
     PUSHBUTTON "Cancel", IDCANCEL, 205, 65, 50, 15, WS_GROUP | WS_TABSTOP | WS_VISIBLE
 }
 
-IDD_CUSTOMIZETOOLBAREX DIALOGEX 0, 0, 357, 36
+IDD_CUSTOMIZETOOLBAREX DIALOGEX 0, 0, 357, 33
 STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CAPTION
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
@@ -221,8 +239,9 @@ STRINGTABLE
 BEGIN
     9505 "Скрива или показва лентите с пособия."
     9506 "Скрива или показва лентата на състоянието."
-    9508 "Показва лентата с обичайните бутони." /* неясно */
-    9509 "Показва адресната лента."
+    9508 "Показва лентата с обичайните бутони."" /* неясно */
+    9509 ""Показва адресната лента."
+    9509 "Displays the Address bar."
     9510 "Показва лената с бързите връзки."
     9516 "Заключване на размерите и разположението на лентите с пособия."
 END
