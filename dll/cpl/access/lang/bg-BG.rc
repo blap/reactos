@@ -1,4 +1,4 @@
-LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_BULGARIAN, SUBLANG_BULGARIAN_BULGARIA
 
 IDD_PROPPAGEKEYBOARD DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -8,18 +8,18 @@ BEGIN
     GROUPBOX "ЛепкавиКлавиши", -1, 6, 11, 234, 62
     LTEXT "Използвайте ЛепкавиКлавиши, ако искате да ползвате Shift, Ctrl или Alt при натискане само по един клавиш наведнъж.",
           -1, 12, 20, 222, 29
-    AUTOCHECKBOX "Из&ползване на ЛепкавиКлавиши", IDC_STICKY_BOX, 12, 49, 130, 14
-    PUSHBUTTON "На&стройки", IDC_STICKY_BUTTON, 104, 49, 50, 14
+    AUTOCHECKBOX "Из&ползване на ЛепкавиКлавиши", IDC_STICKY_BOX, 12, 49, 126, 14
+    PUSHBUTTON "На&стройки", IDC_STICKY_BUTTON, 144, 49, 90, 14
     GROUPBOX "ПресяващиКлавиши", -1, 6, 79, 234, 67
     LTEXT "Използвайте ПресяващиКлавиши, ако искате РеактОС да пренебребва кратки или повтарящши се натискания или да намали скоростта на повтаряне.",
           -1, 12, 89, 222, 29
-    AUTOCHECKBOX "Използване на &ПресяващиКлавиши", IDC_FILTER_BOX, 12, 121, 140, 14
-    PUSHBUTTON "На&стройки", IDC_FILTER_BUTTON, 104, 121, 50, 14
+    AUTOCHECKBOX "Използване на &ПресяващиКлавиши", IDC_FILTER_BOX, 12, 121, 126, 14
+    PUSHBUTTON "S&ettings", IDC_FILTER_BUTTON, 144, 121, 90, 14
     GROUPBOX "ОбращащиКлавиши", -1, 6, 145, 234, 62
     LTEXT "Използвайте ОбръщащиКлавиши, ако искате да чувате звук при натискане на Caps Lock, Num Lock и Scroll Lock.",
           -1, 12, 161, 222, 20
-    AUTOCHECKBOX "Използване на &ОбръщащиКлавиши", IDC_TOGGLE_BOX, 12, 184, 154, 14
-    PUSHBUTTON "На&стройки", IDC_TOGGLE_BUTTON, 104, 184, 50, 14
+    AUTOCHECKBOX "Използване на &ОбръщащиКлавиши", IDC_TOGGLE_BOX, 12, 184, 126, 14
+    PUSHBUTTON "Setti&ngs", IDC_TOGGLE_BUTTON, 144, 184, 90, 14
     AUTOCHECKBOX "Показване на &допълнителна клавиатурна помощ в приложенията", IDC_KEYBOARD_EXTRA,
                  6, 212, 234, 14
 END
@@ -31,15 +31,15 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "ЗвуковСтраж", -1, 6, 11, 234, 98
     LTEXT "Използвайте ЗвуковСтраж, ако искате РеактОС да показва видими предупреждения, когато компютърът ви издава звук.",
-          -1, 12, 20, 194, 29
-    AUTOCHECKBOX "Използване на &ЗвуковСтраж", IDC_SENTRY_BOX, 12, 49, 140, 14
+          -1, 12, 20, 222, 29
+    AUTOCHECKBOX "Използване на &ЗвуковСтраж", IDC_SENTRY_BOX, 12, 49, 90, 14
     LTEXT "Използване при следните предупреждения:", IDC_SENTRY_TEXT, 12, 72, 222, 11
     COMBOBOX IDC_SENTRY_COMBO, 12, 83, 222, 56,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
     GROUPBOX "ЗвуковоПоказване", -1, 6, 115, 234, 67
     LTEXT "Чрез звуковото показване карате приложенията да показват надписи, когато възпроизвеждат говор или звук.",
-          -1, 12, 125, 194, 29
-    AUTOCHECKBOX "Използване Звуково&Показване", IDC_SSHOW_BOX, 12, 148, 194, 14
+          -1, 12, 125, 222, 29
+    AUTOCHECKBOX "Използване Звуково&Показване", IDC_SSHOW_BOX, 12, 148, 222, 14
 END
 
 IDD_PROPPAGEDISPLAY DIALOGEX 0, 0, 246, 228
@@ -51,7 +51,7 @@ BEGIN
     LTEXT "Use this option if you want ReactOS to use colors and fonts designed for easy reading.",
           -1, 12, 20, 222, 29
     AUTOCHECKBOX "&Use High Contrast", IDC_CONTRAST_BOX, 12, 49, 126, 14
-    PUSHBUTTON "&Settings", IDC_CONTRAST_BUTTON, 144, 49, 90, 14
+    PUSHBUTTON "На&стройки", IDC_CONTRAST_BUTTON, 144, 49, 90, 14
     GROUPBOX "Cursor options", -1, 6, 79, 234, 115
     LTEXT "Use the track bars to modify the blinking speed of the cursor and its width.",
           -1, 12, 88, 222, 20
@@ -75,9 +75,9 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "Цъкове на мишката", -1, 6, 11, 234, 62
     LTEXT "Изберете това, ако искате да управлявате мишката с числения дял на клавиатура.",
-          -1, 12, 20, 194, 29
-    AUTOCHECKBOX "Използване на ц&ъковете на мишката", IDC_MOUSE_BOX, 12, 49, 140, 14
-    PUSHBUTTON "На&стройки", IDC_MOUSE_BUTTON, 104, 49, 50, 14
+          -1, 12, 20, 222, 29
+    AUTOCHECKBOX "Използване на ц&ъковете на мишката", IDC_MOUSE_BOX, 12, 49, 126, 14
+    PUSHBUTTON "На&стройки", IDC_MOUSE_BUTTON, 144, 49, 90, 14
 END
 
 IDD_PROPPAGEGENERAL DIALOGEX 0, 0, 246, 228
@@ -116,7 +116,7 @@ BEGIN
     LTEXT "Press the SHIFT-Key 5 times in order to activate the Sticky Keys feature.",
           -1, 12, 20, 222, 29
     AUTOCHECKBOX "A&ctivate sticky keys", IDC_STICKY_ACTIVATE_CHECK, 12, 49, 222, 14
-    GROUPBOX "Options", -1, 6, 83, 234, 44
+    GROUPBOX "Настройки", -1, 6, 83, 234, 44
     AUTOCHECKBOX "&Press modifier key twice to lock", IDC_STICKY_LOCK_CHECK,
                  12, 94, 222, 14
     AUTOCHECKBOX "&Turn StickyKeys off if two keys are pressed at once", IDC_STICKY_UNLOCK_CHECK,
@@ -126,8 +126,8 @@ BEGIN
                  12, 148, 222, 14
     AUTOCHECKBOX "&Show StickyKeys status on screen", IDC_STICKY_STATUS_CHECK,
                  12, 160, 222, 14
-    DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    DEFPUSHBUTTON "Добре", IDOK, 135, 207, 50, 14
+    PUSHBUTTON "Отказ", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_FILTERKEYSOPTIONS DIALOGEX 0, 0, 246, 228
@@ -144,7 +144,7 @@ BEGIN
                     12, 91, 120, 11, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "Ig&nore quick keystrokes and slow down the repeat rate", IDC_FILTER_REPEAT_RADIO,
                     12, 106, 120, 20, BS_TOP | BS_MULTILINE
-    PUSHBUTTON "&Settings", IDC_FILTER_BOUNCE_BUTTON, 144, 88, 90, 14, WS_GROUP
+    PUSHBUTTON "На&стройки", IDC_FILTER_BOUNCE_BUTTON, 144, 88, 90, 14, WS_GROUP
     PUSHBUTTON "S&ettings", IDC_FILTER_REPEAT_BUTTON, 144, 106, 90, 14, WS_GROUP
     LTEXT "&Click here and type here to test the settings:", -1, 12, 129, 222, 11
     EDITTEXT IDC_FILTER_TEST_EDIT, 12, 138, 222, 14, WS_GROUP | ES_AUTOHSCROLL
@@ -242,7 +242,7 @@ BEGIN
     GROUPBOX "Repeat Keys", -1, 6, 11, 234, 106
     LTEXT "Override settings on the Keyboard control panel:",
           -1, 12, 20, 222, 20
-    AUTORADIOBUTTON "&No keyboard repeat", IDC_REPEAT_NOREPEAT_RADIO, 12, 34, 78, 11, WS_GROUP
+    AUTORADIOBUTTON "&No keyboard repeat", IDC_REPEAT_NOREPEAT_RADIO, 12, 32, 78, 11, WS_GROUP
     AUTORADIOBUTTON "&Slow down keyboard repeat rates", IDC_REPEAT_REPEAT_RADIO, 12, 45, 131, 11
     LTEXT "Repeat &delay:", -1, 24, 60, 60, 11
     COMBOBOX IDC_REPEAT_DELAY_COMBO, 24, 71, 210, 56,
@@ -274,8 +274,8 @@ BEGIN
     LTEXT "&Baud rate:", -1, 12, 65, 222, 20
     COMBOBOX IDC_SERIAL_BAUD_COMBO, 12, 76, 222, 74,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
-    DEFPUSHBUTTON "Добре", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Отказ", IDCANCEL, 189, 207, 50, 14
+    DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
 END
 
 STRINGTABLE
@@ -286,6 +286,6 @@ BEGIN
     IDS_SENTRY_TITLE "Мигане на заглавната лента"
     IDS_SENTRY_WINDOW "Мигане на текущия прозорец"
     IDS_SENTRY_DISPLAY "Мигане на работната площ"
-    IDS_SECONDS "Seconds"
-    IDS_MINUTES "Minutes"
+    IDS_SECONDS "Секунди"
+    IDS_MINUTES "Минути"
 END
