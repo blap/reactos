@@ -1,8 +1,4 @@
-/* TRANSLATOR : Ardit Dani (Ard1t) (ardit.dani@gmail.com) 
- * DATE OF TR:  29-11-2013
-*/
-
-LANGUAGE LANG_ALBANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ALBANIAN, SUBLANG_ALBANIAN_ALBANIA
 
 STRINGTABLE
 BEGIN
@@ -36,34 +32,34 @@ BEGIN
     \n \
     where\n \
         adapter         Connection name\n \
-                       (karakteret jolly * dhe ? lejohen, shih shembujt)\n \
+                       (wildcard characters * and ? allowed, see examples)\n \
     \n \
         Options:\n \
-           /?           Shfaq kete mesazhe ndihme\n \
-           /all         Shfaq informacion te plote konfigurimi.\n \
-           /release     Liro IP adresen per adapterin specifik.\n \
-           /renew       Rinovo IP adresen per adapterin specifik.\n \
-           /flushdns    Pastron kafazin perzgjedhes te DNS'se.\n \
-           /registerdns Rifreskon te gjithe DHCP te leshuara dhe regjistron perseri emrat e DNS've.\n \
-           /displaydns  Shfaq permbajtjen e DNS'se te leshuara.\n \
-           /showclassid Shfaq te gjitha klasat e ID've dhcp te lejuara per adapterat.\n \
-           /setclassid  Modifikon klasen e ID've te dhcp's.\n \
+           /?           Display this help message\n \
+           /all         Display full configuration information.\n \
+           /release     Release the IP address for the specified adapter.\n \
+           /renew       Renew the IP address for the specified adapter.\n \
+           /flushdns    Purges the DNS Resolver cache.\n \
+           /registerdns Refreshes all DHCP leases and re-registers DNS names.\n \
+           /displaydns  Display the contents of the DNS Resolver Cache.\n \
+           /showclassid Displays all the dhcp class IDs allowed for adapter.\n \
+           /setclassid  Modifies the dhcp class id.\n \
     \n \
-    Parazgjedhja shfaq vetem adresat e IP've, subnet maskat dhe\n \
-    gateway e parazgjedhur per secilin adapter i lidhut me TCP/IP.\n \
+    The default is to display only the IP address, subnet mask and\n \
+    default gateway for each adapter bound to TCP/IP.\n \
     \n \
-    Për lirim dhe rinovim, nese emri i adapterit nuk eshte specifikuart, atehere adresa e IP'se\n \
-    jepet per te gjithe adapterat te lidhur me TCP/IP qe lirohen dhe rinovohen.\n \
+    For Release and Renew, if no adapter name is specified, then the IP address\n \
+    leases for all adapters bound to TCP/IP will be released or renewed.\n \
     \n \
-    Për Setclassid, nese nuk specifikohet ClassId, atehere ClassId hiqet.\n \
+    For Setclassid, if no ClassId is specified, then the ClassId is removed.\n \
     \n \
     Examples:\n \
-        > ipconfig                   ... Shfaq informacionet.\n \
-        > ipconfig /all              ... Shfaq informacionet\n \
-        > ipconfig /renew            ... rinovo te gjithe adapterat\n \
-        > ipconfig /renew EL*        ... rinovo qfaredo lidhje qe emri i\n \
-                                         fillon me EL\n \
-        > ipconfig /release *Con*    ... renovo te gjithe lidhjet përputhese,\n \
-                                         eg. ""Local Area Connection 1"" or\n \
-                                             ""Local Area Connection 2""\n"
+        > ipconfig                   ... Show information.\n \
+        > ipconfig /all              ... Show detailed information\n \
+        > ipconfig /renew            ... renew all adapters\n \
+        > ipconfig /renew EL*        ... renew any connection that has its\n \
+                                         name starting with EL\n \
+        > ipconfig /release *Con*    ... release all matching connections,\n \
+                                         eg. """Local Area Connection 1""" or\n \
+                                             """Local Area Connection 2""\n"
 END
