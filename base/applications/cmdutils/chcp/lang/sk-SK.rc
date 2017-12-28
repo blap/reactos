@@ -1,10 +1,4 @@
-/* Slovak translation for CMD
- * TRANSLATOR: Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- * DATE OF TR: 21-03-2009
- * LastChange: 10-08-2010
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 STRINGTABLE
 BEGIN
