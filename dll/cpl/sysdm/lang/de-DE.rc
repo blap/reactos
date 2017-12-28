@@ -48,7 +48,7 @@ BEGIN
     LTEXT "Administratorrechte werden für die meisten dieser Einstellungen benötigt.", IDC_STATIC, 12, 5, 236, 8
     GROUPBOX "Leistung", IDC_STATIC, 6, 18, 244, 50
     LTEXT "Mit Leistungsoptionen können Sie einstellen, wie Programme Speicher benutzen sollen. Diese Einstellungen beeinflussen die Leistung ihres Computers.", IDC_STATIC, 16, 29, 228, 17
-    PUSHBUTTON "Einstellungen", IDC_PERFOR, 194, 48, 50, 15
+    PUSHBUTTON "&Einstellungen", IDC_PERFOR, 194, 48, 50, 15
     GROUPBOX "Benutzerprofile", IDC_STATIC, 6, 75, 244, 48
     LTEXT "Desktop-Einstellungen bezüglich der Anmeldung.", IDC_STATIC, 16, 88, 228, 20
     PUSHBUTTON "Einstellungen", IDC_USERPROFILE, 194, 103, 50, 15
@@ -154,9 +154,9 @@ BEGIN
     LTEXT "Auf diesem Computer gespeicherte Profile:", IDC_STATIC, 16, 51, 204, 9
     CONTROL "", IDC_USERPROFILE_LIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL |
             LVS_SHOWSELALWAYS | LVS_SORTASCENDING | WS_BORDER | WS_TABSTOP, 6, 66, 244, 85, WS_EX_CLIENTEDGE
-    PUSHBUTTON "&Change Type", IDC_USERPROFILE_CHANGE, 90, 156, 50, 13
+    PUSHBUTTON "&Typ ändern", IDC_USERPROFILE_CHANGE, 90, 156, 50, 13
     PUSHBUTTON "&Löschen", IDC_USERPROFILE_DELETE, 145, 156, 50, 13
-    PUSHBUTTON "Copy &To", IDC_USERPROFILE_COPY, 200, 156, 50, 13
+    PUSHBUTTON "Kopieren &Nach", IDC_USERPROFILE_COPY, 200, 156, 50, 13
     CONTROL "Um neue Benutzerprofile zu erstellen, öffnen Sie <A>Benutzerkonten</A> in der Systemsteuerung.",
             IDC_USERACCOUNT_LINK, "SysLink", WS_CHILD | WS_VISIBLE | WS_TABSTOP, 7, 175, 245, 18
     DEFPUSHBUTTON "OK", IDOK, 134, 200, 54, 13
@@ -182,7 +182,7 @@ BEGIN
             UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS | WS_CHILD | WS_VISIBLE, 0, 0, 8, 13
     LTEXT "Sek.", IDC_STATIC, 223, 70, 18, 8
     LTEXT "To edit the startup options file manually, click Edit.", IDC_STATIC, 14, 89, 187, 8
-    PUSHBUTTON "Be&arbeiten", IDC_STRRECEDIT, 188, 87, 50, 14
+    PUSHBUTTON "&Bearbeiten", IDC_STRRECEDIT, 188, 87, 50, 14
     GROUPBOX "Systemfehler", IDC_STATIC, 7, 111, 238, 140
     AUTOCHECKBOX "Ereignis in das Systemprotokoll &eintragen", IDC_STRRECWRITEEVENT, 14, 124, 148, 10
     AUTOCHECKBOX "Administrator-Warnmeldung &senden", IDC_STRRECSENDALERT, 14, 138, 148, 10
@@ -205,7 +205,7 @@ BEGIN
     LTEXT "Auslagerungsdatei (MB)", IDC_STATIC, 115, 5, 96, 9
     LISTBOX IDC_PAGEFILELIST, 10, 16, 204, 52, LBS_NOTIFY | LBS_USETABSTOPS
     GROUPBOX "Größe der Auslagerungsdatei für das gewählte Laufwerk", IDC_DRIVEGROUP, 10, 70, 204, 104
-    LTEXT "Drive:", IDC_STATIC, 20, 80, 20, 8
+    LTEXT "Laufwerk:", IDC_STATIC, 20, 80, 20, 8
     LTEXT "", IDC_DRIVE, 88, 81, 100, 9
     LTEXT "Verfügbarer Speicherplatz:", IDC_STATIC, 20, 92, 56, 9
     LTEXT "", IDC_SPACEAVAIL, 88, 92, 104, 9
@@ -237,7 +237,7 @@ BEGIN
     CONTROL "", IDC_USER_VARIABLE_LIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS |
             LVS_SORTASCENDING | LVS_NOSORTHEADER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP, 14, 25, 224, 58, WS_EX_CLIENTEDGE
     PUSHBUTTON "&Neu...", IDC_USER_VARIABLE_NEW, 80, 90, 50, 14
-    PUSHBUTTON "Be&arbeiten...", IDC_USER_VARIABLE_EDIT, 134, 90, 50, 14
+    PUSHBUTTON "&Bearbeiten...", IDC_USER_VARIABLE_EDIT, 134, 90, 50, 14
     PUSHBUTTON "&Löschen", IDC_USER_VARIABLE_DELETE, 188, 90, 50, 14
     GROUPBOX "Systemvariablen", IDC_STATIC, 7, 116, 238, 100
     CONTROL "", IDC_SYSTEM_VARIABLE_LIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS |
