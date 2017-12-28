@@ -1,8 +1,4 @@
-/* TRANSLATOR : Ardit Dani (Ard1t) (ardit.dani@gmail.com)
-* DATE OF TR: 05-12-2013
-*/
-
-LANGUAGE LANG_ALBANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ALBANIAN, SUBLANG_ALBANIAN_ALBANIA
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -104,8 +100,8 @@ BEGIN
     EDITTEXT 0x143, 58, 147, 173, 12, WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
     PUSHBUTTON "Help", IDHELP, 8, 170, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 198, 170, 50, 14, BS_PUSHBUTTON
-    PUSHBUTTON "Cancel", IDCANCEL, 254, 170, 50, 14
-  PUSHBUTTON "P&rinter...", psh3, 310, 170, 50, 14
+    PUSHBUTTON "Anulo", IDCANCEL, 254, 170, 50, 14
+    PUSHBUTTON "P&rinter...", psh3, 310, 170, 50, 14
 END
 
 /* Dialog 'Encoding' */
@@ -129,7 +125,7 @@ BEGIN
     EDITTEXT ID_LINENUMBER, 54, 10, 106, 12, WS_CHILD | WS_BORDER | WS_TABSTOP
     LTEXT "Numri i linjes:", 0x155, 5, 12, 41, 12, WS_CHILD | WS_TABSTOP | ES_NUMBER
     DEFPUSHBUTTON "OK", IDOK, 75, 30, 40, 15, WS_CHILD | WS_TABSTOP
-    PUSHBUTTON "Anulo", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
 END
 
 IDD_ABOUTBOX DIALOGEX 22, 16, 284, 170
@@ -164,17 +160,17 @@ BEGIN
     STRING_UNTITLED "Pa emer"
     STRING_ALL_FILES "Te gjith dokumentat (*.*)"
     STRING_TEXT_FILES_TXT "Dokumenta teksti (*.txt)"
-    STRING_TOOLARGE "Dokumenti '%s' është shume i madh për notepad.\n \
-Ju lutem perdorni editor tjeter."
-    STRING_NOTEXT "Nuk keni shkruaj ndonje tekst. \
-\nJu lutem shkruani diqka dhe provoni perseri"
-    STRING_DOESNOTEXIST "Dokumenti '%s'\nnuk ekziston\n\n \
-Doni te krijoni nje dokument te ri ?"
-    STRING_NOTSAVED "Dokumenti '%s'\nështë modifikuar\n\n \
-Doni te ruani ndryshimet ?"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "'%s' nuk gjindet."
-    STRING_OUT_OF_MEMORY "Nuk ka memorie te mjaftueshme per te kompletuar kete \
-detyrë. \nMbyll nje ose me shume programe te rrisesh shumën e \nmemories."
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "Nuk u gjet '%s'"
     STRING_ANSI "ANSI"
     STRING_UNICODE "Unicode"
