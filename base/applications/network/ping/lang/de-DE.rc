@@ -30,7 +30,7 @@ Options:\n\
 \n"
 
     IDS_CTRL_BREAK "Control-Break\n"
-    IDS_CTRL_C "Control-C\n"
+    IDS_CTRL_C "Strg-C\n"
     IDS_NO_RESOURCES "Nicht genügend freie Resourcen verfügbar.\n"
     IDS_MISSING_ADDRESS "Name oder IP-Adresse des Zielhosts muss angegeben werden.\n"
     IDS_MISSING_VALUE "Fehlender Wert für Option %s.\n"
