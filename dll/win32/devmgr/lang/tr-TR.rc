@@ -1,6 +1,4 @@
-/* TRANSLATOR: 2014, 2015 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 STRINGTABLE
 BEGIN
@@ -66,9 +64,9 @@ BEGIN
     IDS_DEV_DISABLED "Bu aygıt başlamamış."
     IDS_DEV_DISABLED2 "Bu aygıt edilgin."
     IDS_DEV_DEVLOADER_NOT_READY "Bu aygıt için yükleyiciler gerekli sürücüleri yükleyemiyor."
-    IDS_DEV_DEVLOADER_NOT_READY2 "" /* unused */
+    IDS_DEV_DEVLOADER_NOT_READY2 """ /* unused */
     IDS_DEV_DEVLOADER_NOT_READY3 "" /* unused */
-    IDS_DEV_DEVICE_NOT_THERE "Bu aygıt; ya yok, ya düzgün çalışmıyor, ya da bu aygıtın kurulu tüm sürücüleri yok."
+    IDS_DEV_DEVICE_NOT_THERE ""Bu aygıt; ya yok, ya düzgün çalışmıyor, ya da bu aygıtın kurulu tüm sürücüleri yok."
     IDS_DEV_MOVED "ReactOS, bu aygıtı kurma işleminde."
     IDS_DEV_TOO_EARLY "ReactOS, bu aygıtı kurma işleminde."
     IDS_DEV_NO_VALID_LOG_CONF "ReactOS, bu aygıt için kaynakları belirleyemez."
@@ -239,7 +237,6 @@ BEGIN
 END
 
 
-
 /*
  This code relates to the device manager GUI
  */
@@ -248,21 +245,21 @@ IDR_MAINMENU MENU
 BEGIN
   POPUP "&Kütük"
   BEGIN
-    MENUITEM "&Çıkış",                      IDC_EXIT
+    MENUITEM "&Çıkış",                       IDC_EXIT
   END
   MENUITEM "&Eylem",                        IDC_ACTIONMENU
   POPUP "&Görünüm"
   BEGIN
-    MENUITEM "&Türe Göre Aygıtlar",         IDC_DEVBYTYPE
-    MENUITEM "&Bağlantıya Göre Aygıtlar",   IDC_DEVBYCONN
-    MENUITEM "T&üre Göre Kaynaklar",        IDC_RESBYTYPE, GRAYED
-    MENUITEM "B&ağlantıya Göre Kaynaklar",  IDC_RESBYCONN, GRAYED
+    MENUITEM "&Türe Göre Aygıtlar",             IDC_DEVBYTYPE
+    MENUITEM "&Bağlantıya Göre Aygıtlar",       IDC_DEVBYCONN
+    MENUITEM "T&üre Göre Kaynaklar",           IDC_RESBYTYPE, GRAYED
+    MENUITEM "B&ağlantıya Göre Kaynaklar",     IDC_RESBYCONN, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Gizli Aygıtları Göster",     IDC_SHOWHIDDEN
+    MENUITEM "&Gizli Aygıtları Göster",         IDC_SHOWHIDDEN
   END
   POPUP "&Yardım"
   BEGIN
-    MENUITEM "&Üzerine",                    IDC_ABOUT
+    MENUITEM "&Üzerine",                       IDC_ABOUT
   END
 END
 
