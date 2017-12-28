@@ -1,4 +1,4 @@
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -196,7 +196,7 @@ BEGIN
     LTEXT "&Значение:", IDC_STATIC, 6, 35, 161, 8
     EDITTEXT IDC_VALUE_DATA, 6, 46, 116, 12, ES_AUTOHSCROLL
     GROUPBOX "Система исчисления", IDC_STATIC, 130, 35, 116, 39
-    AUTORADIOBUTTON "&Шестнадцатеричная", IDC_FORMAT_HEX, 141, 46, 90, 10, WS_GROUP
+    AUTORADIOBUTTON "&Шестнадцатеричная", IDC_FORMAT_HEX, 141, 46, 60, 10, WS_GROUP
     AUTORADIOBUTTON "&Десятичная", IDC_FORMAT_DEC, 141, 59, 60, 10
     DEFPUSHBUTTON "OK", IDOK, 142, 82, 50, 14
     PUSHBUTTON "Отмена", IDCANCEL, 196, 82, 50, 14
@@ -314,7 +314,7 @@ BEGIN
     IDS_ERROR "Ошибка"
     IDS_WARNING "Предупреждение"
     IDS_BAD_KEY "Не удалось получить ключ '%s'"
-    IDS_BAD_VALUE "Не удалось получить значение '%s'"
+    IDS_BAD_VALUE "Недопустимое значение параметра %s, допустимый диапазон с %u по %u.\n"
     IDS_UNSUPPORTED_TYPE "Невозможно изменить ключи этого типа (%ld)"
     IDS_TOO_BIG_VALUE "Значение слишком большое (%ld)"
     IDS_MULTI_SZ_EMPTY_STRING "Данные типа REG_MULTI_SZ не могут содержать пустые строки.\nВсе пустые строки будут удалены."
@@ -458,12 +458,12 @@ END
 
 /* Dialogs */
 
-IDD_EXPORTRANGE DIALOGEX 50, 50, 268, 98
+IDD_EXPORTRANGE DIALOGEX 50, 50, 370, 50
 STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_BORDER
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Диапазон экспорта", IDC_STATIC, 2, 0, 366, 48
-    CONTROL "&Весь реестр", IDC_EXPORT_ALL, "Button", BS_AUTORADIOBUTTON, 10, 10, 70, 11
+    CONTROL "&Весь реестр", IDC_EXPORT_ALL, "Button", BS_AUTORADIOBUTTON, 10, 10, 29, 11
     CONTROL "В&ыбранная ветвь", IDC_EXPORT_BRANCH, "Button", BS_AUTORADIOBUTTON, 10, 22, 100, 11
     EDITTEXT IDC_EXPORT_BRANCH_TEXT, 30, 34, 335, 12
 END
@@ -479,13 +479,13 @@ BEGIN
     PUSHBUTTON "Отмена", IDCANCEL, 89, 17, 50, 14
 END
 
-IDD_ADDFAVORITES DIALOGEX 0, 0, 187, 95
+IDD_ADDFAVORITES DIALOGEX 0, 0, 186, 46
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Добавить в избранное"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    DEFPUSHBUTTON "OK", IDOK, 130, 7, 50, 14
-    PUSHBUTTON "Отмена", IDCANCEL, 130, 24, 50, 14
+    DEFPUSHBUTTON "OK", IDOK, 129, 7, 50, 14
+    PUSHBUTTON "Отмена", IDCANCEL, 129, 24, 50, 14
     LTEXT "&Имя:", IDC_STATIC, 7, 7, 70, 10
     EDITTEXT IDC_FAVORITENAME, 7, 26, 110, 13, ES_AUTOHSCROLL
 END
@@ -507,21 +507,21 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Поиск"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    DEFPUSHBUTTON "&Искать далее", IDOK, 193, 7, 58, 14
-    PUSHBUTTON "Отмена", IDCANCEL, 193, 24, 58, 14
-    GROUPBOX "Просматривать", IDC_STATIC, 7, 24, 87, 51
+    DEFPUSHBUTTON "&Find Next", IDOK, 197, 7, 50, 14
+    PUSHBUTTON "Отмена", IDCANCEL, 197, 24, 50, 14
+    GROUPBOX "Look at", IDC_STATIC, 7, 25, 63, 51
     LTEXT "На&йти:", IDC_STATIC, 7, 8, 37, 10
     EDITTEXT IDC_FINDWHAT, 47, 7, 142, 13, ES_AUTOHSCROLL
-    CONTROL "&Ключи", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 14, 36, 51, 8
-    CONTROL "&Значения", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 14, 48, 51, 8
-    CONTROL "&Данные", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 14, 60, 51, 8
-    CONTROL "&Искать только строку целиком", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 109, 44, 136, 13
-    CONTROL "&С учетом регистра", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 109, 60, 90, 12
+    CONTROL "&Keys", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 14, 36, 35, 8
+    CONTROL "&Values", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 14, 48, 36, 8
+    CONTROL "&Data", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 14, 60, 42, 8
+    CONTROL "Match &whole string only", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 83, 32, 94, 13
+    CONTROL "Match &case", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 83, 48, 90, 12
 END
 
 IDD_FINDING DIALOGEX 0, 0, 145, 50
@@ -538,7 +538,7 @@ END
 /*
  *STRINGTABLE
  *BEGIN
- *    ID_HELP_HELPTOPICS "Открывает справку редактора реестра."
- *    ID_HELP_ABOUT "Отображает информацию о программе, номер версии и авторские права."
+ *    ID_HELP_HELPTOPICS "Opens Registry Editor Help."
+ *    ID_HELP_ABOUT "Displays program information, version number, and copyright."
  *END
  */
