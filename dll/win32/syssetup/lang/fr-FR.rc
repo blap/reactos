@@ -1,13 +1,32 @@
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+/*
+ * Copyright (C) 2004 Filip Navara
+ * Copyright (C) 2004 Eric Kohl
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "Installation de ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Bienvenue dans l'assistant d'installation de ReactOS.", IDC_WELCOMETITLE, 115, 9, 189, 31
-    LTEXT "Cet assistant installe ReactOS sur votre ordinateur. Il a besoin de certaines informations sur vous et votre ordinateur pour configurer ReactOS correctement.", IDC_STATIC, 115, 50, 189, 100
-    LTEXT "Appuyez sur Suivant pour continuer l'installation.", IDC_STATIC, 115, 160, 189, 31
+    LTEXT "Bienvenue dans l'assistant d'installation de ReactOS.", IDC_WELCOMETITLE, 115, 8, 195, 24
+    LTEXT "This wizard installs ReactOS on your computer. The wizard needs to gather some information about you and your computer to set up ReactOS properly.", IDC_STATIC, 115, 40, 195, 100
+    LTEXT "Cliquez sur Suivant pour continuer l'installation.", IDC_STATIC, 115, 169, 195, 17
 END
 
 IDD_ACKPAGE DIALOGEX 0, 0, 317, 143
@@ -61,7 +80,7 @@ BEGIN
     ICON IDI_ICON4, IDC_STATIC, 21, 7, 20, 20
     LTEXT "La localisation système correspond à la langue souhaitée pour les applications. Elle contrôle la manière dont les nombres, monnaies et dates sont affichés.", IDC_STATIC, 53, 7, 253, 20
     LTEXT "", IDC_LOCALETEXT, 53, 29, 250, 16
-    LTEXT "Pour changer la localisation système, cliquez sur Modifier.", IDC_STATIC, 53, 60, 184, 8
+    LTEXT "Pour changer la localisation système, cliquez sur Modifier.", IDC_STATIC, 53, 60, 196, 8
     PUSHBUTTON "&Modifier...", IDC_CUSTOMLOCALE, 250, 57, 50, 14
     LTEXT "La configuration clavier contrôle la saisie des touches quand vous tapez.", IDC_STATIC, 53, 86, 253, 8
     LTEXT "", IDC_LAYOUTTEXT, 53, 100, 250, 16
@@ -107,10 +126,10 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYS
 CAPTION "Installation de ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "L'assistant d'installation de ReactOS est terminé.", IDC_FINISHTITLE, 115, 9, 195, 37
-    LTEXT "Vous avez installé avec succès ReactOS.\n\nEn cliquant sur Terminer, votre ordinateur va redémarrer.", IDC_STATIC, 115, 58, 195, 100
+    LTEXT "Fin de l'assistant d'installation de ReactOS", IDC_FINISHTITLE, 115, 8, 195, 24
+    LTEXT "Vous avez terminé l'installation de ReactOS avec succès.\n\nLorsque vous cliquerez sur Terminer, votre ordinateur redémarrera.", IDC_STATIC, 115, 40, 195, 100
     CONTROL "", IDC_RESTART_PROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 115, 138, 188, 12
-    LTEXT "S'il y a un CD dans un lecteur, enlevez-le. Puis, pour redémarrer votre ordinateur, cliquez sur Terminer.", IDC_STATIC, 115, 160, 195, 31
+    LTEXT "If there is a CD in a drive, remove it. Then, to restart your computer, click Finish.", IDC_STATIC, 115, 169, 195, 17
 END
 
 IDD_GPL DIALOGEX 0, 0, 333, 230
@@ -146,6 +165,7 @@ BEGIN
     IDS_PROCESSSUBTITLE "Veuillez patienter..."
     IDS_THEMESELECTIONTITLE "Apparence"
     IDS_THEMESELECTIONSUBTITLE "Sélectionnez le thème que vous préférez"
+
 END
 
 STRINGTABLE
