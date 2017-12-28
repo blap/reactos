@@ -1,10 +1,4 @@
-/* 
- * FILE:       base/applications/sndrec32/lang/ro-RO.rc
- *             ReactOS Project (http://www.reactos.org)
- * TRANSLATOR: Ștefan Fulea (stefan dot fulea at mail dot md)
- */
- 
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDC_REACTOS_SNDREC32 ACCELERATORS
 BEGIN
@@ -14,7 +8,7 @@ END
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 196, 75
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Despre Înregistratorul audio"
+CAPTION "Despre Gestionar de servicii"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON IDI_SNDREC32, -1, 19, 14, 21, 20
@@ -45,8 +39,8 @@ BEGIN
         MENUITEM "I&nserare fișier…", ID_EDIT_INSERTFILE
         MENUITEM "&Mixare cu fișier…", ID_EDIT_MIXFILE
         MENUITEM SEPARATOR
-        MENUITEM "Șterge în&ainte de poziția curentă",ID_EDIT_DELETEBEFORE, GRAYED
-        MENUITEM "Șterge d&upă poziția curentă",ID_EDIT_DELETEAFTER, GRAYED
+        MENUITEM "Șterge în&ainte de poziția curentă", ID_EDIT_DELETEBEFORE, GRAYED
+        MENUITEM "Șterge d&upă poziția curentă", ID_EDIT_DELETEAFTER, GRAYED
         MENUITEM SEPARATOR
         MENUITEM "&Proprietăți audio…", ID_EDIT_AUDIOPROPS
     END
