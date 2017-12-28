@@ -1,0 +1,7 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_DESCRIPTION "Layar kosong"
+    IDS_TEXT        "Tidak ada pilihan yang perlu ditetapkan."
+END
