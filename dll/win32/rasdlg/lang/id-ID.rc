@@ -170,7 +170,7 @@ BEGIN
     COMBOBOX 1080, 117, 89, 90, 162, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
     GROUPBOX "Hangup otomatis", -1, 6, 113, 248, 81
     LTEXT "Tutup semua perangkat yang digunakan untuk koneksi ini saat memenuhi kedua kondisi berikut:", 1086, 16, 127, 230, 18, NOT WS_GROUP
-    LTEXT "Activity no &more than:", -1, 16, 150, 92, 8
+    LTEXT "Aktivitas tidak &lebih dari:", -1, 16, 150, 92, 8
     COMBOBOX 1081, 115, 146, 60, 100, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
     LTEXT "D&uration at least:", 1087, 16, 168, 92, 8, NOT WS_GROUP
     COMBOBOX 1082, 115, 166, 90, 151, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
@@ -207,7 +207,7 @@ BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 263, 50
     LTEXT "D&ial:", 1412, 9, 60, 68, 8
     COMBOBOX 1416, 88, 56, 165, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "Dialing &from:", 1415, 9, 77, 71, 8
+    LTEXT "Memanggil &dari:", 1415, 9, 77, 71, 8
     COMBOBOX 1414, 88, 75, 89, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "Memanggil &Aturan", 1108, 181, 75, 72, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 8, 96, 245, 1
@@ -316,14 +316,14 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "ISDN Configuration"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "&Line type:", 1155, 9, 9, 65, 8
+    LTEXT "&Jenis garis:", 1155, 9, 9, 65, 8
     COMBOBOX 1153, 76, 7, 148, 42, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
-    AUTOCHECKBOX "&Negotiate line type", 1150, 23, 26, 199, 10, BS_TOP | BS_MULTILINE | WS_GROUP
+    AUTOCHECKBOX "& Bernegosiasi jenis baris", 1150, 23, 26, 199, 10, BS_TOP | BS_MULTILINE | WS_GROUP
     GROUPBOX "    ", 1152, 8, 48, 214, 51, WS_GROUP
-    AUTOCHECKBOX "&Use old proprietary protocol", 1149, 17, 48, 102, 10, BS_TOP | BS_MULTILINE
-    LTEXT "&Channels to use:", 1154, 16, 65, 100, 8, NOT WS_GROUP
+    AUTOCHECKBOX "&Gunakan protokol berpemilik lama", 1149, 17, 48, 102, 10, BS_TOP | BS_MULTILINE
+    LTEXT "&Saluran yang akan digunakan:", 1154, 16, 65, 100, 8, NOT WS_GROUP
     EDITTEXT 1151, 119, 61, 94, 14, ES_AUTOHSCROLL
-    AUTOCHECKBOX "&Enable hardware compression", 1148, 16, 82, 198, 10, BS_TOP | BS_MULTILINE
+    AUTOCHECKBOX "&Aktifkan kompresi perangkat keras", 1148, 16, 82, 198, 10, BS_TOP | BS_MULTILINE
     PUSHBUTTON "Oke", 1, 99, 109, 60, 14, WS_GROUP
     PUSHBUTTON "Membatalkan", 2, 163, 109, 60, 14
 END
@@ -333,9 +333,9 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "ISDN Configure"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "&Line type:", 1155, 9, 11, 55, 8
+    LTEXT "&Jenis garis:", 1155, 9, 11, 55, 8
     COMBOBOX 1153, 67, 7, 148, 43, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
-    AUTOCHECKBOX "&Negotiate line type", 1150, 21, 28, 194, 10, BS_TOP | BS_MULTILINE | WS_GROUP
+    AUTOCHECKBOX "& Bernegosiasi jenis baris", 1150, 21, 28, 194, 10, BS_TOP | BS_MULTILINE | WS_GROUP
     PUSHBUTTON "Oke", 1, 90, 49, 60, 14, WS_GROUP
     PUSHBUTTON "Membatalkan", 2, 154, 49, 60, 14
 END
@@ -348,7 +348,7 @@ BEGIN
     LTEXT "I&P address:", 1163, 7, 253, 68, 8
     CONTROL "", 1160, "RASIPADDRESS", WS_TABSTOP, 76, 250, 117, 14
     DEFPUSHBUTTON "", 1162, 197, 252, 16, 13, NOT WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
-    PUSHBUTTON "&Done", 1, 219, 252, 60, 14, WS_GROUP
+    PUSHBUTTON "&Selesai", 1, 219, 252, 60, 14, WS_GROUP
     PUSHBUTTON "Membatalkan", 2, 283, 252, 60, 14
 END
 
@@ -358,7 +358,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     EDITTEXT 1161, 5, 4, 340, 236, ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL | WS_GROUP
     DEFPUSHBUTTON "", 1162, 7, 247, 50, 14, NOT WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
-    PUSHBUTTON "&Done", 1, 222, 247, 60, 14, WS_GROUP
+    PUSHBUTTON "&Selesai", 1, 222, 247, 60, 14, WS_GROUP
     PUSHBUTTON "Membatalkan", 2, 286, 247, 60, 14
 END
 
@@ -370,11 +370,11 @@ BEGIN
     ICON 15102, 1238, 7, 7, 20, 20
     LTEXT "Modem", -1, 25, 27, 24, 8, NOT WS_VISIBLE | NOT WS_GROUP
     EDITTEXT 1235, 40, 7, 214, 16, ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
-    LTEXT "&Maximum speed (bps):", 1243, 7, 36, 110, 8
+    LTEXT "&Kecepatan maksimal (bps):", 1243, 7, 36, 110, 8
     COMBOBOX 1239, 119, 34, 136, 186, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     LTEXT "Modem &protocol", 1244, 7, 52, 111, 8
     COMBOBOX 1245, 119, 50, 136, 186, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    GROUPBOX "Hardware features", 1237, 6, 70, 248, 61, WS_GROUP
+    GROUPBOX "Fitur perangkat keras", 1237, 6, 70, 248, 61, WS_GROUP
     AUTOCHECKBOX "E&nable hardware flow control", 1232, 19, 82, 217, 10, BS_TOP | BS_MULTILINE
     AUTOCHECKBOX "En&able modem error control", 1231, 19, 98, 217, 10, BS_TOP | BS_MULTILINE
     AUTOCHECKBOX "Enable m&odem compression", 1229, 19, 115, 217, 10, BS_TOP | BS_MULTILINE
@@ -389,7 +389,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Select Network Component Type"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Click the type of network component you want to install:", -1, 8, 7, 258, 8
+    LTEXT "Klik jenis komponen jaringan yang ingin Anda pasang:", -1, 8, 7, 258, 8
     CONTROL "", 1251, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 8, 20, 188, 58
     GROUPBOX "", -1, 8, 81, 188, 30
     LTEXT "", 1250, 12, 90, 177, 17
@@ -403,8 +403,8 @@ CAPTION "NetWare or Compatible Connections"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON 32515, 1278, 7, 7, 21, 20, WS_GROUP
-    LTEXT "You have connections to a NetWare compatible network.  These connections will be closed when the PPP IPX connection is established.", 1279, 42, 7, 215, 37
-    LTEXT "Before dialing, to avoid data loss, either close all files using these connections or uncheck IPX on this entry's Network Protocol settings.", 1280, 42, 46, 215, 38, NOT WS_GROUP
+    LTEXT "Anda memiliki koneksi ke jaringan yang kompatibel dengan NetWare. Sambungan ini akan ditutup saat koneksi PPP IPX terbentuk.", 1279, 42, 7, 215, 37
+    LTEXT "Sebelum menghubungi, untuk menghindari kehilangan data, tutup semua berkas dengan menggunakan koneksi ini atau hapus centang IPX pada pengaturan jaringan protokol entri ini.", 1280, 42, 46, 215, 38, NOT WS_GROUP
     AUTOCHECKBOX "&Jangan tampilkan pesan ini di masa mendatang", 1277, 42, 86, 215, 10, BS_TOP | BS_MULTILINE | WS_GROUP
     DEFPUSHBUTTON "Oke", 1, 65, 112, 60, 14, WS_GROUP
     PUSHBUTTON "Membatalkan", 2, 134, 112, 60, 14
@@ -416,7 +416,7 @@ CAPTION "Manual Dial"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Angkat gagang telepon dan panggil (atau mintalah operator untuk menghubungi). Setelah pemanggilan selesai, klik OK. Dengarkan handset sampai diam, lalu tutup telepon.", 1281, 8, 8, 219, 32
-    LTEXT "Phone number:", 1282, 8, 46, 91, 8
+    LTEXT "Nomor telepon:", 1282, 8, 46, 91, 8
     LTEXT "", 1283, 103, 46, 126, 8, NOT WS_GROUP
     DEFPUSHBUTTON "Oke", 1, 104, 70, 60, 14, WS_GROUP
     PUSHBUTTON "Membatalkan", 2, 168, 70, 60, 14
@@ -440,14 +440,14 @@ CAPTION "X.25 Logon Settings"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Select your X.25 network provider and type the X.121 address of the remote server:", 1408, 7, 4, 220, 27
-    LTEXT "&Network:", 1410, 9, 35, 213, 8, NOT WS_GROUP
+    LTEXT "&Jaringan:", 1410, 9, 35, 213, 8, NOT WS_GROUP
     COMBOBOX 1406, 9, 46, 215, 125, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "X.121&address:", 1407, 9, 66, 213, 8, NOT WS_GROUP
+    LTEXT "X.121&alamat:", 1407, 9, 66, 213, 8, NOT WS_GROUP
     EDITTEXT 1402, 8, 77, 215, 14, ES_AUTOHSCROLL
-    GROUPBOX "Optional", 1405, 8, 95, 215, 79
-    LTEXT "&User data:", 1411, 19, 109, 182, 8, NOT WS_GROUP
+    GROUPBOX "Pilihan", 1405, 8, 95, 215, 79
+    LTEXT "&Data pengguna:", 1411, 19, 109, 182, 8, NOT WS_GROUP
     EDITTEXT 1404, 19, 120, 193, 14, ES_AUTOHSCROLL
-    LTEXT "&Facilities:", 1409, 19, 138, 182, 8, NOT WS_GROUP
+    LTEXT "&Fasilitas:", 1409, 19, 138, 182, 8, NOT WS_GROUP
     EDITTEXT 1403, 19, 149, 193, 14, ES_AUTOHSCROLL
     DEFPUSHBUTTON "Oke", 1, 100, 189, 60, 14
     PUSHBUTTON "Membatalkan", 2, 164, 189, 60, 14
@@ -551,7 +551,7 @@ BEGIN
     LTEXT "Kode negara /re&gion:", 1134, 17, 132, 197, 8
     COMBOBOX 1126, 17, 143, 193, 130, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     AUTOCHECKBOX "U&se dialing rules", 1121, 17, 163, 132, 14, BS_TOP | BS_MULTILINE
-    PUSHBUTTON "Dialing &Rules", 1136, 151, 161, 60, 14
+    PUSHBUTTON "Memanggil &Aturan", 1136, 151, 161, 60, 14
     AUTOCHECKBOX "Ikon Sho&w di area notifikasi saat terhubung", 1120, 10, 192, 214, 19, BS_TOP | BS_MULTILINE
 END
 
@@ -570,7 +570,7 @@ BEGIN
     LTEXT "Kode negara /re&gion:", 1134, 17, 103, 193, 8
     COMBOBOX 1126, 17, 114, 201, 130, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     AUTOCHECKBOX "U&se dialing rules", 1121, 19, 134, 136, 12, BS_TOP | BS_MULTILINE
-    PUSHBUTTON "Dialing &Rules", 1136, 157, 132, 60, 14
+    PUSHBUTTON "Memanggil &Aturan", 1136, 157, 132, 60, 14
     AUTOCHECKBOX "Ikon Sho&w di area notifikasi saat terhubung", 1120, 12, 164, 209, 18, BS_TOP | BS_MULTILINE
     LTEXT "Terhubung menggunakan:", 1124, 8, 5, 217, 8
     CONTROL "", 1127, "SYSLISTVIEW32", WS_DISABLED | WS_BORDER | 0x0000EC0D, 7, 18, 217, 15
@@ -597,7 +597,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     AUTOCHECKBOX "&Pratinjau nomor telepon sebelum panggilan", 1142, 8, 10, 223, 10, WS_GROUP
     AUTOCHECKBOX "Tampilkan &pengaturan lokasi sebelum panggilan", 1139, 8, 27, 206, 10
-    AUTOCHECKBOX "Start dial-up networking &monitor before dialing", 1138, 8, 44, 226, 10
+    AUTOCHECKBOX "Mulai jaringan dan monitor dial-up sebelum menghubungi", 1138, 8, 44, 226, 10
     AUTOCHECKBOX "Tampilkan &kemajuan koneksi saat memanggil", 1143, 8, 61, 224, 10
     AUTOCHECKBOX "Clo&se on dial", 1137, 8, 79, 220, 10
     AUTOCHECKBOX "&Pakai wizard untuk membuat entri buku telepon baru", 1144, 8, 97, 220, 10
@@ -682,8 +682,8 @@ BEGIN
     AUTOCHECKBOX "&Display progress while connecting", 1284, 16, 14, 201, 10
     AUTOCHECKBOX "&Prompt for name and password, certificate, etc.", 1554, 16, 27, 201, 10
     AUTOCHECKBOX "Include &ReactOS logon domain", 1555, 16, 39, 201, 10
-    AUTOCHECKBOX "Prompt for phone &number", 1285, 16, 52, 200, 10, BS_TOP | BS_MULTILINE
-    GROUPBOX "Redialing options", 1290, 6, 72, 213, 79
+    AUTOCHECKBOX "Meminta telepon &nomor", 1285, 16, 52, 200, 10, BS_TOP | BS_MULTILINE
+    GROUPBOX "Pilihan panggilan ulang", 1290, 6, 72, 213, 79
     LTEXT "&Redial attempts:", 1300, 16, 87, 123, 8
     EDITTEXT 1287, 141, 84, 69, 14, ES_AUTOHSCROLL | ES_NUMBER
     LTEXT "&Time between redial attempts:", 1301, 16, 103, 123, 8
@@ -691,7 +691,7 @@ BEGIN
     LTEXT "Idle ti&me before hanging up:", 1299, 16, 120, 123, 8
     COMBOBOX 1291, 141, 116, 70, 108, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
     AUTOCHECKBOX "Redial if &line is dropped", 1286, 16, 136, 199, 10, BS_TOP | BS_MULTILINE
-    GROUPBOX "Multiple devices", 1288, 7, 156, 213, 32
+    GROUPBOX "Beberapa perangkat", 1288, 7, 156, 213, 32
     COMBOBOX 1551, 16, 169, 128, 45, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "C&onfigure...", 1293, 150, 168, 60, 14
     PUSHBUTTON "&X.25", 1295, 7, 194, 50, 14
@@ -703,10 +703,10 @@ STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "New Connection Wizard"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Type the phone number below. ", -1, 7, 4, 306, 14
+    LTEXT "Ketik nomor telepon di bawah ini. ", -1, 7, 4, 306, 14
     LTEXT "&Nomor telepon:", 1308, 7, 19, 130, 8
     EDITTEXT 1304, 7, 30, 304, 14, ES_AUTOHSCROLL
-    LTEXT "You might need to include a ""1"" or the area code, or both. If you are not sure you need the extra numbers, dial the phone number on your telephone. If you hear a modem sound, the number dialed is correct.", -1, 20, 50, 291, 53
+    LTEXT "Anda mungkin perlu memasukkan ""1"" atau kode daerah, atau keduanya. Jika Anda tidak yakin Anda memerlukan nomor tambahan, panggil nomor telepon di telepon Anda. Jika Anda mendengar suara modem, nomor yang dihubungi benar.", -1, 20, 50, 291, 53
 END
 
 169 DIALOGEX 6, 18, 235, 135
@@ -714,7 +714,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Phonebook"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Use this phonebook:", 1326, 8, 8, 222, 8
+    LTEXT "Gunakan buku telepon ini:", 1326, 8, 8, 222, 8
     AUTORADIOBUTTON "The &system phonebook", 1325, 14, 22, 216, 10, WS_GROUP
     AUTORADIOBUTTON "My &personal phonebook", 1324, 14, 34, 216, 10
     AUTORADIOBUTTON "This a&lternate phonebook:", 1323, 14, 46, 217, 10
@@ -727,7 +727,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Phonebook"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Use this phonebook:", 1326, 8, 8, 223, 8
+    LTEXT "Gunakan buku telepon ini:", 1326, 8, 8, 223, 8
     AUTORADIOBUTTON "The &system phonebook", 1325, 14, 22, 217, 10, WS_GROUP
     AUTORADIOBUTTON "This a&lternate phonebook:", 1323, 14, 36, 216, 10
     COMBOBOX 1321, 26, 51, 203, 77, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_GROUP | NOT WS_TABSTOP
@@ -738,7 +738,7 @@ END
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Enter this router's IP address on the remote network or if you expect the remote router to provide the address, leave as 0.0.0.0. Usually the operator of the remote network or router will tell you what to use.", 1331, 5, 4, 308, 35
+    LTEXT "Masukkan alamat IP router ini pada jaringan jarak jauh atau jika Anda mengharapkan router jarak jauh memberikan alamat, tinggalkan sebagai 0.0.0.0. Biasanya operator jaringan jarak jauh atau router akan memberi tahu Anda apa yang harus digunakan.", 1331, 5, 4, 308, 35
     LTEXT "My &IP address:", 1332, 4, 51, 100, 8, NOT WS_GROUP
     CONTROL "", 1330, "RASIPADDRESS", WS_TABSTOP, 21, 62, 104, 12
     LTEXT "Note: If you have a network adapter installed, you should NOT choose the same address as your network adapter.", 1333, 5, 94, 306, 36, NOT WS_GROUP
@@ -787,8 +787,8 @@ END
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Completing the demand dial interface wizard.", 1352, 122, 5, 192, 32
-    LTEXT "To create this interface and enable it on the router, click Finish.", 1354, 122, 41, 192, 26, NOT WS_GROUP
+    LTEXT "Melengkapi wizard antarmuka permintaan panggil.", 1352, 122, 5, 192, 32
+    LTEXT "Untuk membuat antarmuka ini dan mengaktifkannya di router, klik selesai.", 1354, 122, 41, 192, 26, NOT WS_GROUP
     LTEXT "To edit this interface in the Routing and RemoteAccess Manager, select it in Routing Interfaces and press Properties.", 1355, 122, 68, 190, 39, NOT WS_GROUP
 END
 
@@ -805,7 +805,7 @@ END
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Enter the phone number of the dial-up server or router you are calling. Alternate phone numbers, if any, are dialed automatically if the primary number cannot be reached.", 1360, 7, 4, 305, 42
+    LTEXT "Masukkan nomor telepon dari server dial-up atau router yang Anda panggil. Nomor telepon alternatif, jika ada, dipanggil secara otomatis jika nomor utama tidak dapat dijangkau.", 1360, 7, 4, 305, 42
     LTEXT "&Phone number or address:", 1361, 7, 50, 275, 8, NOT WS_GROUP
     EDITTEXT 1358, 7, 62, 304, 14, ES_AUTOHSCROLL
     PUSHBUTTON "Alternates...", 1359, 250, 80, 60, 14
@@ -982,7 +982,7 @@ BEGIN
     EDITTEXT 1287, 143, 76, 70, 14, ES_AUTOHSCROLL | ES_NUMBER
     LTEXT "A&verage redial intervals:", 1301, 14, 96, 123, 8
     COMBOBOX 1292, 143, 94, 70, 123, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
-    GROUPBOX "Multiple devices", 1288, 7, 116, 215, 35
+    GROUPBOX "Beberapa perangkat", 1288, 7, 116, 215, 35
     COMBOBOX 1551, 16, 130, 128, 41, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "C&onfigure...", 1293, 150, 129, 65, 14
     PUSHBUTTON "Call&back", 1302, 8, 195, 60, 14
@@ -1033,9 +1033,9 @@ BEGIN
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 9, 84, 248, 1
     LTEXT "D&ial:", 1412, 11, 96, 48, 8
     COMBOBOX 1416, 103, 92, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "Dialing &from:", 1415, 10, 114, 46, 8
+    LTEXT "Memanggil &dari:", 1415, 10, 114, 46, 8
     COMBOBOX 1414, 103, 110, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
-    PUSHBUTTON "Dialing &Rules", 1108, 193, 110, 64, 14
+    PUSHBUTTON "Memanggil &Aturan", 1108, 193, 110, 64, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 7, 130, 250, 1
     DEFPUSHBUTTON "&Dial", 1590, 6, 136, 60, 14
     PUSHBUTTON "Membatalkan", 1591, 69, 136, 60, 14
@@ -1151,9 +1151,9 @@ BEGIN
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 106, 248, 1
     LTEXT "D&ial:", 1412, 10, 118, 92, 8
     COMBOBOX 1416, 104, 114, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "Dialing &from:", 1415, 10, 137, 91, 8
+    LTEXT "Memanggil &dari:", 1415, 10, 137, 91, 8
     COMBOBOX 1414, 104, 134, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
-    PUSHBUTTON "Dialing &Rules", 1108, 194, 134, 65, 14
+    PUSHBUTTON "Memanggil &Aturan", 1108, 194, 134, 65, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 154, 248, 1
     DEFPUSHBUTTON "&Dial", 1590, 8, 162, 60, 14
     PUSHBUTTON "Membatalkan", 1591, 71, 162, 60, 14
@@ -1409,9 +1409,9 @@ BEGIN
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 149, 248, 1
     LTEXT "D&ial:", 1412, 14, 161, 87, 8
     COMBOBOX 1416, 104, 157, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "Dialing &from:", 1415, 14, 178, 88, 8
+    LTEXT "Memanggil &dari:", 1415, 14, 178, 88, 8
     COMBOBOX 1414, 104, 175, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
-    PUSHBUTTON "Dialing &Rules", 1108, 193, 175, 65, 14
+    PUSHBUTTON "Memanggil &Aturan", 1108, 193, 175, 65, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 196, 248, 1
     DEFPUSHBUTTON "&Dial", 1590, 9, 202, 60, 14, WS_GROUP
     PUSHBUTTON "Membatalkan", 1591, 72, 202, 60, 14
@@ -1438,7 +1438,7 @@ BEGIN
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 170, 248, 1
     LTEXT "D&ial:", 1412, 14, 182, 87, 8
     COMBOBOX 1416, 104, 178, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "Dialing &from:", 1415, 14, 198, 87, 8
+    LTEXT "Memanggil &dari:", 1415, 14, 198, 87, 8
     COMBOBOX 1414, 104, 195, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "Dialing &Rules", 1108, 193, 195, 65, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 215, 248, 1
@@ -1471,7 +1471,7 @@ BEGIN
     AUTOCHECKBOX "&Display progress while connecting", 1284, 16, 17, 199, 10
     AUTOCHECKBOX "&Prompt for name and password, certificate, etc.", 1554, 16, 32, 199, 10
     AUTOCHECKBOX "Include &ReactOS logon domain", 1555, 16, 47, 178, 10
-    GROUPBOX "Redialing options", 1290, 8, 68, 214, 89
+    GROUPBOX "Pilihan panggilan ulang", 1290, 8, 68, 214, 89
     LTEXT "&Redial attempts:", 1300, 16, 81, 121, 8
     EDITTEXT 1287, 140, 77, 70, 14, ES_AUTOHSCROLL | ES_NUMBER
     LTEXT "&Time between redial attempts:", 1301, 16, 99, 121, 8
@@ -1827,31 +1827,31 @@ END
 
 STRINGTABLE
 BEGIN
-    187 "& Tidak, jangan panggil \ 0"
+    187 "&Tidak, jangan panggil \0"
     188 "Anda (atau program) meminta informasi dari% 1. Koneksi mana yang ingin Anda gunakan? \ 0"
-    189 "Tambahkan Nomor Telepon Alternatif \ 0"
+    189 "Tambahkan Nomor Telepon Alternatif \0"
     190 "Dial only first available device\0"
-    191 "Panggil semua perangkat \ 0"
+    191 "Panggil semua perangkat \0"
     192 "Dial device hanya seperlunya \ 0"
-    193 "Masukkan nama pengguna dan kata sandi dengan akses ke domain jaringan jarak jauh. \ 0"
+    193 "Masukkan nama pengguna dan kata sandi dengan akses ke domain jaringan jarak jauh. \0"
     194 "Network Address Translation (NAT) saat ini diinstal sebagai protokol routing,\ndan harus dihapus sebelum mengaktifkan Internet Connection Sharing.\nUntuk menghapus Network Address Translation, buka Routing and Remote Access Manager \n snapin dan perluas masuk router di panel kiri. \nLepaskan Network Address Translation routing protocol dari daftar protokol IP \n routing. \0"
-    195 "Kode area hanya boleh berisi angka 0 sampai 9. \ 0"
-    196 "Nama entri harus berisi setidaknya satu karakter tidak kosong dan tidak dapat dimulai dengan periode tertentu. Pilih nama yang berbeda. \ 0"
+    195 "Kode area hanya boleh berisi angka 0 sampai 9. \0"
+    196 "Nama entri harus berisi setidaknya satu karakter tidak kosong dan tidak dapat dimulai dengan periode tertentu. Pilih nama yang berbeda. \0"
     197 "Anda harus memilih nilai dar i%1 sampai %2 untuk bidang ini.\0"
     198 "Konfigurasi otentikasi kustom DLL tidak dapat dimuat. Pastikan paket otentikasi kustom terinstal dengan benar. \0"
     199 "Sambungan yang dipilih didirikan oleh router Multiprotocol. \nSilakan gunakan alat 'Routing and RAS Admin' untuk menutup koneksi.\0"
-    200 "Komentar \ 0"
+    200 "Komentar \0"
     201 "Konfigurasi paket otentikasi kustom gagal.\0"
     202 "TCP / IP tidak diinstal atau dinonaktifkan untuk Routing and Remote Access. Di Control Panel, mulai Network, masuk ke halaman Services, pilih 'Routing and Remote Access Service' Properties, dan tekan tombol Network.\0"
     203 "IPX tidak diinstal atau dinonaktifkan untuk Routing and Remote Access. Anda dapat menginstal / mengaktifkan IPX dengan melihat properti dari koneksi apapun di folder ""Connections"".\0"
-    204 "Remove the selected device(s) from the list?\0"
+    204 "Hapus perangkat yang dipilih(s) dari daftar?\0"
     205 "Hapus %1 dari buku telepon?\0"
     206 "Putus dari %1? \0"
     207 "File bernama %1 sudah ada. Timpa itu?\0"
     208 "Kesalahan sintaks ditemukan dalam skrip. Apakah Anda ingin melihat log kesalahan? \0"
     209 "'%1' sekarang terhubung \0"
     210 "Klik kanan Monitor Jaringan Dial-Up di bilah tugas untuk menutup atau memeriksa status koneksi Anda. \0"
-    212 "Berhubungan dengan sukses. \ 0"
+    212 "Berhubungan dengan sukses. \0"
     213 "Metode otentikasi kustom yang dipilih harus diinisialisasi dengan menekan Properties. \0"
     214 "lnk \0"
     215 "File jalan pintas pintas (*.rnk) \0"
@@ -1861,33 +1861,33 @@ BEGIN
     219 "Tidak dapat mengambil informasi framing. \0"
     220 "Tidak dapat mengambil informasi port. \0"
     221 "Tidak bisa mengambil informasi port \0"
-    222 "Tidak dapat memuat daftar koneksi. \ 0"
-    223 "Klien: \ 0"
-    224 "Rincian \ 0"
-    225 "Perangkat: \ 0"
-    226 "Perangkat: \ 0"
-    227 "(tidak terhubung) \ 0"
-    228 "& Hubungkan... \ 0"
+    222 "Tidak dapat memuat daftar koneksi. \0"
+    223 "Klien: \0"
+    224 "Rincian \0"
+    225 "Perangkat: \0"
+    226 "Perangkat: \0"
+    227 "(tidak terhubung) \0"
+    228 "& Hubungkan... \0"
     229 "Hang & U \0"
     230 "Sambungan Dial-up\0"
     231 "Konfigurasi modem diatur ke default\0"
-    232 "COM1 \ 0"
+    232 "COM1 \0"
     233 "Remote Router\0"
-    234 "Modem atau perangkat \ 0"
+    234 "Modem atau perangkat \0"
     235 "Harap masukkan nama pengguna untuk akun antarmuka ini di router jarak jauh.\0"
     236 "Sebuah entri bernama %1 sudah ada. Pilih nama yang berbeda.\0"
     237 "Anda mungkin ingin mengizinkan pengiriman kata sandi Anda tanpa enkripsi.\0"
     238 "Enkripsi Kata Sandi\0"
     239 "Wizard siap membuat koneksi Anda.\0"
-    240 "Selesai \ 0"
-    241 "Telepon & nomor: \ 0"
-    242 "Panggil aku kembali di \ 0"
-    243 "Edit Nomor Telepon Alternatif \ 0"
-    244 "Karena koneksi ini aktif, beberapa pengaturan tidak akan berpengaruh sampai Anda menghubungi tombol berikutnya. \ 0"
+    240 "Selesai \0"
+    241 "Telepon & nomor: \0"
+    242 "Panggil aku kembali di \0"
+    243 "Edit Nomor Telepon Alternatif \0"
+    244 "Karena koneksi ini aktif, beberapa pengaturan tidak akan berpengaruh sampai Anda menghubungi tombol berikutnya. \0"
     245 "Tidak ada koneksi yang tersedia untuk semua pengguna. Anda harus logon sebelum menghubungi.\0"
     246 "Buku telepon kosong.\n\nTekan OK untuk menambahkan sebuah entri.\0"
     247 "Karena pembatasan impor / ekspor, enkripsi data tidak tersedia dalam versi ReactOS ini.\0"
-    248 "Harap masukkan alamat X.25 pada layar berikutnya. \ 0"
+    248 "Harap masukkan alamat X.25 pada layar berikutnya. \0"
     249 "Kesalahan %1:%2\0"
     250 "%1\n\nKesalahan %2:%3\0"
     251 "%1\n\nKesalahan%2:%3\nDiagnostik:%4\0"
@@ -1903,30 +1903,30 @@ BEGIN
     261 "Anda dapat memilih protokol dial-up yang akan digunakan.\0"
     262 "Pilih Protokol Dial-up\0"
     263 "Tekan Finish untuk menyimpan '%1'.\0"
-    264 "netcfg.hlp \ 0"
-    265 "& Pindahkan nomor yang berhasil ke bagian atas daftar pada koneksi \ 0"
-    266 "& Nomor telepon baru: \ 0"
-    267 "& Nomor telepon: \ 0"
-    268 "Nomor Telepon \ 0"
+    264 "netcfg.hlp \0"
+    265 "&Pindahkan nomor yang berhasil ke bagian atas daftar pada koneksi \0"
+    266 "&Nomor telepon baru: \0"
+    267 "&Nomor telepon: \0"
+    268 "Nomor Telepon \0"
     269 "Anda bisa memasukkan alamat IP tetap. \0"
     270 "Alamat IP \0"
     271 "Protokol Internet (TCP / IP), tidak diinstal atau dinonaktifkan untuk Remote Access. Di Control Panel, mulai Network, masuk ke halaman Services, pilih 'Remote Access Service' Properties, dan tekan tombol Network.\0"
     272 "TCP / IP\0"
     273 "IPSec, kebijakan default\0"
     274 "IPX / SPX atau kompatibel\0"
-    275 " (lokasi saat ini) \ 0"
+    275 " (lokasi saat ini) \0"
     276 "ISDN \0"
     277 "Semua baris ISDN yang tersedia multi-linked \0"
-    278 "64K Digital \ 0"
-    279 "56K Digital \ 0"
-    280 "56K Suara \ 0"
-    281 "56K Suara \ 0"
+    278 "64K Digital \0"
+    279 "56K Digital \0"
+    280 "56K Suara \0"
+    281 "56K Suara \0"
     282 "Pilih Opsi Logon \0"
     283 "%d%%\0"
     284 "Nomor telepon untuk %s\0"
-    285 "& Lokasi baru: \ 0"
-    286 "& Lokasi: \ 0"
-    287 "& Lokasi: \ 0"
+    285 "& Lokasi baru: \0"
+    286 "&Lokasi: \0"
+    287 "&Lokasi: \0"
     288 "Ini adalah perangkat yang akan digunakan untuk membuat koneksi. \ 0"
     289 "Pilih Device \0"
     290 "Beberapa Baris tidak dapat digabungkan kecuali Anda memanggil server PPP. \0"
