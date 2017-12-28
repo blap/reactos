@@ -1,0 +1,68 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+IDR_MAINMENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Buka... \tCtrl + &O", IDM_OPEN_FILE
+        MENUITEM "&Tutup\tCtrl+W", IDM_CLOSE_FILE
+        MENUITEM SEPARATOR
+        MENUITEM "&Keluar", IDM_EXIT
+    END
+    POPUP "&Main"
+    BEGIN
+        MENUITEM "Mainkan/&Jeda\tCtrl + P", IDC_PLAY
+        MENUITEM "Berhenti\t
+Ctrl+ S", IDC_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "Ulangi\Ctrl+T", IDM_REPEAT
+    END
+    POPUP "&Lihat"
+    BEGIN
+        MENUITEM "Satu jendela & Mode", IDM_SWITCHVIEW
+    END
+    POPUP "Perangkat"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "Properti", IDM_DEVPROPS
+        MENUITEM SEPARATOR
+        MENUITEM "Pengatur Suara", IDM_VOLUMECTL
+    END
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Tentang", IDM_ABOUT
+    END
+END
+
+ID_ACCELERATORS ACCELERATORS
+BEGIN
+    "^O", IDM_OPEN_FILE
+    "^W", IDM_CLOSE_FILE
+    "^P", IDC_PLAY
+    "^S", IDC_STOP
+    "^T", IDM_REPEAT
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MODE_UNKNOWN "Tidak Dikenal"
+    IDS_MODE_OPEN "Dibuka"
+    IDS_MODE_STOP "Berhenti"
+    IDS_MODE_PLAY "Memainkan"
+    IDS_MODE_PAUSE "Dijeda"
+    IDS_MODE_RECORD "Merekam"
+    IDS_MODE_SEEK "Pencarian"
+    IDS_MODE_NOT_READY "Belum Siap"
+    IDS_ALL_TYPES_FILTER "Semua Didukung"
+    IDS_TOOLTIP_PLAY "Main"
+    IDS_TOOLTIP_STOP "Berhenti"
+    IDS_TOOLTIP_EJECT "Putus"
+    IDS_TOOLTIP_BACKWARD "Loncat Ke Belakang"
+    IDS_TOOLTIP_SEEKBACK "Pencarian Mundur"
+    IDS_TOOLTIP_SEEKFORW "Pencarian Depan"
+    IDS_TOOLTIP_FORWARD "Loncat Ke Depan"
+    IDS_TOOLTIP_PAUSE "Istirahat"
+    IDS_APPTITLE "Pemain Multimedia ReactOS"
+    IDS_PLAY "Main"
+    IDS_DEFAULTMCIERRMSG "Tidak ada deskripsi yang tersedia untuk kesalahan ini."
+END
