@@ -1,14 +1,14 @@
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "Muestra datos página por página en la pantalla.\n\n\
-  MORE < [Unidad:][Ruta]Nombre del archivo\n\
-  Comando | MORE \n\
-  MORE [Unidad:][Ruta]Nombre del archivo\n\n\
-  [Unidad:][Ruta]Nombre del archivo    Un archivo, cuyo contenido pueda ser mostrado.\n\
-  Comando\t\t     Un comando, cuya salida pueda ser mostrada.\n\n\
-  Al visualizar ""-- Continuar --"" presione cualquier tecla para mostrar la siguiente página.\n"
+    IDS_USAGE "Displays data page-by-page on the screen.\n\n\
+  MORE < [Drive:][Path]File name\n\
+  Command | MORE \n\
+  MORE [Drive:][Path]File name\n\n\
+  [Drive:][Path]File name    A file, whose content shall be displayed.\n\
+  Command\t\t     A command, whose output shall be displayed.\n\n\
+  At the prompt """--Continúa--"" usted puede pulsar cualquier tecla para mostrar la siguiente página. \n"
     IDS_CONTINUE "-- Continuar --"
     IDS_CONTINUE_PROGRESS "-- Continuar (%d%%) --"
     IDS_FILE_ACCESS "No se puede acceder al fichero %s.\n"
