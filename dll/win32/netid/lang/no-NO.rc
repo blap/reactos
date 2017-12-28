@@ -1,4 +1,4 @@
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 IDD_PROPPAGECOMPUTER DIALOGEX 0, 0, 256, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -7,8 +7,8 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_COMPNAME, IDC_STATIC, 4, 3, 26, 24, SS_ICON
     LTEXT "ReactOS bruker følgende informasjon for å identifisere datamaskinen på nettverket.", IDC_STATIC, 40, 5, 204, 20
-    LTEXT "Beskrivelse av datamaskinen:", IDC_STATIC, 6, 40, 135, 9
-    EDITTEXT IDC_COMPDESC, 110, 38, 136, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+    LTEXT "Beskrivelse av datamaskinen:", IDC_STATIC, 6, 40, 90, 9
+    EDITTEXT IDC_COMPDESC, 98, 38, 146, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP
     LTEXT "Fullt datamaskinnavn:", IDC_STATIC, 6, 68, 85, 9
     EDITTEXT IDC_COMPUTERNAME, 98, 68, 144, 12, ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "Arbeidsgruppe:", IDC_WORKGROUPDOMAIN, 6, 84, 64, 9
@@ -71,8 +71,10 @@ BEGIN
     1021 "OBS: Bare administratorer kan endre identifisering for denne datamaskinen."
     1022 "OBS: Identifisering for datamaskinen kunne ikke endres fordi:"
     1030 "The new computer name ""%s"" contains characters which are not allowed. Characters which are not allowed include ` ~ ! @ # $ %% ^ & * ( ) = + _ [ ] { } \\ | ; : ' "" , . < > / and ?"
-    3210 "&Detaljer >>"
-    3220 "<< &Detaljer"
+    /* Windows allows using these characters, although it displays a warning message.
+       Forbidding the use of these characters means incompatibility with Windows. */
+    3210 "&Details >>"
+    3220 "<< &Details"
     4000 "Information"
     4001 "Can't set new a computer name!"
 END
