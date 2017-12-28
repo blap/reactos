@@ -1,25 +1,24 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 STRINGTABLE
 BEGIN
-    IDS_HELP "Verwaltet Einstellungen, Verlauf und Makros der Kommandozeile.\n\
+    IDS_HELP "Manages command-line editing settings, history, and macros.\n\
 \n\
 DOSKEY [/INSERT | /OVERSTRIKE] [/EXENAME=exe] [/HISTORY] [/LISTSIZE=size]\n\
        [/REINSTALL] [/MACROS[:exe | :ALL]] [/MACROFILE=file] [macroname=[text]]\n\
 \n\
-  /INSERT             Aktiviert den Einfügemodus.\n\
-  /OVERSTRIKE         Deaktiviert den Einfügemodus.\n\
-  /EXENAME=exename    Gibt den Namen der Anwendung an, deren Einstellungen\n\
-                      angezeigt oder geändert werden sollen.\n\
-                      Der Standardwert ist cmd.exe.\n\
-  /HISTORY            Zeigt den Befehlsverlauf an.\n\
-  /LISTSIZE=size      Legt die Anzahl der Befehle per Verlaufspuffer fest.\n\
-  /REINSTALL          Leert den Befehlsverlauf.\n\
-  /MACROS             Zeigt Makrodefinitionen an.\n\
-  /MACROS:exename     Zeigt Makrodefinitionen für eine Anwendung an.\n\
-  /MACROS:ALL         Zeigt Makrodefinitionen für alle Anwendungen an.\n\
-  /MACROFILE=file     Lädt Makrodefinitionen aus einer Datei.\n\
-  macroname           Legt den Namen eines zu erstellenden Makros fest.\n\
-  text                Legt den ersetzenden Text des Makros fest.\n"
+  /INSERT             Enables insert mode.\n\
+  /OVERSTRIKE         Disables insert mode.\n\
+  /EXENAME=exename    Sets the name of the program to view/change history\n\
+                      and macros for. The default is cmd.exe.\n\
+  /HISTORY            Displays the command history.\n\
+  /LISTSIZE=size      Sets the number of commands per history buffer.\n\
+  /REINSTALL          Clears the command history.\n\
+  /MACROS             Displays macro definitions.\n\
+  /MACROS:exename     Displays macro definitions for a specific program.\n\
+  /MACROS:ALL         Displays macro definitions for all programs.\n\
+  /MACROFILE=file     Loads macro definitions from a file.\n\
+  macroname           Specifies the name of a macro to create.\n\
+  text                Specifies the replacement text for the macro.\n"
     IDS_INVALID_MACRO_DEF "Ungültige Makrodefinition: %s\n"
 END
