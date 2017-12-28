@@ -1,4 +1,4 @@
-LANGUAGE LANG_GREEK, SUBLANG_DEFAULT
+LANGUAGE LANG_GREEK, SUBLANG_GREEK_GREECE
 
 IDD_SHUTDOWNCOMPUTER DIALOGEX 45, 22, 164, 52
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
@@ -17,7 +17,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Η Logon  Διεπαφή Χρήστη DLL %s απέτυχε να φορτωθεί.", IDC_GINALOADFAILED, 39, 16, 156, 24
     LTEXT "Επικοινωνείστε με τον διαχειριστή του συστήματός σας για να αντικαταστήσει το DLL, ή να επαναφέρει το αρχικό DLL.", IDC_GINALOADFAILEDCONTACT, 39, 53, 151, 25
-    DEFPUSHBUTTON "&Restart", 1, 80, 91, 68, 14
+    DEFPUSHBUTTON "&Επανεκκίνηση", 1, 80, 91, 68, 14
 END
 
 STRINGTABLE
