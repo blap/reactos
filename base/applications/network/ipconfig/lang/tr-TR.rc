@@ -1,6 +1,4 @@
-/* TRANSLATOR: 2015 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 STRINGTABLE
 BEGIN
@@ -26,42 +24,42 @@ STRINGTABLE
 BEGIN
 /* Please keep the spacing/formatting as per En.rc when translating */
     IDS_USAGE
-    "\nKULLANIM:\n \
-        ipconfig [/? | /all | /renew [bağdaştırıcı] | /release [bağdaştırıcı] |\n \
+    "\nUSAGE:\n \
+        ipconfig [/? | /all | /renew [adapter] | /release [adapter] |\n \
                   /flushdns | /displaydns | /registerdns |\n \
-                  /showclassid bağdaştırıcı |\n \
-                  /setclassid bağdaştırıcı [sınıf kimliği] ]\n \
+                  /showclassid adapter |\n \
+                  /setclassid adapter [classid] ]\n \
     \n \
-    nereye\n \
-        bağdaştırıcı     Bağlantı adı\n \
-                       (* ve ? umûmî arama damgalarına izin verilmiştir, örneklere bakınız)\n \
+    where\n \
+        adapter         Connection name\n \
+                       (wildcard characters * and ? allowed, see examples)\n \
     \n \
-        Seçenekler:\n \
-           /?           Bu yardım iletisini görüntüle.\n \
-           /all         Tüm yapılandırma bilgisini görüntüle.\n \
-           /release     Belirtilen bağdaştırıcı için IP adresini bırak.\n \
-           /renew       Belirtilen bağdaştırıcı için IP adresini yenile.\n \
-           /flushdns    DNS Çözücü ön belleğini siler.\n \
-           /registerdns Tüm DHCP kirâlarını yeniler ve DNS adlarını yeniden kaydettirir.\n \
-           /displaydns  DNS Çözücü ön belleğinin içeriğini görüntüle.\n \
-           /showclassid Bağdaştırıcı için izin verilen tüm DHCP sınıf kimliklerini görüntüler.\n \
-           /setclassid  DHCP sınıf kimliğini değiştirir.\n \
+        Options:\n \
+           /?           Display this help message\n \
+           /all         Display full configuration information.\n \
+           /release     Release the IP address for the specified adapter.\n \
+           /renew       Renew the IP address for the specified adapter.\n \
+           /flushdns    Purges the DNS Resolver cache.\n \
+           /registerdns Refreshes all DHCP leases and re-registers DNS names.\n \
+           /displaydns  Display the contents of the DNS Resolver Cache.\n \
+           /showclassid Displays all the dhcp class IDs allowed for adapter.\n \
+           /setclassid  Modifies the dhcp class id.\n \
     \n \
-    Ön tanımlı, TCP/IP için tüm kayıtlı bağdaştırıcılar için yalnızca\n \
-    IP adresini, alt ağ maskesini ve ön tanımlı geçidi görüntülemektir.\n \
+    The default is to display only the IP address, subnet mask and\n \
+    default gateway for each adapter bound to TCP/IP.\n \
     \n \
-    release ve renew için, bir bağdaştırıcı adı belirtilmemişse TCP/IP için tüm kayıtlı\n \
-    bağdaştırıcılar için IP adres kirâları bırakılacak veyâ yenilenecektir.\n \
+    For Release and Renew, if no adapter name is specified, then the IP address\n \
+    leases for all adapters bound to TCP/IP will be released or renewed.\n \
     \n \
-    setclassid için, bir sınıf kimliği belirtilmemişse sınıf kimliği silinmiş olacaktır.\n \
+    For Setclassid, if no ClassId is specified, then the ClassId is removed.\n \
     \n \
-    Örnekler:\n \
-        > ipconfig                   ... Bilgi gösterir.\n \
-        > ipconfig /all              ... Ayrıntılı bilgi gösterir.\n \
-        > ipconfig /renew            ... Tüm bağdaştırıcıları yeniler.\n \
-        > ipconfig /renew EL*        ... EL ile başlayan adı olan tüm\n \
-                                         bağlantıları yeniler.\n \
-        > ipconfig /release *Bağ*    ... Eşleşen tüm bağlantıları bırakır.\n \
-                                         Ör: ""Yerli Alan Bağlantısı 1"" veyâ\n \
-                                             ""Yerli Alan Bağlantısı 2""\n"
+    Examples:\n \
+        > ipconfig                   ... Show information.\n \
+        > ipconfig /all              ... Show detailed information\n \
+        > ipconfig /renew            ... renew all adapters\n \
+        > ipconfig /renew EL*        ... renew any connection that has its\n \
+                                         name starting with EL\n \
+        > ipconfig /release *Con*    ... release all matching connections,\n \
+                                         eg. """Local Area Connection 1""" or\n \
+                                             """Yerli Alan Bağlantısı 2""\n"
 END
