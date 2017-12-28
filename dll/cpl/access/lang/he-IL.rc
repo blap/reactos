@@ -1,6 +1,4 @@
-/* Translated by Baruch Rutman */
-
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 IDD_PROPPAGEKEYBOARD DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -164,7 +162,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Toggle Keys Settings"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Keyboard shortcut", -1, 6, 11, 234, 62
+    GROUPBOX "קיצורי מקלדת", -1, 6, 11, 234, 62
     LTEXT "The shortcut for ToggleKeys is: \nHold down <Num Lock> for five seconds.",
           -1, 12, 20, 222, 29
     AUTOCHECKBOX "Use &shortcut", IDC_TOGGLE_ACTIVATE_CHECK, 12, 49, 222, 14
@@ -194,7 +192,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Mouse Keys Settings"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Keyboard shortcut", -1, 6, 11, 234, 62
+    GROUPBOX "קיצורי מקלדת", -1, 6, 11, 234, 62
     LTEXT "The shortcut for Mouse Keys is:  \nPress <Left Alt+Left Shift+Num Lock>.",
           -1, 12, 20, 222, 29
     AUTOCHECKBOX "&Use shortcut", IDC_MOUSEKEYS_ACTIVATE_CHECK,
@@ -230,7 +228,7 @@ BEGIN
     LTEXT "&Ignore keystrokes repeated faster than:", -1, 12, 21, 222, 20
     COMBOBOX IDC_BOUNCE_TIME_COMBO, 12, 34, 222, 56,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
-    LTEXT "&Test area:", -1, 6, 68, 48, 11
+    LTEXT "אזור בדיקה:", -1, 6, 68, 48, 11
     EDITTEXT IDC_BOUNCE_TEST_EDIT, 60, 65, 180, 14, ES_AUTOHSCROLL
     DEFPUSHBUTTON "אישור", IDOK, 135, 207, 50, 14
     PUSHBUTTON "ביטול", IDCANCEL, 189, 207, 50, 14
@@ -256,7 +254,7 @@ BEGIN
     LTEXT "&Keys must be held down for:", -1, 12, 133, 222, 11
     COMBOBOX IDC_REPEAT_WAIT_COMBO, 12, 150, 222, 74,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
-    LTEXT "אזור בדיקה:", -1, 6, 178, 48, 11
+    LTEXT "&Test area:", -1, 6, 178, 48, 11
     EDITTEXT IDC_REPEAT_TEST_EDIT, 60, 180, 180, 14, ES_AUTOHSCROLL
     DEFPUSHBUTTON "אישור", IDOK, 135, 207, 50, 14
     PUSHBUTTON "ביטול", IDCANCEL, 189, 207, 50, 14
