@@ -1,6 +1,4 @@
-/* Ștefan Fulea (stefan dot fulea at mail dot md) */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDR_MAINMENU MENU
 BEGIN
@@ -92,8 +90,8 @@ BEGIN
     PUSHBUTTON "A&nulează", IDCANCEL, 150, 78, 60, 14
 END
 
-IDD_DOWNLOAD_DIALOG DIALOGEX 0, 0, 220, 72
-STYLE DS_SHELLFONT | DS_CENTER | WS_BORDER | WS_CAPTION | WS_POPUP | WS_SYSMENU | WS_VISIBLE
+IDD_DOWNLOAD_DIALOG DIALOGEX 0, 0, 220, 220
+STYLE DS_SHELLFONT | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION | WS_VISIBLE 
 CAPTION "În curs de descărcare %ls..."
 FONT 8, "MS Shell Dlg"
 BEGIN
@@ -205,7 +203,7 @@ BEGIN
     IDS_UNABLE_TO_DOWNLOAD2 "Pachetul nu poate fi descărcat! Verificați conexiunea de Internet!"
     IDS_UNABLE_TO_REMOVE "Datele de registru pentru acest program nu au putut fi eliminate!"
     IDS_UNABLE_TO_INSTALL "Unable to open installer!"
-    IDS_CERT_DOES_NOT_MATCH "Verificarea certificatului SSL a eșuat."    
+    IDS_CERT_DOES_NOT_MATCH "Verificarea certificatului SSL a eșuat."
     IDS_INTEG_CHECK_TITLE "Integritatea pachetului în verificare…"
     IDS_INTEG_CHECK_FAIL "Pachetul nu a trecut de verificarea de integritate. Utilizarea programului nu este recomandată."
     IDS_INTERRUPTED_DOWNLOAD "Descărcarea a fost întreruptă. Verificați conexiunea la Internet."
@@ -216,7 +214,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_STATUS_INSTALLED "Installed"
+    IDS_STATUS_INSTALLED "Instalate"
     IDS_STATUS_NOTINSTALLED "Not installed"
     IDS_STATUS_DOWNLOADED "Downloaded"
     IDS_STATUS_UPDATE_AVAILABLE "Update available"
