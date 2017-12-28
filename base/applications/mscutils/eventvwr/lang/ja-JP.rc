@@ -1,6 +1,12 @@
-/* Japanese translation by Tomoya Kitagawa */
+/*
+ * PROJECT:    ReactOS Event Viewer
+ * LICENSE:    GPL - See COPYING in the top level directory
+ * FILE:       base/applications/mscutils/eventvwr/lang/en-US.rc
+ * PURPOSE:    English Language File for ReactOS Event Viewer
+ * TRANSLATOR: Marc Piulachs
+ */
 
-LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+LANGUAGE LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN
 
 IDM_EVENTVWR MENU
 BEGIN
@@ -8,7 +14,7 @@ BEGIN
     BEGIN
         MENUITEM "Open...(&O)", IDM_OPEN_EVENTLOG
         MENUITEM "Save Event Log as...(&E)", IDM_SAVE_EVENTLOG
-        MENUITEM "&Close", IDM_CLOSE_EVENTLOG
+        MENUITEM "閉じる", IDM_CLOSE_EVENTLOG
         MENUITEM SEPARATOR
         MENUITEM "Clear all Events (&L)", IDM_CLEAR_EVENTS
         MENUITEM "&Rename\tF2", IDM_RENAME_EVENTLOG
@@ -49,7 +55,7 @@ IDD_EVENTDETAILS_DLG DIALOGEX 0, 0, 266, 240
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_THICKFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_CONTEXTHELP
 CAPTION "イベントの詳細情報"
-FONT 9, "MS UI Gothic", 400, 0, 0x1
+FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "EvtDetailsCtrl", IDC_STATIC, 0, 0, 266, 215
     PUSHBUTTON "ヘルプ(&H)", IDHELP, 8, 220, 50, 14
@@ -58,7 +64,7 @@ END
 
 IDD_EVENTDETAILS_CTRL DIALOGEX 0, 0, 266, 215
 STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_CLIPCHILDREN
-FONT 9, "MS UI Gothic", 400, 0, 0x1
+FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "日付:", IDC_STATIC, 8, 5, 31, 8
     EDITTEXT IDC_EVENTDATESTATIC, 46, 5, 47, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
@@ -101,7 +107,7 @@ BEGIN
     EDITTEXT IDC_LOGNAME, 67, 23, 178, 12, ES_LEFT | ES_AUTOHSCROLL | ES_READONLY | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP
     LTEXT "Log &file:", IDC_STATIC, 7, 41, 60, 8
     EDITTEXT IDC_LOGFILE, 67, 39, 178, 12, ES_LEFT | ES_AUTOHSCROLL | ES_READONLY | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP
-    LTEXT "Size:", IDC_STATIC, 7, 57, 60, 8
+    LTEXT "サイズ:", IDC_STATIC, 7, 57, 60, 8
     EDITTEXT IDC_SIZE_LABEL, 67, 57, 178, 12, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "Created:", IDC_STATIC, 7, 69, 60, 8
     EDITTEXT IDC_CREATED_LABEL, 67, 69, 178, 12, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
@@ -123,7 +129,7 @@ BEGIN
             UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_GROUP, 157, 165, 10, 14
     LTEXT "days", IDC_STATIC, 162, 168, 20, 8
     CONTROL "Do &not overwrite events\n(clear log manually)", IDC_NO_OVERWRITE, "Button", BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP | WS_TABSTOP, 17, 180, 143, 20
-    PUSHBUTTON "&Restore Defaults", IDC_RESTOREDEFAULTS, 166, 183, 70, 14
+    PUSHBUTTON "規定値に戻す(&R)", IDC_RESTOREDEFAULTS, 166, 183, 70, 14
     AUTOCHECKBOX "Using a lo&w-speed connection", IDC_LOW_SPEED_CONNECTION, 7, 217, 167, 10
     PUSHBUTTON "&Clear Log", ID_CLEARLOG, 195, 213, 50, 14
 END
@@ -135,7 +141,7 @@ BEGIN
     IDS_APP_TITLE_EX "%s - %s Log on \\\\"
     IDS_STATUS_MSG "%s has %lu event(s) (listed: %lu)"
     IDS_LOADING_WAIT "イベント ログを読み込んでいます。 お待ちください..."
-    IDS_NO_ITEMS "There are no items to show in this view." // "No events in this log."
+    IDS_NO_ITEMS "There are no items to show in this view."" // ""No events in this log."
     IDS_EVENTLOG_SYSTEM "System Logs"
     IDS_EVENTLOG_APP "Application Logs"
     IDS_EVENTLOG_USER "User Logs"
@@ -157,15 +163,15 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_BYTES_FORMAT "bytes" // "%s bytes"
+    IDS_BYTES_FORMAT "bytes"" // ""%s bytes"
     // "%1!ls! (%2!ls! bytes)"
 END
 
 STRINGTABLE
 BEGIN
-    IDS_COLUMNTYPE "Type"
+    IDS_COLUMNTYPE "種類"
     IDS_COLUMNDATE "Date"
-    IDS_COLUMNTIME "Time"
+    IDS_COLUMNTIME "時間"
     IDS_COLUMNSOURCE "Source"
     IDS_COLUMNCATEGORY "Category"
     IDS_COLUMNEVENT "Event"
