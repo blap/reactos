@@ -1,39 +1,39 @@
-LANGUAGE LANG_PORTUGUESE, SUBLANG_NEUTRAL
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
 
 STRINGTABLE
 BEGIN
     IDS_HELP "Exibe ou modifica as listas de controle de acesso (ACLs) de arquivos\n\n\
-CACLS nome-arquivo [/T] [/E] [/C] [/G usuário:perm] [/R usuário [...]]\n\
-                   [/P usuário:perm [...]] [/D usuário [...]]\n\
+CACLS nome-arquivo [/T] [/E] [/C] [/G usuário:permissão[...]] [/R usuário [...]]\n\
+                   [/P usuário:permissão[...]] [/D usuário [...]]\n\
    nome-arquivo     Exibe ACLs.\n\
    /T               Altera ACLs de arquivos especificados\n\
                     na pasta atual e em todas as subpastas.\n\
    /E               Edita ACL em vez de substituí-la.\n\
    /C               Continua ao encontrar erros de acesso negado.\n\
-   /G usuário:perm  Concede os direitos de acesso ao usuário especificado.\n\
-                    Perm pode ser: R  Ler\n\
+   /G usuário:permissão Concede os direitos de acesso ao usuário especificado.\n\
+                    A permissão pode ser: R  Ler\n\
                               W  Gravar\n\
                               C  Alterar (gravar)\n\
                               F  Controle total\n\
    /R usuário       Revoga os direitos de acesso do usuário especificado\n\
                     (válido somente com /E).\n\
-   /P usuário:perm  Substitui os direitos de acesso do usuário especificado.\n\
-                    Perm pode ser: N  Nenhum\n\
+   /P usuário:permissão  Substitui os direitos de acesso do usuário especificado.\n\
+                    A permissão pode ser: N  Nenhum\n\
                               R  Ler\n\
                               W  Gravar\n\
                               C  Alterar (gravar)\n\
                               F  Controle total\n\
    /D usuário       Nega o acesso ao usuário especificado.\n\
-Caracteres curinga podem ser usados para especificar mais de um arquivo\n\
+Caracteres curingas podem ser usados para especificar mais de um arquivo\n\
 em um comando.\n\
 Você pode especificar mais de um usuário em um comando.\n\n\
-Abreviaçäes:\n\
+Abreviações:\n\
    CI - Herança de recipiente.\n\
         O ACE será herdado pelas pastas.\n\
    OI - Herança de objeto.\n\
         O ACE será herdado pelos arquivos.\n\
    IO - Somente herança.\n\
-        O ACE não se aplica ao arquivo/pasta atual.\n"
+        O ACE não se aplica ao arquivo/pasta atual.\n\n"
     IDS_ABBR_CI "(CI)"
     IDS_ABBR_OI "(OI)"
     IDS_ABBR_IO "(IO)"
