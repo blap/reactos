@@ -1,4 +1,4 @@
-LANGUAGE LANG_GREEK, SUBLANG_DEFAULT
+LANGUAGE LANG_GREEK, SUBLANG_GREEK_GREECE
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -32,7 +32,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Έ&ξοδος", CMD_EXIT
     END
-    POPUP "&Edit"
+    POPUP "&Επεξεργασία"
     BEGIN
         MENUITEM "Α&ναίρεση\tCtrl+Z", CMD_UNDO
         MENUITEM SEPARATOR
@@ -100,7 +100,7 @@ BEGIN
     EDITTEXT 0x143, 58, 147, 173, 12, WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
     PUSHBUTTON "Help", IDHELP, 8, 170, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 198, 170, 50, 14, BS_PUSHBUTTON
-    PUSHBUTTON "Cancel", IDCANCEL, 254, 170, 50, 14
+    PUSHBUTTON "Ακύρωση", IDCANCEL, 254, 170, 50, 14
     PUSHBUTTON "P&rinter...", psh3, 310, 170, 50, 14
 END
 
@@ -125,7 +125,7 @@ BEGIN
     EDITTEXT ID_LINENUMBER, 54, 10, 106, 12, WS_CHILD | WS_BORDER | WS_TABSTOP
     LTEXT "Αριθμός γραμμής:", 0x155, 5, 12, 41, 12, WS_CHILD | WS_TABSTOP | ES_NUMBER
     DEFPUSHBUTTON "OK", IDOK, 75, 30, 40, 15, WS_CHILD | WS_TABSTOP
-    PUSHBUTTON "Ακύρωση", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
 END
 
 IDD_ABOUTBOX DIALOGEX 22, 16, 284, 170
@@ -160,18 +160,17 @@ BEGIN
     STRING_UNTITLED "Χωρίς τίτλο"
     STRING_ALL_FILES "Όλα τα αρχεία (*.*)"
     STRING_TEXT_FILES_TXT "Αρχεία κειμένου (*.txt)"
-    STRING_TOOLARGE "Το αρχείο '%s' είναι πολύ μεγάλο για το notepad.\n \
-Παρακαλώ χρησιμοποιείστε άλλο πρόγραμμα επεξεργασίας κειμένου."
-    STRING_NOTEXT "Δεν πληκτρολογήσατε κάτι. \
-\nΠαρακαλώ πληκτρολογείστε κάτι και προσπαθείστε ξανά"
-    STRING_DOESNOTEXIST "Το αρχείο '%s'\nδεν υπάρχει\n\n \
-Θέλετε να δημιουργήσετε ένα νέο αρχείο;"
-    STRING_NOTSAVED "Το αρχείο '%s'\nέχει τροποποιηθεί\n\n \
-Θέλετε να αποθηκεύσετε τις αλλαγές;"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "Το αρχείο '%s' δε μπορεί να βρεθεί."
-    STRING_OUT_OF_MEMORY "Δεν υπάρχει αρκετή μνήμη για να ολοκληρωθεί αυτή η \
-διεργασία. \nΚλείστε μία ή περρισότερες εφαρμογές για να αυξηθεί η \nελεύθερη \
-μνήμη."
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "Δε μπορεί να βρεθεί το '%s'"
     STRING_ANSI "ANSI"
     STRING_UNICODE "Unicode"
