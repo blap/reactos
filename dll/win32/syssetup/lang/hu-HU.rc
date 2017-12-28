@@ -1,4 +1,23 @@
-LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
+/*
+ * Copyright (C) 2004 Filip Navara
+ * Copyright (C) 2004 Eric Kohl
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+LANGUAGE LANG_HUNGARIAN, SUBLANG_HUNGARIAN_HUNGARY
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
@@ -18,8 +37,8 @@ BEGIN
     LTEXT "A ReactOS fejlesztõk szeretnének köszönetet mondani az alábbi Open Source projekteknek amiket (részben) felhasználtak a ReactOS fejlesztéséhez:", IDC_STATIC, 15, 7, 286, 19
     LISTBOX IDC_PROJECTS, 15, 30, 286, 75, LBS_NOSEL | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL
     LTEXT "A ReactOS a GPL licenszével rendelkezik, így felhasználásához és terjesztéséhez ezt a licenszt kell figyelembe venni.", IDC_STATIC, 15, 110, 227, 19
-    PUSHBUTTON "&Licensz megtekintése...", IDC_VIEWGPL, 200, 120, 90, 19
-    LTEXT "Kattints a Tovább gombra a folytatáshoz.", IDC_STATIC, 15, 136, 170, 17
+    PUSHBUTTON "&View GPL...", IDC_VIEWGPL, 251, 110, 50, 19
+    LTEXT "Kattints a Tovább gombra a folytatáshoz.", IDC_STATIC, 15, 136, 195, 17
 END
 
 IDD_OWNERPAGE DIALOGEX 0, 0, 317, 143
@@ -43,14 +62,14 @@ BEGIN
     ICON IDI_ICON1, IDC_STATIC, 21, 7, 20, 20
     LTEXT "Adj egy nevet a számítógépednek, ami nem több mint 15 betû. Ha hálózaton vagy, akkor ennek a névnek egyedinek kell lennie.", IDC_STATIC, 54, 7, 250, 24
     LTEXT "&Számítógép név:", IDC_STATIC, 54, 38, 75, 8
-    EDITTEXT IDC_COMPUTERNAME, 132, 35, 163, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL | ES_UPPERCASE
+    EDITTEXT IDC_COMPUTERNAME, 165, 35, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL | ES_UPPERCASE
     ICON IDI_ICON5, IDC_STATIC, 21, 57, 20, 20
     LTEXT "A telepítõ létrehoz egy felhasználói fiókot, a Rendszergazdát. Ezzel a fiókkal teljes jogod van a számítógéped felett.", IDC_STATIC, 54, 57, 250, 25
     LTEXT "Adj meg egy jelszót, ami nem több mint 127 karakter.", IDC_STATIC, 54, 87, 250, 8
-    LTEXT "&Jelszó:", IDC_STATIC, 54, 104, 75, 8
-    EDITTEXT IDC_ADMINPASSWORD1, 132, 101, 172, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
-    LTEXT "&Megerõsítés:", IDC_STATIC, 54, 123, 75, 8
-    EDITTEXT IDC_ADMINPASSWORD2, 132, 120, 172, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
+    LTEXT "&Jelszó:", IDC_STATIC, 54, 104, 105, 8
+    EDITTEXT IDC_ADMINPASSWORD1, 165, 101, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
+    LTEXT "&Megerõsítés:", IDC_STATIC, 54, 123, 105, 8
+    EDITTEXT IDC_ADMINPASSWORD2, 165, 120, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
 END
 
 IDD_LOCALEPAGE DIALOGEX 0, 0, 317, 143
@@ -59,14 +78,14 @@ CAPTION "ReactOS Telepítõ"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ICON4, IDC_STATIC, 21, 7, 20, 20
-    LTEXT "A rendszer területi beállítása meghatározzák a használni kívánt nyelvet. A területi beállítások határozzák meg, hogy a számok, valuta és dátum információk hogyan jelennek meg.", IDC_STATIC, 53, 7, 253, 24
-    LTEXT "", IDC_LOCALETEXT, 53, 35, 250, 16
-    LTEXT "A területi beállítás megváltoztatásához kattints\na Kiválasztás gombra.", IDC_STATIC, 53, 56, 184, 16
-    PUSHBUTTON "&Kiválasztás...", IDC_CUSTOMLOCALE, 245, 57, 50, 14
+    LTEXT "A rendszer területi beállítása meghatározzák a használni kívánt nyelvet. A területi beállítások határozzák meg, hogy a számok, valuta és dátum információk hogyan jelennek meg.", IDC_STATIC, 53, 7, 253, 20
+    LTEXT "", IDC_LOCALETEXT, 53, 29, 250, 16
+    LTEXT "To change system or user locale settings, click Customize.", IDC_STATIC, 53, 60, 196, 8
+    PUSHBUTTON "&Customize...", IDC_CUSTOMLOCALE, 250, 57, 50, 14
     LTEXT "A billentyûzet kiosztás határozza meg a gombok mûködését.", IDC_STATIC, 53, 86, 253, 8
     LTEXT "", IDC_LAYOUTTEXT, 53, 100, 250, 16
-    LTEXT "A kiosztás megváltoztatásához kattints a Kiosztás gombra.", IDC_STATIC, 53, 126, 230, 8
-    PUSHBUTTON "&Kiosztás...", IDC_CUSTOMLAYOUT, 245, 122, 50, 14
+    LTEXT "A kiosztás megváltoztatásához kattints a Kiosztás gombra.", IDC_STATIC, 53, 126, 184, 8
+    PUSHBUTTON "C&ustomize...", IDC_CUSTOMLAYOUT, 250, 122, 50, 14
 END
 
 IDD_DATETIMEPAGE DIALOGEX 0, 0, 317, 143
@@ -85,7 +104,7 @@ END
 
 IDD_THEMEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "ReactOS Telepítõ"
 FONT 8, "MS Shell Dlg"
 BEGIN
     PUSHBUTTON "Lautus theme", IDC_THEMEDSTYLE, 18,12, 130,120, BS_AUTORADIOBUTTON|BS_PUSHLIKE
@@ -94,7 +113,7 @@ END
 
 IDD_PROCESSPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Telepítõ"
+CAPTION "ReactOS Setup"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "", IDC_ACTIVITY, 53, 7, 253, 20
@@ -144,8 +163,9 @@ BEGIN
     IDS_DATETIMESUBTITLE "Beállíthatod a számítógép dátumát és óráját."
     IDS_PROCESSTITLE "Process page title"
     IDS_PROCESSSUBTITLE "Process page subtitle"
-    IDS_THEMESELECTIONTITLE "Appearance"
+    IDS_THEMESELECTIONTITLE "Megjelenés"
     IDS_THEMESELECTIONSUBTITLE "Select the theme you prefer."
+
 END
 
 STRINGTABLE
