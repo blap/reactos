@@ -30,12 +30,12 @@ BEGIN
         MENUITEM "K&leine Symbole", ID_VIEW_SMALL
         MENUITEM "&Details", ID_VIEW_DETAILS, CHECKED
         MENUITEM "&Spalten auswählen...", ID_VIEW_SELECTCOLUMNS
-        POPUP "&CPU-Verlauf"
+        POPUP "&CPU Verlauf"
         BEGIN
             MENUITEM "&Alle CPUs in einem Diagramm", ID_VIEW_CPUHISTORY_ONEGRAPHALL
             MENUITEM "&Ein Diagramm pro CPU", ID_VIEW_CPUHISTORY_ONEGRAPHPERCPU, CHECKED
         END
-        MENUITEM "K&ernel-Zeiten anzeigen", ID_VIEW_SHOWKERNELTIMES
+        MENUITEM "&Kernel-Zeiten anzeigen", ID_VIEW_SHOWKERNELTIMES
     END
     POPUP "&Fenster"
     BEGIN
@@ -51,18 +51,18 @@ BEGIN
         MENUITEM "&Standby",                  ID_SHUTDOWN_STANDBY
         MENUITEM "&Ruhezustand",                 ID_SHUTDOWN_HIBERNATE
         MENUITEM "&Ausschalten",                  ID_SHUTDOWN_POWEROFF
-        MENUITEM "&Neu starten",                   ID_SHUTDOWN_REBOOT
+        MENUITEM "Neusta&rt",                   ID_SHUTDOWN_REBOOT
         MENUITEM "%s ab&melden",                ID_SHUTDOWN_LOGOFF
         MENUITEM "&Benutzer wechseln\tWindows-Taste+L",     ID_SHUTDOWN_SWITCHUSER, GRAYED
         MENUITEM "&Computer sperren\tWindows-Taste+L",   ID_SHUTDOWN_LOCKCOMPUTER
         MENUITEM "&Trennen",                ID_SHUTDOWN_DISCONNECT, GRAYED
         MENUITEM "C&omputer abdocken",            ID_SHUTDOWN_EJECT_COMPUTER, GRAYED
     END
-    POPUP "&?"
+    POPUP "&Hilfe"
     BEGIN
         MENUITEM "&Hilfethemen\tF1", ID_HELP_TOPICS
         MENUITEM SEPARATOR
-        MENUITEM "Inf&o", ID_HELP_ABOUT
+        MENUITEM "&Über Task Manager", ID_HELP_ABOUT
     END
 END
 
@@ -99,7 +99,7 @@ BEGIN
         MENUITEM "&Nebeneinander", ID_WINDOWS_TILEVERTICALLY
         MENUITEM "&Minimieren", ID_WINDOWS_MINIMIZE
         MENUITEM "Ma&ximieren", ID_WINDOWS_MAXIMIZE
-        MENUITEM "Ü&berlappend", ID_WINDOWS_CASCADE
+        MENUITEM "Übe&rlappend", ID_WINDOWS_CASCADE
         MENUITEM SEPARATOR
         MENUITEM "&Task beenden", ID_APPLICATION_PAGE_ENDTASK
         MENUITEM "&Zu Prozess wechseln", ID_APPLICATION_PAGE_GOTOPROCESS
@@ -111,7 +111,7 @@ BEGIN
     POPUP "DUMMY"
     BEGIN
         MENUITEM "&Wiederherstellen", ID_RESTORE
-        MENUITEM "S&chließen", ID_FILE_EXIT
+        MENUITEM "&Schließen", ID_FILE_EXIT
         MENUITEM SEPARATOR
         MENUITEM "Immer im &Vordergrund", ID_OPTIONS_ALWAYSONTOP
     END
@@ -182,8 +182,8 @@ BEGIN
     GROUPBOX "Auslagerungsdatei", IDC_MEM_USAGE_FRAME, 5, 63, 60, 54, BS_LEFTTEXT, WS_EX_TRANSPARENT
     GROUPBOX "Insgesamt", IDC_TOTALS_FRAME, 5, 122, 111, 39, 0, WS_EX_TRANSPARENT
     GROUPBOX "Zugesicherter Speicher (KB)", IDC_COMMIT_CHARGE_FRAME, 5, 166, 111, 39, 0, WS_EX_TRANSPARENT
-    GROUPBOX "Physical Memory (K)", IDC_PHYSICAL_MEMORY_FRAME, 131, 122, 111, 39, 0, WS_EX_TRANSPARENT
-    GROUPBOX "Kernel Memory (K)", IDC_KERNEL_MEMORY_FRAME, 131, 166, 111, 39, 0, WS_EX_TRANSPARENT
+    GROUPBOX "Physischer Speicher (K)", IDC_PHYSICAL_MEMORY_FRAME, 131, 122, 111, 39, 0, WS_EX_TRANSPARENT
+    GROUPBOX "Kernel Speicher (K)", IDC_KERNEL_MEMORY_FRAME, 131, 166, 111, 39, 0, WS_EX_TRANSPARENT
     LTEXT "Handleanzahl", IDS_TOTALS_HANDLE_COUNT, 12, 131, 27, 8
     LTEXT "Threadanzahl", IDS_TOTALS_THREAD_COUNT, 12, 140, 27, 8
     LTEXT "Prozesse", IDS_TOTALS_PROCESS_COUNT, 12, 149, 34, 8
@@ -203,8 +203,8 @@ BEGIN
     EDITTEXT IDC_COMMIT_CHARGE_PEAK, 65, 193, 45, 8, ES_RIGHT | ES_READONLY |
              ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "Insgesamt", IDS_PHYSICAL_MEMORY_TOTAL, 137, 131, 27, 8
-    LTEXT "Available", IDS_PHYSICAL_MEMORY_AVAILABLE, 137, 140, 30, 8
-    LTEXT "System Cache", IDS_PHYSICAL_MEMORY_SYSTEM_CACHE, 137, 149, 46, 8
+    LTEXT "Verfügbar", IDS_PHYSICAL_MEMORY_AVAILABLE, 137, 140, 30, 8
+    LTEXT "System-Cache", IDS_PHYSICAL_MEMORY_SYSTEM_CACHE, 137, 149, 46, 8
     EDITTEXT IDC_PHYSICAL_MEMORY_TOTAL, 185, 131, 48, 8, ES_RIGHT | ES_READONLY |
              ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
     EDITTEXT IDC_PHYSICAL_MEMORY_AVAILABLE, 185, 140, 48, 8, ES_RIGHT | ES_READONLY |
@@ -220,11 +220,11 @@ BEGIN
              ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
     EDITTEXT IDC_KERNEL_MEMORY_NONPAGED, 185, 193, 48, 8, ES_RIGHT | ES_READONLY |
              ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
-    GROUPBOX "CPU Usage History", IDC_CPU_USAGE_HISTORY_FRAME, 74, 5, 168, 54, 0, WS_EX_TRANSPARENT
-    GROUPBOX "Memory Usage History", IDC_MEMORY_USAGE_HISTORY_FRAME, 74, 63, 168, 54, 0, WS_EX_TRANSPARENT
+    GROUPBOX "CPU-Auslastungshistorie", IDC_CPU_USAGE_HISTORY_FRAME, 74, 5, 168, 54, 0, WS_EX_TRANSPARENT
+    GROUPBOX "Speicherverwendungshistorie", IDC_MEMORY_USAGE_HISTORY_FRAME, 74, 63, 168, 54, 0, WS_EX_TRANSPARENT
     PUSHBUTTON "CPU-Auslastungsanzeige", IDC_CPU_USAGE_GRAPH, 12, 17, 47, 37, NOT WS_TABSTOP, WS_EX_CLIENTEDGE
     PUSHBUTTON "Auslagerungsdateiauslastungsanzeige", IDC_MEM_USAGE_GRAPH, 12, 75, 47, 37, NOT WS_TABSTOP, WS_EX_CLIENTEDGE
-    PUSHBUTTON "CPU Usage History", IDC_CPU_USAGE_HISTORY_GRAPH, 81, 17, 153, 37, NOT WS_TABSTOP, WS_EX_CLIENTEDGE
+    PUSHBUTTON "CPU-Auslastungshistorie", IDC_CPU_USAGE_HISTORY_GRAPH, 81, 17, 153, 37, NOT WS_TABSTOP, WS_EX_CLIENTEDGE
     PUSHBUTTON "MEM Usage History", IDC_MEM_USAGE_HISTORY_GRAPH, 81, 75, 153, 37, NOT WS_TABSTOP, WS_EX_CLIENTEDGE
 END
 
@@ -301,13 +301,13 @@ BEGIN
     CONTROL "E/A-Bytes (Lesen)", IDC_IOREADBYTES, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 7, 138, 65, 10
     CONTROL "S&itzungskennung", IDC_SESSIONID, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 7, 149, 50, 10
     CONTROL "Benut&zername", IDC_USERNAME, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 7, 160, 51, 10
-    CONTROL "Page F&aults Delta", IDC_PAGEFAULTSDELTA, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 107, 28, 72, 10
-    CONTROL "&Virtual Memory Size", IDC_VIRTUALMEMORYSIZE, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 107, 39, 77, 10
+    CONTROL "Page F%ehler Delta", IDC_PAGEFAULTSDELTA, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 107, 28, 72, 10
+    CONTROL "&Auslagerungsdatei Größe", IDC_VIRTUALMEMORYSIZE, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 107, 39, 77, 10
     CONTROL "Pa&ged Pool", IDC_PAGEDPOOL, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 107, 50, 53, 10
     CONTROL "N&on-paged Pool", IDC_NONPAGEDPOOL, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 107, 61, 67, 10
     CONTROL "Base P&riority", IDC_BASEPRIORITY, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 107, 72, 55, 10
     CONTROL "&Handle Count", IDC_HANDLECOUNT, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 107, 83, 59, 10
-    CONTROL "&Thread Count", IDC_THREADCOUNT, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 107, 94, 59, 10
+    CONTROL "&Threadanzahl", IDC_THREADCOUNT, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 107, 94, 59, 10
     CONTROL "GDI-Objekte", IDC_GDIOBJECTS, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 107, 105, 55, 10
     CONTROL "E/A (Schreiben)", IDC_IOWRITES, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 107, 116, 49, 10
     CONTROL "E/A-Bytes (Schreiben)", IDC_IOWRITEBYTES, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 107, 127, 65, 10
@@ -430,7 +430,7 @@ BEGIN
     IDS_MSG_TASKMGRWARNING "Warnung vom Task-Manager"
     IDS_MSG_WARNINGTERMINATING "WARNUNG: Das Abbrechen eines Prozesses kann zu\nunerwünschten Ergebnissen, einschließlich Datenverlust und\nSysteminstabilität, führen. Zustand und Daten des Prozesses\nwerden nicht mehr gespeichert. Sind Sie sicher, dass Sie\nden Prozess abbrechen möchten?"
     IDS_MSG_UNABLETERMINATEPRO "Kann den Prozess nicht beenden"
-    IDS_MSG_CLOSESYSTEMPROCESS "This is a critical system process. Task Manager will not end this process."
+    IDS_MSG_CLOSESYSTEMPROCESS "Das ist ein kritischer Systemprozess. Task Manager wird diesen Prozess nicht beenden."
     IDS_MSG_UNABLECHANGEPRIORITY "Kann die Priorität nicht ändern"
     IDS_MSG_WARNINGCHANGEPRIORITY "WARNUNG: Das Ändern der Prioritätsklasse dieses Prozesses\nkann zu unerwünschten Ergebnissen, einschl. Systeminstabilität, führen.\nSind Sie sicher, dass Sie sie ändern möchten?"
     IDS_MSG_TRAYICONCPUUSAGE "CPU-Auslastung: %d%%"
