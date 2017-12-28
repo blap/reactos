@@ -1,12 +1,4 @@
-/*
- * PROJECT:     Accessibility Control Panel Applet
- * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        dll/cpl/access/lang/uk-UA.rc
- * PURPOSE:     Ukraianian Language File for Accessibility Control Panel Applet
- * TRANSLATORS: Rostislav Zabolotny, Igor Paliychuk
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDD_PROPPAGEKEYBOARD DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -16,18 +8,18 @@ BEGIN
     GROUPBOX "Залипання клавіш", -1, 6, 11, 234, 62
     LTEXT "Введення комбінацій з клавішами Shift, Ctrl чи Alt, натискаючи клавіші послідовно.",
           -1, 12, 20, 222, 29
-    AUTOCHECKBOX "&Залипання клавіш", IDC_STICKY_BOX, 12, 53, 126, 14
-    PUSHBUTTON "&Налаштування", IDC_STICKY_BUTTON, 149, 53, 85, 14
+    AUTOCHECKBOX "&Use StickyKeys", IDC_STICKY_BOX, 12, 49, 126, 14
+    PUSHBUTTON "Н&алаштування", IDC_STICKY_BUTTON, 144, 49, 90, 14
     GROUPBOX "Фільтрація вводу", -1, 6, 79, 234, 67
     LTEXT "Ігнорування випадкових короткочасних або повторюваних затискань клавіш.",
           -1, 12, 89, 222, 29
-    AUTOCHECKBOX "Використовувати &фільтрацію вводу", IDC_FILTER_BOX, 12, 125, 150, 14
-    PUSHBUTTON "Н&алаштування", IDC_FILTER_BUTTON, 149, 125, 85, 14
+    AUTOCHECKBOX "Use &FilterKeys", IDC_FILTER_BOX, 12, 121, 126, 14
+    PUSHBUTTON "&Налаштування", IDC_FILTER_BUTTON, 144, 121, 90, 14
     GROUPBOX "Озвучування переключення режимів", -1, 6, 145, 234, 62
     LTEXT "При зміні стану клавіш Caps Lock, Num Lock і Scroll Lock звучить сигнал.",
           -1, 12, 161, 222, 20
-    AUTOCHECKBOX "&Озвучування", IDC_TOGGLE_BOX, 12, 188, 126, 14
-    PUSHBUTTON "На&лаштування", IDC_TOGGLE_BUTTON, 149, 188, 85, 14
+    AUTOCHECKBOX "Use &ToggleKeys", IDC_TOGGLE_BOX, 12, 184, 126, 14
+    PUSHBUTTON "Setti&ngs", IDC_TOGGLE_BUTTON, 144, 184, 90, 14
     AUTOCHECKBOX "&Додаткові відомості про роботу із клавіатурою в програмах", IDC_KEYBOARD_EXTRA,
                  6, 212, 234, 14
 END
@@ -40,7 +32,7 @@ BEGIN
     GROUPBOX "Візуальне сповіщення", -1, 6, 11, 234, 98
     LTEXT "Звукові сигнали системи супроводжуються візуальною інформацією.",
           -1, 12, 20, 222, 29
-    AUTOCHECKBOX "Віз&уальне сповіщення", IDC_SENTRY_BOX, 12, 49, 92, 14
+    AUTOCHECKBOX "Віз&уальне сповіщення", IDC_SENTRY_BOX, 12, 49, 90, 14
     LTEXT "Інформувати користувача:", IDC_SENTRY_TEXT, 12, 72, 222, 11
     COMBOBOX IDC_SENTRY_COMBO, 12, 83, 222, 56,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
@@ -107,7 +99,7 @@ BEGIN
     LTEXT "Використання альтернативних пристроїв вводу, які заміняють мишу і клавіатуру.",
           -1, 12, 124, 222, 20
     AUTOCHECKBOX "&Альтернативні пристрої вводу", IDC_SERIAL_BOX, 12, 142, 126, 14
-    PUSHBUTTON "&Налаштування", IDC_SERIAL_BUTTON, 144, 142, 90, 14
+    PUSHBUTTON "На&лаштування", IDC_SERIAL_BUTTON, 144, 142, 90, 14
     GROUPBOX "Адміністративні параметри", -1, 6, 169, 234, 47
     AUTOCHECKBOX "Зас&тосувати до робочого стола входу до системи", IDC_ADMIN_LOGON_BOX,
                  12, 178, 222, 14
@@ -149,11 +141,11 @@ BEGIN
     AUTOCHECKBOX "&Використовувати швидкий виклик", IDC_FILTER_ACTIVATE_CHECK, 12, 49, 126, 14
     GROUPBOX "Налаштування фільтру", -1, 6, 79, 234, 79
     AUTORADIOBUTTON "&Ігнорувати повторні натискання", IDC_FILTER_BOUNCE_RADIO,
-                    12, 91, 126, 11, WS_GROUP | WS_TABSTOP
+                    12, 91, 120, 11, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "Ігнорувати &короткочасні натис-\nнення і зменшити їх частоту", IDC_FILTER_REPEAT_RADIO,
                     12, 106, 120, 20, BS_TOP | BS_MULTILINE
     PUSHBUTTON "&Налаштування", IDC_FILTER_BOUNCE_BUTTON, 144, 88, 90, 14, WS_GROUP
-    PUSHBUTTON "На&лаштування", IDC_FILTER_REPEAT_BUTTON, 144, 106, 90, 14, WS_GROUP
+    PUSHBUTTON "S&ettings", IDC_FILTER_REPEAT_BUTTON, 144, 106, 90, 14, WS_GROUP
     LTEXT "Н&атисніть тут щоб перевірити налаштування:", -1, 12, 129, 222, 11
     EDITTEXT IDC_FILTER_TEST_EDIT, 12, 138, 222, 14, WS_GROUP | ES_AUTOHSCROLL
     GROUPBOX "Інформування", -1, 6, 161, 234, 41
@@ -207,12 +199,12 @@ BEGIN
                  12, 49, 222, 14
     GROUPBOX "Швидкість руху вказівника", -1, 6, 83, 234, 83
     LTEXT "&Найбільша:", -1, 12, 96, 48, 11
-    LTEXT "нижче", -1, 66, 96, 24, 11
+    LTEXT "нижче", -1, 66, 96, 18, 11
     CONTROL "", IDC_MOUSEKEYS_SPEED_TRACK, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP,
             90, 94, 114, 20
     LTEXT "вище", -1, 204, 96, 18, 11
     LTEXT "&Прискорення:", -1, 12, 123, 48, 11
-    LTEXT "нижче", -1, 66, 123, 24, 11
+    LTEXT "нижче", -1, 66, 123, 18, 11
     CONTROL "", IDC_MOUSEKEYS_ACCEL_TRACK, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP,
             90, 121, 114, 20
     LTEXT "вище", -1, 204, 123, 18, 11
