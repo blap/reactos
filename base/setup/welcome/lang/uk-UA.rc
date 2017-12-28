@@ -1,6 +1,4 @@
-/* Ukrainian translation by Artem Reznikov */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 /* String Tables */
 
