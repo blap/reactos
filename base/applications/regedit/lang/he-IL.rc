@@ -1,4 +1,4 @@
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -268,11 +268,12 @@ END
 
 STRINGTABLE
 BEGIN
-    ID_REGISTRY_MENU "Contains commands for working with the whole registry"
-    ID_EDIT_MENU "Contains commands for editing values or keys"
-    ID_VIEW_MENU "Contains commands for customising the registry window"
-    ID_FAVOURITES_MENU "Contains commands for accessing frequently used keys"
-    ID_HELP_MENU "Contains commands for displaying help and information about registry editor"
+    ID_REGISTRY_MENU "מכיל פקודות לעבודה עם כל הרישום"
+    ID_EDIT_MENU "Contains commands for working with the whole registry
+ "
+    ID_VIEW_MENU "מכיל פקודות להתאמה אישית של חלון הרישום"
+    ID_FAVOURITES_MENU "מכיל פקודות לגישה למפתחות בשימוש תכוף"
+    ID_HELP_MENU "מכיל פקודות להצגת עזרה ומידע על עורך הרישום"
     ID_EDIT_NEW_MENU "Contains commands for creating new keys or values"
 END
 
@@ -284,7 +285,7 @@ BEGIN
     ID_EDIT_NEW_BINARYVALUE "Adds a new binary value"
     ID_EDIT_NEW_DWORDVALUE "Adds a new double word value"
     ID_REGISTRY_IMPORTREGISTRYFILE "Imports a text file into the registry"
-    ID_REGISTRY_EXPORTREGISTRYFILE "Exports all or part of the registry to a text file"
+    ID_REGISTRY_EXPORTREGISTRYFILE "יצוא כל או חלק של הרישום לקובץ טקסט"
     ID_REGISTRY_LOADHIVE "Loads a hive file into the registry"
     ID_REGISTRY_UNLOADHIVE "Unloads a hive from the registry"
     ID_REGISTRY_CONNECTNETWORKREGISTRY "Connects to a remote computer's registry"
@@ -397,7 +398,7 @@ BEGIN
     IDS_IMPORT_PROMPT "Adding information can unintentionally change or delete values and cause components to stop working correctly.\nIf you do not trust the source of this information in '%s', do not add it to registry.\n\nAre you sure you want to continue?"
     IDS_IMPORT_OK "The keys and values contained in '%s' have been successfully added to the registry."
     IDS_IMPORT_ERROR "Cannot import '%s': Error opening the file. There may be a disk, file system error or file may not exist."
-    IDS_EXPORT_ERROR "Cannot export '%s': Error creating or writing to the file. There may be a disk or file system error."
+    IDS_EXPORT_ERROR "אין אפשרות לייצא את '% s': שגיאה ביצירת הקובץ או בכתיבה שלו. ייתכן שקיימת שגיאת דיסק או מערכת קבצים."
 END
 
 STRINGTABLE
@@ -512,11 +513,11 @@ BEGIN
     GROUPBOX "חפש ב", IDC_STATIC, 7, 25, 63, 51
     LTEXT "Fi&nd what:", IDC_STATIC, 7, 8, 37, 10
     EDITTEXT IDC_FINDWHAT, 47, 7, 142, 13, ES_AUTOHSCROLL
-    CONTROL "מפתחות", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Keys", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 36, 35, 8
-    CONTROL "ערכים", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Values", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 48, 36, 8
-    CONTROL "מידע", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Data", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 60, 42, 8
     CONTROL "Match &whole string only", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 32, 94, 13
