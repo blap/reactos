@@ -1,0 +1,69 @@
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
+
+STRINGTABLE
+BEGIN
+    IDS_USAGE "Escribe ""EVENTCREATE /?"" para información de uso.\n"
+    IDS_HELP "\n\
+EVENTCREATE [/S computer [/U [domain\\]user [/P password]]] /ID EventID\n\
+            {[/L logname] | [/SO source]} /T type /C category /D description\n\
+\n\
+Description:\n\
+    This tool enables an administrator to create a custom event in\n\
+    a specified event log.\n\
+\n\
+Parameters:\n\
+    /S  computer          Specifies the remote computer where to connect.\n\
+\n\
+    /U  [domain\\]user     Specifies the user account under which the command\n\
+                          should execute.\n\
+\n\
+    /P  [password]        Specifies the password of the user account.\n\
+                          Prompts for input if omitted.\n\
+\n\
+    /L  logname           Specifies the name of the log where the event will be\n\
+                          created. The valid names are:\n\
+                          Application, System, Security\n\
+                          (the latter is reserved only for the SYSTEM account).\n\
+\n\
+    /SO source            Specifies the source name to use for the event\n\
+                          (if not specified, the default source name\n\
+                           will be 'eventcreate').\n\
+                          A valid source can be any string and should represent\n\
+                          the application or the component that is generating\n\
+                          the event.\n\
+\n\
+    /T  type              Specifies the type of event to create.\n\
+                          The valid types are: SUCCESS, ERROR, WARNING,\n\
+                          INFORMATION.\n\
+\n\
+    /C  category          Specifies the event category (integer) for the event.\n\
+\n\
+    /ID EventID           Specifies the event ID for the event. This must be\n\
+                          an integer between 0 and 65535.\n\
+\n\
+    /D  description       Specifies the description to use for the newly\n\
+                          created event.\n\
+\n\
+    /?                    Displays this help screen.\n\
+"
+    IDS_INVALIDSWITCH "Argumento no válido - '%s'\n"
+    IDS_BADSYNTAX_0 "Syntax de línea de comandos incorrecta.\n"
+    IDS_BADSYNTAX_1 "Sintaxis de línea de comandos incorrecta. La opción '%s' requiere un valor. \n"
+    IDS_BADSYNTAX_2 "Sintaxis de línea de comandos incorrecta. El valor para la opción '%s' no puede esta vacio.\n"
+    IDS_BADSYNTAX_3 "Sintaxis de línea de comandos incorrecta. El valor '%s' no es válido para la opción '%s'.\n"
+    IDS_BADSYNTAX_4 "Sintaxis de línea de comandos incorrecta. El valor no puede ser usado para la opción '%s'.\n"
+    IDS_BADSYNTAX_5 "Sintaxis de línea de comandos incorrecta. La opción '%s' no esta permitida mas de %lu veces.\n"
+    IDS_BADSYNTAX_6 "Sintaxis de línea de comandos incorrecta. La opción obligatoria '%s' requiere está ausente.\n"
+    // IDS_BADSYNTAX_7 "Sintaxis de línea de comandos incorrecta. El valor para la opción '%s' está fuera del rango permitido.\n"
+    IDS_BADSYNTAX_7 "Sintaxis de línea de comandos incorrecta. El valor para la opción '%s' está fuera del rango permitido.\n"
+
+    IDS_LOG_NOT_FOUND "El registro '%s' no existe. No se puede crear el evento.\n"
+    IDS_SOURCE_NOCREATE "La nueva fuente no se puede crear porque no se especifica el nombre del registro.\nPor favor, utilice el modificador /L para especificar el nombre del registro.\n"
+    IDS_SOURCE_EXISTS "La fuente ya existe en el registro de '%s' y no puede ser duplicada.\n"
+    IDS_SOURCE_NOT_CUSTOM "El parámetro Source se utiliza para identificar los comandos/aplicaciones customizados\n(no las aplicaciones instaladas).\n"
+
+    IDS_SUCCESS_1   "Operación éxito: se ha creado un evento de tipo '%s' en el registro '%s'.\n"
+    IDS_SUCCESS_2   "Operación exitosa: un evento de tipo '%s' ha sido creado con la fuente '%s'. \n"
+    IDS_SUCCESS_3   "Operación exitosa: un evento de tipo '%s' ha sido created\nen el registro '%s' con la fuente '%s'.\n"
+    IDS_SWITCH_UNIMPLEMENTED "La opción '%s' no está actualmente soportada, disculpen las inconveniencias! \n"
+END
