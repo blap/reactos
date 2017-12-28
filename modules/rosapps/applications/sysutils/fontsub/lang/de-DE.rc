@@ -11,7 +11,7 @@
 /* UTF-8 */
 #pragma code_page(65001)
 
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 1 MENU
 BEGIN
@@ -55,23 +55,23 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_TITLE,          "Font Substitute Editor"
-    IDS_FONTNAME,       "Schriftname"
-    IDS_SUBSTITUTE,     "Ersetzung"
-    IDS_ENTERNAME,      "(Geben Sie einen Schriftnamen ein...)"
+    IDS_TITLE,          "Font Substitutes Editor"
+    IDS_FONTNAME,       "Font Name"
+    IDS_SUBSTITUTE,     "Substitute"
+    IDS_ENTERNAME,      "(Please enter a font name...)"
     IDS_IMPORT,         "Import"
     IDS_EXPORT,         "Export"
-    IDS_CANTIMPORT,     "Import fehlgeschlagen."
-    IDS_CANTEXPORT,     "Export fehlgeschlagen."
-    IDS_INPFILTER,      "Registrierungsdateien (*.reg)|*.reg|Alle Dateien (*.*)|*.*|"
-    IDS_OUTFILTER,      "Registrierungsdateien (*.reg)|*.reg|"
-    IDS_QUERYUPDATE,    "Ersetzungsinfo wurde verändert. Registrierung aktualisieren?"
-    IDS_ALREADYEXISTS,  "Der selbe Name existiert bereits."
-    IDS_ENTERNAME2,     "Geben Sie den Schriftnamen ein."
-    IDS_QUERYDELETE,    "Möchten Sie das Item wirklich löschen?"
-    IDS_CANTOPENKEY,    "Registrierungsschlüssel konnte nicht geöffnet werden."
-    IDS_REBOOTNOW,      "Registrierung wurde aktualisiert. Möchten Sie das System Neustarten?"
-    IDS_ABOUT,          "FontSub (Font Substitute Editor) Version 0.5\r\nvon Katayama Hirofumi MZ und dem ReactOS Team\r\n\r\nDiese Software wurde unter CC0 1.0 Lizenz veröffentlicht."
+    IDS_CANTIMPORT,     "Could not import."
+    IDS_CANTEXPORT,     "Could not export."
+    IDS_INPFILTER,      "Registry Files (*.reg)|*.reg|All Files (*.*)|*.*|"
+    IDS_OUTFILTER,      "Registry Files (*.reg)|*.reg|"
+    IDS_QUERYUPDATE,    "Substitutes info has been modified. Update registry now?"
+    IDS_ALREADYEXISTS,  "The same name already exists."
+    IDS_ENTERNAME2,     "Enter the font name."
+    IDS_QUERYDELETE,    "Do you really want to delete this item?"
+    IDS_CANTOPENKEY,    "Could not open the registry key."
+    IDS_REBOOTNOW,      "Registry was updated. Reboot system now?"
+    IDS_ABOUT,          "FontSub (Font Substitute Editor) Version 0.5\r\nby Katayama Hirofumi MZ and The ReactOS Team\r\n\r\nThis software was released under CC0 1.0 license."
 END
 
 IDD_ADD DIALOGEX 0, 0, 315, 65
