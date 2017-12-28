@@ -1,3 +1,11 @@
+/*
+ * PROJECT:     PAINT for ReactOS
+ * LICENSE:     LGPL
+ * FILE:        base/applications/mspaint/lang/en-US.rc
+ * PURPOSE:     US-English Language resource file
+ * TRANSLATORS: first times touched from en-GB.rc file by Mario Kacmar
+ */
+
 LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 ID_MENU MENU
@@ -12,7 +20,7 @@ BEGIN
         MENUITEM "From Scanner or Camera...", IDM_FILEFROMSCANNERORCAMERA
         MENUITEM SEPARATOR
         MENUITEM "Page View", IDM_FILEPAGEVIEW
-        MENUITEM "Page Setup...", IDM_FILEPAGESETUP
+        MENUITEM "Configuration de page...", IDM_FILEPAGESETUP
         MENUITEM "Print...\tCtrl+P", IDM_FILEPRINT
         MENUITEM SEPARATOR
         MENUITEM "Send...", IDM_FILESEND
