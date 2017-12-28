@@ -1,10 +1,4 @@
-/*
- * FILE:       base/system/runonce/lang/ro-RO.rc
- *             ReactOS Project (http://www.reactos.org)
- * TRANSLATOR: Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDD_RUNONCE_DLG DIALOGEX 0, 0, 239, 170
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
