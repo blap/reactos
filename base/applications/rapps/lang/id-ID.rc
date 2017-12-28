@@ -1,0 +1,248 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+IDR_MAINMENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Setelan", ID_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "&Keluar", ID_EXIT
+    END
+    POPUP "&Program"
+    BEGIN
+        MENUITEM "&Install\tCtrl+Enter", ID_INSTALL
+        MENUITEM "&Copot pemasangan\tCtrl+Del", ID_UNINSTALL
+        MENUITEM "&Modifikasi", ID_MODIFY
+        MENUITEM SEPARATOR
+        MENUITEM "&Hapus dari Registry", ID_REGREMOVE
+        MENUITEM SEPARATOR
+        MENUITEM "&Segarkan\tF5", ID_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "Memperbarui Da&tabase\tCtrl+F5", ID_RESETDB
+    END
+    POPUP "Bantuan"
+    BEGIN
+        MENUITEM "Help\tF1", ID_HELP, GRAYED
+        MENUITEM "&Tentang", ID_ABOUT
+    END
+END
+
+IDR_LINKMENU MENU
+BEGIN
+    POPUP "muncul"
+    BEGIN
+        MENUITEM "&Open link in a browser", ID_OPEN_LINK
+        MENUITEM "&Copy link to clipboard", ID_COPY_LINK
+    END
+END
+
+IDR_APPLICATIONMENU MENU
+BEGIN
+    POPUP "muncul"
+    BEGIN
+        MENUITEM "&Install\tCtrl+Enter", ID_INSTALL
+        MENUITEM "&Copot pemasangan\tCtrl+Del", ID_UNINSTALL
+        MENUITEM "&Modifikasi", ID_MODIFY
+        MENUITEM SEPARATOR
+        MENUITEM "&Hapus dari Registry", ID_REGREMOVE
+        MENUITEM SEPARATOR
+        MENUITEM "&Segarkan\tF5", ID_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "Memperbarui Da&tabase\tCtrl+F5", ID_RESETDB
+    END
+END
+
+IDD_SETTINGS_DIALOG DIALOGEX 0, 0, 250, 215
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Atur"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX "Umum", -1, 4, 2, 240, 61
+    AUTOCHECKBOX "&Simpan posisi jendela", IDC_SAVE_WINDOW_POS, 15, 12, 219, 12
+    AUTOCHECKBOX "&Perbarui daftar program yang mudah diakses saat start", IDC_UPDATE_AVLIST, 15, 29, 222, 12
+    AUTOCHECKBOX "&Log instalasi dan penghapusan program", IDC_LOG_ENABLED, 15, 46, 219, 12
+    GROUPBOX "Download", -1, 4, 65, 240, 51
+    LTEXT "Folder unduhan:", -1, 16, 75, 100, 9
+    EDITTEXT IDC_DOWNLOAD_DIR_EDIT, 15, 86, 166, 12, WS_CHILD | WS_VISIBLE | WS_GROUP | ES_AUTOHSCROLL
+    PUSHBUTTON "&Memilih", IDC_CHOOSE, 187, 85, 50, 14
+    AUTOCHECKBOX "&Hapus penginstal program setelah penginstalan", IDC_DEL_AFTER_INSTALL, 16, 100, 218, 12
+    GROUPBOX "Proxy", -1, 4, 116, 240, 76
+    CONTROL "Pengaturan proxy sistem", IDC_PROXY_DEFAULT, "Button", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 15, 130, 210, 10
+    CONTROL "Langsung (Tidak ada proxy)", IDC_NO_PROXY, "Button", BS_AUTORADIOBUTTON | WS_TABSTOP, 15, 145, 210, 10
+    CONTROL "Proxy", IDC_USE_PROXY, "Button", BS_AUTORADIOBUTTON | WS_TABSTOP, 15, 160, 74, 10
+    EDITTEXT IDC_PROXY_SERVER, 90, 160, 147, 12, ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT "Tidak ada proxy untuk", -1, 27, 175, 64, 10
+    EDITTEXT IDC_NO_PROXY_FOR, 90, 175, 147, 12, ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON "Standar", IDC_DEFAULT_SETTINGS, 8, 195, 60, 14
+    PUSHBUTTON "Oke", IDOK, 116, 195, 60, 14
+    PUSHBUTTON "Membatalkan", IDCANCEL, 181, 195, 60, 14
+END
+
+IDD_INSTALL_DIALOG DIALOGEX 0, 0, 216, 97
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Instalasi program"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "...", IDC_INSTALL_TEXT, 4, 5, 209, 35
+    AUTORADIOBUTTON "&Pasang dari disk (CD atau DVD)", IDC_CD_INSTALL, 10, 46, 197, 11, WS_GROUP
+    AUTORADIOBUTTON "&Unduh dan pasang", IDC_DOWNLOAD_INSTALL, 10, 59, 197, 11, NOT WS_TABSTOP
+    PUSHBUTTON "Oke", IDOK, 86, 78, 60, 14
+    PUSHBUTTON "Membatalkan", IDCANCEL, 150, 78, 60, 14
+END
+
+IDD_DOWNLOAD_DIALOG DIALOGEX 0, 0, 220, 220
+STYLE DS_SHELLFONT | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION | WS_VISIBLE 
+CAPTION "Mengunduh %ls..."
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL "Kemajuan1", IDC_DOWNLOAD_PROGRESS, "msctls_progress32", WS_BORDER | PBS_SMOOTH, 10, 10, 200, 12
+    EDITTEXT IDC_DOWNLOAD_STATUS, 10, 28, 200, 22, ES_CENTER | ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_DISABLED | NOT WS_BORDER
+    PUSHBUTTON "Membatalkan", IDCANCEL, 85, 53, 50, 15, WS_GROUP | WS_TABSTOP
+END
+
+IDD_ABOUT_DIALOG DIALOGEX 22, 16, 190, 66
+STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | DS_MODALFRAME
+CAPTION "Tentang"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "ReactOS Applications Manager\nCopyright (C) 2009\nby Dmitry Chapyshev (dmitry@reactos.org)", IDC_STATIC, 48, 7, 130, 39
+    PUSHBUTTON "Tutup", IDOK, 133, 46, 50, 14
+    ICON IDI_MAIN, IDC_STATIC, 10, 10, 7, 30
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TOOLTIP_INSTALL "Memasang"
+    IDS_TOOLTIP_UNINSTALL "Uninstall"
+    IDS_TOOLTIP_MODIFY "Memodifikasi"
+    IDS_TOOLTIP_SETTINGS "Atur"
+    IDS_TOOLTIP_REFRESH "Segarkan"
+    IDS_TOOLTIP_UPDATE_DB "Update Database"
+    IDS_TOOLTIP_EXIT "Keluar"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_APP_NAME "Nama"
+    IDS_APP_INST_VERSION "Versi"
+    IDS_APP_DESCRIPTION "Deskripsi"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_INFO_VERSION "\nVersi: "
+    IDS_INFO_DESCRIPTION "\nDeskripsi: "
+    IDS_INFO_PUBLISHER "\nPenerbit: "
+    IDS_INFO_HELPLINK "\ nPanduan Bantuan: "
+    IDS_INFO_HELPPHONE "\nTelepon Bantuan: "
+    IDS_INFO_README "\nBaca aku: "
+    IDS_INFO_REGOWNER "\nPemilik Terdaftar: "
+    IDS_INFO_PRODUCTID "\nIDProduct: "
+    IDS_INFO_CONTACT "\nKontak: "
+    IDS_INFO_UPDATEINFO "\ nUpdate Informasi: "
+    IDS_INFO_INFOABOUT "\nInformation tentang: "
+    IDS_INFO_COMMENTS "\nKomentar: "
+    IDS_INFO_INSTLOCATION "Lokasi \nInstall: "
+    IDS_INFO_INSTALLSRC "sumber \nInstall: "
+    IDS_INFO_UNINSTALLSTR "\nUninstall Tali: "
+    IDS_INFO_MODIFYPATH "jalan \nModify: "
+    IDS_INFO_INSTALLDATE "\nInstall Tanggal: "
+END
+
+STRINGTABLE
+BEGIN
+    IDS_AINFO_VERSION "\nVersi: "
+    IDS_AINFO_AVAILABLEVERSION "\nVersi Tersedia: "
+    IDS_AINFO_DESCRIPTION "\nDeskripsi: "
+    IDS_AINFO_SIZE "\nUkuran: "
+    IDS_AINFO_URLSITE "\nHalaman Utama: "
+    IDS_AINFO_LICENSE "\nLisensi: "
+    IDS_AINFO_URLDOWNLOAD "\nDownload: "
+    IDS_AINFO_LANGUAGES "\nBahasa: "
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CAT_AUDIO "Suara"
+    IDS_CAT_DEVEL "Pengembangan"
+    IDS_CAT_DRIVERS "Supir"
+    IDS_CAT_EDU "Edukasi"
+    IDS_CAT_ENGINEER "Teknik"
+    IDS_CAT_FINANCE "Keuangan"
+    IDS_CAT_GAMES "Permainan & menyenangkan"
+    IDS_CAT_GRAPHICS "Grafik"
+    IDS_CAT_INTERNET "Jaringan internet"
+    IDS_CAT_LIBS "Perpustakaan"
+    IDS_CAT_OFFICE "Kantor"
+    IDS_CAT_OTHER "Lainnya"
+    IDS_CAT_SCIENCE "Ilmu"
+    IDS_CAT_TOOLS "Alat"
+    IDS_CAT_VIDEO "Video"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_APPTITLE "Manajer Aplikasi ReactOS"
+    IDS_SEARCH_TEXT "Cari..."
+    IDS_INSTALL "Memasang"
+    IDS_UNINSTALL "Uninstall"
+    IDS_MODIFY "Memodifikasi"
+    IDS_APPS_COUNT "Jumlah aplikasi: %d; Dipilih: %d"
+    IDS_WELCOME_TITLE "Selamat datang di Manajer Aplikasi ReactOS!\n\n"
+    IDS_WELCOME_TEXT "Pilih kategori di sebelah kiri, lalu pilih aplikasi untuk menginstal atau uninstall. \nreactOS Web Site: "
+    IDS_WELCOME_URL "http://www.reactos.org"
+    IDS_INSTALLED "Dipasang"
+    IDS_AVAILABLEFORINST "Tersedia untuk instalasi"
+    IDS_UPDATES "Pembaruan"
+    IDS_APPLICATIONS "Aplikasi"
+    IDS_CHOOSE_FOLDER_TEXT "Pilih folder yang akan menyimpan Downloads:"
+    IDS_CHOOSE_FOLDER_ERROR "Folder yang Anda tentukan tidak ada. Menciptakannya?"
+    IDS_APP_REG_REMOVE "Yakin ingin menghapus data pada program yang terinstal dari registri?"
+    IDS_INFORMATION "Informasi"
+    IDS_UNABLE_TO_DOWNLOAD "Tidak dapat mendownload paketnya! Alamat tidak ditemukan!"
+    IDS_UNABLE_TO_DOWNLOAD2 "Tidak dapat mendownload paketnya! Periksa Koneksi Internet!"
+    IDS_UNABLE_TO_REMOVE "Tidak dapat menghapus data pada program dari registri!"
+    IDS_UNABLE_TO_INSTALL "Tidak dapat membuka installer!"
+    IDS_CERT_DOES_NOT_MATCH "Verifikasi sertifikat SSL gagal."
+    IDS_INTEG_CHECK_TITLE "Memverifikasi integritas paket..."
+    IDS_INTEG_CHECK_FAIL "Paket tidak lolos pemeriksaan integritas, mungkin sudah rusak atau rusak saat mendownload. Menjalankan perangkat lunak tidak disarankan."
+    IDS_INTERRUPTED_DOWNLOAD "Unduhan diinterupsi. Periksa koneksi ke Internet."
+    IDS_UNABLE_TO_WRITE "Tidak dapat menulis ke disk. Disk mungkin berkapasitas."
+    IDS_SELECT_ALL "Pilih/Hapus Pilih Semua"
+    IDS_INSTALL_SELECTED "Instalasi yang dipilih"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STATUS_INSTALLED "Dipasang"
+    IDS_STATUS_NOTINSTALLED "Tidak terpasang"
+    IDS_STATUS_DOWNLOADED "Diunduh"
+    IDS_STATUS_UPDATE_AVAILABLE "Pembaruan tersedia"
+    IDS_STATUS_DOWNLOADING "Mengunduh…"
+    IDS_STATUS_INSTALLING "Memasang…"
+    IDS_STATUS_WAITING "Menunggu untuk menginstal…"
+    IDS_STATUS_FINISHED "Selesai"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LICENSE_OPENSOURCE "Sumber Terbuka"
+    IDS_LICENSE_FREEWARE "Gratisan"
+    IDS_LICENSE_TRIAL "Percobaan/Demo"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LANGUAGE_AVAILABLE_TRANSLATION "Mendukung bahasa Anda"
+    IDS_LANGUAGE_NO_TRANSLATION "Mendukung bahasa lain"
+    IDS_LANGUAGE_ENGLISH_TRANSLATION "Mendukung bahasa Inggris"
+    IDS_LANGUAGE_SINGLE "Bahasa tunggal"
+    IDS_LANGUAGE_MORE_PLACEHOLDER " (+%d lebih)"
+    IDS_LANGUAGE_AVAILABLE_PLACEHOLDER " (+%d tersedia)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DL_DIALOG_DB_DISP "Aplikasi Database"
+    IDS_DL_DIALOG_DB_DOWNLOAD_DISP "Memperbarui Database..."
+END
