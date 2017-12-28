@@ -1,20 +1,20 @@
-LANGUAGE LANG_INDONESIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
 
 STRINGTABLE
 BEGIN
-    STRING_HELP "Pemakaian: %s drive: [-FS:file-system] [-V:label] [-Q] [-A:size] [-C]\n\n\
-  [drive:]         Menetapkan drive yang akan diformat.\n\
-  -FS:file-system  Menetapkan tipe sistem file (%s).\n\
-  -V:label         Menetapkan label volume.\n\
-  -Q               Melakukan format cepat.\n\
-  -A:size          Mengabaikan besar unit alokasi standar. Setelan standar\n\
-                   sangat direkomendasikan untuk penggunaan umum\n\
-                   NTFS mendukung 512, 1024, 2048, 4096, 8192, 16K, 32K, 64K.\n\
-                   FAT mendukung 8192, 16K, 32K, 64K, 128K, 256K.\n\
-                   Kompresi NTFS tidak didukung untuk ukuran unit alokasi\n\
-                   di atas 4096.\n\
-  -C               File dibuat pada volume yang baru standarnya akan\n\
-                   dikompres.\n\n"
+    STRING_HELP "Usage: %s drive: [-FS:file-system] [-V:label] [-Q] [-A:size] [-C]\n\n\
+  [drive:]         Specifies the drive to format.\n\
+  -FS:file-system  Specifies the type of file system (%s).\n\
+  -V:label         Specifies volume label.\n\
+  -Q               Performs a quick format.\n\
+  -A:size          Overrides the default allocation unit size. Default settings\n\
+                   are strongly recommended for general use\n\
+                   NTFS supports 512, 1024, 2048, 4096, 8192, 16K, 32K, 64K.\n\
+                   FAT supports 8192, 16K, 32K, 64K, 128K, 256K.\n\
+                   NTFS compression is not supported for allocation unit sizes\n\
+                   above 4096.\n\
+  -C               Files created on the new volume will be compressed by\n\
+                   default.\n\n"
     STRING_COMPLETE "%lu persen selesai.\r"
     STRING_FORMAT_FAIL "FormatEx tidak bisa diselesaikan dengan sukses.\n\n"
     STRING_NO_SUPPORT "Operasi Tida Didukung"
@@ -28,8 +28,8 @@ BEGIN
     STRING_FILESYSTEM "Tipe sistem file adalah %s.\n"
     STRING_LABEL_NAME_EDIT "Masukkan label volume saat ini untuk drive %C: "
     STRING_ERROR_LABEL "Label volume yang dimasukan untuk drive ini tidak benar.\n"
-    STRING_YN_FORMAT "\nPERINGATAN, SELURUH DATA PADA DISK NON_REMOVABLE\n\
-DRIVE %C: AKAN HILANG!\nLanjutkan dengan Format (Y/T)? "
+    STRING_YN_FORMAT "\nWARNING, ALL DATA ON NON_REMOVABLE DISK\n\
+DRIVE %C: WILL BE LOST!\nProceed with Format (Y/N)? "
     STRING_YES_NO_FAQ "YT"
     STRING_VERIFYING "Memverifikasi"
     STRING_FAST_FMT "Memformat Cepat"
