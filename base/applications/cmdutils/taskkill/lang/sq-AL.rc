@@ -1,12 +1,8 @@
-/* TRANSLATOR : Ardit Dani (Ard1t) (ardit.dani@gmail.com)
-* DATE OF TR: 29-11-2013
-*/
-
-LANGUAGE LANG_ALBANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ALBANIAN, SUBLANG_ALBANIAN_ALBANIA
 
 STRINGTABLE
 {
-    STRING_USAGE, "Usage: taskkill [/?] [/f] [/im ProcessName | /pid ProcessID]\n"
+    STRING_USAGE, "Sintaksa e kësaj komande është:\n\nREG [ ADD | DELETE | QUERY ]\nREG Komandë /?\n"
     STRING_INVALID_OPTION, "Gabim: Panjohur ose i pavlefshëm opsioni linjes komandes i specifikuar.\n"
     STRING_INVALID_PARAM, "Gabim: Pavlefshëm parametri i specifikuar ne linjen e komandes.\n"
     STRING_MISSING_OPTION, "Gabim: Njera nga opsionet /im ose /pid duhet te specifikohet.\n"
