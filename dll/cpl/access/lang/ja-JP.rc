@@ -1,9 +1,9 @@
-LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+LANGUAGE LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN
 
 IDD_PROPPAGEKEYBOARD DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "キーボード"
-FONT 9, "MS UI Gothic", 0, 0, 0x0
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "固定キー機能", -1, 6, 11, 234, 62
     LTEXT "固定キー機能を使うと、キーを同時に押さなくても、Shift、Ctrl、Alt キーの機能が使えます。",
@@ -27,7 +27,7 @@ END
 IDD_PROPPAGESOUND DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "サウンド"
-FONT 9, "MS UI Gothic", 0, 0, 0x0
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "サウンド通知", -1, 6, 11, 234, 98
     LTEXT "システムが音を鳴らすとき、視覚的に通知を出します。",
@@ -45,7 +45,7 @@ END
 IDD_PROPPAGEDISPLAY DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "画面"
-FONT 9, "MS UI Gothic", 0, 0, 0x0
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "ハイコントラスト", -1, 6, 11, 234, 62
     LTEXT "この機能を使うと、画面表示に読みやすい配色とフォントを使います。",
@@ -71,7 +71,7 @@ END
 IDD_PROPPAGEMOUSE DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "マウス"
-FONT 9, "MS UI Gothic", 0, 0, 0x0
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "マウス キー機能", -1, 6, 11, 234, 62
     LTEXT "マウス キー機能を使うと、テンキーを使ってマウス ポインタを操作できます。",
@@ -83,7 +83,7 @@ END
 IDD_PROPPAGEGENERAL DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "全般"
-FONT 9, "MS UI Gothic", 0, 0, 0x0
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "自動リセット", -1, 6, 11, 234, 47
     AUTOCHECKBOX "ユーザー補助を無効にするまでの待ち時間(&T):",
@@ -110,13 +110,13 @@ END
 IDD_STICKYKEYSOPTIONS DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Sticky Keys Settings"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Keys", -1, 6, 11, 234, 62
     LTEXT "Press the SHIFT-Key 5 times in order to activate the Sticky Keys feature.",
           -1, 12, 20, 222, 29
     AUTOCHECKBOX "A&ctivate sticky keys", IDC_STICKY_ACTIVATE_CHECK, 12, 49, 222, 14
-    GROUPBOX "Options", -1, 6, 83, 234, 44
+    GROUPBOX "オプション", -1, 6, 83, 234, 44
     AUTOCHECKBOX "&Press modifier key twice to lock", IDC_STICKY_LOCK_CHECK,
                  12, 94, 222, 14
     AUTOCHECKBOX "&Turn StickyKeys off if two keys are pressed at once", IDC_STICKY_UNLOCK_CHECK,
@@ -127,13 +127,13 @@ BEGIN
     AUTOCHECKBOX "&Show StickyKeys status on screen", IDC_STICKY_STATUS_CHECK,
                  12, 160, 222, 14
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "キャンセル", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_FILTERKEYSOPTIONS DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Filter Keys Settings"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Keyboard shortcut", -1, 6, 11, 234, 62
     LTEXT "The shortcut for FilterKeys is:  \nHold down <Right Shift> for eight seconds.",
@@ -144,8 +144,8 @@ BEGIN
                     12, 91, 120, 11, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "Ig&nore quick keystrokes and slow down the repeat rate", IDC_FILTER_REPEAT_RADIO,
                     12, 106, 120, 20, BS_TOP | BS_MULTILINE
-    PUSHBUTTON "&Settings", IDC_FILTER_BOUNCE_BUTTON, 144, 88, 90, 14, WS_GROUP
-    PUSHBUTTON "S&ettings", IDC_FILTER_REPEAT_BUTTON, 144, 106, 90, 14, WS_GROUP
+    PUSHBUTTON "設定(&S)", IDC_FILTER_BOUNCE_BUTTON, 144, 88, 90, 14, WS_GROUP
+    PUSHBUTTON "設定(&E)", IDC_FILTER_REPEAT_BUTTON, 144, 106, 90, 14, WS_GROUP
     LTEXT "&Click here and type here to test the settings:", -1, 12, 129, 222, 11
     EDITTEXT IDC_FILTER_TEST_EDIT, 12, 138, 222, 14, WS_GROUP | ES_AUTOHSCROLL
     GROUPBOX "Notifications", -1, 6, 161, 234, 41
@@ -154,26 +154,26 @@ BEGIN
     AUTOCHECKBOX "S&how FilterKey status on screen", IDC_FILTER_STATUS_CHECK,
                  12, 188, 222, 10
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "キャンセル", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_TOGGLEKEYSOPTIONS DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Toggle Keys Settings"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Keyboard shortcut", -1, 6, 11, 234, 62
     LTEXT "The shortcut for ToggleKeys is: \nHold down <Num Lock> for five seconds.",
           -1, 12, 20, 222, 29
     AUTOCHECKBOX "Use &shortcut", IDC_TOGGLE_ACTIVATE_CHECK, 12, 49, 222, 14
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "キャンセル", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_CONTRASTOPTIONS DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "High Contrast Settings"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Keyboard shortcut", -1, 6, 11, 234, 62
     LTEXT "The shortcut for High Contrast is:  \nPress <Left Alt+Left Shift+Print Screen>.",
@@ -184,13 +184,13 @@ BEGIN
     COMBOBOX IDC_CONTRAST_COMBO, 12, 103, 222, 56,
              CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "キャンセル", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_MOUSEKEYSOPTIONS DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Mouse Keys Settings"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Keyboard shortcut", -1, 6, 11, 234, 62
     LTEXT "The shortcut for Mouse Keys is:  \nPress <Left Alt+Left Shift+Num Lock>.",
@@ -216,13 +216,13 @@ BEGIN
     AUTOCHECKBOX "&Show MouseKey status on screen", IDC_MOUSEKEYS_STATUS_CHECK,
                  6, 184, 222, 14
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "キャンセル", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_BOUNCEKEYSOPTIONS DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Advanced FilterKeys Settings"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Bounce Keys", -1, 6, 11, 234, 47
     LTEXT "&Ignore keystrokes repeated faster than:", -1, 12, 21, 222, 20
@@ -231,13 +231,13 @@ BEGIN
     LTEXT "&Test area:", -1, 6, 68, 48, 11
     EDITTEXT IDC_BOUNCE_TEST_EDIT, 60, 65, 180, 14, ES_AUTOHSCROLL
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "キャンセル", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_REPEATKEYSOPTIONS DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Advanced FilterKeys Settings"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Repeat Keys", -1, 6, 11, 234, 106
     LTEXT "Override settings on the Keyboard control panel:",
@@ -257,13 +257,13 @@ BEGIN
     LTEXT "&Test area:", -1, 6, 178, 48, 11
     EDITTEXT IDC_REPEAT_TEST_EDIT, 60, 180, 180, 14, ES_AUTOHSCROLL
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "キャンセル", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_SERIALKEYSOPTIONS DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "SerialKeys Settings"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Serial Keys", -1, 6, 11, 234, 92
     LTEXT "Choose the port where you connect an alternative input device.",
@@ -275,7 +275,7 @@ BEGIN
     COMBOBOX IDC_SERIAL_BAUD_COMBO, 12, 76, 222, 74,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "キャンセル", IDCANCEL, 189, 207, 50, 14
 END
 
 STRINGTABLE
@@ -286,6 +286,6 @@ BEGIN
     IDS_SENTRY_TITLE "Flash the titlebar"
     IDS_SENTRY_WINDOW "Flash the active window"
     IDS_SENTRY_DISPLAY "Flash the desktop"
-    IDS_SECONDS "Seconds"
-    IDS_MINUTES "Minutes"
+    IDS_SECONDS "秒"
+    IDS_MINUTES "分"
 END
