@@ -48,13 +48,13 @@ BEGIN
     LTEXT "Hak istimewa administrator diperlukan untuk sebagian besar pengaturan ini.", IDC_STATIC, 12, 5, 236, 8
     GROUPBOX "Kinerja", IDC_STATIC, 6, 18, 244, 50
     LTEXT "Pilihan kinerja mengontrol bagaimana aplikasi menggunakan memori, yang mempengaruhi kecepatan komputer Anda.", IDC_STATIC, 16, 29, 228, 17
-    PUSHBUTTON "Settings", IDC_PERFOR, 194, 48, 50, 15
+    PUSHBUTTON "Pengaturan", IDC_PERFOR, 194, 48, 50, 15
     GROUPBOX "Profil pengguna", IDC_STATIC, 6, 75, 244, 48
     LTEXT "Pengaturan desktop yang terkait dengan logon Anda", IDC_STATIC, 16, 88, 228, 20
-    PUSHBUTTON "Settings", IDC_USERPROFILE, 194, 103, 50, 15
+    PUSHBUTTON "Pengatura", IDC_USERPROFILE, 194, 103, 50, 15
     GROUPBOX "Startup dan Pemulihan", IDC_STATIC, 6, 131, 244, 52
     LTEXT "Opsi startup dan pemulihan memberitahu komputer Anda bagaimana memulai dan apa yang harus dilakukan jika kesalahan menyebabkan komputer Anda berhenti.", IDC_STATIC, 16, 144, 228, 19
-    PUSHBUTTON "Settings", IDC_STAREC, 194, 162, 50, 15
+    PUSHBUTTON "Pengaturan", IDC_STAREC, 194, 162, 50, 15
     PUSHBUTTON "System Settings", IDC_SYSSETTINGS, 6, 192, 80, 15
     PUSHBUTTON "Environment Variables", IDC_ENVVAR, 88, 192, 80, 15
     PUSHBUTTON "Error Reporting", IDC_ERRORREPORT, 170, 192, 80, 15
@@ -155,7 +155,7 @@ BEGIN
     CONTROL "", IDC_USERPROFILE_LIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL |
             LVS_SHOWSELALWAYS | LVS_SORTASCENDING | WS_BORDER | WS_TABSTOP, 6, 66, 244, 85, WS_EX_CLIENTEDGE
     PUSHBUTTON "Change Type", IDC_USERPROFILE_CHANGE, 90, 156, 50, 13
-    PUSHBUTTON "Delete", IDC_USERPROFILE_DELETE, 145, 156, 50, 13
+    PUSHBUTTON "&Menghapus", IDC_USERPROFILE_DELETE, 145, 156, 50, 13
     PUSHBUTTON "Copy To", IDC_USERPROFILE_COPY, 200, 156, 50, 13
     CONTROL "Untuk membuat akun pengguna baru, buka <A> Akun Pengguna </A> di Panel Kontrol.",
             IDC_USERACCOUNT_LINK, "SysLink", WS_CHILD | WS_VISIBLE | WS_TABSTOP, 7, 175, 245, 18
