@@ -1,4 +1,4 @@
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 STRINGTABLE DISCARDABLE
 BEGIN
@@ -53,17 +53,17 @@ BEGIN
     POPUP "Color"
     BEGIN
       MENUITEM "Blanco y negro",   ID_BLACKANDWHITE
-      MENUITEM "Invertir Colores",    ID_INVERTCOLORS
+      MENUITEM "Invertir Colores",     ID_INVERTCOLORS
     END
     MENUITEM SEPARATOR
     MENUITEM "Contorno",                ID_BLUR
     MENUITEM "Afilar",             ID_SHARPEN
-    MENUITEM "Suavizar bordes",        -1, GRAYED
-    MENUITEM "Añadir Sombra",          -1, GRAYED
+    MENUITEM "Rotar",        -1, GRAYED
+    MENUITEM "Rotar",          -1, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Tamaño de la Imagen...",       -1, GRAYED
-    MENUITEM "Voltear",                -1, GRAYED
-    MENUITEM "Espejo",              -1, GRAYED
+    MENUITEM "Rotar",       -1, GRAYED
+    MENUITEM "Rotar",                -1, GRAYED
+    MENUITEM "Rotar",              -1, GRAYED
     MENUITEM "Rotar",              -1, GRAYED
 
   END
