@@ -1,8 +1,12 @@
-/* Polish translation by Caemyr - Olaf Siejka
- * PL update by wojo664 (June 2014)
+/*
+ * PROJECT:    ReactOS Event Viewer
+ * LICENSE:    GPL - See COPYING in the top level directory
+ * FILE:       base/applications/mscutils/eventvwr/lang/en-US.rc
+ * PURPOSE:    English Language File for ReactOS Event Viewer
+ * TRANSLATOR: Marc Piulachs
  */
 
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 IDM_EVENTVWR MENU
 BEGIN
@@ -109,7 +113,7 @@ BEGIN
     EDITTEXT IDC_CREATED_LABEL, 67, 69, 178, 12, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "Zmodyfikowany:", IDC_STATIC, 7, 81, 60, 8
     EDITTEXT IDC_MODIFIED_LABEL, 67, 81, 178, 12, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "Ostatnio używany:", IDC_STATIC, 7, 93, 80, 8
+    LTEXT "Ostatnio używany:", IDC_STATIC, 7, 93, 60, 8
     EDITTEXT IDC_ACCESSED_LABEL, 67, 93, 178, 12, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     GROUPBOX "Rozmiar dziennika", IDC_STATIC, 7, 106, 238, 99
     LTEXT "&Maksymalny rozmiar dziennika:", IDC_STATIC, 17, 122, 58, 8
@@ -127,7 +131,7 @@ BEGIN
     CONTROL "&Nie zastępuj zdarzeń\n(ręczne czyszczenie dziennika)", IDC_NO_OVERWRITE, "Button", BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP | WS_TABSTOP, 17, 180, 143, 20
     PUSHBUTTON "&Przywróć domyślne", IDC_RESTOREDEFAULTS, 166, 183, 70, 14
     AUTOCHECKBOX "&Użyj połączenia o małej szybkości", IDC_LOW_SPEED_CONNECTION, 7, 217, 167, 10
-    PUSHBUTTON "&Wyczyść dziennik", ID_CLEARLOG, 175, 213, 70, 14
+    PUSHBUTTON "&Clear Log", ID_CLEARLOG, 195, 213, 50, 14
 END
 
 STRINGTABLE
@@ -137,7 +141,7 @@ BEGIN
     IDS_APP_TITLE_EX "%s - %s Log na \\\\"
     IDS_STATUS_MSG "%s posiada %lu zdarzeń (listed: %lu)"
     IDS_LOADING_WAIT "Ładowanie logów zdarzeń. Proszę czekać..."
-    IDS_NO_ITEMS "Brak elementów do wyświetlenia w tym widoku." // "No events in this log."
+    IDS_NO_ITEMS "Brak elementów do wyświetlenia w tym widoku."" // ""No events in this log."
     IDS_EVENTLOG_SYSTEM "Dzienniki systemu"
     IDS_EVENTLOG_APP "Dzienniki aplikacji"
     IDS_EVENTLOG_USER "Dzienniki użytkownika"
@@ -159,7 +163,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_BYTES_FORMAT "bytes" // "%s bytes"
+    IDS_BYTES_FORMAT "bytes"" // ""%s bytes"
     // "%1!ls! (%2!ls! bytes)"
 END
 
