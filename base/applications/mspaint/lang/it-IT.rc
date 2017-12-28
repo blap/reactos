@@ -1,12 +1,12 @@
 /*
- * PROJECT:    PAINT for ReactOS
- * LICENSE:    LGPL
- * FILE:       base/applications/mspaint/lang/it-IT.rc
- * PURPOSE:    Italian Language resource file
- * TRANSLATOR: Gabriel Ilardi
+ * PROJECT:     PAINT for ReactOS
+ * LICENSE:     LGPL
+ * FILE:        base/applications/mspaint/lang/en-US.rc
+ * PURPOSE:     US-English Language resource file
+ * TRANSLATORS: first times touched from en-GB.rc file by Mario Kacmar
  */
 
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 ID_MENU MENU
 BEGIN
@@ -101,15 +101,15 @@ END
 ID_ACCELERATORS ACCELERATORS
 BEGIN
     "^N", IDM_FILENEW
-    VK_F12, IDM_FILEOPEN, CONTROL, VIRTKEY
-    VK_F12, IDM_FILESAVE, SHIFT, VIRTKEY
+    "^O", IDM_FILEOPEN
+    "^S", IDM_FILESAVE
     "^Z", IDM_EDITUNDO
     "^Y", IDM_EDITREDO
     "^X", IDM_EDITCUT
     "^C", IDM_EDITCOPY
     "^V", IDM_EDITPASTE
     VK_DELETE, IDM_EDITDELETESELECTION, VIRTKEY
-    "5", IDM_EDITSELECTALL
+    "^A", IDM_EDITSELECTALL
     "^T", IDM_VIEWTOOLBOX
     "^L", IDM_VIEWCOLORPALETTE
     "^G", IDM_VIEWSHOWGRID
