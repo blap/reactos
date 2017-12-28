@@ -1,12 +1,4 @@
-/*
- * PROJECT:    ReactOS Sound Volume Control
- * LICENSE:    GPL - See COPYING in the top level directory
- * FILE:       base/applications/sndvol32/lang/uk-UA.rc
- * PURPOSE:    Ukraianian Language File for Volume Control
- * TRANSLATOR: Artem Reznikov
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDM_MAINMENU MENU
 BEGIN
