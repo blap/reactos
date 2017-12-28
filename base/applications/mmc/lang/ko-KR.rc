@@ -1,6 +1,4 @@
-/* Korean translation by manatails007(www.manatails007.org) */
-
-LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+LANGUAGE LANG_KOREAN, SUBLANG_KOREAN
 
 IDM_CONSOLE_SMALL MENU
 BEGIN
@@ -28,7 +26,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "종료(&E)\tAlt+F4", IDM_FILE_EXIT
     END
-    POPUP "&Windows"
+    POPUP "창(&W)"
     BEGIN
         MENUITEM "List", IDM_WINDOWS_LIST
     END
