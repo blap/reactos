@@ -1,24 +1,24 @@
-LANGUAGE LANG_SPANISH, SUBLANG_DEFAULT
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 STRINGTABLE
 BEGIN
-    IDS_HELP "Administra la configuración de edición en línea de comandos del historial y de las macros.\n\
+    IDS_HELP "Manages command-line editing settings, history, and macros.\n\
 \n\
 DOSKEY [/INSERT | /OVERSTRIKE] [/EXENAME=exe] [/HISTORY] [/LISTSIZE=size]\n\
        [/REINSTALL] [/MACROS[:exe | :ALL]] [/MACROFILE=file] [macroname=[text]]\n\
 \n\
-  /INSERT             Activa el modo de inserción.\n\
-  /OVERSTRIKE         Desactiva el modo de inserción.\n\
-  /EXENAME=exename    Establece el nombre del programa para ver/cambiar el historial\n\
-                      y las macros. El valor predeterminado es cmd.exe.\n\
-  /HISTORY            Muestra el historial de comandos.\n\
-  /LISTSIZE=size      Establece el número de comandos por buffer de historial.\n\
-  /REINSTALL          Borra el historial de comandos.\n\
-  /MACROS             Muestra las definiciones de las macros.\n\
-  /MACROS:exename     Muestra las definiciones de las macros para un programa específico.\n\
-  /MACROS:ALL         Muestra las definiciones de las macros para todos los programas.\n\
-  /MACROFILE=file     Carga las definiciones de las macros desde un archivo.\n\
-  macroname           Especifica el nombre de una macro a crear.\n\
-  text                Especifica el texto de reemplazo para la macro.\n"
+  /INSERT             Enables insert mode.\n\
+  /OVERSTRIKE         Disables insert mode.\n\
+  /EXENAME=exename    Sets the name of the program to view/change history\n\
+                      and macros for. The default is cmd.exe.\n\
+  /HISTORY            Displays the command history.\n\
+  /LISTSIZE=size      Sets the number of commands per history buffer.\n\
+  /REINSTALL          Clears the command history.\n\
+  /MACROS             Displays macro definitions.\n\
+  /MACROS:exename     Displays macro definitions for a specific program.\n\
+  /MACROS:ALL         Displays macro definitions for all programs.\n\
+  /MACROFILE=file     Loads macro definitions from a file.\n\
+  macroname           Specifies the name of a macro to create.\n\
+  text                Specifies the replacement text for the macro.\n"
     IDS_INVALID_MACRO_DEF "Definición de macro inválida: %s\n"
 END
