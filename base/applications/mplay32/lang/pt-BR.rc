@@ -1,6 +1,4 @@
-/* Translation and UTF-8 Conversion by mkbu95 <mkbu95@gmail.com> (May, 2012) */
-
-LANGUAGE LANG_PORTUGUESE, SUBLANG_NEUTRAL
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
 
 IDR_MAINMENU MENU
 BEGIN
@@ -11,23 +9,23 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&Sair", IDM_EXIT
     END
-    POPUP "&Play"
+    POPUP "&Executar"
     BEGIN
-        MENUITEM "Play/&Pause\tCtrl+P", IDC_PLAY
+        MENUITEM "Tocar/&Pausar\tCtrl+P", IDC_PLAY
         MENUITEM "St&op\tCtrl+S", IDC_STOP
         MENUITEM SEPARATOR
         MENUITEM "Repea&t\tCtrl+T", IDM_REPEAT
     END
-    POPUP "&View"
+    POPUP "&Exibir"
     BEGIN
         MENUITEM "Single-Window &Mode", IDM_SWITCHVIEW
     END
     POPUP "&Device"
     BEGIN
         MENUITEM SEPARATOR
-        MENUITEM "&Properties", IDM_DEVPROPS
+        MENUITEM "&Propriedades", IDM_DEVPROPS
         MENUITEM SEPARATOR
-        MENUITEM "&Volume Control", IDM_VOLUMECTL
+        MENUITEM "&Controle de Volume", IDM_VOLUMECTL
     END
     POPUP "A&juda"
     BEGIN
@@ -46,14 +44,14 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_MODE_UNKNOWN "Unknown"
-    IDS_MODE_OPEN "Opened"
-    IDS_MODE_STOP "Stopped"
-    IDS_MODE_PLAY "Playing"
-    IDS_MODE_PAUSE "Paused"
-    IDS_MODE_RECORD "Recording"
-    IDS_MODE_SEEK "Seeking"
-    IDS_MODE_NOT_READY "Not ready"
+    IDS_MODE_UNKNOWN "Desconhecido"
+    IDS_MODE_OPEN "Aberto"
+    IDS_MODE_STOP "Parou"
+    IDS_MODE_PLAY "Reproduzindo"
+    IDS_MODE_PAUSE "Em pausa"
+    IDS_MODE_RECORD "Gravando"
+    IDS_MODE_SEEK "Buscando"
+    IDS_MODE_NOT_READY "Não está pronto"
     IDS_ALL_TYPES_FILTER "Todos os formatos"
     IDS_TOOLTIP_PLAY "Executar"
     IDS_TOOLTIP_STOP "Pausar"
@@ -62,8 +60,8 @@ BEGIN
     IDS_TOOLTIP_SEEKBACK "Procurar Anterior"
     IDS_TOOLTIP_SEEKFORW "Procurar Próximo"
     IDS_TOOLTIP_FORWARD "Pular Próxima"
-    IDS_TOOLTIP_PAUSE "Pause"
+    IDS_TOOLTIP_PAUSE "Pausar"
     IDS_APPTITLE "ReactOS Multimedia Player"
     IDS_PLAY "Executar"
-    IDS_DEFAULTMCIERRMSG "No description is available for this error."
+    IDS_DEFAULTMCIERRMSG "Nenhuma descrição está disponível para este erro."
 END
