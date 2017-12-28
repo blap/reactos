@@ -46,10 +46,10 @@ Parameters:\n\
 \n\
     /?                    Displays this help screen.\n\
 "
-    IDS_INVALIDSWITCH "Invalid switch - '%s'.\n"
-    IDS_BADSYNTAX_0 "Bad command line syntax.\n"
-    IDS_BADSYNTAX_1 "Bad command line syntax. The option '%s' requires a value.\n"
-    IDS_BADSYNTAX_2 "Bad command line syntax. The value for the option '%s' cannot be empty.\n"
+    IDS_INVALIDSWITCH "Ungültiger Parameter - '%s'.\n"
+    IDS_BADSYNTAX_0 "Ungültige Kommandozeilen Syntax.\n"
+    IDS_BADSYNTAX_1 "Ungültige Kommandozeilen Syntax. Die Option '%s' erfordert einen Wert.\n"
+    IDS_BADSYNTAX_2 "Ungültige Kommandozeilen Syntax. Der Wert für die Option '%s' kann nicht Leer sein.\n"
     IDS_BADSYNTAX_3 "Bad command line syntax. The value '%s' is not allowed for the option '%s'.\n"
     IDS_BADSYNTAX_4 "Bad command line syntax. The value cannot be specified for the option '%s'.\n"
     IDS_BADSYNTAX_5 "Bad command line syntax. The option '%s' is not allowed more than %lu times.\n"
@@ -65,5 +65,5 @@ Parameters:\n\
     IDS_SUCCESS_1   "Operation successful: an event of type '%s' has been created in the log '%s'.\n"
     IDS_SUCCESS_2   "Operation successful: an event of type '%s' has been created with the source '%s'.\n"
     IDS_SUCCESS_3   "Operation successful: an event of type '%s' has been created\nin the log '%s' with the source '%s'.\n"
-    IDS_SWITCH_UNIMPLEMENTED "The option '%s' is not currently supported, sorry for the inconvenience!\n"
+    IDS_SWITCH_UNIMPLEMENTED "Die Option '%s' wird derzeit nicht Unterstützt, wir entschuldigen uns für die Unannehmlichkeiten!\n"
 END
