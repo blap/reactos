@@ -1,0 +1,23 @@
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
+
+STRINGTABLE
+BEGIN
+    IDS_HELP "Compares the contents of two files or sets of files.\n\n\
+COMP [/L] [/A] [data1] [data2]\n\n\
+  data1      Specifies location and name of first file to compare.\n\
+  data2      Specifies location and name of second file to compare.\n\
+  /A         Display differences in ASCII characters (default: hexadecimal).\n\
+  /L         Display line numbers for differences.\n"
+    IDS_INVALIDSWITCH "Parámetro incorrecto - /%c\n"
+    IDS_BADSYNTAX "Syntax de línea de comandos incorrecta\n"
+    IDS_FILEERROR "No es posible abrir el archivo: %s\n"
+    IDS_COMPARING "Comparación de %s y %s...\n"
+    IDS_FILESIZEERROR "No se puede determinar el tamaño del archivo: %s\n"
+    IDS_SIZEDIFFERS "Los archivos son de diferentes tamaños. \n"
+    IDS_READERROR "Error leyendo archivo.\n"
+    IDS_MISMATCHLINE "Error comparando la línea %d\n"
+    IDS_MISMATCHOFFSET "Error comparando en el puntero %X\n"
+    IDS_ASCIIDIFF "archivo%d = %c\n"
+    IDS_HEXADECIMALDIFF "archivo%d = %X\n"
+    IDS_MATCH "Archivos comparados exitosamente\n"
+END
