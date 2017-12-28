@@ -1,4 +1,4 @@
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 102 DIALOGEX 0, 0, 255, 265
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -219,7 +219,7 @@ END
 
 116 DIALOGEX 0, 0, 265, 176
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
@@ -240,7 +240,7 @@ END
 
 117 DIALOGEX 0, 0, 263, 192
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
@@ -263,7 +263,7 @@ END
 
 118 DIALOGEX 0, 0, 265, 220
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
@@ -289,7 +289,7 @@ END
 
 119 DIALOGEX 0, 0, 265, 200
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
@@ -545,13 +545,13 @@ BEGIN
     GROUPBOX "Sample type", 1125, 8, 84, 215, 100, WS_GROUP
     LTEXT "Ar&ea code:", 1133, 17, 102, 52, 8
     COMBOBOX 1122, 17, 112, 52, 110, CBS_DROPDOWN | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "&Phone number:", 1135, 71, 102, 139, 8
+    LTEXT "מספר טלפון:", 1135, 71, 102, 139, 8
     EDITTEXT 1123, 73, 112, 79, 14, ES_AUTOHSCROLL
     PUSHBUTTON "Alter&nates", 1129, 154, 112, 60, 14
     LTEXT "Country/re&gion code:", 1134, 17, 132, 197, 8
     COMBOBOX 1126, 17, 143, 193, 130, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     AUTOCHECKBOX "U&se dialing rules", 1121, 17, 163, 132, 14, BS_TOP | BS_MULTILINE
-    PUSHBUTTON "Dialing &Rules", 1136, 151, 161, 60, 14
+    PUSHBUTTON "חוקי חיוג", 1136, 151, 161, 60, 14
     AUTOCHECKBOX "Sho&w icon in notification area when connected", 1120, 10, 192, 214, 19, BS_TOP | BS_MULTILINE
 END
 
@@ -564,13 +564,13 @@ BEGIN
     GROUPBOX "Sample text", 1125, 8, 55, 217, 100, WS_GROUP
     LTEXT "Ar&ea code:", 1133, 17, 72, 48, 8
     COMBOBOX 1122, 17, 83, 48, 119, CBS_DROPDOWN | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "&Phone number:", 1135, 71, 72, 146, 8
+    LTEXT "מספר טלפון:", 1135, 71, 72, 146, 8
     EDITTEXT 1123, 71, 83, 81, 14, ES_AUTOHSCROLL
     PUSHBUTTON "Alter&nates", 1129, 155, 83, 63, 14
     LTEXT "Country/re&gion code:", 1134, 17, 103, 193, 8
     COMBOBOX 1126, 17, 114, 201, 130, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     AUTOCHECKBOX "U&se dialing rules", 1121, 19, 134, 136, 12, BS_TOP | BS_MULTILINE
-    PUSHBUTTON "Dialing &Rules", 1136, 157, 132, 60, 14
+    PUSHBUTTON "חוקי חיוג", 1136, 157, 132, 60, 14
     AUTOCHECKBOX "Sho&w icon in notification area when connected", 1120, 12, 164, 209, 18, BS_TOP | BS_MULTILINE
     LTEXT "Connect using:", 1124, 8, 5, 217, 8
     CONTROL "", 1127, "SYSLISTVIEW32", WS_DISABLED | WS_BORDER | 0x0000EC0D, 7, 18, 217, 15
@@ -578,7 +578,7 @@ END
 
 157 DIALOGEX 6, 18, 235, 160
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
-CAPTION "Appearance"
+CAPTION "מראה"
 FONT 8, "MS Shell Dlg"
 BEGIN
     AUTOCHECKBOX "&Preview phone numbers before dialing", 1142, 8, 10, 224, 10, WS_GROUP
@@ -592,7 +592,7 @@ END
 
 158 DIALOGEX 6, 18, 235, 160
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
-CAPTION "Appearance"
+CAPTION "מראה"
 FONT 8, "MS Shell Dlg"
 BEGIN
     AUTOCHECKBOX "&Preview phone numbers before dialing", 1142, 8, 10, 223, 10, WS_GROUP
@@ -616,7 +616,7 @@ END
 
 162 DIALOGEX 0, 0, 230, 215
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
-CAPTION "Security"
+CAPTION "אבטחה"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Security options", 1580, 8, 3, 215, 139
@@ -632,7 +632,7 @@ BEGIN
     AUTOCHECKBOX "S&how terminal window", 1173, 14, 159, 198, 11, BS_TOP | BS_MULTILINE
     AUTOCHECKBOX "&Run script:", 1172, 14, 172, 57, 10, BS_TOP | BS_MULTILINE
     COMBOBOX 1179, 72, 171, 140, 104, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    PUSHBUTTON "&Edit...", 1182, 87, 187, 60, 14
+    PUSHBUTTON "עריכה...", 1182, 87, 187, 60, 14
     PUSHBUTTON "&Browse...", 1181, 151, 187, 60, 14
 END
 
@@ -652,13 +652,13 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Typ&e of dial-up server I am calling:", 1583, 7, 4, 219, 8
     COMBOBOX 1418, 7, 17, 215, 46, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
-    PUSHBUTTON "&Settings", 1419, 160, 35, 60, 14
+    PUSHBUTTON "הגדרות", 1419, 160, 35, 60, 14
     LTEXT "This c&onnection uses the following items:", 1684, 8, 64, 219, 10
     CONTROL "", 1251, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C40D, 7, 75, 216, 53
     PUSHBUTTON "I&nstall...", 1252, 7, 133, 67, 14
-    PUSHBUTTON "&Uninstall", 1254, 80, 133, 67, 14
-    PUSHBUTTON "P&roperties", 1253, 153, 133, 67, 14
-    GROUPBOX "Description", 1585, 9, 158, 213, 43
+    PUSHBUTTON "הסר התקנה", 1254, 80, 133, 67, 14
+    PUSHBUTTON "מאפיינים", 1253, 153, 133, 67, 14
+    GROUPBOX "תיאור", 1585, 9, 158, 213, 43
     LTEXT "", 1250, 18, 167, 195, 25
 END
 
@@ -675,7 +675,7 @@ END
 
 167 DIALOGEX 0, 0, 230, 215
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
-CAPTION "Options"
+CAPTION "אפשרויות"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Dialing options", 1289, 7, 2, 213, 64
@@ -704,7 +704,7 @@ CAPTION "New Connection Wizard"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Type the phone number below. ", -1, 7, 4, 306, 14
-    LTEXT "&Phone number:", 1308, 7, 19, 130, 8
+    LTEXT "מספר טלפון:", 1308, 7, 19, 130, 8
     EDITTEXT 1304, 7, 30, 304, 14, ES_AUTOHSCROLL
     LTEXT "You might need to include a ""1"" or the area code, or both. If you are not sure you need the extra numbers, dial the phone number on your telephone. If you hear a modem sound, the number dialed is correct.", -1, 20, 50, 291, 53
 END
@@ -752,13 +752,13 @@ BEGIN
     AUTOCHECKBOX "Show &terminal window", 1462, 15, 31, 162, 10
     AUTOCHECKBOX "&Run script:", 1463, 15, 45, 58, 10
     COMBOBOX 1334, 30, 60, 275, 88, CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
-    PUSHBUTTON "&Edit...", 1335, 180, 77, 60, 14
+    PUSHBUTTON "עריכה...", 1335, 180, 77, 60, 14
     PUSHBUTTON "&Browse...", 1465, 244, 77, 60, 14
 END
 
 173 DIALOGEX 6, 18, 230, 215
 STYLE DS_SHELLFONT | WS_CHILD | WS_VISIBLE | WS_CAPTION
-CAPTION "Dialing"
+CAPTION "חיוג"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Dialing policy", 1344, 9, 4, 213, 53, WS_GROUP
@@ -813,7 +813,7 @@ END
 
 181 DIALOGEX 6, 18, 230, 215
 STYLE DS_SHELLFONT | WS_CHILD | WS_VISIBLE | WS_CAPTION
-CAPTION "Security"
+CAPTION "אבטחה"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Authentication and encryption policy", 1367, 6, 8, 216, 103, WS_GROUP
@@ -824,13 +824,13 @@ BEGIN
     AUTOCHECKBOX "Require &strong data encryption", 1364, 41, 80, 172, 10, BS_TOP | BS_MULTILINE
     AUTOCHECKBOX "Use t&wo-way authentication", 1362, 17, 95, 194, 10, BS_TOP | BS_MULTILINE
     PUSHBUTTON "&Unsave Password", 1369, 59, 117, 80, 14, WS_GROUP
-    PUSHBUTTON "Ad&vanced...", 1368, 142, 117, 80, 14, NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON "מתקדם...", 1368, 142, 117, 80, 14, NOT WS_VISIBLE | WS_DISABLED
     AUTOCHECKBOX "&Detect file and print sharing before dialing", 1365, 7, 198, 218, 10, BS_TOP | BS_MULTILINE | NOT WS_VISIBLE | WS_DISABLED
 END
 
 182 DIALOGEX 6, 18, 248, 148
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
-CAPTION "Security"
+CAPTION "אבטחה"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Authentication and encryption policy", 1367, 7, 8, 200, 98, WS_GROUP
@@ -841,7 +841,7 @@ BEGIN
     AUTOCHECKBOX "Require &strong data encryption", 1364, 48, 79, 152, 10
     AUTOCHECKBOX "&Use current username and password ", 1366, 31, 91, 165, 10
     PUSHBUTTON "Unsave &password", 1369, 6, 114, 100, 14, WS_GROUP
-    PUSHBUTTON "&Advanced...", 1368, 109, 114, 60, 14, NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON "מתקדם...", 1368, 109, 114, 60, 14, NOT WS_VISIBLE | WS_DISABLED
     AUTOCHECKBOX "Detect &file and print sharing before dialing", 1365, 14, 134, 193, 10, NOT WS_VISIBLE | WS_DISABLED
 END
 
@@ -876,11 +876,11 @@ END
 
 498 DIALOGEX 12, 16, 215, 126
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "ReactOS was unable to connect to the network using the user name and password you provided. Please re-enter the user name and password.", 1396, 7, 6, 206, 36
-    LTEXT "&User name:", 1399, 8, 51, 49, 8
+    LTEXT "שם משתמש:", 1399, 8, 51, 49, 8
     EDITTEXT 1394, 66, 46, 143, 14, ES_AUTOHSCROLL
     LTEXT "&Password:", 1397, 8, 70, 49, 8, NOT WS_GROUP
     EDITTEXT 1393, 66, 64, 143, 14, ES_PASSWORD | ES_AUTOHSCROLL
@@ -892,15 +892,15 @@ END
 
 500 DIALOGEX 12, 16, 215, 173
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "ReactOS was unable to connect to the network using the user name and password you provided. Please re-enter the user name and password.", 1396, 7, 6, 209, 26
-    LTEXT "&User name:", 1399, 7, 72, 44, 8
+    LTEXT "שם משתמש:", 1399, 7, 72, 44, 8
     EDITTEXT 1394, 97, 69, 115, 14, ES_AUTOHSCROLL
     LTEXT "&Password:", 1397, 7, 90, 45, 8, NOT WS_GROUP
     EDITTEXT 1393, 97, 87, 115, 14, ES_PASSWORD | ES_AUTOHSCROLL
-    LTEXT "&Domain:", 1395, 7, 108, 53, 8, NOT WS_GROUP
+    LTEXT "מתחם:", 1395, 7, 108, 53, 8, NOT WS_GROUP
     EDITTEXT 1392, 97, 105, 115, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     AUTOCHECKBOX "&Save user name and  password", 1391, 85, 125, 123, 10, BS_TOP | BS_MULTILINE
     DEFPUSHBUTTON "OK", 1, 87, 146, 60, 14, WS_GROUP
@@ -929,7 +929,7 @@ BEGIN
     LTEXT "Choose the role you want for this computer:", -1, 10, 5, 275, 9
     AUTORADIOBUTTON "&Host", 1483, 31, 20, 265, 10, BS_TOP | BS_MULTILINE | WS_GROUP
     AUTORADIOBUTTON "&Guest", 1484, 31, 44, 265, 10, BS_TOP | BS_MULTILINE
-    LTEXT "This computer has the information you want to access.", -1, 45, 31, 253, 13, NOT WS_GROUP | WS_TABSTOP
+    LTEXT "This computer has the information you want to access.", -1, 43, 31, 253, 13, NOT WS_GROUP | WS_TABSTOP
     LTEXT "This computer is used to access information on the host computer.", -1, 43, 56, 253, 23, NOT WS_GROUP
 END
 
@@ -960,8 +960,8 @@ BEGIN
     AUTORADIOBUTTON "&No callback", 1501, 9, 36, 252, 10, BS_TOP | BS_MULTILINE | WS_GROUP
     AUTORADIOBUTTON "Al&ways call me back at the number(s) below:", 1502, 9, 48, 252, 10, BS_TOP | BS_MULTILINE, WS_EX_TRANSPARENT
     CONTROL "", 1503, "SYSLISTVIEW32", WS_BORDER | WS_GROUP | WS_TABSTOP | 0x00008401, 15, 63, 240, 143
-    PUSHBUTTON "&Edit...", 1504, 131, 213, 60, 14
-    PUSHBUTTON "&Delete", 1505, 194, 213, 60, 14
+    PUSHBUTTON "עריכה...", 1504, 131, 213, 60, 14
+    PUSHBUTTON "מחק", 1505, 194, 213, 60, 14
     CONTROL "", -1, "STATIC", SS_ETCHEDHORZ, 7, 233, 249, 1
     DEFPUSHBUTTON "OK", 1, 132, 242, 60, 14
     PUSHBUTTON "Cancel", 2, 196, 242, 60, 14
@@ -969,7 +969,7 @@ END
 
 534 DIALOGEX 0, 0, 230, 215
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
-CAPTION "Options"
+CAPTION "אפשרויות"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Connection type", 1289, 7, 7, 215, 55
@@ -991,56 +991,56 @@ END
 
 539 DIALOGEX 0, 0, 265, 110
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "&User name:", 1413, 14, 64, 84, 8
+    LTEXT "שם משתמש:", 1413, 14, 64, 84, 8
     EDITTEXT 1104, 102, 62, 154, 14, ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 9, 82, 247, 1
-    DEFPUSHBUTTON "&Dial", 1590, 8, 89, 60, 14
+    DEFPUSHBUTTON "חיוג", 1590, 8, 89, 60, 14
     PUSHBUTTON "Cancel", 1591, 71, 89, 60, 14
     PUSHBUTTON "Pr&operties", 1107, 133, 89, 60, 14
-    PUSHBUTTON "&Help", 1592, 195, 89, 60, 14
+    PUSHBUTTON "&קובץ", 1592, 195, 89, 60, 14
 END
 
 540 DIALOGEX 0, 0, 265, 133
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "&User name:", 1413, 10, 64, 90, 8
+    LTEXT "שם משתמש:", 1413, 10, 64, 90, 8
     EDITTEXT 1104, 105, 60, 154, 14, ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 7, 80, 252, 1
-    LTEXT "D&ial:", 1412, 10, 91, 92, 10
+    LTEXT "חייג:", 1412, 10, 91, 92, 10
     COMBOBOX 1416, 105, 88, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 7, 107, 251, 1
-    DEFPUSHBUTTON "&Dial", 1590, 8, 113, 60, 14
+    DEFPUSHBUTTON "חיוג", 1590, 8, 113, 60, 14
     PUSHBUTTON "Cancel", 1591, 71, 113, 60, 14
     PUSHBUTTON "Pr&operties", 1107, 134, 113, 60, 14
-    PUSHBUTTON "&Help", 1592, 197, 113, 60, 14
+    PUSHBUTTON "&קובץ", 1592, 197, 113, 60, 14
 END
 
 541 DIALOGEX 0, 0, 265, 157
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "&User name:", 1413, 12, 67, 87, 8
+    LTEXT "שם משתמש:", 1413, 10, 67, 87, 8
     EDITTEXT 1104, 103, 63, 154, 14, ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 9, 84, 248, 1
-    LTEXT "D&ial:", 1412, 11, 96, 48, 8
+    LTEXT "חייג:", 1412, 11, 96, 48, 8
     COMBOBOX 1416, 103, 92, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "Dialing &from:", 1415, 10, 114, 46, 8
-    COMBOBOX 1414, 102, 110, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
-    PUSHBUTTON "Dialing &Rules", 1108, 193, 110, 64, 14
+    LTEXT "חיוג מ:", 1415, 10, 114, 46, 8
+    COMBOBOX 1414, 103, 110, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
+    PUSHBUTTON "חוקי חיוג", 1108, 193, 110, 64, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 7, 130, 250, 1
-    DEFPUSHBUTTON "&Dial", 1590, 6, 136, 60, 14
+    DEFPUSHBUTTON "חיוג", 1590, 6, 136, 60, 14
     PUSHBUTTON "Cancel", 1591, 69, 136, 60, 14
     PUSHBUTTON "Pr&operties", 1107, 132, 136, 60, 14
-    PUSHBUTTON "&Help", 1592, 196, 136, 60, 14
+    PUSHBUTTON "&קובץ", 1592, 196, 136, 60, 14
 END
 
 544 DIALOGEX 0, 0, 317, 143
@@ -1103,62 +1103,62 @@ END
 
 551 DIALOGEX 0, 0, 265, 127
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "&User name:", 1413, 12, 62, 89, 8
+    LTEXT "שם משתמש:", 1413, 12, 62, 89, 8
     EDITTEXT 1104, 104, 58, 154, 14, ES_AUTOHSCROLL
-    LTEXT "Do&main:", 1110, 12, 82, 90, 8
+    LTEXT "שם מתחם:", 1110, 12, 82, 90, 8
     EDITTEXT 1102, 104, 79, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 99, 248, 1
-    DEFPUSHBUTTON "&Dial", 1590, 9, 106, 61, 14
+    DEFPUSHBUTTON "חיוג", 1590, 9, 106, 61, 14
     PUSHBUTTON "Cancel", 1591, 72, 106, 60, 14
     PUSHBUTTON "Pr&operties", 1107, 135, 106, 60, 14
-    PUSHBUTTON "&Help", 1592, 198, 106, 60, 14
+    PUSHBUTTON "&קובץ", 1592, 198, 106, 60, 14
 END
 
 552 DIALOGEX 0, 0, 265, 159
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "&User name:", 1413, 10, 67, 91, 10
+    LTEXT "שם משתמש:", 1413, 10, 67, 91, 10
     EDITTEXT 1104, 104, 64, 154, 14, ES_AUTOHSCROLL
-    LTEXT "Do&main:", 1110, 11, 86, 91, 8
+    LTEXT "שם מתחם:", 1110, 10, 86, 91, 8
     EDITTEXT 1102, 104, 83, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 103, 248, 1
-    LTEXT "D&ial:", 1412, 10, 115, 91, 8
+    LTEXT "חייג:", 1412, 10, 115, 91, 8
     COMBOBOX 1416, 104, 111, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 132, 248, 1
-    DEFPUSHBUTTON "&Dial", 1590, 8, 139, 60, 14
+    DEFPUSHBUTTON "חיוג", 1590, 8, 139, 60, 14
     PUSHBUTTON "Cancel", 1591, 71, 139, 60, 14
     PUSHBUTTON "Pr&operties", 1107, 134, 139, 60, 14
-    PUSHBUTTON "&Help", 1592, 198, 139, 60, 14
+    PUSHBUTTON "&קובץ", 1592, 198, 139, 60, 14
 END
 
 553 DIALOGEX 0, 0, 265, 183
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "&User name:", 1413, 10, 68, 92, 10
+    LTEXT "שם משתמש:", 1413, 10, 68, 92, 10
     EDITTEXT 1104, 104, 65, 154, 14, ES_AUTOHSCROLL
-    LTEXT "Do&main:", 1110, 10, 90, 91, 8
+    LTEXT "שם מתחם:", 1110, 10, 90, 91, 8
     EDITTEXT 1102, 104, 86, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 106, 248, 1
-    LTEXT "D&ial:", 1412, 10, 118, 92, 8
+    LTEXT "חייג:", 1412, 10, 118, 92, 8
     COMBOBOX 1416, 104, 114, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "Dialing &from:", 1415, 10, 137, 91, 8
+    LTEXT "חיוג מ:", 1415, 10, 137, 91, 8
     COMBOBOX 1414, 104, 134, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
-    PUSHBUTTON "Dialing &Rules", 1108, 194, 134, 65, 14
+    PUSHBUTTON "חוקי חיוג", 1108, 194, 134, 65, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 154, 248, 1
-    DEFPUSHBUTTON "&Dial", 1590, 8, 162, 60, 14
+    DEFPUSHBUTTON "חיוג", 1590, 8, 162, 60, 14
     PUSHBUTTON "Cancel", 1591, 71, 162, 60, 14
     PUSHBUTTON "Pr&operties", 1107, 134, 162, 60, 14
-    PUSHBUTTON "&Help", 1592, 198, 162, 60, 14
+    PUSHBUTTON "&קובץ", 1592, 198, 162, 60, 14
 END
 
 554 DIALOGEX 0, 0, 230, 215
@@ -1166,14 +1166,14 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
 CAPTION "General"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Connec&t using:", 1124, 7, 4, 193, 8
+    LTEXT "התחבר באמצעות:", 1124, 7, 4, 193, 8
     CONTROL "", 1128, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x00004C0D, 7, 17, 195, 44, WS_EX_CLIENTEDGE
     PUSHBUTTON "&Up", 1132, 208, 18, 16, 14, BS_ICON
     PUSHBUTTON "&Down", 1131, 208, 36, 16, 14, BS_ICON
     AUTOCHECKBOX "A&ll devices call the same numbers", 1119, 7, 65, 131, 21, BS_TOP | BS_MULTILINE
     PUSHBUTTON "C&onfigure...", 1130, 140, 66, 60, 14
     GROUPBOX "Sample type", 1125, 7, 87, 213, 56, WS_GROUP
-    LTEXT "&Phone number:", 1135, 19, 102, 191, 8
+    LTEXT "מספר טלפון:", 1135, 19, 102, 191, 8
     EDITTEXT 1123, 17, 112, 138, 14, ES_AUTOHSCROLL
     PUSHBUTTON "Alter&nates", 1129, 161, 112, 50, 14
     AUTOCHECKBOX "Sho&w icon in notification area when connected", 1120, 11, 194, 212, 20, BS_TOP | BS_MULTILINE
@@ -1185,11 +1185,11 @@ CAPTION "General"
 FONT 8, "MS Shell Dlg"
 BEGIN
     PUSHBUTTON "C&onfigure...", 1130, 160, 38, 60, 14
-    LTEXT "&Phone number:", 1135, 8, 72, 194, 8
+    LTEXT "מספר טלפון:", 1135, 8, 72, 194, 8
     EDITTEXT 1123, 8, 83, 148, 14, ES_AUTOHSCROLL
     PUSHBUTTON "Alter&nates", 1129, 160, 83, 60, 14
     AUTOCHECKBOX "Sho&w icon in notification area when connected", 1120, 11, 194, 213, 10, BS_TOP | BS_MULTILINE
-    LTEXT "Connec&t using:", 1124, 8, 5, 214, 8
+    LTEXT "התחבר באמצעות:", 1124, 8, 5, 214, 8
     CONTROL "", 1127, "SYSLISTVIEW32", WS_DISABLED | WS_BORDER | 0x0000EC0D, 7, 18, 214, 15
 END
 
@@ -1208,7 +1208,7 @@ BEGIN
     LTEXT "T&CP:", -1, 7, 100, 28, 8
     EDITTEXT 1569, 50, 97, 162, 14, ES_AUTOHSCROLL
     LTEXT "UD&P:", -1, 7, 121, 30, 8
-    EDITTEXT 1551, 51, 117, 162, 14, ES_AUTOHSCROLL
+    EDITTEXT 1551, 50, 117, 162, 14, ES_AUTOHSCROLL
     DEFPUSHBUTTON "OK", 1, 90, 144, 60, 14
     PUSHBUTTON "Cancel", 2, 154, 144, 60, 14
 END
@@ -1237,20 +1237,20 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "The Internet connection on this computer has been customized to allow the following programs to run properly over your network:", -1, 7, 7, 218, 28
     CONTROL "List1", 1558, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000441D, 7, 37, 215, 155, WS_EX_CLIENTEDGE
-    PUSHBUTTON "A&dd...", 1538, 7, 197, 67, 14
+    PUSHBUTTON "הוסף...", 1538, 7, 197, 67, 14
     PUSHBUTTON "Edi&t...", 1559, 80, 197, 67, 14
     PUSHBUTTON "D&elete", 1568, 153, 197, 67, 14
 END
 
 559 DIALOGEX 0, 0, 230, 215
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Services"
+CAPTION "שירותים"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "&Select the services running on your network that Internet users can access.", -1, 7, 5, 216, 22
     LTEXT "Services:", -1, 7, 27, 143, 8
     CONTROL "List1", 1560, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000441D, 7, 37, 215, 155, WS_EX_CLIENTEDGE
-    PUSHBUTTON "A&dd...", 1561, 7, 197, 67, 14
+    PUSHBUTTON "הוסף...", 1561, 7, 197, 67, 14
     PUSHBUTTON "Edi&t...", 1563, 80, 197, 67, 14
     PUSHBUTTON "D&elete", 1562, 153, 197, 67, 14
 END
@@ -1289,7 +1289,7 @@ END
 
 569 DIALOGEX 0, 0, 230, 215
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
-CAPTION "Security"
+CAPTION "אבטחה"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Security options", 1580, 8, 4, 213, 151
@@ -1312,7 +1312,7 @@ BEGIN
     DEFPUSHBUTTON "OK", 1, 151, 104, 50, 14
     PUSHBUTTON "Cancel", 2, 207, 104, 50, 14
     AUTOCHECKBOX "&Use pre-shared key for authentication", 1604, 21, 15, 217, 10
-    LTEXT "&Key:", 1602, 20, 31, 44, 12
+    LTEXT "מפתח:", 1602, 20, 31, 44, 12
     EDITTEXT 1605, 66, 30, 172, 12, ES_AUTOHSCROLL
     AUTOCHECKBOX "Allow certificiates from my user store in addition to machine certificates", 1606, 20, 50, 242, 13, WS_DISABLED
     AUTOCHECKBOX "Use a specific certificate", 1607, 20, 67, 239, 10, WS_DISABLED
@@ -1345,7 +1345,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "&Internet Control Message Protocol (ICMP) allows the computers on a network to share error and status information. Select the requests for information from the Internet that this computer will respond to:", -1, 7, 5, 215, 37
     CONTROL "IList1", 1644, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000440D, 7, 45, 215, 100, WS_EX_CLIENTEDGE
-    GROUPBOX "Description:", -1, 7, 153, 215, 55
+    GROUPBOX "תיאור:", -1, 7, 153, 215, 55
     LTEXT "", 1645, 14, 171, 199, 32
 END
 
@@ -1379,73 +1379,73 @@ END
 
 1420 DIALOGEX 0, 0, 265, 108
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "D&ial:", 1412, 14, 63, 86, 8
+    LTEXT "חייג:", 1412, 14, 63, 86, 8
     COMBOBOX 1416, 104, 60, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 80, 248, 1
-    DEFPUSHBUTTON "&Dial", 1590, 9, 87, 60, 14
+    DEFPUSHBUTTON "חיוג", 1590, 9, 87, 60, 14
     PUSHBUTTON "Cancel", 1591, 72, 87, 60, 14
     PUSHBUTTON "Pr&operties", 1107, 135, 87, 60, 14
-    PUSHBUTTON "&Help", 1592, 198, 87, 60, 14
+    PUSHBUTTON "&קובץ", 1592, 198, 87, 60, 14
 END
 
 1421 DIALOGEX 0, 0, 265, 223
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "&User name:", 1413, 10, 61, 90, 8
+    LTEXT "שם משתמש:", 1413, 10, 61, 90, 8
     EDITTEXT 1104, 104, 58, 154, 14, ES_AUTOHSCROLL
     LTEXT "&Password:", 1112, 11, 81, 90, 8
     EDITTEXT 1103, 104, 77, 154, 14, ES_PASSWORD | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN, 10, 98, 248, 1
-    AUTOCHECKBOX "&Save this user name and password for the following users:", 1101, 14, 105, 242, 13, BS_LEFT | BS_TOP | BS_MULTILINE | WS_GROUP
-    AUTORADIOBUTTON "Me o&nly", 1622, 26, 119, 225, 11, BS_LEFT | BS_TOP | BS_MULTILINE | WS_GROUP
-    AUTORADIOBUTTON "&Anyone who uses this computer", 1623, 26, 133, 225, 11, BS_LEFT | BS_TOP | BS_MULTILINE
+    AUTOCHECKBOX "שמור את שם המשתמש והסיסמה למשתמשים הבאים:", 1101, 14, 105, 242, 13, BS_LEFT | BS_TOP | BS_MULTILINE | WS_GROUP
+    AUTORADIOBUTTON "רק לעצמי", 1622, 26, 119, 225, 11, BS_LEFT | BS_TOP | BS_MULTILINE | WS_GROUP
+    AUTORADIOBUTTON "לכל מי שמשתמש במחשב זה", 1623, 26, 133, 225, 11, BS_LEFT | BS_TOP | BS_MULTILINE
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 149, 248, 1
-    LTEXT "D&ial:", 1412, 14, 161, 87, 8
+    LTEXT "חייג:", 1412, 14, 161, 87, 8
     COMBOBOX 1416, 104, 157, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "Dialing &from:", 1415, 14, 178, 88, 8
+    LTEXT "חיוג מ:", 1415, 14, 178, 88, 8
     COMBOBOX 1414, 104, 175, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
-    PUSHBUTTON "Dialing &Rules", 1108, 193, 175, 65, 14
+    PUSHBUTTON "חוקי חיוג", 1108, 193, 175, 65, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 196, 248, 1
-    DEFPUSHBUTTON "&Dial", 1590, 9, 202, 60, 14, WS_GROUP
+    DEFPUSHBUTTON "חיוג", 1590, 9, 202, 60, 14, WS_GROUP
     PUSHBUTTON "Cancel", 1591, 72, 202, 60, 14
     PUSHBUTTON "Pr&operties", 1107, 135, 202, 60, 14
-    PUSHBUTTON "&Help", 1592, 198, 202, 60, 14
+    PUSHBUTTON "&קובץ", 1592, 198, 202, 60, 14
 END
 
 1422 DIALOGEX 0, 0, 265, 242
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Connect %1"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "&User name:", 1413, 10, 67, 91, 8
+    LTEXT "שם משתמש:", 1413, 10, 67, 91, 8
     EDITTEXT 1104, 104, 63, 154, 14, ES_AUTOHSCROLL
     LTEXT "&Password:", 1112, 10, 85, 92, 8
     EDITTEXT 1103, 104, 82, 154, 14, ES_PASSWORD | ES_AUTOHSCROLL
-    LTEXT "Do&main:", 1110, 10, 104, 92, 8
+    LTEXT "שם מתחם:", 1110, 10, 104, 92, 8
     EDITTEXT 1102, 104, 101, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN, 10, 121, 248, 1
-    AUTOCHECKBOX "&Save this user name and password for the following users:", 1101, 12, 127, 242, 13, BS_LEFT | BS_TOP | BS_MULTILINE | WS_GROUP
-    AUTORADIOBUTTON "Me o&nly", 1622, 24, 141, 227, 11, BS_LEFT | BS_TOP | BS_MULTILINE | WS_GROUP
-    AUTORADIOBUTTON "&Anyone who uses this computer", 1623, 24, 155, 230, 11, BS_LEFT | BS_TOP | BS_MULTILINE
+    AUTOCHECKBOX "שמור את שם המשתמש והסיסמה למשתמשים הבאים:", 1101, 12, 127, 242, 13, BS_LEFT | BS_TOP | BS_MULTILINE | WS_GROUP
+    AUTORADIOBUTTON "רק לעצמי", 1622, 24, 141, 227, 11, BS_LEFT | BS_TOP | BS_MULTILINE | WS_GROUP
+    AUTORADIOBUTTON "לכל מי שמשתמש במחשב זה", 1623, 24, 155, 230, 11, BS_LEFT | BS_TOP | BS_MULTILINE
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 170, 248, 1
-    LTEXT "D&ial:", 1412, 14, 182, 87, 8
+    LTEXT "חייג:", 1412, 14, 182, 87, 8
     COMBOBOX 1416, 104, 178, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "Dialing &from:", 1415, 14, 198, 87, 8
+    LTEXT "חיוג מ:", 1415, 14, 198, 87, 8
     COMBOBOX 1414, 104, 195, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
-    PUSHBUTTON "Dialing &Rules", 1108, 193, 195, 65, 14
+    PUSHBUTTON "חוקי חיוג", 1108, 193, 195, 65, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 215, 248, 1
-    DEFPUSHBUTTON "&Dial", 1590, 8, 221, 60, 14, WS_GROUP
+    DEFPUSHBUTTON "חיוג", 1590, 8, 221, 60, 14, WS_GROUP
     PUSHBUTTON "Cancel", 1591, 71, 221, 60, 14
     PUSHBUTTON "Pr&operties", 1107, 134, 221, 60, 14
-    PUSHBUTTON "&Help", 1592, 198, 221, 60, 14
+    PUSHBUTTON "&קובץ", 1592, 198, 221, 60, 14
 END
 
 1425 DIALOGEX 0, 0, 230, 215
@@ -1464,7 +1464,7 @@ END
 
 1426 DIALOGEX 0, 0, 230, 215
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
-CAPTION "Options"
+CAPTION "אפשרויות"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Dialing options", 1289, 8, 7, 214, 56
@@ -1514,15 +1514,15 @@ END
 
 1448 DIALOGEX 10, 20, 265, 71
 STYLE DS_SHELLFONT | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
-CAPTION "Network Connections"
+CAPTION "חיבור רשת"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "C&hoose a network connection:", 1456, 7, 7, 251, 10
     COMBOBOX 1457, 8, 18, 250, 140, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
-    DEFPUSHBUTTON "&Connect...", 1449, 7, 50, 60, 14
+    DEFPUSHBUTTON "התחבר...", 1449, 7, 50, 60, 14
     PUSHBUTTON "Cancel", 1455, 70, 50, 60, 14
-    PUSHBUTTON "&New...", 1459, 134, 50, 60, 14
-    PUSHBUTTON "P&roperties", 1460, 198, 50, 60, 14
+    PUSHBUTTON "חדש...", 1459, 134, 50, 60, 14
+    PUSHBUTTON "מאפיינים", 1460, 198, 50, 60, 14
 END
 
 1466 DIALOGEX 6, 18, 265, 262
@@ -1531,7 +1531,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Sample text", 1469, 7, 7, 251, 8
     EDITTEXT 1470, 7, 17, 193, 14, ES_AUTOHSCROLL
-    PUSHBUTTON "&Add", 1471, 77, 36, 60, 14
+    PUSHBUTTON "הוסף", 1471, 77, 36, 60, 14
     PUSHBUTTON "&Replace", 1472, 141, 36, 60, 14
     LTEXT "Sample text", 1473, 7, 57, 193, 8
     LISTBOX 1474, 7, 68, 193, 145, WS_VSCROLL | WS_TABSTOP
@@ -1549,7 +1549,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Sample text", 1469, 7, 7, 197, 8
     EDITTEXT 1470, 7, 17, 193, 14, ES_AUTOHSCROLL
-    PUSHBUTTON "&Add", 1471, 76, 36, 60, 14
+    PUSHBUTTON "הוסף", 1471, 76, 36, 60, 14
     PUSHBUTTON "&Replace", 1472, 141, 36, 60, 14
     LTEXT "Sample text", 1473, 7, 57, 193, 8
     LISTBOX 1474, 7, 68, 193, 135, WS_VSCROLL | WS_TABSTOP
@@ -1567,7 +1567,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Sample text", 1469, 7, 5, 249, 8
     EDITTEXT 1470, 7, 17, 249, 14, ES_AUTOHSCROLL
-    PUSHBUTTON "&Add", 1471, 132, 36, 60, 14
+    PUSHBUTTON "הוסף", 1471, 132, 36, 60, 14
     PUSHBUTTON "&Replace", 1472, 196, 36, 60, 14
     LTEXT "Sample text", 1473, 7, 55, 251, 8
     LISTBOX 1474, 7, 68, 249, 140, LBS_STANDARD | WS_TABSTOP
@@ -1609,7 +1609,7 @@ CAPTION "New Connection Wizard"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Type an ISP account name and password, then write down this information and store it in a safe place. (If you have forgotten an existing account name or password, contact your ISP.)", 1689, 10, 4, 308, 25
-    LTEXT "&User name:", 1636, 23, 35, 89, 15
+    LTEXT "שם משתמש:", 1636, 23, 35, 89, 15
     EDITTEXT 1614, 115, 34, 190, 15, ES_AUTOHSCROLL
     LTEXT "&Password:", 1637, 23, 55, 90, 13
     EDITTEXT 1615, 115, 54, 190, 15, ES_PASSWORD | ES_AUTOHSCROLL
@@ -1637,7 +1637,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_CAPTIO
 CAPTION "General"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "&User name:", -1, 7, 8, 90, 12, SS_CENTERIMAGE
+    LTEXT "שם משתמש:", -1, 7, 8, 90, 12, SS_CENTERIMAGE
     EDITTEXT 7001, 101, 7, 108, 14, ES_AUTOHSCROLL
     LTEXT "&Full name:", -1, 7, 26, 90, 12
     EDITTEXT 7002, 101, 25, 108, 14, ES_AUTOHSCROLL
@@ -1667,10 +1667,10 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Incoming connections", -1, 7, 4, 214, 110, WS_GROUP
     LTEXT "Allow incoming connections on these devices.", -1, 17, 17, 195, 8
-    LTEXT "&Devices:", -1, 17, 29, 29, 8
+    LTEXT "התקנים:", -1, 17, 29, 29, 8
     CONTROL "", 7011, "SYSLISTVIEW32", WS_BORDER | WS_GROUP | WS_TABSTOP | 0x00004405, 17, 41, 193, 47, WS_EX_CLIENTEDGE
     AUTOCHECKBOX "&Enable multilink", 7012, 17, 96, 121, 10, BS_TOP | BS_MULTILINE | WS_GROUP
-    PUSHBUTTON "P&roperties", 7013, 145, 94, 65, 14, WS_GROUP
+    PUSHBUTTON "מאפיינים", 7013, 145, 94, 65, 14, WS_GROUP
     GROUPBOX "Virtual private network", -1, 6, 122, 214, 49, WS_GROUP
     AUTOCHECKBOX "Allo&w others to make private connections to my computer by tunneling through the Internet or other network", 7014, 17, 137, 195, 27, BS_TOP | BS_MULTILINE | WS_GROUP
     AUTOCHECKBOX "&Show icon in notification area when connected", 7015, 12, 184, 209, 10, BS_TOP | BS_MULTILINE | WS_GROUP
@@ -1732,9 +1732,9 @@ BEGIN
     LTEXT "&Network components:", -1, 7, 7, 217, 9
     CONTROL "", 7036, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000440D, 7, 17, 215, 89, WS_EX_CLIENTEDGE
     PUSHBUTTON "&Install...", 7037, 9, 110, 67, 14, WS_GROUP
-    PUSHBUTTON "&Uninstall", 7038, 80, 110, 67, 14, WS_GROUP
-    PUSHBUTTON "P&roperties", 7039, 153, 110, 67, 14, WS_GROUP
-    GROUPBOX "Description", -1, 7, 138, 213, 69
+    PUSHBUTTON "הסר התקנה", 7038, 80, 110, 67, 14, WS_GROUP
+    PUSHBUTTON "מאפיינים", 7039, 153, 110, 67, 14, WS_GROUP
+    GROUPBOX "תיאור", -1, 7, 138, 213, 69
     LTEXT "<protocol description>", 7040, 17, 150, 193, 48
 END
 
@@ -1745,9 +1745,9 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "&Users allowed to connect:", -1, 7, 5, 213, 8
     CONTROL "", 7043, "SYSLISTVIEW32", WS_BORDER | WS_GROUP | WS_TABSTOP | 0x0000440D, 7, 19, 214, 83, WS_EX_CLIENTEDGE
-    PUSHBUTTON "&New...", 7044, 7, 107, 67, 14, WS_GROUP
-    PUSHBUTTON "&Delete", 7045, 80, 107, 67, 14, WS_GROUP
-    PUSHBUTTON "P&roperties", 7046, 153, 107, 67, 14, WS_GROUP
+    PUSHBUTTON "חדש...", 7044, 7, 107, 67, 14, WS_GROUP
+    PUSHBUTTON "מחק", 7045, 80, 107, 67, 14, WS_GROUP
+    PUSHBUTTON "מאפיינים", 7046, 153, 107, 67, 14, WS_GROUP
     AUTOCHECKBOX "Re&quire all users to secure their passwords and data.", 7048, 8, 151, 217, 12, BS_TOP | BS_MULTILINE
     AUTOCHECKBOX "Al&ways allow directly connected devices such as palmtop computers to connect without providing a password.", 7049, 8, 169, 217, 23, BS_TOP | BS_MULTILINE
     LTEXT "Note that other factors, such as a disabled user account, may affect a user's ability to connect.", -1, 9, 126, 212, 23
@@ -1760,8 +1760,8 @@ BEGIN
     LTEXT "Select the check box next to each user who should be allowed a connection to this computer.  Note that other factors, such as a disabled user account, may affect a user's ability to connect.", -1, 10, 1, 275, 27
     LTEXT "&Users allowed to connect:", -1, 10, 28, 275, 8
     CONTROL "", 7043, "SYSLISTVIEW32", WS_BORDER | WS_GROUP | WS_TABSTOP | 0x0000440D, 10, 42, 275, 73
-    PUSHBUTTON "&Add...", 7044, 10, 122, 65, 14, WS_GROUP
-    PUSHBUTTON "&Remove", 7045, 79, 122, 65, 14, WS_GROUP
+    PUSHBUTTON "הוסף...", 7044, 10, 122, 65, 14, WS_GROUP
+    PUSHBUTTON "הסר", 7045, 79, 122, 65, 14, WS_GROUP
     PUSHBUTTON "&Properties", 7046, 147, 122, 65, 14, WS_GROUP
 END
 
@@ -1772,7 +1772,7 @@ BEGIN
     LTEXT "Select the check box next to each device you want to use for incoming connections.", -1, 10, 4, 299, 10
     LTEXT "&Connection devices:", -1, 10, 16, 275, 8
     CONTROL "", 7011, "SYSLISTVIEW32", WS_BORDER | WS_GROUP | WS_TABSTOP | 0x0000440D, 10, 26, 297, 87
-    PUSHBUTTON "P&roperties", 7013, 243, 120, 65, 14, WS_GROUP
+    PUSHBUTTON "מאפיינים", 7013, 243, 120, 65, 14, WS_GROUP
 END
 
 7051 DIALOGEX 0, 0, 317, 143
@@ -1783,10 +1783,10 @@ BEGIN
     LTEXT "Networking &software:", -1, 10, 24, 274, 8
     CONTROL "", 7036, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000440D, 10, 34, 286, 33
     PUSHBUTTON "&Install...", 7037, 108, 71, 60, 14, WS_GROUP
-    PUSHBUTTON "&Uninstall", 7038, 172, 71, 60, 14, WS_GROUP
+    PUSHBUTTON "הסר התקנה", 7038, 172, 71, 60, 14, WS_GROUP
     PUSHBUTTON "&Properties", 7039, 236, 71, 60, 14, WS_GROUP
     LTEXT "<protocol description>", 7040, 21, 105, 273, 38
-    LTEXT "Description:", -1, 21, 95, 275, 8
+    LTEXT "תיאור:", -1, 21, 95, 275, 8
 END
 
 7052 DIALOGEX 0, 0, 317, 143
@@ -1818,7 +1818,7 @@ END
 
 19900 DIALOGEX 0, 0, 156, 44
 STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION
-CAPTION "Dial-Up Networking"
+CAPTION "חיבור בחיוג"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON 563, 19901, 10, 10, 18, 20
