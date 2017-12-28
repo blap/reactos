@@ -1,10 +1,12 @@
-/* FILE:       applications/games/solitaire/lang/cs-CZ.rc
- * PURPOSE:    Czech Language File
- * TRANSLATOR: Radek Liska aka Black_Fox (radekliska at gmail dot com)
- * UPDATED:    2008-11-30 by Kario
+/*
+ * PROJECT:     Solitaire
+ * LICENSE:     Freeware, permission to use under Public Domain
+ * FILE:        base/applications/games/solitaire/lang/en-US.rc
+ * PURPOSE:     English Language File for Solitaire
+ * PROGRAMMERS: Daniel "EmuandCo" Reimer (reimer.daniel@freenet.de)
  */
 
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 /* Dialogs */
 
@@ -20,7 +22,7 @@ BEGIN
     AUTORADIOBUTTON "&Standard", IDC_OPT_STANDARD, 107, 19, 60, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "&Vegas", IDC_OPT_VEGAS, 107, 32, 60, 10
     AUTORADIOBUTTON "&None", IDC_OPT_NOSCORE, 107, 45, 60, 10
-    AUTOCHECKBOX "Zobrazit č&as", IDC_OPT_SHOWTIME, 7 ,51 ,65 ,10, WS_TABSTOP
+    AUTOCHECKBOX "&Show Time", IDC_OPT_SHOWTIME, 7 ,51 ,65 ,10, WS_TABSTOP
     AUTOCHECKBOX "Stavový řád&ek", IDC_OPT_STATUSBAR, 7, 66, 64, 10, WS_TABSTOP
     AUTOCHECKBOX "&Ponechat skóre", IDC_OPT_KEEPSCORE, 100, 66, 65, 10, WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 35, 97, 50, 14
