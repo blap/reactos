@@ -16,58 +16,58 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
 
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 IDM_MAINMENU MENU
 BEGIN
     POPUP "&Soubor"
     BEGIN
-        MENUITEM "&Nový...\tCtrl+N",      ID_FILE_NEW
-        MENUITEM "&Otevřít...\tCtrl+O",   ID_FILE_OPEN
-        MENUITEM "&Uložit\tCtrl+S",       ID_FILE_SAVE
-        MENUITEM "Uložit j&ako...",       ID_FILE_SAVEAS
+        MENUITEM "&Nový...\tCtrl+N",       ID_FILE_NEW
+        MENUITEM "&Otevřít...\tCtrl+O",      ID_FILE_OPEN
+        MENUITEM "&Uložit\tCtrl+S",         ID_FILE_SAVE
+        MENUITEM "Uložit j&ako...",           ID_FILE_SAVEAS
         MENUITEM SEPARATOR
-        MENUITEM "&Tisk...\tCtrl+P",      ID_PRINT
-        MENUITEM "&Náhled tisku",         ID_PREVIEW
-        MENUITEM "Nasta&vení stránky...", ID_PRINTSETUP
+        MENUITEM "&Tisk...\tCtrl+P",     ID_PRINT
+        MENUITEM "&Náhled tisku",        ID_PREVIEW
+        MENUITEM "Nasta&vení stránky...",        ID_PRINTSETUP
         MENUITEM SEPARATOR
-        MENUITEM "U&končit",              ID_FILE_EXIT
+        MENUITEM "U&končit",                 ID_FILE_EXIT
     END
     POPUP "&Upravit"
     BEGIN
         MENUITEM "&Zpět\tCtrl+Z",               ID_EDIT_UNDO
-        MENUITEM "Z&novu\tCtrl+Y",              ID_EDIT_REDO
+        MENUITEM "Z&novu\tCtrl+Y",               ID_EDIT_REDO
         MENUITEM SEPARATOR
-        MENUITEM "&Vyjmout\tCtrl+X",            ID_EDIT_CUT
-        MENUITEM "&Kopírovat\tCtrl+C",          ID_EDIT_COPY
-        MENUITEM "V&ložit\tCtrl+V",             ID_EDIT_PASTE
-        MENUITEM "&Smazat\tDel",                ID_EDIT_CLEAR
+        MENUITEM "&Vyjmout\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Kopírovat\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "V&ložit\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Smazat\tDel",                 ID_EDIT_CLEAR
         MENUITEM "V&ybrat vše\tCtrl+A",         ID_EDIT_SELECTALL
         MENUITEM SEPARATOR
-        MENUITEM "&Najít...\tCtrl+F",           ID_FIND
-        MENUITEM "Najít &další\tF3",            ID_FIND_NEXT
-        MENUITEM "Na&hradit...\tCtrl+H",        ID_REPLACE
+        MENUITEM "&Najít...\tCtrl+F",            ID_FIND
+        MENUITEM "Najít &další\tF3",              ID_FIND_NEXT
+        MENUITEM "Na&hradit...\tCtrl+H",         ID_REPLACE
         MENUITEM SEPARATOR
-        MENUITEM "&Jen pro čtení",              ID_EDIT_READONLY
-        MENUITEM "Z&měněno",                    ID_EDIT_MODIFIED
+        MENUITEM "&Jen pro čtení",                  ID_EDIT_READONLY
+        MENUITEM "Z&měněno",                   ID_EDIT_MODIFIED
         MENUITEM SEPARATOR
         POPUP "&Rozšířené"
         BEGIN
-            MENUITEM "&Informace o výběru",         ID_EDIT_SELECTIONINFO
-            MENUITEM "F&ormát znaků",               ID_EDIT_CHARFORMAT
-            MENUITEM "Vý&chozí formát znaků",       ID_EDIT_DEFCHARFORMAT
-            MENUITEM "Formát o&dstavce",            ID_EDIT_PARAFORMAT
-            MENUITEM "Získat te&xt",                ID_EDIT_GETTEXT
+            MENUITEM "&Informace o výběru",             ID_EDIT_SELECTIONINFO
+            MENUITEM "F&ormát znaků",           ID_EDIT_CHARFORMAT
+            MENUITEM "Vý&chozí formát znaků",           ID_EDIT_DEFCHARFORMAT
+            MENUITEM "Formát o&dstavce",           ID_EDIT_PARAFORMAT
+            MENUITEM "Získat te&xt",                   ID_EDIT_GETTEXT
         END
     END
     POPUP "&Zobrazit"
     BEGIN
-        MENUITEM "&Panel nástrojů",    ID_TOGGLE_TOOLBAR
-        MENUITEM "Panel &formátování", ID_TOGGLE_FORMATBAR
+        MENUITEM "&Panel nástrojů",        ID_TOGGLE_TOOLBAR
+        MENUITEM "Panel &formátování",     ID_TOGGLE_FORMATBAR
         MENUITEM "P&ravítko",          ID_TOGGLE_RULER
         MENUITEM "&Stavový řádek",     ID_TOGGLE_STATUSBAR
         MENUITEM SEPARATOR
-        MENUITEM "&Možnosti...",       ID_VIEWPROPERTIES
+        MENUITEM "&Možnosti...",     ID_VIEWPROPERTIES
     END
     POPUP "&Vložit"
     BEGIN
@@ -75,10 +75,10 @@ BEGIN
     END
     POPUP "&Formát"
     BEGIN
-        MENUITEM "&Písmo...",                    ID_FONTSETTINGS
-        MENUITEM "&Odrážky",                     ID_BULLET
-        MENUITEM "O&dstavec...",                 ID_PARAFORMAT
-        MENUITEM "&Tabulátor...",                ID_TABSTOPS
+        MENUITEM "&Písmo...",                     ID_FONTSETTINGS
+        MENUITEM "&Odrážky",               ID_BULLET
+        MENUITEM "O&dstavec...",                ID_PARAFORMAT
+        MENUITEM "&Tabulátor...",                     ID_TABSTOPS
         POPUP "Po&zadí"
         BEGIN
             MENUITEM "&Systém\tCtrl+1",         ID_BACK_1
@@ -95,12 +95,12 @@ IDM_POPUP MENU
 BEGIN
     POPUP ""
     BEGIN
-        MENUITEM "&Vyjmout",            ID_EDIT_CUT
-        MENUITEM "&Kopírovat",          ID_EDIT_COPY
-        MENUITEM "V&ložit",             ID_EDIT_PASTE
+        MENUITEM "&Vyjmout",                ID_EDIT_CUT
+        MENUITEM "&Kopírovat",               ID_EDIT_COPY
+        MENUITEM "V&ložit",              ID_EDIT_PASTE
         MENUITEM SEPARATOR
-        MENUITEM "&Odrážky",            ID_BULLET
-        MENUITEM "&Odstavec...",        ID_PARAFORMAT
+        MENUITEM "&Odrážky",      ID_BULLET
+        MENUITEM "&Odstavec...",       ID_PARAFORMAT
     END
 END
 
@@ -108,22 +108,22 @@ IDM_COLOR_POPUP MENU
 BEGIN
     POPUP ""
     BEGIN
-        MENUITEM "Černá",        ID_COLOR_BLACK
-        MENUITEM "Vínová",       ID_COLOR_MAROON
-        MENUITEM "Zelená",       ID_COLOR_GREEN
+        MENUITEM "Černá",      ID_COLOR_BLACK
+        MENUITEM "Vínová",     ID_COLOR_MAROON
+        MENUITEM "Zelená",      ID_COLOR_GREEN
         MENUITEM "Olivová",      ID_COLOR_OLIVE
-        MENUITEM "Námořní modř", ID_COLOR_NAVY
-        MENUITEM "Fialová",      ID_COLOR_PURPLE
-        MENUITEM "Modrozelená",  ID_COLOR_TEAL
-        MENUITEM "Šedá",         ID_COLOR_GRAY
+        MENUITEM "Námořní modř",       ID_COLOR_NAVY
+        MENUITEM "Fialová",     ID_COLOR_PURPLE
+        MENUITEM "Modrozelená",       ID_COLOR_TEAL
+        MENUITEM "Šedá",       ID_COLOR_GRAY
         MENUITEM "Stříbrná",     ID_COLOR_SILVER
-        MENUITEM "Červená",      ID_COLOR_RED
-        MENUITEM "Limetková",    ID_COLOR_LIME
-        MENUITEM "Žlutá",        ID_COLOR_YELLOW
-        MENUITEM "Modrá",        ID_COLOR_BLUE
-        MENUITEM "Fuchsie",      ID_COLOR_FUCHSIA
-        MENUITEM "Voda",         ID_COLOR_AQUA
-        MENUITEM "Bílá",         ID_COLOR_WHITE
+        MENUITEM "Červená",        ID_COLOR_RED
+        MENUITEM "Limetková",       ID_COLOR_LIME
+        MENUITEM "Žlutá",     ID_COLOR_YELLOW
+        MENUITEM "Modrá",       ID_COLOR_BLUE
+        MENUITEM "Fuchsie",    ID_COLOR_FUCHSIA
+        MENUITEM "Voda",       ID_COLOR_AQUA
+        MENUITEM "Bílá",      ID_COLOR_WHITE
         MENUITEM "Automaticky",  ID_COLOR_AUTOMATIC
     END
 END
