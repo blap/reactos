@@ -1,0 +1,69 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+BEGIN
+    IDS_USAGE "Ketik ""EVENTCREATE /?"" untuk informasi penggunaan. \n"
+    IDS_HELP "\n\
+EVENTCREATE [/S computer [/U [domain\\]user [/P password]]] /ID EventID\n\
+            {[/L logname] | [/SO source]} /T type /C category /D description\n\
+\n\
+Description:\n\
+    This tool enables an administrator to create a custom event in\n\
+    a specified event log.\n\
+\n\
+Parameters:\n\
+    /S  computer          Specifies the remote computer where to connect.\n\
+\n\
+    /U  [domain\\]user     Specifies the user account under which the command\n\
+                          should execute.\n\
+\n\
+    /P  [password]        Specifies the password of the user account.\n\
+                          Prompts for input if omitted.\n\
+\n\
+    /L  logname           Specifies the name of the log where the event will be\n\
+                          created. The valid names are:\n\
+                          Application, System, Security\n\
+                          (the latter is reserved only for the SYSTEM account).\n\
+\n\
+    /SO source            Specifies the source name to use for the event\n\
+                          (if not specified, the default source name\n\
+                           will be 'eventcreate').\n\
+                          A valid source can be any string and should represent\n\
+                          the application or the component that is generating\n\
+                          the event.\n\
+\n\
+    /T  type              Specifies the type of event to create.\n\
+                          The valid types are: SUCCESS, ERROR, WARNING,\n\
+                          INFORMATION.\n\
+\n\
+    /C  category          Specifies the event category (integer) for the event.\n\
+\n\
+    /ID EventID           Specifies the event ID for the event. This must be\n\
+                          an integer between 0 and 65535.\n\
+\n\
+    /D  description       Specifies the description to use for the newly\n\
+                          created event.\n\
+\n\
+    /?                    Displays this help screen.\n\
+"
+    IDS_INVALIDSWITCH "Peralihan tidak valid - '%s'.\n"
+    IDS_BADSYNTAX_0 "Sintaks perintah buruk.\n"
+    IDS_BADSYNTAX_1 "Sintaks perintah buruk. Pilihan '%s' memerlukan sebuah nilai.\n"
+    IDS_BADSYNTAX_2 "Sintaks perintah buruk. Nilai untuk opsi '%s' tidak boleh kosong.\n"
+    IDS_BADSYNTAX_3 "Sintaks perintah iklan Nilai '%s' tidak diizinkan untuk opsi '%s'.\n"
+    IDS_BADSYNTAX_4 "Sintaks perintah buruk. Nilai tidak dapat ditentukan untuk opsi '%s'.\n"
+    IDS_BADSYNTAX_5 "Sintaks perintah buruk. Pilihan '%s' tidak diizinkan lebih dari %lu Waktu.\n"
+    IDS_BADSYNTAX_6 "Sintaks perintah buruk. Opsi wajib '%s' tidak ada.\n"
+    // IDS_BADSYNTAX_7 "Sintaks perintah buruk. Nilai untuk opsi '%s' berada di luar rentang yang diizinkan.\n"
+    IDS_BADSYNTAX_7 "Sintaks perintah buruk. Nilai untuk opsi '%s' berada di luar rentang yang diizinkan.\n"
+
+    IDS_LOG_NOT_FOUND "Log '%s' tidak ada. Tidak dapat membuat acara.\n"
+    IDS_SOURCE_NOCREATE "Sumber baru tidak dapat dibuat karena nama log tidak ditentukan.\nSilakan gunakan tombol /L untuk menentukan nama log.\n"
+    IDS_SOURCE_EXISTS "Sumber yang sudah ada di log '%s' dan tidak dapat digandakan.\n"
+    IDS_SOURCE_NOT_CUSTOM "Parameter sumber yang digunakan untuk mengidentifikasi kustom skrip/aplikasi\n(bukan aplikasi yang terinstal).\n"
+
+    IDS_SUCCESS_1   "Operasi sukses: acara jenis '%s' telah dibuat dalam log '%s'.\n"
+    IDS_SUCCESS_2   "Operasi sukses: acara jenis '%s' telah dibuat dengan sumber '%s'.\n"
+    IDS_SUCCESS_3   "Operasi berhasil: sebuah event tipe '%s' telah dibuat \nin log '%s' dengan source '%s'. \n"
+    IDS_SWITCH_UNIMPLEMENTED "Opsi '%s' saat ini tidak didukung, mohon maaf atas ke tidak nyamanannya! \n"
+END
