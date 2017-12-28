@@ -1,24 +1,20 @@
-/* Ελληνική μετάφραση - Απόστολος Αλεξιάδης */
-
-LANGUAGE LANG_GREEK, SUBLANG_DEFAULT
+LANGUAGE LANG_GREEK, SUBLANG_GREEK_GREECE
 
 STRINGTABLE
 BEGIN
-    STRING_HELP "Χρήση: %s τόμος: [-FS:σύστημα-αρχείων] [-V:ετικέτα] [-Q] [-A:μέγεθος] [-C]\n\n\
-  [τόμος:]             Καθορίζει το γράμμα μονάδας δίσκου προς διαμόρφωση.\n\
-  -FS:σύστημα-αρχείων  Καθορίζει τον τύπο του συστήματος αρχείων FAT, FAT32 ή NTFS (%s).\n\
-  -V:label             Καθορισμός της ετικέτας του τόμου.\n\
-  -Q                   Εκτέλεση γρήγορης διαμόρφωσης.\n\
-  -A:μέγεθος           Παρακάμπτει το προεπιλεγμένο μέγεθος μονάδας εκχώρησης.\n\
-                       Για γενική χρήση συνιστώνται ιδιαίτερα οι προεπιλεγμένες\n\
-                       ρυθμίσεις. Το NTFS υποστηρίζει 512, 1024, 2048, 4096,\n\
-                       8192, 16K, 32K, 64K. Το FAT υποστηρίζει 512, 1024, 2048,\n\
-                       4096, 8192, 16K, 32K, 64K, (128K, 256K για μέγεθος τομέα\n\
-                       > 512 byte). Το FAT32 υποστηρίζει 512, 1024, 2048,\n\
-                       4096, 8192, 16K, 32K, 64K, (128K, 256K για μέγεθος τομέα\n\
-                       > 512 byte).\n\
-  -C                   Files created on the new volume will be compressed by\n\
-                       default.\n\n"
+    STRING_HELP "Usage: %s drive: [-FS:file-system] [-V:label] [-Q] [-A:size] [-C]\n\n\
+  [drive:]         Specifies the drive to format.\n\
+  -FS:file-system  Specifies the type of file system (%s).\n\
+  -V:label         Specifies volume label.\n\
+  -Q               Performs a quick format.\n\
+  -A:size          Overrides the default allocation unit size. Default settings\n\
+                   are strongly recommended for general use\n\
+                   NTFS supports 512, 1024, 2048, 4096, 8192, 16K, 32K, 64K.\n\
+                   FAT supports 8192, 16K, 32K, 64K, 128K, 256K.\n\
+                   NTFS compression is not supported for allocation unit sizes\n\
+                   above 4096.\n\
+  -C               Files created on the new volume will be compressed by\n\
+                   default.\n\n"
     STRING_COMPLETE "%lu τοις εκατό ολοκληώθηκε.\r"
     STRING_FORMAT_FAIL "Το FormatEx δε μπόρεσε να ολοκληρωθεί επιτυχώς.\n\n"
     STRING_NO_SUPPORT "Η λειτουργία δεν είναι υποστηριζόμενη"
@@ -32,8 +28,8 @@ BEGIN
     STRING_FILESYSTEM "Ο τύπος του συστήματος αρχείων είναι %s.\n"
     STRING_LABEL_NAME_EDIT "Εισάγετε την τρέχουσα ετικέτα για τον τόμο %C: "
     STRING_ERROR_LABEL "Μια μη έγγυρη ετικέτα πληκτρολογήθηκε για αυτόν τον τόμο.\n"
-    STRING_YN_FORMAT "\nΠΡΟΕΙΔΟΠΟΙΗΣΗ, ΟΛΑ ΤΑ ΔΕΔΟΜΕΝΑ ΣΤΟΝ NON_REMOVABLE ΔΙΣΚΟ\n\
-DRIVE %C: ΘΑ ΧΑΘΟΥΝ!\nΣυνέχεια με τη διαμόρφωση (Y/N)? "
+    STRING_YN_FORMAT "\nWARNING, ALL DATA ON NON_REMOVABLE DISK\n\
+DRIVE %C: WILL BE LOST!\nProceed with Format (Y/N)? "
     STRING_YES_NO_FAQ "YN"
     STRING_VERIFYING "Γίνεται πιστοποίηση"
     STRING_FAST_FMT "QuickFormatting"
