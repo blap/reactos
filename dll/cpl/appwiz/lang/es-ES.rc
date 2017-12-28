@@ -1,10 +1,4 @@
-/* Spanish Language resource file
- *
- * Traducido por: Javier Remacha             2007-12-22
- * Traducido por: Ismael Ferreras Morezuelas 2014-12-30
- */
-
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 IDD_FIRSTPAGE DIALOGEX 0, 0, 380, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -12,7 +6,7 @@ CAPTION "Crear acceso directo"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT "Text1", -1, 115, 15, 160, 24
-    LTEXT "Text2", -1, 115, 35, 160, 17
+    LTEXT "Texto2", -1, 115, 35, 160, 17
 END
 
 IDD_SUBMIT_REPORT DIALOGEX 0, 0, 380, 228
@@ -21,7 +15,7 @@ CAPTION "Crear acceso directo"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT "Text1",-1,10,0,225,40
-    LTEXT "Text2",-1,10,40,120,20
+    LTEXT "Texto2",-1,10,40,120,20
     LTEXT "Text3",-1,10,55,120,20
 END
 
@@ -49,14 +43,14 @@ END
 
 IDD_CONFIG_STARTMENU DIALOGEX 0, 0, 212, 200
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Remove Shortcuts/Folders"
+CAPTION "Quitar accesos directos o carpetas"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "&To remove an item from the Start menu, select the item and click Remove.", -1, 10, 10, 192, 16
     CONTROL "List1", IDC_STARTMENU_TREE, "SysListView32", LVS_REPORT | LVS_SHOWSELALWAYS |
             LVS_SORTASCENDING | WS_BORDER | WS_TABSTOP, 10, 32, 192, 138
-    PUSHBUTTON "&Remove", IDC_REMOVE_ENTRIES, 98, 176, 50, 14, WS_GROUP | WS_TABSTOP
-    DEFPUSHBUTTON "Close", IDOK, 152, 176, 50, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON "&Eliminar", IDC_REMOVE_ENTRIES, 98, 176, 50, 14, WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON "Cerrar", IDOK, 152, 176, 50, 14, WS_GROUP | WS_TABSTOP
 END
 
 ID_DWL_GECKO_DIALOG DIALOGEX  0, 0, 260, 95
