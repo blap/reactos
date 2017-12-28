@@ -170,7 +170,7 @@ BEGIN
     LTEXT "Este computador não pode reproduzir áudio porque o serviço de áudio do ReactOS não está ativado.", 10245, 60, 25, 150, 40
     AUTOCHECKBOX "&Ativar o áudio do ReactOS", 10253, 60, 68, 150, 9
     LTEXT "Observações", 10246, 58, 87, 150, 11
-    LTEXT "1. você deve ser um administrador para habilitar esse serviço. Se você não fez login como administrador, você será solicitado um nome de administrador e senha.", 10247, 60, 100, 150, 40
+    LTEXT "1. você deve ser um administrador para habilitar esse serviço. Se você não fez login como administrador, você será solicitado por um nome de administrador e senha.", 10247, 60, 100, 150, 40
     LTEXT "2. Depois que você ativar o áudio ReactOS você terá que reiniciar o computador.", 10248, 60, 140, 150, 40
 END
 
@@ -223,7 +223,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Áudio do ReactOS", 10259, 7, 5, 213, 192
     ICON 4394, 10257, 25, 25, 20, 20
-    LTEXT "O serviço de áudio do ReactOS está habilitado. Entretanto, áudio pode não funcionar corretamente até que você reinicie o ReactOS. Se você deseja reiniciar agora, primeiro salve o trabalho e feche todos os programas.", 10261, 60, 25, 150, 50
+    LTEXT "O serviço de áudio do ReactOS está habilitado. Entretanto, o áudio pode não funcionar corretamente até que você reinicie o ReactOS. Se você deseja reiniciar agora, primeiro salve o trabalho e feche todos os programas.", 10261, 60, 25, 150, 50
     LTEXT "Para reiniciar o ReactOS, clique OK.", 10262, 60, 75, 150, 20
     LTEXT "Se você Cancelar, você precisará reiniciar mais tarde para o que o áudio ReactOS funcione corretamente.", 10263, 60, 100, 150, 40
 END
