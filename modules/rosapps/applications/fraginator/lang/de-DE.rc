@@ -1,4 +1,4 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 IDD_MAIN DIALOGEX 0, 0, 375, 103
 STYLE DS_SHELLFONT | DS_CENTERMOUSE | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE |
@@ -11,16 +11,16 @@ BEGIN
                     WS_VSCROLL | WS_TABSTOP
     COMBOBOX        IDC_PRIORITY_LIST,241,52,73,111,CBS_DROPDOWNLIST |
                     WS_VSCROLL | WS_TABSTOP
-    PUSHBUTTON      "Start",IDC_STARTSTOP,322,7,45,15
+    PUSHBUTTON      "Starten",IDC_STARTSTOP,322,7,45,15
     PUSHBUTTON      "Hilfe",ID_MAIN_HELP,322,29,45,15
     PUSHBUTTON      "Beenden",IDC_QUIT,322,51,45,15
     CONTROL         110,-1,"Static",SS_BITMAP | SS_SUNKEN |
                     WS_BORDER,7,7,78,58
     LTEXT           "Laufwerk wählen:",-1,78,40,73,8
     LTEXT           "Aufgabe wählen:",-1,159,40,73,8
-    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER |
+    CONTROL         "Fortschritt1",IDC_PROGRESS,"msctls_progress32",WS_BORDER |
                     0x1,7,71,320,10
-    CONTROL         "Static",IDC_STATUS,"Static",SS_LEFTNOWORDWRAP |
+    CONTROL         "Statisch",IDC_STATUS,"Static",SS_LEFTNOWORDWRAP |
                     SS_SUNKEN | WS_GROUP,7,86,359,10
     LTEXT           "Ich bin ein Affe, hör mich schreien",IDC_WISECRACKS,78,15,115,8
     LTEXT           "100.00%",IDC_PERCENT,337,71,30,8,0,WS_EX_RIGHT
@@ -29,7 +29,7 @@ END
 
 IDD_REPORT DIALOGEX  0, 0, 405, 169
 STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION
-CAPTION "Report"
+CAPTION "Melden"
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON   "Bytes",IDC_BYTES,7,148,50,14
