@@ -1,12 +1,4 @@
-/*
- * PROJECT:     Text Input DLL
- * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        dll/cpl/input/lang/uk-UA.rc
- * PURPOSE:     Ukraianian Language File for input.dll
- * TRANSLATORS: Artem Reznikov, Igor Paliychuk
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDD_PROPPAGESETTINGS DIALOGEX 0, 0, 254, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -39,7 +31,7 @@ CAPTION "Додаткові параметри клавіатури"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Вимкнення режиму Caps Lock", -1, 7, 7, 258, 26
-    AUTORADIOBUTTON "&при натисненні клавіші CAPS LOCK", IDC_PRESS_CL_KEY_RB, 10, 17, 130, 11, WS_GROUP
+    AUTORADIOBUTTON "Press the CAPS &LOCK key", IDC_PRESS_CL_KEY_RB, 14, 17, 120, 11, WS_GROUP
     AUTORADIOBUTTON "при &натисненні клавіші SHIFT", IDC_PRESS_SHIFT_KEY_RB, 144, 17, 120, 11, NOT WS_TABSTOP
     GROUPBOX "Сполучення клавіш для мов вводу", -1, 7, 37, 258, 95
     LTEXT "Дія", -1, 14, 47, 60, 9
@@ -57,7 +49,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "&Мова вводу:", -1, 7, 7, 61, 10
     COMBOBOX IDC_INPUT_LANG_COMBO, 7, 17, 212, 150, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL
-    LTEXT "&Розкладка клавіатури або засіб вводу (IME):", -1, 7, 36, 140, 10
+    LTEXT "&Розкладка клавіатури або засіб вводу (IME):", -1, 7, 36, 110, 10
     COMBOBOX IDC_KEYBOARD_LO_COMBO, 7, 47, 212, 150, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL
     DEFPUSHBUTTON "OK", IDOK, 116, 68, 50, 14
     PUSHBUTTON "Скасувати", IDCANCEL, 169, 68, 50, 14
@@ -90,7 +82,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Мова вводу:", -1, 7, 7, 61, 8
     LTEXT "", IDC_INPUT_LANG_STR, 73, 7, 129, 8
-    LTEXT "&Розкладка клавіатури або засіб вводу (IME):", -1, 7, 21, 150, 10
+    LTEXT "&Розкладка клавіатури або засіб вводу (IME):", -1, 7, 21, 110, 10
     COMBOBOX IDC_KB_LAYOUT_IME_COMBO, 7, 32, 212, 150, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL
     DEFPUSHBUTTON "OK", IDOK, 116, 53, 52, 14
     PUSHBUTTON "Скасувати", IDCANCEL, 169, 53, 52, 14
