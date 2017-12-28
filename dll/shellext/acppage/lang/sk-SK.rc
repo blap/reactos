@@ -1,18 +1,11 @@
-/*
- * FILE:        dll/acppage/acppage/lang/sk-SK.rc
- * PURPOSE:     Slovak Language File for acppage
- * TRANSLATOR:  Kario <kario@szm.sk>
- * DATE OF TR.: 30-09-2007
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 IDD_ACPPAGESHEET DIALOGEX 0, 0, 224, 226
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Kompatibilita"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    LTEXT "Ak máte problémy so spustením tohto programu v systéme ReactOS, vyberte operačný systém, pod názvom ktorého sa systém ReactOS ohlási programu.\nPlease note that this is a work in progress.", -1, 7, 7, 210, 31
+    LTEXT "If you have problems running this program in ReactOS, select an operating system ReactOS should report to the application.\nPlease note that this is a work in progress.", IDC_EXPLANATION, 7, 7, 210, 31
     GROUPBOX "Kompatibilný režim", IDC_COMPATGROUP, 7, 41, 210, 49
     CHECKBOX "Tento program spustiť v režime kompatibilnom so systémom:", IDC_CHKRUNCOMPATIBILITY, 18, 57, 188, 10, BS_AUTOCHECKBOX | WS_TABSTOP
     COMBOBOX IDC_COMPATIBILITYMODE, 18, 70, 188, 85, CBS_HASSTRINGS | CBS_DROPDOWNLIST | WS_TABSTOP | WS_DISABLED
@@ -40,8 +33,9 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_TABTITLE "Compatibility"
+    IDS_TABTITLE "Kompatibilita"
     IDS_FAILED_NETWORK "Compatibility modes cannot be set on this program because it is on a network drive."
     IDS_FAILED_PROTECTED "Compatibility modes cannot be set on this program because it is a part of ReactOS."
     IDS_YOU_DID_NOT_ADD "You did not add the mode, do you want to add it now?"
 END
+
