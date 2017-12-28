@@ -1,6 +1,4 @@
-/* Ukrainian translation by Artem Reznikov, Igor Paliychuk */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -140,7 +138,7 @@ BEGIN
         MENUITEM "C&ut", ID_HEXEDIT_CUT
         MENUITEM "&Copy", ID_HEXEDIT_COPY
         MENUITEM "&Paste", ID_HEXEDIT_PASTE
-        MENUITEM "&Delete", ID_HEXEDIT_DELETE
+        MENUITEM "&Видалити", ID_HEXEDIT_DELETE
         MENUITEM SEPARATOR
         MENUITEM "Select &All", ID_HEXEDIT_SELECT_ALL
     END
@@ -316,7 +314,7 @@ BEGIN
     IDS_ERROR "Помилка"
     IDS_WARNING "Увага"
     IDS_BAD_KEY "Не можу запросити розділ '%s'"
-    IDS_BAD_VALUE "Не можу запросити значення '%s'"
+    IDS_BAD_VALUE "Bad value for option %s, valid range is from %u to %u.\n"
     IDS_UNSUPPORTED_TYPE "Не можу редагувати розділи цього типу (%ld)"
     IDS_TOO_BIG_VALUE "Значення завелике (%ld)"
     IDS_MULTI_SZ_EMPTY_STRING "Дані типу REG_MULTI_SZ не можуть містити порожні рядки\nПорожні рядки були видалені зі списку."
@@ -478,7 +476,7 @@ BEGIN
     LTEXT "&Key:", IDC_STATIC, 4, 4, 15, 8, SS_LEFT
     EDITTEXT IDC_EDIT_KEY, 23, 2, 167, 13
     DEFPUSHBUTTON "OK", IDOK, 140, 17, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 89, 17, 50, 14
+    PUSHBUTTON "Скасувати", IDCANCEL, 89, 17, 50, 14
 END
 
 IDD_ADDFAVORITES DIALOGEX 0, 0, 186, 46
@@ -510,19 +508,19 @@ CAPTION "Пошук"
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON "Зна&йти далі", IDOK, 197, 7, 50, 14
-    PUSHBUTTON "Скасувати", IDCANCEL, 197, 24, 50, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 197, 24, 50, 14
     GROUPBOX "Шукати у", IDC_STATIC, 7, 25, 63, 51
     LTEXT "&Що шукати:", IDC_STATIC, 7, 8, 37, 10
     EDITTEXT IDC_FINDWHAT, 47, 7, 142, 13, ES_AUTOHSCROLL
-    CONTROL "&Розділи", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Keys", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 36, 35, 8
-    CONTROL "&Значення", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Values", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 48, 36, 8
-    CONTROL "&Дані", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Data", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 60, 42, 8
-    CONTROL "&Тільки рядки цілком", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &whole string only", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 32, 94, 13
-    CONTROL "З урахуванням &регістру", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &case", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 48, 90, 12
 END
 
@@ -540,7 +538,7 @@ END
 /*
  *STRINGTABLE
  *BEGIN
- *    ID_HELP_HELPTOPICS "Відкриває довідку редактора реєстра."
- *    ID_HELP_ABOUT "Відображає інформацію про програму, номер версії, та авторські права."
+ *    ID_HELP_HELPTOPICS "Opens Registry Editor Help."
+ *    ID_HELP_ABOUT "Displays program information, version number, and copyright."
  *END
  */
