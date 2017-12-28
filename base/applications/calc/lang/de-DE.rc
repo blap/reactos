@@ -1,4 +1,4 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 /* Dialogs */
 
@@ -235,7 +235,7 @@ BEGIN
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 276, 24, 40, 17
     CONTROL "CE", IDC_BUTTON_CE, "Button", BS_OWNERDRAW | BS_CENTER |
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 232, 24, 40, 17
-    CONTROL "Zurück", IDC_BUTTON_BACK, "Button", BS_OWNERDRAW | BS_CENTER |
+    CONTROL "Back", IDC_BUTTON_BACK, "Button", BS_OWNERDRAW | BS_CENTER |
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 188, 24, 40,17
     RTEXT "", IDC_TEXT_OUTPUT, 5, 1, 312, 14, SS_CENTERIMAGE, WS_EX_CLIENTEDGE
     CONTROL "7", IDC_BUTTON_7, "Button", BS_OWNERDRAW | BS_CENTER |
@@ -408,7 +408,7 @@ BEGIN
     IDS_AUTHOR "Geschrieben von Carlo Bramini"
 END
 
-/* Konversionstypen */
+/* Types of conversion */
 STRINGTABLE
 BEGIN
     IDS_CONV_ANGLE "Winkel"
@@ -426,7 +426,7 @@ BEGIN
     IDS_CONV_WEIGHT "Gewicht"
 END
 
-/* Winkeltypen */
+/* Angles */
 STRINGTABLE
 BEGIN
     IDS_ANGLE_DEGREES "Grad"
@@ -434,7 +434,7 @@ BEGIN
     IDS_ANGLE_RADIANS "Radiant"
 END
 
-/* Flächentypen */
+/* Areas */
 STRINGTABLE
 BEGIN
     IDS_AREA_ACRES "Acre"
@@ -473,7 +473,7 @@ BEGIN
     IDS_AREA_TSUBO "Tsubo"
 END
 
-/* Verbrauchstypen */
+/* Consumptions */
 STRINGTABLE
 BEGIN
     IDS_CONSUMPTION_KM_PER_L "Kilometer/liter"
@@ -482,7 +482,7 @@ BEGIN
     IDS_CONSUMPTION_MILES_GALLON_US "Meilen/Gallone (USA)"
 END
 
-/* Währungstypen */
+/* Currencies */
 STRINGTABLE
 BEGIN
     IDS_CURRENCY_AUSTRIAN_SCHILLING "Österreichische Schilling"
@@ -508,7 +508,7 @@ BEGIN
     IDS_CURRENCY_SPANISH_PESETA "Spanische Peseta"
 END
 
-/* Energietypen */
+/* Energies */
 STRINGTABLE
 BEGIN
     IDS_ENERGY_15_C_CALORIES "15 °C Kalorien"
@@ -525,7 +525,7 @@ BEGIN
     IDS_ENERGY_TH_CALORIES "Thermochemische Kalorie"
 END
 
-/* Längentypen */
+/* Lengths */
 STRINGTABLE
 BEGIN
     IDS_LENGTH_ANGSTROMS "Angströms"
@@ -600,7 +600,7 @@ BEGIN
     IDS_PRESSURE_PSI "Pfunddruck pro Quadratzoll"
 END
 
-/* Temperaturtypen */
+/* Temperatures */
 STRINGTABLE
 BEGIN
     IDS_TEMPERATURE_CELSIUS "Celsius"
@@ -623,7 +623,7 @@ BEGIN
     IDS_TIME_YEARS "Jahren"
 END
 
-/* Geschwindigkeitstypen */
+/* Velocities */
 STRINGTABLE
 BEGIN
     IDS_VELOCITY_CMS_SECOND "Zentimeter/Sekunde"
@@ -636,7 +636,7 @@ BEGIN
     IDS_VELOCITY_MILES_HOUR "Meilen/Stunde"
 END
 
-/* Volumeneinheiten */
+/* Volumes */
 STRINGTABLE
 BEGIN
     IDS_VOLUME_BARRELS_UK "Barrel (UK)"
@@ -675,7 +675,7 @@ BEGIN
     IDS_VOLUME_TO "To"
 END
 
-/* Gewichtseinheiten */
+/* Weights */
 STRINGTABLE
 BEGIN
     IDS_WEIGHT_BAHT "Baht"
