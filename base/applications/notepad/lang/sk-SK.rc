@@ -1,12 +1,4 @@
-/*
- *  Notepad (Slovak resources)
- *
- *  TRANSLATOR : Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- *  DATE OF TR.: xx-xx-2007
- *  LAST CHANGE: 27-12-2008
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -108,7 +100,7 @@ BEGIN
     EDITTEXT 0x143, 58, 147, 173, 12, WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
     PUSHBUTTON "Help", IDHELP, 8, 170, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 198, 170, 50, 14, BS_PUSHBUTTON
-    PUSHBUTTON "Cancel", IDCANCEL, 254, 170, 50, 14
+    PUSHBUTTON "Zrušiť", IDCANCEL, 254, 170, 50, 14
     PUSHBUTTON "P&rinter...", psh3, 310, 170, 50, 14
 END
 
@@ -133,7 +125,7 @@ BEGIN
     EDITTEXT ID_LINENUMBER, 54, 10, 106, 12, WS_CHILD | WS_BORDER | WS_TABSTOP
     LTEXT "Číslo riadka:", 0x155, 5, 12, 41, 12, WS_CHILD | WS_TABSTOP | ES_NUMBER
     DEFPUSHBUTTON "OK", IDOK, 75, 30, 40, 15, WS_CHILD | WS_TABSTOP
-    PUSHBUTTON "Zrušiť", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
 END
 
 IDD_ABOUTBOX DIALOGEX 22, 16, 284, 170
@@ -168,17 +160,17 @@ BEGIN
     STRING_UNTITLED "Bez názvu"
     STRING_ALL_FILES "Všetky súbory (*.*)"
     STRING_TEXT_FILES_TXT "Textové súbory (*.txt)"
-    STRING_TOOLARGE "Súbor '%s' je pre Poznámkový blok príliš veľký.\n \
-Na otvorenie súboru použite iný editor."
-    STRING_NOTEXT "Nevložili ste žiadny text. \
-\nProsím, napíšte niečo a skúste to znova."
-    STRING_DOESNOTEXIST "Nie je možné nájsť súbor '%s'\n\n \
-Chcete vytvoriť nový súbor?"
-    STRING_NOTSAVED "Text súboru '%s'\nsa zmenil.\n\n \
-Chcete uložiť zmeny?"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "Nie je možné nájsť '%s' ."
-    STRING_OUT_OF_MEMORY "Nedostatok pamäte na dokončenie tejto operácie. Zatvorte jednu \n \
-alebo viac aplikácií, aby sa uvoľnila pamäť a skúste to znova."
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "Nemožno nájsť '%s'"
     STRING_ANSI "ANSI"
     STRING_UNICODE "Unicode"
