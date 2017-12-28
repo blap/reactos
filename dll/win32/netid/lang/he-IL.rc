@@ -1,4 +1,4 @@
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 IDD_PROPPAGECOMPUTER DIALOGEX 0, 0, 256, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -75,6 +75,6 @@ BEGIN
        Forbidding the use of these characters means incompatibility with Windows. */
     3210 "&Details >>"
     3220 "<< &Details"
-    4000 "מידע"
+    4000 "Information"
     4001 "Can't set new a computer name!"
 END
