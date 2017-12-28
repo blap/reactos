@@ -1,19 +1,14 @@
-/* TRANSLATOR: Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- * DATE OF TR: 14-02-2008
- */
- 
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "Zobrazuje údaje, stránku za stránkou, na obrazovke.\n\n\
-  MORE < [Jednotka:][Cesta]Názov súboru\n\
-  Príkaz | MORE \n\
-  MORE [Jednotka:][Cesta]Názov súboru\n\n\
-  [Jednotka:][Cesta]Názov súboru    Súbor, ktorého obsah má byť zobrazený.\n\
-  Príkaz\t\t     Príkaz, ktorého výstup má byť zobrazený.\n\n\
-  Pri výzve ""-- Pokračujte --"" môžete stlačiť ľubovoľný kláves\n\
-  k zobrazeniu nasledujúcej stránky.\n"
+    IDS_USAGE "Displays data page-by-page on the screen.\n\n\
+  MORE < [Drive:][Path]File name\n\
+  Command | MORE \n\
+  MORE [Drive:][Path]File name\n\n\
+  [Drive:][Path]File name    A file, whose content shall be displayed.\n\
+  Command\t\t     A command, whose output shall be displayed.\n\n\
+  At the prompt """-- Continue --"" you can press any key to show the next page.\n"
     IDS_CONTINUE "-- Pokračujte --"
     IDS_CONTINUE_PROGRESS "-- Pokračujte (%d%%) --"
     IDS_FILE_ACCESS "Neviem získať prístup k súboru %s.\n"
