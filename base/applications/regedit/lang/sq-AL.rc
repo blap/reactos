@@ -1,8 +1,4 @@
-/* TRANSLATOR : Ardit Dani (Ard1t) (ardit.dani@gmail.com) 
- * DATE OF TR:  29-11-2013
-*/
-
-LANGUAGE LANG_ALBANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ALBANIAN, SUBLANG_ALBANIAN_ALBANIA
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -315,10 +311,10 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_ERROR "Error"
+    IDS_ERROR "Win32 error"
     IDS_WARNING "Paralajmërim"
     IDS_BAD_KEY "Nuk mund të query kyç '%s'"
-    IDS_BAD_VALUE "Nuk mund te query vleren '%s'"
+    IDS_BAD_VALUE "Vlere e keqe per opsion %s, varh i vlefshem nga %u në %u.\n"
     IDS_UNSUPPORTED_TYPE "Nuk mund të modifikoni çelësat e këtij lloji (%ld)"
     IDS_TOO_BIG_VALUE "Vlera eshte e madhe (%ld)"
     IDS_MULTI_SZ_EMPTY_STRING "Data tipit REG_MULTI_SZ nuk mund te permbaje string bosh.\nStringu bosh eshte hequr nga lista."
@@ -508,7 +504,7 @@ END
 
 IDD_FIND DIALOGEX 0, 0, 254, 82
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Find"
+CAPTION "Gjej"
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON "Gjej tjetrin", IDOK, 197, 7, 50, 14
@@ -516,21 +512,21 @@ BEGIN
     GROUPBOX "Kerko në", IDC_STATIC, 7, 25, 63, 51
     LTEXT "Gjej çfar:", IDC_STATIC, 7, 8, 37, 10
     EDITTEXT IDC_FINDWHAT, 47, 7, 142, 13, ES_AUTOHSCROLL
-    CONTROL "Çeles", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Keys", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 36, 35, 8
-    CONTROL "&Vlera", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Values", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 48, 36, 8
     CONTROL "&Data", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 60, 42, 8
-    CONTROL "Pershtath nje string te plote", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &whole string only", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 32, 94, 13
-    CONTROL "Pershtat rastin", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &case", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 48, 90, 12
 END
 
 IDD_FINDING DIALOGEX 0, 0, 145, 50
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Gjej"
+CAPTION "Find"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     ICON IDI_REGEDIT, IDC_STATIC, 7, 7, 20, 20
