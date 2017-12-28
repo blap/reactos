@@ -1,12 +1,12 @@
 /*
- * PROJECT:    ReactOS Paint
- * LICENSE:    LGPL
- * FILE:       base/applications/mspaint/lang/tr-TR.rc
- * PURPOSE:    Turkish Resource file for ReactOS Paint
- * TRANSLATOR: 2013, 2014, 2016 Erdem Ersoy (eersoy93) (erdemersoy@live.com)
+ * PROJECT:     PAINT for ReactOS
+ * LICENSE:     LGPL
+ * FILE:        base/applications/mspaint/lang/en-US.rc
+ * PURPOSE:     US-English Language resource file
+ * TRANSLATORS: first times touched from en-GB.rc file by Mario Kacmar
  */
 
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 ID_MENU MENU
 BEGIN
@@ -224,5 +224,5 @@ BEGIN
     IDS_PERCENTAGE "Yüzde 1'den 500'e dek olmalıdır."
     IDS_ANGLE "Açı -89'dan 89'a dek olmalıdır."
     IDS_LOADERRORTEXT "%s kütüğü yüklenemedi."
-	IDS_ENLARGEPROMPTTEXT "Panodaki resim bit eşleminden daha büyük.\nBüyütülmüş bit eşlem ister misiniz?"
+    IDS_ENLARGEPROMPTTEXT "Panodaki resim bit eşleminden daha büyük.\nBüyütülmüş bit eşlem ister misiniz?"
 END
