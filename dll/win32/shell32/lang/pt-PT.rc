@@ -36,7 +36,7 @@ BEGIN
         MENUITEM "", -1, MFT_SEPARATOR
         MENUITEM "&Actualizar", FCIDM_SHVIEW_REFRESH
         MENUITEM "", -1, MFT_SEPARATOR
-        MENUITEM "Co&lar", FCIDM_SHVIEW_INSERT
+        MENUITEM "Inserir", FCIDM_SHVIEW_INSERT
         MENUITEM "Colar a&talho", FCIDM_SHVIEW_INSERTLINK
     END
 END
@@ -44,11 +44,11 @@ END
 /* menubar EDIT menu */
 MENU_003 MENU
 BEGIN
-    MENUITEM "&Undo\tCtrl+Z", FCIDM_SHVIEW_UNDO
+    MENUITEM "An&ular\tCtrl+Z", FCIDM_SHVIEW_UNDO
     MENUITEM SEPARATOR
-    MENUITEM "Cu&t\tCtrl+X", FCIDM_SHVIEW_CUT
-    MENUITEM "&Copy\tCtrl+C", FCIDM_SHVIEW_COPY
-    MENUITEM "&Paste\tCtrl+V", FCIDM_SHVIEW_INSERT
+    MENUITEM "Cor&tar\tCtrl+X", FCIDM_SHVIEW_CUT
+    MENUITEM "&Copiar\tCtrl+C", FCIDM_SHVIEW_COPY
+    MENUITEM "Co&lar\tCtrl+V", FCIDM_SHVIEW_INSERT
     MENUITEM "Paste &shortcut", FCIDM_SHVIEW_INSERTLINK
     MENUITEM SEPARATOR
     MENUITEM "Copy to &folder...", FCIDM_SHVIEW_COPYTO
@@ -66,6 +66,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "C&ortar", IDM_CUT
         MENUITEM "&Copiar", IDM_COPY
+        MENUITEM "Co&lar", IDM_INSERT
         MENUITEM SEPARATOR
         MENUITEM "Criar &Link", IDM_CREATELINK
         MENUITEM "&Apagar", IDM_DELETE
@@ -158,13 +159,13 @@ BEGIN
     LTEXT "Digite o nome do programa, pasta, documento, ou endereço Internet, que o ReactOS irá abrí-lo.", 12289, 36, 11, 182, 18
     LTEXT "&Abrir:", 12305, 7, 39, 24, 10
     CONTROL "", IDC_RUNDLG_EDITPATH, "COMBOBOX", WS_TABSTOP | WS_GROUP | WS_VSCROLL | WS_VISIBLE | CBS_AUTOHSCROLL | CBS_DROPDOWN, 36, 37, 183, 100
-    DEFPUSHBUTTON "OK", IDOK, 62, 63, 50, 14, WS_TABSTOP
-    PUSHBUTTON "Cancelar", IDCANCEL, 116, 63, 50, 14, WS_TABSTOP
-    PUSHBUTTON "&Procurar...", 12288, 170, 63, 50, 14, WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 36, 63, 59, 14, WS_TABSTOP
+    PUSHBUTTON "Abortar", IDCANCEL, 98, 63, 59, 14, WS_TABSTOP
+    PUSHBUTTON "&Seleccione...", 12288, 160, 63, 59, 14, WS_TABSTOP
 END
 
 IDD_SHORTCUT_PROPERTIES DIALOGEX 0, 0, 235, 215
-STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
 CAPTION "Atalho"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
@@ -202,7 +203,7 @@ BEGIN
     LTEXT "Esta opção permite executar este atalho como outro utilizador, ou continue com a sua conta enquanto protege o seu computador e dados contra actividade de programas não autorizados.", -1, 50, 60, 175, 40
     CHECKBOX "Executar num espaço de memória separada", 14001, 25, 100, 150, 10, WS_DISABLED
     PUSHBUTTON "OK", 1, 63, 124, 50, 15, WS_VISIBLE
-    PUSHBUTTON "Abortar", 2, 120, 124, 50, 15, WS_VISIBLE
+    PUSHBUTTON "Cancelar", 2, 120, 124, 50, 15, WS_VISIBLE
 END
 
 IDD_FOLDER_PROPERTIES DIALOGEX 0, 0, 240, 205
@@ -246,7 +247,7 @@ BEGIN
     CONTROL "Ficheiro", 14005, "edit", ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP, 68, 35, 160, 10
     LTEXT "Abre com::", 14006, 8, 53, 50, 10
     ICON "", 14025, 68, 52, 11, 10, NOT WS_VISIBLE
-    PUSHBUTTON "&Change...", 14024, 168, 50, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+    PUSHBUTTON "&Mudar...", 14024, 168, 50, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
     EDITTEXT 14007, 68, 53, 90, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | ES_AUTOHSCROLL | NOT WS_TABSTOP
     LTEXT "", -1, 8, 68, 221, 1, SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE
     LTEXT "Localização:", 14008, 8, 75, 45, 10
@@ -392,7 +393,7 @@ BEGIN
     GROUPBOX "&Programas", -1, 7, 42, 249, 187
     CONTROL "Programs", 14002, WC_TREEVIEW, WS_BORDER | WS_TABSTOP | TVS_SHOWSELALWAYS, 16 ,57, 230, 130
     AUTOCHECKBOX "&Utilizar sempre o programa seleccionado para abrir este tipo de ficheiros", 14003, 20, 193, 225, 10
-    PUSHBUTTON "&Seleccione...", 14004, 198, 207, 50, 14
+    PUSHBUTTON "&Browse...", 14004, 198, 207, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 150, 236, 50, 14
     PUSHBUTTON "Cancelar", IDCANCEL, 206, 236, 50, 14
 END
@@ -447,7 +448,7 @@ BEGIN
     LTEXT "Abre com:", -1, 12, 140, 40, 10
     //ICON
     LTEXT "Appnome", 14005, 100, 140, 40, 10
-    PUSHBUTTON "&Mudar...", 14006, 180, 140, 50, 14, WS_TABSTOP
+    PUSHBUTTON "&Change...", 14006, 180, 140, 50, 14, WS_TABSTOP
     LTEXT "", 14007, 12, 155, 160, 30
     PUSHBUTTON "A&vançado", 14008, 180, 175, 50, 14, WS_TABSTOP
 END
@@ -479,8 +480,8 @@ CAPTION "Terminar sessão ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
-    LTEXT "Tem a certeza que quer terminar a sessão?", -1, 43, 15, 131, 8
-    DEFPUSHBUTTON "&Terminar a sessão", IDOK, 30, 38, 64, 14
+    LTEXT "Are you sure you want to log off?", -1, 49, 15, 131, 8
+    DEFPUSHBUTTON "&Log Off", IDOK, 49, 38, 43, 14
     PUSHBUTTON "Cancelar", IDCANCEL, 99, 38, 43, 14
 END
 
@@ -596,7 +597,7 @@ BEGIN
     GROUPBOX "Opções verificação do disco", -1, 7, 6, 179, 40
     PUSHBUTTON "Cancelar", IDCANCEL, 128, 95, 60, 14
     AUTOCHECKBOX "Reparar automáticamente erros nos ficheiros do sistema", 14000, 12, 15, 155, 10
-    AUTOCHECKBOX "&Procurar e tentar reparar sectores danificados", 14001, 16, 30, 165, 10
+    AUTOCHECKBOX "&Scan for and attempt recovery of bad sectors", 14001, 12, 30, 165, 10
     CONTROL "", 14002, "MSCTLS_PROGRESS32", 16, 7, 50, 179, 8
     LTEXT "", 14003, 60, 80, 170, 10
 END
@@ -612,7 +613,7 @@ BEGIN
     LTEXT "Select an icon from the list below:", -1, 7, 36, 179, 10
     LISTBOX IDC_PICKICON_LIST, 7, 47, 181, 120, LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | LBS_DISABLENOSCROLL | WS_HSCROLL | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 81, 179, 50, 14
-    PUSHBUTTON "Cancelar", IDCANCEL, 135, 179, 50, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 135, 179, 50, 14
 END
 
 IDD_NOOPEN DIALOGEX 0, 0, 240, 75
