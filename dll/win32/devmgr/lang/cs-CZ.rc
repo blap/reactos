@@ -1,9 +1,4 @@
-﻿/* FILE:       dll/win32/devmgr/lang/cs-CZ.rc
- * TRANSLATOR: Radek Liska aka Black_Fox (radekliska at gmail dot com)
- * UPDATED:    2013-06-01
- */
-
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 STRINGTABLE
 BEGIN
@@ -38,7 +33,7 @@ BEGIN
     IDS_RESOURCE_PORT "Rozsah I/O"
 END
 
-/* puvodni anglicke error messages prevzaty z: http://www.z123.org/techsupport/medm.htm */
+/* error messages, source: http://www.z123.org/techsupport/medm.htm */
 STRINGTABLE
 BEGIN
     IDS_DEV_NO_PROBLEM "Toto zařízení funguje správně."
@@ -69,9 +64,9 @@ BEGIN
     IDS_DEV_DISABLED "Toto zařízení není spuštěno."
     IDS_DEV_DISABLED2 "Toto zařízení je vypnuto."
     IDS_DEV_DEVLOADER_NOT_READY "Zavaděče tohoto zařízení nemohou načíst požadované ovladače."
-    IDS_DEV_DEVLOADER_NOT_READY2 "" /* unused */
+    IDS_DEV_DEVLOADER_NOT_READY2 """ /* unused */
     IDS_DEV_DEVLOADER_NOT_READY3 "" /* unused */
-    IDS_DEV_DEVICE_NOT_THERE "Zařízení není přítomno, nepracuje správně nebo nemá nainstalované všechny ovladače."
+    IDS_DEV_DEVICE_NOT_THERE ""Zařízení není přítomno, nepracuje správně nebo nemá nainstalované všechny ovladače."
     IDS_DEV_MOVED "ReactOS právě nastavuje toto zařízení."
     IDS_DEV_TOO_EARLY "ReactOS právě nastavuje toto zařízení."
     IDS_DEV_NO_VALID_LOG_CONF "ReactOS nemohl určit zdroje tohoto zařízení."
@@ -139,7 +134,7 @@ BEGIN
     LTEXT "", IDC_MANUFACTURER, 14, 88, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_LOCATION, 14, 100, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_STATUS, 14, 112, 183, 30
-    PUSHBUTTON "Ř&ešení problémů...", IDC_TROUBLESHOOT, 85, 140, 54, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
+    PUSHBUTTON "Ř&ešení problémů...", IDC_TROUBLESHOOT, 80, 140, 60, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
     PUSHBUTTON "Vlas&tnosti", IDC_PROPERTIES, 146, 140, 50, 14
 END
 
@@ -195,14 +190,14 @@ BEGIN
     CONTROL "", IDC_DRIVERFILES, "SysListView32", LVS_REPORT | LVS_NOCOLUMNHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_SORTASCENDING |
             LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP, 7, 46, 209, 80
-    LTEXT "Zprostředkovatel:", -1, 14, 134, 66, 8
-    EDITTEXT IDC_FILEPROVIDER, 80, 134, 137, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Verze souboru:", -1, 14, 150, 66, 8
-    EDITTEXT IDC_FILEVERSION, 80, 150, 137, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Autorská práva:", -1, 14, 166, 66, 8
-    EDITTEXT IDC_FILECOPYRIGHT, 80, 166, 137, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Digitální podpis:", -1, 14, 182, 66, 8
-    EDITTEXT IDC_DIGITALSIGNER, 80, 182, 137, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "Zprostředkovatel:", -1, 14, 134, 50, 8
+    EDITTEXT IDC_FILEPROVIDER, 66, 134, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "Verze souboru:", -1, 14, 150, 50, 8
+    EDITTEXT IDC_FILEVERSION, 66, 150, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "Autorská práva:", -1, 14, 166, 50, 8
+    EDITTEXT IDC_FILECOPYRIGHT, 66, 166, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "Digitální podpis:", -1, 14, 182, 50, 8
+    EDITTEXT IDC_DIGITALSIGNER, 66, 182, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     DEFPUSHBUTTON "OK", IDOK, 167, 208, 50, 14
 END
 
@@ -240,7 +235,6 @@ BEGIN
     ICON "", IDC_DEVICON, 7, 7, 20, 20
     LTEXT "", IDC_DEVNAME, 37, 9, 174, 16, SS_NOPREFIX
 END
-
 
 
 /*
@@ -307,8 +301,9 @@ BEGIN
   IDS_HINT_DISABLE      " Zakáže vybrané zařízení."
   IDS_HINT_UPDATE       " Spustí průvodce aktualizací softwaru ovladače pro vybrané zařízení."
   IDS_HINT_UNINSTALL    " Odinstaluje ovladače vybraného zařízení."
-  IDS_HINT_ADD          " Umožní přidat do systému zastaralé zařízení nepodporující Plug and Play."
+  IDS_HINT_ADD          " Umožní přidat do systému zastaralé zařízení nepodporující Plug and Play." 
   IDS_HINT_ABOUT        " Ukončí program.."
+  IDS_HINT_EXIT         " Ukončí program."
 
   IDS_HINT_DEV_BY_TYPE  " Zobrazí zařízení podle typu hardwaru."
   IDS_HINT_DEV_BY_CONN  " Zobrazí zařízení podle typu připojení."
@@ -323,4 +318,3 @@ BEGIN
   IDS_HINT_SYS_MAXIMIZE " Maximalizuje okno na celou obrazovku."
   IDS_HINT_SYS_CLOSE    " Zavře toto okno."
 END
-
