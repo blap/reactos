@@ -1,6 +1,5 @@
-/* Dutch translation by Vertaald door Eric Janssen */
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
 
-LANGUAGE LANG_DUTCH, SUBLANG_NEUTRAL
 STRINGTABLE
 BEGIN
     IDS_DllNotLoaded "LoadLibrary kon '%s' niet laden"
