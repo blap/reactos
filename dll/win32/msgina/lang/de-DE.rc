@@ -33,7 +33,7 @@ BEGIN
     COMBOBOX IDC_LOGON_TO, 60, 95, 155, 14, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     PUSHBUTTON "OK",IDOK, 106, 122, 50, 14, BS_DEFPUSHBUTTON
     PUSHBUTTON "Abbrechen", IDCANCEL, 160, 122, 50, 14
-    PUSHBUTTON "Herunterfahren", IDC_SHUTDOWN, 214, 122, 50, 14
+    PUSHBUTTON "&Herunterfahren", IDC_SHUTDOWN, 214, 122, 50, 14
 END
 
 IDD_LOGGEDON_DLG DIALOGEX 0, 0, 275, 175
@@ -43,12 +43,12 @@ FONT 8, "MS Shell Dlg", 400, 0, 1
 BEGIN
     CONTROL IDI_ROSLOGO, IDC_ROSLOGO, "Static", SS_BITMAP, 0, 0, 275, 54
     GROUPBOX "Anmeldeinformation", IDC_STATIC, 7, 61, 261, 52
-    LTEXT "<Message>", IDC_LOGONMSG, 15, 73, 245, 18
-    LTEXT "<Logon date>", IDC_LOGONDATE, 15, 94, 245, 8
+    LTEXT "<Nachricht>", IDC_LOGONMSG, 15, 73, 245, 18
+    LTEXT "<Anmeldedatum>", IDC_LOGONDATE, 15, 94, 245, 8
     CTEXT "Was wollen Sie tun?", IDC_STATIC, 10, 119, 255, 8
     PUSHBUTTON "Computer sperren", IDC_LOCK, 10, 135, 76, 14
-    PUSHBUTTON "Abmelden...", IDC_LOGOFF, 100, 135, 75, 14
-    PUSHBUTTON "&Shut Down", IDC_SHUTDOWN, 189, 135, 76, 14
+    PUSHBUTTON "&Abmelden...", IDC_LOGOFF, 100, 135, 75, 14
+    PUSHBUTTON "&Herunterfahren", IDC_SHUTDOWN, 189, 135, 76, 14
     PUSHBUTTON "Passwort ändern", IDC_CHANGEPWD, 10, 154, 76, 14
     PUSHBUTTON "Task-Manager", IDC_TASKMGR, 100, 154, 75, 14
     PUSHBUTTON "Abbrechen", IDCANCEL, 189, 154, 76, 14
@@ -63,7 +63,7 @@ BEGIN
     ICON IDI_LOCKICON, -1, 7, 59, 20, 20
     LTEXT "Dieser Computer wird verwendet und ist gesperrt.", IDC_STATIC, 36, 61, 232, 8
     LTEXT "Nachricht", IDC_LOCKMSG, 37, 75, 231, 26
-    LTEXT "Press Ctrl-Alt-Del to unlock this computer.", IDC_STATIC, 36, 106, 232, 8
+    LTEXT "Drücken Sie Strg-Alt-Entf, um diesen Computer zu entsperren.", IDC_STATIC, 36, 106, 232, 8
 END
 
 IDD_UNLOCK_DLG DIALOGEX 0, 0, 275, 179
@@ -73,7 +73,7 @@ FONT 8, "MS Shell Dlg", 400, 0, 1
 BEGIN
     CONTROL IDI_ROSLOGO, IDC_ROSLOGO, "Static", SS_BITMAP, 0, 0, 275, 54
     ICON IDI_LOCKICON, -1, 7, 59, 20, 20
-    LTEXT "This computer is in use and has been locked.", IDC_STATIC, 36, 61, 232, 8
+    LTEXT "Dieser Computer wird verwendet und ist gesperrt.", IDC_STATIC, 36, 61, 232, 8
     LTEXT "Nachricht", IDC_LOCKMSG, 36, 75, 232, 26
     LTEXT "Benutzername:", IDC_STATIC, 36, 107, 40, 8
     EDITTEXT IDC_USERNAME, 84, 104, 119, 14, ES_AUTOHSCROLL
