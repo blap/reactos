@@ -9,7 +9,7 @@ MAIN_MENU MENU
 BEGIN
     POPUP "&Datei"
     BEGIN
-        MENUITEM "Ö&ffnen...", CMD_OPEN
+        MENUITEM "&Öffnen...", CMD_OPEN
         MENUITEM "Speichern &unter...", CMD_SAVE_AS
         MENUITEM SEPARATOR
         MENUITEM "&Beenden", CMD_EXIT
@@ -26,14 +26,14 @@ BEGIN
     BEGIN
         MENUITEM "&Hilfethemen", CMD_HELP
         MENUITEM SEPARATOR
-        MENUITEM "Inf&o", CMD_ABOUT
+        MENUITEM "&Über", CMD_ABOUT
     END
 END
 
 STRINGTABLE
 BEGIN
-    STRING_CLIPBOARD "Clipboard Viewer"
-    STRING_CLIPFILE  "Clipboard Element"
+    STRING_CLIPBOARD "Zwischenablagen-Ansicht"
+    STRING_CLIPFILE  "Zwischenablagenelement"
     STRING_DELETE_MSG "Soll der Inhalt der Zwischenablage gelöscht werden?"
     STRING_DELETE_TITLE "Zwischenablage löschen"
     STRING_FORMAT_NT "Zwischenablagedateien für ReactOS (*.clp)"
@@ -54,7 +54,7 @@ BEGIN
     STRING_CF_PALETTE "Farbpalette"
     STRING_CF_DIBV5 "DIB-Bitmap (Version 5)"
     STRING_CF_SYLK "Symbolic Link Format"
-    STRING_CF_DIF "Data Interchange Format"
+    STRING_CF_DIF "Datenaustauschformat"
     STRING_CF_HDROP "Drop-Daten"
 END
 
