@@ -1,4 +1,4 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 IDM_TRAYWND MENU
 BEGIN
@@ -63,7 +63,7 @@ BEGIN
 END
 
 IDD_TASKBARPROP_TASKBAR DIALOGEX 0, 0, 252, 218
-STYLE DS_FIXEDSYS | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "Taskleiste"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
@@ -77,7 +77,7 @@ BEGIN
     GROUPBOX "Benachrichtigungsfeld", IDC_STATIC, 6, 114, 240, 98
     CONTROL "", IDC_TASKBARPROP_NOTIFICATIONBITMAP, "Static", SS_BITMAP | SS_SUNKEN | SS_CENTERIMAGE, 12, 126, 229, 24
     AUTOCHECKBOX "&Uhr Anzeigen", IDC_TASKBARPROP_CLOCK, 13, 153, 80, 10
-    AUTOCHECKBOX "Sekunden Anzeigen", IDC_TASKBARPROP_SECONDS, 120, 153, 80, 10, WS_DISABLED  
+    AUTOCHECKBOX "Sekunden Anzeigen", IDC_TASKBARPROP_SECONDS, 120, 153, 80, 10, WS_DISABLED
     LTEXT "Das Benachrichtigungsfeld kann übersichtlich gestaltet werden, indem selten verwendete Symbole ausgeblendet werden.", IDC_STATIC, 13, 169, 223, 16
     AUTOCHECKBOX "&Inaktive Symbole ausblenden", IDC_TASKBARPROP_HIDEICONS, 13, 191, 125, 10
     PUSHBUTTON "An&passen...", IDC_TASKBARPROP_ICONCUST, 188, 191, 50, 14
@@ -94,7 +94,7 @@ BEGIN
     PUSHBUTTON "An&passen...", IDC_TASKBARPROP_STARTMENUCUST, 192, 132, 53, 14, WS_DISABLED
     AUTORADIOBUTTON "Klassisches Start&menü", IDC_TASKBARPROP_STARTMENUCLASSIC, 7, 175, 105, 10
     LTEXT "Dieser Stil beinhaltet das klassische Aussehen mit gewohnter Funktionalität", IDC_STATIC, 20, 185, 150, 24
-    PUSHBUTTON "An&passen...", IDC_TASKBARPROP_STARTMENUCLASSICCUST, 192, 172, 53, 14
+    PUSHBUTTON "An&passen...", IDC_TASKBARPROP_STARTMENUCLASSICCUST, 192, 172, 53, 14    
 END
 
 IDD_NOTIFICATIONS_CUSTOMIZE DIALOGEX 0, 0, 232, 240
@@ -114,28 +114,28 @@ END
 
 IDD_CLASSICSTART_CUSTOMIZE DIALOGEX 0, 0, 232, 240, 0
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_DLGFRAME
-CAPTION "Klassisches Startmenü anpassen"
+CAPTION "Allgemein"
 FONT 8, "MS Shell Dlg"
 {
-    GROUPBOX         "Startmenü", IDC_STATIC, 8, 7, 218, 114
+    GROUPBOX         "Start menu", IDC_STATIC, 8, 7, 218, 114
     ICON             IDI_STARTMENU2, IDC_STATIC, 19, 17, 20, 20
-    LTEXT            "Sie können das Startmenü anpassen, indem Sie Elemente hinzufügen oder davon entfernen.", IDC_STATIC, 48, 17, 108, 39
-    PUSHBUTTON       "&Hinzufügen...", IDC_CLASSICSTART_ADD, 162, 18, 53, 14
-    PUSHBUTTON       "&Entfernen...", IDC_CLASSICSTART_REMOVE, 162, 33, 53, 14
-    PUSHBUTTON       "Er&weitert", IDC_CLASSICSTART_ADVANCED, 162, 49, 53, 14
-    PUSHBUTTON       "&Sortieren", IDC_CLASSICSTART_SORT, 162, 65, 53, 14
+    LTEXT            "You can customize your Start menu by adding or removing items.", IDC_STATIC, 48, 17, 108, 39
+    PUSHBUTTON       "A&dd...", IDC_CLASSICSTART_ADD, 162, 18, 53, 14
+    PUSHBUTTON       "&Remove...", IDC_CLASSICSTART_REMOVE, 162, 33, 53, 14
+    PUSHBUTTON       "Ad&vanced", IDC_CLASSICSTART_ADVANCED, 162, 49, 53, 14
+    PUSHBUTTON       "&Sort", IDC_CLASSICSTART_SORT, 162, 65, 53, 14
     ICON             IDI_RECYCLEBIN, IDC_STATIC, 20, 85, 20, 20
-    LTEXT            "Löschen Sie kürzlich verwendete Dokumente, Programme und Webseiten.", IDC_STATIC, 49, 85, 108, 33
-    PUSHBUTTON       "&Löschen", IDC_CLASSICSTART_CLEAR, 162, 94, 53, 14
-    LTEXT            "Erweiterte Startmenü&optionen:", IDC_STATIC, 8, 129, 150, 8
+    LTEXT            "To remove records of recently accessed documents, programs, and Web sites, click Clear.", IDC_STATIC, 49, 85, 108, 33
+    PUSHBUTTON       "&Clear", IDC_CLASSICSTART_CLEAR, 162, 94, 53, 14
+    LTEXT            "Advanced S&tart menu options:", IDC_STATIC, 8, 129, 150, 8
     CONTROL          "StartMenuSe&ttings", IDC_CLASSICSTART_SETTINGS, "SysTreeView32", WS_BORDER | 0x00000001, 8, 139, 218, 72, WS_EX_CLIENTEDGE
     DEFPUSHBUTTON    "OK", IDOK, 122, 220, 50, 14
-    PUSHBUTTON       "Abbrechen", IDCANCEL, 176, 220, 50, 14
+    PUSHBUTTON       "Cancel", IDCANCEL, 176, 220, 50, 14
 }
 
 IDD_FILENAME_WARNING DIALOGEX 0, 0, 272, 81, 0
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUPWINDOW | WS_DLGFRAME
-CAPTION "File Name Warning"
+CAPTION "Allgemein"
 FONT 8, "MS Shell Dlg"
 {
     DEFPUSHBUTTON    "&Ignore", IDIGNORE, 215, 60, 50, 14
@@ -148,18 +148,18 @@ FONT 8, "MS Shell Dlg"
 
 IDD_MODERNSTART_ADVANCED DIALOGEX 0, 0, 251, 198, 0
 STYLE DS_SETFONT | WS_CAPTION | WS_CHILD | WS_DISABLED
-CAPTION "Erweitert"
+CAPTION "Allgemein"
 FONT 8, "MS Shell Dlg"
 {
-    GROUPBOX         "Startmenüeinstellungen ", IDC_STATIC, 7, 7, 238, 42
-    AUTOCHECKBOX     "&Untermenüs beim darauf Zeigen öffnen", IDC_AUTOOPEN, 14, 21, 224, 10
-    AUTOCHECKBOX     "&Zuletzt installierte Programme hervorheben", IDC_HIGHLIGHT, 14, 35, 224, 10
-    LTEXT            "Startmenüeinstellungen:", IDC_STATIC, 7, 53, 238, 8
-    CONTROL          "Start&menüelemente", IDC_ITEMS, "SysTreeView32", WS_BORDER | 0x00000001, 7, 63, 238, 67, WS_EX_CLIENTEDGE
-    GROUPBOX         "Zuletzt verwendete Dokumente ", IDC_STATIC, 7, 133, 238, 56
-    LTEXT            "Wählen Sie diese Option, um einen schnellen Zugriff auf zuletzt verwendete Dokumente zu haben. Durch das Löschen der Liste werden die Dokumente nicht gelöscht.", IDC_STATIC, 14, 144, 224, 25
-    AUTOCHECKBOX     "Zuletzt &verwendete Dokumente auflisten", IDC_RECENTLY, 14, 171, 147, 10
-    PUSHBUTTON       "&Liste löschen", IDC_CLEAR, 182, 169, 55, 14
+    GROUPBOX         "Start menu settings ", IDC_STATIC, 7, 7, 238, 42
+    AUTOCHECKBOX     "&Open submenus when I pause on them with my mouse", IDC_AUTOOPEN, 14, 21, 224, 10
+    AUTOCHECKBOX     "Highlight &newly installed programs", IDC_HIGHLIGHT, 14, 35, 224, 10
+    LTEXT            "Start &menu items:", IDC_STATIC, 7, 53, 238, 8
+    CONTROL          "StartMenuSe&ttings", IDC_ITEMS, "SysTreeView32", WS_BORDER | 0x00000001, 7, 63, 238, 67, WS_EX_CLIENTEDGE
+    GROUPBOX         "Recent documents ", IDC_STATIC, 7, 133, 238, 56
+    LTEXT            "Select this option to provide quick access to the documents you opened most recently.  Clearing this list does not delete the documents.", IDC_STATIC, 14, 144, 224, 21
+    AUTOCHECKBOX     "List my most &recently opened documents", IDC_RECENTLY, 14, 168, 147, 10
+    PUSHBUTTON       "&Clear List", IDC_CLEAR, 182, 168, 55, 14
 }
 
 IDD_MODERNSTART_GENERAL DIALOGEX 0, 0, 251, 198
@@ -167,21 +167,21 @@ STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_DLGFRAME
 CAPTION "Allgemein"
 FONT 8, "MS Shell Dlg"
 {
-    GROUPBOX         "Symbolgröße für Programme ", IDC_STATIC, 7, 7, 238, 37
+    GROUPBOX         "Select an icon size for programs ", IDC_STATIC, 7, 7, 238, 37
     ICON             IDC_LARGEICON, 17, 18, 20, 20, SS_CENTERIMAGE
     ICON             IDC_SMALLICON, 151, 18, 20, 20, SS_CENTERIMAGE
-    AUTORADIOBUTTON  "&Große Symbole", IDC_CHOOSELARGE, 43, 25, 60, 10
-    AUTORADIOBUTTON  "&Kleine Symbole", IDC_CHOOSESMALL, 166, 25, 75, 10, NOT WS_TABSTOP
-    GROUPBOX         "Programme ", IDC_STATIC, 7, 49, 238, 70
-    LTEXT            "Das Startmenü enthält Verknüpfungen zu den am häufigsten verwendeten Programmen. Durch das Löschen der Verknüpfungsliste werden die Programme nicht gelöscht.", IDC_STATIC, 14, 61, 224, 34
-    LTEXT            "&Anzahl der Programme im Startmenü:", IDC_STATIC, 14, 100, 120, 8
-    EDITTEXT         IDC_NUMBEROFPROGRAMS, 133, 98, 29, 12, ES_LEFT | ES_RIGHT | ES_NUMBER
-    CONTROL          "", IDC_NUMBERUPDOWN, "msctls_updown32", WS_BORDER | 0x000000B6, 156, 98, 11, 12
-    PUSHBUTTON       "&Liste Löschen", IDC_CLEARLIST, 182, 98, 57, 14
-    GROUPBOX         "Im Startmenü anzeigen ", IDC_STATIC, 7, 126, 238, 63
+    AUTORADIOBUTTON  "&Large icons", IDC_CHOOSELARGE, 43, 25, 53, 10
+    AUTORADIOBUTTON  "&Small icons", IDC_CHOOSESMALL, 177, 25, 51, 10, NOT WS_TABSTOP
+    GROUPBOX         "Programs ", IDC_STATIC, 7, 49, 238, 70
+    LTEXT            "The Start menu contains shortcuts to the programs you use most often.  Clearing the list of shortcuts does not delete the programs.", IDC_STATIC, 14, 63, 224, 20
+    LTEXT            "&Number of programs on Start menu:", IDC_STATIC, 14, 86, 112, 8
+    EDITTEXT         IDC_NUMBEROFPROGRAMS, 133, 84, 27, 12, ES_LEFT | ES_RIGHT | ES_NUMBER
+    CONTROL          "", IDC_NUMBERUPDOWN, "msctls_updown32", WS_BORDER | 0x000000B6, 160, 84, 11, 12
+    PUSHBUTTON       "&Clear List", IDC_CLEARLIST, 182, 98, 57, 14
+    GROUPBOX         "Show on Start menu ", IDC_STATIC, 7, 126, 238, 63
     AUTOCHECKBOX     "&Internet:", IDC_SHOWINTERNET, 14, 140, 42, 10
     COMBOBOX         IDC_INTERNETDEFAULTAPP, 98, 138, 140, 200, CBS_DROPDOWNLIST | WS_VSCROLL
-    AUTOCHECKBOX     "&E-Mail:", IDC_SHOWEMAIL, 14, 157, 37, 10
+    AUTOCHECKBOX     "&E-mail:", IDC_SHOWEMAIL, 14, 157, 37, 10
     COMBOBOX         IDC_EMAILDEFAULTAPP, 98, 155, 140, 200, CBS_DROPDOWNLIST | WS_VSCROLL
 }
 
