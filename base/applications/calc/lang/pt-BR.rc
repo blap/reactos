@@ -1,6 +1,4 @@
-/* Translation and UTF-8 Conversion by mkbu95 <mkbu95@gmail.com> (August, 2011) */
-
-LANGUAGE LANG_PORTUGUESE, SUBLANG_NEUTRAL
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
 
 /* Dialogs */
 
@@ -34,7 +32,7 @@ BEGIN
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
     PUSHBUTTON "dms", IDC_BUTTON_DMS, 38, 80, 24, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
-    PUSHBUTTON "sin", IDC_BUTTON_SIN, 38, 100, 24, 18, BS_CENTER | BS_VCENTER |
+    PUSHBUTTON "sen", IDC_BUTTON_SIN, 38, 100, 24, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
     PUSHBUTTON "cos", IDC_BUTTON_COS, 38, 120, 24, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
@@ -54,7 +52,7 @@ BEGIN
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
     PUSHBUTTON "ln", IDC_BUTTON_LN, 90, 80, 24, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
-    PUSHBUTTON "log", IDC_BUTTON_LOG, 90, 100, 24, 18, BS_CENTER | BS_VCENTER |
+    PUSHBUTTON "log 	", IDC_BUTTON_LOG, 90, 100, 24, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
     PUSHBUTTON "n!", IDC_BUTTON_NF, 90, 120, 24, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
@@ -120,7 +118,7 @@ BEGIN
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
     PUSHBUTTON "E", IDC_BUTTON_E, 260, 140, 24, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
-    PUSHBUTTON "And", IDC_BUTTON_AND, 286, 60, 24, 18, BS_CENTER | BS_VCENTER |
+    PUSHBUTTON "E", IDC_BUTTON_AND, 286, 60, 24, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
     PUSHBUTTON "Xor", IDC_BUTTON_XOR, 286, 80, 24, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
@@ -146,7 +144,7 @@ BEGIN
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
     PUSHBUTTON "CE", IDC_BUTTON_CE, 222, 38, 43, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
-    PUSHBUTTON "Apagar", IDC_BUTTON_BACK, 177, 38, 43, 18, BS_CENTER |
+    PUSHBUTTON "Voltar", IDC_BUTTON_BACK, 177, 38, 43, 18, BS_CENTER |
                BS_VCENTER | BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
     RTEXT "", IDC_TEXT_OUTPUT, 5, 1, 305, 14, SS_CENTERIMAGE, WS_EX_CLIENTEDGE
     DEFPUSHBUTTON "", IDC_BUTTON_FOCUS, 0, 0, 5, 5, NOT WS_VISIBLE
@@ -237,7 +235,7 @@ BEGIN
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 276, 24, 40, 17
     CONTROL "CE", IDC_BUTTON_CE, "Button", BS_OWNERDRAW | BS_CENTER |
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 232, 24, 40, 17
-    CONTROL "Apagar", IDC_BUTTON_BACK, "Button", BS_OWNERDRAW | BS_CENTER |
+    CONTROL "Back", IDC_BUTTON_BACK, "Button", BS_OWNERDRAW | BS_CENTER |
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 188, 24, 40,17
     RTEXT "", IDC_TEXT_OUTPUT, 5, 1, 312, 14, SS_CENTERIMAGE, WS_EX_CLIENTEDGE
     CONTROL "7", IDC_BUTTON_7, "Button", BS_OWNERDRAW | BS_CENTER |
@@ -316,26 +314,26 @@ BEGIN
     END
     POPUP "Visualizar"
     BEGIN
-        MENUITEM "Padrão", IDM_VIEW_STANDARD
-        MENUITEM "Científica", IDM_VIEW_SCIENTIFIC
-        MENUITEM "Conversão", IDM_VIEW_CONVERSION
+        MENUITEM "&Padrão", IDM_VIEW_STANDARD
+        MENUITEM "&Científica", IDM_VIEW_SCIENTIFIC
+        MENUITEM "C&onversão", IDM_VIEW_CONVERSION
         MENUITEM SEPARATOR
         MENUITEM "Hex\tF5", IDM_VIEW_HEX, CHECKED
         MENUITEM "Decimal\tF6", IDM_VIEW_DEC, CHECKED
         MENUITEM "Octal\tF7", IDM_VIEW_OCT, CHECKED
-        MENUITEM "Binário\tF8", IDM_VIEW_BIN, CHECKED
+        MENUITEM "&Binário\tF8", IDM_VIEW_BIN, CHECKED
         MENUITEM SEPARATOR
-        MENUITEM "Graus\tF2", IDM_VIEW_DEG, CHECKED
-        MENUITEM "Radianos\tF3", IDM_VIEW_RAD, CHECKED
-        MENUITEM "Grados\tF4", IDM_VIEW_GRAD, CHECKED
+        MENUITEM "&Graus\tF2", IDM_VIEW_DEG, CHECKED
+        MENUITEM "&Radianos\tF3", IDM_VIEW_RAD, CHECKED
+        MENUITEM "&Grados\tF4", IDM_VIEW_GRAD, CHECKED
         MENUITEM SEPARATOR
-        MENUITEM "Agrupar dígitos", IDM_VIEW_GROUP, CHECKED
+        MENUITEM "Agrupar d&ígitos", IDM_VIEW_GROUP, CHECKED
     END
     POPUP "Ajuda"
     BEGIN
         MENUITEM "Tópicos de ajuda", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "Sobre Calculadora ReactOS", IDM_HELP_ABOUT
+        MENUITEM "&Sobre Calculadora ReactOS", IDM_HELP_ABOUT
     END
 END
 
@@ -352,15 +350,15 @@ BEGIN
         MENUITEM "Científica", IDM_VIEW_SCIENTIFIC
         MENUITEM "Conversão", IDM_VIEW_CONVERSION
         MENUITEM SEPARATOR
-        MENUITEM "Hex\tF5", IDM_VIEW_HEX, CHECKED
-        MENUITEM "Decimal\tF6", IDM_VIEW_DEC, CHECKED
-        MENUITEM "Octal\tF7", IDM_VIEW_OCT, CHECKED
+        MENUITEM "&Hex\tF5", IDM_VIEW_HEX, CHECKED
+        MENUITEM "&Decimal\tF6", IDM_VIEW_DEC, CHECKED
+        MENUITEM "&Octal\tF7", IDM_VIEW_OCT, CHECKED
         MENUITEM "Binário\tF8", IDM_VIEW_BIN, CHECKED
         MENUITEM SEPARATOR
-        MENUITEM "Qword\tF12", IDM_VIEW_QWORD, CHECKED
-        MENUITEM "Dword\tF2", IDM_VIEW_DWORD, CHECKED
-        MENUITEM "Word\tF3", IDM_VIEW_WORD, CHECKED
-        MENUITEM "Byte\tF4", IDM_VIEW_BYTE, CHECKED
+        MENUITEM "&Qword\tF12", IDM_VIEW_QWORD, CHECKED
+        MENUITEM "&Dword\tF2", IDM_VIEW_DWORD, CHECKED
+        MENUITEM "&Word\tF3", IDM_VIEW_WORD, CHECKED
+        MENUITEM "B&yte\tF4", IDM_VIEW_BYTE, CHECKED
         MENUITEM SEPARATOR
         MENUITEM "Agrupar dígitos", IDM_VIEW_GROUP, CHECKED
     END
@@ -406,8 +404,8 @@ END
 /* About */
 STRINGTABLE
 BEGIN
-    IDS_CALC_NAME "Calcuadora ReactOS"
-    IDS_AUTHOR "Escrita por Carlo Bramini"
+    IDS_CALC_NAME "Calculadora ReactOS"
+    IDS_AUTHOR "Escrito por Carlo Bramini"
 END
 
 /* Types of conversion */
@@ -416,7 +414,7 @@ BEGIN
     IDS_CONV_ANGLE "Ângulo"
     IDS_CONV_AREA "Área"
     IDS_CONV_CONSUMPTION "Consumo (veículos)"
-    IDS_CONV_CURRENCY "Monetária"
+    IDS_CONV_CURRENCY "Moedas"
     IDS_CONV_ENERGY "Energia"
     IDS_CONV_LENGTH "Distância"
     IDS_CONV_POWER "Potência"
@@ -458,8 +456,8 @@ BEGIN
     IDS_AREA_SE "Se"
     IDS_AREA_SQUARE_CENTIMETERS "Centímetros quadrados"
     IDS_AREA_SQUARE_CHR "Chr quadradas"
-    IDS_AREA_SQUARE_FATHOMS "Braças quadradas"
-    IDS_AREA_SQUARE_FATHOMS_HUNGARY "Braças quadradas (Hungária)"
+    IDS_AREA_SQUARE_FATHOMS "Braços quadrados"
+    IDS_AREA_SQUARE_FATHOMS_HUNGARY "Braços quadrados (Hungária)"
     IDS_AREA_SQUARE_FEET "Pés quadrados"
     IDS_AREA_SQUARE_INCHES "Polegadas quadradas"
     IDS_AREA_SQUARE_KILOMETERS "Quilômetros quadrados"
@@ -467,7 +465,7 @@ BEGIN
     IDS_AREA_SQUARE_METER "Metros quadrados"
     IDS_AREA_SQUARE_MILES "Milhas quadradas"
     IDS_AREA_SQUARE_MILLIMETERS "Milímetros quadrados"
-    IDS_AREA_SQUARE_SHAKU "Shaku quadradas"
+    IDS_AREA_SQUARE_SHAKU "Shaku quadrados"
     IDS_AREA_SQUARE_TSUEN "Tsuen quadrados"
     IDS_AREA_SQUARE_VA "Va quadrados"
     IDS_AREA_SQUARE_YARD "Jardas quadradas"
@@ -492,12 +490,12 @@ BEGIN
     IDS_CURRENCY_CYPRIOT_POUND "Libra cipriota"
     IDS_CURRENCY_CZECH_KORUNA "Coroa checa"
     IDS_CURRENCY_DEUTSCHE_MARK "Marco alemão"
-    IDS_CURRENCY_DUTCH_GUILDER "Florim neerlandês"
+    IDS_CURRENCY_DUTCH_GUILDER "Florim holandês"
     IDS_CURRENCY_ESTONIAN_KROON "Estonian kroon"
     IDS_CURRENCY_EURO "Euro"
     IDS_CURRENCY_FINNISH_MARKKA "Marco finlandês"
     IDS_CURRENCY_FRENCH_FRANC "Franco francês"
-    IDS_CURRENCY_GREEK_DRACHMA "Dracma"
+    IDS_CURRENCY_GREEK_DRACHMA "Dracma grega"
     IDS_CURRENCY_IRISH_POUND "Libra irlandesa"
     IDS_CURRENCY_ITALIAN_LIRA "Lira italiana"
     IDS_CURRENCY_LATVIAN_LATS "Latvian lats"
@@ -506,17 +504,17 @@ BEGIN
     IDS_CURRENCY_MALTESE_LIRA "Lira maltesa"
     IDS_CURRENCY_PORTOGUESE_ESCUDO "Escudo português"
     IDS_CURRENCY_SLOVAK_KORUNA "Coroa eslovaca"
-    IDS_CURRENCY_SLOVENIAN_TOLAR "Tolar"
-    IDS_CURRENCY_SPANISH_PESETA "Peseta"
+    IDS_CURRENCY_SLOVENIAN_TOLAR "Tolar esloveno"
+    IDS_CURRENCY_SPANISH_PESETA "Peseta espanhola"
 END
 
 /* Energies */
 STRINGTABLE
 BEGIN
     IDS_ENERGY_15_C_CALORIES "15 °C calorias"
-    IDS_ENERGY_BTUS "British Thermal Unit"
+    IDS_ENERGY_BTUS "Unidades térmicas britânicas"
     IDS_ENERGY_ERGS "Ergs (Cgs)"
-    IDS_ENERGY_EVS "Elétron-volt"
+    IDS_ENERGY_EVS "Elétron-Volts"
     IDS_ENERGY_FOOT_POUNDS "Foot-Pounds"
     IDS_ENERGY_IT_CALORIES "Tabela Internacional de calorias"
     IDS_ENERGY_IT_KILOCALORIES "Tabela Internacional de quilocalorias"
@@ -530,7 +528,7 @@ END
 /* Lengths */
 STRINGTABLE
 BEGIN
-    IDS_LENGTH_ANGSTROMS "Ångström"
+    IDS_LENGTH_ANGSTROMS "Ångströms"
     IDS_LENGTH_ASTRONOMICAL_UNITS "Unidade astronômica"
     IDS_LENGTH_BARLEYCORNS "Barleycorns"
     IDS_LENGTH_CENTIMETERS "Centímetros"
@@ -552,12 +550,12 @@ BEGIN
     IDS_LENGTH_KABIET "Kabiet"
     IDS_LENGTH_KEN "Ken"
     IDS_LENGTH_KEUB "Keub"
-    IDS_LENGTH_KILOMETERS "Quilômetors"
+    IDS_LENGTH_KILOMETERS "Quilômetros"
     IDS_LENGTH_LAR "Lar"
     IDS_LENGTH_LIGHT_YEARS "Anos-luz"
     IDS_LENGTH_LINKS_UK "Links (UK)"
     IDS_LENGTH_METERS "Metros"
-    IDS_LENGTH_MICRONS "Micrômetro"
+    IDS_LENGTH_MICRONS "Micrômetros"
     IDS_LENGTH_MILES "Milhas"
     IDS_LENGTH_MILLIMETERS "Milímetros"
     IDS_LENGTH_NAUTICAL_MILES "Milhas náuticas"
@@ -582,8 +580,8 @@ END
 /* Powers */
 STRINGTABLE
 BEGIN
-    IDS_POWER_BTUS_PER_MINUTE "British Thermal Units por minuto"
-    IDS_POWER_FPS_PER_MINUTE "Foot-Pounds por minuto"
+    IDS_POWER_BTUS_PER_MINUTE "Unidades térmicas britânicas por minuto"
+    IDS_POWER_FPS_PER_MINUTE "Libras-pé por minuto"
     IDS_POWER_HORSEPOWER "Cavalos de potência"
     IDS_POWER_KILOWATTS "Quilowatts"
     IDS_POWER_MEGAWATTS "Megawatts"
@@ -599,7 +597,7 @@ BEGIN
     IDS_PRESSURE_KILOPASCALS "Quilopascais"
     IDS_PRESSURE_MM_OF_MERCURY "Milímetros de mercúrio"
     IDS_PRESSURE_PASCALS "Pascais"
-    IDS_PRESSURE_PSI "Pounds-force per square inch (PSI)"
+    IDS_PRESSURE_PSI "Libras-força por polegada quadrada"
 END
 
 /* Temperatures */
@@ -654,7 +652,7 @@ BEGIN
     IDS_VOLUME_DOE "Doe"
     IDS_VOLUME_FLUID_OUNCES_UK "Onças líquidas (UK)"
     IDS_VOLUME_FLUID_OUNCES_US "Onças líquidas (EUA)"
-    IDS_VOLUME_GALLONS_UK "Galões (EUA)"
+    IDS_VOLUME_GALLONS_UK "Galões (UK)"
     IDS_VOLUME_GALLONS_DRY_US "Galões secos (EUA)"
     IDS_VOLUME_GALLONS_LIQUID_US "Galões líquidos (EUA)"
     IDS_VOLUME_GOU "Gou"
@@ -664,9 +662,9 @@ BEGIN
     IDS_VOLUME_LITERS "Litros"
     IDS_VOLUME_MAL "Mal"
     IDS_VOLUME_MILLILITERS "Milímetros"
-    IDS_VOLUME_PINTS_UK "Pintos (UK)"
-    IDS_VOLUME_PINTS_DRY_US "Pintos secos (EUA)"
-    IDS_VOLUME_PINTS_LIQUID_US "Pints líquidos (EUA)"
+    IDS_VOLUME_PINTS_UK "Pintas (UK)"
+    IDS_VOLUME_PINTS_DRY_US "Pintas secas (EUA)"
+    IDS_VOLUME_PINTS_LIQUID_US "Pintas líquidas (EUA)"
     IDS_VOLUME_QUARTS_UK "Quartos (UK)"
     IDS_VOLUME_QUARTS_DRY_US "Quartos secos (EUA)"
     IDS_VOLUME_QUARTS_LIQUID_US "Quartos líquidos (EUA)"
