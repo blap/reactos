@@ -1,4 +1,4 @@
-LANGUAGE LANG_ALBANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ALBANIAN, SUBLANG_ALBANIAN_ALBANIA
 
 IDD_PROPPAGEGENERAL DIALOGEX 0, 0, 256, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -28,8 +28,8 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "Menagjues Pjesëve", IDC_STATIC, 6, 7, 244, 61
     ICON IDI_DEVMGR, IDC_STATIC, 12, 18, 23, 21, SS_ICON
-    PUSHBUTTON "&Menagjues Pjesëve...", IDC_HARDWARE_DEVICE_MANAGER, 154, 48, 90, 15
     LTEXT "Menagjues Pjesëve liston të gjitha pajisjet elektronike të instaluara në kompjuterin tuaj. Përdorimi managjuesit pjesëve për të ndryshuar vetitë e çdo pajisje.", IDC_STATIC, 42, 18, 204, 24
+    PUSHBUTTON "&Menagjues Pjesëve...", IDC_HARDWARE_DEVICE_MANAGER, 154, 48, 90, 15
     GROUPBOX "Megjistari Pjesëve Elektronike", IDC_STATIC, 6, 79, 244, 61
     ICON IDI_ADDHW, IDC_STATIC, 12, 90, 23, 21, SS_ICON
     LTEXT "Magjistari pjesëve elektronike ju ndihmon për të instaluar, Ç'instaluar, Riparuar, Heq, Nxjerr, dhe konfiguruar pjesër elektronike tuaja.", IDC_STATIC, 42, 90, 204, 24
@@ -66,7 +66,7 @@ CAPTION "Cilësimet Sistemit"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     GROUPBOX "Versioni Info", IDC_STATIC, 6, 3, 210, 73
-    CONTROL "Raporto si StacionPune", IDC_REPORTASWORKSTATION, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 16, 57, 88, 10
+    CONTROL "Raporto si StacionPune", IDC_REPORTASWORKSTATION, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 16, 57, 190, 10
     LTEXT "ReactOS është ndërtuar si një server OS dhe raporton si të tillë. Kontrolloni këtë kuti për të ndryshuar vetëm këtë program.", IDC_STATIC, 15, 15, 183, 41
     PUSHBUTTON "OK", IDOK, 166, 83, 50, 14
 END
@@ -114,7 +114,7 @@ BEGIN
     AUTORADIOBUTTON "The docking &state is unknown", IDC_HWPPROP_UNKNOWN, 22, 85, 160, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "The computer is &docked", IDC_HWPPROP_DOCKED, 22, 97, 160, 10
     AUTORADIOBUTTON "The computer is &undocked", IDC_HWPPROP_UNDOCKED, 22, 109, 160, 10
-    GROUPBOX "Hardware profiles selection", IDC_STATIC, 10, 138, 192, 42
+    GROUPBOX "Përzgjedhje Profil Pjesësh Elektronike ", IDC_STATIC, 10, 138, 192, 42
     AUTOCHECKBOX "Always &include this profile as an option when ReactOS starts", IDC_HWPPROP_INCLUDE, 17, 150, 164, 20, WS_GROUP | WS_TABSTOP | BS_MULTILINE
 END
 
@@ -150,7 +150,7 @@ CAPTION "Profili Përdoruesit"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_USERPROF, IDC_STATIC, 6, 11, 16, 16, SS_ICON
-    LTEXT "Profilet e përdoruesve përmbajnë parametrat e desktop-it dhe informacione të tjera në lidhje me hyrjen tuaj. Një profil i ndryshëm mund të krijohet në çdo kompjuter që ju përdorni, ose ju mund të zgjidhni një profil kryesorë që është i njëjtë në çdo kompjuter që ju përdorni.", IDC_STATIC, 40, 11, 211, 35 //TOO LONG, MAX 256 CHARS ALLOWED
+    LTEXT "Profilet e përdoruesve përmbajnë parametrat e desktop-it dhe informacione të tjera në lidhje me hyrjen tuaj. Një profil i ndryshëm mund të krijohet në çdo kompjuter që ju përdorni, ose ju mund të zgjidhni një profil kryesorë që është i njëjtë në çdo kompjuter që ju përdorni.", IDC_STATIC, 40, 11, 211, 35
     LTEXT "Profilet e ruajtura në këtë kompjuter:", IDC_STATIC, 16, 51, 204, 9
     CONTROL "", IDC_USERPROFILE_LIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL |
             LVS_SHOWSELALWAYS | LVS_SORTASCENDING | WS_BORDER | WS_TABSTOP, 6, 66, 244, 85, WS_EX_CLIENTEDGE
@@ -303,5 +303,5 @@ BEGIN
     IDS_HWPROFILE_CONFIRM_DELETE "Are you sure you want to delete the hardware profile ""%s""?"
     IDS_HWPROFILE_ALREADY_IN_USE "The profile name is already in use."
     IDS_HWPROFILE_PROFILE "Profile"
-    IDS_HWPROFILE_WARNING "Warning"
+    IDS_HWPROFILE_WARNING "Paralajmërim"
 END
