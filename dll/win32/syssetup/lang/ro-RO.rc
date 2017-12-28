@@ -1,13 +1,23 @@
 /*
- * PROJECT: ReactOS system setup
- * FILE:    dll/win32/syssetup/lang/ro-RO.rc
- * PURPOSE: Romanian Language File for system setup
- * TRANSLATORS:
- *          Petru Dimitriu (petrimetri at gmail dot com)
- *          Ștefan Fulea (stefan dot fulea at mail dot md)
+ * Copyright (C) 2004 Filip Navara
+ * Copyright (C) 2004 Eric Kohl
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
@@ -26,7 +36,7 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT "Echipa ReactOS aduce mulțumiri următoarelor proiecte FOSS ce au fost utilizate la crearea ReactOS:", IDC_STATIC, 15, 7, 286, 19
     LISTBOX IDC_PROJECTS, 15, 30, 286, 75, LBS_NOSEL | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL
-    LTEXT "ReactOS este oferit sub licența GPL, astfel reutilizarea sau redistribuția sa (sau a părților sale componente), cere respectarea licenței GPL.", IDC_STATIC, 15, 110, 234, 19
+    LTEXT "ReactOS este oferit sub licența GPL, astfel reutilizarea sau redistribuția sa (sau a părților sale componente), cere respectarea licenței GPL.", IDC_STATIC, 15, 110, 227, 19
     PUSHBUTTON "Afișează &GPL", IDC_VIEWGPL, 251, 110, 50, 19
     LTEXT "Apăsați „Înainte” pentru a continua.", IDC_STATIC, 15, 136, 195, 17
 END
@@ -38,7 +48,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ICON2, IDC_STATIC, 21, 7, 20, 20
     LTEXT "Scrieți-vă numele complet și compania sau organizația din care faceți parte.", IDC_STATIC, 54, 7, 242, 21
-    LTEXT "N&ume complet:", IDC_STATIC, 54, 37, 70, 8
+    LTEXT "N&ume complet:", IDC_STATIC, 54, 37, 44, 8
     EDITTEXT IDC_OWNERNAME, 132, 35, 163, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "O&rganizație:", IDC_STATIC, 54, 57, 44, 8
     EDITTEXT IDC_OWNERORGANIZATION, 132, 55, 163, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL
@@ -70,12 +80,12 @@ BEGIN
     ICON IDI_ICON4, IDC_STATIC, 21, 7, 20, 20
     LTEXT "Localizarea regională trebuie să se potrivească cu limba aplicațiilor utilizate. De ea depinde cum vor apărea numerele, valutele și data.", IDC_STATIC, 53, 7, 253, 20
     LTEXT "", IDC_LOCALETEXT, 53, 29, 250, 16
-    LTEXT "Modificați configurația de localizare a sistemului.", IDC_STATIC, 53, 60, 186, 8
-    PUSHBUTTON "&Configurare…", IDC_CUSTOMLOCALE, 230, 57, 70, 14
-    LTEXT "Configurări și localizări pentru tastatură, aranjamente ale caracterelor asociate tastelor la dactilografiere, și alte servicii de text.", IDC_STATIC, 53, 82, 253, 20
+    LTEXT "Modificați configurația de localizare a sistemului.", IDC_STATIC, 53, 60, 196, 8
+    PUSHBUTTON "&Particularizare…", IDC_CUSTOMLOCALE, 250, 57, 50, 14
+    LTEXT "The keyboard layout controls the characters that appear when you type.", IDC_STATIC, 53, 86, 253, 8
     LTEXT "", IDC_LAYOUTTEXT, 53, 100, 250, 16
     LTEXT "Configurați aranjamentele de tastatură.", IDC_STATIC, 53, 126, 184, 8
-    PUSHBUTTON "Config&urare…", IDC_CUSTOMLAYOUT, 230, 122, 70, 14
+    PUSHBUTTON "Pa&rticularizare…", IDC_CUSTOMLAYOUT, 250, 122, 50, 14
 END
 
 IDD_DATETIMEPAGE DIALOGEX 0, 0, 317, 143
@@ -155,6 +165,7 @@ BEGIN
     IDS_PROCESSSUBTITLE "Așteptați…"
     IDS_THEMESELECTIONTITLE "Aspect"
     IDS_THEMESELECTIONSUBTITLE "Selectați tema preferată"
+
 END
 
 STRINGTABLE
