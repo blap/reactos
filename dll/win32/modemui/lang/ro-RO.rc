@@ -1,6 +1,4 @@
-/* Ștefan Fulea (stefan dot fulea at mail dot md) */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDM_MENU MENU
 BEGIN
@@ -39,7 +37,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Generale"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Port:", 1018, 9, 8, 32, 10
+    LTEXT "Porturi:", 1018, 9, 8, 32, 10
     LTEXT "Port com", 1095, 48, 8, 181, 10
     GROUPBOX "&Volum difuzor", 1029, 10, 21, 218, 48
     CONTROL "", 1032, "MSCTLS_TRACKBAR32", WS_GROUP | WS_TABSTOP | 0x00000001, 84, 40, 66, 20
@@ -105,7 +103,7 @@ BEGIN
     CONTROL "", 1042, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000084D, 19, 18, 200, 58
     CONTROL "", 1041, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000084D, 19, 84, 200, 58
     PUSHBUTTON "Înregistrare &modem", 1096, 138, 149, 75, 14
-    AUTOCHECKBOX "Activează j&urnal de apeluri", 1020, 18, 187, 158, 10
+    AUTOCHECKBOX "Activează j&urnal de apeluri", 1020, 18, 187, 98, 10
     PUSHBUTTON "&Afișare jurnal", 1094, 138, 184, 75, 14, WS_DISABLED
     GROUPBOX "Informații modem", 1047, 10, 6, 217, 164
     GROUPBOX "Jurnal de apeluri", -1, 10, 173, 217, 32
@@ -211,9 +209,9 @@ BEGIN
     ICON 5100, 1057, 6, 7, 20, 20
     LTEXT "Următoarele modemuri sunt instalate: ", -1, 44, 12, 203, 9
     CONTROL "", 113, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x00000849, 7, 32, 238, 158, WS_EX_CLIENTEDGE
-    PUSHBUTTON  "A&dăugare", 110, 56, 198, 60, 14
-    PUSHBUTTON  "&Eliminare", 112, 121, 198, 60, 14
-    PUSHBUTTON  "&Proprietăți", 109, 185, 198, 60, 14
+    PUSHBUTTON "A&dăugare", 110, 56, 198, 60, 14
+    PUSHBUTTON "&Eliminare", 112, 121, 198, 60, 14
+    PUSHBUTTON "&Proprietăți", 109, 185, 198, 60, 14
 END
 
 IDD_PLEASE_WAIT_3 DIALOGEX 0, 0, 195, 72
@@ -221,7 +219,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPT
 CAPTION "Așteptați…"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    DEFPUSHBUTTON  "&Oprire", 2, 74, 53, 50, 14
+    DEFPUSHBUTTON "&Oprire", 2, 74, 53, 50, 14
     ICON 5100, -1, 9, 7, 20, 20
     LTEXT "Eliminare", -1, 40, 8, 151, 8
     LTEXT "Modem", 1005, 40, 16, 151, 25
