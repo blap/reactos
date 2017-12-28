@@ -1,13 +1,11 @@
-/* TRANSLATOR: 2016 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "\nGeçerli komutlar:\n\
-               load        Bir süzgeç sürücüsünü yükler\n\
-               unload      Bir süzgeç sürücüsünü kaldırır\n\
-               filters     Dizgede şimdilik kayıtlı süzgeçleri dizelgeler\n\n"
+    IDS_USAGE "\nValid commands :\n\
+               load        Loads a Filter driver\n\
+               unload      Unloads a Filter driver\n\
+               filters     Lists the Filters currently registered in the system\n\n"
 
     IDS_USAGE_LOAD      "Bir süzgeç sürücüsünü yükler\n"
     IDS_USAGE_UNLOAD    "Bir süzgeç sürücüsünü kaldırır\n"
