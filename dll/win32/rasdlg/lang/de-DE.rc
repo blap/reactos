@@ -6,7 +6,7 @@ CAPTION "Alternative Telefonnummern"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Geben Sie alternative Telefonnummern für diese Verbindung an.", 1018, 7, 5, 243, 16
-    LTEXT "Telefo&nnummern:", 1019, 7, 27, 238, 8
+    LTEXT "&Telefonnummern:", 1019, 7, 27, 238, 8
     CONTROL "", 1012, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000848D, 7, 38, 217, 144
     PUSHBUTTON "Nach &oben", 1017, 230, 40, 18, 16, BS_ICON
     PUSHBUTTON "Nach &unten", 1015, 230, 61, 18, 16, BS_ICON
@@ -29,7 +29,7 @@ BEGIN
     CONTROL "List1", 1677, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000440D, 5, 57, 240, 57
     AUTOCHECKBOX "&Bis zur nächsten Anmeldung nicht mehr fragen", 1022, 8, 125, 235, 10
     PUSHBUTTON "&Einstellungen", 1026, 7, 149, 60, 14
-    DEFPUSHBUTTON "V&erbinden...", 1024, 117, 149, 60, 14
+    DEFPUSHBUTTON "&Verbinden...", 1024, 117, 149, 60, 14
     PUSHBUTTON "Abbrechen", 1025, 183, 149, 60, 14
 END
 
@@ -489,7 +489,7 @@ BEGIN
     AUTORADIOBUTTON "Beim &Wählen am Server anfragen, ob er dies anbietet", 1040, 7, 61, 219, 10, BS_TOP | BS_MULTILINE
     AUTORADIOBUTTON "&Die unten angegebenen Nummern für den Rückruf verwenden:", 1042, 7, 74, 219, 10, BS_TOP | BS_MULTILINE
     CONTROL "", 1037, "SYSLISTVIEW32", WS_BORDER | WS_GROUP | WS_TABSTOP | 0x00008401, 16, 88, 204, 94
-    PUSHBUTTON "Be&arbeiten...", 1039, 96, 190, 60, 14
+    PUSHBUTTON "&Bearbeiten...", 1039, 96, 190, 60, 14
     PUSHBUTTON "&Löschen", 1038, 159, 190, 60, 14
 END
 
@@ -502,7 +502,7 @@ BEGIN
     EDITTEXT 1074, 135, 45, 175, 12, ES_AUTOHSCROLL | WS_DISABLED
     LTEXT "&Passwort:", 1077, 8, 68, 124, 8, NOT WS_GROUP
     EDITTEXT 1073, 135, 66, 175, 12, ES_PASSWORD | ES_AUTOHSCROLL
-    LTEXT "Passwort b&estätigen:", 1075, 8, 90, 124, 8, NOT WS_GROUP
+    LTEXT "Passwort &bestätigen:", 1075, 8, 90, 124, 8, NOT WS_GROUP
     EDITTEXT 1071, 135, 87, 175, 12, ES_PASSWORD | ES_AUTOHSCROLL
 END
 
@@ -517,7 +517,7 @@ BEGIN
     EDITTEXT 1089, 140, 60, 175, 12, ES_UPPERCASE | ES_AUTOHSCROLL
     LTEXT "&Passwort:", 1095, 8, 81, 130, 8, NOT WS_GROUP
     EDITTEXT 1090, 140, 78, 175, 12, ES_PASSWORD | ES_AUTOHSCROLL
-    LTEXT "Passwort b&estätigen:", 1092, 8, 99, 130, 8, NOT WS_GROUP
+    LTEXT "Passwort &bestätigen:", 1092, 8, 99, 130, 8, NOT WS_GROUP
     EDITTEXT 1088, 140, 96, 175, 12, ES_PASSWORD | ES_AUTOHSCROLL
 END
 
@@ -538,8 +538,8 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "&Verbinden über:", 1124, 7, 5, 219, 8
     CONTROL "", 1128, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x00004C0D, 7, 17, 198, 44, WS_EX_CLIENTEDGE
-    PUSHBUTTON "H&och", 1132, 210, 18, 16, 14, BS_ICON
-    PUSHBUTTON "R&unter", 1131, 210, 36, 16, 14, BS_ICON
+    PUSHBUTTON "&Hoch", 1132, 210, 18, 16, 14, BS_ICON
+    PUSHBUTTON "&Runter", 1131, 210, 36, 16, 14, BS_ICON
     AUTOCHECKBOX "Alle &Geräte wählen dieselbe Nummer", 1119, 9, 66, 133, 14, BS_TOP | BS_MULTILINE
     PUSHBUTTON "&Konfigurieren...", 1130, 144, 66, 60, 14
     GROUPBOX "Beispiel", 1125, 8, 84, 215, 100, WS_GROUP
@@ -632,7 +632,7 @@ BEGIN
     AUTOCHECKBOX "Terminal&fenster anzeigen", 1173, 14, 159, 198, 11, BS_TOP | BS_MULTILINE
     AUTOCHECKBOX "&Skript starten:", 1172, 14, 172, 57, 10, BS_TOP | BS_MULTILINE
     COMBOBOX 1179, 72, 171, 140, 104, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    PUSHBUTTON "Bea&rbeiten...", 1182, 87, 187, 60, 14
+    PUSHBUTTON "&Bearbeiten...", 1182, 87, 187, 60, 14
     PUSHBUTTON "&Durchsuchen...", 1181, 151, 187, 60, 14
 END
 
@@ -706,7 +706,7 @@ BEGIN
     LTEXT "Telefonnummer unten eingeben. ", -1, 7, 4, 306, 14
     LTEXT "&Telefonnummer:", 1308, 7, 19, 130, 8
     EDITTEXT 1304, 7, 30, 304, 14, ES_AUTOHSCROLL
-    LTEXT "You might need to include a ""1"" or the area code, or both. If you are not sure you need the extra numbers, dial the phone number on your telephone. If you hear a modem sound, the number dialed is correct.", -1, 20, 50, 291, 53
+    LTEXT "Sie müssen eventuell eine ""1"", eine Vorwahl oder beides einbeziehen. Wenn Sie nicht sicher sind, ob zusätzliche Nummern erforderlich sind, wählen Sie die Telefonnummer auf Ihrem Telefon. Wenn Sie ein Modem hören, ist die gewählte Nummer richtig.", -1, 20, 50, 291, 53
 END
 
 169 DIALOGEX 6, 18, 235, 135
@@ -752,7 +752,7 @@ BEGIN
     AUTOCHECKBOX "&Terminalfenster anzeigen", 1462, 15, 31, 162, 10
     AUTOCHECKBOX "&Skript starten:", 1463, 15, 45, 58, 10
     COMBOBOX 1334, 30, 60, 275, 88, CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
-    PUSHBUTTON "Bea&rbeiten...", 1335, 180, 77, 60, 14
+    PUSHBUTTON "&Bearbeiten...", 1335, 180, 77, 60, 14
     PUSHBUTTON "&Durchsuchen...", 1465, 244, 77, 60, 14
 END
 
@@ -772,7 +772,7 @@ BEGIN
     AUTORADIOBUTTON "&Persistente Verbindung", 1348, 16, 103, 199, 10, NOT WS_TABSTOP, WS_EX_TRANSPARENT
     EDITTEXT 1341, 159, 85, 56, 14, ES_AUTOHSCROLL
     PUSHBUTTON "&Rückruf...", 1345, 150, 125, 70, 14, WS_GROUP
-    PUSHBUTTON "&Multiple Lines...", 1346, 74, 125, 70, 14
+    PUSHBUTTON "&Mehrere Zeilen...", 1346, 74, 125, 70, 14
 END
 
 174 DIALOGEX 0, 0, 215, 226
@@ -823,7 +823,7 @@ BEGIN
     AUTOCHECKBOX "&Datenverschlüsselung benötigt", 1363, 27, 65, 184, 10, BS_TOP | BS_MULTILINE | WS_GROUP
     AUTOCHECKBOX "&Starke Datenverschlüsselung benötigt", 1364, 41, 80, 172, 10, BS_TOP | BS_MULTILINE
     AUTOCHECKBOX "Beidseitige &Authentifizierung verwenden", 1362, 17, 95, 194, 10, BS_TOP | BS_MULTILINE
-    PUSHBUTTON "&Unsave Password", 1369, 59, 117, 80, 14, WS_GROUP
+    PUSHBUTTON "&Passwort nicht speichern", 1369, 59, 117, 80, 14, WS_GROUP
     PUSHBUTTON "&Erweitert...", 1368, 142, 117, 80, 14, NOT WS_VISIBLE | WS_DISABLED
     AUTOCHECKBOX "Datei- &und Druckerfreigaben vor dem Wählen erkennen", 1365, 7, 198, 218, 10, BS_TOP | BS_MULTILINE | NOT WS_VISIBLE | WS_DISABLED
 END
@@ -1470,7 +1470,7 @@ BEGIN
     GROUPBOX "Wähloptionen", 1289, 8, 7, 214, 56
     AUTOCHECKBOX "&Fortschritt während des Wählens anzeigen", 1284, 16, 17, 199, 10
     AUTOCHECKBOX "Na&me, Passwort, Zertifikat usw. abfragen", 1554, 16, 32, 199, 10
-    AUTOCHECKBOX "Include &ReactOS logon domain", 1555, 16, 47, 178, 10
+    AUTOCHECKBOX "&ReactOS-Anmeldedomäne einbeziehen", 1555, 16, 47, 178, 10
     GROUPBOX "Wahlwiederholungsoptionen", 1290, 8, 68, 214, 89
     LTEXT "&Anzahl der Wahlwiederholungen:", 1300, 16, 81, 121, 8
     EDITTEXT 1287, 140, 77, 70, 14, ES_AUTOHSCROLL | ES_NUMBER
@@ -1690,7 +1690,7 @@ BEGIN
     CONTROL "", 7018, "RASIPADDRESS", WS_GROUP | WS_TABSTOP, 90, 85, 103, 13
     LTEXT "B&is:", -1, 29, 105, 53, 8
     CONTROL "", 7021, "RASIPADDRESS", WS_GROUP | WS_TABSTOP, 90, 102, 103, 13
-    LTEXT "Total:", -1, 29, 124, 53, 10
+    LTEXT "Insgesamt:", -1, 29, 124, 53, 10
     LTEXT "", 7024, 90, 121, 150, 14, 0, WS_EX_STATICEDGE
     AUTOCHECKBOX "Anrufendem &Computer Angabe der eigenen IP-Adresse gestatten", 7022, 20, 144, 231, 10, BS_TOP | BS_MULTILINE | WS_GROUP
     DEFPUSHBUTTON "OK", 1, 133, 169, 60, 14, WS_GROUP
@@ -1761,8 +1761,8 @@ BEGIN
     LTEXT "Benutzern, denen die &Verbindung gestattet ist:", -1, 10, 28, 275, 8
     CONTROL "", 7043, "SYSLISTVIEW32", WS_BORDER | WS_GROUP | WS_TABSTOP | 0x0000440D, 10, 42, 275, 73
     PUSHBUTTON "&Hinzufügen...", 7044, 10, 122, 65, 14, WS_GROUP
-    PUSHBUTTON "&Löschen", 7045, 79, 122, 65, 14, WS_GROUP
-    PUSHBUTTON "E&igenschaften", 7046, 147, 122, 65, 14, WS_GROUP
+    PUSHBUTTON "&Entfernen", 7045, 79, 122, 65, 14, WS_GROUP
+    PUSHBUTTON "&Eigenschaften", 7046, 147, 122, 65, 14, WS_GROUP
 END
 
 7050 DIALOGEX 0, 0, 317, 143
@@ -1828,7 +1828,7 @@ END
 STRINGTABLE
 BEGIN
     187 "&Nein, nicht wählen"
-    188 "Sie (bzw. ein Programm) haben Informationen angefordert von %1. Welche Verbindung soll verwendet werden?"
+    188 "Sie (bzw. ein Programm) haben Informationen von %1 angefordert. Welche Verbindung soll verwendet werden?"
     189 "Alternative Telefonnummer hinzufügen"
     190 "Nur das erste verfügbare Gerät wählen"
     191 "Alle Geräte wählen"
@@ -1905,8 +1905,8 @@ BEGIN
     263 "Klicken Sie auf Fertigstellen, um '%1' zu speichern."
     264 "netcfg.hlp"
     265 "Bei &Verbindung erfolgreiche Nummer an den Listenanfang verschieben."
-    266 "&Neue Telefonnummer:"
-    267 "&Telefonnummern:"
+    266 "&Neue Telefonnummer:\0"
+    267 "&Telefonnummern:\0"
     268 "Telefonnummern"
     269 "Sie können eine feste IP-Adresse eingeben."
     270 "IP-Adresse"
@@ -1924,8 +1924,8 @@ BEGIN
     282 "Anmeldeoptionen wählen"
     283 "%d%%"
     284 "Telefonnummer für %s"
-    285 "&Neuer Standort:"
-    286 "&Standorte:"
+    285 "&Neuer Standort:\0"
+    286 "&Standorte:\0"
     287 "Standorte"
     288 "Dieses Gerät wird zum Herstellen der Verbindung verwendet."
     289 "Gerät auswählen"
@@ -2003,7 +2003,7 @@ BEGIN
     361 "Netzwerkverbindungen"
     362 "Sie müssen mindestens ein Netzwerkprotokoll wählen."
     363 "Bevor eine Verbindung mit PPP-Servern hergestellt werden kann, müssen Sie ein Netzwerkprotokoll über die Option Netzwerk in der Systemsteuerung installieren."
-    364 "&Neue Vorwahl:"
+    364 "&Neue Vorwahl:\0"
     365 "&Vorwahlnummern:"
     366 "Vorwahlnummern"
     367 "Für mindestens eins der angeforderten Netzwerkprotokolle konnte keine Verbindung hergestellt werden.\n\n"
@@ -2019,8 +2019,8 @@ BEGIN
     411 "Sie müssen jetzt die Anmeldeinformationen festlegen, die die Schnittstelle %1 bei Verbindungen mit dem Remoterouter verwendet. Diese müssen mit den Einwählinformationen, die auf dem Remoterouter konfiguriert wurden, übereinstimmen.\n\n\n\n\n\n\nZusätzlich muss bei einer Verbindung mit einem Windows NT4/2000-Router der Benutzername mit dem Schnittstellennamen des Remoterouters übereinstimmen."
     412 "mpradmin.hlp"
     413 "Bei &Verbindung erfolgreiche Nummer oder Adresse an den Listenanfang verschieben"
-    414 "&Neue Telefonnummer oder Adresse:"
-    415 "&Telefonnummern oder Adressen"
+    414 "&Neue Telefonnummer oder Adresse:\0"
+    415 "&Telefonnummern oder Adressen:\0"
     416 "Nummern und Adressen"
     417 "PPP: Windows 95/98/NT4/2000, ReactOS, Internet"
     418 "Keine"
@@ -2070,7 +2070,7 @@ BEGIN
     462 "Das TCP/IP-Protokoll ist erforderlich, um SLIP-Server anzurufen."
     463 "Bevor Sie eine Verbindung mit dem SLIP-Server herstellen können, müssen Sie das TCP/IP-Protokoll installieren. TCP/IP kann über das Symbol Netzwerk in der Systemsteuerung installiert werden."
     464 "Status"
-    465 "&Neue Durchwahl:"
+    465 "&Neue Durchwahl:\0"
     466 "&Durchwahlnummern:"
     467 "Durchwahlnummern"
     468 "Sie können falls erforderlich spezielle Einstellungen wählen."
