@@ -1,6 +1,4 @@
-/* TRANSLATOR: 2013, 2014 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 IDC_REACTOS_SNDREC32 ACCELERATORS
 BEGIN
@@ -10,7 +8,7 @@ END
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 196, 75
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Ses Kaydedicisi Üzerine"
+CAPTION "Himet Yöneticisi Üzerine"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON IDI_SNDREC32, -1, 19, 14, 21, 20
@@ -41,8 +39,8 @@ BEGIN
         MENUITEM "K&ütük Ekle...", ID_EDIT_INSERTFILE
         MENUITEM "Kü&tükle Karıştır...", ID_EDIT_MIXFILE
         MENUITEM SEPARATOR
-        MENUITEM "&Şimdiki Konumun Öncesini Sil",ID_EDIT_DELETEBEFORE, GRAYED
-        MENUITEM "Ş&imdiki Konumun Sonrasını Sil",ID_EDIT_DELETEAFTER, GRAYED
+        MENUITEM "&Şimdiki Konumun Öncesini Sil", ID_EDIT_DELETEBEFORE, GRAYED
+        MENUITEM "Ş&imdiki Konumun Sonrasını Sil", ID_EDIT_DELETEAFTER, GRAYED
         MENUITEM SEPARATOR
         MENUITEM "&Ses Husûsiyetleri", ID_EDIT_AUDIOPROPS
     END
