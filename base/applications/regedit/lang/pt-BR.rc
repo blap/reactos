@@ -49,11 +49,11 @@ BEGIN
         BEGIN
             MENUITEM "&Chave", ID_EDIT_NEW_KEY
             MENUITEM SEPARATOR
-            MENUITEM "Valor &string", ID_EDIT_NEW_STRINGVALUE
+            MENUITEM "Valor de &sequência de caracteres", ID_EDIT_NEW_STRINGVALUE
             MENUITEM "Valor &binário", ID_EDIT_NEW_BINARYVALUE
             MENUITEM "Valor &DWORD", ID_EDIT_NEW_DWORDVALUE
-            MENUITEM "Valor de string &múltipla", ID_EDIT_NEW_MULTISTRINGVALUE
-            MENUITEM "Valor de string &expansível", ID_EDIT_NEW_EXPANDABLESTRINGVALUE
+            MENUITEM "Valor de sequência de caracteres &múltipla", ID_EDIT_NEW_MULTISTRINGVALUE
+            MENUITEM "Valor de sequência de caracteres &expansível", ID_EDIT_NEW_EXPANDABLESTRINGVALUE
         END
         MENUITEM SEPARATOR
         MENUITEM "&Permissões...", ID_EDIT_PERMISSIONS
@@ -74,7 +74,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Atuali&zar\tF5", ID_VIEW_REFRESH
     END
-    POPUP "&Favorites"
+    POPUP "&Favoritos"
     BEGIN
         MENUITEM "&Adicionar a favoritos", ID_FAVOURITES_ADDTOFAVOURITES, GRAYED
         MENUITEM "&Remover favorito", ID_FAVOURITES_REMOVEFAVOURITE, GRAYED
@@ -112,7 +112,7 @@ BEGIN
     END
     POPUP ""
     BEGIN
-        MENUITEM "Expandir/Reduzir", ID_TREE_EXPANDBRANCH
+        MENUITEM "Expandir/recolher", ID_TREE_EXPANDBRANCH
         POPUP "&Novo"
         BEGIN
             MENUITEM "&Chave", ID_EDIT_NEW_KEY
@@ -135,10 +135,10 @@ BEGIN
     END
     POPUP ""
     BEGIN
-        MENUITEM "C&ut", ID_HEXEDIT_CUT
+        MENUITEM "Recor&tar", ID_HEXEDIT_CUT
         MENUITEM "&Copy", ID_HEXEDIT_COPY
         MENUITEM "&Paste", ID_HEXEDIT_PASTE
-        MENUITEM "&Delete", ID_HEXEDIT_DELETE
+        MENUITEM "&Apagar", ID_HEXEDIT_DELETE
         MENUITEM SEPARATOR
         MENUITEM "Select &All", ID_HEXEDIT_SELECT_ALL
     END
@@ -148,12 +148,12 @@ END
 
 IDD_EDIT_STRING DIALOGEX 32, 24, 252, 84
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_NOIDLEMSG | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Editar string"
+CAPTION "Editar Cadeia de caracteres"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "N&ome do valor:", IDC_STATIC, 6, 6, 134, 8
+    LTEXT "&Nome do valor:", IDC_STATIC, 6, 6, 134, 8
     EDITTEXT IDC_VALUE_NAME, 6, 17, 240, 12, ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "D&ados do valor:", IDC_STATIC, 6, 35, 161, 8
+    LTEXT "&Dados do valor:", IDC_STATIC, 6, 35, 161, 8
     EDITTEXT IDC_VALUE_DATA, 6, 46, 240, 12, ES_AUTOHSCROLL
     DEFPUSHBUTTON "OK", IDOK, 142, 64, 50, 14
     PUSHBUTTON "Cancelar", IDCANCEL, 196, 64, 50, 14
@@ -161,7 +161,7 @@ END
 
 IDD_EDIT_MULTI_STRING DIALOGEX 32, 24, 252, 174
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_NOIDLEMSG | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Editar string múltipla"
+CAPTION "Editar Cadeia de caracteres múltipla"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "N&ome do valor:", IDC_STATIC, 6, 6, 134, 8
@@ -210,7 +210,7 @@ BEGIN
     CONTROL "", IDC_RESOURCE_LIST, "SysListView32", LVS_REPORT | LVS_NOSORTHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 10, 10, 150, 75
     DEFPUSHBUTTON "OK", IDOK, 27, 100, 50, 14
-    PUSHBUTTON "Show...", IDC_SHOW_RESOURCE, 93, 100, 50, 14, WS_DISABLED
+    PUSHBUTTON "Exibir...", IDC_SHOW_RESOURCE, 93, 100, 50, 14, WS_DISABLED
 END
 
 IDD_EDIT_RESOURCE DIALOGEX 6, 18, 281, 283
@@ -224,23 +224,23 @@ BEGIN
     LTEXT "Interrupt:", IDC_STATIC, 10, 48, 35, 8
     CONTROL "", IDC_IRQ_LIST, "SysListView32", LVS_REPORT | LVS_NOSORTHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 10, 58, 261, 31
-    LTEXT "Memory:", IDC_STATIC, 10, 91, 32, 8
+    LTEXT "Memória:", IDC_STATIC, 10, 91, 32, 8
     CONTROL "", IDC_MEMORY_LIST, "SysListView32", LVS_REPORT | LVS_NOSORTHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 10, 101, 261, 31
-    LTEXT "Port:", IDC_STATIC, 10, 134, 38, 8
+    LTEXT "Porta:", IDC_STATIC, 10, 134, 38, 8
     CONTROL "", IDC_PORT_LIST, "SysListView32", LVS_REPORT | LVS_NOSORTHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 10, 144, 261, 31
     LTEXT "Device specific data:", IDC_STATIC, 10, 177, 80, 8
     CONTROL "", IDC_DEVICE_LIST, "SysListView32", LVS_REPORT | LVS_NOSORTHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 10, 188, 261, 31
-    GROUPBOX "Usage", IDC_STATIC, 10, 219, 125, 39
-    LTEXT "Undetermined", IDC_UNDETERMINED, 18, 230, 46, 8, WS_DISABLED
-    LTEXT "Shared", IDC_SHARED, 18, 240, 48, 8, WS_DISABLED
+    GROUPBOX "Utilização", IDC_STATIC, 10, 219, 125, 39
+    LTEXT "Indeterminado", IDC_UNDETERMINED, 18, 230, 46, 8, WS_DISABLED
+    LTEXT "Compartilhado", IDC_SHARED, 18, 240, 48, 8, WS_DISABLED
     LTEXT "Device exclusive", IDC_DEVICE_EXCLUSIVE, 72, 230, 58, 8, WS_DISABLED
     LTEXT "Driver exclusive", IDC_DRIVER_EXCLUSIVE, 72, 240, 54, 8, WS_DISABLED
     RTEXT "Interface Type:", IDC_STATIC, 144, 220, 58, 8
     LTEXT "", IDC_INTERFACETYPE, 205, 220, 66, 8
-    RTEXT "Bus Nummer:", IDC_STATIC, 151, 230, 51, 8
+    RTEXT "Número do Bus:", IDC_STATIC, 151, 230, 51, 8
     LTEXT "", IDC_BUSNUMBER, 205, 230, 66, 8
     RTEXT "Version:", IDC_STATIC, 151, 240, 51, 8
     LTEXT "", IDC_VERSION, 205, 240, 66, 8
@@ -271,16 +271,16 @@ BEGIN
     ID_REGISTRY_MENU "Contém comandos para trabalhar com o registro inteiro"
     ID_EDIT_MENU "Contém comandos para editar valores ou chaves"
     ID_VIEW_MENU "Contém comandos para personalizar a janela do Registro"
-    ID_FAVOURITES_MENU "Contém comandos para acessar chaves usadas com freqüência"
+    ID_FAVOURITES_MENU "Contém comandos para acessar as chaves usadas com frequência"
     ID_HELP_MENU "Contém comandos para exibir ajuda e informações sobre o Editor do registro"
-    ID_EDIT_NEW_MENU "Contém comandos poara criar novas chaves ou valores"
+    ID_EDIT_NEW_MENU "Contém comandos para a criação de novas chaves ou valores"
 END
 
 STRINGTABLE
 BEGIN
     ID_EDIT_MODIFY "Modifica os dados do valor"
     ID_EDIT_NEW_KEY "Adiciona nova chave"
-    ID_EDIT_NEW_STRINGVALUE "Adiciona novo valor string"
+    ID_EDIT_NEW_STRINGVALUE "Adiciona um novo valor de sequência de caracteres"
     ID_EDIT_NEW_BINARYVALUE "Adiciona novo valor binário"
     ID_EDIT_NEW_DWORDVALUE "Adiciona novo valor DWORD"
     ID_REGISTRY_IMPORTREGISTRYFILE "Importa um arquivo de texto para o registro"
@@ -305,7 +305,7 @@ BEGIN
     ID_EDIT_DELETE "Exclui a seleção"
     ID_EDIT_RENAME "Renomeia a seleção"
     ID_EDIT_COPYKEYNAME "Copia o nome da chave selecionada para a área de transferência"
-    ID_EDIT_FIND "Localiza uma seqüência de texto em uma chave, valor ou dados"
+    ID_EDIT_FIND "Localiza uma sequência de caracteres de texto em uma chave, valor ou dados"
     ID_EDIT_FINDNEXT "Localiza a próxima ocorrência do texto especificado na pesquisa anterior"
 END
 
@@ -317,17 +317,17 @@ BEGIN
     IDS_BAD_VALUE "Não pode consultar valor '%s'"
     IDS_UNSUPPORTED_TYPE "Não pode editar chaves deste tipo (%ld)"
     IDS_TOO_BIG_VALUE "Valor muito grande (%ld)"
-    IDS_MULTI_SZ_EMPTY_STRING "Os dados do tipo REG_MULTI_SZ não podem conter seqüências vazias\nAs seqüências vazias foram removidas da lista."
+    IDS_MULTI_SZ_EMPTY_STRING "Os dados do tipo REG_MULTI_SZ não podem conter sequências vazias\nAs sequências vazias foram removidas da lista."
     IDS_QUERY_DELETE_KEY_ONE "Você tem certeza que deseja excluir esta chave?"
     IDS_QUERY_DELETE_KEY_MORE "Você tem certeza que deseja excluir estas chaves?"
     IDS_QUERY_DELETE_KEY_CONFIRM "Confirmar a exclusão da chave"
     IDS_QUERY_DELETE_ONE "Você tem certeza que deseja excluir este valor?"
     IDS_QUERY_DELETE_MORE "Você tem certeza que deseja excluir estes valores?"
     IDS_QUERY_DELETE_CONFIRM "Confirmar a exclusão do valor"
-    IDS_ERR_DELVAL_CAPTION "Erro excluindo valores"
-    IDS_ERR_DELETEVALUE "Não foi possível excluir todos os valores especificados"
+    IDS_ERR_DELVAL_CAPTION "Erro ao excluir valores"
+    IDS_ERR_DELETEVALUE "Não foi possível excluir todos os valores especificados!"
     IDS_ERR_RENVAL_CAPTION "Erro renomeando valor"
-    IDS_ERR_RENVAL_TOEMPTY "Não pode renomear %s. O nome do valor especificado está vazio. Tente novamente com outro nome."
+    IDS_ERR_RENVAL_TOEMPTY "Não pode renomear %s. O nome está em branco. Tente novamente com outro nome."
     IDS_QUERY_IMPORT_HIVE_CAPTION "Confirm Key Restoration"
     IDS_QUERY_IMPORT_HIVE_MSG "A key will be restored on top of the currently selected key.\nAll values and subkeys of this key will be deleted.\nDo you want to continue the operation?"
     IDS_NEW_KEY "Nova chave #%d"
@@ -350,7 +350,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_FLT_REGFILE "Registration File"
+    IDS_FLT_REGFILE "Arquivo de Registro"
     IDS_FLT_REGFILES "Arquivos do Registro (*.reg)"
     IDS_FLT_REGFILES_FLT "*.reg"
     IDS_FLT_HIVFILES "Registry Hive Files (*.*)"
@@ -367,7 +367,7 @@ BEGIN
     IDS_ACCESS_READ "Leitura"
     IDS_ACCESS_QUERYVALUE "Consultar valor"
     IDS_ACCESS_SETVALUE "Definir valor"
-    IDS_ACCESS_CREATESUBKEY "Criar subchaves"
+    IDS_ACCESS_CREATESUBKEY "Criar subchave"
     IDS_ACCESS_ENUMERATESUBKEYS "Enumerar subchaves"
     IDS_ACCESS_NOTIFY "Notificar"
     IDS_ACCESS_CREATELINK "Criar link"
@@ -387,35 +387,35 @@ END
 STRINGTABLE
 BEGIN
     IDS_EXPAND "&Expandir"
-    IDS_COLLAPSE "&Reduzir"
+    IDS_COLLAPSE "&Recolher"
     IDS_GOTO_SUGGESTED_KEY "&Ir para '%s'"
     IDS_FINISHEDFIND "Pesquisa do Registro concluída."
 END
 
 STRINGTABLE
 BEGIN
-    IDS_IMPORT_PROMPT "Adding information can unintentionally change or delete values and cause components to stop working correctly.\nIf you do not trust the source of this information in '%s', do not add it to registry.\n\nAre you sure you want to continue?"
-    IDS_IMPORT_OK "The keys and values contained in '%s' have been successfully added to the registry."
-    IDS_IMPORT_ERROR "Cannot import '%s': Error opening the file. There may be a disk, file system error or file may not exist."
-    IDS_EXPORT_ERROR "Cannot export '%s': Error creating or writing to the file. There may be a disk or file system error."
+    IDS_IMPORT_PROMPT "Adicionar informações poderá inadvertidamente alterar ou apagar valores e fazer com que componentes parem de funcionar.\nSe você não confia na fonte dessa informação em '%s', não adicione ao registro.\n\nVocê tem certeza que deseja continuar?"
+    IDS_IMPORT_OK "As chaves e valores contidos em '%s' foram adicionados com sucesso no registro."
+    IDS_IMPORT_ERROR "Não é possível importar '%s': Erro ao abrir o arquivo. Pode haver um erro de sistema de arquivos, um erro no disco ou um arquivo pode não existir."
+    IDS_EXPORT_ERROR "Não é possível exportar '%s': erro ao criar ou gravar no arquivo. Pode haver um erro de sistema de arquivo ou disco."
 END
 
 STRINGTABLE
 BEGIN
     IDS_BUSNUMBER "Bus Number"
     IDS_INTERFACE "Interface"
-    IDS_DMA_CHANNEL "Channel"
-    IDS_DMA_PORT "Port"
-    IDS_INTERRUPT_VECTOR "Vector"
-    IDS_INTERRUPT_LEVEL "Level"
-    IDS_INTERRUPT_AFFINITY "Affinity"
-    IDS_INTERRUPT_TYPE "Type"
-    IDS_MEMORY_ADDRESS "Physical Address"
+    IDS_DMA_CHANNEL "Canal"
+    IDS_DMA_PORT "Porta"
+    IDS_INTERRUPT_VECTOR "Vetor"
+    IDS_INTERRUPT_LEVEL "Nível"
+    IDS_INTERRUPT_AFFINITY "Afinidade"
+    IDS_INTERRUPT_TYPE "Tipo"
+    IDS_MEMORY_ADDRESS "Endereço Físico"
     IDS_MEMORY_LENGTH "Length"
-    IDS_MEMORY_ACCESS "Access"
-    IDS_PORT_ADDRESS "Physical Address"
+    IDS_MEMORY_ACCESS "Acesso"
+    IDS_PORT_ADDRESS "Endereço Físico"
     IDS_PORT_LENGTH "Length"
-    IDS_PORT_ACCESS "Access"
+    IDS_PORT_ACCESS "Acesso"
     IDS_SPECIFIC_RESERVED1 "Reserved 1"
     IDS_SPECIFIC_RESERVED2 "Reserved 2"
     IDS_SPECIFIC_DATASIZE "Data Size"
@@ -423,19 +423,19 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_PORT_PORT_IO "Port"
-    IDS_PORT_MEMORY_IO "Memory"
+    IDS_PORT_PORT_IO "Porta"
+    IDS_PORT_MEMORY_IO "Memória"
     IDS_INTERRUPT_EDGE_SENSITIVE "Edge Sensitive"
     IDS_INTERRUPT_LEVEL_SENSITIVE "Level Sensitive"
-    IDS_MEMORY_READ_ONLY "Read Only"
+    IDS_MEMORY_READ_ONLY "Somente Leitura"
     IDS_MEMORY_WRITE_ONLY "Write Only"
     IDS_MEMORY_READ_WRITE "Read / Write"
 END
 
 STRINGTABLE
 BEGIN
-    IDS_BUS_UNDEFINED "Undefined"
-    IDS_BUS_INTERNAL "Internal"
+    IDS_BUS_UNDEFINED "Indefinido"
+    IDS_BUS_INTERNAL "Interno"
     IDS_BUS_ISA "ISA"
     IDS_BUS_EISA "EISA"
     IDS_BUS_MICROCHANNEL "MicroChannel"
@@ -447,7 +447,7 @@ BEGIN
     IDS_BUS_CBUS "C-Bus"
     IDS_BUS_MPIBUS "MPI-Bus"
     IDS_BUS_MPSABUS "MPSA-Bus"
-    IDS_BUS_PROCESSORINTERNAL "Processor Internal"
+    IDS_BUS_PROCESSORINTERNAL "Processador Interno"
     IDS_BUS_INTERNALPOWERBUS "Internal Power Bus"
     IDS_BUS_PNPISABUS "PnP-ISA Bus"
     IDS_BUS_PNPBUS "PnP Bus"
@@ -463,7 +463,7 @@ STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_B
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Intervalo de exportação", IDC_STATIC, 2, 0, 366, 48
-    CONTROL "T&udo", IDC_EXPORT_ALL, "Button", BS_AUTORADIOBUTTON, 10, 10, 29, 11
+    CONTROL "&Tudo", IDC_EXPORT_ALL, "Button", BS_AUTORADIOBUTTON, 10, 10, 29, 11
     CONTROL "&Ramificação selecionada", IDC_EXPORT_BRANCH, "Button", BS_AUTORADIOBUTTON, 10, 22, 100, 11
     EDITTEXT IDC_EXPORT_BRANCH_TEXT, 30, 34, 335, 12
 END
@@ -476,7 +476,7 @@ BEGIN
     LTEXT "&Key:", IDC_STATIC, 4, 4, 15, 8, SS_LEFT
     EDITTEXT IDC_EDIT_KEY, 23, 2, 167, 13
     DEFPUSHBUTTON "OK", IDOK, 140, 17, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 89, 17, 50, 14
+    PUSHBUTTON "Cancelar", IDCANCEL, 89, 17, 50, 14
 END
 
 IDD_ADDFAVORITES DIALOGEX 0, 0, 186, 46
@@ -507,20 +507,20 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Localizar"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    DEFPUSHBUTTON "Localizar pró&ximo", IDOK, 197, 7, 50, 14
+    DEFPUSHBUTTON "Localizar &próximo", IDOK, 197, 7, 50, 14
     PUSHBUTTON "Cancelar", IDCANCEL, 197, 24, 50, 14
     GROUPBOX "Procurar em", IDC_STATIC, 7, 25, 63, 51
     LTEXT "L&ocalizar:", IDC_STATIC, 7, 8, 37, 10
     EDITTEXT IDC_FINDWHAT, 47, 7, 142, 13, ES_AUTOHSCROLL
-    CONTROL "C&haves", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Keys", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 36, 35, 8
-    CONTROL "&Valores", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Values", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 48, 36, 8
-    CONTROL "&Dados", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Data", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 60, 42, 8
-    CONTROL "&Coincidir seqüência inteira", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &whole string only", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 32, 94, 13
-    CONTROL "Diferenciar &maiúsc./minúsc.", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &case", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 48, 90, 12
 END
 
@@ -538,7 +538,7 @@ END
 /*
  *STRINGTABLE
  *BEGIN
- *    ID_HELP_HELPTOPICS "Abre ajuda do Editor do Registro."
- *    ID_HELP_ABOUT "Exibe informações sobre o programa, número da versão e direitos autorais."
+ *    ID_HELP_HELPTOPICS "Opens Registry Editor Help."
+ *    ID_HELP_ABOUT "Displays program information, version number, and copyright."
  *END
  */
