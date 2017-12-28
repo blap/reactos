@@ -1,9 +1,4 @@
-/* FILE:       dll/cpl/intl/lang/cs-CZ.rc
- * TRANSLATOR: Radek Liska aka Black_Fox (radekliska at gmail dot com)
- * UPDATED:    2010-05-22
- */
-
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 IDD_GENERALPAGE DIALOGEX 0, 0, 246, 230
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -41,8 +36,8 @@ BEGIN
     PUSHBUTTON "&Podrobnosti...", IDC_DETAIL_BUTTON, 177, 34, 54, 14
     GROUPBOX "Podpora pro další jazyky", -1, 5, 62, 234, 82
     LTEXT "Většina jazyků je ve výchozím stavu nainstalovaná. Další jazyky je možné nainstalovat po zaškrtnutí odpovídajích políček níže.", -1, 12, 72, 220, 18
-    CHECKBOX "Nai&nstalovat soubory jazyků se složitým písmem a jazyků psaných zprava doleva", IDC_INST_FILES_FOR_RTOL_LANG, 12, 92, 215, 22, BS_MULTILINE | BS_TOP
-    CHECKBOX "Nain&stalovat soubory východoasijských jazyků", IDC_INST_FILES_FOR_ASIAN, 12, 114, 180, 22, BS_MULTILINE | BS_TOP
+    AUTOCHECKBOX "I&nstall files for complex script and right-to-left languages", IDC_INST_FILES_FOR_RTOL_LANG, 12, 92, 215, 22, BS_MULTILINE | BS_TOP
+    AUTOCHECKBOX "In&stall files for East Asian languages", IDC_INST_FILES_FOR_ASIAN, 12, 114, 180, 22, BS_MULTILINE | BS_TOP
 END
 
 IDD_ADVANCEDPAGE DIALOGEX 0, 0, 246, 230
@@ -57,7 +52,7 @@ BEGIN
     GROUPBOX "Převodní tabulky znakových stránek", -1, 5, 101, 234, 88
     CONTROL "", IDC_CONV_TABLES, "SysListView32", LVS_REPORT | LVS_SORTASCENDING | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP, 14, 114, 217, 70
     GROUPBOX "Výchozí nastavení uživatelského účtu", -1, 5, 193, 234, 32
-    CHECKBOX "Použít všechna nastavení na aktuální uživatelský účet a nastavit jako výchozí", IDC_APPLY_CUR_USER_DEF_PROFILE, 12, 201, 220, 22, BS_MULTILINE | BS_TOP
+    AUTOCHECKBOX "Apply all settings to the current user account and to the &default", IDC_APPLY_CUR_USER_DEF_PROFILE, 12, 201, 220, 22, BS_MULTILINE | BS_TOP
 END
 
 IDD_NUMBERSPAGE DIALOGEX 0, 0, 246, 234
@@ -96,9 +91,9 @@ CAPTION "Měna"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Ukázka zobrazení", -1, 7, 7, 230, 33, WS_CHILD | WS_VISIBLE
-    LTEXT "Kladné:", -1, 13, 21, 31, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Kladné:", -1, 13, 21, 27, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     EDITTEXT IDC_CURRENCYPOSSAMPLE, 43, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
-    LTEXT "Záporné:", -1, 120, 21, 31, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Záporné:", -1, 120, 21, 30, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     EDITTEXT IDC_CURRENCYNEGSAMPLE, 154, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
     LTEXT "&Symbol měny:", -1, 10, 51, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_CURRENCYSYMBOL, 134, 49, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
