@@ -1,0 +1,446 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+101 DIALOGEX 0, 0, 252, 218
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Aturan Panggilan"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON 201, 2000, 7, 7, 21, 20
+    LTEXT "Daftar di bawah ini menampilkan lokasi yang telah Anda tentukan. Pilih lokasi tempat Anda menelepon.", -1, 35, 7, 210, 16
+    LTEXT "& Lokasi:", -1, 7, 35, 210, 8
+    CONTROL "", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000011D, 7, 46, 238, 105, WS_EX_CLIENTEDGE
+    PUSHBUTTON "&Baru...", 1030, 87, 155, 50, 14
+    PUSHBUTTON "Edit...", 1031, 141, 155, 50, 14
+    PUSHBUTTON "&Menghapus", 1032, 195, 155, 50, 14
+    LTEXT "Nomor telepon akan dipanggil sebagai:", 1052, 7, 181, 100, 8
+    LTEXT "", 1053, 14, 195, 224, 16
+END
+
+102 DIALOGEX 0, 0, 252, 255
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Umum"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON 202, 2000, 7, 7, 20, 20
+    LTEXT "Nama lokasi:", -1, 35, 11, 56, 8, SS_CENTERIMAGE
+    EDITTEXT 1038, 96, 8, 149, 14, ES_AUTOHSCROLL
+    LTEXT "Tentukan lokasi dari mana Anda akan menghubungi.", 2001, 7, 33, 238, 8
+    LTEXT "Negara / & wilayah:", -1, 7, 49, 161, 8
+    COMBOBOX 1006, 7, 60, 175, 200, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL
+    LTEXT "Kode area:", -1, 190, 49, 48, 8
+    EDITTEXT 1034, 190, 60, 48, 12, ES_AUTOHSCROLL
+    GROUPBOX "Aturan panggilan", 2002, 7, 80, 238, 92
+    LTEXT "Saat menghubungi lokasi ini, gunakan aturan berikut:", 2003, 14, 92, 224, 8
+    LTEXT "Untuk mengakses saluran luar untuk & panggilan lokal, hubungi:", -1, 14, 106, 170, 8
+    EDITTEXT 1010, 190, 104, 48, 12, ES_AUTOHSCROLL
+    LTEXT "Untuk mengakses jalur luar untuk panggilan jarak jauh & jarak jauh, hubungi:", -1, 14, 122, 170, 8
+    EDITTEXT 1011, 190, 120, 48, 12, ES_AUTOHSCROLL
+    LTEXT "Gunakan kode carri & er ini untuk melakukan panggilan jarak jauh:", -1, 14, 138, 170, 8
+    EDITTEXT 1059, 190, 136, 48, 12, ES_AUTOHSCROLL
+    LTEXT "Use this carrier code to make &international calls:", -1, 14, 154, 170, 8
+    EDITTEXT 1060, 190, 152, 48, 12, ES_AUTOHSCROLL
+    AUTOCHECKBOX "Untuk menonaktifkan panggilan & menunggu, panggil:", 1035, 14, 177, 170, 10
+    COMBOBOX 1013, 190, 176, 48, 73, CBS_DROPDOWN | CBS_SORT | WS_VSCROLL
+    LTEXT "Dial menggunakan:", -1, 14, 195, 40, 8
+    AUTORADIOBUTTON "&Nada", 1036, 58, 194, 50, 10, NOT WS_TABSTOP
+    AUTORADIOBUTTON "&Nadi", 1037, 112, 194, 50, 10, NOT WS_TABSTOP
+    LTEXT "Nomor telepon akan dipanggil sebagai:", 1052, 7, 219, 100, 8
+    LTEXT "", 1053, 14, 232, 224, 16
+END
+
+103 DIALOGEX 0, 0, 252, 218
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Aturan Kode Area"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Aturan kode area menentukan bagaimana nomor telepon diputar dari kode area Anda saat ini ke kode area lain dan dalam kode area Anda.", 2000, 7, 7, 238, 16
+    LTEXT "Aturan kode area:", -1, 7, 31, 238, 8
+    CONTROL "", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000801D, 7, 42, 238, 99, WS_EX_CLIENTEDGE
+    PUSHBUTTON "&Baru...", 1030, 87, 147, 50, 14
+    PUSHBUTTON "Edit...", 1031, 141, 147, 50, 14
+    PUSHBUTTON "&Menghapus", 1032, 195, 147, 50, 14
+    GROUPBOX "Deskripsi", 2006, 7, 166, 238, 45
+    LTEXT "", 1039, 14, 180, 224, 24
+END
+
+104 DIALOGEX 0, 0, 252, 218
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Kartu telepon"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Pilih kartu panggil yang akan Anda gunakan, atau klik Baru untuk menambahkan kartu yang berbeda.", 2000, 7, 7, 238, 8
+    LTEXT "Kartu & Jenis:", -1, 7, 23, 238, 8
+    CONTROL "", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000400D, 7, 34, 238, 63, WS_EX_CLIENTEDGE
+    PUSHBUTTON "&Baru...", 1030, 87, 103, 50, 14
+    PUSHBUTTON "Edit...", 1031, 141, 103, 50, 14
+    PUSHBUTTON "&Menghapus", 1032, 195, 103, 50, 14
+    LTEXT "Nomor akun:", -1, 7, 127, 91, 8
+    EDITTEXT 1018, 102, 125, 143, 12, ES_AUTOHSCROLL
+    LTEXT "& Nomor identitas pribadi (PIN):", -1, 7, 145, 91, 8
+    EDITTEXT 1019, 102, 143, 143, 12, ES_AUTOHSCROLL
+    GROUPBOX "Akses nomor telepon untuk", 2001, 7, 158, 238, 53
+    LTEXT "Panggilan jarak jauh:", -1, 14, 172, 84, 8
+    LTEXT "", 1042, 102, 172, 136, 8
+    LTEXT "Panggilan internasional:", -1, 14, 184, 84, 8
+    LTEXT "", 1043, 102, 184, 136, 8
+    LTEXT "Panggilan lokal:", -1, 14, 196, 84, 8
+    LTEXT "", 1051, 102, 196, 136, 8
+END
+
+105 DIALOGEX 0, 0, 252, 218
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Umum"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON 203, 2000, 7, 7, 20, 20
+    LTEXT "& Nama kartu panggil:", -1, 35, 12, 64, 8, SS_CENTERIMAGE
+    EDITTEXT 1047, 105, 9, 140, 14, ES_AUTOHSCROLL
+    LTEXT "Nomor akun:", -1, 7, 35, 238, 8
+    EDITTEXT 1018, 7, 46, 116, 14, ES_AUTOHSCROLL
+    LTEXT "Nomor Identifikasi Pribadi (PIN):", -1, 7, 68, 238, 8
+    EDITTEXT 1019, 7, 80, 116, 14, ES_AUTOHSCROLL
+    LTEXT "Kartu panggil ini akan digunakan saat:", 1056, 14, 117, 224, 8
+    GROUPBOX "Rincian kartu panggil", 2001, 7, 105, 238, 66
+    LTEXT "", 1000, 22, 131, 216, 8
+    LTEXT "", 1001, 22, 143, 216, 8
+    LTEXT "", 1002, 22, 155, 216, 8
+END
+
+106 DIALOGEX 0, 0, 252, 218
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Jarak jauh"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Nomor akses untuk & panggilan jarak jauh:", -1, 7, 7, 238, 8
+    EDITTEXT 1044, 7, 18, 140, 14, ES_AUTOHSCROLL
+    LTEXT "Gunakan tombol di bawah untuk memasukkan langkah panggilan untuk membuat panggilan jarak jauh. Masukkan langkah-langkah ini sesuai urutan saat kartu muncul di kartu panggil Anda.", 2000, 7, 40, 238, 24
+    LTEXT "Memanggil kartu panggil langkah:", -1, 7, 72, 80, 8
+    CONTROL "Daftar1", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000400D, 7, 83, 184, 74, WS_EX_CLIENTEDGE
+    PUSHBUTTON "Pindahkan naik", 1022, 195, 83, 50, 14
+    PUSHBUTTON "& Bergerak ke bawah", 1023, 195, 101, 50, 14
+    PUSHBUTTON "&Menghapus", 1024, 195, 119, 50, 14
+    PUSHBUTTON "Akses & nomor", 1025, 7, 161, 90, 14
+    PUSHBUTTON "Nomor akun", 1018, 101, 161, 90, 14
+    PUSHBUTTON "&PIN", 1019, 7, 179, 90, 14
+    PUSHBUTTON "Nomor tujuan...", 1020, 101, 179, 90, 14
+    PUSHBUTTON "& Tunggu sebentar...", 1017, 7, 197, 90, 14
+    PUSHBUTTON "& Tentukan Digit...", 1021, 101, 197, 90, 14
+END
+
+107 DIALOGEX 0, 0, 252, 218
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Internasional"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Nomor akses untuk panggilan internasional:", -1, 7, 7, 238, 8
+    EDITTEXT 1045, 7, 18, 140, 14, ES_AUTOHSCROLL
+    LTEXT "Gunakan tombol di bawah untuk memasukkan langkah-langkah panggilan untuk melakukan panggilan internasional. Masukkan langkah-langkah ini sesuai urutan saat kartu muncul di kartu panggil Anda.", 2000, 7, 40, 244, 24
+    LTEXT "Memanggil kartu panggil langkah:", -1, 7, 72, 80, 8
+    CONTROL "Daftar1", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000400D, 7, 83, 184, 74, WS_EX_CLIENTEDGE
+    PUSHBUTTON "Pindahkan naik", 1022, 195, 83, 50, 14
+    PUSHBUTTON "& Bergerak ke bawah", 1023, 195, 101, 50, 14
+    PUSHBUTTON "&Menghapus", 1024, 195, 119, 50, 14
+    PUSHBUTTON "Akses & nomor", 1025, 7, 161, 90, 14
+    PUSHBUTTON "Nomor akun", 1018, 101, 161, 90, 14
+    PUSHBUTTON "&PIN", 1019, 7, 179, 90, 14
+    PUSHBUTTON "Nomor tujuan...", 1020, 101, 179, 90, 14
+    PUSHBUTTON "& Tunggu sebentar...", 1017, 7, 197, 90, 14
+    PUSHBUTTON "& Tentukan Digit...", 1021, 101, 197, 90, 14
+END
+
+108 DIALOGEX 0, 0, 252, 218
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Panggilan lokal"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Nomor akses untuk & panggilan lokal:", -1, 7, 7, 238, 8
+    EDITTEXT 1008, 7, 18, 140, 14, ES_AUTOHSCROLL
+    LTEXT "Gunakan tombol di bawah untuk memasukkan langkah-langkah panggilan untuk membuat panggilan lokal. Masukkan langkah-langkah ini sesuai urutan saat kartu muncul di kartu panggil Anda. Untuk membuat panggilan lokal tanpa menggunakan kartu panggil Anda, biarkan bagian ini kosong.", 2000, 7, 40, 238, 24
+    LTEXT "Memanggil kartu panggil langkah:", -1, 7, 72, 238, 8
+    CONTROL "Daftar1", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000400D, 7, 83, 184, 74, WS_EX_CLIENTEDGE
+    PUSHBUTTON "Pindahkan naik", 1022, 195, 83, 50, 14
+    PUSHBUTTON "& Bergerak ke bawah", 1023, 195, 101, 50, 14
+    PUSHBUTTON "&Menghapus", 1024, 195, 119, 50, 14
+    PUSHBUTTON "Akses & nomor", 1025, 7, 161, 90, 14
+    PUSHBUTTON "Nomor akun", 1018, 101, 161, 90, 14
+    PUSHBUTTON "&PIN", 1019, 7, 179, 90, 14
+    PUSHBUTTON "Nomor tujuan...", 1020, 101, 179, 90, 14
+    PUSHBUTTON "& Tunggu sebentar...", 1017, 7, 197, 90, 14
+    PUSHBUTTON "& Tentukan Digit...", 1021, 101, 197, 90, 14
+END
+
+109 DIALOGEX 0, 0, 252, 257
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Aturan Kode Area Baru"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Aturan kode area ini hanya akan berlaku untuk panggilan yang dibuat pada kode area dan kombinasi awalan yang Anda tentukan di bawah ini.", 2000, 7, 6, 238, 16
+    LTEXT "Kode area yang Anda panggil:", -1, 7, 31, 110, 8
+    LTEXT "Kode area:", -1, 7, 47, 36, 8
+    EDITTEXT 1034, 46, 44, 50, 14, ES_AUTOHSCROLL
+    LTEXT "Tentukan awalan yang akan digunakan untuk aturan kode area ini.", -1, 14, 78, 224, 8
+    AUTORADIOBUTTON "& Sertakan semua awalan dalam kode area ini", 1014, 14, 90, 224, 12, NOT WS_TABSTOP
+    AUTORADIOBUTTON "Sertakan & hanya awalan dalam daftar di bawah ini:", 1015, 14, 104, 224, 12, NOT WS_TABSTOP
+    LTEXT "& Prefiks untuk disertakan:", 1057, 26, 117, 119, 8
+    CONTROL "Daftar1", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000411D, 25, 128, 66, 32, WS_EX_CLIENTEDGE
+    PUSHBUTTON "&Tambah...", 1005, 95, 128, 50, 14
+    PUSHBUTTON "D&elete", 1024, 95, 146, 50, 14
+    LTEXT "Saat memanggil nomor telepon yang berisi awalan di atas:", -1, 14, 184, 224, 8
+    AUTOCHECKBOX "& Dial:", 1012, 14, 198, 30, 12
+    EDITTEXT 1007, 46, 196, 42, 14, ES_AUTOHSCROLL
+    AUTOCHECKBOX "Sertakan kode area", 1029, 14, 214, 85, 12
+    DEFPUSHBUTTON "Oke", 1, 141, 236, 50, 14
+    PUSHBUTTON "Membatalkan", 2, 195, 236, 50, 14
+    RTEXT "Kode area", 2001, 133, 31, 51, 8
+    LTEXT "Awalan", 2002, 200, 31, 45, 8
+    CONTROL "", 2003, "STATIC", SS_BLACKFRAME | SS_SUNKEN, 180, 41, 1, 6
+    CONTROL "", 2004, "STATIC", SS_BLACKFRAME | SS_SUNKEN, 203, 41, 1, 6
+    RTEXT "X - X X X - X X X - X X X X", 2005, 133, 48, 112, 8
+    GROUPBOX "Awalan", -1, 7, 64, 238, 102
+    GROUPBOX "Aturan", -1, 7, 170, 238, 60
+END
+
+110 DIALOGEX 0, 0, 227, 82
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "", 1003, 7, 7, 213, 8
+    LTEXT "", 1039, 7, 23, 213, 8
+    EDITTEXT 1031, 7, 34, 213, 14, ES_AUTOHSCROLL
+    DEFPUSHBUTTON "Oke", 1, 116, 62, 50, 14
+    PUSHBUTTON "Membatalkan", 2, 170, 62, 50, 14
+END
+
+111 DIALOGEX 0, 0, 252, 124
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Tunggu"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Pilih jenis prompt yang akan ditunggu sebelum melanjutkan dengan urutan panggilan.", 2000, 7, 7, 238, 16
+    AUTORADIOBUTTON "Tunggu nada sambung", 1009, 7, 31, 238, 10, WS_GROUP
+    AUTORADIOBUTTON "Tunggu pesan & pesan suara selesai", 1016, 7, 47, 238, 10, NOT WS_TABSTOP
+    AUTORADIOBUTTON "Tunggu lama & waktu tertentu:", 1048, 7, 63, 238, 10, NOT WS_TABSTOP
+    EDITTEXT 1050, 18, 77, 36, 14, ES_AUTOHSCROLL | WS_GROUP
+    CONTROL "Spin1", 1049, "msctls_updown32", 0x00000036, 42, 78, 11, 14
+    LTEXT "& detik", -1, 58, 81, 187, 8
+    DEFPUSHBUTTON "Oke", 1, 141, 103, 50, 14
+    PUSHBUTTON "Membatalkan", 2, 195, 103, 50, 14
+END
+
+112 DIALOGEX 0, 0, 252, 111
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Nomor tujuan"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Langkah ini akan menempatkan nomor tujuan yang akan Anda hubungi ke urutan kartu panggil. Saat memanggil nomor tujuan, bagian mana dari nomor yang ingin Anda hubungi?", 2000, 7, 7, 238, 24
+    AUTOCHECKBOX "Memanggil kode & negara / wilayah", 1027, 7, 39, 238, 10
+    AUTOCHECKBOX "Putar & kode area", 1034, 7, 55, 238, 10
+    AUTOCHECKBOX "Panggil nomor &", 1008, 7, 71, 238, 10, WS_DISABLED
+    DEFPUSHBUTTON "Oke", 1, 141, 92, 50, 14
+    PUSHBUTTON "Membatalkan", 2, 195, 92, 50, 14
+END
+
+113 DIALOGEX 0, 0, 252, 218
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Maju"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON 201, 2000, 7, 7, 20, 20
+    LTEXT "Penyedia telepon berikut dipasang di komputer ini:", -1, 40, 7, 205, 8
+    LTEXT "& Penyedia:", -1, 7, 35, 238, 8
+    LISTBOX 1033, 7, 46, 238, 147, LBS_STANDARD | LBS_NOINTEGRALHEIGHT | WS_TABSTOP
+    PUSHBUTTON "Tam&bahkan...", 1005, 87, 197, 50, 14
+    PUSHBUTTON "&Menghapus", 1024, 141, 197, 50, 14
+    PUSHBUTTON "& Konfigurasikan...", 1031, 195, 197, 50, 14
+END
+
+114 DIALOGEX 20, 15, 252, 127
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Tambahkan Penyedia"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Pilih penyedia yang ingin Anda instal dari daftar di bawah ini, dan klik Add.", 2000, 7, 7, 241, 8
+    LTEXT "& Penyedia telepon:", -1, 7, 23, 144, 10
+    LISTBOX 1055, 7, 34, 238, 74, LBS_STANDARD | WS_TABSTOP
+    PUSHBUTTON "&Menambahkan", 1005, 141, 106, 50, 14
+    DEFPUSHBUTTON "Membatalkan", 2, 195, 106, 50, 14
+END
+
+115 DIALOGEX 10, 10, 303, 228
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Informasi lokasi"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL 302, 302, "STATIC", SS_BITMAP, 10, 10, 88, 155
+    LTEXT "Sebelum Anda dapat membuat koneksi telepon atau modem, ReactOS memerlukan informasi berikut tentang lokasi Anda saat ini.", 2000, 107, 15, 188, 25
+    LTEXT "& Negara / wilayah apa kamu sekarang?", -1, 107, 43, 189, 10
+    COMBOBOX 1006, 107, 55, 180, 200, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL
+    LTEXT "Kode area (atau kode kota) apakah anda sekarang?", -1, 107, 74, 189, 10
+    EDITTEXT 1034, 107, 87, 45, 12, ES_AUTOHSCROLL
+    LTEXT "Jika Anda perlu menentukan kode ca & rrier, ada apa?", -1, 107, 105, 189, 10
+    EDITTEXT 1058, 106, 118, 45, 12, ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT "Jika Anda menghubungi nomor untuk mengakses & garis luar, ada apa?", -1, 107, 137, 189, 10
+    EDITTEXT 1010, 107, 149, 45, 12, ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT "Sistem telepon di lokasi ini menggunakan:", -1, 107, 168, 189, 10
+    AUTORADIOBUTTON "& Nada sambung", 1036, 107, 178, 57, 14, WS_GROUP | NOT WS_TABSTOP
+    AUTORADIOBUTTON "&Pulse dialing", 1037, 175, 178, 57, 14, NOT WS_TABSTOP
+    DEFPUSHBUTTON "Oke", 1, 192, 204, 50, 14
+    PUSHBUTTON "Membatalkan", 2, 246, 204, 50, 14
+END
+
+400 DIALOGEX 0, 0, 290, 151
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL 302, 302, "STATIC", SS_BITMAP, 0, 0, 88, 155
+    LTEXT "Sebelum Anda dapat membuat koneksi telepon atau modem, ReactOS memerlukan informasi berikut tentang lokasi Anda saat ini.", 2000, 95, 2, 188, 25
+    LTEXT "& Negara / wilayah apa kamu sekarang?", -1, 95, 30, 188, 10
+    COMBOBOX 1006, 95, 41, 177, 68, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL
+    LTEXT "Kode area (atau kode kota) apakah anda sekarang?", -1, 95, 61, 188, 10
+    EDITTEXT 1034, 95, 73, 40, 14, ES_AUTOHSCROLL
+    LTEXT "Jika Anda menghubungi nomor untuk mengakses & garis luar, ada apa?", -1, 95, 96, 188, 10
+    EDITTEXT 1010, 95, 107, 40, 14, ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT "Sistem telepon di lokasi ini menggunakan:", -1, 95, 129, 159, 10
+    AUTORADIOBUTTON "& Nada sambung", 1036, 95, 139, 55, 12, WS_GROUP | NOT WS_TABSTOP
+    AUTORADIOBUTTON "&Pulse dialing", 1037, 155, 139, 55, 12, NOT WS_TABSTOP
+END
+
+500 DIALOGEX 0, 0, 235, 88
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Menjelajah ReactOS"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON 504, 501, 13, 14, 21, 20
+    LTEXT "", 502, 47, 15, 180, 32
+    AUTOCHECKBOX "& Ke depan, selalu percaya halaman ini", 503, 50, 47, 147, 12
+    DEFPUSHBUTTON "&OK", 505, 110, 65, 50, 14
+    PUSHBUTTON "&Membatalkan", 506, 164, 65, 50, 14
+END
+
+STRINGTABLE
+BEGIN
+    1 "Pilihan Telepon dan Modem"
+    2 "WORKGROUP"
+    3 "Lokasi"
+    4 "Computer Name Changes"
+    5 "Workgroup:"
+    6 "Domain:"
+    7 "Kartu panggil baru"
+    8 "Edit Kartu Panggil"
+    9 "Kode area"
+    10 "Awalan"
+    11 "Aturan"
+    12 "The character you entered is invalid.\n\nValid characters are 0 through 9, *, #, and comma."
+    13 "Karakter yang Anda masukkan tidak valid.\n\n Karakter kosong adalah 0 sampai 9, *, #, spasi, dan koma."
+    14 "Karakter yang Anda masukkan tidak valid.\n\nValid karakter 0 sampai 9."
+    15 "Karakter yang Anda masukkan tidak valid."
+    16 "Dial %1"
+    17 "Dial% 1 ditambah kode area"
+    18 "Dial kode area"
+    19 "Nomor panggil saja"
+    20 "GENERIC_ALL"
+    21 "Dipilih"
+    22 "Welcome to the %1 workgroup."
+    23 "Welcome to the %1 domain."
+    24 "You must restart this computer for the changes to take effect."
+    25 "You can change the name and the membership of this computer. Changes may affect access to network resources."
+    26 "Panggil kode area sebelum nomor untuk semua panggilan dalam kode area %1."
+    27 "Dial only the number for all calls within the %1 area code."
+    28 "Dial '%2' ditambah kode area sebelum nomor untuk panggilan dalam kode area %1, berisi awalan yang Anda tentukan."
+    29 "Dial '%2' sebelum nomor untuk panggilan dalam kode area %1, berisi awalan yang Anda tentukan."
+    30 "Panggil kode area sebelum nomor untuk panggilan dalam kode area %1, berisi awalan yang Anda tentukan."
+    31 "Hanya panggil nomor untuk panggilan dalam kode area %1, yang berisi awalan yang Anda tentukan."
+    32 "Dial a '1' sebelum panggilan dalam semua kode area lainnya, dan sertakan kode area untuk semua awalan."
+    33 "Tambah Awalan"
+    34 "Masukkan satu atau lebih awalan yang dipisahkan oleh spasi atau koma."
+    35 "Tentukan Digit"
+    36 "Masukkan satu atau beberapa digit (termasuk * dan #) untuk dipanggil."
+    37 "Anda mencoba memasukkan karakter yang tidak valid. \n\n Valid characters adalah 0 sampai 9 dan spasi."
+    38 "Tunggu %1!d! detik."
+    39 "Panggil nomor akses."
+    40 "Putar nomor rekening."
+    41 "Panggil nomor PIN."
+    42 "Tunggu nada panggil."
+    43 "Tunggu sampai pesan suara berakhir."
+    44 "Memanggil kode negara / wilayah, kode area, dan nomor."
+    45 "Memanggil kode negara dan wilayah."
+    46 "Panggil kode area dan nomornya."
+    47 "Memanggil kode negara / wilayah."
+    48 "Putar kode area."
+    49 "Putar nomornya."
+    50 "memanggil panggilan jarak jauh."
+    51 "memanggil panggilan internasional."
+    52 "memanggil panggilan lokal."
+    53 "Tidak ada aturan yang ditetapkan untuk bagaimana kartu panggil ini harus digunakan."
+    54 "Anda harus memasukkan kode operator jarak jauh untuk lokasi ini."
+    55 "Anda harus memasukkan nama untuk lokasi ini."
+    56 "Anda harus memasukkan kode area untuk lokasi ini."
+    57 "Anda harus memilih nomor yang akan dihubungi untuk menonaktifkan panggilan tunggu."
+    58 "Anda harus memilih negara atau wilayah yang Anda panggil."
+    59 "Informasi yang hilang"
+    60 "Nama lokasi yang Anda masukkan sudah digunakan. Silahkan masukkan nama yang unik."
+    61 "Kartu panggil ini kehilangan beberapa informasi yang dibutuhkan. Untuk menggunakan kartu ini, klik Edit untuk memberikan informasi lebih lanjut, atau pilih kartu yang berbeda."
+    62 "Anda harus memilih kartu panggil default. Pilih kartu dari daftar, atau klik Baru untuk membuat kartu baru."
+    63 "Anda harus memasukkan nama kartu panggil."
+    64 "Anda harus memasukkan nomor rekening."
+    65 "Anda harus memasukkan nomor PIN."
+    66 "Tidak ada aturan yang ditetapkan untuk kartu panggil ini. Untuk membuat aturan, pilih tab Long Distance, International, atau Local Calls."
+    67 "Aturan jarak jauh Anda memerlukan nomor akses jarak jauh kartu panggil Anda."
+    68 "Your international rule requires your calling card's international access number."
+    69 "Aturan lokal Anda memerlukan nomor akses lokal kartu panggil Anda."
+    70 "Tidak ada"
+    71 "Yakin ingin menghapus Penyedia Layanan Telephony yang dipilih?"
+    72 "<no service provider terinstal>"
+    73 "Anda harus memasukkan awalan yang berlaku peraturan ini."
+    74 "& Digit:"
+    75 "& Awalan:"
+    76 "Anda mencoba memasukkan karakter yang tidak valid. \n\n Karakter yang valid adalah 0 sampai 9, spasi, dan koma."
+    77 "Konfirmasi Hapus"
+    78 "Yakin ingin menghapus lokasi ini?"
+    79 "Yakin ingin menghapus kartu panggil ini?"
+    80 "Yakin ingin menghapus aturan kode area ini?"
+    81 "Anda harus memasukkan digit untuk dial."
+    82 "Nama kartu panggil yang Anda masukkan sudah digunakan. Silahkan masukkan nama yang unik."
+    83 "ReactOS membutuhkan informasi telepon tentang lokasi dari mana Anda akan menghubungi. Jika Anda membatalkannya tanpa memberikan informasi ini, program ini mungkin tidak berfungsi dengan benar saat melakukan panggilan. Selain itu, beberapa aplikasi merespon pembatalan kotak dialog ini dengan segera kembali mempostingnya.\n Yakin ingin membatalkan?"
+    84 "Konfirmasi Batal"
+    85 "Lokasi saya"
+    86 "<tidak ada penyedia layanan yang tersedia untuk instalasi>"
+    87 "Karakter yang Anda masukkan tidak valid.\n\nKarakter kosong adalah 0 sampai 9, A sampai D, *, #, +,!, Space, dan comma."
+    88 "Anda harus memasukkan kode operator internasional untuk lokasi ini."
+    89 "Anda harus memasukkan kode operator untuk lokasi ini."
+    90 "Halaman ini mencoba untuk membuat atau memantau panggilan telepon atau koneksi multimedia lainnya di komputer Anda.\n Apakah Anda ingin memperbolehkannya melanjutkan?"
+    91 "Halaman ini mencoba mengakses informasi direktori di jaringan Anda.\nApakah Anda ingin memperbolehkannya melanjutkan?"
+    92 "Halaman ini mencoba mengakses atau mengubah informasi konferensi jaringan. \nApakah Anda ingin memperbolehkannya melanjutkan?"
+    93 "Halaman ini mencoba mengakses atau mengubah informasi registri.\nApakah Anda ingin memperbolehkannya melanjutkan?"
+    1064 "Panel kontrol Phone And Modem tidak bisa dibuka. Anda mungkin memiliki masalah mulai layanan teleponi."
+    1065 "Hapus Penyedia"
+    15800 "23"
+    15801 "0,""None (Direct Dial)"","""","""","""","""","""","""","""","""",1"
+    15802 "1,""AT&T Direct Dial via 1010ATT1"","""",""G"",""J1FG"",""J011EFG"","""","""",""1010288"",""1010288"",1"
+    15803 "2,""AT&T via 1010ATT0"","""",""G"",""J0FG$TH"",""J01EFG$TH"","""","""",""1010288"",""1010288"",1"
+    15804 "3,""AT&T via 1-800-321-0288"","""",""G"",""J$TFG$TH"",""J$T01EFG$TH"","""","""",""18003210288"",""18003210288"",1"
+    15805 "4,""MCI Direct Dial via 10102221"","""",""G"",""J1FG"",""J011EFG"","""","""",""1010222"",""1010222"",1"
+    15806 "5,""MCI via 10102220"","""",""G"",""J0FG$TH"",""J01EFG$TH"","""","""",""1010222"",""1010222"",1"
+    15807 "6,""MCI via 1-800-888-8000"","""",""G"",""J,,,,,,TH,,FG"",""J,,,,,,TH,,011EFG"","""","""",""18008888000"",""18008888000"",1"
+    15808 "7,""MCI via 1-800-674-0700"","""",""G"",""J,,,,,,TH,,FG"",""J,,,,,,TH,,011EFG"","""","""",""18006740700"",""18006740700"",1"
+    15809 "8,""MCI via 1-800-674-7000"","""",""G"",""J,,,,,,TH,,FG"",""J,,,,,,TH,,011EFG"","""","""",""18006747000"",""18006747000"",1"
+    15810 "9,""US Sprint Direct Dial via 10103331"","""",""G"",""J1FG"",""J011EFG"","""","""",""1010333"",""1010333"",1"
+    15811 "10,""US Sprint via 10103330"","""",""G"",""J0FG$TH"",""J01EFG$TH"","""","""",""1010333"",""1010333"",1"
+    15812 "11,""US Sprint via 1-800-877-8000"","""",""G"",""J,,,T0FG,,H"",""J,,,T01EFG#,H"","""","""",""18008778000"",""18008778000"",1"
+    15813 "12,""Calling Card via 0"","""",""G"",""0FG$TH"",""01EFG$TH"","""","""","""","""",1"
+    15814 "13,""Carte France Telecom"","""",""T3010,H,0FG#"",""T3010,H,0FG#"",""T3010,H,00EFG#"","""","""","""","""",1"
+    15815 "14,""Mercury (UK)"","""",""J$TH,0FG"",""J$TH,0FG"",""J$TH,0FG"","""",""0500800800"",""0500800800"",""0500800800"",1"
+    15816 "15,""British Telecom (UK)"","""",""J$H,0FG"",""J$H,0FG"",""J$H,00EFG"","""",""144"",""144"".""144"",1"
+    15817 "16,""CLEAR Communications (New Zealand)"","""",""J$TH,0FG"",""J$TH,0FG"",""J$TH,00EFG"","""",""0502333"",""0502333"",""0502333"",1"
+    15818 "17, ""Telecom New Zealand"", """", ""J, 0FG? H"", ""J, 0FG? H"", ""J, 00EFG? H"", """", ""012"", ""012"", ""012"" 1"
+    15819 "18,""Global Card (Taiwan to USA)"","""",""G"",""0FG"",""J,102880$TFG$H"","""","""","""",""0080"",1"
+    15820 "19,""Telstra (Australia) via 1818 (voice)"","""",""J$TH,FG#"",""J$TH,FG#"",""J$TH,0011EFG#"","""",""1818"",""1818"",""1818"",1"
+    15821 "20,""Telstra (Australia) via 1818 (fax)"","""",""J$TH,FG#"",""J$TH,FG#"",""J$TH,0015EFG#"","""",""1818"",""1818"",""1818"",1"
+    15822 "21, ""Optus (Australia) melalui 1812"", """", ""FG"", ""FG"", ""J @ TH, 0011EFG"", """", """", """", ""1812"", 1"
+    15823 "22, ""Optus (Australia) melalui 008551812"", """", ""FG"", ""FG"", ""J @ TH, 0011EFG"", """", """", """", ""008551812"", 1"
+END
