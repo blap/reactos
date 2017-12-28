@@ -1,12 +1,12 @@
 /*
- * PROJECT:    PAINT for ReactOS
- * LICENSE:    LGPL
- * FILE:       base/applications/mspaint/lang/de-DE.rc
- * PURPOSE:    German Language resource file (reference language file)
- * TRANSLATOR: Benedikt Freisen
+ * PROJECT:     PAINT for ReactOS
+ * LICENSE:     LGPL
+ * FILE:        base/applications/mspaint/lang/en-US.rc
+ * PURPOSE:     US-English Language resource file
+ * TRANSLATORS: first times touched from en-GB.rc file by Mario Kacmar
  */
 
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 ID_MENU MENU
 BEGIN
@@ -110,13 +110,13 @@ BEGIN
     "^V", IDM_EDITPASTE
     VK_DELETE, IDM_EDITDELETESELECTION, VIRTKEY
     "^A", IDM_EDITSELECTALL
-    "^W", IDM_VIEWTOOLBOX
-    "^F", IDM_VIEWCOLORPALETTE
-    "^R", IDM_VIEWSHOWGRID
-    "^G", IDM_VIEWFULLSCREEN
-    "^D", IDM_IMAGEROTATEMIRROR
-    "^K", IDM_IMAGESTRETCHSKEW
-    "^U", IDM_IMAGEINVERTCOLORS
+    "^T", IDM_VIEWTOOLBOX
+    "^L", IDM_VIEWCOLORPALETTE
+    "^G", IDM_VIEWSHOWGRID
+    "^F", IDM_VIEWFULLSCREEN
+    "^R", IDM_IMAGEROTATEMIRROR
+    "^W", IDM_IMAGESTRETCHSKEW
+    "^I", IDM_IMAGEINVERTCOLORS
     "^E", IDM_IMAGEATTRIBUTES
     "N", IDM_IMAGEDELETEIMAGE, CONTROL, SHIFT, VIRTKEY
 END
