@@ -1,0 +1,13 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+BEGIN
+    IDS_USAGE "FINDSTR: Prints all lines of a file that contain a string.\n\n\
+  FIND [ /C ] [ /I ] [ /N ] [ /V ] """tali""" [ file... ]\n\
+    /C  Count the number of lines that contain string\n\
+    /I  Ignore case\n\
+    /N  Number the displayed lines, starting at 1\n\
+    /V  Print lines that do not contain the string"
+    IDS_NO_SUCH_FILE "FINDSTR: %s: Tidak file ada yang seperti itu\n"
+    IDS_CANNOT_OPEN "FINDSTR: %s: Tidak dapat membuka file\n"
+END
