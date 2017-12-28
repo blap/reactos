@@ -1,4 +1,4 @@
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 STRINGTABLE DISCARDABLE
 BEGIN
@@ -10,40 +10,40 @@ IDR_MAINMENU MENU
 BEGIN
   POPUP "&Fil"
   BEGIN
-    MENUITEM "&Ny...",         ID_NEW
-    MENUITEM "&Åpne...",        ID_OPEN
+    MENUITEM "&Ny...",             ID_NEW
+    MENUITEM "&Åpne...",            ID_OPEN
     MENUITEM SEPARATOR
-    MENUITEM "&Lukk\tCtrl+F4", ID_CLOSE, GRAYED
-    MENUITEM "L&ukk alt",      ID_CLOSEALL, GRAYED
+    MENUITEM "&Lukk\tCtrl+F4",     ID_CLOSE,   GRAYED
+    MENUITEM "L&ukk alt",          ID_CLOSEALL,GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Lagre",           ID_SAVE, GRAYED
-    MENUITEM "Lagre &som...",     ID_SAVEAS, GRAYED
+    MENUITEM "&Lagre",               ID_SAVE,    GRAYED
+    MENUITEM "Lagre &som...",         ID_SAVEAS,  GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Utskrift &Forhåndsvisning",  ID_PRINTPRE, GRAYED
-    MENUITEM "&Utskrift...",       ID_PRINT, GRAYED
+    MENUITEM "Utskrift &Forhåndsvisning",      ID_PRINTPRE,GRAYED
+    MENUITEM "&Utskrift...",           ID_PRINT,   GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "E&genskaper...",  ID_PROP, GRAYED
+    MENUITEM "E&genskaper...",      ID_PROP,    GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "A&vslutt\tAlt+F4",   ID_EXIT
+    MENUITEM "A&vslutt\tAlt+F4",       ID_EXIT
   END
   POPUP "&Rediger"
   BEGIN
-    MENUITEM "&Angre",           ID_UNDO, GRAYED
-    MENUITEM "&Gjenta",           ID_REDO, GRAYED
+    MENUITEM "&Angre",               ID_UNDO,    GRAYED
+    MENUITEM "&Gjenta",               ID_REDO,    GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Klipp &ut",            ID_CUT, GRAYED
-    MENUITEM "&Kopier",           ID_COPY, GRAYED
-    MENUITEM "&Lim inn",          ID_PASTE, GRAYED
+    MENUITEM "Klipp &ut",                ID_CUT,     GRAYED
+    MENUITEM "&Kopier",               ID_COPY,    GRAYED
+    MENUITEM "&Lim inn",              ID_PASTE,   GRAYED
     MENUITEM "lim inn som ny &bilde", ID_PASTENEWIMAGE, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Velg Alt",     ID_SELALL, GRAYED
+    MENUITEM "&Velg Alt",         ID_SELALL,  GRAYED
   END
   POPUP "&Vis"
   BEGIN
-    MENUITEM "&Vertøy",           ID_TOOLS, CHECKED
-    MENUITEM "&Farger",          ID_COLOR, CHECKED
-    MENUITEM "&Historie",         ID_HISTORY, CHECKED
-    MENUITEM "&Statuslinje",      ID_STATUSBAR, CHECKED
+    MENUITEM "&Vertøy",              ID_TOOLS
+    MENUITEM "&Farger",             ID_COLOR
+    MENUITEM "&Historie",            ID_HISTORY
+    MENUITEM "&Statuslinje",         ID_STATUSBAR
   END
   POPUP "&Still"
   BEGIN
@@ -58,12 +58,12 @@ BEGIN
     MENUITEM SEPARATOR
     MENUITEM "Uskarphet",                ID_BLUR
     MENUITEM "Sharpen",             ID_SHARPEN
-    MENUITEM "Jevne kantlinje",        -1, GRAYED
-    MENUITEM "Legg til skygger",          -1, GRAYED
+    MENUITEM "Rotere",        -1, GRAYED
+    MENUITEM "Rotere",          -1, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Bilde størrelse...",       -1, GRAYED
-    MENUITEM "Flip",                -1, GRAYED
-    MENUITEM "Speil",              -1, GRAYED
+    MENUITEM "Rotere",       -1, GRAYED
+    MENUITEM "Rotere",                -1, GRAYED
+    MENUITEM "Rotere",              -1, GRAYED
     MENUITEM "Rotere",              -1, GRAYED
 
   END
@@ -73,9 +73,9 @@ BEGIN
   END
   POPUP "&vindu"
   BEGIN
-    MENUITEM "&Cascade",           ID_WINDOW_CASCADE
+    MENUITEM "&Overlappet",           ID_WINDOW_CASCADE
     MENUITEM "Sorter &horisontalt", ID_WINDOW_TILE_HORZ
-    MENUITEM "Sorter &vertikalt",  ID_WINDOW_TILE_VERT
+    MENUITEM "Sorter &vertikalt",   ID_WINDOW_TILE_VERT
     MENUITEM "&Ordne Ikoner",     ID_WINDOW_ARRANGE
     MENUITEM SEPARATOR
     MENUITEM "Nes&te\tCtrl+F6",     ID_WINDOW_NEXT
@@ -93,6 +93,7 @@ BEGIN
     MENUITEM SEPARATOR
   END
 END
+
 
 IDD_BRIGHTNESS DIALOGEX 6, 5, 193, 120
 CAPTION "Lysstyrke"
@@ -118,10 +119,10 @@ FONT 8,"MS Shell Dlg",0,0
 STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | DS_MODALFRAME
 //EXSTYLE WS_EX_LAYERED
 BEGIN
-  LTEXT "ImageSoft v0.1\nEnerett (C) 2006\nThomas Weidenmueller (w3seek@reactos.org)\nGed Murphy (gedmurphy@gmail.com)", IDC_STATIC, 48, 7, 150, 36
+  LTEXT      "ImageSoft v0.1\nEnerett (C) 2006\nThomas Weidenmueller (w3seek@reactos.org)\nGed Murphy (gedmurphy@gmail.com)", IDC_STATIC, 48, 7, 150, 36
   PUSHBUTTON "Lukk", IDOK, 75, 162, 44, 15
-  ICON IDI_IMAGESOFTICON, IDC_STATIC, 10, 10, 7, 30
-  EDITTEXT IDC_LICENSE_EDIT, 8, 44, 194, 107, WS_VISIBLE | WS_VSCROLL | WS_TABSTOP | ES_READONLY | ES_MULTILINE
+  ICON       IDI_IMAGESOFTICON, IDC_STATIC, 10, 10, 7, 30
+  EDITTEXT   IDC_LICENSE_EDIT, 8, 44, 194, 107, WS_VISIBLE | WS_VSCROLL | WS_TABSTOP | ES_READONLY | ES_MULTILINE
 END
 
 
@@ -130,24 +131,24 @@ CAPTION "Bilde egenskaper"
 FONT 8,"MS Shell Dlg",0,0
 STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | DS_MODALFRAME
 BEGIN
-  LTEXT "Navn:", IDC_STATIC, 12, 5, 38, 9
-  EDITTEXT IDC_IMAGE_NAME_EDIT,  58, 3, 94, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP
-  GROUPBOX "maleri egenskaper", IDC_STATIC, 4, 22, 148, 98
-  LTEXT "bilde type:", IDC_STATIC, 12, 36, 42, 9
-  CONTROL "", IDC_IMAGETYPE, "ComboBox", WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 35, 88, 54
-  LTEXT "Lengde:", IDC_STATIC, 12, 51, 42, 9
-  EDITTEXT IDC_WIDTH_EDIT, 58, 49, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
-  LTEXT "", IDC_WIDTH_STAT, 94, 51, 40, 9
-  LTEXT "Høyde:", IDC_STATIC, 12, 68, 42, 9
-  EDITTEXT IDC_HEIGHT_EDIT, 58, 66, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
-  LTEXT "", IDC_HEIGHT_STAT, 94, 68, 40, 9
-  LTEXT "Oppløsning:", IDC_STATIC, 12, 84, 42, 9
-  EDITTEXT IDC_RES_EDIT, 58, 83, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
-  LTEXT "", IDC_RES_STAT, 94, 84, 40, 9
-  LTEXT "Enhet:", IDC_STATIC, 12, 99, 42, 9
-  CONTROL "", IDC_UNIT, "ComboBox", WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 99, 54, 50
-  LTEXT "bilde størrelse:", IDC_STATIC, 12, 125, 42, 9
-  LTEXT "", IDC_IMAGE_SIZE, 58, 125, 54, 9
+  LTEXT      "Navn:", IDC_STATIC, 12, 5, 38, 9
+  EDITTEXT   IDC_IMAGE_NAME_EDIT,  58, 3, 94, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  GROUPBOX   "maleri egenskaper", IDC_STATIC, 4, 22, 148, 98
+  LTEXT      "bilde type:", IDC_STATIC, 12, 36, 42, 9
+  CONTROL    "", IDC_IMAGETYPE, "ComboBox", WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 35, 88, 54
+  LTEXT      "Lengde:", IDC_STATIC, 12, 51, 42, 9
+  EDITTEXT   IDC_WIDTH_EDIT, 58, 49, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
+  LTEXT      "", IDC_WIDTH_STAT, 94, 51, 40, 9
+  LTEXT      "Høyde:", IDC_STATIC, 12, 68, 42, 9
+  EDITTEXT   IDC_HEIGHT_EDIT, 58, 66, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
+  LTEXT      "", IDC_HEIGHT_STAT, 94, 68, 40, 9
+  LTEXT      "Oppløsning:", IDC_STATIC, 12, 84, 42, 9
+  EDITTEXT   IDC_RES_EDIT, 58, 83, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
+  LTEXT      "", IDC_RES_STAT, 94, 84, 40, 9
+  LTEXT      "Enhet:", IDC_STATIC, 12, 99, 42, 9
+  CONTROL    "", IDC_UNIT, "ComboBox", WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 99, 54, 50
+  LTEXT      "bilde størrelse:", IDC_STATIC, 12, 125, 42, 9
+  LTEXT      "", IDC_IMAGE_SIZE, 58, 125, 54, 9
   PUSHBUTTON "OK", IDOK, 50, 144, 48, 13
   PUSHBUTTON "Avbryt", IDCANCEL, 102, 144, 48, 13
 END
