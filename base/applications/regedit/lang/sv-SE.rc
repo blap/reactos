@@ -1,4 +1,4 @@
-LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -120,8 +120,8 @@ BEGIN
             MENUITEM "&Strängvärde", ID_EDIT_NEW_STRINGVALUE
             MENUITEM "&Binärvärde", ID_EDIT_NEW_BINARYVALUE
             MENUITEM "&DWORD-värde", ID_EDIT_NEW_DWORDVALUE
-            MENUITEM "&Multi-String Value", ID_EDIT_NEW_MULTISTRINGVALUE
-            MENUITEM "&Expandable String Value", ID_EDIT_NEW_EXPANDABLESTRINGVALUE
+            MENUITEM "&Multisträngvärde", ID_EDIT_NEW_MULTISTRINGVALUE
+            MENUITEM "&Expanderbart Strängvärde", ID_EDIT_NEW_EXPANDABLESTRINGVALUE
         END
         MENUITEM "&Sök...", ID_EDIT_FIND
         MENUITEM SEPARATOR
@@ -314,7 +314,7 @@ BEGIN
     IDS_ERROR "Fel"
     IDS_WARNING "Varning"
     IDS_BAD_KEY "Kan inte läsa nyckel '%s'"
-    IDS_BAD_VALUE "Kan inte läsa värdet  '%s'"
+    IDS_BAD_VALUE "Ogiltigt värde för alternativ %s, giltig intervall är från %u till %u.\n"
     IDS_UNSUPPORTED_TYPE "Kan inte ändra nycklar av typen %ld"
     IDS_TOO_BIG_VALUE "Värdet är för stort (%ld)"
     IDS_MULTI_SZ_EMPTY_STRING "Data av typen REG_MULTI_SZ kan inte innehålla tomma strängar.\nDe tomma strängarna har tagits bort från listan."
@@ -512,15 +512,15 @@ BEGIN
     GROUPBOX "Sök i", IDC_STATIC, 7, 25, 63, 51
     LTEXT "&Sök efter:", IDC_STATIC, 7, 8, 37, 10
     EDITTEXT IDC_FINDWHAT, 47, 7, 142, 13, ES_AUTOHSCROLL
-    CONTROL "&Nycklar", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Keys", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 36, 35, 8
-    CONTROL "&Värden", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Values", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 48, 36, 8
     CONTROL "&Data", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 60, 42, 8
-    CONTROL "Matcha endast &hela strängar", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &whole string only", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 32, 94, 13
-    CONTROL "Matcha &shiftläge", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &case", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 48, 90, 12
 END
 
@@ -538,7 +538,7 @@ END
 /*
  *STRINGTABLE
  *BEGIN
- *    ID_HELP_HELPTOPICS "Öppnar hjälpen för Registereditorn."
- *    ID_HELP_ABOUT "Visar programinformation, versionsnummer, och upphovsrätt."
+ *    ID_HELP_HELPTOPICS "Opens Registry Editor Help."
+ *    ID_HELP_ABOUT "Displays program information, version number, and copyright."
  *END
  */
