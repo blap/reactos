@@ -1,4 +1,4 @@
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 IDD_PROPPAGEGENERAL DIALOGEX 0, 0, 256, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -18,7 +18,7 @@ BEGIN
     LTEXT "", IDC_MACHINELINE4, 130, 171, 118, 9
     LTEXT "", IDC_MACHINELINE5, 130, 180, 118, 9
     CONTROL "Visita <A HREF=""http://www.reactos.org/"">ReactOS su internet</A>", IDC_ROSHOMEPAGE_LINK, "SysLink", WS_CHILD | WS_VISIBLE | WS_TABSTOP, 10, 200, 140, 10
-    PUSHBUTTON "Vedi la licenza...", IDC_LICENCE, 170, 199, 78, 14
+    PUSHBUTTON "Vedi la licenza...", IDC_LICENCE, 170, 199, 78, 13
 END
 
 IDD_PROPPAGEHARDWARE DIALOGEX 0, 0, 256, 218
@@ -29,15 +29,15 @@ BEGIN
     GROUPBOX "Gestione dispositivi", IDC_STATIC, 6, 7, 244, 61
     ICON IDI_DEVMGR, IDC_STATIC, 12, 18, 23, 21, SS_ICON
     LTEXT "Gestione dispositivi elenca tutti i dispositivi installati nel computer. Usate la gestione dispositivi per modificare le impostazioni di un dispositivo.", IDC_STATIC, 42, 18, 204, 24
-    PUSHBUTTON "&Gestione dispositivi...", IDC_HARDWARE_DEVICE_MANAGER, 154, 48, 90, 14
+    PUSHBUTTON "&Gestione dispositivi...", IDC_HARDWARE_DEVICE_MANAGER, 154, 48, 90, 15
     GROUPBOX "Hardware Wizard", IDC_STATIC, 6, 79, 244, 61
     ICON IDI_ADDHW, IDC_STATIC, 12, 90, 23, 21, SS_ICON
     LTEXT "Hardware wizard aiuta ad installare, disinstallare, ripristinare, scollegare, estrarre e configurare l'hardware.", IDC_STATIC, 42, 90, 204, 24
-    PUSHBUTTON "&Hardware Wizard...", IDC_HARDWARE_WIZARD, 154, 120, 90, 14
+    PUSHBUTTON "&Hardware Wizard...", IDC_HARDWARE_WIZARD, 154, 120, 90, 15
     GROUPBOX "Profili Hardware", IDC_STATIC, 6, 149, 244, 61
     ICON IDI_HARDPROF, IDC_STATIC, 12, 160, 23, 21, SS_ICON
     LTEXT "Profili Hardware mette a disposizione un modo per definire e memorizzare diverse configurazioni hardware.", IDC_STATIC, 42, 160, 204, 24
-    PUSHBUTTON "&Profili Hardware...", IDC_HARDWARE_PROFILE, 154, 190, 90, 14
+    PUSHBUTTON "&Profili Hardware...", IDC_HARDWARE_PROFILE, 154, 190, 90, 15
 END
 
 IDD_PROPPAGEADVANCED DIALOGEX 0, 0, 256, 218
@@ -47,13 +47,13 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT "I privilegi di amministrazione sono necessari per la maggior parte delle impostazioni seguenti.", IDC_STATIC, 12, 5, 236, 8
     GROUPBOX "Prestazioni", IDC_STATIC, 6, 18, 244, 50
-    LTEXT "Queste opzioni definiscono come è usata la memoria dalle applicazioni, ha un effetto sulla velocità del computer.", IDC_STATIC, 16, 29, 210, 17
+    LTEXT "Queste opzioni definiscono come è usata la memoria dalle applicazioni, ha un effetto sulla velocità del computer.", IDC_STATIC, 16, 29, 228, 17
     PUSHBUTTON "Impostazioni", IDC_PERFOR, 194, 48, 50, 15
     GROUPBOX "Profili utente", IDC_STATIC, 6, 75, 244, 48
-    LTEXT "Impostazioni del desktop relative al login", IDC_STATIC, 16, 88, 210, 20
+    LTEXT "Impostazioni del desktop relative al login", IDC_STATIC, 16, 88, 228, 20
     PUSHBUTTON "Impostazioni", IDC_USERPROFILE, 194, 103, 50, 15
     GROUPBOX "Avvio e recupero", IDC_STATIC, 6, 131, 244, 52
-    LTEXT "Le opzioni di Avvio e recupero informano il computer su come partire e cosa fare nel caso che un errore fermi il computer.", IDC_STATIC, 16, 144, 210, 19
+    LTEXT "Le opzioni di Avvio e recupero informano il computer su come partire e cosa fare nel caso che un errore fermi il computer.", IDC_STATIC, 16, 144, 228, 19
     PUSHBUTTON "Impostazioni", IDC_STAREC, 194, 162, 50, 15
     PUSHBUTTON "Impostazioni di sistema", IDC_SYSSETTINGS, 6, 192, 80, 15
     PUSHBUTTON "Variabili di ambiente", IDC_ENVVAR, 88, 192, 80, 15
@@ -114,7 +114,7 @@ BEGIN
     AUTORADIOBUTTON "The docking &state is unknown", IDC_HWPPROP_UNKNOWN, 22, 85, 160, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "The computer is &docked", IDC_HWPPROP_DOCKED, 22, 97, 160, 10
     AUTORADIOBUTTON "The computer is &undocked", IDC_HWPPROP_UNDOCKED, 22, 109, 160, 10
-    GROUPBOX "Hardware profiles selection", IDC_STATIC, 10, 138, 192, 42
+    GROUPBOX "Selezione dei Profili Hardware", IDC_STATIC, 10, 138, 192, 42
     AUTOCHECKBOX "Always &include this profile as an option when ReactOS starts", IDC_HWPPROP_INCLUDE, 17, 150, 164, 20, WS_GROUP | WS_TABSTOP | BS_MULTILINE
 END
 
@@ -128,7 +128,7 @@ BEGIN
     LTEXT "A:", IDC_STATIC, 5, 30, 20, 8
     EDITTEXT IDC_COPYPROFILETO, 30, 30, 160, 12
     DEFPUSHBUTTON "OK", IDOK, 199, 9, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 199, 30, 50, 14
+    PUSHBUTTON "Annulla", IDCANCEL, 199, 30, 50, 14
 END
 
 IDD_RENAMEPROFILE DIALOGEX 12, 26, 256, 52
@@ -140,8 +140,8 @@ BEGIN
     LTEXT "", IDC_RENPROFEDITFROM, 30, 10, 160, 10
     LTEXT "A:", IDC_STATIC, 5, 30, 20, 8
     EDITTEXT IDC_RENPROFEDITTO, 30, 30, 160, 12
-    DEFPUSHBUTTON "OK", IDOK, 196, 6, 50, 14
-    PUSHBUTTON "Annulla", IDCANCEL, 196, 24, 50, 14
+    DEFPUSHBUTTON "OK", IDOK, 199, 9, 50, 14
+    PUSHBUTTON "Annulla", IDCANCEL, 199, 30, 50, 14
 END
 
 IDD_USERPROFILE DIALOGEX 0, 0, 256, 218
@@ -150,17 +150,17 @@ CAPTION "Profili Utente"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_USERPROF, IDC_STATIC, 6, 11, 16, 16, SS_ICON
-    LTEXT "I profili utente contengono impostazioni per il desktop e altre informazioni relative al login. Su ogni computer che usate si può trovare un profilo diverso, oppure potete selezionare un profilo roaming che sia lo stesso su tutti i computer che usate.", IDC_STATIC, 40, 11, 204, 35
+    LTEXT "I profili utente contengono impostazioni per il desktop e altre informazioni relative al login. Su ogni computer che usate si può trovare un profilo diverso, oppure potete selezionare un profilo roaming che sia lo stesso su tutti i computer che usate.", IDC_STATIC, 40, 11, 211, 35
     LTEXT "Profili memorizzati su questo computer:", IDC_STATIC, 16, 51, 204, 9
     CONTROL "", IDC_USERPROFILE_LIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL |
             LVS_SHOWSELALWAYS | LVS_SORTASCENDING | WS_BORDER | WS_TABSTOP, 6, 66, 244, 85, WS_EX_CLIENTEDGE
-    PUSHBUTTON "Cambia il tipo", IDC_USERPROFILE_CHANGE, 90, 156, 50, 14
-    PUSHBUTTON "Cancella", IDC_USERPROFILE_DELETE, 145, 156, 50, 14
-    PUSHBUTTON "Copia a", IDC_USERPROFILE_COPY, 200, 156, 50, 14
+    PUSHBUTTON "Cambia il tipo", IDC_USERPROFILE_CHANGE, 90, 156, 50, 13
+    PUSHBUTTON "Cancella", IDC_USERPROFILE_DELETE, 145, 156, 50, 13
+    PUSHBUTTON "Copia a", IDC_USERPROFILE_COPY, 200, 156, 50, 13
     CONTROL "Per creare nuovi utenti aprire <A>Utenti</A> el pannello di controllo",
-     IDC_USERACCOUNT_LINK, "SysLink", WS_CHILD | WS_VISIBLE | WS_TABSTOP, 7, 175, 204, 18
-    DEFPUSHBUTTON "OK", IDOK, 134, 200, 54, 14
-    PUSHBUTTON "Annulla", IDCANCEL, 196, 200, 54, 14
+            IDC_USERACCOUNT_LINK, "SysLink", WS_CHILD | WS_VISIBLE | WS_TABSTOP, 7, 175, 245, 18
+    DEFPUSHBUTTON "OK", IDOK, 134, 200, 54, 13
+    PUSHBUTTON "Annulla", IDCANCEL, 196, 200, 54, 13
 END
 
 IDD_STARTUPRECOVERY DIALOGEX 6, 18, 252, 280
@@ -171,16 +171,16 @@ BEGIN
     GROUPBOX "Avvio del sistema", IDC_STATIC, 7, 12, 238, 95
     LTEXT "Sistema operativo predefinito:", IDC_STATIC, 14, 26, 100, 8
     COMBOBOX IDC_STRECOSCOMBO, 14, 37, 224, 46, CBS_DROPDOWNLIST | WS_VSCROLL
-    AUTOCHECKBOX "&Tempo per la visualizzazione dell'elenco dei sistemi operativi:", IDC_STRECLIST, 14, 56, 150, 8
-    EDITTEXT IDC_STRRECLISTEDIT, 179, 54, 30, 12, ES_NUMBER
+    AUTOCHECKBOX "&Tempo per la visualizzazione dell'elenco dei sistemi operativi:", IDC_STRECLIST, 14, 56, 160, 8
+    EDITTEXT IDC_STRRECLISTEDIT, 185, 54, 30, 12, ES_NUMBER
     CONTROL "", IDC_STRRECLISTUPDWN, "msctls_updown32", UDS_WRAP | UDS_SETBUDDYINT |
             UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS | WS_CHILD | WS_VISIBLE, 0, 0, 8, 13
-    LTEXT "secondi", IDC_STATIC, 215, 56, 25, 8
-    AUTOCHECKBOX "Tempo per la visualizzazione delle opzioni di recupero disponibili quando è necessario:", IDC_STRRECREC, 14, 70, 163, 8
-    EDITTEXT IDC_STRRECRECEDIT, 179, 68, 30, 12, ES_NUMBER
+    LTEXT "sec.", IDC_STATIC, 223, 56, 18, 8
+    AUTOCHECKBOX "Tempo per la visualizzazione delle opzioni di recupero disponibili quando è necessario:", IDC_STRRECREC, 14, 70, 170, 8
+    EDITTEXT IDC_STRRECRECEDIT, 185, 68, 30, 12, ES_NUMBER
     CONTROL "", IDC_STRRECRECUPDWN, "msctls_updown32", UDS_WRAP | UDS_SETBUDDYINT |
             UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS | WS_CHILD | WS_VISIBLE, 0, 0, 8, 13
-    LTEXT "secondi", IDC_STATIC, 215, 70, 25, 8
+    LTEXT "sec.", IDC_STATIC, 223, 70, 18, 8
     LTEXT "Per modificare le opzioni di avvio manualmente, clicca Modifica.", IDC_STATIC, 14, 89, 187, 8
     PUSHBUTTON "&Modifica", IDC_STRRECEDIT, 188, 87, 50, 14
     GROUPBOX "Blocco del sistema", IDC_STATIC, 7, 111, 238, 140
@@ -209,23 +209,23 @@ BEGIN
     LTEXT "", IDC_DRIVE, 88, 81, 100, 9
     LTEXT "Spazio disponibile:", IDC_STATIC, 20, 92, 56, 9
     LTEXT "", IDC_SPACEAVAIL, 88, 92, 104, 9
-    LTEXT "&Dimensione iniziale (MB):", -1, 22, 118, 54, 9
-    LTEXT "Dimensione massima (MB):", -1, 22, 131, 64, 9
+    LTEXT "&Dimensione iniziale (MB):", -1, 22, 118, 75, 9
+    LTEXT "Dimensione massima (MB):", -1, 22, 131, 75, 9
     AUTORADIOBUTTON "&Dimensione personalizzata", IDC_CUSTOM, 20, 105, 54, 9, WS_GROUP
     AUTORADIOBUTTON "Dimensione gestita dal sistema", IDC_SYSMANSIZE, 20, 145, 88, 9
-    AUTORADIOBUTTON "&Nessun file di paginazione", IDC_NOPAGEFILE, 20, 158, 78,9
+    AUTORADIOBUTTON "&Nessun file di paginazione", IDC_NOPAGEFILE, 20, 158, 78, 9
     EDITTEXT IDC_INITIALSIZE, 100, 114, 44, 13, NOT WS_BORDER, WS_EX_CLIENTEDGE
     EDITTEXT IDC_MAXSIZE, 100, 129, 44, 13, NOT WS_BORDER, WS_EX_CLIENTEDGE
-    PUSHBUTTON "Conferma", IDC_SET, 158, 155, 50, 14
+    PUSHBUTTON "Conferma", IDC_SET, 158, 155, 50, 13
     GROUPBOX "Dimensione totale del file di paginazione per tutti i dischi", IDC_TOTALGROUP, 10, 177, 204, 46
     LTEXT "Minimo ammesso:", IDC_STATIC, 18, 188, 58, 9
     LTEXT "", IDC_MINIMUM, 88, 188, 100, 9
     LTEXT "Consigliato:", IDC_STATIC, 18, 199, 52, 9
-    LTEXT "", IDC_RECOMMENDED, 88, 197, 100, 9
+    LTEXT "", IDC_RECOMMENDED, 88, 199, 100, 9
     LTEXT "Attualmente allocato:", IDC_STATIC, 18, 210, 66, 9
-    LTEXT "", IDC_CURRENT, 88, 208, 100, 9
-    DEFPUSHBUTTON "OK", IDOK, 114, 232, 48, 14
-    PUSHBUTTON "Annulla", IDCANCEL, 168, 232, 48, 14
+    LTEXT "", IDC_CURRENT, 88, 210, 100, 9
+    DEFPUSHBUTTON "OK", IDOK, 114, 232, 48, 13
+    PUSHBUTTON "Annulla", IDCANCEL, 168, 232, 48, 13
 END
 
 IDD_ENVIRONMENT_VARIABLES DIALOGEX 6, 18, 252, 245
@@ -246,7 +246,7 @@ BEGIN
     PUSHBUTTON "M&odifica...", IDC_SYSTEM_VARIABLE_EDIT, 134, 194, 50, 14
     PUSHBUTTON "C&ancella", IDC_SYSTEM_VARIABLE_DELETE, 188, 194, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 141, 224, 50, 14, WS_GROUP
-    PUSHBUTTON "Annulla", IDCANCEL, 195, 224, 50, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 195, 224, 50, 14
 END
 
 IDD_EDIT_VARIABLE DIALOGEX 10, 15, 227, 71
@@ -259,7 +259,7 @@ BEGIN
     LTEXT "&Valore della variabile :", IDC_STATIC, 7, 32, 68, 8
     EDITTEXT IDC_VARIABLE_VALUE, 75, 30, 145, 12, ES_AUTOHSCROLL
     DEFPUSHBUTTON "OK", IDOK, 116, 50, 50, 14
-    PUSHBUTTON "Annulla", IDCANCEL, 170, 50, 50, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 170, 50, 50, 14
 END
 
 IDD_LICENCE DIALOGEX 6, 5, 267, 159
@@ -268,7 +268,7 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 STYLE DS_SHELLFONT | WS_BORDER | WS_THICKFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 BEGIN
     EDITTEXT IDC_LICENCEEDIT, 6, 3, 255, 131, WS_VSCROLL | ES_READONLY | ES_MULTILINE
-    DEFPUSHBUTTON "OK", IDOK, 106, 142, 54, 14
+    DEFPUSHBUTTON "OK", IDOK, 106, 142, 54, 13
 END
 
 STRINGTABLE
@@ -281,7 +281,7 @@ BEGIN
     IDS_PETABYTE "PB di RAM"
     IDS_VARIABLE "Variabile"
     IDS_VALUE "Valore"
-    IDS_NO_DUMP "(None)"
+    IDS_NO_DUMP "(Niente)"
     IDS_MINI_DUMP "Minidump (64KB)"
     IDS_KERNEL_DUMP "Kernel dump"
     IDS_FULL_DUMP "Dump completo"
@@ -303,5 +303,5 @@ BEGIN
     IDS_HWPROFILE_CONFIRM_DELETE "Are you sure you want to delete the hardware profile ""%s""?"
     IDS_HWPROFILE_ALREADY_IN_USE "The profile name is already in use."
     IDS_HWPROFILE_PROFILE "Profile"
-    IDS_HWPROFILE_WARNING "Warning"
+    IDS_HWPROFILE_WARNING "Segnalazione"
 END
