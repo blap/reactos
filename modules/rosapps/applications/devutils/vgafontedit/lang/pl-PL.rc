@@ -1,12 +1,12 @@
 /*
  * PROJECT:     ReactOS VGA Font Editor
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
- * PURPOSE:     Polish resource file
+ * PURPOSE:     English resource file
  * COPYRIGHT:   Copyright 2008 Colin Finck (colin@reactos.org)
- * TRANSLATOR:  Olaf Siejka
+ * TRANSLATOR:  Colin Finck
  */
 
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 IDD_ABOUT DIALOGEX 10, 10, 130, 62
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
@@ -46,7 +46,7 @@ BEGIN
         MENUITEM "Wyjdź\tAlt+F4", ID_FILE_EXIT
     END
 
-    POPUP "&Edit"
+    POPUP "&Edycja"
     BEGIN
         MENUITEM "Copy\tCtrl+C", ID_EDIT_COPY
         MENUITEM "Paste\tCtrl+V", ID_EDIT_PASTE
@@ -72,22 +72,22 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_OPENFILTER, "Wszystkie obsługiwane (*.bin,*.psf)|*.bin;*.psf|Czcionki binarne (*.bin)|*.bin|Czcionki PSF V1 (*.psf)|*.psf|"
-    IDS_SAVEFILTER, "Czcionki binarne (*.bin)|*.bin|"
-    IDS_OPENERROR, "Błąd poczas otwierania pliku! (Błąd nr. %1!u!)"
-    IDS_READERROR, "Błąd poczas wczytywania pliku! (Błąd nr. %1!u!)"
-    IDS_WRITEERROR, "Błąd podczas zapisu do pliku! (Błąd nr. %1!u!)"
-    IDS_UNSUPPORTEDFORMAT, "Nieobsługiwany format czcionki!"
-    IDS_UNSUPPORTEDPSF, "Nieobsługiwana wersja PSF! Edytor obsługuje wyłącznie czcionki rozmiaru 8x8, bez dodatków."
-    IDS_DOCNAME, "Czcionka %1!u!"
-    IDS_SAVEPROMPT, "Plik ""%1"" został zmieniony, ale nie zapisany.\n\nCzy chcesz zapisać zmiany?"
-    IDS_APPTITLE, "Edytor czcionek VGA dla ReactOS"
-    IDS_CLOSEEDIT, "Proszę najpierw zamknąć wszystkie okna Edycji!"
+    IDS_OPENFILTER, "All supported formats (*.bin,*.psf)|*.bin;*.psf|Binary Font Files (*.bin)|*.bin|PC Screen Fonts Version 1 (*.psf)|*.psf|"
+    IDS_SAVEFILTER, "Binary Font Files (*.bin)|*.bin|"
+    IDS_OPENERROR, "Error while opening the file! (Error number %1!u!)"
+    IDS_READERROR, "Error while reading the file! (Error number %1!u!)"
+    IDS_WRITEERROR, "Error while writing the file! (Error number %1!u!)"
+    IDS_UNSUPPORTEDFORMAT, "Unsupported file format!"
+    IDS_UNSUPPORTEDPSF, "Unsupported PSF font format! The editor only supports 8x8 fonts with no special modes."
+    IDS_DOCNAME, "Font %1!u!"
+    IDS_SAVEPROMPT, "The file ""%1"" was modified, but not saved.\n\nDo you want to save it?"
+    IDS_APPTITLE, "ReactOS VGA Font Editor"
+    IDS_CLOSEEDIT, "Please close all open Edit windows first!"
 
-    IDS_TOOLTIP_NEW, "Nowy"
-    IDS_TOOLTIP_OPEN, "Otwórz"
-    IDS_TOOLTIP_SAVE, "Zapisz"
-    IDS_TOOLTIP_EDIT_GLYPH, "Edytuj Glify"
+    IDS_TOOLTIP_NEW, "New"
+    IDS_TOOLTIP_OPEN, "Open"
+    IDS_TOOLTIP_SAVE, "Save"
+    IDS_TOOLTIP_EDIT_GLYPH, "Edit Glyph"
     IDS_TOOLTIP_COPY, "Copy"
     IDS_TOOLTIP_PASTE, "Paste"
 END
