@@ -1,8 +1,8 @@
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 STRINGTABLE DISCARDABLE
 BEGIN
-    IDS_DESCRIPTION "Écran de veille Champ d'étoile"
+    IDS_DESCRIPTION "Écran de veille Matrix"
     IDS_TITLE       "À propos de"
     IDS_TEXT        "Il n'y a aucune option à définir."
 END
