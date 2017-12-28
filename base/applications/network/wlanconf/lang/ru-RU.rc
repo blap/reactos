@@ -1,17 +1,16 @@
-/* Russian translation by Kudratov Olimjon, 2014.09.25 */
-
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "\nНастройте WLAN адаптер.\n\n\
+    IDS_USAGE "\nConfigure a WLAN adapter.\n\n\
 WLANCONF [-c SSID [-w WEP] [-a]] [-d] [-s]\n\n\
-\t-c SSID\t\tПодключение к указанному SSID.\n\
-\t-w WEP\t\tЗадает WEP ключ для использования.\n\
-\t-a\t\tУказание целевой сети как ad-hoc\n\
-\t-d\t\tОтключение от текущей точки доступа.\n\
-\t-s\t\tОтображение списка точек доступа.\n\n\
-При отсутствии параметров отображает информацию о текущем WLAN соединении\n"
+\t-c SSID\t\tConnects to a supplied SSID,\n\
+\t-w WEP\t\tSpecifies a WEP key to use.\n\
+\t-a\t\tSpecifies the target network is ad-hoc\n\
+\t-d\t\tDisconnects from the current AP.\n\
+\t-s\t\tScans and displays a list of access points\n\
+\t\t\tin range.\n\n\
+Passing no parameters will print information about the current WLAN connection\n"
     IDS_NO_NETWORK "Не найдено сетей в области\n"
     IDS_NO_WLAN_ADAPTER "Не найден WLAN адаптер в системе\n"
     IDS_SUCCESS "Операция завершена успешно.\n"
