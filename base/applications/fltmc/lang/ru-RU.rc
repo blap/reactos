@@ -1,11 +1,11 @@
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "\nДопустимые команды :\n\
-               load        Загрузить драйвер фильтра\n\
-               unload      Выгрузить драйвер фильтра\n\
-               filters     Список фильтров, зарегистрированных в системе\n\n"
+    IDS_USAGE "\nValid commands :\n\
+               load        Loads a Filter driver\n\
+               unload      Unloads a Filter driver\n\
+               filters     Lists the Filters currently registered in the system\n\n"
 
     IDS_USAGE_LOAD      "Загружает драйвер фильтра\n"
     IDS_USAGE_UNLOAD    "Выгружает драйвер фильтра\n"
