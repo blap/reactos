@@ -1,0 +1,232 @@
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_APPNAME   "ImageSoft"
+  IDS_VERSION   "v0.1"
+END
+
+IDR_MAINMENU MENU
+BEGIN
+  POPUP "&Arquivo"
+  BEGIN
+    MENUITEM "&Novo...",             ID_NEW
+    MENUITEM "&Abrir...",            ID_OPEN
+    MENUITEM SEPARATOR
+    MENUITEM "&Fechar\tCtrl+F4",     ID_CLOSE,   GRAYED
+    MENUITEM "F&echar tudo",          ID_CLOSEALL,GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "&Salvar",               ID_SAVE,    GRAYED
+    MENUITEM "Salvar &como...",         ID_SAVEAS,  GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Visualização de im&pressão",      ID_PRINTPRE,GRAYED
+    MENUITEM "&Imprimir...",           ID_PRINT,   GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Pr&opriedades...",      ID_PROP,    GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Sai&r\tAlt+F4",       ID_EXIT
+  END
+  POPUP "&Editar"
+  BEGIN
+    MENUITEM "&Desfazer",               ID_UNDO,    GRAYED
+    MENUITEM "&Refazer",               ID_REDO,    GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Recor&tar",                ID_CUT,     GRAYED
+    MENUITEM "&Copy",               ID_COPY,    GRAYED
+    MENUITEM "&Paste",              ID_PASTE,   GRAYED
+    MENUITEM "Colar como nova &imagem", ID_PASTENEWIMAGE, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Select &All",         ID_SELALL,  GRAYED
+  END
+  POPUP "&Exibir"
+  BEGIN
+    MENUITEM "F&erramentas",              ID_TOOLS
+    MENUITEM "&Cores",             ID_COLOR
+    MENUITEM "&Histórico",            ID_HISTORY
+    MENUITEM "&Barra de status",         ID_STATUSBAR
+  END
+  POPUP "&Ajustar"
+  BEGIN
+    MENUITEM "Brilho...",       ID_BRIGHTNESS
+    MENUITEM "Contraste...",         ID_CONTRAST
+    MENUITEM "Matiz/Saturação...",   -1, GRAYED
+    POPUP "Cor"
+    BEGIN
+      MENUITEM "Preto e Branco",   ID_BLACKANDWHITE
+      MENUITEM "Inverter Cores",     ID_INVERTCOLORS
+    END
+    MENUITEM SEPARATOR
+    MENUITEM "Blur",                ID_BLUR
+    MENUITEM "Sharpen",             ID_SHARPEN
+    MENUITEM "Suavizar Arestas",        -1, GRAYED
+    MENUITEM "Suavizar Arestas",          -1, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Suavizar Arestas",       -1, GRAYED
+    MENUITEM "Suavizar Arestas",                -1, GRAYED
+    MENUITEM "Suavizar Arestas",              -1, GRAYED
+    MENUITEM "Suavizar Arestas",              -1, GRAYED
+
+  END
+  POPUP "&Cores"
+  BEGIN
+    MENUITEM "&Editar Cores...", ID_EDITCOLOURS
+  END
+  POPUP "&Janela"
+  BEGIN
+    MENUITEM "Em &cascata",           ID_WINDOW_CASCADE
+    MENUITEM "Lado a lado &horizontalmente", ID_WINDOW_TILE_HORZ
+    MENUITEM "Lado a lado &verticalmente",   ID_WINDOW_TILE_VERT
+    MENUITEM "&Organizar ícones",     ID_WINDOW_ARRANGE
+    MENUITEM SEPARATOR
+    MENUITEM "Nex&t\tCtrl+F6",     ID_WINDOW_NEXT
+  END
+  POPUP "&Ajuda"
+  BEGIN
+    MENUITEM "&Sobre...",       ID_ABOUT
+  END
+END
+
+IDR_POPUP MENU
+BEGIN
+  POPUP "popup"
+  BEGIN
+    MENUITEM SEPARATOR
+  END
+END
+
+
+IDD_BRIGHTNESS DIALOGEX 6, 5, 193, 120
+CAPTION "Brilho"
+FONT 8,"MS Shell Dlg", 0, 0
+STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | DS_MODALFRAME
+BEGIN
+  LTEXT      "", IDC_PICPREVIEW, 0, 1, 132, 96, SS_OWNERDRAW | SS_SUNKEN
+  LTEXT      "Formulário de cor:", IDC_STATIC, 135, 5, 36, 9
+  GROUPBOX   "", IDC_BRI_GROUP, 138 ,30, 50, 48
+  CONTROL    "Full (RGB)", IDC_BRI_FULL, "Button", BS_AUTORADIOBUTTON, 138, 18, 46, 9
+  CONTROL    "Vermelho", IDC_BRI_RED, "Button", BS_AUTORADIOBUTTON, 142, 38, 42, 9
+  CONTROL    "Verde", IDC_BRI_GREEN, "Button", BS_AUTORADIOBUTTON, 142, 51, 42, 9
+  CONTROL    "Azul", IDC_BRI_BLUE, "Button", BS_AUTORADIOBUTTON, 142, 64, 42, 9
+  EDITTEXT   IDC_BRI_EDIT, 98, 103, 28, 13
+  CONTROL    "", IDC_BRI_TRACKBAR, "msctls_trackbar32", TBS_BOTH | TBS_NOTICKS | WS_TABSTOP, 2, 105, 90, 11
+  PUSHBUTTON "OK", IDOK, 142, 88, 48, 13
+  PUSHBUTTON "Cancelar", IDCANCEL, 142, 105, 48, 13
+END
+
+IDD_ABOUTBOX DIALOGEX 22,16,210,182
+CAPTION "Sobre ImageSoft"
+FONT 8,"MS Shell Dlg",0,0
+STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | DS_MODALFRAME
+//EXSTYLE WS_EX_LAYERED
+BEGIN
+  LTEXT      "ImageSoft v0.1\nCopyright (C) 2006\nThomas Weidenmueller (w3seek@reactos.org) \nGed Murphy (gedmurphy@gmail.com)", IDC_STATIC, 48, 7, 150, 36
+  PUSHBUTTON "Fechar", IDOK, 75, 162, 44, 15
+  ICON       IDI_IMAGESOFTICON, IDC_STATIC, 10, 10, 7, 30
+  EDITTEXT   IDC_LICENSE_EDIT, 8, 44, 194, 107, WS_VISIBLE | WS_VSCROLL | WS_TABSTOP | ES_READONLY | ES_MULTILINE
+END
+
+
+IDD_IMAGE_PROP DIALOGEX 6, 5, 156, 163
+CAPTION "Propriedades da imagem"
+FONT 8,"MS Shell Dlg",0,0
+STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | DS_MODALFRAME
+BEGIN
+  LTEXT      "Nome:", IDC_STATIC, 12, 5, 38, 9
+  EDITTEXT   IDC_IMAGE_NAME_EDIT,  58, 3, 94, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  GROUPBOX   "Canvas properties", IDC_STATIC, 4, 22, 148, 98
+  LTEXT      "Tipo de Imagem:", IDC_STATIC, 12, 36, 42, 9
+  CONTROL    "", IDC_IMAGETYPE, "ComboBox", WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 35, 88, 54
+  LTEXT      "Largura:", IDC_STATIC, 12, 51, 42, 9
+  EDITTEXT   IDC_WIDTH_EDIT, 58, 49, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
+  LTEXT      "", IDC_WIDTH_STAT, 94, 51, 40, 9
+  LTEXT      "Altura:", IDC_STATIC, 12, 68, 42, 9
+  EDITTEXT   IDC_HEIGHT_EDIT, 58, 66, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
+  LTEXT      "", IDC_HEIGHT_STAT, 94, 68, 40, 9
+  LTEXT      "Resolução:", IDC_STATIC, 12, 84, 42, 9
+  EDITTEXT   IDC_RES_EDIT, 58, 83, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
+  LTEXT      "", IDC_RES_STAT, 94, 84, 40, 9
+  LTEXT      "Unidade:", IDC_STATIC, 12, 99, 42, 9
+  CONTROL    "", IDC_UNIT, "ComboBox", WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 99, 54, 50
+  LTEXT      "Tamanho da imagem:", IDC_STATIC, 12, 125, 42, 9
+  LTEXT      "", IDC_IMAGE_SIZE, 58, 125, 54, 9
+  PUSHBUTTON "OK", IDOK, 50, 144, 48, 13
+  PUSHBUTTON "Cancelar", IDCANCEL, 102, 144, 48, 13
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_LICENSE           "Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo sob os termos da GNU General Public License conforme publicada pela Free Software Foundation; quer a versão 2 da licença, ou (conforme você escolha) qualquer versão posterior.\r\n\r\nEste programa é distribuído com a esperança de que seja útil, mas SEM QUALQUER GARANTIA; até mesmo sem a garantia implícita de MERCANTIBILIDADE ou ADEQUAÇÃO A UM DETERMINADO PROPÓSITO. Para mais detalhes, veja a GNU General Public License.\r\n\r\nVocê deve ter recebido uma cópia da GNU General Public License juntamente com este programa; caso contrário, escreva para a Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+  IDS_READY             " Pronto."
+  IDS_TOOLBAR_STANDARD  "Padrão"
+  IDS_TOOLBAR_TEST      "Teste"
+  IDS_IMAGE_NAME        "Imagem %1!u!"
+  IDS_FLT_TOOLS         "Ferramentas"
+  IDS_FLT_COLORS        "Cores"
+  IDS_FLT_HISTORY       "Histórico"
+END
+
+/* imageprop.c */
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_IMAGE_MONOCHROME  "Monocromático (1 bit)"
+  IDS_IMAGE_GREYSCALE   "Escala de cinza (8 bit)"
+  IDS_IMAGE_PALETTE     "Palette or 256 color (8 bit)"
+  IDS_IMAGE_TRUECOLOR   "True color (24 bit)"
+
+  IDS_UNIT_PIXELS       "Pixels"
+  IDS_UNIT_CM           "Cm"
+  IDS_UNIT_INCHES       "Polegadas"
+  IDS_UNIT_DOTSCM       "Pontos / Cm"
+  IDS_UNIT_DPI          "DPI"
+  IDS_UNIT_KB           "%d KB"
+  IDS_UNIT_MB           "%d MB"
+END
+
+/* Tooltips */
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_TOOLTIP_NEW       "Novo"
+  IDS_TOOLTIP_OPEN      "Abrir"
+  IDS_TOOLTIP_SAVE      "Salvar"
+  IDS_TOOLTIP_PRINTPRE  "Visualização de impressão"
+  IDS_TOOLTIP_PRINT     "Imprimir"
+  IDS_TOOLTIP_CUT       "Recortar"
+  IDS_TOOLTIP_COPY      "Copiar"
+  IDS_TOOLTIP_PASTE     "Inserir"
+  IDS_TOOLTIP_UNDO      "Desfazer"
+  IDS_TOOLTIP_REDO      "Refazer"
+END
+
+
+/* Hints */
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_HINT_BLANK        " "
+  IDS_HINT_NEW          " Cria um novo documento."
+  IDS_HINT_OPEN         " Abre um documento existente."
+  IDS_HINT_CLOSE        " Closes this window."
+  IDS_HINT_CLOSEALL     " Fecha todas as janelas."
+  IDS_HINT_SAVE         " Salva o documento ativo."
+  IDS_HINT_SAVEAS       " Salva o documento ativo com um novo nome."
+  IDS_HINT_PRINTPRE     " Visualiza o documento impesso."
+  IDS_HINT_PRINT        " Imprime o documento ativo."
+  IDS_HINT_PROP         " Mostra as propriedades da imagem ativa."
+  IDS_HINT_EXIT         " Sair desse aplicativo."
+
+  IDS_HINT_TOOLS        " Exibe ou oculta a janela flutuante de ferramentas."
+  IDS_HINT_COLORS       " Exibe ou oculta a janela flutuante de cores."
+  IDS_HINT_HISTORY      " Exibe ou oculta a janela flutuante de histórico."
+  IDS_HINT_STATUS       " Exibe ou oculta a barra de status."
+
+  IDS_HINT_CASCADE      " Organiza as janelas para que se sobreponham."
+  IDS_HINT_TILE_HORZ    " Arrange windows as non-overlapping tiles."
+  IDS_HINT_TILE_VERT    " Arrange windows as non-overlapping tiles."
+  IDS_HINT_ARRANGE      " Organiza os ícones na parte inferior da janela."
+  IDS_HINT_NEXT         " Ativa a próxima janela."
+
+  IDS_HINT_SYS_RESTORE  " Restaura a janela para o tamanho normal."
+  IDS_HINT_SYS_MOVE     " Move essa janela."
+  IDS_HINT_SYS_SIZE     " Redimensiona essa janela."
+  IDS_HINT_SYS_MINIMIZE " Collapses this window to an icon."
+  IDS_HINT_SYS_MAXIMIZE " Expande essa janela para preencher essa tela."
+END
