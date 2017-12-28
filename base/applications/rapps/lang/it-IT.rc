@@ -1,4 +1,4 @@
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 IDR_MAINMENU MENU
 BEGIN
@@ -90,8 +90,8 @@ BEGIN
     PUSHBUTTON "Annulla", IDCANCEL, 150, 78, 60, 14
 END
 
-IDD_DOWNLOAD_DIALOG DIALOGEX 0, 0, 220, 72
-STYLE DS_SHELLFONT | DS_CENTER | WS_BORDER | WS_CAPTION | WS_POPUP | WS_SYSMENU | WS_VISIBLE
+IDD_DOWNLOAD_DIALOG DIALOGEX 0, 0, 220, 220
+STYLE DS_SHELLFONT | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION | WS_VISIBLE 
 CAPTION "Scaricamento in corso %ls..."
 FONT 8, "MS Shell Dlg"
 BEGIN
@@ -204,9 +204,9 @@ BEGIN
     IDS_UNABLE_TO_REMOVE "Impossibile cancellare i dati dal registro!"
     IDS_UNABLE_TO_INSTALL "Unable to open installer!"
     IDS_CERT_DOES_NOT_MATCH "Verifica del certificato SSL fallita."
-    IDS_INTEG_CHECK_TITLE "Verifica integrità pacchetto..."
-    IDS_INTEG_CHECK_FAIL "Il pacchetto non ha superato il controllo di integrità, potrebbe essere stato danneggiato o manomesso durante lo scaricamento. L'esecuzione del software non è raccomandata."
-    IDS_INTERRUPTED_DOWNLOAD "Lo scaricamento è stato interrotto. Verificare la connessione a Internet."
+    IDS_INTEG_CHECK_TITLE "Verifica integrit? pacchetto..."
+    IDS_INTEG_CHECK_FAIL "Il pacchetto non ha superato il controllo di integrit?, potrebbe essere stato danneggiato o manomesso durante lo scaricamento. L'esecuzione del software non ? raccomandata."
+    IDS_INTERRUPTED_DOWNLOAD "Lo scaricamento ? stato interrotto. Verificare la connessione a Internet."
     IDS_UNABLE_TO_WRITE "Impossibile scrivere su disco: lo spazio libero potrebbe essere esaurito."
     IDS_SELECT_ALL "Select/Deselect All"
     IDS_INSTALL_SELECTED "Install Selected"
@@ -214,13 +214,13 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_STATUS_INSTALLED "Installed"
+    IDS_STATUS_INSTALLED "Installato"
     IDS_STATUS_NOTINSTALLED "Not installed"
     IDS_STATUS_DOWNLOADED "Downloaded"
     IDS_STATUS_UPDATE_AVAILABLE "Update available"
-    IDS_STATUS_DOWNLOADING "Downloading…"
-    IDS_STATUS_INSTALLING "Installing…"
-    IDS_STATUS_WAITING "Waiting to install…"
+    IDS_STATUS_DOWNLOADING "Downloading?"
+    IDS_STATUS_INSTALLING "Installing?"
+    IDS_STATUS_WAITING "Waiting to install?"
     IDS_STATUS_FINISHED "Finished"
 END
 
