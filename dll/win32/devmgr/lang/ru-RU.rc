@@ -1,6 +1,4 @@
-/* Russian language resource file by Kudratov Olimjon (olim98@bk.ru) */
-
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
@@ -66,9 +64,9 @@ BEGIN
     IDS_DEV_DISABLED "Это устройство не запущено."
     IDS_DEV_DISABLED2 "Это устройство отключено."
     IDS_DEV_DEVLOADER_NOT_READY "Загрузчик этого устройства не может загрузить необходимые драйверы."
-    IDS_DEV_DEVLOADER_NOT_READY2 "" /* unused */
+    IDS_DEV_DEVLOADER_NOT_READY2 """ /* unused */
     IDS_DEV_DEVLOADER_NOT_READY3 "" /* unused */
-    IDS_DEV_DEVICE_NOT_THERE "Устройство отсутствует, работает неправильно или для него установлены не все драйверы."
+    IDS_DEV_DEVICE_NOT_THERE ""Устройство отсутствует, работает неправильно или для него установлены не все драйверы."
     IDS_DEV_MOVED "ReactOS настраивает это устройство."
     IDS_DEV_TOO_EARLY "ReactOS настраивает это устройство."
     IDS_DEV_NO_VALID_LOG_CONF "ReactOS не может указать ресурсы для этого устройства."
@@ -136,7 +134,7 @@ BEGIN
     LTEXT "", IDC_MANUFACTURER, 14, 88, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_LOCATION, 14, 100, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_STATUS, 14, 112, 183, 30
-    PUSHBUTTON "&Диагностика...", IDC_TROUBLESHOOT, 80, 140, 59, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
+    PUSHBUTTON "&Диагностика...", IDC_TROUBLESHOOT, 80, 140, 60, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
     PUSHBUTTON "С&войства", IDC_PROPERTIES, 146, 140, 50, 14
 END
 
@@ -167,13 +165,13 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_DEVICON, 7, 7, 20, 20
     LTEXT "", IDC_DEVNAME, 37, 9, 174, 16, SS_NOPREFIX
-    LTEXT "Поставщик драйвера:", -1, 17, 39, 80, 8, SS_NOPREFIX
+    LTEXT "Driver provider:", -1, 37, 39, 60, 8, SS_NOPREFIX
     EDITTEXT IDC_DRVPROVIDER, 100, 39, 146, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Дата разработки:", -1, 17, 53, 80, 8, SS_NOPREFIX
+    LTEXT "Driver date:", -1, 37, 53, 60, 8, SS_NOPREFIX
     EDITTEXT IDC_DRVDATE, 100, 53, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Версия драйвера:", -1, 17, 67, 80, 8, SS_NOPREFIX
+    LTEXT "Driver version:", -1, 37, 67, 60, 8, SS_NOPREFIX
     EDITTEXT IDC_DRVVERSION, 100, 67, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Цифровая подпись:", -1, 17, 81, 80, 8, SS_NOPREFIX
+    LTEXT "Digital Signer:", -1, 37, 81, 60, 8, SS_NOPREFIX
     EDITTEXT IDC_DIGITALSIGNER, 100, 81, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     PUSHBUTTON "&Сведения...", IDC_DRIVERDETAILS, 7, 106, 75, 15
     LTEXT "Просмотр сведений о файлах драйверов.", -1, 91, 110, 154, 17, SS_NOPREFIX
@@ -192,14 +190,14 @@ BEGIN
     CONTROL "", IDC_DRIVERFILES, "SysListView32", LVS_REPORT | LVS_NOCOLUMNHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_SORTASCENDING |
             LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP, 7, 46, 209, 80
-    LTEXT "Поставщик:", -1, 7, 134, 70, 8
-    EDITTEXT IDC_FILEPROVIDER, 81, 134, 140, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Версия файла:", -1, 7, 150, 70, 8
-    EDITTEXT IDC_FILEVERSION, 81, 150, 140, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Авторские права:", -1, 7, 166, 70, 8
-    EDITTEXT IDC_FILECOPYRIGHT, 81, 166, 140, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Цифровая подпись:", -1, 7, 182, 70, 8
-    EDITTEXT IDC_DIGITALSIGNER, 81, 182, 140, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "Поставщик:", -1, 14, 134, 50, 8
+    EDITTEXT IDC_FILEPROVIDER, 66, 134, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "File version:", -1, 14, 150, 50, 8
+    EDITTEXT IDC_FILEVERSION, 66, 150, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "Copyright:", -1, 14, 166, 50, 8
+    EDITTEXT IDC_FILECOPYRIGHT, 66, 166, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "Digital Signer:", -1, 14, 182, 50, 8
+    EDITTEXT IDC_DIGITALSIGNER, 66, 182, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     DEFPUSHBUTTON "OK", IDOK, 167, 208, 50, 14
 END
 
@@ -224,7 +222,7 @@ BEGIN
     ICON "", IDC_DEVICON, 7, 7, 20, 20
     LTEXT "", IDC_DEVNAME, 37, 9, 174, 16, SS_NOPREFIX
     LTEXT "Настройки ресурсов:", -1, 7, 36, 204, 8
-    CONTROL "", IDC_DRIVERRESOURCES, "SysListView32", LVS_REPORT |
+    CONTROL "", IDC_DRIVERRESOURCES, "SysListView32", LVS_REPORT | 
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_SORTASCENDING |
             LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP, 7, 46, 238, 80
 END
@@ -239,7 +237,6 @@ BEGIN
 END
 
 
-
 /*
  This code relates to the device manager GUI
  */
@@ -250,19 +247,19 @@ BEGIN
   BEGIN
     MENUITEM "В&ыход",                       IDC_EXIT
   END
-  MENUITEM "&Действие",                      IDC_ACTIONMENU
+  MENUITEM "&Действие",                        IDC_ACTIONMENU
   POPUP "&Вид"
   BEGIN
-    MENUITEM "&Устройства по типу",          IDC_DEVBYTYPE
-    MENUITEM "Устройства по под&ключению",   IDC_DEVBYCONN
-    MENUITEM "&Ресурсы по типу",             IDC_RESBYTYPE, GRAYED
-    MENUITEM "Ресурсы по подк&лючению",      IDC_RESBYCONN, GRAYED
+    MENUITEM "&Устройства по типу",             IDC_DEVBYTYPE
+    MENUITEM "Устройства по под&ключению",       IDC_DEVBYCONN
+    MENUITEM "&Ресурсы по типу",           IDC_RESBYTYPE, GRAYED
+    MENUITEM "Ресурсы по подк&лючению",     IDC_RESBYCONN, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Показать &скрытые устройства", IDC_SHOWHIDDEN
+    MENUITEM "Показать &скрытые устройства",         IDC_SHOWHIDDEN
   END
   POPUP "&Справка"
   BEGIN
-    MENUITEM "О &программе...",              IDC_ABOUT
+    MENUITEM "О &программе...",                       IDC_ABOUT
   END
 END
 
@@ -304,7 +301,7 @@ BEGIN
   IDS_HINT_DISABLE      " Отключение выбранного устройства."
   IDS_HINT_UPDATE       " Запуск мастера обновления драйверов для выделенного устройства."
   IDS_HINT_UNINSTALL    " Удаление драйвера для выбранного устройства."
-  IDS_HINT_ADD          " Добавить старое (не Plug-and-Play) устройство на этот компьютер."
+  IDS_HINT_ADD          " Добавить старое (не Plug-and-Play) устройство на этот компьютер." 
   IDS_HINT_ABOUT        " О программе ""Диспетчер устройств ReactOS""."
   IDS_HINT_EXIT         " Выход из программы."
 
