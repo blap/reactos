@@ -1,14 +1,12 @@
 /*
  * PROJECT:         ReactOS Kernel
  * LICENSE:         GPL - See COPYING in the top level directory
- * FILE:            base/applications/osk/lang/zh-CN.rc
+ * FILE:            base/applications/osk/lang/en-US.rc
  * PURPOSE:         On screen keyboard (American resources).
  * PROGRAMMERS:     Denis ROBERT
  */
 
-/* Simplified Chinese translation by Henry Tang Ih 2015 (henrytang2@hotmail.com) */
-
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+LANGUAGE LANG_CHINESE_SIMPLIFIED, SUBLANG_CHINESE_SIMPLIFIED
 
 MAIN_DIALOG DIALOGEX DISCARDABLE 0, 0, 608, 164
 CAPTION "屏幕键盘"
