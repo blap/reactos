@@ -1,6 +1,4 @@
-/* Translated by Baruch Rutman */
-
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 IDD_PROPPAGEGENERAL DIALOGEX 0, 0, 256, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -116,7 +114,7 @@ BEGIN
     AUTORADIOBUTTON "The docking &state is unknown", IDC_HWPPROP_UNKNOWN, 22, 85, 160, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "The computer is &docked", IDC_HWPPROP_DOCKED, 22, 97, 160, 10
     AUTORADIOBUTTON "The computer is &undocked", IDC_HWPPROP_UNDOCKED, 22, 109, 160, 10
-    GROUPBOX "Hardware profiles selection", IDC_STATIC, 10, 138, 192, 42
+    GROUPBOX "בחירת פרופילי חומרה", IDC_STATIC, 10, 138, 192, 42
     AUTOCHECKBOX "Always &include this profile as an option when ReactOS starts", IDC_HWPPROP_INCLUDE, 17, 150, 164, 20, WS_GROUP | WS_TABSTOP | BS_MULTILINE
 END
 
@@ -305,5 +303,5 @@ BEGIN
     IDS_HWPROFILE_CONFIRM_DELETE "Are you sure you want to delete the hardware profile ""%s""?"
     IDS_HWPROFILE_ALREADY_IN_USE "The profile name is already in use."
     IDS_HWPROFILE_PROFILE "Profile"
-    IDS_HWPROFILE_WARNING "Warning"
+    IDS_HWPROFILE_WARNING "אזהרה"
 END
