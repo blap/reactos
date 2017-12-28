@@ -1,0 +1,79 @@
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+
+IDC_REACTOS_SNDREC32 ACCELERATORS
+BEGIN
+    "?", IDM_ABOUT, ASCII, ALT
+    "/", IDM_ABOUT, ASCII, ALT
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 196, 75
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Informações sobre o gravador de som do ReactOS"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON IDI_SNDREC32, -1, 19, 14, 21, 20
+    LTEXT "Gravador de Som do ReactOS, versão 1.0", IDC_STATIC, 56, 16, 114, 8, SS_NOPREFIX
+    LTEXT "Copyright (C) 2009", IDC_STATIC, 56, 25, 114, 8
+    DEFPUSHBUTTON "OK", IDOK, 139, 54, 50, 14, WS_GROUP
+END
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "&Arquivo"
+    BEGIN
+        MENUITEM "&Novo", ID_FILE_NEW
+        MENUITEM "&Abrir...", ID_FILE_OPEN
+        MENUITEM "&Salvar", ID_FILE_SAVE, GRAYED
+        MENUITEM "Salvar &como...", ID_FILE_SAVEAS, GRAYED
+        MENUITEM "&Restaurar...", ID_FILE_RESTORE, GRAYED
+        MENUITEM "&Propriedades", ID_FILE_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "Sai&r", ID_FILE_EXIT
+    END
+    POPUP "&Editar"
+    BEGIN
+        MENUITEM "&Copy", ID_EDIT_COPY
+        MENUITEM "&Paste Insert", ID_EDIT_PASTE, GRAYED
+        MENUITEM "Paste Mi&x", ID_EDIT_PASTEMIX, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Inserir arquivo...", ID_EDIT_INSERTFILE
+        MENUITEM "&Mix with File...", ID_EDIT_MIXFILE
+        MENUITEM SEPARATOR
+        MENUITEM "Apagar &Antes da Posição Atual", ID_EDIT_DELETEBEFORE, GRAYED
+        MENUITEM "Apagar &Depois da Posição Atual", ID_EDIT_DELETEAFTER, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "P&ropriedades de Audio", ID_EDIT_AUDIOPROPS
+    END
+    POPUP "Efeito&s"
+    BEGIN
+        MENUITEM "&Aumentar Volume (em 25%)", ID_EFFECTS_INCVOL
+        MENUITEM "&Diminuir Volume", ID_EFFECTS_DECVOL
+        MENUITEM SEPARATOR
+        MENUITEM "A&umentar Velocidade (em 100%)", ID_EFFECTS_INCSPD
+        MENUITEM "R&eduzir Velocidade", ID_EFFECTS_DECSPD
+        MENUITEM SEPARATOR
+        MENUITEM "&Adicionar Eco", ID_EFFECTS_ECHO
+        MENUITEM "&Reverse", ID_EFFECTS_REVERSE
+    END
+    POPUP "&?"
+    BEGIN
+        MENUITEM "&Sobre", ID_ABOUT
+    END
+END
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE "Gravador de Som"
+    IDC_REACTOS_SNDREC32 "REACTOS_SNDREC32"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRPOS "Position: %.2f s"
+    IDS_STRDUR "Length: %.2f s"
+    IDS_STRBUF "Buffer: %.2f kb"
+    IDS_STRFMT "%.1f kHz %u bits"
+    IDS_STRMONO "mono"
+    IDS_STRSTEREO "estéreo"
+    IDS_STRCHAN "%s"
+END
