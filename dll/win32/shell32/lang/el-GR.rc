@@ -1,4 +1,4 @@
-LANGUAGE LANG_GREEK, SUBLANG_DEFAULT
+LANGUAGE LANG_GREEK, SUBLANG_GREEK_GREECE
 
 MENU_001 MENUEX
 BEGIN
@@ -66,6 +66,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Α&ποκοπή", IDM_CUT
         MENUITEM "Α&ντιγραφή", IDM_COPY
+        MENUITEM "Paste", IDM_INSERT
         MENUITEM SEPARATOR
         MENUITEM "Δημιουργία &συντόμευσης", IDM_CREATELINK
         MENUITEM "&Διαγραφή", IDM_DELETE
@@ -94,8 +95,8 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "", IDC_BROWSE_FOR_FOLDER_TITLE, 10, 8, 198, 24
     LTEXT "", IDC_BROWSE_FOR_FOLDER_STATUS, 10, 25, 198, 12
-    LTEXT "Φάκελος:", IDC_BROWSE_FOR_FOLDER_FOLDER, 10, 156, 40, 12
-    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS  | WS_BORDER | WS_TABSTOP, 12, 38, 194, 105
+    LTEXT "Folder:", IDC_BROWSE_FOR_FOLDER_FOLDER, 10, 152, 40, 12
+    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | WS_BORDER | WS_TABSTOP, 12, 38, 194, 105
     EDITTEXT IDC_BROWSE_FOR_FOLDER_FOLDER_TEXT, 46, 150, 160, 14, WS_BORDER | WS_GROUP | WS_TABSTOP
     PUSHBUTTON "&Δημιουργία φακέλου", IDC_BROWSE_FOR_FOLDER_NEW_FOLDER, 12, 174, 77, 14, WS_GROUP | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 102, 174, 50, 14, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
@@ -115,7 +116,7 @@ BEGIN
     LTEXT "", IDC_YESTOALL_MESSAGE, 40, 10, 238, 52, 0
 END
 
-IDD_ABOUT DIALOGEX 15, 40, 210, 152
+IDD_ABOUT DIALOGEX 0, 0, 275, 198
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Πληροφορίες: %s"
 FONT 8, "MS Shell Dlg"
@@ -155,15 +156,15 @@ CAPTION "Run"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_RUNDLG_ICON, 7, 11, 18, 20, WS_VISIBLE
-    LTEXT "Πληκτρολογήστε το όνομα ενός προγράμματος, φακέλου, εγγράφου, ή πόρου του διαδυκτίου, και το ReactOS θα το ανοίξει.", 12289, 36, 4, 182, 25
-    LTEXT "Ά&νοιγμα:", 12305, 5, 39, 31, 10
+    LTEXT "Type the name of a program, folder, document, or Internet resource, and ReactOS will open it for you.", 12289, 36, 11, 182, 18
+    LTEXT "&Open:", 12305, 7, 39, 24, 10
     CONTROL "", IDC_RUNDLG_EDITPATH, "COMBOBOX", WS_TABSTOP | WS_GROUP | WS_VSCROLL | WS_VISIBLE | CBS_AUTOHSCROLL | CBS_DROPDOWN, 36, 37, 183, 100
     DEFPUSHBUTTON "OK", IDOK, 36, 63, 59, 14, WS_TABSTOP
     PUSHBUTTON "Άκυρο", IDCANCEL, 98, 63, 59, 14, WS_TABSTOP
     PUSHBUTTON "&Αναζήτηση...", 12288, 160, 63, 59, 14, WS_TABSTOP
 END
 
-IDD_SHORTCUT_PROPERTIES DIALOGEX 0, 0, 240, 130
+IDD_SHORTCUT_PROPERTIES DIALOGEX 0, 0, 235, 215
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
 CAPTION "Συντόμευση"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
@@ -186,9 +187,9 @@ BEGIN
     COMBOBOX 14017, 79, 134, 150, 14, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
     LTEXT "&Σχόλια:", 14018, 8, 154, 68, 10
     EDITTEXT 14019, 79, 152, 150, 14, ES_AUTOHSCROLL
-    PUSHBUTTON "&Εύρεση προορισμού...", 14020, 10, 115, 71, 14, ES_LEFT
-    PUSHBUTTON "&Αλλαγή εικονιδίου...", 14021, 83, 115, 71, 14, ES_LEFT
-    PUSHBUTTON "&Για προχωρημένους...", 14022, 156, 115, 71, 14, ES_LEFT
+    PUSHBUTTON "&Find Target...", 14020, 9, 172, 70, 14, ES_LEFT
+    PUSHBUTTON "&Change Icon...", 14021, 84, 172, 70, 14, ES_LEFT
+    PUSHBUTTON "Για προχωρημένους", 14022, 159, 172, 70, 14, ES_LEFT
 END
 
 IDD_SHORTCUT_EXTENDED_PROPERTIES DIALOGEX 0, 0, 230, 150
@@ -197,12 +198,12 @@ CAPTION "Πρόσθετες ιδιότητες"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     ICON IDI_SHELL_EXTENDED_PROPERTIES, IDI_SHELL_EXTENDED_PROPERTIES, 5, 5, 21, 20, SS_ICON
-    LTEXT "Επιλέξτε τις πρόσθετες ιδιότητες που θέλετε για αυτήν την συντόμευση.", -1, 5, 30, 210, 20
+    LTEXT "Επιλέξτε τις πρόσθετες ιδιότητες που θέλετε για αυτήν την συντόμευση.", -1, 5, 30, 210, 10
     CHECKBOX "Εκτέλεση με διαφορετικά πιστοποιητικά", 14000, 25, 50, 150, 10
     LTEXT "Αυτή η επιλογή θα σας επιτρέψει να εκτελέσετε την συντόμευση ως διαφορετικός χρήστης ή ως εσείς ο ίδιος προστατεύοντας τον υπολογιστή σας από μη εξουσιοδοτημένες ενέργειες προγραμμάτων.", -1, 50, 60, 175, 40
     CHECKBOX "Εκτέλεση σε διαφορετική περιοχή μνήμης", 14001, 25, 100, 150, 10, WS_DISABLED
-    PUSHBUTTON "OK", IDOK, 25, 120, 50, 15, WS_VISIBLE
-    PUSHBUTTON "Άκυρο", IDCANCEL, 120, 120, 50, 15, WS_VISIBLE
+    PUSHBUTTON "OK", 1, 63, 124, 50, 15, WS_VISIBLE
+    PUSHBUTTON "Άκυρο", 2, 120, 124, 50, 15, WS_VISIBLE
 END
 
 IDD_FOLDER_PROPERTIES DIALOGEX 0, 0, 240, 205
@@ -212,26 +213,26 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     ICON "", 14000, 10, 3, 32, 32, WS_VISIBLE
     EDITTEXT 14001, 70, 9, 158, 14, ES_LEFT
-    LTEXT "Type of file:", 14004, 8, 40, 55, 10
+    LTEXT "Τύπος αρχείου:", 14004, 8, 40, 55, 10
     CONTROL "Folder", 14005, "edit", ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL, 68, 40, 160, 10
     LTEXT "", -1, 8, 31, 221, 1, SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE
-    LTEXT "Location:", 14008, 8, 56, 55, 10
+    LTEXT "Τοποθεσία:", 14008, 8, 56, 55, 10
     EDITTEXT 14009, 68, 56, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | ES_AUTOHSCROLL | NOT WS_TABSTOP
-    LTEXT "Size:", 14010, 8, 72, 55, 10
+    LTEXT "Μέγεθος:", 14010, 8, 72, 55, 10
     EDITTEXT 14011, 68, 72, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "Size on disk:", 140101, 8, 88, 55, 10
     EDITTEXT 14012, 68, 88, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "Contains:", 14026, 8, 104, 55, 10
     EDITTEXT 14027, 68, 104, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "", -1, 8, 120, 221, 1, SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE
-    LTEXT "Created:", 14014, 8, 128, 55, 10
+    LTEXT "Δημιουργήθηκε:", 14014, 8, 128, 55, 10
     EDITTEXT 14015, 68, 128, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "", -1, 8, 144, 221, 1, SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE
     LTEXT "Χαρακτηριστικά:", 14020, 8, 152, 46, 10
-    AUTOCHECKBOX "&Read-only", 14021, 56, 152, 70, 10
-    AUTOCHECKBOX "&Hidden", 14022, 56, 166, 70, 10
+    AUTOCHECKBOX "&Μόνο για ανάγνωση", 14021, 56, 152, 70, 10
+    AUTOCHECKBOX "&Κρυφό", 14022, 56, 166, 70, 10
     AUTOCHECKBOX "&Archive", 14023, 56, 180, 70, 10
-    PUSHBUTTON "A&dvanced...", 14028, 158, 150, 70, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+    PUSHBUTTON "Για προχωρημένους", 14028, 158, 150, 70, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
 END
 
 IDD_FILE_PROPERTIES DIALOGEX 0, 0, 240, 205
@@ -242,50 +243,50 @@ BEGIN
     ICON "", 14000, 10, 3, 32, 32, WS_VISIBLE
     EDITTEXT 14001, 70, 9, 158, 14, ES_LEFT | WS_TABSTOP
     LTEXT "", -1, 8, 29, 221, 1, SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE
-    LTEXT "Τύπος αρχείου:", 14004, 8, 35, 50, 10
+    LTEXT "Type of file:", 14004, 8, 35, 50, 10
     CONTROL "Αρχείο", 14005, "edit", ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP, 68, 35, 160, 10
     LTEXT "Ανοίγει με:", 14006, 8, 53, 50, 10
     ICON "", 14025, 68, 52, 11, 10, NOT WS_VISIBLE
-    PUSHBUTTON "&Change...", 14024, 168, 50, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+    PUSHBUTTON "&Αλλαγή...", 14024, 168, 50, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
     EDITTEXT 14007, 68, 53, 90, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | ES_AUTOHSCROLL | NOT WS_TABSTOP
     LTEXT "", -1, 8, 68, 221, 1, SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE
     LTEXT "Θέση:", 14008, 8, 75, 45, 10
     EDITTEXT 14009, 68, 75, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | ES_AUTOHSCROLL | NOT WS_TABSTOP
-    LTEXT "Μέγεθος:",14010, 8, 91, 45, 10
+    LTEXT "Μέγεθος:", 14010, 8, 91, 45, 10
     EDITTEXT 14011, 68, 91, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "Size on disk:", 140112, 8, 107, 55, 10
     EDITTEXT 14012, 68, 107, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "", -1, 8, 123, 221, 1, SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE
-    LTEXT "Δημιουργήθηκε:", 14014, 8, 131, 65, 10
+    LTEXT "Created:", 14014, 8, 131, 45, 10
     EDITTEXT 14015, 68, 131, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
-    LTEXT "Τροποποιήθηκε:", 14016, 8, 147, 65, 10
+    LTEXT "Τροποποιήθηκε:", 14016, 8, 147, 45, 10
     EDITTEXT 14017, 68, 147, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
-    LTEXT "Προσπελάστηκε:", 14018, 8, 163, 65, 10
+    LTEXT "Προσπελάστηκε:", 14018, 8, 163, 45, 10
     EDITTEXT 14019, 68, 163, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "", -1, 8, 179, 221, 1, SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE
-    LTEXT "Χαρακτηριστικά:", 14020, 8, 189, 70, 10
-    AUTOCHECKBOX "&Μόνο για ανάγνωση", 14021, 58, 189, 75, 10
-    AUTOCHECKBOX "&Κρυφό", 14022, 126, 189, 50, 10
-    AUTOCHECKBOX "&Archive", 14023, 181, 189, 45, 10
-    PUSHBUTTON "A&dvanced...", 14028, 180, 185, 50, 15, WS_TABSTOP
+    LTEXT "Χαρακτηριστικά:", 14020, 8, 189, 45, 10
+    AUTOCHECKBOX "&Read-only", 14021, 58, 189, 67, 10
+    AUTOCHECKBOX "&Hidden", 14022, 126, 189, 50, 10
+    AUTOCHECKBOX "&Archive", 14023, 181, 189, 49, 10
+    PUSHBUTTON "Για προχωρημένους", 14028, 180, 185, 50, 15, WS_TABSTOP
 END
 
-IDD_FILE_VERSION DIALOGEX 0, 0, 240, 130
+IDD_FILE_VERSION DIALOGEX 0, 0, 235, 215
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Έκδοση"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    LTEXT "Έκδοση αρχείου: ", 14000, 10, 10, 60, 10
-    EDITTEXT 14001, 80, 10, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER
-    LTEXT "Περιγραφή: ", 14002, 10, 20, 60, 10
-    EDITTEXT 14003, 80, 20, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER
-    LTEXT "Πνευματικά δικαιώματα: ", 14004, 10, 30, 70, 10
-    EDITTEXT 14005, 80, 30, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER
-    GROUPBOX "Άλλες πληροφορίες: ", 14006, 10, 45, 220, 90
-    LTEXT "Όνομα στοιχείου: ", 14007, 20, 55, 60, 10
-    LTEXT "Τιμή: ", 14008, 130, 55, 45, 10
-    LISTBOX 14009,20,65,95,60, LBS_STANDARD | WS_TABSTOP | LBS_NOTIFY
-    EDITTEXT 14010, 130, 65, 95, 60, ES_LEFT | WS_BORDER | WS_VSCROLL | WS_GROUP | ES_MULTILINE | ES_READONLY
+    LTEXT "Έκδοση αρχείου: ", 14000, 10, 10, 55, 10
+    EDITTEXT 14001, 77, 10, 152, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER
+    LTEXT "Description: ", 14002, 10, 27, 45, 10
+    EDITTEXT 14003, 77, 27, 152, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER
+    LTEXT "Copyright: ", 14004, 10, 46, 66, 10
+    EDITTEXT 14005, 77, 46, 152, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER
+    GROUPBOX "Other version information: ", 14006, 6, 70, 222, 115
+    LTEXT "Item name: ", 14007, 13, 82, 50, 10
+    LTEXT "Value: ", 14008, 112, 82, 45, 10
+    LISTBOX 14009, 12, 94, 94, 83, LBS_STANDARD | WS_TABSTOP | LBS_NOTIFY
+    EDITTEXT 14010, 112, 93, 109, 83, ES_LEFT | WS_BORDER | WS_VSCROLL | WS_GROUP | ES_MULTILINE | ES_READONLY
 END
 
 IDD_DRIVE_PROPERTIES DIALOGEX 0, 0, 240, 230
@@ -357,14 +358,14 @@ BEGIN
     LTEXT "Προστασία του υπολογιστή απο μη εξουσιοδοτημένες ενέργειες προγραμμάτων", -1, 25, 57, 200, 10, WS_DISABLED
     CHECKBOX "Αυτή η επιλογή μπορεί να αποτρέψει ιούς να βλάψουν τον υπολογιστή σας αλλά επιλέγοντάς το μπορεί να κάνει κάποια προγράμματα να μην λειτουργούν σωστά.", 14001, 25, 68, 200, 30, WS_DISABLED | BS_MULTILINE
     CHECKBOX "Ο παρακάτω χρήστης:", 14002, 10, 100, 90, 10
-    LTEXT "Όνομα χρήστη:", -1, 20, 115, 60, 10
-    COMBOBOX 14003, 70, 115, 100, 15, CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
-    PUSHBUTTON "...", 14004, 180, 115, 30, 10, WS_TABSTOP
-    LTEXT "Κωδικός πρόσβασης:", -1, 20, 140, 60, 10
-    EDITTEXT 14005, 70, 140, 100, 10, ES_LEFT | WS_BORDER | WS_GROUP
-    PUSHBUTTON "...", 14006, 180, 140, 30, 10, WS_TABSTOP
-    PUSHBUTTON "OK", 14007, 70, 170, 60, 15, WS_TABSTOP
-    PUSHBUTTON "Άκυρο", 14008, 140, 170, 60, 15, WS_TABSTOP
+    LTEXT "User name:", -1, 20, 118, 54, 10
+    COMBOBOX 14003, 75, 115, 100, 15, CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
+    PUSHBUTTON "...", 14004, 180, 115, 30, 14, WS_TABSTOP
+    LTEXT "Password:", -1, 20, 143, 53, 10
+    EDITTEXT 14005, 74, 140, 100, 14, ES_LEFT | WS_BORDER | WS_GROUP
+    PUSHBUTTON "...", 14006, 180, 140, 30, 14, WS_TABSTOP
+    PUSHBUTTON "OK", 14007, 57, 170, 60, 14, WS_TABSTOP
+    PUSHBUTTON "Cancel", 14008, 122, 170, 60, 14, WS_TABSTOP
 END
 
 IDD_RECYCLE_BIN_PROPERTIES DIALOGEX 0, 0, 240, 190
@@ -373,12 +374,12 @@ CAPTION "Ιδιότητες κάδου ανακύκλωσης"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     CONTROL "", 14000, "SysListView32", LVS_REPORT | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP, 10, 10, 220, 50
-    GROUPBOX "Ρυθμίσεις για τον επιλεγμένο προορισμό", -1, 10, 80, 220, 70
-    RADIOBUTTON "&Προσαρμοσμένο μέγεθος:", 14001, 20, 90, 90, 10, WS_TABSTOP
-    EDITTEXT 14002, 110, 90, 50, 10, WS_TABSTOP | ES_NUMBER
-    LTEXT "Μέγιστο μέγεθος (MB):", -1, 20, 100, 100, 10
-    RADIOBUTTON "Να μην μετακινούνται τα αρχεία στον κάδο ανακυκλωσης. Να καταργούνται τα αρχεία μόλις διαγράφονται.", 14003, 20, 115, 170, 20, BS_MULTILINE | WS_TABSTOP
-    AUTOCHECKBOX "&Εμφάνιση παραθύρου για επιβεβαίωση διαγραφών", 14004, 20, 155, 155, 10, WS_TABSTOP
+    GROUPBOX "Settings for selected location", -1, 10, 72, 220, 70
+    RADIOBUTTON "&Προσαρμοσμένο μέγεθος:", 14001, 20, 90, 80, 10, WS_TABSTOP
+    EDITTEXT 14002, 106, 87, 50, 14, WS_TABSTOP | ES_NUMBER
+    LTEXT "M&aximum size(MB):", -1, 20, 105, 70, 10
+    RADIOBUTTON "Do not move files to the &Recycle Bin. Remove files immediately when deleted.", 14003, 20, 117, 170, 20, BS_MULTILINE | WS_TABSTOP
+    AUTOCHECKBOX "&Εμφάνιση παραθύρου για επιβεβαίωση διαγραφών", 14004, 20, 155, 140, 10, WS_TABSTOP
 END
 
 IDD_OPEN_WITH DIALOGEX 0, 0, 264, 256
@@ -391,10 +392,10 @@ BEGIN
     LTEXT "Αρχείο:    %s", 14001, 44, 25, 188, 20
     GROUPBOX "Προγράμματα", -1, 7, 42, 249, 187
     CONTROL "Programs", 14002, WC_TREEVIEW, WS_BORDER | WS_TABSTOP | TVS_SHOWSELALWAYS, 16 ,57, 230, 130
-    CHECKBOX "&Άνοιγμα αυτού του είδους αρχείου, πάντα με το επιλεγμένο πρόγραμμα", 14003, 20, 193, 225, 10
+    AUTOCHECKBOX "&Always use the selected program to open this kind of file", 14003, 20, 193, 225, 10
     PUSHBUTTON "&Αναζήτηση...", 14004, 198, 207, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 150, 236, 50, 14
-    PUSHBUTTON "Άκυρο", IDCANCEL, 206, 236, 50, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 206, 236, 50, 14
 END
 
 IDD_FOLDER_OPTIONS_GENERAL DIALOGEX 0, 0, 264, 256
@@ -441,15 +442,15 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT "Registered file &types:", -1, 7, 10, 70, 10
     CONTROL "", 14000, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 7, 20, 249, 80
-    PUSHBUTTON "&New", 14001, 120, 110, 50, 14, WS_TABSTOP
-    PUSHBUTTON "&Delete", 14002, 180, 110, 50, 14, WS_TABSTOP
+    PUSHBUTTON "&Νέο", 14001, 120, 110, 50, 14, WS_TABSTOP
+    PUSHBUTTON "&Διαγραφή", 14002, 180, 110, 50, 14, WS_TABSTOP
     GROUPBOX "Details for '%s' extension", 14003, 7, 130, 249, 70
-    LTEXT "Opens with:", -1, 12, 140, 40, 10
+    LTEXT "Ανοίγει με:", -1, 12, 140, 40, 10
     //ICON
     LTEXT "Appname", 14005, 100, 140, 40, 10
-    PUSHBUTTON "&Change...", 14006, 180, 140, 50, 14, WS_TABSTOP
+    PUSHBUTTON "&Αλλαγή...", 14006, 180, 140, 50, 14, WS_TABSTOP
     LTEXT "", 14007, 12, 155, 160, 30
-    PUSHBUTTON "Ad&vanced", 14008, 180, 175, 50, 14, WS_TABSTOP
+    PUSHBUTTON "Γ&ια Προχωρημένους", 14008, 180, 175, 50, 14, WS_TABSTOP
 END
 
 IDD_CONFIRM_FILE_REPLACE DIALOGEX 0, 0, 282, 143
@@ -563,7 +564,7 @@ BEGIN
     LTEXT "Maintains your session, keeping the computer running on low power with data still in memory. The computer wakes up when you press a key or move the mouse.", 8225, 39, 40, 167, 37
     DEFPUSHBUTTON "OK", 1, 7, 82, 60, 14, WS_GROUP
     PUSHBUTTON "Cancel", IDCANCEL, 75, 82, 60, 14
-    PUSHBUTTON "&Help", IDHELP, 144, 82, 60, 14
+    PUSHBUTTON "&Αρχείο", IDHELP, 144, 82, 60, 14
 END
 
 IDD_FORMAT_DRIVE DIALOGEX 50, 50, 184, 218
@@ -571,8 +572,8 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBL
 CAPTION "Format"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    DEFPUSHBUTTON "&Start", IDOK, 53, 198, 60, 14
-    PUSHBUTTON "&Close", IDCANCEL, 118, 198, 60, 14
+    DEFPUSHBUTTON "Έναρξη", IDOK, 53, 198, 60, 14
+    PUSHBUTTON "Κλείσημο", IDCANCEL, 118, 198, 60, 14
     LTEXT "Ca&pacity:", -1, 7, 6, 169, 9
     COMBOBOX 28673, 7, 17, 170, 200, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
     LTEXT "&File system", -1, 7, 35, 170, 9
@@ -596,7 +597,7 @@ BEGIN
     GROUPBOX "Check disk options", -1, 7, 6, 179, 40
     PUSHBUTTON "Cancel", IDCANCEL, 128, 95, 60, 14
     AUTOCHECKBOX "Automatically fix file system errors", 14000, 12, 15, 155, 10
-    AUTOCHECKBOX "&Scan for and attempt recovery of bad sectors", 14001, 16, 30, 165, 10
+    AUTOCHECKBOX "&Scan for and attempt recovery of bad sectors", 14001, 12, 30, 165, 10
     CONTROL "", 14002, "MSCTLS_PROGRESS32", 16, 7, 50, 179, 8
     LTEXT "", 14003, 60, 80, 170, 10
 END
@@ -607,7 +608,7 @@ CAPTION "Change Icon"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     LTEXT "Look for icons in this file:", -1, 7, 7, 179, 10
-    PUSHBUTTON "Browse...", IDC_BUTTON_PATH, 135, 17, 50, 14
+    PUSHBUTTON "Αναζήτηση...", IDC_BUTTON_PATH, 135, 17, 50, 14
     EDITTEXT IDC_EDIT_PATH, 7, 17, 123, 14, ES_AUTOHSCROLL
     LTEXT "Select an icon from the list below:", -1, 7, 36, 179, 10
     LISTBOX IDC_PICKICON_LIST, 7, 47, 181, 120, LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | LBS_DISABLENOSCROLL | WS_HSCROLL | WS_TABSTOP
@@ -717,7 +718,7 @@ BEGIN
     /* Run File dialog */
     IDS_RUNDLG_ERROR "Unable to display Run File dialog box (internal error)"
     IDS_RUNDLG_BROWSE_ERROR "Unable to display Browse dialog box (internal error)"
-    IDS_RUNDLG_BROWSE_CAPTION "Browse"
+    IDS_RUNDLG_BROWSE_CAPTION "Αναζήτηση"
     IDS_RUNDLG_BROWSE_FILTER "Executable Files (*.exe)\0*.exe\0All Files (*.*)\0*.*\0"
 
     /* shell folder path default values */
@@ -730,7 +731,7 @@ BEGIN
     IDS_STARTMENU "Start Menu"
     IDS_MYMUSIC "My Music"
     IDS_MYVIDEO "My Videos"
-    IDS_DESKTOPDIRECTORY "Desktop"
+    IDS_DESKTOPDIRECTORY "Επιφάνεια εργασίας"
     IDS_NETHOOD "NetHood"
     IDS_TEMPLATES "Templates"
     IDS_APPDATA "Application Data"
@@ -757,7 +758,7 @@ BEGIN
     IDS_DRIVE_NETWORK "Δίσκος δικτύου"
     IDS_DRIVE_FLOPPY "3.5 Floppy"
     IDS_DRIVE_REMOVABLE "Removable Disk"
-    IDS_FS_UNKNOWN "Unknown"
+    IDS_FS_UNKNOWN "Άγνωστη"
 
     /* Open With */
     IDS_OPEN_WITH "Άνοιγμαμε"
@@ -797,7 +798,7 @@ BEGIN
     IDS_TTF_FILE "TrueType Font file"
     IDS_OTF_FILE "OpenType Font file"
     IDS_HLP_FILE "Help File"
-    IDS_ICO_FILE "Icon"
+    IDS_ICO_FILE "Εικονίδιο"
     IDS_INI_FILE "Configuration Settings"
     IDS_LNK_FILE "Shortcut"
     IDS_PIF_FILE "NT VDM Program Information File"
@@ -806,16 +807,16 @@ BEGIN
     IDS_VXD_FILE "Virtual Device Driver"
     IDS_ANY_FILE "%s-file"
 
-    IDS_OPEN_VERB "Open"
+    IDS_OPEN_VERB "Άνοιγμα"
     IDS_EXPLORE_VERB "Explore"
     IDS_RUNAS_VERB "Run as..."
-    IDS_EDIT_VERB "Edit"
-    IDS_FIND_VERB "Find"
+    IDS_EDIT_VERB "Επεξεργασία"
+    IDS_FIND_VERB "Εύρεση"
     IDS_PRINT_VERB "Print"
 
     IDS_FILE_FOLDER "%u Files, %u Folders"
     IDS_PRINTERS "Printers"
-    IDS_FONTS "Fonts"
+    IDS_FONTS "Φ&ορμά"
     IDS_INSTALLNEWFONT "Install New Font..."
 
     IDS_DEFAULT_CLUSTER_SIZE "Default allocation size"
@@ -834,7 +835,7 @@ BEGIN
 
     IDS_BYTES_FORMAT "bytes"
     IDS_UNKNOWN_APP "Unknown application"
-    IDS_EXE_DESCRIPTION "Description:"
+    IDS_EXE_DESCRIPTION "Περιγραφή:"
 
     IDS_MENU_EMPTY "(Empty)"
     IDS_OBJECTS "%d Objects"
