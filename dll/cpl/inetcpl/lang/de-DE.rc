@@ -73,7 +73,7 @@ BEGIN
                     IDC_DELETE_HISTORY, 10, 88, 230, 40, BS_TOP | BS_MULTILINE
     AUTOCHECKBOX   "&Formulardaten\nBenutzernamen und andere Informationen, die Sie in Formulare eingegeben haben.",
                     IDC_DELETE_FORM_DATA, 10, 128, 230, 40, BS_TOP | BS_MULTILINE
-    AUTOCHECKBOX   "&Kennwörter\nGespeicherte Kennwörter, die Sie in Formulare eingegeben haben.",
+    AUTOCHECKBOX   "&Passwörter\nGespeicherte Passwörter, die Sie in Formulare eingegeben haben.",
                     IDC_DELETE_PASSWORDS, 10, 168, 230, 40, BS_TOP | BS_MULTILINE
     DEFPUSHBUTTON  "&Abbrechen", IDCANCEL, 185, 230, 60, 15, WS_GROUP
     PUSHBUTTON     "&Löschen", IDOK, 120, 230, 60, 15, WS_GROUP
