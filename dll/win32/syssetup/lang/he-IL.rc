@@ -1,4 +1,23 @@
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+/*
+ * Copyright (C) 2004 Filip Navara
+ * Copyright (C) 2004 Eric Kohl
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
@@ -62,11 +81,11 @@ BEGIN
     LTEXT "The system locale should match the language of the applications you want to use. The user locale controls how numbers, currencies, and dates appear.", IDC_STATIC, 53, 7, 253, 20
     LTEXT "", IDC_LOCALETEXT, 53, 29, 250, 16
     LTEXT "To change system or user locale settings, click Customize.", IDC_STATIC, 53, 60, 196, 8
-    PUSHBUTTON "&Customize...", IDC_CUSTOMLOCALE, 250, 57, 50, 14
+    PUSHBUTTON "התאם אישית...", IDC_CUSTOMLOCALE, 250, 57, 50, 14
     LTEXT "The keyboard layout controls the characters that appear when you type.", IDC_STATIC, 53, 86, 253, 8
     LTEXT "", IDC_LAYOUTTEXT, 53, 100, 250, 16
     LTEXT "To change the keyboard layout, click Customize.", IDC_STATIC, 53, 126, 184, 8
-    PUSHBUTTON "C&ustomize...", IDC_CUSTOMLAYOUT, 250, 122, 50, 14
+    PUSHBUTTON "התאמה אישית...", IDC_CUSTOMLAYOUT, 250, 122, 50, 14
 END
 
 IDD_DATETIMEPAGE DIALOGEX 0, 0, 317, 143
@@ -85,7 +104,7 @@ END
 
 IDD_THEMEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "התקנת ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     PUSHBUTTON "Lautus theme", IDC_THEMEDSTYLE, 18,12, 130,120, BS_AUTORADIOBUTTON|BS_PUSHLIKE
@@ -144,8 +163,9 @@ BEGIN
     IDS_DATETIMESUBTITLE "Set the correct date and time for your computer."
     IDS_PROCESSTITLE "רושם מרכיבים"
     IDS_PROCESSSUBTITLE "נא להמתין..."
-    IDS_THEMESELECTIONTITLE "Appearance"
+    IDS_THEMESELECTIONTITLE "מראה"
     IDS_THEMESELECTIONSUBTITLE "Select the theme you prefer."
+
 END
 
 STRINGTABLE
