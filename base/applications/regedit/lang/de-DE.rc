@@ -1,4 +1,4 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -311,10 +311,10 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_ERROR "Fehler"
+    IDS_ERROR "ERROR"
     IDS_WARNING "Warnung"
     IDS_BAD_KEY "Kann den Schlüssel '%s' nicht lesen"
-    IDS_BAD_VALUE "Kann den Wert '%s' nicht lesen"
+    IDS_BAD_VALUE "Ungültiger Wert für Option %s, Erlaubter Bereich ist von %u bis %u.\n"
     IDS_UNSUPPORTED_TYPE "Kann den Schlüssel des Typs (%ld) nicht ändern"
     IDS_TOO_BIG_VALUE "Der Wert (%ld) ist zu groß"
     IDS_MULTI_SZ_EMPTY_STRING "Daten vom Typ REG_MULTI_SZ können keine leere Zeichenkette enthalten.\nDie leere Zeichenkette wurde aus der Liste gelöscht."
@@ -512,16 +512,16 @@ BEGIN
     GROUPBOX "Suche in", IDC_STATIC, 7, 25, 63, 51
     LTEXT "Suche &nach:", IDC_STATIC, 7, 8, 37, 10
     EDITTEXT IDC_FINDWHAT, 47, 7, 142, 13, ES_AUTOHSCROLL
-    CONTROL "&Schlüssel", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 14, 36, 45, 8
-    CONTROL "&Werte", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Keys", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 14, 36, 35, 8
+    CONTROL "&Values", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 48, 36, 8
-    CONTROL "&Daten", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Data", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 60, 42, 8
-    CONTROL "Nur &ganze Zeichenkette", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &whole string only", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 32, 94, 13
-    CONTROL "Groß-/Kleinschreibung beachten", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 83, 48, 120, 12
+    CONTROL "Match &case", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 83, 48, 90, 12
 END
 
 IDD_FINDING DIALOGEX 0, 0, 145, 50
@@ -531,14 +531,14 @@ FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     ICON IDI_REGEDIT, IDC_STATIC, 7, 7, 20, 20
     DEFPUSHBUTTON "&Abbrechen", IDCANCEL, 93, 29, 45, 14
-    LTEXT "Durchsuche die Registry...", IDC_STATIC, 33, 12, 85, 8
+    LTEXT "Durchsuche die Registry...", IDC_STATIC, 33, 12, 83, 8
 END
 
 /* String Table */
 /*
  *STRINGTABLE
  *BEGIN
- *    ID_HELP_HELPTOPICS "Öffnet die Hilfe."
- *    ID_HELP_ABOUT "Zeigt Programmname, Version und Copyright an"
+ *    ID_HELP_HELPTOPICS "Opens Registry Editor Help."
+ *    ID_HELP_ABOUT "Displays program information, version number, and copyright."
  *END
  */
