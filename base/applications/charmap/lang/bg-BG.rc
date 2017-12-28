@@ -1,7 +1,4 @@
-/* Превод на Български/ Bulgarian translation */
-/* http://www.reactos.org/wiki/Bulgarian_translation */
-
-LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_BULGARIAN, SUBLANG_BULGARIAN_BULGARIA
 
 IDD_CHARMAP DIALOGEX 6, 6, 292, 224
 FONT 8, "MS Shell Dlg", 0, 0
@@ -18,7 +15,7 @@ BEGIN
             WS_CHILD | WS_VISIBLE | WS_TABSTOP, 74, 186, 114, 13
     DEFPUSHBUTTON "Избор", IDC_SELECT, 194, 186, 44, 13
     PUSHBUTTON "Запомняне", IDC_COPY, 242, 186, 44, 13, WS_DISABLED
-    CONTROL "Разширен изглед", IDC_CHECK_ADVANCED, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Ad&vanced view", IDC_CHECK_ADVANCED, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 8, 208, 95, 10
 END
 
