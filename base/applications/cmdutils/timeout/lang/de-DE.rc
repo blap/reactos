@@ -21,13 +21,13 @@ Parameters:\n\
 \n\
     /NOBREAK  Ignore all keyboard input except for Ctrl+C.\n\
 "
-    IDS_ERROR_OUT_OF_RANGE "ERROR: The timer value must be within range (-1 to 99999).\n"
+    IDS_ERROR_OUT_OF_RANGE "FEHLER: Der Timerwert muss im erlaubten Bereich sein (-1 bis 99999).\n"
     IDS_ERROR_INVALID_HANDLE_VALUE "ERROR: Unable to get the standard handle for the console (error %lu).\n"
-    IDS_ERROR_READ_INPUT "ERROR: Unable to read the console input (error %lu).\n"
-    IDS_ERROR_NO_TIMER_VALUE "ERROR: The timer value must be specified (-1 to 99999).\n"
-    IDS_ERROR_ONE_TIME "ERROR: Only one timer value is needed.\n"
-    IDS_NOBREAK_INPUT "Press Ctrl+C to quit..."
-    IDS_USER_INPUT "Press any key to continue..."
-    IDS_NOBREAK_INPUT_COUNT "Waiting for %d second(s), press Ctrl+C to quit..."
-    IDS_USER_INPUT_COUNT "Waiting for %d second(s), press any key to continue..."
+    IDS_ERROR_READ_INPUT "FEHLER: Konnte Konsoleneingabe nicht lesen (Fehler %lu).\n"
+    IDS_ERROR_NO_TIMER_VALUE "FEHLER: Der Timerwert muss angegeben sein (-1 bis 99999).\n"
+    IDS_ERROR_ONE_TIME "FEHLER: Nur ein Timerwert ist erforderlich.\n"
+    IDS_NOBREAK_INPUT "Drücken Sie Strg + C zum beenden..."
+    IDS_USER_INPUT "Drücken Sie eine beliebige Taste..."
+    IDS_NOBREAK_INPUT_COUNT "Warten für %d Sekunde(n), drücken Sie Strg + C zum beenden..."
+    IDS_USER_INPUT_COUNT "Warten für %d Sekunde(n), drücken Sie eine beliebige Taste um fortzufahren..."
 END
