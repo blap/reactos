@@ -1,12 +1,4 @@
-/*
- * PROJECT:    ReactOS ReactOS Applications Manager
- * LICENSE:    GPL - See COPYING in the top level directory
- * FILE:       base/applications/rapps/lang/uk-UA.rc
- * PURPOSE:    Ukraianian Language File for ReactOS ReactOS Applications Manager
- * TRANSLATOR: Sakara Yevhen, Igor Paliychuk
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDR_MAINMENU MENU
 BEGIN
@@ -99,7 +91,7 @@ BEGIN
 END
 
 IDD_DOWNLOAD_DIALOG DIALOGEX 0, 0, 220, 220
-STYLE DS_SHELLFONT | DS_CENTER | WS_POPUPWINDOW | WS_SYSMENU | WS_VISIBLE
+STYLE DS_SHELLFONT | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION | WS_VISIBLE 
 CAPTION "Завантаження %ls..."
 FONT 8, "MS Shell Dlg"
 BEGIN
