@@ -1,0 +1,28 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+BEGIN
+    IDS_APPTITLE "Gambar ReactOS dan Penampil Fax"
+    IDS_SETASDESKBG "Atur sebagai Latar belakang Dekstop"
+    IDS_PREVIEW "Pratinjau"
+    /* Tooltips */
+    IDS_TOOLTIP_NEXT_PIC "Gambar Berikutnya"
+    IDS_TOOLTIP_PREV_PIC "Gambar Sebelumnya"
+    IDS_TOOLTIP_ZOOM_IN "Perbesar (+)"
+    IDS_TOOLTIP_ZOOM_OUT "Perkecil (-)"
+    IDS_TOOLTIP_ROT_CLOCKW "Putar searah jarum jam (Ctrl+K)"
+    IDS_TOOLTIP_ROT_COUNCW "Putar berlawanan arah jarum jam (Ctrl+K)"
+    IDS_TOOLTIP_PRINT "Cetak (Ctrl+P)"
+    IDS_TOOLTIP_SAVEAS "Simpan Sebagai... (Ctrl+S)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_EMF_FILE    "Gambar EMF"
+    IDS_GIF_FILE    "Gambar GIF"
+    IDS_JPG_FILE    "Gambar JPEG"
+    IDS_BMP_FILE    "Gambar Bitmap"
+    IDS_PNG_FILE    "Gambar PNG"
+    IDS_TIF_FILE    "Gambar TIF"
+    IDS_WMF_FILE    "Gambar WMF"
+END
