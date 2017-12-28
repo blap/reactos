@@ -1,11 +1,11 @@
-LANGUAGE LANG_GREEK, SUBLANG_DEFAULT
+LANGUAGE LANG_GREEK, SUBLANG_GREEK_GREECE
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "Εγκατάσταση Συσκευών"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Καλώς ήλθατε", IDC_WELCOMETITLE, 120, 8, 195, 16
+    LTEXT "Καλώς ήλθατε", IDC_WELCOMETITLE, 120, 8, 195, 24
     LTEXT "Αυτός ο βοηθός εγκαθιστά έναν οδηγό συσκευής για το:", IDC_STATIC, 120, 21, 195, 16
     LTEXT "Πατήστε 'Επόμενο' για να συνεχίσετε.", IDC_STATIC, 120, 169, 195, 16
     LTEXT "ΑΓΝΩΣΤΗ ΣΥΣΚΕΥΗ", IDC_DEVICE, 148, 36, 147, 12
