@@ -1,6 +1,4 @@
-/* French translation by Sylvain Petreolle */
-
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 STRINGTABLE
 BEGIN
@@ -35,6 +33,7 @@ BEGIN
     IDS_RESOURCE_PORT "I/O range"
 END
 
+/* error messages, source: http://www.z123.org/techsupport/medm.htm */
 STRINGTABLE
 BEGIN
     IDS_DEV_NO_PROBLEM "Ce périphérique fonctionne correctement."
@@ -65,9 +64,9 @@ BEGIN
     IDS_DEV_DISABLED "Ce périphérique n'est pas démarré."
     IDS_DEV_DISABLED2 "Ce périphérique est désactivé."
     IDS_DEV_DEVLOADER_NOT_READY "Les chargeurs de ce périphérique ne peuvent pas charger les drivers requis."
-    IDS_DEV_DEVLOADER_NOT_READY2 "" /* unused */
+    IDS_DEV_DEVLOADER_NOT_READY2 """ /* unused */
     IDS_DEV_DEVLOADER_NOT_READY3 "" /* unused */
-    IDS_DEV_DEVICE_NOT_THERE "Ce périphérique est soit non présent, soit ne fonctionne pas correctement, ou n'a pas tous les pilotes installés."
+    IDS_DEV_DEVICE_NOT_THERE ""Ce périphérique est soit non présent, soit ne fonctionne pas correctement, ou n'a pas tous les pilotes installés."
     IDS_DEV_MOVED "ReactOS est en train de mettre en place ce périphérique."
     IDS_DEV_TOO_EARLY "ReactOS est en train de mettre en place ce périphérique."
     IDS_DEV_NO_VALID_LOG_CONF "ReactOS ne peut pas spécifier des ressources pour ce périphérique."
@@ -135,7 +134,7 @@ BEGIN
     LTEXT "", IDC_MANUFACTURER, 14, 88, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_LOCATION, 14, 100, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_STATUS, 14, 112, 183, 30
-    PUSHBUTTON "&Dépannage...", IDC_TROUBLESHOOT, 85, 140, 54, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
+    PUSHBUTTON "Dépannage...", IDC_TROUBLESHOOT, 80, 140, 60, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
     PUSHBUTTON "P&ropriétés", IDC_PROPERTIES, 146, 140, 50, 14
 END
 
@@ -167,13 +166,13 @@ BEGIN
     ICON "", IDC_DEVICON, 7, 7, 20, 20
     LTEXT "", IDC_DEVNAME, 37, 9, 174, 16, SS_NOPREFIX
     LTEXT "Fournisseur :", -1, 37, 39, 60, 8, SS_NOPREFIX
-    EDITTEXT IDC_DRVPROVIDER, 120, 39, 146, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT IDC_DRVPROVIDER, 100, 39, 146, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     LTEXT "Date du Pilote :", -1, 37, 53, 60, 8, SS_NOPREFIX
-    EDITTEXT IDC_DRVDATE, 120, 53, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT IDC_DRVDATE, 100, 53, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     LTEXT "Version du Pilote :", -1, 37, 67, 60, 8, SS_NOPREFIX
-    EDITTEXT IDC_DRVVERSION, 120, 67, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Signature numérique :", -1, 37, 81, 80, 8, SS_NOPREFIX
-    EDITTEXT IDC_DIGITALSIGNER, 120, 81, 126, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT IDC_DRVVERSION, 100, 67, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "Signature numérique :", -1, 37, 81, 60, 8, SS_NOPREFIX
+    EDITTEXT IDC_DIGITALSIGNER, 100, 81, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     PUSHBUTTON "&Détails...", IDC_DRIVERDETAILS, 7, 106, 75, 15
     LTEXT "Voir les détails à propos des fichiers du Pilote.", -1, 91, 110, 154, 17, SS_NOPREFIX
     PUSHBUTTON "&Update Driver...", IDC_UPDATEDRIVER, 7, 126, 75, 15
@@ -197,8 +196,8 @@ BEGIN
     EDITTEXT IDC_FILEVERSION, 66, 150, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     LTEXT "Copyright:", -1, 14, 166, 50, 8
     EDITTEXT IDC_FILECOPYRIGHT, 66, 166, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Signature numérique :", -1, 14, 182, 80, 8
-    EDITTEXT IDC_DIGITALSIGNER, 96, 182, 125, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "Signature numérique :", -1, 14, 182, 50, 8
+    EDITTEXT IDC_DIGITALSIGNER, 66, 182, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     DEFPUSHBUTTON "OK", IDOK, 167, 208, 50, 14
 END
 
@@ -217,7 +216,7 @@ END
 
 IDD_DEVICERESOURCES DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
-CAPTION "Resources"
+CAPTION "Ressources"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_DEVICON, 7, 7, 20, 20
@@ -230,13 +229,12 @@ END
 
 IDD_DEVICEPOWER DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
-CAPTION "Power"
+CAPTION "Puissance"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_DEVICON, 7, 7, 20, 20
     LTEXT "", IDC_DEVNAME, 37, 9, 174, 16, SS_NOPREFIX
 END
-
 
 
 /*
@@ -245,9 +243,9 @@ END
 
 IDR_MAINMENU MENU
 BEGIN
-  POPUP "&File"
+  POPUP "&Fichier"
   BEGIN
-    MENUITEM "E&xit",                       IDC_EXIT
+    MENUITEM "&Quitter",                       IDC_EXIT
   END
   MENUITEM "Action",                        IDC_ACTIONMENU
   POPUP "View"
@@ -275,22 +273,22 @@ END
 STRINGTABLE DISCARDABLE
 BEGIN
   IDS_MENU_UPDATE           "Update driver software..."
-  IDS_MENU_ENABLE           "Enable"
+  IDS_MENU_ENABLE           "Activée"
   IDS_MENU_DISABLE          "Disable"
-  IDS_MENU_UNINSTALL        "Uninstall"
+  IDS_MENU_UNINSTALL        "Désinstaller"
   IDS_MENU_SCAN             "Scan for hardware changes"
   IDS_MENU_ADD              "Add hardware"
-  IDS_MENU_PROPERTIES       "Properties"
+  IDS_MENU_PROPERTIES       "Propriétés"
 END
 
 STRINGTABLE DISCARDABLE
 BEGIN
-  IDS_TOOLTIP_PROPERTIES    "Properties"
+  IDS_TOOLTIP_PROPERTIES    "Propriétés"
   IDS_TOOLTIP_SCAN          "Scan for hardware changes"
-  IDS_TOOLTIP_ENABLE        "Enable"
+  IDS_TOOLTIP_ENABLE        "Activée"
   IDS_TOOLTIP_DISABLE       "Disable"
   IDS_TOOLTIP_UPDATE        "Update Driver Software"
-  IDS_TOOLTIP_UNINSTALL     "Uninstall"
+  IDS_TOOLTIP_UNINSTALL     "Désinstaller"
 END
 
 /* Hints */
@@ -305,7 +303,7 @@ BEGIN
   IDS_HINT_UNINSTALL    " Uninstalls the driver for the selected device."
   IDS_HINT_ADD          " Adds a legacy (non-Plug and Play) device to the computer." 
   IDS_HINT_ABOUT        " About ReactOS Device Manager."
-  IDS_HINT_EXIT         " Exits the program."
+  IDS_HINT_EXIT         " Quitte le programme."
 
   IDS_HINT_DEV_BY_TYPE  " Displays devices by hardware type."
   IDS_HINT_DEV_BY_CONN  " Displays devices by connection."
@@ -313,11 +311,10 @@ BEGIN
   IDS_HINT_RES_BY_CONN  " Displays resources by connection type."
   IDS_HINT_SHOW_HIDDEN  " Displays legacy devices and devices that are no longer installed."
 
-  IDS_HINT_SYS_RESTORE  " Restores this window to normal size."
-  IDS_HINT_SYS_MOVE     " Moves this window."
-  IDS_HINT_SYS_SIZE     " Resizes this window."
-  IDS_HINT_SYS_MINIMIZE " Collapses this window to an icon."
-  IDS_HINT_SYS_MAXIMIZE " Expands this window to fill this screen."
-  IDS_HINT_SYS_CLOSE    " Closes this window."
+  IDS_HINT_SYS_RESTORE  " Restaurer la taille de la fenêtre."
+  IDS_HINT_SYS_MOVE     " Déplacer la fenêtre."
+  IDS_HINT_SYS_SIZE     " Retailler la fenêtre."
+  IDS_HINT_SYS_MINIMIZE " Réduire la fenêtre."
+  IDS_HINT_SYS_MAXIMIZE " Agrandir la fenêtre en plein écran."
+  IDS_HINT_SYS_CLOSE    " Ferme la fenêtre."
 END
-
