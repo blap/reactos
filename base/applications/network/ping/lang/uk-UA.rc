@@ -1,10 +1,10 @@
 /*
- * FILE:        base/applications/network/ping/lang/uk-UA.rc
- * PURPOSE:     Ukranian translations for ReactOS Ping Command
+ * FILE:        base/applications/network/ping/lang/es-US.rc
+ * PURPOSE:     English translations for ReactOS Ping Command
  * TRANSLATORS:
  */
 
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 STRINGTABLE
 BEGIN
