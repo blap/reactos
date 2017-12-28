@@ -1,7 +1,4 @@
-/* Spanish Language resource file.
- * Translated by: ?? and Ismael Ferreras Morezuelas <2014-11-07> */
-
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -172,8 +169,8 @@ BEGIN
     LTEXT "&Información del valor:", IDC_STATIC, 6, 35, 161, 8
     EDITTEXT IDC_VALUE_DATA, 6, 46, 240, 102, ES_AUTOHSCROLL | ES_MULTILINE |
              ES_WANTRETURN | ES_AUTOVSCROLL | WS_VSCROLL
-    DEFPUSHBUTTON "Aceptar", IDOK, 142, 64, 50, 14
-    PUSHBUTTON "Cancelar", IDCANCEL, 196, 64, 50, 14
+    DEFPUSHBUTTON "Aceptar", IDOK, 142, 154, 50, 14
+    PUSHBUTTON "Cancelar", IDCANCEL, 196, 154, 50, 14
 END
 
 IDD_EDIT_BIN_DATA DIALOGEX 32, 24, 252, 174
@@ -317,7 +314,7 @@ BEGIN
     IDS_ERROR "Error"
     IDS_WARNING "Aviso"
     IDS_BAD_KEY "No puede averiguar el valor de la clave '%s'"
-    IDS_BAD_VALUE "No se puede averiguar el valor de '%s'"
+    IDS_BAD_VALUE "El valor para la opción %s no es válido, debe de estar entre %u y %u.\n"
     IDS_UNSUPPORTED_TYPE "No se pueden editar claves de este tipo (%ld)"
     IDS_TOO_BIG_VALUE "El valor es demasiado grande (%ld)"
     IDS_MULTI_SZ_EMPTY_STRING "Los datos de tipo REG_MULTI_SZ no pueden contener líneas vacías.\nLas líneas vacías han sido eliminadas."
@@ -465,10 +462,10 @@ IDD_EXPORTRANGE DIALOGEX 50, 50, 370, 50
 STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_BORDER
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Intervalo de exportación ", IDC_STATIC, 2, 0, 276, 48
-    CONTROL "&Todos", IDC_EXPORT_ALL, "Button", BS_AUTORADIOBUTTON, 10, 10, 35, 11
+    GROUPBOX "Intervalo de exportación ", IDC_STATIC, 2, 0, 366, 48
+    CONTROL "&Todos", IDC_EXPORT_ALL, "Button", BS_AUTORADIOBUTTON, 10, 10, 29, 11
     CONTROL "&Rama seleccionada", IDC_EXPORT_BRANCH, "Button", BS_AUTORADIOBUTTON, 10, 22, 100, 11
-    EDITTEXT IDC_EXPORT_BRANCH_TEXT, 25, 34, 245, 12
+    EDITTEXT IDC_EXPORT_BRANCH_TEXT, 30, 34, 335, 12
 END
 
 IDD_LOADHIVE DIALOGEX 0, 0, 193, 34
@@ -489,7 +486,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON "Aceptar", IDOK, 129, 7, 50, 14
     PUSHBUTTON "Cancelar", IDCANCEL, 129, 24, 50, 14
-    LTEXT "Nombre de &favorito:", IDC_STATIC, 7, 7, 90, 10
+    LTEXT "Nombre de &favorito:", IDC_STATIC, 7, 7, 70, 10
     EDITTEXT IDC_FAVORITENAME, 7, 26, 110, 13, ES_AUTOHSCROLL
 END
 
@@ -500,7 +497,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON "Aceptar", IDOK, 107, 114, 50, 14
     PUSHBUTTON "Cancelar", IDCANCEL, 7, 114, 50, 14
-    CONTROL "Lista1", IDC_FAVORITESLIST, "SysListView32", LVS_LIST | WS_BORDER |
+    CONTROL "List1", IDC_FAVORITESLIST, "SysListView32", LVS_LIST | WS_BORDER |
             WS_TABSTOP, 7, 20, 150, 90
     LTEXT "Seleccionar favoritos:", IDC_STATIC, 7, 7, 99, 12
 END
@@ -510,20 +507,20 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Buscar"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    DEFPUSHBUTTON "Buscar &siguiente", IDOK, 187, 7, 60, 14
-    PUSHBUTTON "Cancelar", IDCANCEL, 187, 24, 60, 14
+    DEFPUSHBUTTON "&Buscar siguiente", IDOK, 197, 7, 50, 14
+    PUSHBUTTON "Cancelar", IDCANCEL, 197, 24, 50, 14
     GROUPBOX "Buscar en ", IDC_STATIC, 7, 25, 63, 51
-    LTEXT "&Buscar:", IDC_STATIC, 7, 8, 30, 10
-    EDITTEXT IDC_FINDWHAT, 40, 7, 142, 13, ES_AUTOHSCROLL
-    CONTROL "&Claves", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
+    LTEXT "&Buscar:", IDC_STATIC, 7, 8, 37, 10
+    EDITTEXT IDC_FINDWHAT, 47, 7, 142, 13, ES_AUTOHSCROLL
+    CONTROL "&Keys", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 36, 35, 8
-    CONTROL "&Valores", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Values", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 48, 36, 8
-    CONTROL "&Datos", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Data", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 60, 42, 8
-    CONTROL "Sólo c&adenas completas", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &whole string only", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 32, 94, 13
-    CONTROL "Coincidencia e&xacta", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &case", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 48, 90, 12
 END
 
@@ -541,7 +538,7 @@ END
 /*
  *STRINGTABLE
  *BEGIN
- *    ID_HELP_HELPTOPICS "Abre la ayuda del Editor de registro."
- *    ID_HELP_ABOUT "Despliega información del programa, versión y licencia."
+ *    ID_HELP_HELPTOPICS "Opens Registry Editor Help."
+ *    ID_HELP_ABOUT "Displays program information, version number, and copyright."
  *END
  */
