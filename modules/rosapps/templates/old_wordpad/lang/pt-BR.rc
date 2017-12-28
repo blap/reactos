@@ -1,0 +1,169 @@
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+
+IDR_MAINMENU MENU
+BEGIN
+  POPUP "&Arquivo"
+  BEGIN
+    MENUITEM "&Novo...",         ID_NEW
+    MENUITEM "&Abrir...",        ID_OPEN
+    MENUITEM SEPARATOR
+    MENUITEM "&Fechar\tCtrl+F4", ID_CLOSE, GRAYED
+    MENUITEM "F&echar tudo",      ID_CLOSEALL, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "&Salvar",           ID_SAVE, GRAYED
+    MENUITEM "Salvar &como...",     ID_SAVEAS, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Visualização de im&pressão",  ID_PRINTPRE, GRAYED
+    MENUITEM "&Imprimir...",       ID_PRINT, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "C&onfigurar página...",  ID_PAGESETUP, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Sai&r\tAlt+F4",   ID_EXIT
+  END
+  POPUP "&Editar"
+  BEGIN
+    MENUITEM "&Desfazer",           ID_UNDO, GRAYED
+    MENUITEM "&Refazer",           ID_REDO, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Recor&tar",            ID_CUT, GRAYED
+    MENUITEM "&Copy",           ID_COPY, GRAYED
+    MENUITEM "&Paste",          ID_PASTE, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Limpar",           -1, GRAYED
+    MENUITEM "Select &All",     ID_SELALL, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Limpar",-1, GRAYED
+    MENUITEM "Limpar",       -1, GRAYED
+    MENUITEM "Limpar", -1, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Limpar",-1, GRAYED
+    MENUITEM "Limpar",          -1, GRAYED
+  END
+  POPUP "&Exibir"
+  BEGIN
+    MENUITEM "&Barra de Ferramentas",        -1, CHECKED
+    MENUITEM "&Barra de Ferramentas",     -1, CHECKED
+    MENUITEM "&Barra de Ferramentas",          -1, CHECKED
+    MENUITEM "&Barra de status",     ID_STATUSBAR, CHECKED
+  END
+  POPUP "&Inserir"
+  BEGIN
+    MENUITEM "&Data e Hora...",-1, GRAYED
+    MENUITEM "&Data e Hora...",       -1, GRAYED
+  END
+  POPUP "&Format"
+  BEGIN
+    MENUITEM "&Fonte...",        -1 GRAYED
+    MENUITEM "Bulletstyle",     -1, GRAYED
+    MENUITEM "Bulletstyle",    -1, GRAYED
+    MENUITEM "Bulletstyle",         -1, GRAYED
+  END
+  POPUP "&Janela"
+  BEGIN
+    MENUITEM "Em &cascata",           ID_WINDOW_CASCADE
+    MENUITEM "Lado a lado &horizontalmente", ID_WINDOW_TILE_HORZ
+    MENUITEM "Lado a lado &verticalmente",   ID_WINDOW_TILE_VERT
+    MENUITEM "&Organizar ícones",     ID_WINDOW_ARRANGE
+    MENUITEM SEPARATOR
+    MENUITEM "Nex&t\tCtrl+F6",     ID_WINDOW_NEXT
+  END
+  POPUP "&Ajuda"
+  BEGIN
+    MENUITEM "&Sobre...",       ID_ABOUT
+  END
+END
+
+IDR_POPUP MENU
+BEGIN
+  POPUP "popup"
+  BEGIN
+
+    MENUITEM SEPARATOR
+
+  END
+END
+
+
+IDD_NEWDOCSEL DIALOGEX 6,6,159,67
+CAPTION "Novo"
+FONT 8, "MS Shell Dlg",0,0
+STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | DS_MODALFRAME
+BEGIN
+  LTEXT "Novo tipo de documento:", IDC_STATIC, 4, 3, 72, 9
+  LISTBOX IDC_LIST, 4, 16, 104, 46, WS_TABSTOP
+  PUSHBUTTON "&OK", IDOK, 112, 16, 44, 13
+  PUSHBUTTON "&Cancelar", IDCANCEL, 112, 33, 44, 13
+END
+
+
+IDD_ABOUTBOX DIALOGEX 22,16,190,182
+CAPTION "Sobre WordPad"
+FONT 8, "MS Shell Dlg",0,0
+STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | DS_MODALFRAME
+BEGIN
+  LTEXT "WordPad II v0.1\nCopyright (C) 2006\nGed Murphy (gedmurphy@gmail.com)", IDC_STATIC, 48, 7, 150, 36
+  PUSHBUTTON "Fechar", IDOK, 65, 162, 44, 15
+  ICON IDI_ICON, IDC_STATIC, 10, 10, 7, 30
+  EDITTEXT IDC_LICENSE_EDIT, 8, 40, 174, 110, WS_VISIBLE | WS_VSCROLL | WS_TABSTOP | ES_READONLY | ES_MULTILINE
+END
+
+
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_LICENSE           "Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo sob os termos da GNU General Public License conforme publicada pela Free Software Foundation; quer a versão 2 da licença, ou (conforme você escolha) qualquer versão posterior.\r\n\r\nEste programa é distribuído com a esperança de que seja útil, mas SEM QUALQUER GARANTIA; até mesmo sem a garantia implícita de MERCANTIBILIDADE ou ADEQUAÇÃO A UM DETERMINADO PROPÓSITO. Para mais detalhes, veja a GNU General Public License.\r\n\r\nVocê deve ter recebido uma cópia da GNU General Public License juntamente com este programa; caso contrário, escreva para a Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+  IDS_DEFAULT_NAME      "Documento %1!u!"
+  IDS_READY             " Pronto."
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_DOC_TYPE_RICH_TEXT    "Rich Text Document"
+  IDS_DOC_TYPE_UNICODE_TEXT "Documento de texto"
+  IDS_DOC_TYPE_TEXT         "Documento de Texto Unicode"
+END
+
+
+
+/* Tooltips */
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_TOOLTIP_NEW       "Novo"
+  IDS_TOOLTIP_OPEN      "Abrir"
+  IDS_TOOLTIP_SAVE      "Salvar"
+  IDS_TOOLTIP_PRINTPRE  "Visualização de impressão"
+  IDS_TOOLTIP_PRINT     "Imprimir"
+  IDS_TOOLTIP_CUT       "Recortar"
+  IDS_TOOLTIP_COPY      "Copiar"
+  IDS_TOOLTIP_PASTE     "Inserir"
+  IDS_TOOLTIP_UNDO      "Desfazer"
+  IDS_TOOLTIP_REDO      "Refazer"
+END
+
+/* Hints */
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_HINT_BLANK        " "
+  IDS_HINT_NEW          " Cria um novo documento."
+  IDS_HINT_OPEN         " Abre um documento existente."
+  IDS_HINT_CLOSE        " Closes this window."
+  IDS_HINT_CLOSEALL     " Fecha todas as janelas."
+  IDS_HINT_SAVE         " Salva o documento ativo."
+  IDS_HINT_SAVEAS       " Salva o documento ativo com um novo nome."
+  IDS_HINT_PRINT        " Imprime o documento ativo."
+  IDS_HINT_PRINTPRE     " Visualiza o documento impesso."
+  IDS_HINT_PAGESETUP    " Alterar configurações de layout de página."
+  IDS_HINT_EXIT         " Sair desse aplicativo."
+
+  IDS_HINT_CASCADE      " Organiza as janelas para que se sobreponham."
+  IDS_HINT_TILE_HORZ    " Arrange windows as non-overlapping tiles."
+  IDS_HINT_TILE_VERT    " Arrange windows as non-overlapping tiles."
+  IDS_HINT_ARRANGE      " Organiza os ícones na parte inferior da janela."
+  IDS_HINT_NEXT         " Ativa a próxima janela."
+
+  IDS_HINT_SYS_RESTORE  " Restaura a janela para o tamanho normal."
+  IDS_HINT_SYS_MOVE     " Move essa janela."
+  IDS_HINT_SYS_SIZE     " Redimensiona essa janela."
+  IDS_HINT_SYS_MINIMIZE " Collapses this window to an icon."
+  IDS_HINT_SYS_MAXIMIZE " Expande essa janela para preencher essa tela."
+END
+
