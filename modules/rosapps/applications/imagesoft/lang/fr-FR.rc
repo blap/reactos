@@ -1,4 +1,4 @@
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 STRINGTABLE DISCARDABLE
 BEGIN
@@ -58,12 +58,12 @@ BEGIN
     MENUITEM SEPARATOR
     MENUITEM "Rendre flou",                ID_BLUR
     MENUITEM "Accentuer",             ID_SHARPEN
-    MENUITEM "Lisser les bords",        -1, GRAYED
-    MENUITEM "Ajouter une ombre",          -1, GRAYED
+    MENUITEM "Tourner",        -1, GRAYED
+    MENUITEM "Tourner",          -1, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Taille de l'image...",       -1, GRAYED
-    MENUITEM "Retourner",                -1, GRAYED
-    MENUITEM "Inverser",              -1, GRAYED  // FIXME : Pourrait-être amélioré pour mieux dégager le sens de "mirror"
+    MENUITEM "Tourner",       -1, GRAYED
+    MENUITEM "Tourner",                -1, GRAYED
+    MENUITEM "Tourner",              -1, GRAYED
     MENUITEM "Tourner",              -1, GRAYED
 
   END
