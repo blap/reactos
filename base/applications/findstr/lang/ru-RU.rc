@@ -1,13 +1,13 @@
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "FINDSTR: Поиск строк в файлах.\n\n\
-  FINDSTR [/V] [/C] [/N] [/I] ""строка"" [[диск:][путь]имя_файла[ ...]]\n\
-    /V  Вывод всех строк, НЕ содержащих заданную строку.\n\
-    /C  Вывод только общего числа строк, содержащих заданную строку.\n\
-    /N  Вывод номеров отображаемых строк.\n\
-    /I  Поиск без учета регистра символов."
+    IDS_USAGE "FINDSTR: Prints all lines of a file that contain a string.\n\n\
+  FIND [ /C ] [ /I ] [ /N ] [ /V ] """string""" [ file... ]\n\
+    /C  Count the number of lines that contain string\n\
+    /I  Ignore case\n\
+    /N  Number the displayed lines, starting at 1\n\
+    /V  Print lines that do not contain the string"
     IDS_NO_SUCH_FILE "FINDSTR: %s: Файл не существует.\n"
     IDS_CANNOT_OPEN "FINDSTR: %s: Невозможно открыть файл.\n"
 END
