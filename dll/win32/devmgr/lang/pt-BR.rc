@@ -1,6 +1,4 @@
-/* Brazilian Portuguese translation by Marcelo Zamperetti, 2007-07-21 */
-
-LANGUAGE LANG_PORTUGUESE, SUBLANG_NEUTRAL
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
 
 STRINGTABLE
 BEGIN
@@ -27,8 +25,8 @@ BEGIN
     IDS_NOTAVAILABLE "Não disponível"
     IDS_NOTDIGITALLYSIGNED "Sem assinatura digital"
     IDS_NODRIVERS "Nenhum arquivo de driver é necessário ou foi carregado para este dispositivo."
-    IDS_RESOURCE_COLUMN "Resource type"
-    IDS_SETTING_COLUMN "Setting"
+    IDS_RESOURCE_COLUMN "Tipo de recurso"
+    IDS_SETTING_COLUMN "Configuração"
     IDS_RESOURCE_MEMORY_RANGE "Memory range"
     IDS_RESOURCE_INTERRUPT "IRQ"
     IDS_RESOURCE_DMA "DMA"
@@ -53,7 +51,7 @@ BEGIN
     IDS_DEV_INVALID_DATA "Este dispositivo não está funcionando corretamente porque a BIOS do seu computador está reportando os recursos para este dispositivo incorretamente."
     IDS_DEV_INVALID_DATA2 "Este dispositivo não está funcionando corretamente porque a BIOS do dispositivo está reportando os recursos para este dispositivo incorretamente."
     IDS_DEV_FAILED_START "Este dispositivo não está presente, não está funcionando corretamente ou não tem todos os drivers instalados."
-    IDS_DEV_LIAR "O ReactOS parou de responder enquanto tentava inicializar este dispositivo e em conseqüência não irá mais tentar inicializá-lo."
+    IDS_DEV_LIAR "O ReactOS parou de responder enquanto tentava inicializar este dispositivo e em consequência não irá mais tentar inicializá-lo."
     IDS_DEV_NORMAL_CONFLICT "Este dispositivo não pôde encontrar recursos %1 livres para utilizar."
     IDS_DEV_NOT_VERIFIED "Este dispositivo não está presente, não está funcionando corretamente ou não tem todos os drivers instalados."
     IDS_DEV_NEED_RESTART "Este dispositivo não pode funcionar corretamente até que o computador seja reiniciado."
@@ -66,9 +64,9 @@ BEGIN
     IDS_DEV_DISABLED "Este dispositivo não foi inicializado."
     IDS_DEV_DISABLED2 "Este dispositivo está desativado."
     IDS_DEV_DEVLOADER_NOT_READY "Os carregadores para este dispositivo não puderam carregar os drivers necessários."
-    IDS_DEV_DEVLOADER_NOT_READY2 "" /* unused */
+    IDS_DEV_DEVLOADER_NOT_READY2 """ /* unused */
     IDS_DEV_DEVLOADER_NOT_READY3 "" /* unused */
-    IDS_DEV_DEVICE_NOT_THERE "Este dispositivo não está presente, não está funcionando corretamente ou não tem todos os drivers instalados."
+    IDS_DEV_DEVICE_NOT_THERE ""Este dispositivo não está presente, não está funcionando corretamente ou não tem todos os drivers instalados."
     IDS_DEV_MOVED "O ReactOS está no processo de configuração deste dispositivo."
     IDS_DEV_TOO_EARLY "O ReactOS está no processo de configuração deste dispositivo."
     IDS_DEV_NO_VALID_LOG_CONF "O ReactOS não pode especificar os recursos pra este dispositivo."
@@ -88,7 +86,7 @@ BEGIN
     IDS_DEV_LEGACY_SERVICE_NO_DEVICES "O ReactOS carregou o driver do dispositivo para este hardware corretamente mas não consegue encontrar o dispositivo de hardware."
     IDS_DEV_DUPLICATE_DEVICE "O ReactOS não pode carregar o driver do dispositivo para este hardware porque já existe uma duplicata deste dispositivo em execução no sistema."
     IDS_DEV_FAILED_POST_START "O ReactOS parou este dispositivo porque ele reportou problemas."
-    IDS_DEV_HALTED "Uma aplicação ou serviço desligou este dispositivo de hardware."
+    IDS_DEV_HALTED "Um aplicativo ou serviço desligou este dispositivo de hardware."
     IDS_DEV_PHANTOM "No momento, este dispositivo de hardware não está conectado ao computador."
     IDS_DEV_SYSTEM_SHUTDOWN "O ReactOS Não pode obter acesso a este dispositivo de hardware porque o sistema operacional está em processo de desligamento."
     IDS_DEV_HELD_FOR_EJECT "O ReactOS não pode utilizar este dispositivo de hardware porque este foi preparado para remoção segura mas não foi removido do computador."
@@ -103,7 +101,7 @@ BEGIN
     IDS_PROP_HARDWAREIDS "Hardware IDs"
     IDS_PROP_COMPATIBLEIDS "Compatible IDs"
     IDS_PROP_MATCHINGDEVICEID "Matching Device ID"
-    IDS_PROP_SERVICE "Service"
+    IDS_PROP_SERVICE "Serviço"
     IDS_PROP_ENUMERATOR "Enumerator"
     IDS_PROP_CAPABILITIES "Capabilities"
     IDS_PROP_DEVNODEFLAGS "Devnode Flags"
@@ -136,7 +134,7 @@ BEGIN
     LTEXT "", IDC_MANUFACTURER, 14, 88, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_LOCATION, 14, 100, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_STATUS, 14, 112, 183, 30
-    PUSHBUTTON "&Solução de problemas...", IDC_TROUBLESHOOT, 85, 140, 54, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
+    PUSHBUTTON "&Solução de problemas...", IDC_TROUBLESHOOT, 80, 140, 60, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
     PUSHBUTTON "P&ropriedades", IDC_PROPERTIES, 146, 140, 50, 14
 END
 
@@ -162,7 +160,7 @@ END
 
 IDD_DEVICEDRIVER DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
-CAPTION "Driver"
+CAPTION "Drive"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_DEVICON, 7, 7, 20, 20
@@ -231,14 +229,12 @@ END
 
 IDD_DEVICEPOWER DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
-CAPTION "Power"
+CAPTION "Potência"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_DEVICON, 7, 7, 20, 20
     LTEXT "", IDC_DEVNAME, 37, 9, 174, 16, SS_NOPREFIX
 END
-
-
 
 
 /*
@@ -247,9 +243,9 @@ END
 
 IDR_MAINMENU MENU
 BEGIN
-  POPUP "&File"
+  POPUP "&Arquivo"
   BEGIN
-    MENUITEM "E&xit",                       IDC_EXIT
+    MENUITEM "Sai&r",                       IDC_EXIT
   END
   MENUITEM "Action",                        IDC_ACTIONMENU
   POPUP "View"
@@ -277,22 +273,22 @@ END
 STRINGTABLE DISCARDABLE
 BEGIN
   IDS_MENU_UPDATE           "Update driver software..."
-  IDS_MENU_ENABLE           "Enable"
-  IDS_MENU_DISABLE          "Disable"
-  IDS_MENU_UNINSTALL        "Uninstall"
+  IDS_MENU_ENABLE           "Ativado"
+  IDS_MENU_DISABLE          "Desativar"
+  IDS_MENU_UNINSTALL        "Desinstalar"
   IDS_MENU_SCAN             "Scan for hardware changes"
   IDS_MENU_ADD              "Add hardware"
-  IDS_MENU_PROPERTIES       "Properties"
+  IDS_MENU_PROPERTIES       "Propriedades"
 END
 
 STRINGTABLE DISCARDABLE
 BEGIN
-  IDS_TOOLTIP_PROPERTIES    "Properties"
+  IDS_TOOLTIP_PROPERTIES    "Propriedades"
   IDS_TOOLTIP_SCAN          "Scan for hardware changes"
-  IDS_TOOLTIP_ENABLE        "Enable"
-  IDS_TOOLTIP_DISABLE       "Disable"
+  IDS_TOOLTIP_ENABLE        "Ativado"
+  IDS_TOOLTIP_DISABLE       "Desativar"
   IDS_TOOLTIP_UPDATE        "Update Driver Software"
-  IDS_TOOLTIP_UNINSTALL     "Uninstall"
+  IDS_TOOLTIP_UNINSTALL     "Desinstalar"
 END
 
 /* Hints */
@@ -307,7 +303,7 @@ BEGIN
   IDS_HINT_UNINSTALL    " Uninstalls the driver for the selected device."
   IDS_HINT_ADD          " Adds a legacy (non-Plug and Play) device to the computer." 
   IDS_HINT_ABOUT        " About ReactOS Device Manager."
-  IDS_HINT_EXIT         " Exits the program."
+  IDS_HINT_EXIT         " Sai do programa."
 
   IDS_HINT_DEV_BY_TYPE  " Displays devices by hardware type."
   IDS_HINT_DEV_BY_CONN  " Displays devices by connection."
@@ -315,10 +311,10 @@ BEGIN
   IDS_HINT_RES_BY_CONN  " Displays resources by connection type."
   IDS_HINT_SHOW_HIDDEN  " Displays legacy devices and devices that are no longer installed."
 
-  IDS_HINT_SYS_RESTORE  " Restores this window to normal size."
-  IDS_HINT_SYS_MOVE     " Moves this window."
-  IDS_HINT_SYS_SIZE     " Resizes this window."
+  IDS_HINT_SYS_RESTORE  " Restaura a janela para o tamanho normal."
+  IDS_HINT_SYS_MOVE     " Move essa janela."
+  IDS_HINT_SYS_SIZE     " Redimensiona essa janela."
   IDS_HINT_SYS_MINIMIZE " Collapses this window to an icon."
-  IDS_HINT_SYS_MAXIMIZE " Expands this window to fill this screen."
+  IDS_HINT_SYS_MAXIMIZE " Expande essa janela para preencher essa tela."
   IDS_HINT_SYS_CLOSE    " Closes this window."
 END
