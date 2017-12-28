@@ -1,6 +1,4 @@
-/* Translation and UTF-8 Conversion by mkbu95 <mkbu95@gmail.com> (August, 2011) */
-
-LANGUAGE LANG_PORTUGUESE, SUBLANG_NEUTRAL
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
 
 STRINGTABLE
 BEGIN
@@ -20,5 +18,5 @@ OpenType Font (*.otf)\0*.otf\0\
 OpenType Font Collection (*.otc)\0*.otc\0\
 All Files (*.*)\0*.*\0"
     IDS_PREVIOUS "< P&revious"
-    IDS_NEXT "&Next >"
+    IDS_NEXT "&Próximo >"
 END
