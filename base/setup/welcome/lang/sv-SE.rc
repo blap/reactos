@@ -1,6 +1,4 @@
-/* Swedish (SE) translation by David Nordenberg */
-
-LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
 
 /* String Tables */
 
