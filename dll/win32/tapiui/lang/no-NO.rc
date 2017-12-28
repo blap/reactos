@@ -1,4 +1,4 @@
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 101 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -346,9 +346,9 @@ BEGIN
     20 "Alt"
     21 "Valgt"
     22 "Rediger område regler"
-    23 "Select a rule in the list above to view its description, or click New to add a rule."
-    24 "Dial '%2' plus the area code before the number for all calls within the %1 area code."
-    25 "Dial '%2' before the number for all calls within the %1 area code."
+    23 "Velkommen til %1 domene."
+    24 "Du må starte denne datamaskinen på nytt for at endringene skal tre i kraft."
+    25 "You can change the name and the membership of this computer. Changes may affect access to network resources."
     26 "Dial the area code before the number for all calls within the %1 area code."
     27 "Dial only the number for all calls within the %1 area code."
     28 "Dial '%2' plus the area code before the number for calls within the %1 area code, containing the prefixes you specified."
