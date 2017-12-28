@@ -1,0 +1,8 @@
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_DESCRIPTION "Starfield ScreenSaver"
+    IDS_TITLE       "Om"
+    IDS_TEXT        "Inga inställningar behövs."
+END
