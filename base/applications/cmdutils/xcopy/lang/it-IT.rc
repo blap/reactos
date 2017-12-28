@@ -1,4 +1,4 @@
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 STRINGTABLE
 {
@@ -7,11 +7,11 @@ STRINGTABLE
     STRING_PAUSE,    "Premi Invio per iniziare a copiare\n"
     STRING_SIMCOPY,  "%1!d! file saranno copiati\n"
     STRING_COPY,     "%1!d! file copiato/i\n"
-    STRING_QISDIR,   "'%1' è il nome di un file o una cartella\n\
-                     nella destinazione?\n\
-                     (F - File, C - Cartella)\n"
-    STRING_SRCPROMPT,"%1? (Sì|No)\n"
-    STRING_OVERWRITE,"Sovrascrivere %1? (Sì|No|Tutti)\n"
+    STRING_QISDIR,   "Is '%1' a filename or directory\n\
+                     on the target?\n\
+                     (F - File, D - Directory)\n"
+    STRING_SRCPROMPT,"%1? (Yes|No)\n"
+    STRING_OVERWRITE,"Overwrite %1? (Yes|No|All)\n"
     STRING_COPYFAIL, "La copia di '%1' in '%2' è fallita con r/c %3!d!\n"
     STRING_OPENFAIL, "Impossibile aprire '%1'\n"
     STRING_READFAIL, "Errore durante la lettura di '%1'\n"
@@ -22,36 +22,36 @@ STRINGTABLE
     STRING_DIR_CHAR, "C"
 
     STRING_HELP,
-"XCOPY - Copia file e alberi di cartelle sorgenti in una destinazione\n\
+"XCOPY - Copies source files or directory trees to a destination.\n\
 \n\
-Sintassi:\n\
-XCOPY sorgente [destinazione] [/I] [/S] [/Q] [/F] [/L] [/W] [/T] [/N] [/U]\n\
+Syntax:\n\
+XCOPY source [destination] [/I] [/S] [/Q] [/F] [/L] [/W] [/T] [/N] [/U]\n\
 \t     [/R] [/H] [/C] [/P] [/A] [/M] [/E] [/D] [/Y] [/-Y]\n\
 \n\
-Dove:\n\
+Where:\n\
 \n\
-[/I]  Assume una cartella se la destinazione non esiste e sono copiati 2 o\n\
-\tpiù file\n\
-[/S]  Copia le cartelle e le sottocartelle\n\
-[/E]  Copia le cartelle e le sottocartelle, incluse quelle vuote\n\
-[/Q]  Non mostra i nomi durante la copia, modalità silenziosa.\n\
-[/F]  Mostra i nomi completi della sorgente e della destinazione durante la copia\n\
-[/L]  Simula l'operazione, mostrando i nomi che sarebbero copiati\n\
-[/W]  Richiede prima di iniziare l'operazione di copia\n\
-[/T]  Crea la struttura di cartelle vuote ma non copia i file\n\
-[/Y]  Disabilita le conferme quando sono sovrascritti dei file\n\
-[/-Y] Abilita le conferme quando sono sovrascritti dei file\n\
-[/P]  Chiede conferma per ogni file sorgente prima di copiare\n\
-[/N]  Copia usando i nomi abbreviati\n\
-[/U]  Copia solo files che sono già presenti nella destinazione\n\
-[/R]  Sovrascrive ogni file che abbia l'attributo Sola lettura\n\
-[/H]  Include i file nascosti e di sistema nella copia\n\
-[/C]  Continua anche se accade un errore durante la copia\n\
-[/A]  Copia solo i file che abbiano l'attributo Archivio\n\
-[/M]  Copia solo i file che abbiano l'attributo Archivio, rimuovendo\n\
-\tl'attributo\n\
-[/D | /D:m-g-a] Copia i nuovi file o quelli modificati dopo la data fornita.\n\
-\t\tSe nessuna data è stata fornita, copia solo se la destinazione è più vecchia\n\
-\t\tdella sorgente\n\n"
+[/I]  Assume directory if destination does not exist and copying two or\n\
+\tmore files.\n\
+[/S]  Copy directories and subdirectories.\n\
+[/E]  Copy directories and subdirectories, including any empty ones.\n\
+[/Q]  Do not list names during copy, that is be quiet.\n\
+[/F]  Show full source and destination names during copy.\n\
+[/L]  Simulate operation, showing names which would be copied.\n\
+[/W]  Prompts before beginning the copy operation.\n\
+[/T]  Creates empty directory structure but does not copy files.\n\
+[/Y]  Suppress prompting when overwriting files.\n\
+[/-Y] Enable prompting when overwriting files.\n\
+[/P]  Prompts on each source file before copying.\n\
+[/N]  Copy using short names.\n\
+[/U]  Copy only files which already exist in destination.\n\
+[/R]  Overwrite any read only files.\n\
+[/H]  Include hidden and system files in the copy.\n\
+[/C]  Continue even if an error occurs during the copy.\n\
+[/A]  Only copy files with archive attribute set.\n\
+[/M]  Only copy files with archive attribute set, removes the\n\
+\tarchive attribute.\n\
+[/D | /D:m-d-y] Copy new files or those modified after the supplied date.\n\
+\t\tIf no date is supplied, only copy if destination is older\n\
+\t\tthan source.\n\n"
 
 }
