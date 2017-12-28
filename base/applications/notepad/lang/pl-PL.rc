@@ -1,4 +1,4 @@
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -160,12 +160,17 @@ BEGIN
     STRING_UNTITLED "Bez tytułu"
     STRING_ALL_FILES "Wszystkie pliki (*.*)"
     STRING_TEXT_FILES_TXT "Pliki tekstowe (*.txt)"
-    STRING_TOOLARGE "Plik '%s' jest za duży dla Notatnika.\n Proszę użyć innego edytora."
-    STRING_NOTEXT "Nie wprowadziłeś żadnego tekstu.\n Proszę coś wpisać i spróbować ponownie."
-    STRING_DOESNOTEXIST "Plik '%s' nie istnieje\n\n Czy chcesz utworzyć nowy plik?"
-    STRING_NOTSAVED "Plik '%s'\nzostał zmodyfikowany\n\n Czy chcesz zachować zmiany?"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "Nie można odnaleźć '%s'."
-    STRING_OUT_OF_MEMORY "Za mało pamięci do wykonania tego zadania.\n Zamknij jedną lub więcej aplikacji, by zwiększyć ilość wolnej pamięci."
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "Nie można odnaleźć '%s'"
     STRING_ANSI "ANSI"
     STRING_UNICODE "Unicode"
