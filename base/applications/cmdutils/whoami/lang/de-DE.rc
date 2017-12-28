@@ -1,4 +1,4 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 STRINGTABLE
 BEGIN
@@ -37,19 +37,19 @@ BEGIN
     IDS_ERROR_INVALIDSYNTAX "FEHLER: Ungültige Syntax.\nGeben Sie ""WHOAMI /?"" ein, um die Syntax anzuzeigen.\n"
     IDS_ERROR_INVALIDARG "FEHLER: Argument/Option ungültig - '%s'.\nGeben Sie ""WHOAMI /?"" ein, um die Syntax anzuzeigen.\n"
     IDS_ERROR_NH_LIST "FEHLER: Option /NH kann nicht mit Format LIST verwendet werden.\nGeben Sie ""WHOAMI /?"" ein, um die Syntax anzuzeigen.\n"
-    IDS_HELP "BESCHREIBUNG:\n\
-  Ermittelt Benutzername, Gruppen und Berechtigungen für den aktuellen Benutzer auf dem lokalen System.\n\
-  Ohne Parameterangabe werden die aktuelle Domäne und Benutzername angezeigt.\n\
+    IDS_HELP "DESCRIPTION:\n\
+  Display user, group and privileges information for the local logged-on user.\n\
+  If no arguments are provided, displays the current domain and user name.\n\
 \n\
-  Gültige Ausgabeformate für den '/fo' Parameter sind 'CSV', 'LIST' und 'TABLE'.\n\
-  '/nh' legt fest, dass der Spaltenheader nicht in der Ausgabe angezeigt wird. Standardmäßig werden diese in einer TABLE angezeigt.\n\
+  Available output formats for the '/fo' option are 'csv', 'list' and 'table'.\n\
+  Use '/nh' to hide headers. By default the data is displayed in a table.\n\
 \n\
 SYNTAX:\n\
   whoami [/upn | /fqdn | /logonid] \n\
   whoami {[/user] [/groups] [/priv]} [/fo <Format>] [/nh] \n\
   whoami /all [/fo <Format>] [/nh] \n\
 \n\
-BEISPIELE: \n\
+EXAMPLES: \n\
   whoami /groups /priv /nh /fo csv \n\
   whoami /logonid \n\
   whoami \n"
