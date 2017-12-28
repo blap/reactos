@@ -1,14 +1,4 @@
-/*
- *    Update by Caemyr - Olaf Siejka (Jan, 2007; May, 2011)
- *    Use ReactOS forum PM or IRC to contact me
- *    http://www.reactos.org
- *    IRC: irc.freenode.net #reactos-pl; 
- *    Updated by Saibamen - Adam Stachowicz (saibamenppl@gmail.com) (August, 2011)
- *    UTF-8 conversion by Caemyr (May, 2011) 
- *    Update by wojo664 (04.08.2011) 
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -240,7 +230,7 @@ BEGIN
     LTEXT "Port:", IDC_STATIC, 10, 134, 38, 8
     CONTROL "", IDC_PORT_LIST, "SysListView32", LVS_REPORT | LVS_NOSORTHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 10, 144, 261, 31
-    LTEXT "Dane specyficzne dla sprzętu:", IDC_STATIC, 10, 177, 105, 8
+    LTEXT "Dane specyficzne dla sprzętu:", IDC_STATIC, 10, 177, 80, 8
     CONTROL "", IDC_DEVICE_LIST, "SysListView32", LVS_REPORT | LVS_NOSORTHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 10, 188, 261, 31
     GROUPBOX "Użycie", IDC_STATIC, 10, 219, 125, 39
@@ -324,7 +314,7 @@ BEGIN
     IDS_ERROR "Błąd"
     IDS_WARNING "Ostrzeżenie"
     IDS_BAD_KEY "Nie można odczytać klucza '%s'"
-    IDS_BAD_VALUE "Nie można odczytać wartości '%s'"
+    IDS_BAD_VALUE "Nieprawidłowa wartość dla opcji %s, wymagana liczba naturalna od %u do %u.\n"
     IDS_UNSUPPORTED_TYPE "Nie można edytować kluczy tego typu (%ld)"
     IDS_TOO_BIG_VALUE "Wartość jest za duża (%ld)"
     IDS_MULTI_SZ_EMPTY_STRING "Dane typu REG_MULTI_SZ nie mogą zawierać pustych ciągów.\nPusty ciąg został usunięty z listy."
@@ -473,7 +463,7 @@ STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_B
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Zakres eksportu", IDC_STATIC, 2, 0, 366, 48
-    CONTROL "&Wszystko", IDC_EXPORT_ALL, "Button", BS_AUTORADIOBUTTON, 10, 10, 47, 11
+    CONTROL "&Wszystko", IDC_EXPORT_ALL, "Button", BS_AUTORADIOBUTTON, 10, 10, 29, 11
     CONTROL "Wy&brana gałąź", IDC_EXPORT_BRANCH, "Button", BS_AUTORADIOBUTTON, 10, 22, 100, 11
     EDITTEXT IDC_EXPORT_BRANCH_TEXT, 30, 34, 335, 12
 END
@@ -517,20 +507,20 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Znajdź"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    DEFPUSHBUTTON "Znajdź &Następny", IDOK, 177, 7, 70, 14
-    PUSHBUTTON "Anuluj", IDCANCEL, 177, 24, 70, 14
+    DEFPUSHBUTTON "&Find Next", IDOK, 197, 7, 50, 14
+    PUSHBUTTON "Anuluj", IDCANCEL, 197, 24, 50, 14
     GROUPBOX "Przeszukaj", IDC_STATIC, 7, 25, 63, 51
     LTEXT "&Szukaj:", IDC_STATIC, 7, 8, 37, 10
-    EDITTEXT IDC_FINDWHAT, 47, 7, 122, 13, ES_AUTOHSCROLL
-    CONTROL "&Klucze", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
+    EDITTEXT IDC_FINDWHAT, 47, 7, 142, 13, ES_AUTOHSCROLL
+    CONTROL "&Keys", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 36, 35, 8
-    CONTROL "&Wartości", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 14, 48, 45, 8
-    CONTROL "&Dane", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Values", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 14, 48, 36, 8
+    CONTROL "&Data", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 60, 42, 8
-    CONTROL "&Tylko całe ciągi", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &whole string only", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 32, 94, 13
-    CONTROL "Uwzględnij wie&lkość liter", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &case", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 48, 90, 12
 END
 
@@ -548,7 +538,7 @@ END
 /*
  *STRINGTABLE
  *BEGIN
- *    ID_HELP_HELPTOPICS "Otwiera pomoc Edytora Rejestru."
- *    ID_HELP_ABOUT "Wyświetla informacje o programie, numerze wersji, licencji."
+ *    ID_HELP_HELPTOPICS "Opens Registry Editor Help."
+ *    ID_HELP_ABOUT "Displays program information, version number, and copyright."
  *END
  */
