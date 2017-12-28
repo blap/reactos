@@ -1,4 +1,4 @@
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 MENU_001 MENUEX
 BEGIN
@@ -36,7 +36,7 @@ BEGIN
         MENUITEM "", -1, MFT_SEPARATOR
         MENUITEM "&Obnoviť", FCIDM_SHVIEW_REFRESH
         MENUITEM "", -1, MFT_SEPARATOR
-        MENUITEM "&Prilepiť", FCIDM_SHVIEW_INSERT
+        MENUITEM "Vložiť", FCIDM_SHVIEW_INSERT
         MENUITEM "Prilepiť od&kaz", FCIDM_SHVIEW_INSERTLINK
     END
 END
@@ -44,11 +44,11 @@ END
 /* menubar EDIT menu */
 MENU_003 MENU
 BEGIN
-    MENUITEM "&Undo\tCtrl+Z", FCIDM_SHVIEW_UNDO
+    MENUITEM "Späť\tCtrl+Z", FCIDM_SHVIEW_UNDO
     MENUITEM SEPARATOR
-    MENUITEM "Cu&t\tCtrl+X", FCIDM_SHVIEW_CUT
-    MENUITEM "&Copy\tCtrl+C", FCIDM_SHVIEW_COPY
-    MENUITEM "&Paste\tCtrl+V", FCIDM_SHVIEW_INSERT
+    MENUITEM "Vystrihnúť\tCtrl+X", FCIDM_SHVIEW_CUT
+    MENUITEM "Kopírovať\tCtrl+C", FCIDM_SHVIEW_COPY
+    MENUITEM "Prilepiť\tCtrl+V", FCIDM_SHVIEW_INSERT
     MENUITEM "Paste &shortcut", FCIDM_SHVIEW_INSERTLINK
     MENUITEM SEPARATOR
     MENUITEM "Copy to &folder...", FCIDM_SHVIEW_COPYTO
@@ -66,6 +66,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&Vystrihnúť", IDM_CUT
         MENUITEM "&Kopírovať", IDM_COPY
+        MENUITEM "&Prilepiť", IDM_INSERT
         MENUITEM SEPARATOR
         MENUITEM "Vytvoriť o&dkaz", IDM_CREATELINK
         MENUITEM "&Odstrániť", IDM_DELETE
@@ -84,7 +85,7 @@ BEGIN
     PUSHBUTTON "Zrušiť", 2, 125, 175, 60, 15, WS_GROUP | WS_TABSTOP
     LTEXT "", IDC_BROWSE_FOR_FOLDER_TITLE, 4, 4, 180, 12
     LTEXT "", IDC_BROWSE_FOR_FOLDER_STATUS, 4, 25, 180, 12
-    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | WS_BORDER | WS_TABSTOP, 4, 40, 180, 120
+    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP, 4, 40, 180, 120
 END
 
 IDD_BROWSE_FOR_FOLDER_NEW DIALOGEX 15, 40, 218, 196
@@ -95,7 +96,7 @@ BEGIN
     LTEXT "", IDC_BROWSE_FOR_FOLDER_TITLE, 10, 8, 198, 24
     LTEXT "", IDC_BROWSE_FOR_FOLDER_STATUS, 10, 25, 198, 12
     LTEXT "Priečinok:", IDC_BROWSE_FOR_FOLDER_FOLDER, 10, 152, 40, 12
-    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP, 12, 38, 194, 105
+    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | WS_BORDER | WS_TABSTOP, 12, 38, 194, 105
     EDITTEXT IDC_BROWSE_FOR_FOLDER_FOLDER_TEXT, 46, 150, 160, 14, WS_BORDER | WS_GROUP | WS_TABSTOP
     PUSHBUTTON "&Vytvoriť nový priečinok", IDC_BROWSE_FOR_FOLDER_NEW_FOLDER, 12, 174, 77, 14, WS_GROUP | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 102, 174, 50, 14, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
@@ -199,8 +200,8 @@ BEGIN
     ICON IDI_SHELL_EXTENDED_PROPERTIES, IDI_SHELL_EXTENDED_PROPERTIES, 5, 5, 21, 20, SS_ICON
     LTEXT "Vyberte rozšírené vlastnosti určené pre tento odkaz.", -1, 5, 30, 210, 10
     CHECKBOX "&Spustiť s inými povereniami", 14000, 25, 50, 150, 10
-    LTEXT "Táto možnosť umožňuje spustiť tento odkaz ako iný používateľ, alebo pokračovať so svojím používateľským oprávnením, ale s ochranou počítača a údajov pred neoprávnenými aktivitami programu.", -1, 50, 60, 170, 40
-    CHECKBOX "Spustiť v oddelenom pa&mäťovom priestore", 14001, 25, 100, 190, 10, WS_DISABLED
+    LTEXT "Táto možnosť umožňuje spustiť tento odkaz ako iný používateľ, alebo pokračovať so svojím používateľským oprávnením, ale s ochranou počítača a údajov pred neoprávnenými aktivitami programu.", -1, 50, 60, 175, 40
+    CHECKBOX "Spustiť v oddelenom pa&mäťovom priestore", 14001, 25, 100, 150, 10, WS_DISABLED
     PUSHBUTTON "OK", 1, 63, 124, 50, 15, WS_VISIBLE
     PUSHBUTTON "Prerušiť", 2, 120, 124, 50, 15, WS_VISIBLE
 END
@@ -231,7 +232,7 @@ BEGIN
     AUTOCHECKBOX "&Iba na čítanie", 14021, 56, 152, 70, 10
     AUTOCHECKBOX "&Skrytý", 14022, 56, 166, 70, 10
     AUTOCHECKBOX "&Archívny", 14023, 56, 180, 70, 10
-    PUSHBUTTON "A&dvanced...", 14028, 158, 150, 70, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+    PUSHBUTTON "&Spresniť", 14028, 158, 150, 70, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
 END
 
 IDD_FILE_PROPERTIES DIALOGEX 0, 0, 240, 205
@@ -246,7 +247,7 @@ BEGIN
     CONTROL "Súbor", 14005, "edit", ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP, 68, 35, 160, 10
     LTEXT "Otvoriť programom:", 14006, 8, 53, 50, 10
     ICON "", 14025, 68, 52, 11, 10, NOT WS_VISIBLE
-    PUSHBUTTON "&Change...", 14024, 168, 50, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+    PUSHBUTTON "&Zmeniť...", 14024, 168, 50, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
     EDITTEXT 14007, 68, 53, 90, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | ES_AUTOHSCROLL | NOT WS_TABSTOP
     LTEXT "", -1, 8, 68, 221, 1, SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE
     LTEXT "Umiestnenie:", 14008, 8, 75, 45, 10
@@ -267,7 +268,7 @@ BEGIN
     AUTOCHECKBOX "&Iba na čítanie", 14021, 58, 189, 67, 10
     AUTOCHECKBOX "&Skrytý", 14022, 126, 189, 50, 10
     AUTOCHECKBOX "&Archívny", 14023, 181, 189, 49, 10
-    PUSHBUTTON "A&dvanced...", 14028, 180, 185, 50, 15, WS_TABSTOP
+    PUSHBUTTON "&Spresniť", 14028, 180, 185, 50, 15, WS_TABSTOP
 END
 
 IDD_FILE_VERSION DIALOGEX 0, 0, 235, 215
@@ -279,7 +280,7 @@ BEGIN
     EDITTEXT 14001, 77, 10, 152, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER
     LTEXT "Popis: ", 14002, 10, 27, 45, 10
     EDITTEXT 14003, 77, 27, 152, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER
-    LTEXT "Autorské práva: ", 14004, 10, 46, 66, 10 //Copyright
+    LTEXT "Autorské práva: ", 14004, 10, 46, 66, 10
     EDITTEXT 14005, 77, 46, 152, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER
     GROUPBOX "Iné informácie o verzii: ", 14006, 6, 70, 222, 115
     LTEXT "Názov položky: ", 14007, 13, 82, 50, 10
@@ -378,7 +379,7 @@ BEGIN
     EDITTEXT 14002, 106, 87, 50, 14, WS_TABSTOP | ES_NUMBER
     LTEXT "&Maximálna veľkosť (MB):", -1, 20, 105, 70, 10
     RADIOBUTTON "Súbory nepremiestňovať do &koša. Zmazané súbory hneď odstrániť.", 14003, 20, 117, 170, 20, BS_MULTILINE | WS_TABSTOP
-    AUTOCHECKBOX "Zobrazovať &dialógové okno potvrdenia odstránenia", 14004, 20, 155, 196, 10, WS_TABSTOP
+    AUTOCHECKBOX "Zobrazovať &dialógové okno potvrdenia odstránenia", 14004, 20, 155, 140, 10, WS_TABSTOP
 END
 
 IDD_OPEN_WITH DIALOGEX 0, 0, 264, 256
@@ -444,10 +445,10 @@ BEGIN
     PUSHBUTTON "&Nový", 14001, 120, 110, 50, 14, WS_TABSTOP
     PUSHBUTTON "O&dstrániť", 14002, 180, 110, 50, 14, WS_TABSTOP
     GROUPBOX "Details for '%s' extension", 14003, 7, 130, 249, 70
-    LTEXT "Opens with:", -1, 12, 140, 40, 10
+    LTEXT "Otvoriť programom:", -1, 12, 140, 40, 10
     //ICON
     LTEXT "Appname", 14005, 100, 140, 40, 10
-    PUSHBUTTON "&Zmeniť...", 14006, 180, 140, 50, 14, WS_TABSTOP
+    PUSHBUTTON "&Change...", 14006, 180, 140, 50, 14, WS_TABSTOP
     LTEXT "", 14007, 12, 155, 160, 30
     PUSHBUTTON "Ad&vanced", 14008, 180, 175, 50, 14, WS_TABSTOP
 END
@@ -516,7 +517,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", 1000, 5, 7, 21, 20
     LTEXT "Tento disk alebo zariadenie obsahuje viac ako len jeden typ obsahu.", 1001, 32, 7, 191, 20
-    LTEXT "What do you want ReactOS to do?", 1002, 32, 31, 188, 8
+    LTEXT "Čo má systém ReactOS urobiť?", 1002, 32, 31, 188, 8
     CONTROL "", 1003, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 32, 43, 188, 139
     DEFPUSHBUTTON "OK", IDOK, 96, 186, 60, 14
     PUSHBUTTON "Zrušiť", IDCANCEL, 160, 186, 60, 14
@@ -531,7 +532,7 @@ BEGIN
     LTEXT "ReactOS can perform the same action each time you insert a disk or connect a device with this kind of file:", 1001, 30, 7, 193, 20
     ICON "", 1005, 32, 27, 11, 10, SS_REALSIZECONTROL
     EDITTEXT 1006, 49, 28, 177, 14, ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
-    LTEXT "Čo má systém ReactOS urobiť?", 1002, 32, 41, 190, 8
+    LTEXT "What do you want ReactOS to do?", 1002, 32, 41, 190, 8
     CONTROL "", 1003, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 32, 55, 188, 112
     AUTOCHECKBOX "Vždy vykonať zvolenú akciu.", 1004, 32, 171, 190, 10
     DEFPUSHBUTTON "OK", IDOK, 96, 185, 60, 14
@@ -595,8 +596,8 @@ BEGIN
     DEFPUSHBUTTON "&Spustiť", IDOK, 63, 95, 60, 14
     GROUPBOX "Možnosti kontroly disku", -1, 7, 6, 179, 40
     PUSHBUTTON "Zrušiť", IDCANCEL, 128, 95, 60, 14
-    AUTOCHECKBOX "&Automaticky opraviť chyby v systéme súborov", 14000, 16, 15, 165, 10
-    AUTOCHECKBOX "Vy&hľadať a pokúsiť sa obnoviť chybné sektory", 14001, 16, 30, 165, 10
+    AUTOCHECKBOX "Automatically fix file system errors", 14000, 12, 15, 155, 10
+    AUTOCHECKBOX "&Scan for and attempt recovery of bad sectors", 14001, 12, 30, 165, 10
     CONTROL "", 14002, "MSCTLS_PROGRESS32", 16, 7, 50, 179, 8
     LTEXT "", 14003, 60, 80, 170, 10
 END
@@ -607,8 +608,8 @@ CAPTION "Zmena ikony"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     LTEXT "Look for icons in this file:", -1, 7, 7, 179, 10
-    PUSHBUTTON "&Prehľadávať...", IDC_BUTTON_PATH, 128, 17, 57, 14
-    EDITTEXT IDC_EDIT_PATH, 7, 17, 117, 14, ES_AUTOHSCROLL
+    PUSHBUTTON "&Prehľadávať...", IDC_BUTTON_PATH, 135, 17, 50, 14
+    EDITTEXT IDC_EDIT_PATH, 7, 17, 123, 14, ES_AUTOHSCROLL
     LTEXT "Select an icon from the list below:", -1, 7, 36, 179, 10
     LISTBOX IDC_PICKICON_LIST, 7, 47, 181, 120, LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | LBS_DISABLENOSCROLL | WS_HSCROLL | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 81, 179, 50, 14
@@ -632,7 +633,7 @@ END
 STRINGTABLE
 BEGIN
     /* columns in the shellview */
-    IDS_SHV_COLUMN_NAME "Názov" //Name
+    IDS_SHV_COLUMN_NAME "Názov"
     IDS_SHV_COLUMN_SIZE "Veľkosť"
     IDS_SHV_COLUMN_TYPE "Typ"
     IDS_SHV_COLUMN_MODIFIED "Modifikovaný"
@@ -643,14 +644,14 @@ BEGIN
     IDS_SHV_COLUMN_GROUP "Skupina"
     IDS_SHV_COLUMN_FILENAME "Filename"
     IDS_SHV_COLUMN_CATEGORY "Kategória"
-    IDS_SHV_COLUMN_DELFROM "Pôvod" //Pôvodné umiestnenie
-    IDS_SHV_COLUMN_DELDATE "Odstránený" //Dátum zmazania
+    IDS_SHV_COLUMN_DELFROM "Pôvod"
+    IDS_SHV_COLUMN_DELDATE "Odstránený"
     IDS_SHV_COLUMN_FONTTYPE "Fonttype"
     IDS_SHV_COLUMN_WORKGROUP "Workgroup"
     IDS_SHV_COLUMN_NETLOCATION "Network Location"
     IDS_SHV_COLUMN_DOCUMENTS "Dokumenty"
     IDS_SHV_COLUMN_STATUS "Stav"
-    IDS_SHV_COLUMN_COMMENTS "Poznámky" //Comments
+    IDS_SHV_COLUMN_COMMENTS "Poznámky"
     IDS_SHV_COLUMN_LOCATION "Location"
     IDS_SHV_COLUMN_MODEL "Model"
 
@@ -683,7 +684,7 @@ BEGIN
     IDS_FORMATDRIVE "Formátovať..."
     IDS_RENAME "Premenovať"
     IDS_PASTE "Vložiť"
-    IDS_EJECT "Eject"
+    IDS_EJECT "Vysunúť"
     IDS_DISCONNECT "Disconnect"
 
     IDS_CREATEFOLDER_DENIED "Unable to create the folder '%1'"
@@ -742,7 +743,7 @@ BEGIN
     IDS_PROGRAM_FILES "Program Files"
     IDS_MYPICTURES "Obrázky"
     IDS_PROGRAM_FILES_COMMON "Program Files\\Common Files"
-    IDS_COMMON_DOCUMENTS "Documents"
+    IDS_COMMON_DOCUMENTS "Dokumenty"
     IDS_ADMINTOOLS "Ponuka Štart\\Programy\\Nástroje na správu"
     IDS_COMMON_MUSIC "Documents\\My Music"
     IDS_COMMON_PICTURES "Documents\\My Pictures"
@@ -757,7 +758,7 @@ BEGIN
     IDS_DRIVE_NETWORK "Sieťový disk"
     IDS_DRIVE_FLOPPY "3.5 Floppy"
     IDS_DRIVE_REMOVABLE "Removable Disk"
-    IDS_FS_UNKNOWN "Unknown"
+    IDS_FS_UNKNOWN "Neznámy"
 
     /* Open With */
     IDS_OPEN_WITH "Otvoriť v progra&me"
@@ -771,7 +772,7 @@ BEGIN
     FCIDM_SHVIEW_NEWFOLDER "&Priečinok"
     FCIDM_SHVIEW_NEWLINK "&Odkaz"
     IDS_FOLDER_OPTIONS "Možnosti priečinka"
-    IDS_RECYCLEBIN_LOCATION "Umiestnenia Koša" //Recycle Bin Location
+    IDS_RECYCLEBIN_LOCATION "Umiestnenia Koša"
     IDS_RECYCLEBIN_DISKSPACE "Dostupné miesto"
     IDS_EMPTY_BITBUCKET "Vyprázdniť Kôš"
     IDS_PICK_ICON_TITLE "Choose Icon"
@@ -797,7 +798,7 @@ BEGIN
     IDS_TTF_FILE "Súbor písma TrueType"
     IDS_OTF_FILE "Súbor písma OpenType"
     IDS_HLP_FILE "Súbor pomocníka"
-    IDS_ICO_FILE "Icon"
+    IDS_ICO_FILE "Ikona"
     IDS_INI_FILE "Konfiguračné nastavenia"
     IDS_LNK_FILE "Odkaz"
     IDS_PIF_FILE "NT VDM Program Information File"
@@ -834,9 +835,9 @@ BEGIN
 
     IDS_BYTES_FORMAT "bytes"
     IDS_UNKNOWN_APP "Unknown application"
-    IDS_EXE_DESCRIPTION "Description:"
+    IDS_EXE_DESCRIPTION "Popis:"
 
-    IDS_MENU_EMPTY "(Empty)"
+    IDS_MENU_EMPTY "(Prázdne)"
     IDS_OBJECTS "%d Objects"
     IDS_OBJECTS_SELECTED "%d Objects Selected"
 
