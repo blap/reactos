@@ -1,4 +1,4 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 STRINGTABLE
 BEGIN
@@ -22,45 +22,44 @@ END
 
 STRINGTABLE
 BEGIN
+/* Please keep the spacing/formatting as per En.rc when translating */
     IDS_USAGE
-    "\nSyntax:\n \
-        ipconfig [/? | /all | /renew [Adapter] | /release [Adapter] |\n \
+    "\nUSAGE:\n \
+        ipconfig [/? | /all | /renew [adapter] | /release [adapter] |\n \
                   /flushdns | /displaydns | /registerdns |\n \
-                  /showclassid Adapter |\n \
-                  /setclassid Adapter [Klassen-ID] ]\n \
+                  /showclassid adapter |\n \
+                  /setclassid adapter [classid] ]\n \
     \n \
-    wobei\n \
-        Adapter         Verbindungsname\n \
-                       (Wildcards * und ? sind möglich, siehe Beispiele)\n \
+    where\n \
+        adapter         Connection name\n \
+                       (wildcard characters * and ? allowed, see examples)\n \
     \n \
-        Optionen:\n \
-           /?           Zeigt die Hilfe an.\n \
-           /all         Zeigt alle Konfigurationsinformationen an.\n \
-           /release     Gibt die IP-Adresse für den angegebenen Adapter frei.\n \
-           /renew       Erneuert die IP-Adresse für den angegebenen Adapter.\n \
-           /flushdns    Leert den DNS-Auflösungscache.\n \
-           /registerdns Aktualisiert alle DHCP-Leases und registriert DNS-Namen.\n \
-           /displaydns  Zeigt den Inhalt des DNS-Auflösungscaches an.\n \
-           /showclassid Zeigt alle DHCP-Klassen-IDs an, die für diesen\n \
-                        Adapter zugelassen sind. \n \
-           /setclassid  Ändert die DHCP-Klassen-ID\n \
+        Options:\n \
+           /?           Display this help message\n \
+           /all         Display full configuration information.\n \
+           /release     Release the IP address for the specified adapter.\n \
+           /renew       Renew the IP address for the specified adapter.\n \
+           /flushdns    Purges the DNS Resolver cache.\n \
+           /registerdns Refreshes all DHCP leases and re-registers DNS names.\n \
+           /displaydns  Display the contents of the DNS Resolver Cache.\n \
+           /showclassid Displays all the dhcp class IDs allowed for adapter.\n \
+           /setclassid  Modifies the dhcp class id.\n \
     \n \
-    Standardmäßig wird nur die IP-Adresse, die Subnetzmaske und das Standard-\n \
-    gateway für jeden an TCP/IP gebundenen Adapter angezeigt.\n \
+    The default is to display only the IP address, subnet mask and\n \
+    default gateway for each adapter bound to TCP/IP.\n \
     \n \
-    Wird bei RELEASE oder RENEW kein Adaptername angegeben, so werden die IP-\n \
-    Adressen von allen an TCP/IP gebundenen Adapter freigegeben oder erneuert.\n \
+    For Release and Renew, if no adapter name is specified, then the IP address\n \
+    leases for all adapters bound to TCP/IP will be released or renewed.\n \
     \n \
-    Wird bei SETCLASSID kein Klassenkennung angegeben, dann wird die Klassen-\n \
-    kennung gelöscht. \n \
+    For Setclassid, if no ClassId is specified, then the ClassId is removed.\n \
     \n \
-    Beispiele:\n \
-        > ipconfig                   ... Zeigt Informationen an.\n \
-        > ipconfig /all              ... Zeigt detaillierte Informationen an.\n \
-        > ipconfig /renew            ... Erneuert alle Verbindungen.\n \
-        > ipconfig /renew EL*        ... Erneuert alle Verbindungen, deren Name\n \
-                                         mit EL beginnt.\n \
-        > ipconfig /release *Ver*    ... Gibt alle passenden Verbindungen frei,\n \
-                                         z.B. ""Lokale Verbindung 1"" oder\n \
-                                              ""Lokale Verbindung 2""\n"
+    Examples:\n \
+        > ipconfig                   ... Show information.\n \
+        > ipconfig /all              ... Show detailed information\n \
+        > ipconfig /renew            ... renew all adapters\n \
+        > ipconfig /renew EL*        ... renew any connection that has its\n \
+                                         name starting with EL\n \
+        > ipconfig /release *Con*    ... release all matching connections,\n \
+                                         eg. """Local Area Connection 1""" or\n \
+                                             """Lokale Verbindung 2""\n"
 END
