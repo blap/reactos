@@ -1,0 +1,8 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_DESCRIPTION "Silinder fraktal"
+    IDS_TITLE       "Tentang"
+    IDS_TEXT        "Silinder fraktal oleh unC0Rr.\nSpecial for ReactOS."
+END
