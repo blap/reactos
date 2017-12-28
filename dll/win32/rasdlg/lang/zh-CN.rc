@@ -1,6 +1,4 @@
-/* Simplified Chinese translation by Henry Tang Ih 2016 (henrytang2@hotmail.com) */
-
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+LANGUAGE LANG_CHINESE_SIMPLIFIED, SUBLANG_CHINESE_SIMPLIFIED
 
 102 DIALOGEX 0, 0, 255, 265
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -2044,7 +2042,7 @@ BEGIN
     434 "拨号 %1 中...\0"
     435 "通过 X.25 连接到 %1...\0"
     436 "通过 %1 连接的帖子......\0"
-    437 "预连接通过 %1...\0"
+    437 "437   (OEM - 美国)"
     438 "已连接。\0"
     439 "设备已连接。\0"
     440 "已断开连接。\0"
@@ -2107,7 +2105,7 @@ BEGIN
     497 "X.25 PAD\0"
     498 "你可以让其他计算机通过这个拨号连接访问资源。\0"
     499 "VPN 服务器选择\0"
-    500 "不能启用请求拨号。\0"
+    500 "500   (IBM EBCDIC - 国际)"
     501 "名称或 VPN 服务器的地址是什么?\0"
     502 "不能禁用请求拨号。\0"
     503 "公用网络\0"
