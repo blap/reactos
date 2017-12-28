@@ -1,12 +1,4 @@
-/*
- *    Translation by xrogers
- *    xxrogers@users.sourceforge.net
- *    https://sourceforge.net/projects/reactospl
- *    Translation update by Caemyr - Olaf Siejka (Apr, 2008)
- *    UTF-8 conversion by Caemyr (May, 2011)
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 IDD_PROPPAGECOMPUTER DIALOGEX 0, 0, 256, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -15,13 +7,13 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_COMPNAME, IDC_STATIC, 4, 3, 26, 24, SS_ICON
     LTEXT "ReactOS używa następujących informacji do identyfikacji komputera w sieci", IDC_STATIC, 40, 5, 204, 20
-    LTEXT "Opis komputera:", IDC_STATIC, 6, 40, 70, 9
+    LTEXT "Opis komputera:", IDC_STATIC, 6, 40, 90, 9
     EDITTEXT IDC_COMPDESC, 98, 38, 146, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP
-    LTEXT "Pełna nazwa komputera:", IDC_STATIC, 6, 68, 64, 9
+    LTEXT "Pełna nazwa komputera:", IDC_STATIC, 6, 68, 85, 9
     EDITTEXT IDC_COMPUTERNAME, 98, 68, 144, 12, ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "Grupa robocza:", IDC_WORKGROUPDOMAIN, 6, 84, 64, 9
     EDITTEXT IDC_WORKGROUPDOMAIN_NAME, 98, 84, 144, 12, ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
-    LTEXT "Aby użyć Kreatora identyfikacji sieciowej do dołączenia do domeny i stworzyć lokalnego użytkownika, wciśnij ID sieciowe.", IDC_STATIC, 6, 108, 172, 24
+    LTEXT "To use the Network Identification Wizard to join a domain and create a local user, click ""Network ID"".", IDC_STATIC, 6, 113, 172, 24
     PUSHBUTTON "&ID sieciowe...", IDC_NETWORK_ID, 190, 114, 58, 15
     LTEXT "Aby zmienić nazwę tego komputera lub przyłączyć się do grupy roboczej, kliknij przycisk Zmień.", IDC_STATIC, 6, 149, 170, 17
     PUSHBUTTON "Z&mień...", IDC_NETWORK_PROPERTY, 190, 149, 58, 15
@@ -78,9 +70,11 @@ BEGIN
     25 "Możesz zmienić nazwę i członkostwo tego komputera. Zmiany mogą mieć wpływ na dostęp do zasobów sieciowych."
     1021 "Uwaga: Tylko Administratorzy mogą zmieniać identyfikator tego komputera."
     1022 "Uwaga: Identyfikator tego komputera nie został zmieniony, powód:"
-    1030 "Nowa nazwa komputera ""%s"" zawiera niedozwolone znaki. Do niedozwolonych znaków należą ` ~ ! @ # $ %% ^ & * ( ) = + _ [ ] { } \\ | ; : ' "" , . < > / oraz ?"
-    3210 "&Szczegóły >>"
-    3220 "<< &Szczegóły"
-    4000 "Informacja"
-    4001 "Nie można zmienić nazwy komputera!"
+    1030 "The new computer name ""%s"" contains characters which are not allowed. Characters which are not allowed include ` ~ ! @ # $ %% ^ & * ( ) = + _ [ ] { } \\ | ; : ' "" , . < > / and ?"
+    /* Windows allows using these characters, although it displays a warning message.
+       Forbidding the use of these characters means incompatibility with Windows. */
+    3210 "&Details >>"
+    3220 "<< &Details"
+    4000 "Information"
+    4001 "Can't set new a computer name!"
 END
