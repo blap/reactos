@@ -23,7 +23,7 @@ BEGIN
     POPUP "&Datei"
     BEGIN
         MENUITEM "&Neu\tStrg+N", CMD_NEW
-        MENUITEM "Ö&ffnen\tStrg+O", CMD_OPEN
+        MENUITEM "&Öffnen...\tStrg+O", CMD_OPEN
         MENUITEM "&Speichern\tStrg+S", CMD_SAVE
         MENUITEM "Speichern &unter...", CMD_SAVE_AS
         MENUITEM SEPARATOR
@@ -41,7 +41,7 @@ BEGIN
         MENUITEM "&Einfügen\tStrg+V", CMD_PASTE
         MENUITEM "&Löschen\tEntf", CMD_DELETE
         MENUITEM SEPARATOR
-        MENUITEM "Suchen...\tStrg+F", CMD_SEARCH
+        MENUITEM "&Suchen...\tStrg+F", CMD_SEARCH
         MENUITEM "&Weitersuchen\tF3", CMD_SEARCH_NEXT
         MENUITEM "&Ersetzen...\tStrg+H", CMD_REPLACE
         MENUITEM "Gehe zu...\tStrg+G", CMD_GOTO
@@ -56,13 +56,13 @@ BEGIN
     END
     POPUP "&Ansicht"
     BEGIN
-        MENUITEM "Status&leiste", CMD_STATUSBAR
+        MENUITEM "&Statusleiste", CMD_STATUSBAR
     END
     POPUP "&Hilfe"
     BEGIN
         MENUITEM "&Inhalt", CMD_HELP_CONTENTS
         MENUITEM SEPARATOR
-        MENUITEM "&Über", CMD_ABOUT
+        MENUITEM "&Über Notepad", CMD_ABOUT
         MENUITEM "Inf&o", CMD_HELP_ABOUT_NOTEPAD
     END
 END
@@ -156,7 +156,7 @@ BEGIN
     STRING_NOTEPAD "Editor"
     STRING_ERROR "Fehler"
     STRING_WARNING "Achtung"
-    STRING_INFO "Information"
+    STRING_INFO "Informationen"
     STRING_UNTITLED "Unbenannt"
     STRING_ALL_FILES "Alle Dateien (*.*)"
     STRING_TEXT_FILES_TXT "Textdateien (*.txt)"
