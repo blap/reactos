@@ -1,6 +1,4 @@
-/* Simplified Chinese translation by Henry Tang Ih 2015 (henrytang2@hotmail.com) */
-
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+LANGUAGE LANG_CHINESE_SIMPLIFIED, SUBLANG_CHINESE_SIMPLIFIED
 
 IDD_PROPPAGECOMPUTER DIALOGEX 0, 0, 256, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -72,11 +70,11 @@ BEGIN
     25 "您可以更改名称和这台计算机的会员。更改可能会影响对网络资源的访问。"
     1021 "注意: 只有管理员才可以更改此计算机的标识。"
     1022 "注意: 不能更改计算机的标识，因为:"
-    1030 "新的计算机名称 ""%s"" 包含不允许使用的字符。不允许使用的字符包括 ` ~ ! @ # $ %% ^ & * ( ) = + _ [ ] { } \\ | ; : ' "" , . < > / and ?"
+    1030 "The new computer name ""%s"" contains characters which are not allowed. Characters which are not allowed include ` ~ ! @ # $ %% ^ & * ( ) = + _ [ ] { } \\ | ; : ' "" , . < > / and ?"
     /* Windows allows using these characters, although it displays a warning message.
        Forbidding the use of these characters means incompatibility with Windows. */
-    3210 "详细信息(&D) >>"
-    3220 "<< 详细信息(&D)"
-    4000 "信息"
-    4001 "不能设置新计算机名称!"
+    3210 "&Details >>"
+    3220 "<< &Details"
+    4000 "Information"
+    4001 "Can't set new a computer name!"
 END
