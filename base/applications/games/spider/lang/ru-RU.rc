@@ -1,12 +1,12 @@
 /*
  * PROJECT:    Spider Solitaire
  * LICENSE:    See COPYING in top level directory
- * FILE:       base/applications/games/spider/lang/ru-RU.rc
- * PURPOSE:    Russian Language File for Spider Solitaire
- * TRANSLATOR: Dmitry Chapyshev
+ * FILE:       base/applications/games/spider/lang/en-US.rc
+ * PURPOSE:    English Language File for Spider Solitaire
+ * TRANSLATOR: Gregor Schneider
  */
 
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 /* Dialogs */
 
@@ -31,16 +31,16 @@ BEGIN
     PUSHBUTTON "Отмена", IDCANCEL, 176, 165, 54, 14
 END
 
-IDD_DIFFICULTY DIALOGEX 100, 100, 112, 80
+IDD_DIFFICULTY DIALOGEX 100, 100, 106, 80
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_SHELLFONT
 CAPTION "Уровень"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    AUTORADIOBUTTON "Простой: &один цвет", IDC_DIF_ONECOLOR, 8, 10, 102, 10, WS_GROUP | WS_TABSTOP
-    AUTORADIOBUTTON "Средний: &два цвета", IDC_DIF_TWOCOLORS, 8, 23, 102, 10
-    AUTORADIOBUTTON "Сложный: &четыре цвета", IDC_DIF_FOURCOLORS, 8, 36, 102, 10
+    AUTORADIOBUTTON "Простой: &один цвет", IDC_DIF_ONECOLOR, 8, 10, 80, 10, WS_GROUP | WS_TABSTOP
+    AUTORADIOBUTTON "Средний: &два цвета", IDC_DIF_TWOCOLORS, 8, 23, 80, 10
+    AUTORADIOBUTTON "Сложный: &четыре цвета", IDC_DIF_FOURCOLORS, 8, 36, 80, 10
     DEFPUSHBUTTON "OK", IDOK, 8, 58, 40, 14
-    PUSHBUTTON "Отмена", IDCANCEL, 63, 58, 40, 14
+    PUSHBUTTON "Отмена", IDCANCEL, 58, 58, 40, 14
 END
 
 /* Strings */
