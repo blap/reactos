@@ -1,6 +1,4 @@
-/* Greek (GR) resources by Dj Apal */
-
-LANGUAGE LANG_GREEK, SUBLANG_DEFAULT
+LANGUAGE LANG_GREEK, SUBLANG_GREEK_GREECE
 
 IDR_TASKMANAGER MENU
 BEGIN
@@ -53,7 +51,7 @@ BEGIN
         MENUITEM "Stand &By",                  ID_SHUTDOWN_STANDBY
         MENUITEM "&Hibernate",                 ID_SHUTDOWN_HIBERNATE
         MENUITEM "T&urn Off",                  ID_SHUTDOWN_POWEROFF
-        MENUITEM "&Restart",                   ID_SHUTDOWN_REBOOT
+        MENUITEM "&Επανεκκίνηση",                   ID_SHUTDOWN_REBOOT
         MENUITEM "&Log Off %s",                ID_SHUTDOWN_LOGOFF
         MENUITEM "&Switch User\tWinKey+L",     ID_SHUTDOWN_SWITCHUSER, GRAYED
         MENUITEM "Loc&k Computer\tWinKey+L",   ID_SHUTDOWN_LOCKCOMPUTER
@@ -72,8 +70,8 @@ IDR_WINDOWSMENU MENU
 BEGIN
     MENUITEM "Tile &Horizontally", ID_WINDOWS_TILEHORIZONTALLY
     MENUITEM "Tile &Vertically", ID_WINDOWS_TILEVERTICALLY
-    MENUITEM "&Minimize", ID_WINDOWS_MINIMIZE
-    MENUITEM "Ma&ximize", ID_WINDOWS_MAXIMIZE
+    MENUITEM "&Σμίκρυνση", ID_WINDOWS_MINIMIZE
+    MENUITEM "Με&γέθυνση", ID_WINDOWS_MAXIMIZE
     MENUITEM "&Cascade", ID_WINDOWS_CASCADE
     MENUITEM "&Bring To Front", ID_WINDOWS_BRINGTOFRONT
 END
@@ -82,7 +80,7 @@ IDR_APPLICATION_PAGE_CONTEXT1 MENU
 BEGIN
     POPUP "DUMMY"
     BEGIN
-        MENUITEM "&New Task (Run...)", ID_FILE_NEW
+        MENUITEM "&Νέα Διεργασία (Εκτέλεση...)", ID_FILE_NEW
         MENUITEM SEPARATOR
         MENUITEM "Lar&ge Icons", ID_VIEW_LARGE
         MENUITEM "S&mall Icons", ID_VIEW_SMALL
@@ -99,8 +97,8 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Tile &Horizontally", ID_WINDOWS_TILEHORIZONTALLY
         MENUITEM "Tile &Vertically", ID_WINDOWS_TILEVERTICALLY
-        MENUITEM "&Minimize", ID_WINDOWS_MINIMIZE
-        MENUITEM "Ma&ximize", ID_WINDOWS_MAXIMIZE
+        MENUITEM "&Σμίκρυνση", ID_WINDOWS_MINIMIZE
+        MENUITEM "Με&γέθυνση", ID_WINDOWS_MAXIMIZE
         MENUITEM "&Cascade", ID_WINDOWS_CASCADE
         MENUITEM SEPARATOR
         MENUITEM "&End Task", ID_APPLICATION_PAGE_ENDTASK
@@ -113,9 +111,9 @@ BEGIN
     POPUP "DUMMY"
     BEGIN
         MENUITEM "&Restore", ID_RESTORE
-        MENUITEM "&Close", ID_FILE_EXIT
+        MENUITEM "Κλείσημο", ID_FILE_EXIT
         MENUITEM SEPARATOR
-        MENUITEM "&Always On Top", ID_OPTIONS_ALWAYSONTOP
+        MENUITEM "&Πάντα Μπροστά", ID_OPTIONS_ALWAYSONTOP
     END
 END
 
@@ -130,11 +128,11 @@ BEGIN
         POPUP "Set &Priority"
         BEGIN
             MENUITEM "&Realtime", ID_PROCESS_PAGE_SETPRIORITY_REALTIME
-            MENUITEM "&High", ID_PROCESS_PAGE_SETPRIORITY_HIGH
+            MENUITEM "&Υψηλή", ID_PROCESS_PAGE_SETPRIORITY_HIGH
             MENUITEM "&AboveNormal", ID_PROCESS_PAGE_SETPRIORITY_ABOVENORMAL
-            MENUITEM "&Normal", ID_PROCESS_PAGE_SETPRIORITY_NORMAL
+            MENUITEM "&Κανονική", ID_PROCESS_PAGE_SETPRIORITY_NORMAL
             MENUITEM "&BelowNormal", ID_PROCESS_PAGE_SETPRIORITY_BELOWNORMAL
-            MENUITEM "&Low", ID_PROCESS_PAGE_SETPRIORITY_LOW
+            MENUITEM "&Χαμηλή", ID_PROCESS_PAGE_SETPRIORITY_LOW
         END
         MENUITEM "Set &Affinity...", ID_PROCESS_PAGE_SETAFFINITY
         MENUITEM "Edit Debug &Channels...", ID_PROCESS_PAGE_DEBUGCHANNELS
@@ -143,12 +141,10 @@ END
 
 /* Dialogs */
 
-/* TRANSLATORS: CAPTION must be the same as IDS_APP_TITLE to be brought back to focus when already opened */
-
 IDD_TASKMGR_DIALOG DIALOGEX 0, 0, 264, 246
 STYLE DS_SHELLFONT | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP |
       WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
-CAPTION "Task Manager"
+CAPTION "Event Viewer"
 MENU IDR_TASKMANAGER
 FONT 8, "MS Shell Dlg"
 BEGIN
@@ -324,8 +320,8 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_APP_TITLE "Task Manager"
-    IDC_TASKMGR "Task Manager"
+    IDS_APP_TITLE "Event Viewer"
+    IDC_TASKMGR "Event Viewer"
     IDS_IDLE_PROCESS "System Idle Process"
 END
 
@@ -335,7 +331,7 @@ BEGIN
     ID_OPTIONS_ALWAYSONTOP "Task Manager remains in front of all other windows unless minimized"
     ID_OPTIONS_MINIMIZEONUSE "Task Manager is minimized when a SwitchTo operation is performed"
     ID_OPTIONS_HIDEWHENMINIMIZED "Hide the Task Manager when it is minimized"
-    ID_VIEW_REFRESH "Force Task Manager to update now, regardless of Update Speed setting"
+    ID_VIEW_REFRESH "Ανανεώνει το παράθυρο"
     ID_VIEW_LARGE "Displays tasks by using large icons"
     ID_VIEW_SMALL "Displays tasks by using small icons"
     ID_VIEW_DETAILS "Displays information about each task"
@@ -354,7 +350,7 @@ BEGIN
     ID_WINDOWS_CASCADE "Cascades the windows diagonally on the desktop"
     ID_WINDOWS_BRINGTOFRONT "Brings the window front, but does not switch to it"
     ID_HELP_TOPICS "Displays Task Manager help topics"
-    ID_HELP_ABOUT "Displays program information, version number, and copyright"
+    ID_HELP_ABOUT "Εμφανίζει τις πληροφορίες προγράμματος, τον αριθμό έκδοσης και τα δικαιώματα"
     ID_FILE_EXIT "Exits the Task Manager application"
     ID_OPTIONS_SHOW16BITTASKS "Shows 16-bit tasks under the associated ntvdm.exe"
     ID_VIEW_SELECTCOLUMNS "Select which columns will be visible on the Process page"
