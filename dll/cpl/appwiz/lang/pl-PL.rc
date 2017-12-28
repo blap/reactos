@@ -1,13 +1,4 @@
-/*
- *         translated by Caemyr - Olaf Siejka (Jan, 2008)
- *         Use ReactOS forum PM or IRC to contact me
- *         http://www.reactos.org
- *         IRC: irc.freenode.net #reactos-pl;
- *         UTF-8 conversion by Caemyr (May, 2011) 
- *         Updated by Saibamen - Adam Stachowicz (saibamenppl@gmail.com) (April, 2014)
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 IDD_FIRSTPAGE DIALOGEX 0, 0, 380, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -63,7 +54,7 @@ BEGIN
 END
 
 ID_DWL_GECKO_DIALOG DIALOGEX  0, 0, 260, 95
-STYLE DS_SHELLFONT | DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "Instalator Wine Gecko"
 FONT 8, "MS Shell Dlg"
 BEGIN
