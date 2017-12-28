@@ -1,51 +1,52 @@
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
     IDS_USAGE "Введите ""EVENTCREATE /?"" для получения справки по использованию.\n"
     IDS_HELP "\n\
-EVENTCREATE [/S система [/U [домен\\]пользователь [/P пароль]]] /ID код_события\n\
-            {[/L имя_журнала] | [/SO источник]} /T тип /C категория /D описание\n\
+EVENTCREATE [/S computer [/U [domain\\]user [/P password]]] /ID EventID\n\
+            {[/L logname] | [/SO source]} /T type /C category /D description\n\
 \n\
-Описание:\n\
-    Эта команда позволяет администратору создать запись об особом событии \n\
-    в указанном журнале событий.\n\
+Description:\n\
+    This tool enables an administrator to create a custom event in\n\
+    a specified event log.\n\
 \n\
-Список параметров:\n\
-    /S  система           Определяет удаленную систему для подключения.\n\
+Parameters:\n\
+    /S  computer          Specifies the remote computer where to connect.\n\
 \n\
-    /U  [домен\\]польз.    Определяет контекст пользователя, под которым\n\
-                          выполняется данная команда.\n\
+    /U  [domain\\]user     Specifies the user account under which the command\n\
+                          should execute.\n\
 \n\
-    /P  [пароль]          Задает пароль для данного контекста пользователя.\n\
-                          Запрашивает ввод пароля, если он не был задан.\n\
+    /P  [password]        Specifies the password of the user account.\n\
+                          Prompts for input if omitted.\n\
 \n\
-    /L  журнал            Журнал в котором будет создано событие.\n\
-                          Доступными именами являются:\n\
+    /L  logname           Specifies the name of the log where the event will be\n\
+                          created. The valid names are:\n\
                           Application, System, Security\n\
-                          (последний зарезервирован только для учетной записи SYSTEM).\n\
+                          (the latter is reserved only for the SYSTEM account).\n\
 \n\
-    /SO источник          Задает имя источника, используемого для события\n\
-                          (если не указано, то по умолчанию имя источника\n\
-                          будет 'eventcreate').\n\
-                          Допустимым источником является любая строка, представляющая\n\
-                          приложение или компонент, который генерирует\n\
-                          событие.\n\
+    /SO source            Specifies the source name to use for the event\n\
+                          (if not specified, the default source name\n\
+                           will be 'eventcreate').\n\
+                          A valid source can be any string and should represent\n\
+                          the application or the component that is generating\n\
+                          the event.\n\
 \n\
-    /T  тип               Тип создаваемого события.\n\
-                          Допустимыми типами являются: SUCCESS, ERROR, WARNING,\n\
+    /T  type              Specifies the type of event to create.\n\
+                          The valid types are: SUCCESS, ERROR, WARNING,\n\
                           INFORMATION.\n\
 \n\
-    /C  категория         Определяет категорию события (число) для события.\n\
+    /C  category          Specifies the event category (integer) for the event.\n\
 \n\
-    /ID код_события       Код события для этого события. Допустимым кодом\n\
-                          является число в диапазоне от 0 до 65535.\n\
+    /ID EventID           Specifies the event ID for the event. This must be\n\
+                          an integer between 0 and 65535.\n\
 \n\
-    /D  описание          Описание для создаваемого события.\n\
+    /D  description       Specifies the description to use for the newly\n\
+                          created event.\n\
 \n\
-    /?                    Показать эту справку.\n\
+    /?                    Displays this help screen.\n\
 "
-    IDS_INVALIDSWITCH "Неправильный параметр или аргумент - '%s'.\n"
+    IDS_INVALIDSWITCH "Недопустимый ключ - /%c\n"
     IDS_BADSYNTAX_0 "Синтаксическая ошибка.\n"
     IDS_BADSYNTAX_1 "Синтаксическая ошибка. Для параметра '%s' должно быть указано значение.\n"
     IDS_BADSYNTAX_2 "Синтаксическая ошибка. Значение опции '%s' не может быть пустым.\n"
@@ -53,7 +54,7 @@ EVENTCREATE [/S система [/U [домен\\]пользователь [/P п
     IDS_BADSYNTAX_4 "Синтаксическая ошибка. Для опции '%s' не может быть указано значение.\n"
     IDS_BADSYNTAX_5 "Синтаксическая ошибка. Опция '%s' не допускается более чем %lu раз.\n"
     IDS_BADSYNTAX_6 "Синтаксическая ошибка. Отсутствует обязательный параметр '%s'.\n"
-    // IDS_BADSYNTAX_7 "Синтаксическая ошибка. Значение для опции '%s' за пределами разрешенного диапазона.\n"
+    // IDS_BADSYNTAX_7 "Синтаксическая ошибка. Значение для опции '%s' должно быть в диапазоне от %d до %d.\n"
     IDS_BADSYNTAX_7 "Синтаксическая ошибка. Значение для опции '%s' должно быть в диапазоне от %d до %d.\n"
 
     IDS_LOG_NOT_FOUND "Журнал '%s' не существует. Не удалось создать событие.\n"
