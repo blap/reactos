@@ -1,6 +1,4 @@
-/* TRANSLATOR: 2013, 2014 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 IDD_MSCONFIG_DIALOG DIALOGEX 0, 0, 378, 220
 STYLE DS_SHELLFONT | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP |
@@ -67,7 +65,7 @@ IDD_GENERAL_PAGE DIALOGEX 0, 0, 362, 175
 STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_CLIPCHILDREN
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Başlangıç Seçimi", -1, 10, 10, 340, 150,0, WS_EX_TRANSPARENT
+    GROUPBOX "Başlangıç Seçimi", -1, 10, 10, 340, 150, 0, WS_EX_TRANSPARENT
     CONTROL "&Düzgülü Başlangıç - Tüm aygıt sürücülerini ve hizmetleri yükle.", IDC_CBX_NORMAL_START, "Button", 0x50010009, 20, 30, 260, 10
     CONTROL "&Tanılama Başlangıcı - Yalnızca ana aygıtları ve ana hizmetleri yükle.", IDC_CBX_DIAGNOSTIC_START, "Button", 0x50010009, 20, 45, 260, 10
     CONTROL "&Seçmeli Başlangıç", IDC_CBX_SELECTIVE_STARTUP, "Button", 0x50010009, 20, 60, 260, 10
@@ -147,7 +145,7 @@ BEGIN
     IDS_TOOLS_COLUMN_NAME "Ad"
     IDS_TOOLS_COLUMN_DESCR "Açıklama"
     IDS_TOOLS_CMD_NAME "Komut İstemi"
-    IDS_TOOLS_CMD_DESCR "Komut İstemi'ni açar."
+    IDS_TOOLS_CMD_DESCR ""
     IDS_TOOLS_CMD_CMD "cmd.exe"
     IDS_TOOLS_INFO_NAME "Sürüm"
     IDS_TOOLS_INFO_DESCR "Sürüm bilgisini görüntüler."
