@@ -1,45 +1,40 @@
-/* FILE:       dll/win32/ieframe/lang/cs-CZ.rc
- * TRANSLATOR: Radek Liska aka Black_Fox (radekliska at gmail dot com)
- * UPDATED:    2015-04-15
- */
-
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 IDR_BROWSE_MAIN_MENU MENU
 {
-    POPUP "&Soubor"
+    POPUP "&File"
     {
-        POPUP "&Nový"
+        POPUP "&New"
         {
-            MENUITEM "&Okno",                   ID_BROWSE_NEW_WINDOW
+            MENUITEM "&Window",                 ID_BROWSE_NEW_WINDOW
         }
-        MENUITEM "&Otevřít...",                 ID_BROWSE_OPEN
-        MENUITEM "&Uložit",                     ID_BROWSE_SAVE
-        MENUITEM "Uložit j&ako...",             ID_BROWSE_SAVE_AS
+        MENUITEM "&Open...",                    ID_BROWSE_OPEN
+        MENUITEM "&Save",                       ID_BROWSE_SAVE
+        MENUITEM "Save &As...",                 ID_BROWSE_SAVE_AS
         MENUITEM SEPARATOR
-        MENUITEM "&Formát tisku...",            ID_BROWSE_PRINT_FORMAT
-        MENUITEM "&Tisk...",                    ID_BROWSE_PRINT
-        MENUITEM "Náhle&d tisku",               ID_BROWSE_PRINT_PREVIEW
+        MENUITEM "Print &Format...",            ID_BROWSE_PRINT_FORMAT
+        MENUITEM "Pr&int...",                   ID_BROWSE_PRINT
+        MENUITEM "Print Pre&view",              ID_BROWSE_PRINT_PREVIEW
         MENUITEM SEPARATOR
-        MENUITEM "&Vlastnosti",                 ID_BROWSE_PROPERTIES
-        MENUITEM "&Zavřít",                     ID_BROWSE_QUIT
+        MENUITEM "&Properties",                 ID_BROWSE_PROPERTIES
+        MENUITEM "&Close",                      ID_BROWSE_QUIT
     }
-    POPUP "&Zobrazit"
+    POPUP "&View"
     {
-        POPUP "&Panely nástrojů"
+        POPUP "&Toolbars"
         {
-            MENUITEM "&Standardní panel",       ID_BROWSE_BAR_STD
-            MENUITEM "Panel &Adresa",           ID_BROWSE_BAR_ADDR
+            MENUITEM "&Standard bar",           ID_BROWSE_BAR_STD
+            MENUITEM "&Address bar",            ID_BROWSE_BAR_ADDR
         }
     }
-    POPUP "&Oblíbené"
+    POPUP "F&avorites"
     {
-        MENUITEM "&Přidat do Oblíbených...",    ID_BROWSE_ADDFAV
+        MENUITEM "&Add to favorites...",        ID_BROWSE_ADDFAV
         MENUITEM SEPARATOR
     }
-    POPUP "&Nápověda"
+    POPUP "&Help"
     {
-        MENUITEM "&O programu Internet Explorer", ID_BROWSE_ABOUT
+        MENUITEM "&About Internet Explorer", ID_BROWSE_ABOUT
     }
 }
 
@@ -69,15 +64,15 @@ STRINGTABLE
 
 IDD_BROWSE_OPEN DIALOGEX 10, 10, 200, 70
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION
-CAPTION "Otevřít URL"
+CAPTION "Open URL"
 FONT 8, "MS Shell Dlg"
 {
-    LTEXT "Zvolte URL, kterou si přejete otevřít v Internet Exploreru",-1, 35,5,160,25
-    LTEXT "URL:", -1, 5, 32, 30, 15
+    LTEXT "Specify the URL you wish to open in Internet Explorer",-1, 35,5,160,25
+    LTEXT "Open:", -1, 5, 32, 30, 15
 #ifdef __REACTOS__
     ICON IDC_PAGEICO, IDC_PAGEICO, 2, 5, 21, 20, SS_ICON
 #endif
     EDITTEXT IDC_BROWSE_OPEN_URL, 35, 30, 160, 13
     DEFPUSHBUTTON "OK", IDOK, 90, 50, 50, 14
-    PUSHBUTTON "Storno", IDCANCEL, 145, 50, 50, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 145, 50, 50, 14
 }
