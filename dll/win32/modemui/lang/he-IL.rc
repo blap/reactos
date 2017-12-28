@@ -1,4 +1,4 @@
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 IDM_MENU MENU
 BEGIN
@@ -42,7 +42,7 @@ BEGIN
     GROUPBOX "&Speaker volume", 1029, 10, 21, 218, 48
     CONTROL "", 1032, "MSCTLS_TRACKBAR32", WS_GROUP | WS_TABSTOP | 0x00000001, 84, 40, 66, 20
     RTEXT "כבוי", 1045, 56, 40, 22, 8
-    LTEXT "High", 1001, 155, 40, 25, 11
+    LTEXT "גבוהה", 1001, 155, 40, 25, 11
     GROUPBOX "&Maximum Port Speed", 1031, 10, 78, 218, 46
     COMBOBOX 1036, 18, 100, 202, 69, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
     GROUPBOX "בקרת חיוג", 1060, 10, 133, 218, 51
@@ -193,7 +193,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
 CAPTION "אזהרה"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    AUTOCHECKBOX "Do not show this message again", 1109, 17, 73, 118, 10
+    AUTOCHECKBOX "אל תראה הודעה זו שוב", 1109, 17, 73, 118, 10
     DEFPUSHBUTTON "אישור", 1, 302, 84, 50, 14
     LTEXT "Some modems do not properly handle initialization strings of this length.", -1, 50, 27, 304, 8
     LTEXT "Information about this limitation can be obtained from your modem manufacturer.", -1, 50, 41, 304, 8
@@ -263,7 +263,7 @@ BEGIN
     261 "חומרה"
     262 "None"
     263 "On"
-    264 "Low"
+    264 "נמוכה"
     265 "V.23 (Minitel)"
     266 "רגיל"
     267 "Non-standard (Bell, HST)"
