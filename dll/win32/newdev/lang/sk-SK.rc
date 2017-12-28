@@ -1,16 +1,11 @@
-/* TRANSLATOR : Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- * DATE OF TR.: 15-02-2008
- * LAST CHANGE: 24-07-2008
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "Inštalácia zariadenia"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Vitajte", IDC_WELCOMETITLE, 120, 8, 195, 16
+    LTEXT "Vitajte", IDC_WELCOMETITLE, 120, 8, 195, 24
     LTEXT "Tento sprievodca nainštaluje nový ovládač zariadenia pre:", IDC_STATIC, 120, 21, 195, 16
     LTEXT "Kliknite na tlačidlo Ďalej pre pokračovanie.", IDC_STATIC, 120, 169, 195, 16
     LTEXT "NEZNÁME ZARIADENIE", IDC_DEVICE, 148, 36, 147, 12
