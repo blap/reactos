@@ -1,12 +1,4 @@
-/*
- * PROJECT:    ReactOS Magnifier
- * LICENSE:    GPL - See COPYING in the top level directory
- * FILE:       base/applications/magnify/lang/uk-UA.rc
- * PURPOSE:    Ukraianian Language File for Magnifier
- * TRANSLATOR: Artem Reznikov
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDC_MAGNIFIER MENU
 BEGIN
