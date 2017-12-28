@@ -1,6 +1,4 @@
-/* Indonesian resources by Zaenal Mutaqin (ade999 at gmail dot com) */
-
-LANGUAGE LANG_INDONESIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
 
 /* String Tables */
 
@@ -11,7 +9,7 @@ BEGIN
     IDS_DEFAULT_TOPIC_TITLE "ReactOS"
     IDS_DEFAULT_TOPIC_DESC "Selamat datang di ReactOS Operating System.\n\nKlik topik di sisi kiri."
 
-    IDS_CHECKTEXT "&Show this dialog again"
+    IDS_CHECKTEXT "&Tampilkan dialog ini lagi"
     IDS_CLOSETEXT "&Keluar"
 END
 
