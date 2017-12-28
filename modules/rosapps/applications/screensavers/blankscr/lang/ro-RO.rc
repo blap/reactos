@@ -1,14 +1,4 @@
-/*
- * PROJECT:     ReactOS Default ScreenSaver
- * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        rosapps/applications/screensavers/blankscr/lang/ro-RO.rc
- * PURPOSE:     Romanian Language File for Default ScreenSaver
- * TRANSLATOR:  Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
-
-#pragma code_page(65001)
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 STRINGTABLE DISCARDABLE
 BEGIN
