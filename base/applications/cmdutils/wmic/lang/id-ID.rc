@@ -1,0 +1,9 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+{
+    STRING_CMDLINE_NOT_SUPPORTED, "Kesalahan: Baris perintah tidak didukung \n"
+    STRING_ALIAS_NOT_FOUND, "Kesalahan: Alias tidak ditemukan\n"
+    STRING_INVALID_QUERY, "Kesalahan: Permintaan tidak valid \n"
+    STRING_INVALID_PATH, "Kesalahan: Sintaks tidak valid untuk PATH\n"
+}
