@@ -1,0 +1,32 @@
+// English (U.S.) resources
+
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE DISCARDABLE
+BEGIN
+   IDS_APP_TITLE           "Konsol Pengelola tugas oleh Aleksey Bragin <aleksey@reactos.org>"
+
+   IDS_COLUMN_NUMBER       "# "
+   IDS_COLUMN_IMAGENAME    "Nama gambar                  "
+   IDS_COLUMN_PID          "PID  "
+   IDS_COLUMN_CPU          "CPU"
+   IDS_COLUMN_MEM          "Mem Usage"
+   IDS_COLUMN_MEM_UNIT		"KB"
+   IDS_COLUMN_PF           "Kesalahan halaman"
+
+   IDS_IDLE_PROCESS        "Proses Diam Sistem"
+   IDS_YES                 "Y"
+   IDS_NO                  "N"
+
+   IDS_MENU                "Tekan: q - berhenti, k - matikan proses"
+   IDS_MENU_QUIT           "Q"
+   IDS_MENU_KILL_PROCESS   "K"
+
+   IDS_KILL_PROCESS        "Apakah anda yakin anda ingin mematikan proses ini? (y/n)"
+   IDS_KILL_PROCESS_ERR1   "Tidak bisa menghentikan proses ini..."
+   IDS_KILL_PROCESS_ERR2   "Tidak dapat menghentikan proses %d (tidak dapat membuka proses)"
+
+   IDS_CTM_GENERAL_ERR1    "ctm: tidak bisa menggunakan konsol."
+   IDS_CTM_GENERAL_ERR2    "ctm: tidak bisa Dapatkan Mode Konsol() untuk masukan konsol."
+   IDS_CTM_GENERAL_ERR3    "ctm: tidak bisa Dapatkan Mode Konsol() untuk output konsol."
+END
