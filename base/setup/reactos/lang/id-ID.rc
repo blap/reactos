@@ -1,0 +1,137 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+IDD_STARTPAGE DIALOGEX 0, 0, 317, 193
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup ReactOS"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Selamat datang di ReactOS Setup Wizard.", IDC_STARTTITLE, 115, 8, 195, 24
+    LTEXT "Anda tidak dapat menginstal ReactOS langsung dari CD ini! Silakan restart komputer Anda dari CD ini untuk menginstal ReactOS.", IDC_STATIC, 115, 40, 195, 100
+    LTEXT "Klik selesai untuk keluar Setup.", IDC_STATIC, 115, 169, 195, 17
+END
+
+IDD_TYPEPAGE DIALOGEX 0, 0, 317, 143
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup ReactOS"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    AUTORADIOBUTTON "Instalasi ReactOS", IDC_INSTALL, 7, 7, 277, 10
+    LTEXT "Instal salinan baru ReactOS. Pilihan ini tidak menyimpan file, pengaturan dan program Anda. Anda bisa membuat perubahan pada disk dan partisi.", IDC_INSTALLTEXT, 18, 18, 269, 25
+    AUTORADIOBUTTON "Memperbarui atau memperbaiki ReactOS", IDC_UPDATE, 7, 50, 277, 10
+    LTEXT "Memperbarui atau memperbaiki salinan ReactOS yang terinstal. Opsi ini menyimpan file, pengaturan dan program Anda. Pilihan ini hanya tersedia jika ReactOS telah terinstal di komputer ini.", IDC_UPDATETEXT, 18, 61, 269, 30
+    LTEXT "Klik Next untuk melanjutkan.", IDC_STATIC, 7, 128, 297, 8
+END
+
+IDD_DEVICEPAGE DIALOGEX 0, 0, 317, 143
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup ReactOS"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Komputer:", IDC_STATIC, 20, 15, 80, 10
+    CONTROL "", IDC_COMPUTER, "ComboBox", WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST, 100, 15, 180, 80
+    LTEXT "Tampilan:", IDC_STATIC, 20, 35, 80, 10
+    CONTROL "", IDC_DISPLAY, "ComboBox", WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST, 100, 35, 180, 80
+    LTEXT "Keyboard:", IDC_STATIC, 20, 55, 80, 10
+    CONTROL "", IDC_KEYBOARD, "ComboBox", WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST, 100, 55, 180, 80
+    LTEXT "Klik Next untuk setup perangkat penginstalan.", IDC_STATIC, 7, 128, 297, 8
+END
+
+IDD_DRIVEPAGE DIALOGEX 0, 0, 317, 143
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup ReactOS"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL "", IDC_PARTITION, "SysListView32", WS_BORDER | WS_VISIBLE | WS_TABSTOP | LVS_REPORT | LVS_SINGLESEL, 7, 7, 303, 112
+    PUSHBUTTON "&Membuat", IDC_PARTCREATE, 7, 122, 50, 14
+    PUSHBUTTON "&Menghapus", IDC_PARTDELETE, 63, 122, 50, 14
+    PUSHBUTTON "Sopir", IDC_DEVICEDRIVER, 174, 122, 50, 14, WS_DISABLED
+    PUSHBUTTON "& Opsi Lanjutan...", IDC_PARTMOREOPTS, 230, 122, 80, 14
+/*    LTEXT "Klik Next untuk memeriksa rangkumannya.", IDC_STATIC, 7, 128, 277, 8 */
+END
+
+IDD_PARTITION DIALOGEX 0, 0, 145, 90
+STYLE DS_SHELLFONT | WS_VISIBLE | WS_CAPTION
+CAPTION "Buat Partisi"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL "", IDC_UPDOWN1, "msctls_updown32", WS_VISIBLE, 104, 22, 9, 13
+    CONTROL "Buat dan format partisi", IDC_STATIC, "Button", BS_GROUPBOX, 7, 5, 129, 57
+    LTEXT "Ukuran:", IDC_STATIC, 13, 24, 27, 9
+    EDITTEXT IDC_PARTSIZE, 58, 22, 47, 13, WS_VISIBLE | WS_TABSTOP
+    LTEXT "GB", IDC_UNIT, 117, 24, 14, 9
+    LTEXT "Berkas sistem:", IDC_STATIC, 13, 46, 42, 9
+    CONTROL "", IDC_FSTYPE, "ComboBox", WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 42, 73, 50
+    PUSHBUTTON "&OK", IDOK, 35, 68, 47, 15, WS_VISIBLE | WS_TABSTOP
+    PUSHBUTTON "&Membatalkan", IDCANCEL, 87, 68, 47, 15, WS_VISIBLE | WS_TABSTOP
+END
+
+IDD_BOOTOPTIONS DIALOGEX 0, 0, 305, 116
+STYLE DS_SHELLFONT | WS_VISIBLE | WS_CAPTION
+CAPTION "Pengaturan Partisi Lanjutan"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL "Folder penginstalan", IDC_STATIC, "Button", BS_GROUPBOX, 4, 1, 298, 30
+    EDITTEXT IDC_PATH, 10, 11, 278, 13, WS_VISIBLE
+    CONTROL "Boot loader instalasi", IDC_STATIC, "Button", BS_GROUPBOX, 4, 36, 298, 52
+    CONTROL "Instal boot loader pada hard disk (MBR dan VBR)", IDC_INSTFREELDR, "Button", BS_AUTORADIOBUTTON | WS_TABSTOP, 10, 46, 278, 11
+    CONTROL "Instal boot loader pada hard disk (hanya VBR)", IDC_INSTVBRONLY, "Button", BS_AUTORADIOBUTTON | WS_TABSTOP, 10, 57, 278, 11
+    CONTROL "Tidak ada instalasi bootloader", IDC_NOINSTFREELDR, "Button", BS_AUTORADIOBUTTON | WS_TABSTOP | WS_DISABLED, 10, 68, 278, 11
+    PUSHBUTTON "&OK", IDOK, 180, 94, 50, 15, WS_TABSTOP | WS_VISIBLE
+    PUSHBUTTON "&Membatalkan", IDCANCEL, 240, 94, 50, 15, WS_TABSTOP | WS_VISIBLE
+END
+
+IDD_SUMMARYPAGE DIALOGEX 0, 0, 317, 143
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup ReactOS"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Klik Next untuk memulai proses instalasi.", IDC_STATIC, 7, 128, 303, 8
+END
+
+IDD_PROCESSPAGE DIALOGEX 0, 0, 317, 143
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup ReactOS"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Instal file...", IDC_ACTIVITY, 20, 50, 277, 10
+    LTEXT "test.txt", IDC_ITEM, 30, 80, 257, 10
+    CONTROL "", IDC_PROCESSPROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 7, 120, 303, 8
+END
+
+IDD_RESTARTPAGE DIALOGEX 0, 0, 317, 193
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Melengkapi Setup ReactOS"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Anda telah berhasil menyelesaikan tahap pertama Setup ReactOS.", IDC_STATIC, 115, 50, 195, 10
+    LTEXT "Saat Anda mengklik Selesai, komputer Anda akan restart.", IDC_STATIC, 115, 80, 195, 10
+    CONTROL "", IDC_RESTART_PROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 115, 110, 195, 8
+    LTEXT "Jika ada CD dalam drive, lepaskan. Kemudian, untuk me-restart komputer Anda, klik Finish.", IDC_STATIC, 115, 169, 195, 17
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TYPETITLE "Selamat datang di Setup ReactOS"
+    IDS_TYPESUBTITLE "Pilih jenis setup."
+    IDS_DEVICETITLE "Setup perangkat dasar"
+    IDS_DEVICESUBTITLE "Atur pengaturan tampilan dan keyboard."
+    IDS_DRIVETITLE "Setup partisi instalasi dan folder sistem"
+    IDS_DRIVESUBTITLE "Siapkan partisi instalasi, folder sistem dan boot loader."
+    IDS_PROCESSTITLE "Setup partisi, copy file dan setup system"
+    IDS_PROCESSSUBTITLE "Buat dan format partisi, copy file, install dan setup boot loader"
+    IDS_RESTARTTITLE "Tahap pertama setup selesai"
+    IDS_RESTARTSUBTITLE "Tahap pertama setup telah selesai, restart untuk melanjutkan tahap kedua"
+    IDS_SUMMARYTITLE "Ringkasan Instalasi"
+    IDS_SUMMARYSUBTITLE "Cantumkan properti penginstalan untuk diperiksa sebelum mendaftar ke perangkat penginstalan"
+    IDS_ABORTSETUP "ReactOS tidak sepenuhnya terpasang di komputer Anda. Jika Anda keluar dari Setup sekarang, Anda perlu menjalankan Setup lagi untuk menginstal ReactOS. Benar-benar berhenti?"
+    IDS_ABORTSETUP2 "Batalkan pemasangan?"
+    IDS_NO_TXTSETUP_SIF "Tidak dapat menemukan 'txtsetup.sif'\nSetup tidak dapat dilanjutkan"
+    IDS_CAPTION "Setup ReactOS"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PARTITION_NAME "Nama"
+    IDS_PARTITION_SIZE "Ukuran"
+    IDS_PARTITION_TYPE "Jenis"
+END
