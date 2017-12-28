@@ -1,4 +1,4 @@
-LANGUAGE LANG_GREEK, SUBLANG_DEFAULT
+LANGUAGE LANG_GREEK, SUBLANG_GREEK_GREECE
 
 IDR_MAINMENU MENU
 BEGIN
@@ -29,33 +29,33 @@ BEGIN
     MENUITEM "Α&ντιγραφή",           ID_COPY, GRAYED
     MENUITEM "Επ&ικόληση",          ID_PASTE, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Διαγραφή",           -1, GRAYED
+    MENUITEM "Αντι&κείμενο",           -1, GRAYED
     MENUITEM "Επιλογή &όλων",     ID_SELALL, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Εύρεση...\tCtrl+F",-1, GRAYED
-    MENUITEM "Εύρεση επό&μενου",       -1, GRAYED
-    MENUITEM "Αν&τικατάσταση\tCtrl+H", -1, GRAYED
+    MENUITEM "Αντι&κείμενο",-1, GRAYED
+    MENUITEM "Αντι&κείμενο",       -1, GRAYED
+    MENUITEM "Αντι&κείμενο", -1, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Ιδιότητες αντικειμένου",-1, GRAYED
+    MENUITEM "Αντι&κείμενο",-1, GRAYED
     MENUITEM "Αντι&κείμενο",          -1, GRAYED
   END
   POPUP "&Προβολή"
   BEGIN
-    MENUITEM "Γραμμές &εργαλείων",        -1, CHECKED
-    MENUITEM "Γραμμές &μορφοποίησης",     -1, CHECKED
+    MENUITEM "&Χάρακας",        -1, CHECKED
+    MENUITEM "&Χάρακας",     -1, CHECKED
     MENUITEM "&Χάρακας",          -1, CHECKED
     MENUITEM "Γραμμή &κατάστασης",     ID_STATUSBAR, CHECKED
   END
   POPUP "&Εισαγωγή"
   BEGIN
-    MENUITEM "&Ημερομηνία και ώρα...",-1, GRAYED
+    MENUITEM "&Αντικείμενο...",-1, GRAYED
     MENUITEM "&Αντικείμενο...",       -1, GRAYED
   END
   POPUP "&Μορφοποίηση"
   BEGIN
     MENUITEM "&Γραμματοσειρά...",        -1 GRAYED
-    MENUITEM "&Στυλ κουκίδας",     -1, GRAYED
-    MENUITEM "&Παράγραφος...",    -1, GRAYED
+    MENUITEM "&Στηλοθέτες...",     -1, GRAYED
+    MENUITEM "&Στηλοθέτες...",    -1, GRAYED
     MENUITEM "&Στηλοθέτες...",         -1, GRAYED
   END
   POPUP "&Παράθυρο"
@@ -166,3 +166,4 @@ BEGIN
   IDS_HINT_SYS_MINIMIZE " Συμπτίσει το παράθυρο σε εικονίδιο."
   IDS_HINT_SYS_MAXIMIZE " Αναπτύσει το παράθυρο γεμίζοντας την οθόνη."
 END
+
