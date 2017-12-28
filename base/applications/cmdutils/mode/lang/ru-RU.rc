@@ -1,18 +1,18 @@
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "Настройка системных устройств.\n\n\
-Состояние устройства:   MODE [device] [/STATUS]\n\
-Последовательный порт:  MODE COMm[:] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s]\n\
-                                     [to=on|off] [xon=on|off] [odsr=on|off]\n\
-                                     [octs=on|off] [dtr=on|off|hs]\n\
-                                     [rts=on|off|hs|tg] [idsr=on|off]\n\
-Переадресация печати:   MODE LPTn[:]=COMm[:]\n\
-Выбор кодовой страницы: MODE CON[:] CP SELECT=yyy\n\
-Вывод кодовой страницы: MODE CON[:] CP [/STATUS]\n\
-Режим работы экрана:    MODE CON[:] [COLS=c] [LINES=n]\n\
-Ввод с клавиатуры:      MODE CON[:] [RATE=r DELAY=d]\n"
+    IDS_USAGE "Configure System Devices.\n\n\
+Device Status:     MODE [device] [/STATUS]\n\
+Serial port:       MODE COMm[:] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s]\n\
+                                [to=on|off] [xon=on|off] [odsr=on|off]\n\
+                                [octs=on|off] [dtr=on|off|hs]\n\
+                                [rts=on|off|hs|tg] [idsr=on|off]\n\
+Redirect printing: MODE LPTn[:]=COMm[:]\n\
+Select code page:  MODE CON[:] CP SELECT=yyy\n\
+Code page status:  MODE CON[:] CP [/STATUS]\n\
+Display mode:      MODE CON[:] [COLS=c] [LINES=n]\n\
+Typematic rate:    MODE CON[:] [RATE=r DELAY=d]\n"
 
     IDS_QUERY_SERIAL_FOUND "    Найдено последовательное устройство - %s\n"
     IDS_QUERY_PRINTER_FOUND "    Найдено устройство печати - %s\n"
@@ -44,8 +44,8 @@ BEGIN
 
     IDS_CONSOLE_STATUS_LINES    "    Строки:                %d\n"
     IDS_CONSOLE_STATUS_COLS     "    Столбцы:               %d\n"
-    IDS_CONSOLE_KBD_DELAY       "    Скорость клавиатуры:   %ld\n"
     IDS_CONSOLE_KBD_RATE        "    Задержка клавиатуры:   %ld\n"
+    IDS_CONSOLE_KBD_DELAY       "    Скорость клавиатуры:   %ld\n"
     IDS_CONSOLE_CODEPAGE        "    Кодовая страница:      %d\n"
 
     IDS_PRINTER_OUTPUT_NOT_REROUTED     "    Вывод принтера не переадресован.\n"
@@ -64,4 +64,5 @@ BEGIN
     IDS_ERROR_INVALID_PARITY_BITS "ОШИБКА: Неверное значение битов четности %d:\n"
     IDS_ERROR_INVALID_STOP_BITS "ОШИБКА: Неверное значение стоповых битов %d:\n"
     IDS_ERROR_NO_MEMORY "ОШИБКА: Недостаточно памяти.\n"
+    IDS_ERROR_SCREEN_LINES_COL "ERROR: The screen cannot be set to the number of lines and columns specified.\n"
 END
