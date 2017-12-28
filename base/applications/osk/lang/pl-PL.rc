@@ -1,12 +1,12 @@
 /*
  * PROJECT:         ReactOS Kernel
  * LICENSE:         GPL - See COPYING in the top level directory
- * FILE:            base/applications/osk/lang/pl-PL.rc
- * PURPOSE:         On screen keyboard (Polish resources)
+ * FILE:            base/applications/osk/lang/en-US.rc
+ * PURPOSE:         On screen keyboard (American resources).
  * PROGRAMMERS:     Denis ROBERT
  */
 
-LANGUAGE LANG_POLISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 MAIN_DIALOG DIALOGEX DISCARDABLE 0, 0, 608, 164
 CAPTION "Klawiatura Ekranowa"
