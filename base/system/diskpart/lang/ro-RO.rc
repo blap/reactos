@@ -1,16 +1,14 @@
-/* Translator: Ștefan Fulea (stefan dot fulea at mail dot md) */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 /* Basic application information */
 STRINGTABLE
 BEGIN
     IDS_APP_HEADER "ReactOS DiskPart"
-    IDS_APP_USAGE "Interpretor pentru partiționare discuri.\n\n\
-Utilizare: DISKPART [/S numefișier] [/T timplimită] [/?]\n\n\
-/S numefișier\tExecută scriptul din fișierul dat.\n\
-/T timplimită\tLimită temporală pentru prevenirea utilizării concurente.\n\
-/?\t\tAfișează acest manual.\n\n"
+    IDS_APP_USAGE "\nDisk Partitioning Interpreter.\n\n\
+Usage: DISKPART [/S filename] [/T timeout] [/?]\n\n\
+/S filename\tRuns the given script.\n\
+/T timeout\tTimeout in seconds to prevent DiskPart usage overlap.\n\
+/?\t\tDisplay this help message.\n\n"
     IDS_APP_LICENSE "Licențiere în termenii GNU GPLv2\n"
     IDS_APP_CURR_COMPUTER "Pe calculatorul: %s\n\n"
     IDS_APP_LEAVING "\nÎnchiderea DiskPart...\n"
@@ -56,7 +54,7 @@ BEGIN
     IDS_RESCAN_END "\nScanarea configurației a fost finalizată.\n\n"
 END
 
-/* SELECT command strings */
+/* Select command strings */
 STRINGTABLE
 BEGIN
     IDS_SELECT_NO_DISK "\nMomentan nu există niciun disc selectat.\nSelectați un disc apoi reîncercați.\n\n"
@@ -89,7 +87,7 @@ BEGIN
     IDS_MSG_ARG_SYNTAX_ERROR "Argument(e) nevalid(e) pentru această comandă.\nPentru mai multe informații, executați comanda:"
 END
 
-/* Help Command Descripions */
+/* Help Command Descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_DESC_ACTIVE "ACTIVE\t\t- Desemnează ca activă partiția selectată.\n"
@@ -144,250 +142,250 @@ END
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ACTIVE "\n\
-<Adăugare manual pentru comanda «active»>\n\n"
+<Add active command help text here>\n\n"
 END
 
 /* Add help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ADD "\n\
-<Adăugare manual pentru comanda «add»>\n\n"
+<Add add command help text here>\n\n"
 END
 
 /* Assign help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ASSIGN "\n\
-<Adăugare manual pentru comanda «assign»>\n\n"
+<Add assign command help text here>\n\n"
 END
 
 /* Attach help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ATTACH "\n\
-<Adăugare manual pentru comanda «attach»>\n\n"
+<Add attach command help text here>\n\n"
 END
 
 /* Attributes Command Messages */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ATTRIBUTES "\n\
-<Adăugare manual pentru comanda «attributes»>\n\n"
+<Add attributes command help text here>\n\n"
 END
 
 /* Automount help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_AUTOMOUNT "\n\
-<Adăugare manual pentru comanda «automount»>\n\n"
+<Add automount command help text here>\n\n"
 END
 
 /* Break help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_BREAK "\n\
-<Adăugare manual pentru comanda «break»>\n\n"
+<Add break command help text here>\n\n"
 END
 
 /* Clean help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_CLEAN "\n\
-<Adăugare manual pentru comanda «clean»>\n\n"
+<Add clean command help text here>\n\n"
 END
 
 /* Compact help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_COMPACT "\n\
-<Adăugare manual pentru comanda «compact»>\n\n"
+<Add compact command help text here>\n\n"
 END
 
 /* Convert help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_CONVERT "\n\
-<Adăugare manual pentru comanda «convert»>\n\n"
+<Add convert command help text here>\n\n"
 END
 
 /* Convert help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_CREATE "\n\
-<Adăugare manual pentru comanda «create»>\n\n"
+<Add create command help text here>\n\n"
 END
 
 /* Delete help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_DELETE "\n\
-<Adăugare manual pentru comanda «delete»>\n\n"
+<Add delete command help text here>\n\n"
 END
 
 /* Delete help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_DETAIL "\n\
-<Adăugare manual pentru comanda «detail»>\n\n"
+<Add detail command help text here>\n\n"
 END
 
 /* Detach help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_DETACH "\n\
-<Adăugare manual pentru comanda «detach»>\n\n"
+<Add detach command help text here>\n\n"
 END
 
 /* Expand help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_EXPAND "\n\
-<Adăugare manual pentru comanda «expand»>\n\n"
+<Add expand command help text here>\n\n"
 END
 
 /* Extend help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_EXTEND "\n\
-<Adăugare manual pentru comanda «extend»>\n\n"
+<Add extend command help text here>\n\n"
 END
 
 /* Filesystems help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_FILESYSTEMS "\n\
-<Adăugare manual pentru comanda «filesystems»>\n\n"
+<Add filesystems command help text here>\n\n"
 END
 
 /* Format help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_FORMAT "\n\
-<Adăugare manual pentru comanda «format»>\n\n"
+<Add format command help text here>\n\n"
 END
 
 /* GPT help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_GPT "\n\
-<Adăugare manual pentru comanda «gpt»>\n\n"
+<Add gpt command help text here>\n\n"
 END
 
 /* Help help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_HELP "\n\
-<Adăugare manual pentru comanda «help»>\n\n"
+<Add help command help text here>\n\n"
 END
 
 /* Import help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_IMPORT "\n\
-<Adăugare manual pentru comanda «import»>\n\n"
+<Add import command help text here>\n\n"
 END
 
 /* Inactive help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_INACTIVE "\n\
-<Adăugare manual pentru comanda «inactive»>\n\n"
+<Add inactive command help text here>\n\n"
 END
 
 /* List help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_LIST "\n\
-<Adăugare manual pentru comanda «list»>\n\n"
+<Add list command help text here>\n\n"
 END
 
 /* Merge help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_MERGE "\n\
-<Adăugare manual pentru comanda «merge»>\n\n"
+<Add merge command help text here>\n\n"
 END
 
 /* Offline help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_OFFLINE "\n\
-<Adăugare manual pentru comanda «OFFLINE»>\n\n"
+<Add OFFLINE command help text here>\n\n"
 END
 
 /* Online help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ONLINE "\n\
-<Adăugare manual pentru comanda «ONLINE»>\n\n"
+<Add ONLINE command help text here>\n\n"
 END
 
 /* Recover help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_RECOVER "\n\
-<Adăugare manual pentru comanda «RECOVER»>\n\n"
+<Add RECOVER command help text here>\n\n"
 END
 
 /* Remove help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_REMOVE "\n\
-<Adăugare manual pentru comanda «REMOVE»>\n\n"
+<Add REMOVE command help text here>\n\n"
 END
 
 /* Repair help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_REPAIR "\n\
-<Adăugare manual pentru comanda «REPAIR»>\n\n"
+<Add REPAIR command help text here>\n\n"
 END
 
 /* Rescan help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_RESCAN "\n\
-<Adăugare manual pentru comanda «RESCAN»>\n\n"
+<Add RESCAN command help text here>\n\n"
 END
 
 /* Retain help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_RETAIN "\n\
-<Adăugare manual pentru comanda «RETAIN»>\n\n"
+<Add RETAIN command help text here>\n\n"
 END
 
 /* San help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_SAN "\n\
-<Adăugare manual pentru comanda «SAN»>\n\n"
+<Add SAN command help text here>\n\n"
 END
 
 /* Select help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_SELECT "\n\
-<Adăugare manual pentru comanda «SELECT»>\n\n"
+<Add SELECT command help text here>\n\n"
 END
 
 /* Setid help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_SETID "\n\
-<Adăugare manual pentru comanda «SETID»>\n\n"
+<Add SETID command help text here>\n\n"
 END
 
 /* Setid help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_SHRINK "\n\
-<Adăugare manual pentru comanda «SHRINK»>\n\n"
+<Add SHRINK command help text here>\n\n"
 END
 
 /* Uniqueid help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_UNIQUEID "\n\
-<Adăugare manual pentru comanda «UNIQUEID»>\n\n"
+<Add UNIQUEID command help text here>\n\n"
 END
