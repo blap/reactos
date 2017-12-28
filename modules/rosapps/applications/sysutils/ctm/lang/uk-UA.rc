@@ -1,12 +1,6 @@
-/*
- * PROJECT:     ReactOS Console Task Manager
- * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        rosapps/sysutils/ctm/Uk.rc
- * PURPOSE:     Ukraianian Language File for Console Task Manager
- * TRANSLATOR:  Artem Reznikov
- */
+// English (U.S.) resources
 
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 STRINGTABLE DISCARDABLE
 BEGIN
@@ -15,7 +9,7 @@ BEGIN
    IDS_COLUMN_NUMBER       "# "
    IDS_COLUMN_IMAGENAME    "Ім'я образу                  "
    IDS_COLUMN_PID          "PID  "
-   IDS_COLUMN_CPU          "CPU"
+   IDS_COLUMN_CPU          "ЦП"
    IDS_COLUMN_MEM          "Використання пам'яті"
    IDS_COLUMN_MEM_UNIT		"KB"
    IDS_COLUMN_PF           "Помилок сторінки"
