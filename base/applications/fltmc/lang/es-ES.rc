@@ -1,4 +1,4 @@
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 STRINGTABLE
 BEGIN
@@ -7,8 +7,8 @@ BEGIN
                unload      Unloads a Filter driver\n\
                filters     Lists the Filters currently registered in the system\n\n"
 
-    IDS_USAGE_LOAD      "Loads a filter driver\n"
-    IDS_USAGE_UNLOAD    "Unloads a filter driver\n"
+    IDS_USAGE_LOAD      "Carga un controlador de filtro\n"
+    IDS_USAGE_UNLOAD    "Descarga un controlador de filtro\n"
     IDS_USAGE_FILTERS   "Lists all registered filters\n"
 END
 
