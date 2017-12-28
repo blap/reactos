@@ -1,7 +1,4 @@
-/* Spanish Language resource file.
- * Translated by: Ismael Ferreras Morezuelas <2014-11-07> */
-
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 /* Dialog */
 IDD_GUI DIALOGEX 0, 0, 240, 255
@@ -33,39 +30,39 @@ END
 /* Information and error messages */
 STRINGTABLE
 BEGIN
-    IDS_USAGE "Utilidad de apagado de ReactOS\n\
+    IDS_USAGE "ReactOS Shutdown Utility\n\
 \n\
-Uso: shutdown [/?] [/i | /l | /s | /r | /g | /a | /p | /h | /e] [/f]\n\
-     [/m \\\\equipo][/t xxx][/d [p|u:]xx:yy [/c ""comentario""]]\n\
+Usage: shutdown [/?] [/i | /l | /s | /r | /g | /a | /p | /h | /e] [/f]\n\
+       [/m \\\\computer][/t xxx][/d [p|u:]xx:yy [/c """comentario"""]]\n\
 \n\
-    Sin argumentos o con /?    Muestra esta ayuda.\n\
-    /i      Muestra la interfaz gráfica de usuario (GUI).\n\
-            Esta opción debe ser la primera.\n\
-    /l      Cierrar sesión en el equipo local. No funciona con /m o /d.\n\
-    /s      Apaga el equipo.\n\
-    /r      Reinicia el equipo.\n\
-    /g      Reiniciar el equipo junto con todas las aplicaciones registradas.\n\
-    /a      Cancela un apagado retrasado. Sólo se puede utilizar durante\n\
-            la cuanta atrás, pero no más tarde.\n\
-    /p      Apaga el equipo local sin esperas o avisos.\n\
-            Se puede usar junto con /d o /f.\n\
-    /h      Hiberna el equipo local. Se puede usar junto con /f.\n\
-    /e      Documenta la razón por apagado no planeado.\n\
-    /m \\\\equipo  Especifica el equipo remoto de destino (dirección UNC/IP).\n\
-    /t xxx  Establece el tiempo de espera a xxx segundos antes de apagar.\n\
-            El rango válido es de 0 a 315360000 (10 años),\n\
-            con 30 siendo el valor por defecto.\n\
-    /c ""comentario""  Comenta la razón de apagado o reinicio.\n\
-            Sólo se permiten hasta 512 caracteres.\n\
-    /f      Fuerza el cierre de aplicaciones sin avisar a los usuarios.\n\
-            Si no se especifica ningún otro parámetro también cerrará sesión.\n\
-    /d [p|u:]xx:yy  Da un código de razón para el apagado o reinicio.\n\
-            p indica que el apagado o reinicio estaba planeado.\n\
-            u indica que la razón está definida por el usuario.\n\
-            Si no se especifica ni p ni la u, el apagado se\n\
-            marca como no planeado.\n\
-            Donde xx es el código de razón mayor (entero positivo menor que 256).\n\
-            Donde yy es el código de razón mayor (entero positivo menor que 65536).\n"
+    No arguments or /?    Display this help.\n\
+    /i      Show the graphical user interface (GUI). This option must be the\n\
+            first one.\n\
+    /l      Log off on the local system only. Cannot be used with /m or /d.\n\
+    /s      Shutdown the computer.\n\
+    /r      Restart the computer.\n\
+    /g      Restart the computer and restart all the registered applications.\n\
+    /a      Cancel a delayed shutdown. Can only be used during the delay\n\
+            period.\n\
+    /p      Shutdown the local computer without any timeout or warning. Can be\n\
+            used with /d or /f.\n\
+    /h      Hibernate the local computer. Usable with /f.\n\
+    /e      Document the reason for the unexpected computer shutdown.\n\
+    /m \\\\computer  Specify the target computer (UNC/IP address).\n\
+    /t xxx  Set the timeout period to xxx seconds before shutting down.\n\
+            The valid range starts from 0 to 315360000 (10 years),\n\
+            30 being the default value.\n\
+    /c """comentario"""  Comment on the reason for shutdown or restart.\n\
+            512 characters maximum allowed.\n\
+    /f      Force running applications to close without warning users. If you\n\
+            do not specify any other parameter, this option will also log off.\n\
+    /d [p|u:]xx:yy  Give the reason code for the shutdown or the restart.\n\
+            p indicates that the shutdown or the restart is planned.\n\
+            u indicates that the reason is defined by the user.\n\
+            If neither p nor u are specified, the shutdown or the restart are\n\
+            not planned.\n\
+            xx is the major reason code (positive integer smaller than 256).\n\
+            yy is the minor reason code (positive integer smaller than 65536).\n"
 
     IDS_ERROR_SHUTDOWN_REBOOT "ERROR: No se puede apagar y reiniciar a la vez.\n"
     IDS_ERROR_TIMEOUT "ERROR: El valor de tiempo de espera de %u está fuera del rango permitido (0-315360000).\n"
