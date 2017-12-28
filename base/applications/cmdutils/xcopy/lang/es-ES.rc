@@ -1,4 +1,4 @@
-LANGUAGE LANG_SPANISH, SUBLANG_DEFAULT
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 STRINGTABLE
 {
@@ -7,51 +7,51 @@ STRINGTABLE
     STRING_PAUSE,    "Unde <enter> para iniciar la copia\n"
     STRING_SIMCOPY,  "%1!d! archivo(s) seran copiado(s)\n"
     STRING_COPY,     "%1!d! archivo(s) copiado(s)\n"
-    STRING_QISDIR,   "Es '%1' un nombre de archivo o de directorio\n\
-                     en el punto de destino?\n\
-                     (F - Archivo, D - Directorio)\n"
-    STRING_SRCPROMPT,"%1? (Si|No)\n"
-    STRING_OVERWRITE,"Destruir y escribir encima %1? (Si|No|Todo)\n"
+    STRING_QISDIR,   "Is '%1' a filename or directory\n\
+                     on the target?\n\
+                     (F - File, D - Directory)\n"
+    STRING_SRCPROMPT,"%1? (Yes|No)\n"
+    STRING_OVERWRITE,"Overwrite %1? (Yes|No|All)\n"
     STRING_COPYFAIL, "La copia de '%1' a '%2' ha faillecido con r/c %3!d!\n"
     STRING_OPENFAIL, "Impossible de abrir '%1'\n"
     STRING_READFAIL, "Hubo un error durante la lectura de '%1'\n"
     STRING_YES_CHAR, "S"
     STRING_NO_CHAR,  "N"
     STRING_ALL_CHAR, "T"
-    STRING_FILE_CHAR,"A"
+    STRING_FILE_CHAR,"F"
     STRING_DIR_CHAR, "D"
 
     STRING_HELP,
-"XCOPY - Copia los archivos o directorios fuentes a un destino\n\
+"XCOPY - Copies source files or directory trees to a destination.\n\
 \n\
-Sintaxis:\n\
-XCOPY fuente [dest] [/I] [/S] [/Q] [/F] [/L] [/W] [/T] [/N] [/U]\n\
+Syntax:\n\
+XCOPY source [destination] [/I] [/S] [/Q] [/F] [/L] [/W] [/T] [/N] [/U]\n\
 \t     [/R] [/H] [/C] [/P] [/A] [/M] [/E] [/D] [/Y] [/-Y]\n\
 \n\
-En la cual:\n\
+Where:\n\
 \n\
-[/I]  Asuma el directorio si el destino no existe y copia dos o\n\
-\tmas archivos\n\
-[/S]  Copia directorios y subdirectorios\n\
-[/E]  Copia directorios y subdirectorios, incluyendo las que estan vacias\n\
-[/Q]  No mostrar la lista de los nombres de los archivos durante la copia (silencioso)\n\
-[/F]  Mostrar todas las fuentes y todos los destinos durante la copia.\n\
-[/L]  Simular la operacion, mostrando los nombres de archivos que seran copiados\n\
-[/W]  Preguntar antes de iniciar la operacion de copia\n\
-[/T]  Crear una estructura de repertorios vacios pero no copia los archivos\n\
-[/Y]  No pide confirmacion cuando sobreescribe sobre los archivos\n\
-[/-Y] Pide confirmacion cuando sobreescribe los archivos\n\
-[/P]  Pregunta al usuario ante de copiar cada archivo fuente\n\
-[/N]  Copiar usando los nombres cortos\n\
-[/U]  Copia solamente los archivos que ya existent en el punto de destino\n\
-[/R]  Sobreescribir los archivos en lectura unica\n\
-[/H]  Incluir los archivos escondidos y los del systema en la copia\n\
-[/C]  Siempre continuar mismo si un error occure en la copia\n\
-[/A]  Copia solamente archivos con el attributo de archivo definido\n\
-[/M]  Copia solamente archivos con el attributo de archivo definido, supprime\n\
-\tl'attributo de archivo\n\
-[/D | /D:m-d-y] Copia los nuevos archivos or los que fueront modificado despues la fecha especificada.\n\
-\t\tSi la fecha no esta especificada, copia unicamente cuando el archivo de destino est mas viejo\n\
-\t\tque el archivo fuente\n\n"
+[/I]  Assume directory if destination does not exist and copying two or\n\
+\tmore files.\n\
+[/S]  Copy directories and subdirectories.\n\
+[/E]  Copy directories and subdirectories, including any empty ones.\n\
+[/Q]  Do not list names during copy, that is be quiet.\n\
+[/F]  Show full source and destination names during copy.\n\
+[/L]  Simulate operation, showing names which would be copied.\n\
+[/W]  Prompts before beginning the copy operation.\n\
+[/T]  Creates empty directory structure but does not copy files.\n\
+[/Y]  Suppress prompting when overwriting files.\n\
+[/-Y] Enable prompting when overwriting files.\n\
+[/P]  Prompts on each source file before copying.\n\
+[/N]  Copy using short names.\n\
+[/U]  Copy only files which already exist in destination.\n\
+[/R]  Overwrite any read only files.\n\
+[/H]  Include hidden and system files in the copy.\n\
+[/C]  Continue even if an error occurs during the copy.\n\
+[/A]  Only copy files with archive attribute set.\n\
+[/M]  Only copy files with archive attribute set, removes the\n\
+\tarchive attribute.\n\
+[/D | /D:m-d-y] Copy new files or those modified after the supplied date.\n\
+\t\tIf no date is supplied, only copy if destination is older\n\
+\t\tthan source.\n\n"
 
 }
