@@ -1,13 +1,4 @@
-/*
- *    Translated by Sebastian Gasiorek, (2005-07-07)
- *    Updated by xrogers (13.04.2007)
- *    https://sourceforge.net/projects/reactospl
- *    Updated by Caemyr - Olaf Siejka (Jan-Feb, 2008)
- *    Updated by Saibamen - Adam Stachowicz (saibamenppl@gmail.com) (August, 2011)
- *    UTF-8 conversion by Caemyr (May, 2011)
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 IDD_BACKGROUND DIALOGEX 0, 0, 246, 204
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -109,7 +100,7 @@ BEGIN
     CONTROL "Użyj n&astępującej metody wygładzania krawędzi czcionek ekranowych:", IDC_EFFAPPEARANCE_SMOOTHING,
             "button", BS_AUTOCHECKBOX | WS_TABSTOP, 10, 42, 267, 19
     COMBOBOX IDC_EFFAPPEARANCE_SMOOTHINGTYPE, 20, 62, 95, 19, CBS_DROPDOWNLIST |
-             CBS_HASSTRINGS | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+             CBS_HASSTRINGS | WS_CHILD | WS_VSCROLL | WS_TABSTOP
     CONTROL "Użyj &dużych ikon", IDC_EFFAPPEARANCE_LARGEICONS, "button",
             BS_AUTOCHECKBOX | WS_TABSTOP | WS_DISABLED, 10, 80, 267, 19
     CONTROL "&Pokaż cienie pod menu", IDC_EFFAPPEARANCE_SETDROPSHADOW,
