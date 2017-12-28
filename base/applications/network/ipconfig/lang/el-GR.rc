@@ -1,4 +1,4 @@
-LANGUAGE LANG_GREEK, SUBLANG_DEFAULT
+LANGUAGE LANG_GREEK, SUBLANG_GREEK_GREECE
 
 STRINGTABLE
 BEGIN
@@ -24,7 +24,7 @@ STRINGTABLE
 BEGIN
 /* Please keep the spacing/formatting as per En.rc when translating */
     IDS_USAGE
-    "\Χρήση:\n \
+    "\nUSAGE:\n \
         ipconfig [/? | /all | /renew [adapter] | /release [adapter] |\n \
                   /flushdns | /displaydns | /registerdns |\n \
                   /showclassid adapter |\n \
@@ -35,31 +35,31 @@ BEGIN
                        (wildcard characters * and ? allowed, see examples)\n \
     \n \
         Options:\n \
-           /?           Εμφάνιοση αυτού του μηνύματος βοήθειας.\n \
-           /all         Εμφάνιση όλων των πληροφοριών ρύθμισης παραμέτρων.\n \
-           /release     Αποδέσμευση της διεύθυνσης IP για τον καθορισμένο προσαρμογέα.\n \
-           /renew       Ανανέωση της διεύθυνσης IP για τον καθορισμένο προσαρμογέα.\n \
-           /flushdns    Εκκαθάριση της μνήμης cache της επίλυσης DNS.\n \
-           /registerdns Ανανεώνει όλες τις μισθώσεις DHCP και καταχωρεί πάλι τα ονόματα DNS.\n \
-           /displaydns  Εμφανίζει το περιεχόμενο της μνήμης cache της επίλυσης DNS.\n \
-           /showclassid Εμφανίζει όλα τα αναγνωριστικά κλάσης dhcp που επιτρέπονται για τον προσαρμογέα.\n \
-           /setclassid  Τροποποιεί το αναγνωριστικό κλάσης dhcp.\n \
+           /?           Display this help message\n \
+           /all         Display full configuration information.\n \
+           /release     Release the IP address for the specified adapter.\n \
+           /renew       Renew the IP address for the specified adapter.\n \
+           /flushdns    Purges the DNS Resolver cache.\n \
+           /registerdns Refreshes all DHCP leases and re-registers DNS names.\n \
+           /displaydns  Display the contents of the DNS Resolver Cache.\n \
+           /showclassid Displays all the dhcp class IDs allowed for adapter.\n \
+           /setclassid  Modifies the dhcp class id.\n \
     \n \
-    Η προεπιλογή είναι εμφάνιση μόνο διεύθυνσης IP, μάσκας υποδικτύου και\n \
-    προεπιλεγμένης πύλης για κάθε προσαρμογέα συνδεδεμένο στο TCP/IP.\n \
+    The default is to display only the IP address, subnet mask and\n \
+    default gateway for each adapter bound to TCP/IP.\n \
     \n \
-    Για Release και Renew, αν δεν έχει καθοριστεί όνομα προσαρμογέα, θα\n \
-    αποδεσμευτούν ή ανανεωθούν οι μισθώσεις διευθύνσεων IP για όλους τους συνδεδεμένους προσαρμογείς στο TCP/IP.\n \
+    For Release and Renew, if no adapter name is specified, then the IP address\n \
+    leases for all adapters bound to TCP/IP will be released or renewed.\n \
     \n \
-    Για Setclassid, αν δεν έχει καθοριστεί αναγνωριστικό κλάσης, το αναγνωριστικό κλάσης καταργείται.\n \
+    For Setclassid, if no ClassId is specified, then the ClassId is removed.\n \
     \n \
-    Παραδείγματα:\n \
-        > ipconfig                   ... Εμφάνιση πληροφοριών.\n \
-        > ipconfig /all              ... Εμφάνιση λεπτομερών πληροφοριών\n \
-        > ipconfig /renew            ... ανανεώνει όλους τους προσαρμογείς\n \
-        > ipconfig /renew EL*        ... ανανεώνει όλες τις συνδέσεις με\n \
-                                         όνομα που αρχίζει με EL\n \
-        > ipconfig /release *Con*    ... αποδεσμεύει όλες τις συνδέσεις που ταιριάζουν,\n \
-                                         eg. ""Local Area Connection 1"" or\n \
-                                             ""Local Area Connection 2""\n"
+    Examples:\n \
+        > ipconfig                   ... Show information.\n \
+        > ipconfig /all              ... Show detailed information\n \
+        > ipconfig /renew            ... renew all adapters\n \
+        > ipconfig /renew EL*        ... renew any connection that has its\n \
+                                         name starting with EL\n \
+        > ipconfig /release *Con*    ... release all matching connections,\n \
+                                         eg. """Local Area Connection 1""" or\n \
+                                             """Local Area Connection 2""\n"
 END
