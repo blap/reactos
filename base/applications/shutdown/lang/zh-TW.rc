@@ -1,10 +1,10 @@
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+LANGUAGE LANG_CHINESE_TRADITIONAL, SUBLANG_CHINESE_TRADITIONAL
 
 /* Dialog */
 IDD_GUI DIALOGEX 0, 0, 240, 255
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "遠端關機"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON "確定(&O)", IDC_OK, 125, 232, 50, 14
     PUSHBUTTON "取消(&C)", IDC_CANCEL, 178, 232, 50, 14
@@ -30,39 +30,39 @@ END
 /* Information and error messages */
 STRINGTABLE
 BEGIN
-    IDS_USAGE "電腦關機公用程式\n\
+    IDS_USAGE "ReactOS Shutdown Utility\n\
 \n\
-使用方法: shutdown [/?] [/i | /l | /s | /r | /g | /a | /p | /h | /e] [/f]\n\
-       [/m \\\\computer][/t xxx][/d [p|u:]xx:yy [/c ""comment""]]\n\
+Usage: shutdown [/?] [/i | /l | /s | /r | /g | /a | /p | /h | /e] [/f]\n\
+       [/m \\\\computer][/t xxx][/d [p|u:]xx:yy [/c """comment"""]]\n\
 \n\
-    沒有參數或 /?    顯示此説明。\n\
-    /i      顯示圖形化使用者介面 (GUI)。此選項必須是\n\
-            第一個。\n\
-    /l      只在本地系統上登出。不能使用與 /m 或 /d。\n\
-    /s      關閉電腦。\n\
-    /r      重新開機電腦。\n\
-    /g      重新開機電腦並重新啟動所有已註冊的應用程式。\n\
-    /a      取消延遲關閉電源。只有在延遲週期\n\
-            內使用。\n\
-    /p      關閉本地電腦沒有任何超時或警告。 可以\n\
-            用 /d 或 /f。\n\
-    /h      休眠本地電腦。可用與 /f。\n\
-    /e      記錄電腦意外的關機的原因。\n\
-    /m \\\\computer  指定目的電腦 (UNC 或 IP 位址)。\n\
-    /t xxx  將超時時間設置為 xxx 秒後關閉。\n\
-            有效範圍從 0 開始到 315360000 (10 年)，\n\
-            30 的預設值。\n\
-    /c ""comment""  關閉原因發表評論，或重新開機。\n\
-            512 個字元最大允許。\n\
-    /f      強制運行沒有警告使用者關閉應用程式。如果您\n\
-            不指定任何其他參數，此選項將也登出。\n\
-    /d [p|u:]xx:yy  給關機或重新開機的原因代碼。\n\
-            p 指示關機或重新開機計畫。\n\
-            u 表示原因由使用者定義。\n\
-            如果指定了既不是 p 也不是你，不會計畫關機或\n\
-            重新開機。\n\
-            xx 是主要原因代碼 (正整數小於 256)。\n\
-            yy 是次要原因代碼 (小於 65536 正整數)。\n"
+    No arguments or /?    Display this help.\n\
+    /i      Show the graphical user interface (GUI). This option must be the\n\
+            first one.\n\
+    /l      Log off on the local system only. Cannot be used with /m or /d.\n\
+    /s      Shutdown the computer.\n\
+    /r      Restart the computer.\n\
+    /g      Restart the computer and restart all the registered applications.\n\
+    /a      Cancel a delayed shutdown. Can only be used during the delay\n\
+            period.\n\
+    /p      Shutdown the local computer without any timeout or warning. Can be\n\
+            used with /d or /f.\n\
+    /h      Hibernate the local computer. Usable with /f.\n\
+    /e      Document the reason for the unexpected computer shutdown.\n\
+    /m \\\\computer  Specify the target computer (UNC/IP address).\n\
+    /t xxx  Set the timeout period to xxx seconds before shutting down.\n\
+            The valid range starts from 0 to 315360000 (10 years),\n\
+            30 being the default value.\n\
+    /c """comment"""  Comment on the reason for shutdown or restart.\n\
+            512 characters maximum allowed.\n\
+    /f      Force running applications to close without warning users. If you\n\
+            do not specify any other parameter, this option will also log off.\n\
+    /d [p|u:]xx:yy  Give the reason code for the shutdown or the restart.\n\
+            p indicates that the shutdown or the restart is planned.\n\
+            u indicates that the reason is defined by the user.\n\
+            If neither p nor u are specified, the shutdown or the restart are\n\
+            not planned.\n\
+            xx is the major reason code (positive integer smaller than 256).\n\
+            yy is the minor reason code (positive integer smaller than 65536).\n"
 
     IDS_ERROR_SHUTDOWN_REBOOT "錯誤: 在同一時間無法關機和重新開機。\n"
     IDS_ERROR_TIMEOUT "錯誤: %u 的超時值為 (0-315360000) 出界。\n"
