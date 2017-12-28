@@ -1,4 +1,4 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 IDD_NETPROPERTIES DIALOGEX 0, 0, 246, 246
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
@@ -16,7 +16,7 @@ BEGIN
     GROUPBOX "Beschreibung", -1, 9, 153, 230, 46, BS_GROUPBOX
     LTEXT "Hier wird die Beschreibung des Elementes stehen....", IDC_DESCRIPTION, 15, 165, 217, 28, WS_GROUP
     CHECKBOX "&Symbol bei Verbindung im Infobereich anzeigen", IDC_SHOWTASKBAR, 9, 206, 230, 12, BS_AUTOCHECKBOX | WS_TABSTOP
-    CHECKBOX "&Benachrichtigen bei eingeschränkter oder keiner Konnektivität", IDC_NOTIFYNOCONNECTION, 9, 220, 230, 24, BS_AUTOCHECKBOX | WS_TABSTOP
+    CHECKBOX "&Benachrichtigen bei eingeschränkter oder keiner Konnektivität", IDC_NOTIFYNOCONNECTION, 9, 220, 230, 12, BS_AUTOCHECKBOX | WS_TABSTOP
 END
 
 IDD_STATUS DIALOGEX 0, 0, 200, 280
@@ -36,12 +36,12 @@ BEGIN
     LTEXT "Dauer:", -1, 19, 34, 60, 8
     LTEXT "Übertragungsrate:", -1, 19, 48, 60, 8
     GROUPBOX "Aktivität", -1, 9, 74, 182, 70, BS_GROUPBOX
-    LTEXT "Gesendet", -1, 55, 90, 60, 8
-    ICON "", IDC_NETSTAT, 105, 85, 32, 32
-    RTEXT "Empfangen", -1, 137, 90, 44, 8
+    RTEXT "Sent", -1, 26, 90, 60, 8
+    ICON "", IDC_NETSTAT, 110, 85, 32, 32
+    LTEXT "Received", -1, 149, 90, 37, 8
     LTEXT "Bytes:", -1, 17, 115, 32, 8
-    LTEXT "000.000.000", IDC_SEND, 55, 115, 44, 8
-    RTEXT "000.000.000", IDC_RECEIVED, 137, 115, 44, 8
+    RTEXT "000.000.000", IDC_SEND, 63, 115, 44, 8
+    RTEXT "000.000.000", IDC_RECEIVED, 139, 115, 44, 8
     PUSHBUTTON "E&igenschaften", IDC_STATUS_PROPERTIES, 10, 150, 50, 14
     PUSHBUTTON "&Deaktivieren", IDC_ENDISABLE, 66, 150, 50, 14
     RTEXT "", IDC_STATUS, 83, 20, 98, 8
@@ -54,15 +54,15 @@ STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Netzwerkunterstützung"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Verbindungsstatus", -1, 9, 8, 182, 88, BS_GROUPBOX
+    GROUPBOX "Verbindungsstatus", -1, 9, 8, 190, 88, BS_GROUPBOX
     LTEXT "Adresstyp:", -1, 22, 20, 80, 8
     LTEXT "IP-Adresse:", -1, 22, 34, 80, 8
     LTEXT "Subnetzmaske:", -1, 22, 48, 80, 8
     LTEXT "Standardgateway:", -1, 22, 62, 80, 8
-    RTEXT "Nicht verfügbar", IDC_DETAILSTYPE, 100, 20, 80, 8
-    RTEXT "000.000.000.000", IDC_DETAILSIP, 100, 34, 80, 8
-    RTEXT "000.000.000.000", IDC_DETAILSSUBNET, 100, 48, 80, 8
-    RTEXT "", IDC_DETAILSGATEWAY, 100, 62, 80, 8
+    RTEXT "Nicht verfügbar", IDC_DETAILSTYPE, 112, 20, 80, 8
+    RTEXT "000.000.000.000", IDC_DETAILSIP, 112, 34, 80, 8
+    RTEXT "000.000.000.000", IDC_DETAILSSUBNET, 112, 48, 80, 8
+    RTEXT "", IDC_DETAILSGATEWAY, 112, 62, 80, 8
     PUSHBUTTON "&Details...", IDC_DETAILS, 22, 76, 62, 14
 END
 
@@ -78,7 +78,7 @@ END
 
 IDD_NETWORKSETTINGSPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "ReactOS-Installation"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_NET_SETUP, IDC_STATIC, 21, 10, 20, 20
@@ -91,13 +91,13 @@ END
 
 IDD_NETWORKCOMPONENTPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "ReactOS-Installation"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Für Gerät:", IDC_STATIC, 33, 2, 100, 20
     LTEXT "n/a", IDC_NETWORK_DEVICE, 75, 2, 253, 20
-    LTEXT "Aktivierte Komponenten werden von dieser Verbindung verwendet:", IDC_STATIC, 33, 17, 253, 10
-    CONTROL "", IDC_COMPONENT_LIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP, 33, 27, 250, 45
+    LTEXT "Diese &Verbindung verwendet folgende Elemente:", IDC_STATIC, 33, 12, 253, 20
+    CONTROL "", IDC_COMPONENT_LIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP, 33, 22, 250, 50
     PUSHBUTTON "I&nstallieren...", IDC_NETWORK_INSTALL, 122, 75, 50, 14, WS_DISABLED | WS_TABSTOP
     PUSHBUTTON "&Deinstallieren", IDC_NETWORK_UNINSTALL, 177, 75, 50, 14, WS_DISABLED | WS_TABSTOP
     PUSHBUTTON "Ei&genschaften", IDC_NETWORK_PROPERTIES, 232, 75, 50, 14, WS_DISABLED | WS_TABSTOP
@@ -106,7 +106,7 @@ END
 
 IDD_NETWORKDOMAINPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "ReactOS-Installation"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Soll dieser Computer einer Domäne oder Arbeitsgruppe hinzugefügt werden?\n\
@@ -171,6 +171,6 @@ BEGIN
     IDS_NETWORKCOMPONENTSUBTITLE "Wählen Sie die Netzwerkkomponenten, die aktiviert werden sollen. Klicken Sie auf ""Installieren"", um eine Komponente hinzuzufügen."
     IDS_NETWORKDOMAINTITLE "Arbeitsgruppe oder Computerdomäne"
     IDS_NETWORKDOMAINSUBTITLE "Eine Arbeitsgruppe besteht aus Computern mit gleichem Arbeitsgruppennamen.\nEine Domäne ist eine vom Netzwerkadministrator vorgegebene Computergruppe."
-    IDS_REACTOS_SETUP "ReactOS Setup"
+    IDS_REACTOS_SETUP "ReactOS-Installation"
     IDS_WZD_DOMAIN_NAME "Setup kann nicht fortgesetzt werden bevor Sie den Namen der Domäne oder Arbeitsgruppe festgelegt haben."
 END
