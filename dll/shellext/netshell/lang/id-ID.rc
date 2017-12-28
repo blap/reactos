@@ -1,4 +1,4 @@
-LANGUAGE LANG_INDONESIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
 
 IDD_NETPROPERTIES DIALOGEX 0, 0, 246, 246
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
@@ -16,7 +16,7 @@ BEGIN
     GROUPBOX "Deskripsi", -1, 9, 153, 230, 46, BS_GROUPBOX
     LTEXT "Deskripsi Komponen di sini...", IDC_DESCRIPTION, 15, 165, 217, 28, WS_GROUP
     CHECKBOX "Tampilkan Ikon di taskbar saat tersambung", IDC_SHOWTASKBAR, 9, 206, 230, 12, BS_AUTOCHECKBOX | WS_TABSTOP
-    CHECKBOX "&Notify me when this connection has limited or no connectivity", IDC_NOTIFYNOCONNECTION, 9, 220, 230, 12, BS_AUTOCHECKBOX | WS_TABSTOP
+    CHECKBOX "& Beritahu saya bila koneksi ini terbatas atau tidak ada konektivitas", IDC_NOTIFYNOCONNECTION, 9, 220, 230, 12, BS_AUTOCHECKBOX | WS_TABSTOP
 END
 
 IDD_STATUS DIALOGEX 0, 0, 200, 280
@@ -42,7 +42,7 @@ BEGIN
     LTEXT "Bytes:", -1, 17, 115, 32, 8
     RTEXT "000.000.000", IDC_SEND, 63, 115, 44, 8
     RTEXT "000.000.000", IDC_RECEIVED, 139, 115, 44, 8
-    PUSHBUTTON "&Properti", IDC_PROPERTIES, 10, 150, 50, 14
+    PUSHBUTTON "Properti", IDC_STATUS_PROPERTIES, 10, 150, 50, 14
     PUSHBUTTON "&Dimatikan", IDC_ENDISABLE, 66, 150, 50, 14
     RTEXT "", IDC_STATUS, 83, 20, 98, 8
     RTEXT "", IDC_DURATION, 83, 34, 98, 8
@@ -51,7 +51,7 @@ END
 
 IDD_LAN_NETSTATUSADVANCED DIALOGEX 0, 0, 200, 180
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
-CAPTION "Dukungan"
+CAPTION "Mendukung"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Status Sambungan", -1, 9, 8, 190, 88, BS_GROUPBOX
@@ -71,49 +71,48 @@ STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION | DS_MODALFRAME
 CAPTION "Network Connection Details"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Network Connection &Details:", -1, 10, 4, 170, 12
+    LTEXT "Sambungan & Rincian Jaringan:", -1, 10, 4, 170, 12
     CONTROL "", IDC_DETAILS, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP, 10, 15, 170, 130
-    PUSHBUTTON "&Close", IDC_CLOSE, 120, 155, 60, 14
+    PUSHBUTTON "Tutup", IDC_CLOSE, 120, 155, 60, 14
 END
 
 IDD_NETWORKSETTINGSPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "Setup ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_NET_SETUP, IDC_STATIC, 21, 10, 20, 20
-    LTEXT "Choose whether to use typical or custom settings:", IDC_STATIC, 53, 7, 240, 20
-    AUTORADIOBUTTON "Typical Settings", IDC_NETWORK_TYPICAL, 53, 27, 253, 20, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "Custom Settings", IDC_NETWORK_CUSTOM, 53, 72, 253, 20, WS_TABSTOP
-    LTEXT "Creates network connections using the Client for ReactOS Networks, File and Print Sharing for ReactOS Networks, and the TCP/IP transport protocol with automatic addressing.", IDC_STATIC, 65, 45, 240, 30
-    LTEXT "Allows you to manually configure network components.", IDC_STATIC, 65, 90, 243, 20
+    LTEXT "Pilih apakah akan menggunakan setelan khas atau khusus:", IDC_STATIC, 53, 7, 240, 20
+    AUTORADIOBUTTON "Pengaturan Khas", IDC_NETWORK_TYPICAL, 53, 27, 253, 20, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "Setelan Khusus", IDC_NETWORK_CUSTOM, 53, 72, 253, 20, WS_TABSTOP
+    LTEXT "Membuat koneksi jaringan menggunakan Klien untuk Jaringan ReactOS, File dan Print Sharing untuk Jaringan ReactOS, dan protokol transport TCP / IP dengan pengalamatan otomatis.", IDC_STATIC, 65, 45, 240, 30
+    LTEXT "Memungkinkan Anda untuk mengkonfigurasi komponen jaringan secara manual.", IDC_STATIC, 65, 90, 243, 20
 END
 
 IDD_NETWORKCOMPONENTPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "Setup ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "For Device:", IDC_STATIC, 33, 2, 100, 20
+    LTEXT "Untuk Perangkat:", IDC_STATIC, 33, 2, 100, 20
     LTEXT "n/a", IDC_NETWORK_DEVICE, 75, 2, 253, 20
-    LTEXT "Components checked are used by this connection:", IDC_STATIC, 33, 12, 253, 20
+    LTEXT "Komponen yang dicentang digunakan oleh sambungan ini:", IDC_STATIC, 33, 12, 253, 20
     CONTROL "", IDC_COMPONENT_LIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP, 33, 22, 250, 50
-    PUSHBUTTON "&Install...", IDC_NETWORK_INSTALL, 122, 75, 50, 14, WS_DISABLED | WS_TABSTOP
-    PUSHBUTTON "&Uninstall", IDC_NETWORK_UNINSTALL, 177, 75, 50, 14, WS_DISABLED | WS_TABSTOP
-    PUSHBUTTON "&Properties", IDC_NETWORK_PROPERTIES, 232, 75, 50, 14, WS_DISABLED | WS_TABSTOP
-    GROUPBOX "Description", IDC_STATIC, 33, 90, 250, 50, BS_GROUPBOX
+    PUSHBUTTON "&Memasang...", IDC_NETWORK_INSTALL, 122, 75, 50, 14, WS_DISABLED | WS_TABSTOP
+    PUSHBUTTON "&Deinstalasi", IDC_NETWORK_UNINSTALL, 177, 75, 50, 14, WS_DISABLED | WS_TABSTOP
+    PUSHBUTTON "Properti", IDC_NETWORK_PROPERTIES, 232, 75, 50, 14, WS_DISABLED | WS_TABSTOP
+    GROUPBOX "Deskripsi", IDC_STATIC, 33, 90, 250, 50, BS_GROUPBOX
 END
 
 IDD_NETWORKDOMAINPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "Setup ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Do you want this computer to be a member of a domain?\n\
-(You can obtain this information from your network administrator.)", IDC_STATIC, 33, 2, 263, 50
-    AUTORADIOBUTTON "No, this computer will be part of a workgroup.", IDC_SELECT_WORKGROUP, 33, 32, 253, 20, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "Yes, this computer will be part of a domain.", IDC_SELECT_DOMAIN, 33, 47, 253, 20, WS_TABSTOP
-    LTEXT "Workgroup or Domain Name:", IDC_STATIC, 33, 72, 126, 14
+    LTEXT "Apakah Anda ingin komputer ini menjadi anggota domain? \n\ (Anda dapat memperoleh informasi ini dari administrator jaringan Anda.)", IDC_STATIC, 33, 2, 263, 50
+    AUTORADIOBUTTON "Tidak, komputer ini akan menjadi bagian dari workgroup.", IDC_SELECT_WORKGROUP, 33, 32, 253, 20, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "Ya, komputer ini akan menjadi bagian dari domain.", IDC_SELECT_DOMAIN, 33, 47, 253, 20, WS_TABSTOP
+    LTEXT "Workgroup atau Nama Domain:", IDC_STATIC, 33, 72, 126, 14
     EDITTEXT IDC_DOMAIN_NAME, 33, 82, 126, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "NOTE: If this computer isn't going to be part of a network, you don't have sufficient rights to join a domain, or you don't know what to enter, then just choose workgroup for now. These options can be changed at a later time.", IDC_STATIC, 33, 107, 263, 50
 END
@@ -121,56 +120,56 @@ END
 STRINGTABLE
 BEGIN
     IDS_PHYSICAL_ADDRESS "Physical Address"
-    IDS_IP_ADDRESS "IP Address"
+    IDS_IP_ADDRESS "Alamat IP"
     IDS_SUBNET_MASK "Subnet Mask"
-    IDS_DEF_GATEWAY "Default Gateway"
-    IDS_DHCP_SERVER "DHCP Server"
-    IDS_LEASE_OBTAINED "Lease Obtained"
-    IDS_LEASE_EXPIRES "Lease Expires"
-    IDS_DNS_SERVERS "DNS Servers"
-    IDS_WINS_SERVERS "WINS Servers"
-    IDS_PROPERTY "Property"
-    IDS_VALUE "Value"
-    IDS_NETWORKCONNECTION "Network Connections"
-    IDS_SHV_COLUMN_NAME "Name"
-    IDS_SHV_COLUMN_TYPE "Type"
+    IDS_DEF_GATEWAY "Gateway standar"
+    IDS_DHCP_SERVER "Server DHCP"
+    IDS_LEASE_OBTAINED "Sewa yang Diperoleh"
+    IDS_LEASE_EXPIRES "Sewa Berjangka"
+    IDS_DNS_SERVERS "Server DNS"
+    IDS_WINS_SERVERS "Server WINS"
+    IDS_PROPERTY "Milik"
+    IDS_VALUE "Nilai"
+    IDS_NETWORKCONNECTION "Koneksi jaringan"
+    IDS_SHV_COLUMN_NAME "Nama"
+    IDS_SHV_COLUMN_TYPE "Jenis"
     IDS_SHV_COLUMN_STATE "Status"
-    IDS_SHV_COLUMN_DEVNAME "Device Name"
-    IDS_SHV_COLUMN_PHONE "Phone # or Host Address"
-    IDS_SHV_COLUMN_OWNER "Owner"
-    IDS_TYPE_ETHERNET "LAN or High-Speed Internet"
-    IDS_STATUS_NON_OPERATIONAL "Disabled"
-    IDS_STATUS_UNREACHABLE "Not Connected"
-    IDS_STATUS_DISCONNECTED "Network cable unplugged"
-    IDS_STATUS_CONNECTING "Acquiring network address"
-    IDS_STATUS_CONNECTED "Connected"
-    IDS_STATUS_OPERATIONAL "Connected"
-    IDS_NET_ACTIVATE "Enable"
-    IDS_NET_DEACTIVATE "Disable"
+    IDS_SHV_COLUMN_DEVNAME "Nama perangkat"
+    IDS_SHV_COLUMN_PHONE "Telepon # atau alamat tuan rumah"
+    IDS_SHV_COLUMN_OWNER "Pemilik"
+    IDS_TYPE_ETHERNET "LAN atau internet dengan kecepatan tinggi"
+    IDS_STATUS_NON_OPERATIONAL "Dimatikan"
+    IDS_STATUS_UNREACHABLE "Tidak terhubung"
+    IDS_STATUS_DISCONNECTED "Kabel jaringan dicabut"
+    IDS_STATUS_CONNECTING "Mendapatkan alamat jaringan"
+    IDS_STATUS_CONNECTED "Terhubung"
+    IDS_STATUS_OPERATIONAL "Terhubung"
+    IDS_NET_ACTIVATE "Memungkinkan"
+    IDS_NET_DEACTIVATE "Nonaktifkan"
     IDS_NET_STATUS "Status"
-    IDS_NET_REPAIR "Repair"
-    IDS_NET_CREATELINK "Create Shortcut"
-    IDS_NET_DELETE "Delete"
-    IDS_NET_RENAME "Rename"
-    IDS_NET_PROPERTIES "Properties"
+    IDS_NET_REPAIR "Perbaikan"
+    IDS_NET_CREATELINK "Buat Pintasan"
+    IDS_NET_DELETE "Hapus"
+    IDS_NET_RENAME "Ganti nama"
+    IDS_NET_PROPERTIES "Properti"
     IDS_FORMAT_BIT "%u Bit/s"
     IDS_FORMAT_KBIT "%u KBit/s"
     IDS_FORMAT_MBIT "%u MBit/s"
     IDS_FORMAT_GBIT "%u GBit/s"
     IDS_DURATION_DAY "%d Day %s"
-    IDS_DURATION_DAYS "%d Days %s"
-    IDS_ASSIGNED_DHCP "Assigned by DHCP"
+    IDS_DURATION_DAYS "%d Hari %s"
+    IDS_ASSIGNED_DHCP "Ditugaskan oleh DHCP"
     IDS_ASSIGNED_MANUAL "Manually configured"
 END
 
 STRINGTABLE
 BEGIN
-    IDS_NETWORKSETTINGSTITLE "Network Settings"
-    IDS_NETWORKSETTINGSSUBTITLE "Installs network software used to connect to other networks, computers, and the Internet."
-    IDS_NETWORKCOMPONENTTITLE "Network Components"
-    IDS_NETWORKCOMPONENTSUBTITLE "Determine which networking components are used on your computer. To add new components, click on Install."
-    IDS_NETWORKDOMAINTITLE "Workgroup or Computer Domain"
-    IDS_NETWORKDOMAINSUBTITLE "A domain is a group of computers defined by a network administrator. A workgroup is a group of computers sharing the same workgroup name."
-    IDS_REACTOS_SETUP "ReactOS Setup"
-    IDS_WZD_DOMAIN_NAME "Setup cannot continue until you\nenter the name of your domain\nor workgroup."
+    IDS_NETWORKSETTINGSTITLE "Pengaturan jaringan"
+    IDS_NETWORKSETTINGSSUBTITLE "Menginstal perangkat lunak jaringan yang digunakan untuk terhubung ke jaringan lain, komputer, dan Internet."
+    IDS_NETWORKCOMPONENTTITLE "Komponen jaringan"
+    IDS_NETWORKCOMPONENTSUBTITLE "Tentukan komponen jaringan mana yang digunakan pada komputer Anda. Untuk menambahkan komponen baru, klik Install."
+    IDS_NETWORKDOMAINTITLE "Kelompok kerja atau Domain Komputer"
+    IDS_NETWORKDOMAINSUBTITLE "Sebuah domain adalah sekelompok komputer yang didefinisikan oleh administrator jaringan. Workgroup adalah sekelompok komputer yang berbagi nama workgroup yang sama."
+    IDS_REACTOS_SETUP "Setup ReactOS"
+    IDS_WZD_DOMAIN_NAME "Penataan tidak dapat melanjutkan sampai Anda\n memasukkan nama domain Anda\n atau workgroup."
 END
