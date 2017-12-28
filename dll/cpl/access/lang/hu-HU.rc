@@ -1,6 +1,4 @@
-/* Hungarian translation by Peter Lukacs */
-
-LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_HUNGARIAN, SUBLANG_HUNGARIAN_HUNGARY
 
 IDD_PROPPAGEKEYBOARD DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -19,7 +17,7 @@ BEGIN
     PUSHBUTTON "B&eállítások", IDC_FILTER_BUTTON, 144, 121, 90, 14
     GROUPBOX "Állásjelző hangok", -1, 6, 145, 234, 62
     LTEXT "Ha a Caps Lock, Num Lock, és Scroll Lock billentyűk lenyomásakor hangot szeretne hallani, használja az Állásjelző hangok lehetőséget.",
-          -1, 12, 161, 222, 29
+          -1, 12, 161, 222, 20
     AUTOCHECKBOX "Állásjelző hangok használata", IDC_TOGGLE_BOX, 12, 184, 126, 14
     PUSHBUTTON "Beállítá&sok", IDC_TOGGLE_BUTTON, 144, 184, 90, 14
     AUTOCHECKBOX "Kibővített billentyűzet segítség megjelenítése a programokban", IDC_KEYBOARD_EXTRA,
@@ -118,7 +116,7 @@ BEGIN
     LTEXT "Press the SHIFT-Key 5 times in order to activate the Sticky Keys feature.",
           -1, 12, 20, 222, 29
     AUTOCHECKBOX "A&ctivate sticky keys", IDC_STICKY_ACTIVATE_CHECK, 12, 49, 222, 14
-    GROUPBOX "Options", -1, 6, 83, 234, 44
+    GROUPBOX "Beállítások", -1, 6, 83, 234, 44
     AUTOCHECKBOX "&Press modifier key twice to lock", IDC_STICKY_LOCK_CHECK,
                  12, 94, 222, 14
     AUTOCHECKBOX "&Turn StickyKeys off if two keys are pressed at once", IDC_STICKY_UNLOCK_CHECK,
@@ -147,7 +145,7 @@ BEGIN
     AUTORADIOBUTTON "Ig&nore quick keystrokes and slow down the repeat rate", IDC_FILTER_REPEAT_RADIO,
                     12, 106, 120, 20, BS_TOP | BS_MULTILINE
     PUSHBUTTON "&Settings", IDC_FILTER_BOUNCE_BUTTON, 144, 88, 90, 14, WS_GROUP
-    PUSHBUTTON "S&ettings", IDC_FILTER_REPEAT_BUTTON, 144, 106, 90, 14, WS_GROUP
+    PUSHBUTTON "B&eállítások", IDC_FILTER_REPEAT_BUTTON, 144, 106, 90, 14, WS_GROUP
     LTEXT "&Click here and type here to test the settings:", -1, 12, 129, 222, 11
     EDITTEXT IDC_FILTER_TEST_EDIT, 12, 138, 222, 14, WS_GROUP | ES_AUTOHSCROLL
     GROUPBOX "Notifications", -1, 6, 161, 234, 41
@@ -288,6 +286,6 @@ BEGIN
     IDS_SENTRY_TITLE "Flash the titlebar"
     IDS_SENTRY_WINDOW "Flash the active window"
     IDS_SENTRY_DISPLAY "Flash the desktop"
-    IDS_SECONDS "Seconds"
-    IDS_MINUTES "Minutes"
+    IDS_SECONDS "Másodperc"
+    IDS_MINUTES "Perc"
 END
