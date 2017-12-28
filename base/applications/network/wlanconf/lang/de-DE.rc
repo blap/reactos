@@ -32,6 +32,6 @@ Passing no parameters will print information about the current WLAN connection\n
     IDS_MSG_RTS_THRESHOLD "RTS-Schwelle: %d Bytes\n"
     IDS_YES "Ja"
     IDS_NO "Nein"
-    IDS_ADHOC "Adhoc"
+    IDS_ADHOC "Ad-hoc"
     IDS_INFRASTRUCTURE "Infrastruktur"
 END
