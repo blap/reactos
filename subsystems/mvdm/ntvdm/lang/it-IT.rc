@@ -1,4 +1,4 @@
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 STRINGTABLE
 BEGIN
@@ -13,7 +13,7 @@ BEGIN
     IDS_VDM_DUMPMEM_BIN ,   "Dump Memory (&Binary)"
     IDS_VDM_MOUNT_FLOPPY,   "Insert a floppy in drive %d <%s>..."
     IDS_VDM_EJECT_FLOPPY,   "Eject floppy from drive %d"
-    IDS_VDM_QUIT        ,   "&Esci da ReactOS VDM"
+    IDS_VDM_QUIT        ,   "&Quit the ReactOS VDM"
 END
 
 STRINGTABLE
