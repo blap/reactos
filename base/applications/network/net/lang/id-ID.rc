@@ -1,0 +1,127 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+BEGIN
+    IDS_ACCOUNTS_SYNTAX "Usage:\nNET ACCOUNTS [/FORCELOGOFF:{Minutes|NO}] [/MINPWLEN:Length]\n\
+             [/MAXPWAGE:{Days|UNLIMITED}] [/MINPWAGE:Days]\n\
+             [/UNIQUEPW:Count] [/DOMAIN]\n"
+    IDS_ACCOUNTS_HELP "ACCOUNTS \n..."
+    IDS_COMPUTER_SYNTAX "Penggunaan: \nNET COMPUTER ..."
+    IDS_COMPUTER_HELP "KOMPUTER \n..."
+    IDS_CONFIG_SYNTAX "Penggunaan: \nNET CONFIG ..."
+    IDS_CONFIG_HELP "CONFIG\n..."
+    IDS_CONTINUE_SYNTAX "Penggunaan: \nNET LANJUTKAN <Nama Layanan>"
+    IDS_CONTINUE_HELP "LANJUTKAN \n..."
+    IDS_FILE_SYNTAX "Penggunaan: \nNET FILE ..."
+    IDS_FILE_HELP "FILE\n..."
+    IDS_GROUP_SYNTAX "Penggunaan: \nNET GROUP ..."
+    IDS_GROUP_HELP "GROUP \n..."
+    IDS_HELPMSG_SYNTAX "Gunakan: \nNET HELPMSG <Error Code>"
+    IDS_HELPMSG_HELP "HELPMSG \n..."
+    IDS_LOCALGROUP_SYNTAX "Gunakan: \nNET LOCALGROUP [nama grup [/COMMENT: """teks"""]]"]] [/DOMAIN]\n\
+               groupname {/ADD [/COMMENT:""text""] | /DELETE} [/DOMAIN]\n\
+               groupname name [...] {/ADD | /DELETE} [/DOMAIN]"
+    IDS_LOCALGROUP_HELP "LOCALGROUP\n..."
+    IDS_NAME_SYNTAX "Penggunaan:\nNET NAME ..."
+    IDS_NAME_HELP "NAME \n..."
+    IDS_PRINT_SYNTAX  "Penggunaan: \nNET PRINT ..."
+    IDS_PRINT_HELP "PRINT \n..."
+    IDS_PAUSE_SYNTAX "Penggunaan: \nNET PAUSE <Service Name>"
+    IDS_PAUSE_HELP "PAUSE \n..."
+    IDS_SEND_SYNTAX "Gunakan: \nNET SEND ..."
+    IDS_SEND_HELP "SEND\n..."
+    IDS_SESSION_SYNTAX "Gunakan: \nNET SESI ..."
+    IDS_SESSION_HELP "SESI\n..."
+    IDS_SHARE_SYNTAX "Gunakan:\nNET SAHAM ..."
+    IDS_SHARE_HELP "BERBAGI\n..."
+    IDS_START_SYNTAX "Bijak: \nNET START <nama layanan>"
+    IDS_START_HELP "Mulai \n..."
+    IDS_STATISTICS_SYNTAX "Penggunaan: \nNET STATISTIK ..."
+    IDS_STATISTICS_HELP "STATISTIK \n..."
+    IDS_STOP_SYNTAX "Gunakan: \nNET STOP <Service nama>"
+    IDS_STOP_HELP "STOP \n..."
+    IDS_TIME_SYNTAX "Penggunaan: \nNET TIME ..."
+    IDS_TIME_HELP "WAKTU\n..."
+    IDS_USE_SYNTAX "Penggunaan: \nNET USE ..."
+    IDS_USE_HELP "USE \n..."
+    IDS_USER_SYNTAX "Usage:\nNET USER [username [password | *] [options]] [/DOMAIN]\n\
+         username {password | *} /ADD [options] [/DOMAIN]\n\
+         username [/DELETE] [/DOMAIN]"
+    IDS_USER_HELP "USER \n..."
+    IDS_VIEW_SYNTAX "Gunakan: \nNET LIHAT ..."
+    IDS_VIEW_HELP "LIHAT \n..."
+    IDS_HELP_SYNTAX "Usage:\nNET HELP <Command>\n   - or -\nNET <Command> /HELP\n\n\
+   The following commands are available:\n\n\
+   NET ACCOUNTS             NET HELP                 NET SHARE\n\
+   NET COMPUTER             NET HELPMSG              NET START\n\
+   NET CONFIG               NET LOCALGROUP           NET STATISTICS\n\
+   NET CONFIG SERVER        NET NAME                 NET STOP\n\
+   NET CONFIG WORKSTATION   NET PAUSE                NET TIME\n\
+   NET CONTINUE             NET PRINT                NET USE\n\
+   NET FILE                 NET SEND                 NET USER\n\
+   NET GROUP                NET SESSION              NET VIEW\n\n\
+   ..."
+    IDS_NET_SYNTAX "Usage:\nNET [ ACCOUNTS | COMPUTER | CONFIG | CONTINUE | FILE | GROUP | HELP |\n\
+      HELPMSG | LOCALGROUP | NAME | PAUSE | PRINT | SEND | SESSION |\n\
+      SHARE | START | STATISTICS | STOP | TIME | USE | USER | VIEW ]\n"
+
+    IDS_ACCOUNTS_FORCE_LOGOFF "Pakai logoff setelahnya"
+    IDS_ACCOUNTS_LOGOFF_SECONDS "%lu detik"
+    IDS_ACCOUNTS_MIN_PW_AGE "Usia sandi minimum (dalam hitungan hari)"
+    IDS_ACCOUNTS_MAX_PW_AGE "Usia sandi maksimum (dalam hitungan hari)"
+    IDS_ACCOUNTS_MIN_PW_LENGTH "Panjang kata sandi minimum"
+    IDS_ACCOUNTS_PW_HIST_LENGTH "Panjang riwayat kata sandi"
+    IDS_ACCOUNTS_LOCKOUT_THRESHOLD "Ambang lockout"
+    IDS_ACCOUNTS_LOCKOUT_DURATION "Durasi penguncian (dalam menit)"
+    IDS_ACCOUNTS_LOCKOUT_WINDOW "Jendela observasi lockout (dalam hitungan menit)"
+    IDS_ACCOUNTS_COMPUTER_ROLE "Peran komputer"
+    IDS_ACCOUNTS_PRIMARY_SERVER "Server utama"
+    IDS_ACCOUNTS_BACKUP_SERVER "Server cadangan"
+    IDS_ACCOUNTS_STANDALONE_SERVER "Server standalone"
+    IDS_ACCOUNTS_WORKSTATION "Workstation"
+
+    IDS_LOCALGROUP_ALIASES "Alias untuk \\\\%s"
+    IDS_LOCALGROUP_ALIAS_NAME "Nama alias"
+    IDS_LOCALGROUP_COMMENT "Komentar"
+    IDS_LOCALGROUP_MEMBERS "Anggota"
+
+    IDS_USER_ACCOUNTS "Akun pengguna untuk \\\\%s"
+    IDS_USER_NAME "Nama pengguna"
+    IDS_USER_FULL_NAME "Nama Penuh"
+    IDS_USER_COMMENT "Komentar"
+    IDS_USER_USER_COMMENT "Komentar pengguna"
+    IDS_USER_COUNTRY_CODE "Kode negara"
+    IDS_USER_ACCOUNT_ACTIVE "Akun aktif"
+    IDS_USER_ACCOUNT_EXPIRES "Akun berakhir"
+    IDS_USER_PW_LAST_SET "Password set terakhir"
+    IDS_USER_PW_EXPIRES "Password kadaluarsa"
+    IDS_USER_PW_CHANGEABLE "Password berubah"
+    IDS_USER_PW_REQUIRED "Password diperlukan"
+    IDS_USER_CHANGE_PW "Pengguna bisa mengganti password"
+    IDS_USER_WORKSTATIONS "Workstation diperbolehkan"
+    IDS_USER_LOGON_SCRIPT "Script logon"
+    IDS_USER_PROFILE "Profil pengguna"
+    IDS_USER_HOME_DIR "Direktori rumah"
+    IDS_USER_LAST_LOGON "Logon terakhir"
+    IDS_USER_LOGON_HOURS "Jam logon diizinkan"
+    IDS_USER_LOCAL_GROUPS "Keanggotaan kelompok lokal"
+    IDS_USER_GLOBAL_GROUPS "Keanggotaan kelompok global"
+
+    IDS_USER_ENTER_PASSWORD1 "Masukkan kata sandi baru untuk pengguna: "
+    IDS_USER_ENTER_PASSWORD2 "Masukkan kata sandi lagi: "
+    IDS_USER_NO_PASSWORD_MATCH "Kata sandi tidak cocok!"
+
+    IDS_USE_NOW_CONNECTED "%s sekarang terhubung ke%s \n"
+
+    IDS_GENERIC_YES "Iya"
+    IDS_GENERIC_NO "Tidak"
+    IDS_GENERIC_NEVER "Never"
+    IDS_GENERIC_NONE "Tidak ada"
+    IDS_GENERIC_ALL "GENERIC_ALL"
+    IDS_GENERIC_LOCKED "Terkunci"
+
+    IDS_ERROR_OPTION_NOT_SUPPORTED "Opsi %s belum didukung. \n"
+    IDS_ERROR_INVALID_OPTION_VALUE "Anda memasukkan nilai yang tidak valid untuk opsi %s.\n"
+    IDS_ERROR_SYSTEM_ERROR "Kesalahan sistem %d terjadi.\n"
+    IDS_ERROR_NO_ERROR "Perintah berhasil dijalankan.\n"
+END
