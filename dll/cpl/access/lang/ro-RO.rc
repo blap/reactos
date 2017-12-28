@@ -1,9 +1,4 @@
-/*
- * Translators: Petru Dimitriu (petrimetri at gmail dot com)
- *              Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDD_PROPPAGEKEYBOARD DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -19,12 +14,12 @@ BEGIN
     LTEXT "Utilizați FiltruTaste pentru a ignora apăsarea prea scurtă, prea îndelungată sau repetată a tastelor.",
           -1, 12, 89, 222, 29
     AUTOCHECKBOX "Doresc folosirea de Filt&ruTaste", IDC_FILTER_BOX, 12, 121, 126, 14
-    PUSHBUTTON "O&pțiuni…", IDC_FILTER_BUTTON, 154, 121, 80, 14
+    PUSHBUTTON "&Opțiuni…", IDC_FILTER_BUTTON, 144, 121, 90, 14
     GROUPBOX "TasteDeComutare", -1, 6, 145, 234, 62
     LTEXT "Utilizați TasteDeComutare pentru a semnala sonor apăsarea tastelor «Caps Lock», «Num Lock» sau «Scroll Lock».",
           -1, 12, 161, 222, 20
-    AUTOCHECKBOX "Doresc folosirea de TasteDe&Comutare", IDC_TOGGLE_BOX, 12, 184, 136, 14
-    PUSHBUTTON "Opți&uni…", IDC_TOGGLE_BUTTON, 154, 184, 80, 14
+    AUTOCHECKBOX "Doresc folosirea de TasteDe&Comutare", IDC_TOGGLE_BOX, 12, 184, 126, 14
+    PUSHBUTTON "Setti&ngs", IDC_TOGGLE_BUTTON, 144, 184, 90, 14
     AUTOCHECKBOX "Afișează în programe informații ale tastaturii e&xtinse", IDC_KEYBOARD_EXTRA,
                  6, 212, 234, 14
 END
@@ -37,7 +32,7 @@ BEGIN
     GROUPBOX "SantinelăSunet", -1, 6, 11, 234, 98
     LTEXT "Utilizați SantinelăSunet dacă doriți afișarea de avertismente vizuale atunci când sistemul redă un sunet.",
           -1, 12, 20, 222, 29
-    AUTOCHECKBOX "Doresc folosirea de Santin&elăSunet", IDC_SENTRY_BOX, 12, 49, 140, 14
+    AUTOCHECKBOX "Doresc folosirea de Santin&elăSunet", IDC_SENTRY_BOX, 12, 49, 90, 14
     LTEXT "Modalitatea aleasă de avertizare:", IDC_SENTRY_TEXT, 12, 72, 222, 11
     COMBOBOX IDC_SENTRY_COMBO, 12, 83, 222, 56,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
@@ -104,7 +99,7 @@ BEGIN
     LTEXT "Această opțiune vă permite conectarea dispozitivelor de intrare alternative tastaturii sau șoricelului.",
           -1, 12, 124, 222, 20
     AUTOCHECKBOX "Permite &dispozitive alternative", IDC_SERIAL_BOX, 12, 142, 126, 14
-    PUSHBUTTON "&Opțiuni…", IDC_SERIAL_BUTTON, 144, 142, 90, 14
+    PUSHBUTTON "Opți&uni…", IDC_SERIAL_BUTTON, 144, 142, 90, 14
     GROUPBOX "Opțiuni administrative", -1, 6, 169, 234, 47
     AUTOCHECKBOX "Aplică preferințele de accesibilitate la a&utentificare", IDC_ADMIN_LOGON_BOX,
                  12, 178, 222, 14
@@ -150,7 +145,7 @@ BEGIN
     AUTORADIOBUTTON "Igno&ră apăsarea scurtă și reduce rata de repetiție", IDC_FILTER_REPEAT_RADIO,
                     12, 106, 120, 20, BS_TOP | BS_MULTILINE
     PUSHBUTTON "&Opțiuni…", IDC_FILTER_BOUNCE_BUTTON, 144, 88, 90, 14, WS_GROUP
-    PUSHBUTTON "Opți&uni…", IDC_FILTER_REPEAT_BUTTON, 144, 106, 90, 14, WS_GROUP
+    PUSHBUTTON "S&ettings", IDC_FILTER_REPEAT_BUTTON, 144, 106, 90, 14, WS_GROUP
     LTEXT "&Câmp de text pentru testarea opțiunilor FiltruTaste:", -1, 12, 129, 222, 11
     EDITTEXT IDC_FILTER_TEST_EDIT, 12, 138, 222, 14, WS_GROUP | ES_AUTOHSCROLL
     GROUPBOX "Notificări", -1, 6, 161, 234, 41
@@ -215,7 +210,7 @@ BEGIN
     LTEXT "Mare", -1, 204, 123, 18, 11
     AUTOCHECKBOX "&Voi folosi «Ctrl» pentru a mări viteza, «Shift» pentru a o micșora", IDC_MOUSEKEYS_SPEED_CHECK,
                  12, 142, 222, 14
-    LTEXT "Pornire TasteȘoricel când «Num Lock» este:", -1, 6, 171, 150, 11
+    LTEXT "Pornire TasteȘoricel când «Num Lock» este:", -1, 6, 171, 120, 11
     AUTORADIOBUTTON "&Pornit", IDC_MOUSEKEYS_ON_RADIO, 162, 171, 30, 11
     AUTORADIOBUTTON "&Oprit", IDC_MOUSEKEYS_OFF_RADIO, 198, 171, 30, 11
     AUTOCHECKBOX "&Afișează pe ecran starea pentru TasteȘoricel", IDC_MOUSEKEYS_STATUS_CHECK,
@@ -247,12 +242,12 @@ BEGIN
     GROUPBOX "Repetare tastă apăsată", -1, 6, 11, 234, 106
     LTEXT "Înlocuiește opțiunile de Tastatură (din Panoul de control):",
           -1, 12, 20, 222, 20
-    AUTORADIOBUTTON "N&u permite apăsarea continuă a tastelor", IDC_REPEAT_NOREPEAT_RADIO, 12, 32, 150, 11, WS_GROUP
-    AUTORADIOBUTTON "În&cetinește rata de repetiție a tastelor:", IDC_REPEAT_REPEAT_RADIO, 12, 45, 140, 11
-    LTEXT "Acti&vează modul de apăsare repetată (abia) după:", -1, 24, 60, 180, 11
+    AUTORADIOBUTTON "N&u permite apăsarea continuă a tastelor", IDC_REPEAT_NOREPEAT_RADIO, 12, 32, 78, 11, WS_GROUP
+    AUTORADIOBUTTON "În&cetinește rata de repetiție a tastelor:", IDC_REPEAT_REPEAT_RADIO, 12, 45, 131, 11
+    LTEXT "Acti&vează modul de apăsare repetată (abia) după:", -1, 24, 60, 60, 11
     COMBOBOX IDC_REPEAT_DELAY_COMBO, 24, 71, 210, 56,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
-    LTEXT "&Rata de repetare a tastei (încontinuu) apăsate:", -1, 24, 89, 160, 11
+    LTEXT "&Rata de repetare a tastei (încontinuu) apăsate:", -1, 24, 89, 60, 11
     COMBOBOX IDC_REPEAT_REPEAT_COMBO, 24, 100, 210, 65,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
     GROUPBOX "Taste lente", -1, 6, 124, 234, 42
