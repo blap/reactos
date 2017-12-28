@@ -1,0 +1,19 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+{
+    STRING_USAGE, "Penggunaan: taskkill [/?] [/f] [/im ProcessName | /pid ProcessID]\n"
+    STRING_INVALID_OPTION, "Kesalahan: Tidak diketahui atau tidak sah pilihan baris perintah yang ditentukan.\n"
+    STRING_INVALID_PARAM, "Kesalahan: Parameter baris perintah tidak valid ditentukan.\n"
+    STRING_MISSING_OPTION, "Kesalahan: Salah satu opsi / im atau / pid harus ditentukan.\n"
+    STRING_MISSING_PARAM, "Kesalahan: Opsi%1 mengharapkan parameter baris perintah.\n"
+    STRING_MUTUAL_EXCLUSIVE, "Kesalahan: Opsi /im dan /pid saling eksklusif.\n"
+    STRING_CLOSE_PID_SEARCH, "Tutup pesan yang dikirim ke jendela proses tingkat atas dengan PID%1!U!.\n"
+    STRING_CLOSE_PROC_SRCH, "Tutup pesan yang dikirim ke jendela proses tingkat atas ""%1"" dengan PID %2!U!.\n"
+    STRING_TERM_PID_SEARCH, "Proses dengan PID %1!U! dihentikan secara paksa.\n"
+    STRING_TERM_PROC_SEARCH, "Proses ""%1"" dengan PID %2!U! dihentikan secara paksa.\n"
+    STRING_SEARCH_FAILED, "Kesalahan: Tidak dapat menemukan proses ""%1"".\n"
+    STRING_ENUM_FAILED, "Kesalahan: Tidak dapat menghitung daftar proses.\n"
+    STRING_TERMINATE_FAILED, "Kesalahan: Tidak dapat menghentikan proses ""%1"".\n"
+    STRING_SELF_TERMINATION, "Error: Proses self-termination tidak diijinkan.\n"
+}
