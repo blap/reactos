@@ -1,6 +1,4 @@
-/* Spanish translation by Ismael Ferreras Morezuelas (Swyter) */
-
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -34,8 +32,8 @@ END
 
 STRINGTABLE
 BEGIN
-    STRING_CLIPBOARD "Clipboard Viewer"
-    STRING_CLIPFILE  "Clipboard Element"
+    STRING_CLIPBOARD "Visor de Portapapeles"
+    STRING_CLIPFILE  "Elemento portapapeles"
     STRING_DELETE_MSG "¿Borrar contenidos del Portapapeles?"
     STRING_DELETE_TITLE "Vaciar Portapapeles"
     STRING_FORMAT_NT "Archivos de Portapapeles de ReactOS (*.clp)"
