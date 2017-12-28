@@ -1,4 +1,4 @@
-LANGUAGE LANG_GREEK, SUBLANG_DEFAULT
+LANGUAGE LANG_GREEK, SUBLANG_GREEK_GREECE
 
 IDD_STARTPAGE DIALOGEX 0, 0, 317, 186
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
@@ -41,7 +41,7 @@ BEGIN
     LTEXT "Από την παρακάτω λίστα, επιλέξτε μια εγκατεστημένη συσκευή, έπειτα πατήστε 'Επόμενο' για αν ελέγξετε ιδιότητες ή να αντιμετωπίσετε ένα πρόβλημα που ενδεχομένως έχετε.", -1, 21, 8, 275, 22
     LTEXT "To add hardware not shown in the list, click ""Add a new hardware device.""", -1, 21, 32, 275, 24
     LTEXT "Ε&γκατεστημένο υλικό:", -1, 21, 62, 140, 8
-    CONTROL "", IDC_PROBELIST, "SysListView32", WS_BORDER | WS_GROUP | WS_TABSTOP | LVS_REPORT | LVS_NOSORTHEADER | LVS_SINGLESEL | LVS_SHAREIMAGELISTS  | LVS_NOCOLUMNHEADER, 21, 72, 275, 66
+    CONTROL "", IDC_PROBELIST, "SysListView32", WS_BORDER | WS_GROUP | WS_TABSTOP | LVS_REPORT | LVS_NOSORTHEADER | LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER, 21, 72, 275, 66
 END
 
 IDD_SELECTWAYPAGE DIALOGEX 0, 0, 317, 143
