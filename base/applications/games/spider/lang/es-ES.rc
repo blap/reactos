@@ -1,13 +1,12 @@
 /*
- * PROJECT:     Spider Solitaire
- * LICENSE:     See COPYING in top level directory
- * FILE:        base/applications/games/spider/lang/es-ES.rc
- * PURPOSE:     Spanish Language File for Spider Solitaire
- * TRANSLATORS: Javier Fernandez & Gabriel ilardi
- * PROOFREAD:   Ismael Ferreras Morezuelas
+ * PROJECT:    Spider Solitaire
+ * LICENSE:    See COPYING in top level directory
+ * FILE:       base/applications/games/spider/lang/en-US.rc
+ * PURPOSE:    English Language File for Spider Solitaire
+ * TRANSLATOR: Gregor Schneider
  */
 
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 /* Dialogs */
 
@@ -39,7 +38,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     AUTORADIOBUTTON "Fácil: &Un palo", IDC_DIF_ONECOLOR, 8, 10, 80, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "Medio: &Dos palos", IDC_DIF_TWOCOLORS, 8, 23, 80, 10
-    AUTORADIOBUTTON "Difícil: &Cuatro palos", IDC_DIF_FOURCOLORS, 8, 36, 90, 10
+    AUTORADIOBUTTON "Difícil: &Cuatro palos", IDC_DIF_FOURCOLORS, 8, 36, 80, 10
     DEFPUSHBUTTON "Aceptar", IDOK, 8, 58, 40, 14
     PUSHBUTTON "Cancelar", IDCANCEL, 58, 58, 40, 14
 END
