@@ -1,8 +1,4 @@
-/* TRANSLATOR : Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- * DATE OF TR.: 07-05-2008
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 STRINGTABLE
 BEGIN
@@ -28,7 +24,7 @@ STRINGTABLE
 BEGIN
 /* Please keep the spacing/formatting as per En.rc when translating */
     IDS_USAGE
-    "\nPOUŽITIE:\n \
+    "\nUSAGE:\n \
         ipconfig [/? | /all | /renew [adapter] | /release [adapter] |\n \
                   /flushdns | /displaydns | /registerdns |\n \
                   /showclassid adapter |\n \
@@ -57,13 +53,13 @@ BEGIN
     \n \
     For Setclassid, if no ClassId is specified, then the ClassId is removed.\n \
     \n \
-    Príklady:\n \
+    Examples:\n \
         > ipconfig                   ... Show information.\n \
         > ipconfig /all              ... Show detailed information\n \
         > ipconfig /renew            ... renew all adapters\n \
         > ipconfig /renew EL*        ... renew any connection that has its\n \
                                          name starting with EL\n \
         > ipconfig /release *Con*    ... release all matching connections,\n \
-                                         napr. ""Lokálne pripojenie 1"" alebo\n \
-                                               ""Lokálne pripojenie 2""\n"
+                                         eg. """Local Area Connection 1""" or\n \
+                                             """Lokálne pripojenie 2""\n"
 END
