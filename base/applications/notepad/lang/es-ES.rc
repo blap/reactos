@@ -1,16 +1,14 @@
-/* Spanish translation by Ismael Ferreras Morezuelas (Swyter) */
-
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 ID_ACCEL ACCELERATORS
 BEGIN
-    "^E", CMD_SELECT_ALL
+    "^A", CMD_SELECT_ALL
     "^C", CMD_COPY
-    "^B", CMD_SEARCH
-    "^T", CMD_GOTO
-    "R", CMD_REPLACE, VIRTKEY, CONTROL
+    "^F", CMD_SEARCH
+    "^G", CMD_GOTO
+    "H", CMD_REPLACE, VIRTKEY, CONTROL
     "^N", CMD_NEW
-    "^A", CMD_OPEN
+    "^O", CMD_OPEN
     "^P", CMD_PRINT
     "^S", CMD_SAVE
     "^V", CMD_PASTE
@@ -119,13 +117,13 @@ BEGIN
 END
 
 /* Dialog 'Go To' */
-DIALOG_GOTO DIALOGEX 0, 0, 180, 50
+DIALOG_GOTO DIALOGEX 0, 0, 165, 50
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 FONT 8, "MS Shell Dlg"
 CAPTION "Ir a la línea"
 BEGIN
-    EDITTEXT ID_LINENUMBER, 89, 10, 86, 12, WS_CHILD | WS_BORDER | WS_TABSTOP
-    LTEXT "Número de línea:", 0x155, 5, 12, 56, 12, WS_CHILD | WS_TABSTOP | ES_NUMBER
+    EDITTEXT ID_LINENUMBER, 54, 10, 106, 12, WS_CHILD | WS_BORDER | WS_TABSTOP
+    LTEXT "Número de línea:", 0x155, 5, 12, 41, 12, WS_CHILD | WS_TABSTOP | ES_NUMBER
     DEFPUSHBUTTON "Aceptar", IDOK, 75, 30, 40, 15, WS_CHILD | WS_TABSTOP
     PUSHBUTTON "Cancelar", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
 END
@@ -162,18 +160,17 @@ BEGIN
     STRING_UNTITLED "Sin título"
     STRING_ALL_FILES "Todos los archivos (*.*)"
     STRING_TEXT_FILES_TXT "Documentos de texto (*.txt)"
-    STRING_TOOLARGE "El archivo '%s' es demasiado grande para el \
-bloc de notas.\n Utilice otro editor."
-    STRING_NOTEXT "No ha escrito nada. \nPor favor escriba algo e \
-inténtelo de nuevo"
-    STRING_DOESNOTEXIST "El archivo '%s'\nno existe\n\n ¿Desea crear \
-un nuevo archivo?"
-    STRING_NOTSAVED "El texto en el archivo '%s' ha cambiado\n\n \
-¿Desea guardar los cambios?"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "No se encontró '%s'."
-    STRING_OUT_OF_MEMORY "No hay suficiente memoria para terminar esta \
-tarea. \nCierre una o más aplicaciones para \
-aumentar la cantidad \nde memoria libre."
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "No se encontró '%s'"
     STRING_ANSI "ANSI"
     STRING_UNICODE "Unicode"
