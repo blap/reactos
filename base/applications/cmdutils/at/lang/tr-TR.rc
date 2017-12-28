@@ -1,31 +1,31 @@
-/* TRANSLATOR: 2017 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "AT komutu, belirlenen bir zamanda bilgisayarda çalıştırmak için komutları\n\
-ve izlenceleri zamanlar. AT komutunu çalıştırmak için Zamanlayıcı hizmeti \n\
-çalıştırılmalıdır.\n\n\
-AT [\\\\bilgisayar adı] [ [kimlik] [/DELETE] | /DELETE [/YES]]\n\
-AT [\\\\bilgisayar adı] saat [/INTERACTIVE]\n\
-    [ /EVERY:târih[,...] | /NEXT:târih[,...]] ""komut""\n\n\
-\\\\bilgisayar adı   Bir uzak bilgisayarı belirtir. Bu değişken yazılmazsa\n\
-                   komutlar yerli bilgisayarda zamanlanır.\n\
-kimlik             Zamanlanan bir komuta atanan bir kimlik numarasıdır.\n\
-/DELETE            Zamanlanan bir komutu iptâl eder. Kimlik yazılmadığında\n\
-                   bilgisayardaki tüm zamanlanan komutlar iptâl edilir.\n\
-/YES               Sonraki onaylamalar istenilmediğinde tüm işleri iptâl etme\n\
-                   komutuyla birlikte kullanılır.\n\
-saat               Komutun çalıştırılma saatini belirtir.\n\
-/INTERACTIVE       İşe, çalıştırılacağı saatte oturum açmış kullanıcının\n\
-                   masaüstüyle etkileşmesine izin verir.\n\
-/EVERY:târih[,...] Haftanın ya da ayın belirtilen tüm günlerinde komutu çalıştırır.\n\
-                   month. Târih yazılmadığında ayın şimdiki gününü varsayar.\n\
-/NEXT:târih[,...]  Günün bir sonraki oluşunda (örneğin bir sonraki perşembede)\n\
-                   belirtilen komutu çalıştırır. Târih yazılmadığında ayın\n\
-                   şimdiki gününü varsayar.\n\
-""komut""            Çalıştırılacak komut ya da toplu iş kütüğü.\n"
+    IDS_USAGE "The AT command schedules commands and programs to run on a computer at\n\
+a specified time and date. The Schedule service must be running to use\n\
+the AT command.\n\n\
+AT [\\\\computername] [ [id] [/DELETE] | /DELETE [/YES]]\n\
+AT [\\\\computername] time [/INTERACTIVE]\n\
+    [ /EVERY:date[,...] | /NEXT:date[,...]] """command"""\n\n\
+\\\\computername     Specifies a remote computer. Commands are scheduled on the \n\
+                   local computer if this parameter is omitted.\n\
+id                 Is an identification number assigned to a scheduled\n\
+                   command.\n\
+/DELETE            Cancels a scheduled command. If id is omitted, all the\n\
+                   scheduled commands on the computer are canceled.\n\
+/YES               Used with cancel all jobs command when no further\n\
+                   confirmation is desired.\n\
+time               Specifies the time when command is to run.\n\
+/INTERACTIVE       Allows the job to interact with the desktop of the user\n\
+                   who is logged on at the time the job runs.\n\
+/EVERY:date[,...]  Runs the command on each specified day(s) of the week or\n\
+                   month. If date is omitted, the current day of the month\n\
+                   is assumed.\n\
+/NEXT:date[,...]   Runs the specified command on the next occurrence of the\n\
+                   day (for example, next Thursday). If date is omitted, the \n\
+                   current day of the month is assumed.\n\
+"""command""          Is the command or batch program to be run.\n"
 
     IDS_DELETE_ALL "Bu işlem tüm zamanlanan işleri silecek.\n"
     IDS_NEW_JOB "%lu iş kimliğiyle yeni bir iş eklendi.\n"
