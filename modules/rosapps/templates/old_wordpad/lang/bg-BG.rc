@@ -1,4 +1,4 @@
-LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_BULGARIAN, SUBLANG_BULGARIAN_BULGARIA
 
 IDR_MAINMENU MENU
 BEGIN
@@ -29,33 +29,33 @@ BEGIN
     MENUITEM "За&помняне",           ID_COPY, GRAYED
     MENUITEM "&Поставяне",          ID_PASTE, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Изчистване",           -1, GRAYED
+    MENUITEM "Предмет",           -1, GRAYED
     MENUITEM "Избор на вси&чки",     ID_SELALL, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Търсене...\tCtrl+F",-1, GRAYED
-    MENUITEM "Търсене на следващото",       -1, GRAYED
-    MENUITEM "Замяна\tCtrl+H", -1, GRAYED
+    MENUITEM "Предмет",-1, GRAYED
+    MENUITEM "Предмет",       -1, GRAYED
+    MENUITEM "Предмет", -1, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Свойства на предмета",-1, GRAYED
+    MENUITEM "Предмет",-1, GRAYED
     MENUITEM "Предмет",          -1, GRAYED
   END
   POPUP "Из&глед"
   BEGIN
-    MENUITEM "Лента за &средства",        -1, CHECKED
-    MENUITEM "Лента за о&формление",     -1, CHECKED
+    MENUITEM "&Линия",        -1, CHECKED
+    MENUITEM "&Линия",     -1, CHECKED
     MENUITEM "&Линия",          -1, CHECKED
     MENUITEM "&Лента на състоянието",     ID_STATUSBAR, CHECKED
   END
   POPUP "&Поставяне"
   BEGIN
-    MENUITEM "&Дата и време...",-1, GRAYED
+    MENUITEM "&Предмет...",-1, GRAYED
     MENUITEM "&Предмет...",       -1, GRAYED
   END
   POPUP "&Оформление"
   BEGIN
     MENUITEM "&Шрифт...",        -1 GRAYED
-    MENUITEM "Водачи",     -1, GRAYED
-    MENUITEM "Абзац...",    -1, GRAYED
+    MENUITEM "Закачалки (tab)...",     -1, GRAYED
+    MENUITEM "Закачалки (tab)...",    -1, GRAYED
     MENUITEM "Закачалки (tab)...",         -1, GRAYED
   END
   POPUP "&Прозорец"
@@ -84,15 +84,15 @@ BEGIN
 END
 
 
-IDD_NEWDOCSEL DIALOGEX 6,6,170,67
+IDD_NEWDOCSEL DIALOGEX 6,6,159,67
 CAPTION "Нов"
 FONT 8, "MS Shell Dlg",0,0
 STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | DS_MODALFRAME
 BEGIN
-  LTEXT "Вид на новия документ:", IDC_STATIC, 4, 3, 130, 9
-  LISTBOX IDC_LIST, 1, 16, 125, 46, WS_TABSTOP //Удължен
-  PUSHBUTTON "&Добре", IDOK, 128, 16, 40, 13
-  PUSHBUTTON "&Отказ", IDCANCEL, 128, 33, 40, 13
+  LTEXT "Вид на новия документ:", IDC_STATIC, 4, 3, 72, 9
+  LISTBOX IDC_LIST, 4, 16, 104, 46, WS_TABSTOP
+  PUSHBUTTON "&Добре", IDOK, 112, 16, 44, 13
+  PUSHBUTTON "&Отказ", IDCANCEL, 112, 33, 44, 13
 END
 
 
@@ -166,5 +166,4 @@ BEGIN
   IDS_HINT_SYS_MINIMIZE " Смалява прозореца в значе."
   IDS_HINT_SYS_MAXIMIZE " Разширява прозореца, за да запълни работното поле."
 END
-
 
