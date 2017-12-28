@@ -1,20 +1,18 @@
-/* TRANSLATOR: 2016 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "Dizge aygıtlarını yapılandırır.\n\n\
-Aygıt durumu:         MODE [aygıt] [/STATUS]\n\
-Dizilik giriş:        MODE COMm[:] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s]\n\
-                                   [to=on|off] [xon=on|off] [odsr=on|off]\n\
-                                   [octs=on|off] [dtr=on|off|hs]\n\
-                                   [rts=on|off|hs|tg] [idsr=on|off]\n\
-Yazdırma yönlendirme: MODE LPTn[:]=COMm[:]\n\
-Kod sayfası seçme:    MODE CON[:] CP SELECT=yyy\n\
-Kod sayfası durumu:   MODE CON[:] CP [/STATUS]\n\
-Görüntü kipi:         MODE CON[:] [COLS=c] [LINES=n]\n\
-Yineleme hızı:        MODE CON[:] [RATE=r DELAY=d]\n"
+    IDS_USAGE "Configure System Devices.\n\n\
+Device Status:     MODE [device] [/STATUS]\n\
+Serial port:       MODE COMm[:] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s]\n\
+                                [to=on|off] [xon=on|off] [odsr=on|off]\n\
+                                [octs=on|off] [dtr=on|off|hs]\n\
+                                [rts=on|off|hs|tg] [idsr=on|off]\n\
+Redirect printing: MODE LPTn[:]=COMm[:]\n\
+Select code page:  MODE CON[:] CP SELECT=yyy\n\
+Code page status:  MODE CON[:] CP [/STATUS]\n\
+Display mode:      MODE CON[:] [COLS=c] [LINES=n]\n\
+Typematic rate:    MODE CON[:] [RATE=r DELAY=d]\n"
 
     IDS_QUERY_SERIAL_FOUND "    Dizilik aygıt bulundu - %s\n"
     IDS_QUERY_PRINTER_FOUND "    Yazıcı aygıtı bulundu - %s\n"
