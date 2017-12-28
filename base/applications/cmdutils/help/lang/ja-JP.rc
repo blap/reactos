@@ -1,6 +1,6 @@
-/* Japanese translation of CMD */
+/* Magnus Olsen, 2005 */
 
-LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+LANGUAGE LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN
 
 STRINGTABLE
 BEGIN
@@ -12,60 +12,63 @@ BEGIN
     IDS_USAGE "Provides Help information for ReactOS commands.\n\n\
 HELP [command]\n\n\
   command - Display help information for this command.\n"
-    IDS_HELP1 "利用可能なすべてのコマンドの一覧と、その説明。\n\n\
-  help コマンド\n\
-  コマンド /?     特定のコマンドに関する詳細情報\n\n\
-?        利用可能なすべてのコマンドの一覧 (説明なし)。\n\
-ALIAS    エイリアスの設定や解除をしたり、エイリアスを表示したりします。\n\
-ATTRIB   ファイル属性を表示または変更します。\n\
-BEEP     スピーカからビープ音を鳴らします。\n\
-CALL     バッチ プログラムを別のバッチ プログラムから呼び出します。\n\
-CD       現在のディレクトリを変更したり、ディレクトリ名を表示したりします。\n\
-CHCP     現在のコード ページ番号を表示または設定します。\n\
-CHOICE   ユーザーが選択肢から一つを選択するのを待ちます。\n\
-CLS      画面を消去します。\n\
-CMD      ReactOS コマンド インタープリタの新しいインスタンスを開始します。\n\
-COLOR    コンソールのデフォルトの前景色および背景色を設定します。\n\
-COPY     1 つまたは複数のファイルを別の場所にコピーします。\n\
-DATE     日付を表示または設定します。\n\
-DELAY    n 秒、または n ミリ秒待機します。\n\
-DELETE   1 つまたは複数のファイルを削除します。\n\
-DIR      ディレクトリ中のファイルとサブディレクトリを一覧表示します。\n\
-ECHO     メッセージを表示したり、コマンド エコーの ON と OFF を切り替えます。\n\
-ERASE    1 つまたは複数のファイルを削除します。\n\
-EXIT     CMD.exe (コマンド ライン インタープリタ) を終了します。\n\
-FOR      指定されたコマンドをファイル セットの各ファイルに対して実行します。\n\
-FREE     ディスクの空き容量\n\
-GOTO     バッチ プログラム内の、ラベルで指定されている行へ制御を移動します。\n\
-HELP     ReactOS コマンドのヘルプ情報を提供します。\n\
-HISTORY  使用されたすべてのコマンドを一覧表示します。\n\
-IF       バッチ プログラム中で条件処理を実行します。\n\
-LABEL    ディスクのボリューム ラベルを表示または変更します。\n\
-MD       ディレクトリを作成します。\n\
-MKDIR    ディレクトリを作成します。\n\
+    IDS_HELP1 "List of all available commands (+ description)\n\n\
+  help command\n\
+  command /?     For more information on a specific command\n\n\
+?        List all available commands (without description).\n\
+ALIAS    Sets, removes or shows aliases.\n\
+ATTRIB   Displays or changes file attributes.\n\
+BEEP     Beep the speaker.\n\
+CALL     Calls one batch program from another.\n\
+CD       Displays the name of or changes the current directory.\n\
+CHCP     Displays or sets the active code page number.\n\
+CHOICE   Waits for the user to choose one of a set of choices.\n\
+CLS      Clears the screen.\n\
+CMD      Starts a new instance of the ReactOS command interpreter.\n\
+COLOR    Sets the default console foreground and background colors.\n\
+COPY     Copies one or more files to another location.\n\
+DATE     Displays or sets the date.\n\
+DELETE   Deletes one or more files.\n\
+DIR      Displays a list of files and subdirectories in a directory.\n\
+ECHO     Displays messages, or turns command echoing on or off.\n\
+ERASE    Deletes one or more files.\n\
+EXIT     Quits the CMD.EXE program (command interpreter).\n\
+FOR      Runs a specified command for each file in a set of files.\n\
+FREE     (free) disc space.\n\
+GOTO     Directs the ReactOS command interpreter to a labeled line in\n\
+         a batch program.\n\
+HELP     Provides Help information for ReactOS commands.\n\
+HISTORY  Lists all commands which have been used.\n\
+IF       Performs conditional processing in batch programs.\n\
+LABEL    Creates, changes, or deletes the volume label of a disk.\n\
+MD       Creates a directory.\n\
+MKDIR    Creates a directory.\n\
 MKLINK   Creates a filesystem link object.\n\
-MOVE     ファイルを移動およびファイルとディレクトリ名を変更します。\n\
-PATH     実行可能ファイルの検索パスを表示または設定します。\n\
-PAUSE    バッチ プログラムの処理を一時停止し、メッセージを表示します。\n\
-POPD     現在のディレクトリを PUSHD コマンドで記憶されたディレクトリに\n\
-         変更します。\n\
-PROMPT   コマンド プロンプトを変更します。\n\
-PUSHD    現在のディレクトリを保存し、指定したディレクトリに変更します。\n\
-RD       ディレクトリを削除します。\n\
-REM      バッチ ファイルにコメント (注釈) を記録します。\n\
-REN      1 つまたは複数のファイルの名前を変更します。\n\
-RENAME   1 つまたは複数のファイルの名前を変更します。\n\
-RMDIR    ディレクトリを削除します。\n\
-SCREEN   カーソルを移動させます。移動後、文字列を入力することもできます。\n\
-SET      環境変数を表示、設定、または削除します。\n\
-SHIFT    カーソルを移動させます。移動後、文字列を入力することもできます。\n"
-    IDS_HELP2 "START    別のウィンドウを起動し、指定したプログラムまたはコマンドを実行します。\n\
-TIME     システム時刻を表示または設定します。\n\
-TIMER    10 個までのストップウォッチを使うことができます。\n\
-TITLE    コマンド プロンプト ウィンドウのウィンドウ タイトルを設定します。\n\
-TYPE     テキスト ファイルまたはファイルの内容を表示します。\n\
-VER      ReactOS のバージョンを表示します。\n\
-VERIFY   ファイルがディスクに正しく書き込まれたことを照合するかどうかを\n\
-         指示します。\n\
-VOL      ディスクのボリューム ラベルとシリアル番号を表示します。\n"
+MOVE     Moves one or more files from one directory to another\n\
+         directory.\n\
+PATH     Displays or sets a search path for executable files.\n\
+PAUSE    Suspends processing of a batch file and displays a message.\n\
+POPD     Restores the previous value of the current directory saved by\n\
+         PUSHD.\n\
+PROMPT   Changes the command prompt.\n\
+PUSHD    Saves the current directory then changes it.\n\
+RD       Removes a directory.\n\
+REM      Records comments (remarks) in batch files.\n\
+REN      Renames a file or files.\n\
+RENAME   Renames a file or files.\n\
+REPLACE  Replaces files.\n\
+RMDIR    Removes a directory.\n\
+SCREEN   Move cursor and optionally print text.\n\
+SET      Displays, sets, or removes ReactOS environment variables.\n\
+SHIFT    Shifts the position of replaceable parameters in batch files.\n"
+    IDS_HELP2 "START    Starts a separate window to run a specified program or command.\n\
+         Executes command.\n\
+TIME     Displays or sets the system time.\n\
+TIMER    Allow the use of ten stopwatches.\n\
+TITLE    Sets the window title for a CMD.EXE session.\n\
+TYPE     Displays the contents of a text file.\n\
+VER      Displays the ReactOS version.\n\
+VERIFY   Tells ReactOS whether to verify that your files are written\n\
+         correctly to a disk.\n\
+VOL      Displays a disk volume label and serial number.\n"
 END
