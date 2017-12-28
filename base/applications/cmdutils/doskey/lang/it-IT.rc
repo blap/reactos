@@ -1,24 +1,24 @@
-LANGUAGE LANG_ITALIAN, SUBLANG_DEFAULT 
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 STRINGTABLE
 BEGIN
-    IDS_HELP "Gestisce le impostazioni della riga di comando di editing, la cronologia e le macro.\n\
+    IDS_HELP "Manages command-line editing settings, history, and macros.\n\
 \n\
 DOSKEY [/INSERT | /OVERSTRIKE] [/EXENAME=exe] [/HISTORY] [/LISTSIZE=size]\n\
        [/REINSTALL] [/MACROS[:exe | :ALL]] [/MACROFILE=file] [macroname=[text]]\n\
 \n\
-  /INSERT             Attiva la modalità di inserimento.\n\
-  /OVERSTRIKE         Disattiva la modalità di inserimento.\n\
-  /EXENAME=exename    Consente di impostare il nome del programma per visualizzare/cambiare la cronologia\n\
-                      e le macro. Il valore predefinito è cmd.exe.\n\
-  /HISTORY            Consente di visualizzare la cronologia dei comandi.\n\
-  /LISTSIZE=size      Imposta il numero di comandi al buffer storico.\n\
-  /REINSTALL          Cancella la cronologia dei comandi.\n\
-  /MACROS             Consente di visualizzare le definizioni delle macro.\n\
-  /MACROS:exename     Visualizza le definizioni di macro per un programma specifico.\n\
-  /MACROS:ALL         Visualizza le definizioni macro per tutti i programmi.\n\
-  /MACROFILE=file     Carica le definizioni di macro da un file.\n\
-  macroname           Specifica il nome di una macro per creare.\n\
-  text                Consente di specificare il testo di sostituzione per la macro.\n"
+  /INSERT             Enables insert mode.\n\
+  /OVERSTRIKE         Disables insert mode.\n\
+  /EXENAME=exename    Sets the name of the program to view/change history\n\
+                      and macros for. The default is cmd.exe.\n\
+  /HISTORY            Displays the command history.\n\
+  /LISTSIZE=size      Sets the number of commands per history buffer.\n\
+  /REINSTALL          Clears the command history.\n\
+  /MACROS             Displays macro definitions.\n\
+  /MACROS:exename     Displays macro definitions for a specific program.\n\
+  /MACROS:ALL         Displays macro definitions for all programs.\n\
+  /MACROFILE=file     Loads macro definitions from a file.\n\
+  macroname           Specifies the name of a macro to create.\n\
+  text                Specifies the replacement text for the macro.\n"
     IDS_INVALID_MACRO_DEF "Definizion macro non valida: %s\n"
 END
