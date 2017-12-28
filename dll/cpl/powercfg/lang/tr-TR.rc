@@ -1,6 +1,4 @@
-/* TRANSLATOR: 2013, 2014 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 IDD_PROPPAGEPOWERSCHEMES DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -44,7 +42,7 @@ BEGIN
     LTEXT "%0", -1, 28, 43, 15, 10
     CONTROL "Slider1", IDC_ALARMBAR1, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 45, 170, 15
     LTEXT "%100", -1, 214, 43, 25, 10
-    PUSHBUTTON "&Uyarı Eylemi...", -1, 17, 69, 70, 14,WS_DISABLED
+    PUSHBUTTON "&Uyarı Eylemi...", -1, 17, 69, 70, 14, WS_DISABLED
     LTEXT "Bildirim:", -1, 95, 71, 57, 10
     LTEXT "Bilinmiyor", IDC_ALARMMSG1, 154, 71, 84, 10
     LTEXT "Eylem:", -1, 95, 83, 55, 10
@@ -52,8 +50,8 @@ BEGIN
     LTEXT "İzlence Çalıştır:", -1, 95, 95, 55, 10
     LTEXT "Bilinmiyor", IDC_ALARMPROG1, 154, 95, 84, 10
     GROUPBOX "Çok Azalmış Pil Uyarısı", -1, 6, 120, 239, 106
-    AUTOCHECKBOX "G&üç düzeyi şuraya geldiğinde çok azalmış pil uyarısını etkinleştir:", IDC_ALARM2, 15, 131, 180, 15, WS_TABSTOP
-    LTEXT "Bilinmiyor", IDC_ALARMVALUE2, 209, 133, 33, 10
+    AUTOCHECKBOX "G&üç düzeyi şuraya geldiğinde çok azalmış pil uyarısını etkinleştir:", IDC_ALARM2, 15, 131, 195, 15, WS_TABSTOP
+    LTEXT "Bilinmeyen", IDC_ALARMVALUE2, 215, 134, 20, 10
     LTEXT "%0", -1, 28, 154, 15, 10
     CONTROL "Slider1", IDC_ALARMBAR2, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 158, 170, 15
     LTEXT "%100", -1, 214, 154, 25, 10
@@ -105,8 +103,8 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_CPLNAME_1 "Güç Seçenekleri"
-    IDS_CPLDESCRIPTION_1 "Bilgisayarınız için erke tutumu ayarlarını yapılandırır."
+    IDS_CPLNAME_1 "Ruhsat Yöneticisi"
+    IDS_CPLDESCRIPTION_1 "Ruhsat Yöneticisi"
     IDS_PROCENT "%%%i"
     IDS_SOUND "Ses"
     IDS_TEXT "Metin"
