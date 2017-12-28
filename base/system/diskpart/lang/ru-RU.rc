@@ -1,16 +1,14 @@
-/* Russian language resource file by Kudratov Olimjon (olim98@bk.ru) + дополнен 2015 25 авг. tower@reactos.org */
-
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 /* Basic application information */
 STRINGTABLE
 BEGIN
     IDS_APP_HEADER "ReactOS DiskPart"
-    IDS_APP_USAGE "\nРазбиение диска на разделы.\n\n\
-Использование: DISKPART [/S <имя_файла>] [/T <тайм-аут>] [/?]\n\n\
-/S <имя_файла>\tЗапускает указанный скрипт.\n\
-/T <тайм-аут>\tТайм-аут в секундах, чтобы предотвратить использование DiskPart.\n\
-/?\t\tОтображает эту справку.\n\n"
+    IDS_APP_USAGE "\nDisk Partitioning Interpreter.\n\n\
+Usage: DISKPART [/S filename] [/T timeout] [/?]\n\n\
+/S filename\tRuns the given script.\n\
+/T timeout\tTimeout in seconds to prevent DiskPart usage overlap.\n\
+/?\t\tDisplay this help message.\n\n"
     IDS_APP_LICENSE "Распространяется под лицензией GNU GPLv2\n"
     IDS_APP_CURR_COMPUTER "На компьютере: %s\n\n"
     IDS_APP_LEAVING "\nЗавершение работы DiskPart...\n"
@@ -56,7 +54,7 @@ BEGIN
     IDS_RESCAN_END "\nDiskPart закончил проверку конфигурации.\n\n"
 END
 
-/* SELECT command strings */
+/* Select command strings */
 STRINGTABLE
 BEGIN
     IDS_SELECT_NO_DISK "\nДиск для обработки не указан.\nВыберите диск и повторите.\n\n"
@@ -89,7 +87,7 @@ BEGIN
     IDS_MSG_ARG_SYNTAX_ERROR "Указаны неверные параметры команды.\nЧтобы получить дополнительные сведения о данной команде, введите:"
 END
 
-/* Help Command Descripions */
+/* Help Command Descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_DESC_ACTIVE "ACTIVE\t\t- Назначение выбранного диска активным.\n"
