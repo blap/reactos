@@ -17,7 +17,7 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
@@ -85,7 +85,7 @@ BEGIN
     LTEXT "The keyboard layout controls the characters that appear when you type.", IDC_STATIC, 53, 86, 253, 8
     LTEXT "", IDC_LAYOUTTEXT, 53, 100, 250, 16
     LTEXT "To change the keyboard layout, click Customize.", IDC_STATIC, 53, 126, 184, 8
-    PUSHBUTTON "C&ustomize...", IDC_CUSTOMLAYOUT, 250, 122, 50, 14
+    PUSHBUTTON "Anpassa...", IDC_CUSTOMLAYOUT, 250, 122, 50, 14
 END
 
 IDD_DATETIMEPAGE DIALOGEX 0, 0, 317, 143
@@ -163,8 +163,9 @@ BEGIN
     IDS_DATETIMESUBTITLE "Set the correct date and time for your computer."
     IDS_PROCESSTITLE "Registering Components"
     IDS_PROCESSSUBTITLE "Please wait..."
-    IDS_THEMESELECTIONTITLE "Appearance"
+    IDS_THEMESELECTIONTITLE "Utseende"
     IDS_THEMESELECTIONSUBTITLE "Select the theme you prefer."
+
 END
 
 STRINGTABLE
