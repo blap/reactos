@@ -1,11 +1,9 @@
-/* Traditional Chinese translation by Henry Tang Ih 2016 (henrytang2@hotmail.com) */
-
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+LANGUAGE LANG_CHINESE_TRADITIONAL, SUBLANG_CHINESE_TRADITIONAL
 
 IDD_PROPPAGEPOWERSCHEMES DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "電源使用方案"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ACDC, IDI_ACDC, 7, 7, 28, 22
     LTEXT "請選定對於您使用計算機方式最適合的電源使用方案。請注意，更改下面的設置將修改選定的方案。", -1, 37, 6, 209, 36
@@ -36,7 +34,7 @@ END
 IDD_PROPPAGEALARMS DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "警報"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "電池不足警報", -1, 6, 7, 239, 104
     AUTOCHECKBOX "當電量降低到以下水平時，發出電池不足警報(&L):", IDC_ALARM1, 15, 17, 190, 15, WS_TABSTOP
@@ -44,7 +42,7 @@ BEGIN
     LTEXT "0%", -1, 28, 43, 15, 10
     CONTROL "Slider1", IDC_ALARMBAR1, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 45, 170, 15
     LTEXT "100%", -1, 214, 43, 25, 10
-    PUSHBUTTON "警報操作(&M)...", -1, 17, 69, 70, 14,WS_DISABLED
+    PUSHBUTTON "警報操作(&M)...", -1, 17, 69, 70, 14, WS_DISABLED
     LTEXT "通知:", -1, 95, 71, 57, 10
     LTEXT "未知", IDC_ALARMMSG1, 154, 71, 84, 10
     LTEXT "操作:", -1, 95, 83, 55, 10
@@ -52,8 +50,8 @@ BEGIN
     LTEXT "運行程序:", -1, 95, 95, 55, 10
     LTEXT "未知", IDC_ALARMPROG1, 154, 95, 84, 10
     GROUPBOX "電池嚴重短缺警報", -1, 6, 120, 239, 106
-    AUTOCHECKBOX "當電力降低到以下水平時，發出電池嚴重短缺警報(&C):", IDC_ALARM2, 15, 131, 180, 15, WS_TABSTOP
-    LTEXT "未知", IDC_ALARMVALUE2, 209, 133, 33, 10
+    AUTOCHECKBOX "當電力降低到以下水平時，發出電池嚴重短缺警報(&C):", IDC_ALARM2, 15, 131, 195, 15, WS_TABSTOP
+    LTEXT "未知", IDC_ALARMVALUE2, 215, 134, 20, 10
     LTEXT "0%", -1, 28, 154, 15, 10
     CONTROL "Slider1", IDC_ALARMBAR2, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 158, 170, 15
     LTEXT "100%", -1, 214, 154, 25, 10
@@ -69,7 +67,7 @@ END
 IDD_PROPPAGEADVANCED DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "高級"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ACDC, IDI_ACDC, 7, 7, 20, 20
     LTEXT "請選擇要使用的節能設置。", -1, 37, 6, 207, 20
@@ -89,7 +87,7 @@ END
 IDD_PROPPAGEHIBERNATE DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "休眠"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_HIBERNATE, IDI_HIBERNATE, 7, 7, 20, 20
     LTEXT "在計算機休眠時，它將內存中所有信息保存到硬盤上，然後關閉計算機。在退出休眠狀態時，計算機會恢復到原來的狀態。", -1, 37, 6, 210, 35
@@ -105,8 +103,8 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_CPLNAME_1 "電源選項"
-    IDS_CPLDESCRIPTION_1 "配置計算機的節能設置。"
+    IDS_CPLNAME_1 "許可證管理"
+    IDS_CPLDESCRIPTION_1 "許可證管理"
     IDS_PROCENT "%i%%"
     IDS_SOUND "聲音"
     IDS_TEXT "文本"
