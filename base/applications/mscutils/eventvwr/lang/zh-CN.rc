@@ -1,6 +1,12 @@
-/* Chinese translation by Song Fuchang (0xfc) <sfc_0@yahoo.com.cn> */
+/*
+ * PROJECT:    ReactOS Event Viewer
+ * LICENSE:    GPL - See COPYING in the top level directory
+ * FILE:       base/applications/mscutils/eventvwr/lang/en-US.rc
+ * PURPOSE:    English Language File for ReactOS Event Viewer
+ * TRANSLATOR: Marc Piulachs
+ */
 
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+LANGUAGE LANG_CHINESE_SIMPLIFIED, SUBLANG_CHINESE_SIMPLIFIED
 
 IDM_EVENTVWR MENU
 BEGIN
@@ -49,7 +55,7 @@ IDD_EVENTDETAILS_DLG DIALOGEX 0, 0, 266, 240
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_THICKFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_CONTEXTHELP
 CAPTION "事件详细信息"
-FONT 9, "MS Shell Dlg", 400, 0, 0x1
+FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "EvtDetailsCtrl", IDC_STATIC, 0, 0, 266, 215
     PUSHBUTTON "帮助(&H)", IDHELP, 8, 220, 50, 14
@@ -58,11 +64,11 @@ END
 
 IDD_EVENTDETAILS_CTRL DIALOGEX 0, 0, 266, 215
 STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_CLIPCHILDREN
-FONT 9, "MS Shell Dlg", 400, 0, 0x1
+FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "日期：", IDC_STATIC, 8, 5, 31, 8
     EDITTEXT IDC_EVENTDATESTATIC, 46, 5, 47, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "来源：", IDC_STATIC, 104, 5, 36, 8
+    LTEXT "Source:", IDC_STATIC, 103, 5, 36, 8
     EDITTEXT IDC_EVENTSOURCESTATIC, 140, 5, 82, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "时间：", IDC_STATIC, 8, 15, 31, 8
     EDITTEXT IDC_EVENTTIMESTATIC, 46, 15, 47, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
@@ -135,7 +141,7 @@ BEGIN
     IDS_APP_TITLE_EX "%s - %s 已登录 \\\\"
     IDS_STATUS_MSG "%s 中有 %lu 个事件（已列出：%lu）"
     IDS_LOADING_WAIT "正在载入日志。请稍候..."
-    IDS_NO_ITEMS "视图中没有可供显示的项目。" // "日志中没有事件。"
+    IDS_NO_ITEMS "视图中没有可供显示的项目。"" // ""日志中没有事件。"
     IDS_EVENTLOG_SYSTEM "系统日志"
     IDS_EVENTLOG_APP "程序日志"
     IDS_EVENTLOG_USER "用户日志"
@@ -157,7 +163,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_BYTES_FORMAT "bytes" // "%s bytes"
+    IDS_BYTES_FORMAT "bytes"" // ""%s bytes"
     // "%1!ls! (%2!ls! bytes)"
 END
 
@@ -175,15 +181,15 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_COPY "事件类型:     %s\r\n\
-事件源:   %s\r\n\
-事件类别: %s\r\n\
-事件 ID:       %s\r\n\
-日期:           %s\r\n\
-时间:           %s\r\n\
-用户:           %s\r\n\
-电脑:       %s\r\n\
-描述:\n%s"
+    IDS_COPY "Event Type:     %s\r\n\
+Event Source:   %s\r\n\
+Event Category: %s\r\n\
+Event ID:       %s\r\n\
+Date:           %s\r\n\
+Time:           %s\r\n\
+User:           %s\r\n\
+Computer:       %s\r\n\
+Description:\r\n%s"
 END
 
 STRINGTABLE
