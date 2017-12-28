@@ -10,7 +10,7 @@ BEGIN
     LTEXT "&Standorte:", -1, 7, 35, 210, 8
     CONTROL "", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000011D, 7, 46, 238, 105, WS_EX_CLIENTEDGE
     PUSHBUTTON "&Neu...", 1030, 87, 155, 50, 14
-    PUSHBUTTON "Be&arbeiten...", 1031, 141, 155, 50, 14
+    PUSHBUTTON "&Bearbeiten...", 1031, 141, 155, 50, 14
     PUSHBUTTON "&Löschen", 1032, 195, 155, 50, 14
     LTEXT "Rufnummer wird gewählt als:", 1052, 7, 181, 100, 8
     LTEXT "", 1053, 14, 195, 224, 16
@@ -43,7 +43,7 @@ BEGIN
     COMBOBOX 1013, 190, 176, 48, 73, CBS_DROPDOWN | CBS_SORT | WS_VSCROLL
     LTEXT "Dial using:", -1, 14, 195, 40, 8
     AUTORADIOBUTTON "&Tone", 1036, 58, 194, 50, 10, NOT WS_TABSTOP
-    AUTORADIOBUTTON "&Pulse", 1037, 112, 194, 50, 10, NOT WS_TABSTOP
+    AUTORADIOBUTTON "&Puls", 1037, 112, 194, 50, 10, NOT WS_TABSTOP
     LTEXT "Telefonnummer wird gewählt als:", 1052, 7, 219, 100, 8
     LTEXT "", 1053, 14, 232, 224, 16
 END
@@ -57,7 +57,7 @@ BEGIN
     LTEXT "&Vorwahlregeln:", -1, 7, 31, 238, 8
     CONTROL "", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000801D, 7, 42, 238, 99, WS_EX_CLIENTEDGE
     PUSHBUTTON "&Neu...", 1030, 87, 147, 50, 14
-    PUSHBUTTON "Bearbeiten...", 1031, 141, 147, 50, 14
+    PUSHBUTTON "&Bearbeiten...", 1031, 141, 147, 50, 14
     PUSHBUTTON "&Löschen", 1032, 195, 147, 50, 14
     GROUPBOX "Bezeichnung", 2006, 7, 166, 238, 45
     LTEXT "", 1039, 14, 180, 224, 24
@@ -72,7 +72,7 @@ BEGIN
     LTEXT "Karten&typen:", -1, 7, 23, 238, 8
     CONTROL "", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000400D, 7, 34, 238, 63, WS_EX_CLIENTEDGE
     PUSHBUTTON "&Neu...", 1030, 87, 103, 50, 14
-    PUSHBUTTON "Bearbeiten...", 1031, 141, 103, 50, 14
+    PUSHBUTTON "&Bearbeiten...", 1031, 141, 103, 50, 14
     PUSHBUTTON "&Löschen", 1032, 195, 103, 50, 14
     LTEXT "&Kontonummer:", -1, 7, 127, 91, 8
     EDITTEXT 1018, 102, 125, 143, 12, ES_AUTOHSCROLL
@@ -177,7 +177,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "This area code rule will only apply to calls made to the area code and prefix combination you specify below.", 2000, 7, 6, 238, 16
     LTEXT "Zu wählende Vorwahl:", -1, 7, 31, 110, 8
-    LTEXT "A&rea code:", -1, 7, 47, 36, 8
+    LTEXT "O&rtsvorwahl:", -1, 7, 47, 36, 8
     EDITTEXT 1034, 46, 44, 50, 14, ES_AUTOHSCROLL
     LTEXT "Geben Sie die Präfixe an, für die diese Vorwahlregel verwendet werden.", -1, 14, 78, 224, 8
     AUTORADIOBUTTON "&Alle Präfixe dieser Ortskennzahl einbeziehen", 1014, 14, 90, 224, 12, NOT WS_TABSTOP
@@ -225,7 +225,7 @@ BEGIN
     AUTORADIOBUTTON "&Eine bestimmte Zeit warten:", 1048, 7, 63, 238, 10, NOT WS_TABSTOP
     EDITTEXT 1050, 18, 77, 36, 14, ES_AUTOHSCROLL | WS_GROUP
     CONTROL "Spin1", 1049, "msctls_updown32", 0x00000036, 42, 78, 11, 14
-    LTEXT "&seconds", -1, 58, 81, 187, 8
+    LTEXT "&sekunden", -1, 58, 81, 187, 8
     DEFPUSHBUTTON "OK", 1, 141, 103, 50, 14
     PUSHBUTTON "Abbrechen", 2, 195, 103, 50, 14
 END
@@ -317,7 +317,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON 504, 501, 13, 14, 21, 20
     LTEXT "", 502, 47, 15, 180, 32
-    AUTOCHECKBOX "&In the future, always trust this page", 503, 50, 47, 147, 12
+    AUTOCHECKBOX "&In der Zukunft dieser Seite immer vertrauen", 503, 50, 47, 147, 12
     DEFPUSHBUTTON "&OK", 505, 110, 65, 50, 14
     PUSHBUTTON "&Abbrechen", 506, 164, 65, 50, 14
 END
