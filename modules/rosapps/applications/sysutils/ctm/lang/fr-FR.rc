@@ -1,6 +1,6 @@
-// French (France) resources
+// English (U.S.) resources
 
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 STRINGTABLE DISCARDABLE
 BEGIN
@@ -9,7 +9,7 @@ BEGIN
    IDS_COLUMN_NUMBER       "# "
    IDS_COLUMN_IMAGENAME    "Image name                "
    IDS_COLUMN_PID          "PID  "
-   IDS_COLUMN_CPU          "CPU"
+   IDS_COLUMN_CPU          "UC"
    IDS_COLUMN_MEM          "Util. mém"
    IDS_COLUMN_MEM_UNIT		"KO"
    IDS_COLUMN_PF           "Défauts de page"
@@ -19,7 +19,7 @@ BEGIN
    IDS_NO                  "N"
 
    IDS_MENU                "Menu: Quitter (q), Tuer processus (t)"
-   IDS_MENU_QUIT           "Q"
+   IDS_MENU_QUIT           "A"
    IDS_MENU_KILL_PROCESS   "T"
 
    IDS_KILL_PROCESS        "Etes-vous sûr de vouloir tuer ce processus (o/n) ?"
