@@ -1,11 +1,11 @@
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 IDD_STARTPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Velkommen til ReactOS installering veiviseren.", IDC_STARTTITLE, 115, 8, 220, 24
+    LTEXT "Velkommen til ReactOS installering veiviseren.", IDC_STARTTITLE, 115, 8, 195, 24
     LTEXT "Du kan ennå ikke installere ReactOS direkte fra denne CD-en! Vennligst start datamaskinen på nytt og start fra denne platen for å installere ReactOS.", IDC_STATIC, 115, 40, 195, 100
     LTEXT "Trykk på Fullført for å avslutte installeringen.", IDC_STATIC, 115, 169, 195, 17
 END
@@ -28,11 +28,11 @@ CAPTION "ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Datamaskin:", IDC_STATIC, 20, 15, 80, 10
-    CONTROL "", IDC_COMPUTER, "ComboBox", WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST, 100, 15, 150, 80
+    CONTROL "", IDC_COMPUTER, "ComboBox", WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST, 100, 15, 180, 80
     LTEXT "Skjerm:", IDC_STATIC, 20, 35, 80, 10
-    CONTROL "", IDC_DISPLAY, "ComboBox", WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST, 100, 35, 150, 80
+    CONTROL "", IDC_DISPLAY, "ComboBox", WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST, 100, 35, 180, 80
     LTEXT "Tastatur:", IDC_STATIC, 20, 55, 80, 10
-    CONTROL "", IDC_KEYBOARD, "ComboBox", WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST, 100, 55, 150, 80
+    CONTROL "", IDC_KEYBOARD, "ComboBox", WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST, 100, 55, 180, 80
     LTEXT "Trykk på Neste for å installere enhetene.", IDC_STATIC, 7, 128, 297, 8
 END
 
@@ -42,11 +42,11 @@ CAPTION "ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "", IDC_PARTITION, "SysListView32", WS_BORDER | WS_VISIBLE | WS_TABSTOP | LVS_REPORT | LVS_SINGLESEL, 7, 7, 303, 112
-    PUSHBUTTON "&Opprett", IDC_PARTCREATE, 7, 122, 50, 15
-    PUSHBUTTON "&Slett", IDC_PARTDELETE, 63, 122, 50, 15
-    PUSHBUTTON "S&tasjon", IDC_DEVICEDRIVER, 174, 122, 50, 15, WS_DISABLED
-    PUSHBUTTON "&Avansert valg...", IDC_PARTMOREOPTS, 230, 122, 80, 15
-    LTEXT "Trykk på Neste for å starte installasjon prosessen.", IDC_STATIC, 10, 180, 277, 20
+    PUSHBUTTON "&Opprett", IDC_PARTCREATE, 7, 122, 50, 14
+    PUSHBUTTON "&Slett", IDC_PARTDELETE, 63, 122, 50, 14
+    PUSHBUTTON "S&tasjon", IDC_DEVICEDRIVER, 174, 122, 50, 14, WS_DISABLED
+    PUSHBUTTON "&Avansert valg...", IDC_PARTMOREOPTS, 230, 122, 80, 14
+/*    LTEXT "Click Next to check the summary.", IDC_STATIC, 7, 128, 277, 8 */
 END
 
 IDD_PARTITION DIALOGEX 0, 0, 145, 90
@@ -85,7 +85,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYS
 CAPTION "ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Trykk på Neste for å starte installasjon prosessen.", IDC_STATIC, 7, 180, 303, 20
+    LTEXT "Click Next to start the installation process.", IDC_STATIC, 7, 128, 303, 8
 END
 
 IDD_PROCESSPAGE DIALOGEX 0, 0, 317, 143
@@ -95,7 +95,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Installer filer...", IDC_ACTIVITY, 20, 50, 277, 10
     LTEXT "test.txt", IDC_ITEM, 30, 80, 257, 10
-    CONTROL "", IDC_PROCESSPROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 20, 120, 277, 8
+    CONTROL "", IDC_PROCESSPROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 7, 120, 303, 8
 END
 
 IDD_RESTARTPAGE DIALOGEX 0, 0, 317, 193
@@ -103,10 +103,10 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYS
 CAPTION "Fullfører ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Du har nå fullført første steget av ReactOS installering.", IDC_STATIC, 20, 50, 277, 10
-    LTEXT "Når du trykker Fullført, vil din datamaskin starte på nytt.", IDC_STATIC, 20, 80, 277, 10
-    CONTROL "", IDC_RESTART_PROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 20, 120, 277, 8
-    LTEXT "Hvis du fortsatt har CD platen i stasjon, fjern denne. For å starte din datamaskin på nytt, trykk på Fullført.", IDC_STATIC, 10, 180, 297, 20
+    LTEXT "You have successfully completed the first stage of ReactOS Setup.", IDC_STATIC, 115, 50, 195, 10
+    LTEXT "When you click Finish, your computer will restart.", IDC_STATIC, 115, 80, 195, 10
+    CONTROL "", IDC_RESTART_PROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 115, 110, 195, 8
+    LTEXT "If there is a CD in a drive, remove it. Then, to restart your computer, click Finish.", IDC_STATIC, 115, 169, 195, 17
 END
 
 STRINGTABLE
