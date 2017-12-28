@@ -1,6 +1,4 @@
-/* Bulgarian (BG) translation by Violin Iliev */
-
-LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_BULGARIAN, SUBLANG_BULGARIAN_BULGARIA
 
 /* String Tables */
 
