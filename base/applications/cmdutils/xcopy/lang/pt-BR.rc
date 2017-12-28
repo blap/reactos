@@ -5,53 +5,53 @@ STRINGTABLE
     STRING_INVPARMS, "Número de parâmetros inválido - Use xcopy /? para ajuda\n"
     STRING_INVPARM,  "Parâmetro inválido '%1' -  Use xcopy /? para ajuda\n"
     STRING_PAUSE,    "Pressione <Enter> para iniciar a cópia\n"
-    STRING_SIMCOPY,  "%1!d! arquivo(s) seriam copiado(s)\n"
+    STRING_SIMCOPY,  "%1!d! arquivo(s) seria(m) copiado(s)\n"
     STRING_COPY,     "%1!d! arquivo(s) copiado(s)\n"
-    STRING_QISDIR,   "'%1' é um arquivo ou diretório\n\
-                     no alvo?\n\
-                     (A - Arquivo, D - Directório)\n"
-    STRING_SRCPROMPT,"%1? (Sim|Não)\n"
-    STRING_OVERWRITE,"Reescrever %1? (Sim|Não|Tudo)\n"
+    STRING_QISDIR,   "Is '%1' a filename or directory\n\
+                     on the target?\n\
+                     (F - File, D - Directory)\n"
+    STRING_SRCPROMPT,"%1? (Yes|No)\n"
+    STRING_OVERWRITE,"Overwrite %1? (Yes|No|All)\n"
     STRING_COPYFAIL, "Falha ao copiar '%1' para '%2' com r/c %3!d!\n"
     STRING_OPENFAIL, "Falha ao abrir '%1'\n"
-    STRING_READFAIL, "Falha a ler '%1'\n"
+    STRING_READFAIL, "Falha ao ler '%1'\n"
     STRING_YES_CHAR, "S"
     STRING_NO_CHAR,  "N"
     STRING_ALL_CHAR, "T"
-    STRING_FILE_CHAR,"A"
+    STRING_FILE_CHAR,"F"
     STRING_DIR_CHAR, "D"
 
     STRING_HELP,
-"XCOPY - Copia arquivos ou diretórios para um destino\n\
+"XCOPY - Copies source files or directory trees to a destination.\n\
 \n\
-Sintaxe:\n\
-XCOPY fonte [destino] [/I] [/S] [/Q] [/F] [/L] [/W] [/T] [/N] [/U]\n\
+Syntax:\n\
+XCOPY source [destination] [/I] [/S] [/Q] [/F] [/L] [/W] [/T] [/N] [/U]\n\
 \t     [/R] [/H] [/C] [/P] [/A] [/M] [/E] [/D] [/Y] [/-Y]\n\
 \n\
-Onde:\n\
+Where:\n\
 \n\
-[/I]  Assume diretório se o destino não existe e está copiando 2 ou\n\
-\tmais arquivos\n\
-[/S]  Copiar diretórios e subdiretórios\n\
-[/E]  Copiar diretórios e subdiretórios, incluindo os vazios\n\
-[/Q]  Não mostrar nomes durante a cópia, ie modo silencioso.\n\
-[/F]  Mostrar por completo os nomes de fonte e destino durante a cópia\n\
-[/L]  Simular a operação, mostrando os nomes que seriam copiados\n\
-[/W]  Alerta antes de iniciar a operação de cópia\n\
-[/T]  Cria a estrutura de diretórios mas não copia arquivos\n\
-[/Y]  Omitir alertas ao sobrescrever arquivos\n\
-[/-Y] Alertar ao sobrescrever arquivos\n\
-[/P]  Alertar antes de cada arquivo ser copiado\n\
-[/N]  Copiar usando nomes pequenos\n\
-[/U]  Copiar apenas arquivos que já existem no destino\n\
-[/R]  Reescrever quaisquer arquivos de somente leitura\n\
-[/H]  Incluir arquivos ocultos e de sistema na cópia\n\
-[/C]  Continuar mesmo que ocorra um erro durante a cópia\n\
-[/A]  Copiar apenas arquivos com atributo de arquivo\n\
-[/M]  Copiar apenas arquivos com atributo de arquivo, removendo\n\
-\to atributo de arquivo\n\
-[/D | /D:m-d-y] Copiar novos arquivos ou os alterados após a data fornecida\n\
-\t\tSe nenhuma data for fornecida, apenas copiar se o destino\n\
-\t\tfor mais antigo que a fonte\n\n"
+[/I]  Assume directory if destination does not exist and copying two or\n\
+\tmore files.\n\
+[/S]  Copy directories and subdirectories.\n\
+[/E]  Copy directories and subdirectories, including any empty ones.\n\
+[/Q]  Do not list names during copy, that is be quiet.\n\
+[/F]  Show full source and destination names during copy.\n\
+[/L]  Simulate operation, showing names which would be copied.\n\
+[/W]  Prompts before beginning the copy operation.\n\
+[/T]  Creates empty directory structure but does not copy files.\n\
+[/Y]  Suppress prompting when overwriting files.\n\
+[/-Y] Enable prompting when overwriting files.\n\
+[/P]  Prompts on each source file before copying.\n\
+[/N]  Copy using short names.\n\
+[/U]  Copy only files which already exist in destination.\n\
+[/R]  Overwrite any read only files.\n\
+[/H]  Include hidden and system files in the copy.\n\
+[/C]  Continue even if an error occurs during the copy.\n\
+[/A]  Only copy files with archive attribute set.\n\
+[/M]  Only copy files with archive attribute set, removes the\n\
+\tarchive attribute.\n\
+[/D | /D:m-d-y] Copy new files or those modified after the supplied date.\n\
+\t\tIf no date is supplied, only copy if destination is older\n\
+\t\tthan source.\n\n"
 
 }
