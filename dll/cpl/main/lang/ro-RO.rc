@@ -1,9 +1,4 @@
-/*
- * Translators: Petru Dimitriu (petrimetri at gmail dot com)
- *              Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDD_KEYBSPEED DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -13,13 +8,13 @@ BEGIN
     GROUPBOX "Repetare caractere", -1, 5, 5, 236, 135
     ICON IDI_REPEAT_DELAY, IDC_ICON_REPEAT_DELAY, 13, 18, 15, 15
     LTEXT "Întâr&zierea reptării:", -1, 40, 18, 100, 10
-    LTEXT "Lungă", -1, 40, 33, 25, 10
-    LTEXT "Scurtă", -1, 200, 33, 25, 10
+    LTEXT "Lungă", -1, 40, 33, 20, 10
+    LTEXT "Scurtă", -1, 200, 33, 20, 10
     CONTROL "", IDC_SLIDER_REPEAT_DELAY, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 65, 33, 130, 17
     ICON IDI_REPEAT_RATE, IDC_ICON_REPEAT_RATE, 13, 70, 15, 15
     LTEXT "&Rata de repetiție:", -1, 40, 70, 100, 10
-    LTEXT "Lentă", -1, 40, 85, 25, 10
-    LTEXT "Rapidă", -1, 200, 85, 25, 10
+    LTEXT "Lentă", -1, 40, 85, 20, 10
+    LTEXT "Rapidă", -1, 200, 85, 20, 10
     CONTROL "", IDC_SLIDER_REPEAT_RATE, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 65, 85, 130, 17
     LTEXT "Z&onă de test pentru testarea ratei de repetiție:", -1, 15, 105, 216, 10
     EDITTEXT IDC_EDIT_REPEAT_RATE, 15, 116, 216, 14, WS_CHILD | WS_VISIBLE | WS_GROUP
@@ -57,9 +52,9 @@ CAPTION "Butoane"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Configurație butoane", -1, 5, 5, 236, 70
-    CHECKBOX "&Comută funcția butoanelor primar și secundar", IDC_SWAP_MOUSE_BUTTONS, 10, 18, 159, 10
+    CHECKBOX "&Comută funcția butoanelor primar și secundar", IDC_SWAP_MOUSE_BUTTONS, 10, 18, 156, 10
     CONTROL "", IDC_IMAGE_SWAP_MOUSE, "Static", SS_ICON | SS_CENTERIMAGE | WS_VISIBLE, 171, 14, 65, 57, WS_EX_STATICEDGE
-    LTEXT "Bifați pentru interschimbarea funcției butoanelor principale ale șoricelului. Astfel butonul drept va fi cel folosit pentru selectare sau agățare și trasare.", -1, 10, 32, 156, 36
+    LTEXT "Select this checkbox to make the right mouse button the one used for primary functions such as selecting and dragging.", -1, 10, 36, 156, 30
     GROUPBOX "Viteza pentru dublu-clic", -1, 5, 78, 236, 70
     LTEXT "Executați dublu-clic pe dosarul mostră pentru a testa. Dacă dosarul nu reacționează, ajustați viteza pentru o execuție mai lentă.", -1, 10, 90, 156, 28
     LTEXT "&Viteză:   Mică", -1, 10, 123, 50, 10
@@ -67,7 +62,7 @@ BEGIN
     CONTROL "", IDC_SLIDER_DOUBLE_CLICK_SPEED, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 60, 123, 70, 17
     CONTROL "", IDC_IMAGE_DOUBLE_CLICK_SPEED, "Static", SS_ICON | SS_NOTIFY | SS_CENTERIMAGE | WS_VISIBLE, 171, 87, 65, 57, WS_EX_STATICEDGE
     GROUPBOX "ImobilizareClic", -1, 5, 150, 236, 70
-    CHECKBOX "Doresc folosirea de I&mobilizareClic", IDC_CHECK_CLICK_LOCK, 10, 160, 150, 20
+    CHECKBOX "Doresc folosirea de I&mobilizareClic", IDC_CHECK_CLICK_LOCK, 10, 160, 70, 20
     PUSHBUTTON "&Parametri…", IDC_BUTTON_CLICK_LOCK, 172, 161, 60, 14
     LTEXT "Această funcționalitate vă permite activarea sau trasarea elementelor fără a ține apăsat încontinuu butonul de șoricel. Pentru a activa/dezactiva, mențineți un pic apăsat butonul de șoricel.", -1, 10, 180, 224, 30
 END
@@ -82,7 +77,7 @@ BEGIN
     PUSHBUTTON "&Păstrare…", IDC_BUTTON_SAVEAS_SCHEME, 65, 31, 60, 14
     PUSHBUTTON "Șt&erge", IDC_BUTTON_DELETE_SCHEME, 128, 31, 50, 14
     CONTROL "", IDC_IMAGE_CURRENT_CURSOR, "Static", SS_ICON | SS_CENTERIMAGE | WS_VISIBLE, 196, 9, 45, 41, WS_EX_STATICEDGE
-    LTEXT "Pa&rticularizare", -1, 5, 57, 70, 10
+    LTEXT "Pa&rticularizare", -1, 5, 57, 60, 10
     LISTBOX IDC_LISTBOX_CURSOR, 5, 68, 236, 124, WS_VISIBLE | WS_BORDER | WS_TABSTOP | WS_VSCROLL | LBS_OWNERDRAWFIXED | LBS_NOTIFY
     CHECKBOX "Acti&vează umbra indicatorului", IDC_CHECK_CURSOR_SHADOW, 5, 198, 105, 10
     PUSHBUTTON "Indicator i&mplicit", IDC_BUTTON_USE_DEFAULT_CURSOR, 117, 196, 65, 14
@@ -138,7 +133,7 @@ BEGIN
     ICON IDI_MOUSE_WHEEL, IDC_ICON_WHEEL, 20, 20, 32, 32
     LTEXT "La acționarea rotiței va fi derulat", -1, 60, 15, 150, 10
     RADIOBUTTON "Si&multan următorul număr de linii:", IDC_RADIO_WHEEL_SCROLL_LINES, 60, 30, 150, 10, WS_VISIBLE | WS_GROUP | WS_TABSTOP
-    RADIOBUTTON "Câte un &ecran", IDC_RADIO_WHEEL_SCROLL_PAGE, 60, 65, 100, 10
+    RADIOBUTTON "Câte un &ecran", IDC_RADIO_WHEEL_SCROLL_PAGE, 60, 65, 90, 10
     EDITTEXT IDC_EDIT_WHEEL_SCROLL_LINES, 70, 45, 60, 15, ES_RIGHT | WS_VISIBLE | WS_GROUP | WS_TABSTOP
     CONTROL "", IDC_UPDOWN_WHEEL_SCROLL_LINES, UPDOWN_CLASS, UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_BORDER, 125, 45, 12, 12
 END
