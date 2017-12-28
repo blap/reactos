@@ -1,36 +1,36 @@
 /*
- * PROJECT:    Solitaire
- * LICENSE:    Freeware, permission to use under Public Domain
- * FILE:       base/applications/games/solitaire/lang/id-ID.rc
- * PURPOSE:    Indonesian Language File for Solitaire
- * TRANSLATOR: Zaenal Mutaqin (ade999@gmail.com)
+ * PROJECT:     Solitaire
+ * LICENSE:     Freeware, permission to use under Public Domain
+ * FILE:        base/applications/games/solitaire/lang/en-US.rc
+ * PURPOSE:     English Language File for Solitaire
+ * PROGRAMMERS: Daniel "EmuandCo" Reimer (reimer.daniel@freenet.de)
  */
 
-LANGUAGE LANG_INDONESIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
 
 /* Dialogs */
 
 IDD_OPTIONS DIALOGEX 0, 0, 186, 118
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_SHELLFONT
-CAPTION "Options"
+CAPTION "Pilihan"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Cards", -1, 7, 7, 90, 40
-    AUTORADIOBUTTON "Draw &One", IDC_OPT_DRAWONE, 14, 19, 70, 10, WS_GROUP | WS_TABSTOP
-    AUTORADIOBUTTON "Draw &Three", IDC_OPT_DRAWTHREE, 14, 32, 70, 10
-    GROUPBOX "Scoring", -1, 100, 7, 75, 53
-    AUTORADIOBUTTON "&Standard", IDC_OPT_STANDARD, 107, 19, 60, 10, WS_GROUP | WS_TABSTOP
+    GROUPBOX "Kartu-kartu", -1, 7, 7, 90, 40
+    AUTORADIOBUTTON "Seri &satu", IDC_OPT_DRAWONE, 14, 19, 70, 10, WS_GROUP | WS_TABSTOP
+    AUTORADIOBUTTON "Seri &Tiga", IDC_OPT_DRAWTHREE, 14, 32, 70, 10
+    GROUPBOX "Nilai", -1, 100, 7, 75, 53
+    AUTORADIOBUTTON "&Standar", IDC_OPT_STANDARD, 107, 19, 60, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "&Vegas", IDC_OPT_VEGAS, 107, 32, 60, 10
-    AUTORADIOBUTTON "&None", IDC_OPT_NOSCORE, 107, 45, 60, 10
+    AUTORADIOBUTTON "Tidak &ada", IDC_OPT_NOSCORE, 107, 45, 60, 10
     AUTOCHECKBOX "&Show Time", IDC_OPT_SHOWTIME, 7 ,51 ,65 ,10, WS_TABSTOP
     AUTOCHECKBOX "S&tatus bar", IDC_OPT_STATUSBAR, 7, 66, 64, 10, WS_TABSTOP
-    AUTOCHECKBOX "&Keep Score", IDC_OPT_KEEPSCORE, 100, 66, 65, 10, WS_TABSTOP
-    DEFPUSHBUTTON "OK", IDOK, 35, 97, 50, 14
+    AUTOCHECKBOX "Menjaga S&kor", IDC_OPT_KEEPSCORE, 100, 66, 65, 10, WS_TABSTOP
+    DEFPUSHBUTTON "Oke", IDOK, 35, 97, 50, 14
     PUSHBUTTON "Batal", IDCANCEL, 101, 97, 50, 14
 END
 
 IDD_CARDBACK DIALOGEX 6, 6, 345, 185
-CAPTION "Select Card Back"
+CAPTION "Pilih kartu kembali"
 FONT 8, "MS Shell Dlg"
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_SHELLFONT
 BEGIN
@@ -46,8 +46,8 @@ BEGIN
     CONTROL "", IDC_CARDBACK10, "Static", SS_NOTIFY, 175, 89, 50, 71
     CONTROL "", IDC_CARDBACK11, "Static", SS_NOTIFY, 232, 89, 50, 71
     CONTROL "", IDC_CARDBACK12, "Static", SS_NOTIFY, 289, 89, 50, 71
-    DEFPUSHBUTTON "OK", IDOK, 114, 165, 54, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 176, 165, 54, 14
+    DEFPUSHBUTTON "Oke", IDOK, 114, 165, 54, 14
+    PUSHBUTTON "Membatalkan", IDCANCEL, 176, 165, 54, 14
 END
 
 /* Strings */
@@ -55,23 +55,23 @@ END
 STRINGTABLE
 BEGIN
     IDS_SOL_NAME "Solitaire"
-    IDS_SOL_ABOUT "Solitaire by J Brown\n\nCardLib version 1.0."
-    IDS_SOL_QUIT "Quit the current game?"
-    IDS_SOL_WIN "Congratulations, you win!"
-    IDS_SOL_DEAL "Deal again?"
-    IDS_SOL_SCORE "Score: %d"
-    IDS_SOL_TIME "Time: %d"
+    IDS_SOL_ABOUT "Solitaire oleh J Brown\n\nCardLib versi 1.0."
+    IDS_SOL_QUIT "Keluar dari game saat ini?"
+    IDS_SOL_WIN "Selamat, kamu menang!"
+    IDS_SOL_DEAL "Berurusan lagi?"
+    IDS_SOL_SCORE "Skor: %d"
+    IDS_SOL_TIME "Waktu: %d"
 END
 
 /* Menus */
 
 IDR_MENU1 MENU
 BEGIN
-    POPUP "&Game"
+    POPUP "Permainan"
     BEGIN
         MENUITEM "&Giliran\tF2", IDM_GAME_NEW
         MENUITEM SEPARATOR
-        MENUITEM "&Dek...", IDM_GAME_DECK
+        MENUITEM "D&ek...", IDM_GAME_DECK
         MENUITEM "&Opsi...", IDM_GAME_OPTIONS
         MENUITEM SEPARATOR
         MENUITEM "&Keluar", IDM_GAME_EXIT
