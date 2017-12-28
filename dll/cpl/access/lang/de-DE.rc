@@ -26,7 +26,7 @@ END
 
 IDD_PROPPAGESOUND DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
-CAPTION "Sound"
+CAPTION "Klang"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "Darstellungsoptionen", -1, 6, 11, 234, 98
@@ -202,7 +202,7 @@ BEGIN
     LTEXT "Niedrig", -1, 66, 96, 18, 11
     CONTROL "", IDC_MOUSEKEYS_SPEED_TRACK, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP,
             90, 94, 114, 20
-    LTEXT "High", -1, 204, 96, 18, 11
+    LTEXT "Hoch", -1, 204, 96, 18, 11
     LTEXT "&Beschleunigung:", -1, 12, 123, 48, 11
     LTEXT "Langsam", -1, 66, 123, 18, 11
     CONTROL "", IDC_MOUSEKEYS_ACCEL_TRACK, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP,
