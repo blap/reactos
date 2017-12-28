@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Katayama Hirofumi MZ <katayama.hirofumi.mz@gmail.com>
+ * Copyright 2009 Andrew Hill
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
 
-LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+LANGUAGE LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN
 
 /* Menus */
 
@@ -96,13 +96,13 @@ END
 
 IDM_TASKBAR_TOOLBARS MENUEX
 BEGIN
-    POPUP "ツール バー(&T)", -1, MFT_STRING, MFS_ENABLED, 0
-    BEGIN
-        MENUITEM "デスクトップ(&D)", IDM_TASKBAR_TOOLBARS_DESKTOP, MFT_STRING
-        MENUITEM "クイック起動(&Q)", IDM_TASKBAR_TOOLBARS_QUICKLAUNCH, MFT_STRING
-        MENUITEM "", -1, MFT_SEPARATOR, MFS_ENABLED
-        MENUITEM "新しいツール バー(&N)...", IDM_TASKBAR_TOOLBARS_NEW, MFT_STRING
-    END
+	POPUP "ツール バー(&T)", -1, MFT_STRING, MFS_ENABLED, 0
+	BEGIN
+		MENUITEM "デスクトップ(&D)", IDM_TASKBAR_TOOLBARS_DESKTOP, MFT_STRING
+		MENUITEM "クイック起動(&Q)", IDM_TASKBAR_TOOLBARS_QUICKLAUNCH, MFT_STRING
+		MENUITEM "", -1, MFT_SEPARATOR, MFS_ENABLED
+		MENUITEM "新しいツール バー(&N)...", IDM_TASKBAR_TOOLBARS_NEW, MFT_STRING
+	END
 END
 
 IDM_BAND_MENU MENUEX
@@ -130,24 +130,24 @@ END
 IDD_PROGRESS_DLG DIALOGEX 0, 0, 260, 85
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
 CAPTION ""
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 {
     CONTROL "", IDC_ANIMATION, ANIMATE_CLASSA, 0, 12, 10, 236, 30 /* TODO: style */
     LTEXT "", IDC_TEXT_LINE,     7, 45, 250, 10, SS_LEFT|SS_NOPREFIX
     LTEXT "", IDC_TEXT_LINE + 1, 7, 55, 250, 10, SS_LEFT|SS_NOPREFIX
     LTEXT "", IDC_TEXT_LINE + 2, 7, 75, 190, 10, SS_LEFT|SS_NOPREFIX
     CONTROL "", IDC_PROGRESS_BAR, PROGRESS_CLASSA, WS_BORDER, 7, 65, 190, 8
-    PUSHBUTTON "キャンセル", IDCANCEL, 205, 65, 50, 15, WS_GROUP | WS_TABSTOP | WS_VISIBLE
+    PUSHBUTTON "Cancel", IDCANCEL, 205, 65, 50, 15, WS_GROUP | WS_TABSTOP | WS_VISIBLE
 }
 
 IDD_CUSTOMIZETOOLBAREX DIALOGEX 0, 0, 357, 33
 STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CAPTION
-FONT 9, "MS UI Gothic", 0, 0, 0x1
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    LTEXT "テキスト オプション(&X):", -1, 4, 2, 73, 15
-    COMBOBOX IDC_TEXTOPTIONS, 75, 0, 123, 54, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    LTEXT "アイコン オプション(&N):", -1, 4, 20, 73, 15
-    COMBOBOX IDC_ICONOPTIONS, 75, 18, 123, 54, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT "テキスト オプション(&X):", -1, 4, 2, 48, 15
+    COMBOBOX IDC_TEXTOPTIONS, 52, 0, 123, 57, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT "アイコン オプション(&N):", -1, 4, 20, 48, 15
+    COMBOBOX IDC_ICONOPTIONS, 52, 18, 123, 57, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
 END
 
 /* Accelerators */
@@ -308,7 +308,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_STANDARD_TOOLBAR, "|戻る|進む|上へ|検索|フォルダー|移動|コピー|削除|元に戻す|表示|停止|再描画|ホーム|ドライブ接続|接続切断|お気に入り|履歴|フルスクリーン|プロパティ|切り取り|コピー|貼り付け|フォルダー オプション||"
+    IDS_STANDARD_TOOLBAR, "|Back|Forward|Up|Search|Folders|Move To|Copy To|Delete|Undo|Views|Stop|Refresh|Home|Map Drive|Disconnect|Favorites|History|Full Screen|Properties|Cut|Copy|Paste|Folder Options||"
 END
 
 STRINGTABLE
