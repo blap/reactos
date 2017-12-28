@@ -82,7 +82,7 @@ BEGIN
   END
   POPUP "文件(&F)"
   BEGIN
-    MENUITEM "关于 ...(&A)",       ID_ABOUT
+    MENUITEM "关于(&A)...",       ID_ABOUT
   END
 END
 
