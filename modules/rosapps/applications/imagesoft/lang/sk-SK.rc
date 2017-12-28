@@ -1,11 +1,4 @@
-/* TRANSLATOR :  Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- * DATE OF TR.:  02-02-2008
- * LAST CHANGE:  29-08-2008
- * ______________________________________________
- * NOTE:        this file is not fully translated
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 STRINGTABLE DISCARDABLE
 BEGIN
@@ -17,79 +10,79 @@ IDR_MAINMENU MENU
 BEGIN
   POPUP "&Súbor"
   BEGIN
-    MENUITEM "&Nový...",              ID_NEW
-    MENUITEM "&Otvoriť...",           ID_OPEN
+    MENUITEM "&Nový...",             ID_NEW
+    MENUITEM "&Otvoriť...",            ID_OPEN
     MENUITEM SEPARATOR
-    MENUITEM "&Zatvoriť\tCtrl+F4",    ID_CLOSE,   GRAYED
-    MENUITEM "Zatvoriť &všetky",      ID_CLOSEALL,GRAYED
+    MENUITEM "&Zatvoriť\tCtrl+F4",     ID_CLOSE,   GRAYED
+    MENUITEM "Zatvoriť &všetky",          ID_CLOSEALL,GRAYED
     MENUITEM SEPARATOR
     MENUITEM "&Uložiť",               ID_SAVE,    GRAYED
-    MENUITEM "Uložiť &ako...",        ID_SAVEAS,  GRAYED
+    MENUITEM "Uložiť &ako...",         ID_SAVEAS,  GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Náhľa&d pred tlačou",   ID_PRINTPRE,GRAYED
-    MENUITEM "&Tlačiť...",            ID_PRINT,   GRAYED
+    MENUITEM "Náhľa&d pred tlačou",      ID_PRINTPRE,GRAYED
+    MENUITEM "&Tlačiť...",           ID_PRINT,   GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "V&lastnosti...",        ID_PROP,    GRAYED
+    MENUITEM "V&lastnosti...",      ID_PROP,    GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Skončiť\tAlt+F4",      ID_EXIT
+    MENUITEM "&Skončiť\tAlt+F4",       ID_EXIT
   END
   POPUP "&Úpravy"
   BEGIN
-    MENUITEM "&Späť",                 ID_UNDO,    GRAYED
-    MENUITEM "&Znova",                ID_REDO,    GRAYED
+    MENUITEM "&Späť",               ID_UNDO,    GRAYED
+    MENUITEM "&Znova",               ID_REDO,    GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Vystrihnúť",           ID_CUT,     GRAYED
-    MENUITEM "&Kopírovať",            ID_COPY,    GRAYED
-    MENUITEM "&Paste",                ID_PASTE,   GRAYED
-    MENUITEM "Paste as new &image",   ID_PASTENEWIMAGE, GRAYED
+    MENUITEM "&Vystrihnúť",                ID_CUT,     GRAYED
+    MENUITEM "&Kopírovať",               ID_COPY,    GRAYED
+    MENUITEM "&Paste",              ID_PASTE,   GRAYED
+    MENUITEM "Paste as new &image", ID_PASTENEWIMAGE, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Vy&brať všetko",        ID_SELALL,  GRAYED
+    MENUITEM "Vy&brať všetko",         ID_SELALL,  GRAYED
   END
   POPUP "&Zobraziť"
   BEGIN
-    MENUITEM "&Nástroje",             ID_TOOLS
-    MENUITEM "&Farby",                ID_COLOR
-    MENUITEM "&História",             ID_HISTORY
-    MENUITEM "Stavový &riadok",       ID_STATUSBAR
+    MENUITEM "&Nástroje",              ID_TOOLS
+    MENUITEM "&Farby",             ID_COLOR
+    MENUITEM "&História",            ID_HISTORY
+    MENUITEM "Stavový &riadok",         ID_STATUSBAR
   END
   POPUP "&Adjust"
   BEGIN
-    MENUITEM "Jas...",                ID_BRIGHTNESS
-    MENUITEM "Kontrast...",           ID_CONTRAST
+    MENUITEM "Jas...",       ID_BRIGHTNESS
+    MENUITEM "Kontrast...",         ID_CONTRAST
     MENUITEM "Odtieň/Nasýtenie...",   -1, GRAYED
     POPUP "Color"
     BEGIN
-      MENUITEM "Čierna a biela",      ID_BLACKANDWHITE
-      MENUITEM "Invertovať farby",    ID_INVERTCOLORS
+      MENUITEM "Čierna a biela",   ID_BLACKANDWHITE
+      MENUITEM "Invertovať farby",     ID_INVERTCOLORS
     END
     MENUITEM SEPARATOR
-    MENUITEM "Rozmazať",              ID_BLUR
-    MENUITEM "Zaostriť",              ID_SHARPEN
-    MENUITEM "Vyhladiť hrany",        -1, GRAYED
-    MENUITEM "Pridať tieň",           -1, GRAYED
+    MENUITEM "Rozmazať",                ID_BLUR
+    MENUITEM "Zaostriť",             ID_SHARPEN
+    MENUITEM "Otočiť",        -1, GRAYED
+    MENUITEM "Otočiť",          -1, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Image Size...",         -1, GRAYED
-    MENUITEM "Preklopiť",             -1, GRAYED
-    MENUITEM "Zrkadliť",              -1, GRAYED
+    MENUITEM "Otočiť",       -1, GRAYED
     MENUITEM "Otočiť",                -1, GRAYED
+    MENUITEM "Otočiť",              -1, GRAYED
+    MENUITEM "Otočiť",              -1, GRAYED
 
   END
   POPUP "&Farby"
   BEGIN
-    MENUITEM "&Upraviť farby...",     ID_EDITCOLOURS
+    MENUITEM "&Upraviť farby...", ID_EDITCOLOURS
   END
   POPUP "&Okná"
   BEGIN
-    MENUITEM "&Cascade",              ID_WINDOW_CASCADE
-    MENUITEM "Tile &Horizontally",    ID_WINDOW_TILE_HORZ
-    MENUITEM "Tile &Vertically",      ID_WINDOW_TILE_VERT
-    MENUITEM "&Arrange Icons",        ID_WINDOW_ARRANGE
+    MENUITEM "&Kaskáda",           ID_WINDOW_CASCADE
+    MENUITEM "&Pod seba", ID_WINDOW_TILE_HORZ
+    MENUITEM "&Vedľa seba",   ID_WINDOW_TILE_VERT
+    MENUITEM "&Arrange Icons",     ID_WINDOW_ARRANGE
     MENUITEM SEPARATOR
-    MENUITEM "Nex&t\tCtrl+F6",        ID_WINDOW_NEXT
+    MENUITEM "Nex&t\tCtrl+F6",     ID_WINDOW_NEXT
   END
   POPUP "&Pomocník"
   BEGIN
-    MENUITEM "Č&o je...",             ID_ABOUT
+    MENUITEM "Č&o je...",       ID_ABOUT
   END
 END
 
