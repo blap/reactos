@@ -1,13 +1,12 @@
 /*
  * PROJECT:         ReactOS Kernel
  * LICENSE:         GPL - See COPYING in the top level directory
- * FILE:            base/applications/osk/lang/ro-RO.rc
- * PURPOSE:         On screen keyboard (Romanian resources).
+ * FILE:            base/applications/osk/lang/en-US.rc
+ * PURPOSE:         On screen keyboard (American resources).
  * PROGRAMMERS:     Denis ROBERT
- * TRANSLATORS:     Ștefan Fulea (stefan dot fulea at mail dot md)
  */
 
-LANGUAGE LANG_ROMANIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 MAIN_DIALOG DIALOGEX DISCARDABLE 0, 0, 608, 164
 CAPTION "Tastatură virtuală"
