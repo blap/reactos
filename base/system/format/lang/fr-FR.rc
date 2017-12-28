@@ -1,20 +1,20 @@
-/* Translation made by Jerome Signouret, 2005. */
-
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 STRINGTABLE
 BEGIN
-    STRING_HELP "Utilisation : %s disque: [-FS:système de fichier] [-V:nom] [-Q] [-A:taille] [-C]\n\n\
-  [disque:]        Indique le disque à formater.\n\
-  -FS:système de fichier  Indique le type de système de fichier (%s).\n\
-  -V:nom           Détermine le nom du disque.\n\
-  -Q               Effectue un formatage rapide.\n\
-  -A:taille        Force une taille pour les unités d'allocations. Les valeurs par défaut\n\
-                   sont fortement recommandées pour une utilisation courante\n\
-                   NTFS peut utiliser 512, 1024, 2048, 4096, 8192, 16K, 32K, 64K.\n\
-                   FAT peut utiliser 8192, 16K, 32K, 64K, 128K, 256K.\n\
-                   La compression NTFS n'est pas possible au de là de 4096.\n\
-  -C               Les fichiers sur le nouveau disque seront compressés automatiquement.\n\n"
+    STRING_HELP "Usage: %s drive: [-FS:file-system] [-V:label] [-Q] [-A:size] [-C]\n\n\
+  [drive:]         Specifies the drive to format.\n\
+  -FS:file-system  Specifies the type of file system (%s).\n\
+  -V:label         Specifies volume label.\n\
+  -Q               Performs a quick format.\n\
+  -A:size          Overrides the default allocation unit size. Default settings\n\
+                   are strongly recommended for general use\n\
+                   NTFS supports 512, 1024, 2048, 4096, 8192, 16K, 32K, 64K.\n\
+                   FAT supports 8192, 16K, 32K, 64K, 128K, 256K.\n\
+                   NTFS compression is not supported for allocation unit sizes\n\
+                   above 4096.\n\
+  -C               Files created on the new volume will be compressed by\n\
+                   default.\n\n"
     STRING_COMPLETE "%lu pourcent effectués.\r"
     STRING_FORMAT_FAIL "FormatEx ne peut se finir avec succés.\n\n"
     STRING_NO_SUPPORT "Fontion Non Supportée"
@@ -28,8 +28,8 @@ BEGIN
     STRING_FILESYSTEM "Le type de système de fichier est %s.\n"
     STRING_LABEL_NAME_EDIT "Donner un nom pour le disque %C : "
     STRING_ERROR_LABEL "Le nom pour le disque n'est pas correct.\n"
-    STRING_YN_FORMAT "\nATTENTION, TOUTES LES DONNÉES SUR LE DISQUE %C: SERONT\n\
-PERDUES !\nContinuer avec le formatage (O/N) ? "
+    STRING_YN_FORMAT "\nWARNING, ALL DATA ON NON_REMOVABLE DISK\n\
+DRIVE %C: WILL BE LOST!\nProceed with Format (Y/N)? "
     STRING_YES_NO_FAQ "ON"
     STRING_VERIFYING "Vérifications"
     STRING_FAST_FMT "Formatage rapide"
