@@ -1,14 +1,12 @@
 /*
  * PROJECT:     Solitaire
  * LICENSE:     Freeware, permission to use under Public Domain
- * FILE:        base/applications/games/solitaire/lang/es-ES.rc
- * PURPOSE:     Spanish Language File for Solitaire
+ * FILE:        base/applications/games/solitaire/lang/en-US.rc
+ * PURPOSE:     English Language File for Solitaire
  * PROGRAMMERS: Daniel "EmuandCo" Reimer (reimer.daniel@freenet.de)
- * ACTUALIZADO: Javier Remacha - 13/01/09
- *              Ismael Ferreras Morezuelas - 2014/11/07
  */
 
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 /* Dialogs */
 
@@ -24,9 +22,9 @@ BEGIN
     AUTORADIOBUTTON "&Normal", IDC_OPT_STANDARD, 107, 19, 60, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "&Vegas", IDC_OPT_VEGAS, 107, 32, 60, 10
     AUTORADIOBUTTON "&Sin puntuar", IDC_OPT_NOSCORE, 107, 45, 60, 10
-    AUTOCHECKBOX "&Mostrar tiempo", IDC_OPT_SHOWTIME, 7 ,51 ,65 ,10, WS_TABSTOP
+    AUTOCHECKBOX "&Show Time", IDC_OPT_SHOWTIME, 7 ,51 ,65 ,10, WS_TABSTOP
     AUTOCHECKBOX "&Barra de estado", IDC_OPT_STATUSBAR, 7, 66, 64, 10, WS_TABSTOP
-    AUTOCHECKBOX "&Mantener puntuación", IDC_OPT_KEEPSCORE, 100, 66, 83, 10, WS_TABSTOP
+    AUTOCHECKBOX "&Mantener puntuación", IDC_OPT_KEEPSCORE, 100, 66, 65, 10, WS_TABSTOP
     DEFPUSHBUTTON "Aceptar", IDOK, 35, 97, 50, 14
     PUSHBUTTON "Cancelar", IDCANCEL, 101, 97, 50, 14
 END
@@ -49,20 +47,20 @@ BEGIN
     CONTROL "", IDC_CARDBACK11, "Static", SS_NOTIFY, 232, 89, 50, 71
     CONTROL "", IDC_CARDBACK12, "Static", SS_NOTIFY, 289, 89, 50, 71
     DEFPUSHBUTTON "Aceptar", IDOK, 114, 165, 54, 14
-    PUSHBUTTON    "Cancelar", IDCANCEL, 176, 165, 54, 14
+    PUSHBUTTON "Cancelar", IDCANCEL, 176, 165, 54, 14
 END
 
 /* Strings */
 
 STRINGTABLE
 BEGIN
-    IDS_SOL_NAME  "Solitario"
+    IDS_SOL_NAME "Solitario"
     IDS_SOL_ABOUT "Solitario por J Brown\n\nCardLib versión 1.0."
-    IDS_SOL_QUIT  "¿Salir del juego actual?"
-    IDS_SOL_WIN   "¡Enhorabuena, has ganado!"
-    IDS_SOL_DEAL  "¿Jugar de nuevo?"
+    IDS_SOL_QUIT "¿Salir del juego actual?"
+    IDS_SOL_WIN "¡Enhorabuena, has ganado!"
+    IDS_SOL_DEAL "¿Jugar de nuevo?"
     IDS_SOL_SCORE "Puntuación: %d"
-    IDS_SOL_TIME  "Tiempo: %d"
+    IDS_SOL_TIME "Tiempo: %d"
 END
 
 /* Menus */
