@@ -1,6 +1,4 @@
-/* TRANSLATOR: 2014, 2015 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 101 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -52,7 +50,7 @@ END
 
 103 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Alan Kodu Kâideleri"
+CAPTION "Ağ Bağlantıları"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Bir alan kodu kâidesi, şimdiki alan kodunuzdan başka alan kodlarına ve alan kodunuz içinde telefon numaralarının ne biçimde çevrileceğini belirtir.", 2000, 7, 7, 238, 16
@@ -67,7 +65,7 @@ END
 
 104 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Arama Kartı"
+CAPTION "Geçek Donatılma Yanlışlıkları"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Kullanacağınız arama kartını seçiniz ya da ayrı bir kart eklemek için Yeni'ye tıklayınız.", 2000, 7, 7, 238, 8
@@ -110,7 +108,7 @@ END
 
 106 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Uzun Aralıklı"
+CAPTION "Bağlama Bitirildi"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "&Uzun Aralıklı Aramalar İçin Erişim Numarası:", -1, 7, 7, 238, 8
@@ -152,7 +150,7 @@ END
 
 108 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Yerli Aramalar"
+CAPTION "Şifre Değiştir"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Yer&li Aramalar İçin Erişim Numarası:", -1, 7, 7, 238, 8
@@ -174,7 +172,7 @@ END
 109 DIALOGEX 0, 0, 252, 257
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Yeni Alan Kodu Kâidesi"
+CAPTION "Şifre Değiştir"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Bu alan kodu kâidesi, yalnızca alan koduna yapılan aramalara ve aşağıda belirttiğiniz ön ek düzenine uygulayacaktır.", 2000, 7, 6, 238, 16
@@ -218,7 +216,7 @@ END
 111 DIALOGEX 0, 0, 252, 124
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Şunun İçin Bekle"
+CAPTION "%1'e Bağlanma Yanlışlığı"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Çevirme dizisiyle sürdürmeden önce beklemek için istemin türünü seçiniz.", 2000, 7, 7, 238, 16
@@ -235,7 +233,7 @@ END
 112 DIALOGEX 0, 0, 252, 111
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Varış Numarası"
+CAPTION "Kendiliğinden Çevirme ve Erteleme"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Bu adım, arama kartı dizisi içine çevireceğiniz varış numarasını yerleştirecektir. Varış numarasını çevirdiğinizde numaranın hangi bölümlerini çevirmek istersiniz?", 2000, 7, 7, 238, 24
@@ -262,7 +260,7 @@ END
 
 114 DIALOGEX 20, 15, 252, 127
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
-CAPTION "Sağlayıcı Ekle"
+CAPTION "Çevirmeli Ağ"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Aşağıdaki dizelgeden kurmak istediğiniz sağlayıcıyı seçiniz ve Ekle'ye tıklayınız.", 2000, 7, 7, 241, 8
@@ -275,7 +273,7 @@ END
 115 DIALOGEX 10, 10, 303, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Konum Bilgisi"
+CAPTION "Bağlan: %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 302, 302, "STATIC", SS_BITMAP, 10, 10, 88, 155
@@ -327,11 +325,11 @@ END
 STRINGTABLE
 BEGIN
     1 "Telefon ve Çevirge Seçenekleri"
-    2 "Çevirgenizi kullanmak için çevirme kâidelerini ve husûsiyetleri yapılandır."
+    2 "ÇALIŞMATAKIMI"
     3 "Konum"
-    4 "Yeni bir konum oluşturmak için Yeni'ye tıklayınız."
-    5 "Yeni Konum"
-    6 "Konumu Düzenle"
+    4 "Bilgisayar Adı Değişiklikleri"
+    5 "Çalışma Takımı:"
+    6 "Etki Alanı:"
     7 "Yeni Arama Kartı"
     8 "Arama Kartını Düzenle"
     9 "Alan Kodu"
@@ -347,10 +345,10 @@ BEGIN
     19 "Yalnızca numarayı çevir."
     20 "Tümü"
     21 "Seçili"
-    22 "Alan Kodu Kâidesi'ni Düzenle"
-    23 "Husûsiyetlerini görüntülemek için yukarıdaki dizelgede bir kâide seçiniz ya da bir kâide eklemek için Yeni'ye tıklayınız."
-    24 "%1 alan kodu içindeki tüm aramalar için numaradan önce ""%2"" kodunu ve alan kodunu çeviriniz."
-    25 "%1 alan kodu içindeki tüm aramalar için numaradan önce ""%2"" kodunu çeviriniz."
+    22 "%1 çalışma takımına hoş geldiniz."
+    23 "%1 etki alanına hoş geldiniz."
+    24 "Değişikliklerin etkili olması için bu bilgisayarı yeniden başlatmalısınız."
+    25 "Bu bilgisayarın adını ve üyeliğini değiştirebilirsiniz. Değişiklikler, ağ kaynaklarına erişimi etkileyebilir."
     26 "%1 alan kodu içindeki tüm aramalar için numaradan önce alan kodunu çeviriniz."
     27 "%1 alan kodu içindeki tüm aramalar için yalnızca numarayı çeviriniz."
     28 "Belirlediğiniz ön eki içeren %1 alan kodu içindeki aramalar için numaradan önce ""%2"" kodunu ve alan kodunu çeviriniz."
