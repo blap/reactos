@@ -1,9 +1,4 @@
-/* FILE:       base/system/rundll32/lang/cs-CZ.rc
- * TRANSLATOR: Radek Liska aka Black_Fox (radekliska at gmail dot com)
- * UPDATED:    2008-04-21
- */
-
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 STRINGTABLE
 BEGIN
