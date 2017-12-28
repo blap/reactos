@@ -14,14 +14,9 @@
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
- *
- * Translated by Baruch Rutman 2013
  */
 
-/* UTF-8 */
-#pragma code_page(65001)
-
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 IDM_MAINMENU MENU
 BEGIN
@@ -33,7 +28,7 @@ BEGIN
         MENUITEM "שמור &בשם...",           ID_FILE_SAVEAS
         MENUITEM SEPARATOR
         MENUITEM "הד&פס...\tCtrl+P",     ID_PRINT
-        MENUITEM "&תצוגה מקדימה...",     ID_PREVIEW
+        MENUITEM "&תצוגה מקדימה...",        ID_PREVIEW
         MENUITEM "&הגדרת עמוד...",        ID_PRINTSETUP
         MENUITEM SEPARATOR
         MENUITEM "&יציאה",                 ID_FILE_EXIT
@@ -68,9 +63,9 @@ BEGIN
     POPUP "תצוגה"
     BEGIN
         MENUITEM "סרגל כלים",        ID_TOGGLE_TOOLBAR
-        MENUITEM "&Formatbar",      ID_TOGGLE_FORMATBAR
+        MENUITEM "&Formatbar",     ID_TOGGLE_FORMATBAR
         MENUITEM "&Ruler",          ID_TOGGLE_RULER
-        MENUITEM "שורת מצב",      ID_TOGGLE_STATUSBAR
+        MENUITEM "שורת מצב",     ID_TOGGLE_STATUSBAR
         MENUITEM SEPARATOR
         MENUITEM "אפשרויות...",     ID_VIEWPROPERTIES
     END
@@ -81,18 +76,18 @@ BEGIN
     POPUP "עיצוב"
     BEGIN
         MENUITEM "גופן...",                     ID_FONTSETTINGS
-        MENUITEM "&Bullet points",              ID_BULLET
-        MENUITEM "פסקה...",               ID_PARAFORMAT
-        MENUITEM "&Tabs...",                    ID_TABSTOPS
+        MENUITEM "&Bullet points",               ID_BULLET
+        MENUITEM "פסקה...",                ID_PARAFORMAT
+        MENUITEM "&Tabs...",                     ID_TABSTOPS
         POPUP "רקע"
         BEGIN
             MENUITEM "מערכת\tCtrl+1",         ID_BACK_1
-            MENUITEM "&PostThat yellowish\tCtrl+2",           ID_BACK_2
+            MENUITEM "&PostThat yellowish\tCtrl+2",    ID_BACK_2
         END
     END
     POPUP "עזרה"
     BEGIN
-        MENUITEM "אודות הכתבן של Wine",       ID_ABOUT
+        MENUITEM "אודות הכתבן של Wine",      ID_ABOUT
     END
 END
 
@@ -100,12 +95,12 @@ IDM_POPUP MENU
 BEGIN
     POPUP ""
     BEGIN
-        MENUITEM "גזור",                 ID_EDIT_CUT
-        MENUITEM "העתק",                ID_EDIT_COPY
-        MENUITEM "הדבק",                ID_EDIT_PASTE
+        MENUITEM "גזור",                ID_EDIT_CUT
+        MENUITEM "העתק",               ID_EDIT_COPY
+        MENUITEM "הדבק",              ID_EDIT_PASTE
         MENUITEM SEPARATOR
         MENUITEM "&Bullet points",      ID_BULLET
-        MENUITEM "פיסקה...",            ID_PARAFORMAT
+        MENUITEM "פיסקה...",       ID_PARAFORMAT
     END
 END
 
@@ -113,23 +108,23 @@ IDM_COLOR_POPUP MENU
 BEGIN
     POPUP ""
     BEGIN
-        MENUITEM "שחור",       ID_COLOR_BLACK
+        MENUITEM "שחור",      ID_COLOR_BLACK
         MENUITEM "Maroon",     ID_COLOR_MAROON
-        MENUITEM "ירוק",       ID_COLOR_GREEN
-        MENUITEM "ירוק זית",     ID_COLOR_OLIVE
+        MENUITEM "ירוק",      ID_COLOR_GREEN
+        MENUITEM "ירוק זית",      ID_COLOR_OLIVE
         MENUITEM "Navy",       ID_COLOR_NAVY
-        MENUITEM "סגול",    ID_COLOR_PURPLE
+        MENUITEM "סגול",     ID_COLOR_PURPLE
         MENUITEM "Teal",       ID_COLOR_TEAL
-        MENUITEM "אפור",      ID_COLOR_GRAY
-        MENUITEM "כסוף",    ID_COLOR_SILVER
-        MENUITEM "אדום",       ID_COLOR_RED
-        MENUITEM "ירוק ליים",      ID_COLOR_LIME
-        MENUITEM "צהוב",    ID_COLOR_YELLOW
-        MENUITEM "כחול",      ID_COLOR_BLUE
-        MENUITEM "פוקסיה",   ID_COLOR_FUCHSIA
+        MENUITEM "אפור",       ID_COLOR_GRAY
+        MENUITEM "כסוף",     ID_COLOR_SILVER
+        MENUITEM "אדום",        ID_COLOR_RED
+        MENUITEM "ירוק ליים",       ID_COLOR_LIME
+        MENUITEM "צהוב",     ID_COLOR_YELLOW
+        MENUITEM "כחול",       ID_COLOR_BLUE
+        MENUITEM "פוקסיה",    ID_COLOR_FUCHSIA
         MENUITEM "Aqua",       ID_COLOR_AQUA
-        MENUITEM "לבן",     ID_COLOR_WHITE
-        MENUITEM "אוטומטי", ID_COLOR_AUTOMATIC
+        MENUITEM "לבן",      ID_COLOR_WHITE
+        MENUITEM "אוטומטי",  ID_COLOR_AUTOMATIC
     END
 END
 
