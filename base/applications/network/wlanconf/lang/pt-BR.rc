@@ -1,0 +1,37 @@
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+
+STRINGTABLE
+BEGIN
+    IDS_USAGE "\nConfigure a WLAN adapter.\n\n\
+WLANCONF [-c SSID [-w WEP] [-a]] [-d] [-s]\n\n\
+\t-c SSID\t\tConnects to a supplied SSID,\n\
+\t-w WEP\t\tSpecifies a WEP key to use.\n\
+\t-a\t\tSpecifies the target network is ad-hoc\n\
+\t-d\t\tDisconnects from the current AP.\n\
+\t-s\t\tScans and displays a list of access points\n\
+\t\t\tin range.\n\n\
+Passing no parameters will print information about the current WLAN connection\n"
+    IDS_NO_NETWORK "Nenhuma rede encontrada no alcance\n"
+    IDS_NO_WLAN_ADAPTER "Não foi possível encontrar um adaptador WLAN no sistema\n"
+    IDS_SUCCESS "A operação foi completada com sucesso.\n"
+    IDS_WLAN_DISCONNECT "\nWLAN desconectado\n"
+    IDS_MSG_WEP_ENABLED "WEP habilidado: %s\n"
+    IDS_MSG_NETWORK_MODE "Modo de rede: %s\n"
+    IDS_MSG_CURRENT_WIRELESS "\nCurrent wireless configuration information:\n\n"
+    IDS_MSG_ENCRYPTED "Encrypted: %s\n"
+    IDS_MSG_NETWORK_TYPE "Tipo de Rede: %s\n"
+    IDS_MSG_RSSI "RSSI: %i dBm\n"
+    IDS_MSG_SUPPORT_RATE "Supported Rates (Mbps): "
+    IDS_MSG_TRANSMISSION_POWER "Poder de transmissão: %d mW\n"
+    IDS_MSG_ANTENNA_COUNT "Antenna count: %d\n"
+    IDS_MSG_TRANSMIT_ANTENNA "Transmit antenna: %d\n"
+    IDS_MSG_TRANSMIT_ANTENNA_ANY "Transmit antenna: Any\n"
+    IDS_MSG_RECEIVE_ANTENNA "Receive antenna: %d\n"
+    IDS_MSG_RECEIVE_ANTENNA_ANY "Receive antenna: Any\n"
+    IDS_MSG_FRAGMENT_THRESHOLD "Fragmentation threshold: %d bytes\n"
+    IDS_MSG_RTS_THRESHOLD "RTS threshold: %d bytes\n"
+    IDS_YES "Sim"
+    IDS_NO "Não"
+    IDS_ADHOC "Adhoc"
+    IDS_INFRASTRUCTURE "Infraestrutura"
+END
