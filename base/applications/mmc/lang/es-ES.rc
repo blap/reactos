@@ -1,10 +1,4 @@
-/*
- * Spanish Language resource file
- * Traducido por: Javier Remacha 2007-12-18
- * Corregido por: Ismael Ferreras Morezuelas 2014-11-07
- */
-
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 IDM_CONSOLE_SMALL MENU
 BEGIN
