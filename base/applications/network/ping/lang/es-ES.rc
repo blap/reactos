@@ -1,30 +1,30 @@
 /*
- * FILE:        base/applications/network/ping/lang/es-ES.rc
- * PURPOSE:     Spanish translations for ReactOS Ping Command
- * TRANSLATORS: Ismael Ferreras Morezuelas
+ * FILE:        base/applications/network/ping/lang/es-US.rc
+ * PURPOSE:     English translations for ReactOS Ping Command
+ * TRANSLATORS:
  */
 
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 STRINGTABLE
 BEGIN
     IDS_USAGE "\n\
-Uso: ping [-t] [-a] [-n cuenta] [-l tamaño] [-f] [-i TTL] [-v TOS]\n\
-          [-w tiempo_de_espera] [-4] [-6] nombre_de_destino\n\
+Usage: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]\n\
+            [-w timeout] [-4] [-6] target\n\
 \n\
-Opciones:\n\
+Options:\n\
     -t          Ping the specified host until stopped.\n\
                 To see statistics and continue - type Control-Break;\n\
                 To stop - type Control-C.\n\
     -a          Resolve addresses to hostnames.\n\
-    -n cuenta   Número de solicitudes de eco a enviar.\n\
-    -l tamaño   Tamaño de búfer a enviar.\n\
+    -n count    Number of echo requests to send.\n\
+    -l size     Send buffer size.\n\
     -f          Set Don't Fragment flag in packet (IPv4-only).\n\
     -i TTL      Time To Live.\n\
     -v TOS      Type Of Service (IPv4-only. This setting has been deprecated\n\
                 and has no effect on the type of service field in the IP\n\
                 Header).\n\
-    -w t_espera Tiempo de espera en milisegundos para cada respuesta.\n\
+    -w timeout  Timeout in milliseconds to wait for each reply.\n\
     -4          Force using IPv4.\n\
     -6          Force using IPv6.\n\
 \n"
@@ -56,11 +56,11 @@ Opciones:\n\
     IDS_TRANSMIT_FAILED "PING: transmit failed. (Error %u)\n"
 
     IDS_STATISTICS "\n\
-Estadísticas de ping para %s:\n\
-    Paquetes: enviados = %d, recibidos = %d, perdidos %d (%d%% perdidos),\n"
+Ping statistics for %s:\n\
+    Packets: Sent = %d, Received = %d, Lost %d (%d%% loss),\n"
 
-    IDS_APPROXIMATE_RTT "Tiempos aproximados de ida y vuelta en milisegundos:\n\
-    Mínimo = %lums, Máximo = %lums, Media = %lums\n"
+    IDS_APPROXIMATE_RTT "Approximate round-trip time in milliseconds:\n\
+    Minimum = %lums, Maximum = %lums, Average = %lums\n"
 
     IDS_WINSOCK_FAIL "Failed to initialize WinSock: %i\n"
 END
