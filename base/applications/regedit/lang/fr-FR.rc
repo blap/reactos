@@ -1,4 +1,4 @@
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -221,7 +221,7 @@ BEGIN
     LTEXT "DMA:", IDC_STATIC, 10, 5, 20, 8
     CONTROL "", IDC_DMA_LIST, "SysListView32", LVS_REPORT | LVS_NOSORTHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 10, 15, 261, 31
-    LTEXT "Interruption :", IDC_STATIC, 10, 48, 44, 8
+    LTEXT "Interruption :", IDC_STATIC, 10, 48, 35, 8
     CONTROL "", IDC_IRQ_LIST, "SysListView32", LVS_REPORT | LVS_NOSORTHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 10, 58, 261, 31
     LTEXT "Mémoire :", IDC_STATIC, 10, 91, 32, 8
@@ -230,22 +230,22 @@ BEGIN
     LTEXT "Port:", IDC_STATIC, 10, 134, 38, 8
     CONTROL "", IDC_PORT_LIST, "SysListView32", LVS_REPORT | LVS_NOSORTHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 10, 144, 261, 31
-    LTEXT "Données spécifiques au périphérique :", IDC_STATIC, 10, 177, 122, 8
+    LTEXT "Données spécifiques au périphérique :", IDC_STATIC, 10, 177, 80, 8
     CONTROL "", IDC_DEVICE_LIST, "SysListView32", LVS_REPORT | LVS_NOSORTHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 10, 188, 261, 31
-    GROUPBOX "Disposition de partage", IDC_STATIC, 10, 219, 136, 39
-    LTEXT "Indéterminé", IDC_UNDETERMINED, 16, 230, 46, 8, WS_DISABLED
-    LTEXT "Partagé", IDC_SHARED, 16, 240, 48, 8, WS_DISABLED
-    LTEXT "Exclusif à un périphérique", IDC_DEVICE_EXCLUSIVE, 60, 230, 82, 8, WS_DISABLED
-    LTEXT "Exclusif à un pilote", IDC_DRIVER_EXCLUSIVE, 60, 240, 65, 8, WS_DISABLED
-    RTEXT "Type d'interface :", IDC_STATIC, 150, 220, 58, 8
-    LTEXT "", IDC_INTERFACETYPE, 211, 220, 66, 8
-    RTEXT "Numéro de bus :", IDC_STATIC, 154, 230, 54, 8
-    LTEXT "", IDC_BUSNUMBER, 211, 230, 66, 8
-    RTEXT "Version :", IDC_STATIC, 158, 240, 50, 8
-    LTEXT "", IDC_VERSION, 211, 240, 66, 8
-    RTEXT "Révision :", IDC_STATIC, 158, 250, 50, 8
-    LTEXT "", IDC_REVISION, 211, 250, 66, 8
+    GROUPBOX "Disposition de partage", IDC_STATIC, 10, 219, 125, 39
+    LTEXT "Undetermined", IDC_UNDETERMINED, 18, 230, 46, 8, WS_DISABLED
+    LTEXT "Shared", IDC_SHARED, 18, 240, 48, 8, WS_DISABLED
+    LTEXT "Device exclusive", IDC_DEVICE_EXCLUSIVE, 72, 230, 58, 8, WS_DISABLED
+    LTEXT "Driver exclusive", IDC_DRIVER_EXCLUSIVE, 72, 240, 54, 8, WS_DISABLED
+    RTEXT "Interface Type:", IDC_STATIC, 144, 220, 58, 8
+    LTEXT "", IDC_INTERFACETYPE, 205, 220, 66, 8
+    RTEXT "Bus Number:", IDC_STATIC, 151, 230, 51, 8
+    LTEXT "", IDC_BUSNUMBER, 205, 230, 66, 8
+    RTEXT "Version:", IDC_STATIC, 151, 240, 51, 8
+    LTEXT "", IDC_VERSION, 205, 240, 66, 8
+    RTEXT "Revision:", IDC_STATIC, 151, 250, 51, 8
+    LTEXT "", IDC_REVISION, 205, 250, 66, 8
     DEFPUSHBUTTON "OK", IDOK, 92, 263, 40, 14
     PUSHBUTTON "&Données...", IDC_SHOW_RESOURCE_DATA, 148, 263, 40, 14, WS_DISABLED
 END
@@ -314,7 +314,7 @@ BEGIN
     IDS_ERROR "Erreur"
     IDS_WARNING "Attention"
     IDS_BAD_KEY "Impossible de récupérer la clé '%s'"
-    IDS_BAD_VALUE "Impossible de récupérer la valeur '%s'"
+    IDS_BAD_VALUE "Valeur incorrecte pour l'option %s, elle doit être entre %u et %u.\n"
     IDS_UNSUPPORTED_TYPE "Impossible d'éditer les clés de ce type (%ld)"
     IDS_TOO_BIG_VALUE "La valeur est trop importante (%ld)"
     IDS_MULTI_SZ_EMPTY_STRING "Les données de type REG_MULTI_SZ ne peuvent contenir des chaînes vides.\nLes chaînes vides ont été supprimées de la liste."
@@ -415,7 +415,7 @@ BEGIN
     IDS_MEMORY_ACCESS "Accès"
     IDS_PORT_ADDRESS "Adresse physique"
     IDS_PORT_LENGTH "Longueur"
-    IDS_PORT_ACCESS "Accès" // <== In fact it is IDS_PORT_TYPE "Type"
+    IDS_PORT_ACCESS "Accès"" // <== In fact it is IDS_PORT_TYPE ""Type"
     IDS_SPECIFIC_RESERVED1 "Réservé 1"
     IDS_SPECIFIC_RESERVED2 "Réservé 2"
     IDS_SPECIFIC_DATASIZE "Taille des données"
@@ -476,7 +476,7 @@ BEGIN
     LTEXT "&Clé :", IDC_STATIC, 4, 4, 15, 8, SS_LEFT
     EDITTEXT IDC_EDIT_KEY, 23, 2, 167, 13
     DEFPUSHBUTTON "OK", IDOK, 140, 17, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 89, 17, 50, 14
+    PUSHBUTTON "Annuler", IDCANCEL, 89, 17, 50, 14
 END
 
 IDD_ADDFAVORITES DIALOGEX 0, 0, 186, 46
@@ -512,15 +512,15 @@ BEGIN
     GROUPBOX "Rechercher", IDC_STATIC, 7, 25, 63, 51
     LTEXT "Rechercher :", IDC_STATIC, 7, 8, 37, 10
     EDITTEXT IDC_FINDWHAT, 47, 7, 142, 13, ES_AUTOHSCROLL
-    CONTROL "Clés", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Keys", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 36, 35, 8
-    CONTROL "&Valeurs", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Values", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 48, 36, 8
-    CONTROL "&Données", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Data", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 60, 42, 8
-    CONTROL "Chaîne complète seulement", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &whole string only", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 32, 94, 13
-    CONTROL "Sensible à la casse", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &case", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 48, 90, 12
 END
 
@@ -538,7 +538,7 @@ END
 /*
  *STRINGTABLE
  *BEGIN
- *    ID_HELP_HELPTOPICS "Ouvre l'aide de l'éditeur de registres."
- *    ID_HELP_ABOUT "Affiche de l'information sur le programme, le numéro de version et le copyright."
+ *    ID_HELP_HELPTOPICS "Opens Registry Editor Help."
+ *    ID_HELP_ABOUT "Displays program information, version number, and copyright."
  *END
  */
