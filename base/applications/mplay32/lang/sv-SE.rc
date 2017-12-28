@@ -1,11 +1,4 @@
-/*
- * PROJECT:    ReactOS MPlay32
- * FILE:       base/applications/mplay32/lang/sv-SE.rc
- * PURPOSE:    Swedish resource file
- * TRANSLATOR: Jaix Bly
- */
-
-LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
 
 IDR_MAINMENU MENU
 BEGIN
@@ -23,7 +16,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Repea&t\tCtrl+T", IDM_REPEAT
     END
-    POPUP "&View"
+    POPUP "&Visa"
     BEGIN
         MENUITEM "Single-Window &Mode", IDM_SWITCHVIEW
     END
@@ -51,7 +44,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_MODE_UNKNOWN "Unknown"
+    IDS_MODE_UNKNOWN "Okänt"
     IDS_MODE_OPEN "Opened"
     IDS_MODE_STOP "Stopped"
     IDS_MODE_PLAY "Playing"
@@ -69,6 +62,6 @@ BEGIN
     IDS_TOOLTIP_FORWARD "Spola fremåt"
     IDS_TOOLTIP_PAUSE "Pause"
     IDS_APPTITLE "ReactOS Multimediaspelare"
-    IDS_PLAY "Play"
+    IDS_PLAY "Spela upp"
     IDS_DEFAULTMCIERRMSG "No description is available for this error."
 END
