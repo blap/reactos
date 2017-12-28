@@ -1,4 +1,4 @@
-LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_BULGARIAN, SUBLANG_BULGARIAN_BULGARIA
 
 STRINGTABLE
 BEGIN
@@ -24,42 +24,42 @@ STRINGTABLE
 BEGIN
 /* Please keep the spacing/formatting as per En.rc when translating */
     IDS_USAGE
-    "\nУПОТРЕБА:\n \
+    "\nUSAGE:\n \
         ipconfig [/? | /all | /renew [adapter] | /release [adapter] |\n \
                   /flushdns | /displaydns | /registerdns |\n \
-                  /showclassid карта |\n \
-                  /setclassid клас [означение_на_класа(classid)] ]\n \
+                  /showclassid adapter |\n \
+                  /setclassid adapter [classid] ]\n \
     \n \
-    където\n \
-        карта      Име на свързването\n \
-                        (разрешени са заместващи знаци *  ?, вижте примерите)\n \
+    where\n \
+        adapter         Connection name\n \
+                       (wildcard characters * and ? allowed, see examples)\n \
     \n \
-        Възможности:\n \
-           /?           Показва това помощно съобщение\n \
-           /all         Показва пълни сведения за настройките.\n \
-           /release     Освобождава ИП адреса за указаната карта.\n \
-           /renew       Обновява ИП адреса за указаната карта.\n \
-           /flushdns    Изчиства склада на DNS решителя (resolver).\n \
-           /registerdns Освобождава всички DHCP заеманиятa и вписва наново DNS имената.\n \
-           /displaydns  Изчиства склада на DNS решителя.\n \
-           /showclassid Показва всички допустими за тази карта означавания на dhcp класовете.\n \
-           /setclassid  Променя означението (id) на dhcp класа.\n \
+        Options:\n \
+           /?           Display this help message\n \
+           /all         Display full configuration information.\n \
+           /release     Release the IP address for the specified adapter.\n \
+           /renew       Renew the IP address for the specified adapter.\n \
+           /flushdns    Purges the DNS Resolver cache.\n \
+           /registerdns Refreshes all DHCP leases and re-registers DNS names.\n \
+           /displaydns  Display the contents of the DNS Resolver Cache.\n \
+           /showclassid Displays all the dhcp class IDs allowed for adapter.\n \
+           /setclassid  Modifies the dhcp class id.\n \
     \n \
-    По подразбиране се показва само ИП адресът, подмрежовата маска и\n \
-    подрабрания разпределител (gateway) за всяка карта, работеща по TCP/IP.\n \
+    The default is to display only the IP address, subnet mask and\n \
+    default gateway for each adapter bound to TCP/IP.\n \
     \n \
-    За Release и Renew, ако не е указано име на картата, ще бъдат освободени или подновени\n \
-    ИП адресите на всички карти, използващи TCP/IP.\n \
+    For Release and Renew, if no adapter name is specified, then the IP address\n \
+    leases for all adapters bound to TCP/IP will be released or renewed.\n \
     \n \
-    За избора Setclassid, ако не е указан ClassId, то ClassId се премахва.\n \
+    For Setclassid, if no ClassId is specified, then the ClassId is removed.\n \
     \n \
-    Примери:\n \
-        > ipconfig                   ... Показва кратки сведения.\n \
-        > ipconfig /all              ... Показва подробн сведения.\n \
-        > ipconfig /renew            ... обновява всички карти\n \
-        > ipconfig /renew EL*        ... обновявава всички свързвания, чиито имена\n \
-                                         започват с EL\n \
-        > ipconfig /release *Con*    ... освобождава всички съвпадащи свързвания,\n \
-                                         например „Local Area Connection 1“ или\n \
-                                                          „Local Area Connection 2“\n"
+    Examples:\n \
+        > ipconfig                   ... Show information.\n \
+        > ipconfig /all              ... Show detailed information\n \
+        > ipconfig /renew            ... renew all adapters\n \
+        > ipconfig /renew EL*        ... renew any connection that has its\n \
+                                         name starting with EL\n \
+        > ipconfig /release *Con*    ... release all matching connections,\n \
+                                         eg. """Local Area Connection 1""" or\n \
+                                             """Local Area Connection 2""\n"
 END
