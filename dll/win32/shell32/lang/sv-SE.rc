@@ -1,4 +1,4 @@
-LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
 
 MENU_001 MENUEX
 BEGIN
@@ -66,6 +66,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "K&lipp ut", IDM_CUT
         MENUITEM "&Kopiera", IDM_COPY
+        MENUITEM "Klistra in", IDM_INSERT
         MENUITEM SEPARATOR
         MENUITEM "Skapa &genväg", IDM_CREATELINK
         MENUITEM "&Ta bort", IDM_DELETE
@@ -84,7 +85,7 @@ BEGIN
     PUSHBUTTON "Avbryt", 2, 125, 175, 60, 15, WS_GROUP | WS_TABSTOP
     LTEXT "", IDC_BROWSE_FOR_FOLDER_TITLE, 4, 4, 180, 12
     LTEXT "", IDC_BROWSE_FOR_FOLDER_STATUS, 4, 25, 180, 12
-    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | WS_BORDER | WS_TABSTOP, 4, 40, 180, 120
+    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP, 4, 40, 180, 120
 END
 
 IDD_BROWSE_FOR_FOLDER_NEW DIALOGEX 15, 40, 218, 196
@@ -95,7 +96,7 @@ BEGIN
     LTEXT "", IDC_BROWSE_FOR_FOLDER_TITLE, 10, 8, 198, 24
     LTEXT "", IDC_BROWSE_FOR_FOLDER_STATUS, 10, 25, 198, 12
     LTEXT "Mapp:", IDC_BROWSE_FOR_FOLDER_FOLDER, 10, 152, 40, 12
-    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP, 12, 38, 194, 105
+    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | WS_BORDER | WS_TABSTOP, 12, 38, 194, 105
     EDITTEXT IDC_BROWSE_FOR_FOLDER_FOLDER_TEXT, 46, 150, 160, 14, WS_BORDER | WS_GROUP | WS_TABSTOP
     PUSHBUTTON "&Skapa ny mapp", IDC_BROWSE_FOR_FOLDER_NEW_FOLDER, 12, 174, 77, 14, WS_GROUP | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 102, 174, 50, 14, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
@@ -129,7 +130,7 @@ BEGIN
     LTEXT ")", IDC_STATIC, 153, 65, 5, 10
     LTEXT "Copyright 1998-", IDC_STATIC, 35, 75, 53, 10
     LTEXT COPYRIGHT_YEAR, IDC_STATIC, 88, 75, 17, 10
-    LTEXT " ReactOS-gruppen\0", IDC_STATIC, 105, 75, 60, 10
+    LTEXT " ReactOS-gruppen\0", IDC_STATIC, 105, 75, 53, 10
     LTEXT "", IDC_ABOUT_OTHERSTUFF, 35, 90, 180, 20
     LTEXT "Den här versionen av ReactOS är registrerad till:", IDC_STATIC, 35, 115, 180, 10
     LTEXT "", IDC_ABOUT_REG_USERNAME, 45, 125, 180, 10
@@ -158,9 +159,9 @@ BEGIN
     LTEXT "Skriv namnet på ett program, en mapp, ett dokument eller en internetresurs som du vill öppna.", 12289, 36, 11, 182, 18
     LTEXT "&Öppna:", 12305, 7, 39, 24, 10
     CONTROL "", IDC_RUNDLG_EDITPATH, "COMBOBOX", WS_TABSTOP | WS_GROUP | WS_VSCROLL | WS_VISIBLE | CBS_AUTOHSCROLL | CBS_DROPDOWN, 36, 37, 183, 100
-    DEFPUSHBUTTON "OK", IDOK, 62, 63, 50, 14, WS_TABSTOP
-    PUSHBUTTON "Avbryt", IDCANCEL, 116, 63, 50, 14, WS_TABSTOP
-    PUSHBUTTON "&Bläddra...", 12288, 170, 63, 50, 14, WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 36, 63, 59, 14, WS_TABSTOP
+    PUSHBUTTON "Avbryt", IDCANCEL, 98, 63, 59, 14, WS_TABSTOP
+    PUSHBUTTON "&Bläddra...", 12288, 160, 63, 59, 14, WS_TABSTOP
 END
 
 IDD_SHORTCUT_PROPERTIES DIALOGEX 0, 0, 235, 215
@@ -374,11 +375,11 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     CONTROL "", 14000, "SysListView32", LVS_REPORT | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP, 10, 10, 220, 50
     GROUPBOX "Inställningar för vald plats", -1, 10, 72, 220, 70
-    RADIOBUTTON "&Användardefinierad storlek:", 14001, 20, 90, 100, 10, WS_TABSTOP
-    EDITTEXT 14002, 132, 87, 50, 14, WS_TABSTOP | ES_NUMBER
+    RADIOBUTTON "&Användardefinierad storlek:", 14001, 20, 90, 80, 10, WS_TABSTOP
+    EDITTEXT 14002, 106, 87, 50, 14, WS_TABSTOP | ES_NUMBER
     LTEXT "M&aximal storlek(MB):", -1, 20, 105, 70, 10
     RADIOBUTTON "Flytta inte filer till &Papperskorgen. Radera filer direkt när de tas bort.", 14003, 20, 117, 170, 20, BS_MULTILINE | WS_TABSTOP
-    AUTOCHECKBOX "&Visa dialog för bekräftelse av borttagning", 14004, 20, 155, 150, 10, WS_TABSTOP
+    AUTOCHECKBOX "&Visa dialog för bekräftelse av borttagning", 14004, 20, 155, 140, 10, WS_TABSTOP
 END
 
 IDD_OPEN_WITH DIALOGEX 0, 0, 264, 256
@@ -392,7 +393,7 @@ BEGIN
     GROUPBOX "&Program", -1, 7, 42, 249, 187
     CONTROL "Program", 14002, WC_TREEVIEW, WS_BORDER | WS_TABSTOP | TVS_SHOWSELALWAYS, 16 ,57, 230, 130
     AUTOCHECKBOX "&Använd alltid the valda programmet för att öppna den här filtypen", 14003, 20, 193, 225, 10
-    PUSHBUTTON "&Bläddra...", 14004, 198, 207, 50, 14
+    PUSHBUTTON "&Browse...", 14004, 198, 207, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 150, 236, 50, 14
     PUSHBUTTON "Avbryt", IDCANCEL, 206, 236, 50, 14
 END
@@ -404,19 +405,19 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "Aktiviteter", -1, 7, 10, 249, 45
     CONTROL "", IDC_FOLDER_OPTIONS_TASKICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 25, 21, 20
-    AUTORADIOBUTTON "Visa vanliga aktiviteter i &mappar", IDC_FOLDER_OPTIONS_COMMONTASKS, 40, 25, 125, 10, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "Använd ReactOS klass&iska mappar", IDC_FOLDER_OPTIONS_CLASSICFOLDERS, 40, 37, 125, 10
+    AUTORADIOBUTTON "Visa vanliga aktiviteter i &mappar", IDC_FOLDER_OPTIONS_COMMONTASKS, 40, 25, 120, 10, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "Använd ReactOS klass&iska mappar", IDC_FOLDER_OPTIONS_CLASSICFOLDERS, 40, 37, 120, 10
     GROUPBOX "Bläddra mappar", -1, 7, 60, 249, 45, WS_TABSTOP
     CONTROL "", IDC_FOLDER_OPTIONS_FOLDERICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 70, 21, 20
     AUTORADIOBUTTON "Öppna varje mapp i sa&mma fönster", IDC_FOLDER_OPTIONS_SAMEWINDOW, 40, 70, 140, 10, WS_TABSTOP | WS_GROUP
     AUTORADIOBUTTON "Öppna varje mapp i sitt eget &fönster", IDC_FOLDER_OPTIONS_OWNWINDOW, 40, 82, 140, 10
     GROUPBOX "Klicka på objekt enligt följande", -1, 7, 110, 249, 60
     CONTROL "", IDC_FOLDER_OPTIONS_CLICKICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 120, 21, 20
-    AUTORADIOBUTTON "&Enkelklicka för att öppna (markera genom att peka)", IDC_FOLDER_OPTIONS_SINGLECLICK, 40, 120, 200, 10, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "Stryk under ikontitlar som min &webbläsare", IDC_FOLDER_OPTIONS_ULBROWSER, 50, 132, 200, 10
-    AUTORADIOBUTTON "Stryk under ikontitlar endast när jag &pekar på dem", IDC_FOLDER_OPTIONS_ULPOINT, 50, 144, 200, 10
-    AUTORADIOBUTTON "&Dubbelklicka för att öppna (markera genom att enkelklicka)", IDC_FOLDER_OPTIONS_DOUBLECLICK, 40, 156, 200, 10
-    PUSHBUTTON "&Återställ standardvärde", 14011, 160, 180, 90, 14, WS_TABSTOP
+    AUTORADIOBUTTON "&Enkelklicka för att öppna (markera genom att peka)", IDC_FOLDER_OPTIONS_SINGLECLICK, 40, 120, 170, 10, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "Stryk under ikontitlar som min &webbläsare", IDC_FOLDER_OPTIONS_ULBROWSER, 50, 132, 170, 10
+    AUTORADIOBUTTON "Stryk under ikontitlar endast när jag &pekar på dem", IDC_FOLDER_OPTIONS_ULPOINT, 50, 144, 170, 10
+    AUTORADIOBUTTON "&Dubbelklicka för att öppna (markera genom att enkelklicka)", IDC_FOLDER_OPTIONS_DOUBLECLICK, 40, 156, 170, 10
+    PUSHBUTTON "&Återställ standardvärde", 14011, 180, 180, 60, 14, WS_TABSTOP
 END
 
 IDD_FOLDER_OPTIONS_VIEW DIALOGEX 0, 0, 264, 256
@@ -431,7 +432,7 @@ BEGIN
     PUSHBUTTON "&Återställ alla mappar", 14002, 150, 50, 80, 14, WS_TABSTOP
     LTEXT "Avancerade inställningar:", -1, 7, 80, 100, 10
     CONTROL "", 14003, "SysTreeView32", WS_BORDER | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP | TVS_DISABLEDRAGDROP | TVS_LINESATROOT, 7, 90, 249, 120
-    PUSHBUTTON "Återställ &standardvärde", 14004, 160, 220, 90, 14, WS_TABSTOP
+    PUSHBUTTON "Restore &Defaults", 14004, 177, 215, 80, 14, WS_TABSTOP
 END
 
 IDD_FOLDER_OPTIONS_FILETYPES DIALOGEX 0, 0, 264, 256
@@ -444,9 +445,9 @@ BEGIN
     PUSHBUTTON "&Ny", 14001, 120, 110, 50, 14, WS_TABSTOP
     PUSHBUTTON "&Ta bort", 14002, 180, 110, 50, 14, WS_TABSTOP
     GROUPBOX "Detaljer för filändelsen '%s'", 14003, 7, 130, 249, 70
-    LTEXT "Öppnas med:", -1, 12, 140, 50, 10
+    LTEXT "Öppnas med:", -1, 12, 140, 40, 10
     //ICON
-    LTEXT "Programnamn", 14005, 100, 140, 46, 10
+    LTEXT "Programnamn", 14005, 100, 140, 40, 10
     PUSHBUTTON "&Ändra...", 14006, 180, 140, 50, 14, WS_TABSTOP
     LTEXT "", 14007, 12, 155, 160, 30
     PUSHBUTTON "A&vancerat", 14008, 180, 175, 50, 14, WS_TABSTOP
@@ -506,7 +507,7 @@ BEGIN
     AUTORADIOBUTTON "Välj en åtgärd att &utföra:", 1005, 14, 54, 202, 10, WS_GROUP
     CONTROL "LIST2", 1002, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 22, 66, 192, 107
     AUTORADIOBUTTON "Fråga mig varje gång vilken &åtgärd som ska utföras", 1006, 14, 177, 202, 10
-    PUSHBUTTON "&Återställ standardvärde", 1008, 108, 197, 110, 14, WS_DISABLED
+    PUSHBUTTON "&Restore Defaults", 1008, 108, 197, 110, 14, WS_DISABLED
 END
 
 IDD_MIXED_CONTENT1 DIALOGEX 0, 0, 227, 207
@@ -563,7 +564,7 @@ BEGIN
     LTEXT "Bevarar din session och håller datorn igång på låg energi med minnet intakt. Datorn vaknar när du trycker en tangent eller rör musen.", 8225, 39, 40, 167, 37
     DEFPUSHBUTTON "OK", 1, 7, 82, 60, 14, WS_GROUP
     PUSHBUTTON "Avbryt", IDCANCEL, 75, 82, 60, 14
-    PUSHBUTTON "&Help", IDHELP, 144, 82, 60, 14
+    PUSHBUTTON "&Arkiv", IDHELP, 144, 82, 60, 14
 END
 
 IDD_FORMAT_DRIVE DIALOGEX 50, 50, 184, 218
@@ -596,7 +597,7 @@ BEGIN
     GROUPBOX "Alternativ för diskkontroll", -1, 7, 6, 179, 40
     PUSHBUTTON "Avbryt", IDCANCEL, 128, 95, 60, 14
     AUTOCHECKBOX "Laga filsystemsfel automatiskt", 14000, 12, 15, 155, 10
-    AUTOCHECKBOX "&Sök och försök laga trasiga sektorer", 14001, 16, 30, 165, 10
+    AUTOCHECKBOX "&Scan for and attempt recovery of bad sectors", 14001, 12, 30, 165, 10
     CONTROL "", 14002, "MSCTLS_PROGRESS32", 16, 7, 50, 179, 8
     LTEXT "", 14003, 60, 80, 170, 10
 END
@@ -612,7 +613,7 @@ BEGIN
     LTEXT "Select an icon from the list below:", -1, 7, 36, 179, 10
     LISTBOX IDC_PICKICON_LIST, 7, 47, 181, 120, LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | LBS_DISABLENOSCROLL | WS_HSCROLL | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 81, 179, 50, 14
-    PUSHBUTTON "Avbryt", IDCANCEL, 135, 179, 50, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 135, 179, 50, 14
 END
 
 IDD_NOOPEN DIALOGEX 0, 0, 240, 75
@@ -683,7 +684,7 @@ BEGIN
     IDS_FORMATDRIVE "Formatera..."
     IDS_RENAME "Byt namn"
     IDS_PASTE "Klistra in"
-    IDS_EJECT "Eject"
+    IDS_EJECT "Mata ut"
     IDS_DISCONNECT "Disconnect"
 
     IDS_CREATEFOLDER_DENIED "Kunde inte skapa mappen '%1'"
