@@ -1,12 +1,4 @@
-/*
- *    Translated by Caemyr - Olaf Siejka (Jan, 2008)
- *    Use ReactOS forum PM or IRC to contact me
- *    http://www.reactos.org
- *    IRC: irc.freenode.net #reactos-pl;
- *    UTF-8 conversion by Caemyr (May, 2011) 
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 102 DIALOGEX 0, 0, 255, 265
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -714,7 +706,7 @@ BEGIN
     LTEXT "Wpisz numer telefoniczny poniżej. ", -1, 7, 4, 306, 14
     LTEXT "&Numer telefoniczny:", 1308, 7, 19, 130, 8
     EDITTEXT 1304, 7, 30, 304, 14, ES_AUTOHSCROLL
-    LTEXT "Prawdopodobnie będzie trzeba użyć cyfry ""1"", numeru kierunkowego, albo obydwu. Jeśli nie jesteś pewien, wypróbuj żądany numer na swoim telefonie. Jeśli usłyszysz sygnał modemu, numer jest poprawny.", -1, 20, 50, 291, 53
+    LTEXT "You might need to include a ""1"" or the area code, or both. If you are not sure you need the extra numbers, dial the phone number on your telephone. If you hear a modem sound, the number dialed is correct.", -1, 20, 50, 291, 53
 END
 
 169 DIALOGEX 6, 18, 235, 135
@@ -937,7 +929,7 @@ BEGIN
     LTEXT "Wybierz rolę dla tego komputera:", -1, 10, 5, 275, 9
     AUTORADIOBUTTON "&Host", 1483, 31, 20, 265, 10, BS_TOP | BS_MULTILINE | WS_GROUP
     AUTORADIOBUTTON "&Gość", 1484, 31, 44, 265, 10, BS_TOP | BS_MULTILINE
-    LTEXT "Ten komputer zawiera informacje po które inne komputery się łączą.", -1, 45, 31, 253, 13, NOT WS_GROUP | WS_TABSTOP
+    LTEXT "This computer has the information you want to access.", -1, 43, 31, 253, 13, NOT WS_GROUP | WS_TABSTOP
     LTEXT "Ten komputer jest używany do pobierania informacji z komputera hosta.", -1, 43, 56, 253, 23, NOT WS_GROUP
 END
 
@@ -1036,13 +1028,13 @@ CAPTION "Połącz z %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "N&azwa użytkownika:", 1413, 12, 67, 87, 8
+    LTEXT "&Nazwa użytkownika:", 1413, 10, 67, 87, 8
     EDITTEXT 1104, 103, 63, 154, 14, ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 9, 84, 248, 1
     LTEXT "Łą&czenie:", 1412, 11, 96, 48, 8
     COMBOBOX 1416, 103, 92, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     LTEXT "Łącze&nie za pomocą:", 1415, 10, 114, 46, 8
-    COMBOBOX 1414, 102, 110, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
+    COMBOBOX 1414, 103, 110, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "&Ustawienia połączeń", 1108, 193, 110, 64, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 7, 130, 250, 1
     DEFPUSHBUTTON "Łąc&z", 1590, 6, 136, 60, 14
@@ -1132,9 +1124,9 @@ CAPTION "Połącz z %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "&Nazwa użytkownika:", 1413, 10, 67, 91, 10
+    LTEXT "N&azwa użytkownika:", 1413, 10, 67, 91, 10
     EDITTEXT 1104, 104, 64, 154, 14, ES_AUTOHSCROLL
-    LTEXT "&Domena:", 1110, 11, 86, 91, 8
+    LTEXT "&Domena:", 1110, 10, 86, 91, 8
     EDITTEXT 1102, 104, 83, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 103, 248, 1
     LTEXT "P&ołączenie", 1412, 10, 115, 91, 8
@@ -1152,7 +1144,7 @@ CAPTION "Połącz z %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "N&azwa użytkownika:", 1413, 10, 68, 92, 10
+    LTEXT "&Nazwa użytkownika:", 1413, 10, 68, 92, 10
     EDITTEXT 1104, 104, 65, 154, 14, ES_AUTOHSCROLL
     LTEXT "&Domena:", 1110, 10, 90, 91, 8
     EDITTEXT 1102, 104, 86, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
@@ -1216,7 +1208,7 @@ BEGIN
     LTEXT "T&CP:", -1, 7, 100, 28, 8
     EDITTEXT 1569, 50, 97, 162, 14, ES_AUTOHSCROLL
     LTEXT "UD&P:", -1, 7, 121, 30, 8
-    EDITTEXT 1551, 51, 117, 162, 14, ES_AUTOHSCROLL
+    EDITTEXT 1551, 50, 117, 162, 14, ES_AUTOHSCROLL
     DEFPUSHBUTTON "OK", 1, 90, 144, 60, 14
     PUSHBUTTON "Anuluj", 2, 154, 144, 60, 14
 END
@@ -1433,7 +1425,7 @@ CAPTION "Połącz z %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "&Nazwa użytkownika:", 1413, 10, 67, 91, 8
+    LTEXT "&Nazwa konta:", 1413, 10, 67, 91, 8
     EDITTEXT 1104, 104, 63, 154, 14, ES_AUTOHSCROLL
     LTEXT "&Hasło:", 1112, 10, 85, 92, 8
     EDITTEXT 1103, 104, 82, 154, 14, ES_PASSWORD | ES_AUTOHSCROLL
@@ -1617,7 +1609,7 @@ CAPTION "Kreator konfiguracji połączenia"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Wprowadź nazwę konta i hasło u ISP, następnie zapisz te informacje i przechowaj w bezpiecznym miejscu. (Jeżeli mimo to zapomniałeś nazwy konta albo hasła, skontaktuj się ze swoim ISP.)", 1689, 10, 4, 308, 25
-    LTEXT "&Nazwa konta:", 1636, 23, 35, 89, 15
+    LTEXT "&Nazwa użytkownika:", 1636, 23, 35, 89, 15
     EDITTEXT 1614, 115, 34, 190, 15, ES_AUTOHSCROLL
     LTEXT "&Hasło:", 1637, 23, 55, 90, 13
     EDITTEXT 1615, 115, 54, 190, 15, ES_PASSWORD | ES_AUTOHSCROLL
@@ -1645,7 +1637,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_CAPTIO
 CAPTION "Ogólne"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "&Nazwa użytkownika:", -1, 7, 8, 90, 12, SS_CENTERIMAGE
+    LTEXT "&User name:", -1, 7, 8, 90, 12, SS_CENTERIMAGE
     EDITTEXT 7001, 101, 7, 108, 14, ES_AUTOHSCROLL
     LTEXT "&Imie i nazwisko:", -1, 7, 26, 90, 12
     EDITTEXT 7002, 101, 25, 108, 14, ES_AUTOHSCROLL
@@ -1793,7 +1785,7 @@ BEGIN
     PUSHBUTTON "&Instaluj...", 7037, 108, 71, 60, 14, WS_GROUP
     PUSHBUTTON "&Odinstaluj", 7038, 172, 71, 60, 14, WS_GROUP
     PUSHBUTTON "&Właściwości", 7039, 236, 71, 60, 14, WS_GROUP
-    LTEXT "<protocol description>", 7040, 21, 105, 273, 38
+    LTEXT "<opis protokołu>", 7040, 21, 105, 273, 38
     LTEXT "Opis:", -1, 21, 95, 275, 8
 END
 
