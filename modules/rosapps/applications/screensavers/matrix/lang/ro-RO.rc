@@ -1,16 +1,6 @@
-/*
- * PROJECT:     ReactOS Matrix ScreenSaver
- * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        rosapps/applications/screensavers/matrix/lang/ro-RO.rc
- * PURPOSE:     Romanian Language File for Matrix ScreenSaver
- * TRANSLATOR:  Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
 #include "resource.h"
 
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
-
-#pragma code_page(65001)
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDD_CONFIG DIALOGEX DISCARDABLE  0, 0, 340, 183
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
@@ -21,7 +11,7 @@ BEGIN
     LTEXT           "Lentă",IDC_STATIC,13,24,22,8
     CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS |
                     TBS_BOTH | WS_TABSTOP,38,17,62,22
-    LTEXT           "Rapidă",IDC_STATIC,104,24,25,8
+    LTEXT           "Rapidă",IDC_STATIC,104,24,20,8
     GROUPBOX        "Densitatea &cifrului",IDC_STATIC,7,50,128,36
     LTEXT           "Mică",IDC_STATIC,13,67,19,8
     CONTROL         "Slider1",IDC_SLIDER2,"msctls_trackbar32",TBS_AUTOTICKS |
@@ -52,7 +42,7 @@ BEGIN
     COMBOBOX        IDC_COMBO2,195,116,130,71,CBS_DROPDOWNLIST | CBS_SORT |
                     WS_VSCROLL | WS_TABSTOP
     CONTROL         "Ca&racter aldin",IDC_BOLD,"Button",BS_AUTOCHECKBOX |
-                    BS_MULTILINE | WS_TABSTOP,247,134,66,10
+                    BS_MULTILINE | WS_TABSTOP,247,134,46,10
     CTEXT           "Anim. de inactiv. „Matrix” www.catch22.org.uk",IDC_ABOUT,140,
                     158,75,18
 END
