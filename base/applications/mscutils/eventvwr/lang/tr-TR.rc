@@ -1,12 +1,12 @@
 /*
  * PROJECT:    ReactOS Event Viewer
  * LICENSE:    GPL - See COPYING in the top level directory
- * FILE:       base/applications/mscutils/eventvwr/lang/tr-TR.rc
- * PURPOSE:    Turkish Language File for ReactOS Event Viewer
- * TRANSLATOR: 2013-2016 Erdem Ersoy (eersoy93) (erdemersoy@live.com)
+ * FILE:       base/applications/mscutils/eventvwr/lang/en-US.rc
+ * PURPOSE:    English Language File for ReactOS Event Viewer
+ * TRANSLATOR: Marc Piulachs
  */
 
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 IDM_EVENTVWR MENU
 BEGIN
@@ -141,7 +141,7 @@ BEGIN
     IDS_APP_TITLE_EX "%s - %s Oturum Aç \\\\"
     IDS_STATUS_MSG "%s -> %lu olay var (dizelgelenmiş: %lu)"
     IDS_LOADING_WAIT "Olay kayıtları yükleniyor. Lütfen bekleyiniz..."
-    IDS_NO_ITEMS "Bu görünümde görüntülenecek bir öğe bile yok." // "No events in this log."
+    IDS_NO_ITEMS "Bu görünümde görüntülenecek bir öğe bile yok."" // ""No events in this log."
     IDS_EVENTLOG_SYSTEM "Dizge Kayıtları"
     IDS_EVENTLOG_APP "Uygulama Kayıtları"
     IDS_EVENTLOG_USER "Kullanıcı Kayıtları"
@@ -163,7 +163,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_BYTES_FORMAT "bayt" // "%s bytes"
+    IDS_BYTES_FORMAT "bayt"" // ""%s bytes"
     // "%1!ls! (%2!ls! bytes)"
 END
 
@@ -181,15 +181,15 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_COPY "Olay Türü:      %s\r\n\
-Olay Kaynağı:   %s\r\n\
-Olay Ulamı:     %s\r\n\
-Olay Kimliği:   %s\r\n\
-Târih:          %s\r\n\
-Saat:           %s\r\n\
-Kullanıcı:      %s\r\n\
-Bilgisayar:     %s\r\n\
-Tanım:\r\n%s"
+    IDS_COPY "Event Type:     %s\r\n\
+Event Source:   %s\r\n\
+Event Category: %s\r\n\
+Event ID:       %s\r\n\
+Date:           %s\r\n\
+Time:           %s\r\n\
+User:           %s\r\n\
+Computer:       %s\r\n\
+Description:\r\n%s"
 END
 
 STRINGTABLE
