@@ -1,12 +1,4 @@
-/*
- * PROJECT:    ReactOS License Manager Control Panel Applet
- * LICENSE:    GPL - See COPYING in the top level directory
- * FILE:       dll/cpl/liccpa/lang/uk-UA.rc
- * PURPOSE:    Ukraianian Language File for License Manager Control Panel Applet
- * TRANSLATOR: Artem Reznikov
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDD_PROPPAGE1 DIALOGEX 20, 40, 315, 104
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_OVERLAPPED | WS_CAPTION | WS_VISIBLE | WS_SYSMENU
