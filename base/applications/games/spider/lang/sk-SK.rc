@@ -1,13 +1,12 @@
 /*
- * PROJECT:     Spider Solitaire (Pavúčí solitér)
- * LICENSE:     See COPYING in top level directory
- * FILE:        base/applications/games/spider/lang/sk-SK.rc
- * PURPOSE:     Slovak Language File for Spider Solitaire
- * TRANSLATOR:  Mário Kačmár aka Kario <kario@szm.sk>
- * DATE OF TR.: 13-10-2009
+ * PROJECT:    Spider Solitaire
+ * LICENSE:    See COPYING in top level directory
+ * FILE:       base/applications/games/spider/lang/en-US.rc
+ * PURPOSE:    English Language File for Spider Solitaire
+ * TRANSLATOR: Gregor Schneider
  */
 
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 /* Dialogs */
 
@@ -48,7 +47,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_SPI_NAME "Pavúčí solitér" //Spider
+    IDS_SPI_NAME "Pavúčí solitér"
     IDS_SPI_ABOUT "Pavúčí solitér od Gregor Schneider\n\nCardLib verzia 1.0"
     IDS_SPI_QUIT "Naozaj chcete skončiť aktuálnu hru?"
     IDS_SPI_WIN "Blahoželám, vyhrali ste!"
