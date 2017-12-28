@@ -118,11 +118,11 @@ BEGIN
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
     PUSHBUTTON "E", IDC_BUTTON_E, 260, 140, 24, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
-    PUSHBUTTON "And", IDC_BUTTON_AND, 286, 60, 24, 18, BS_CENTER | BS_VCENTER |
+    PUSHBUTTON "Und", IDC_BUTTON_AND, 286, 60, 24, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
     PUSHBUTTON "Xor", IDC_BUTTON_XOR, 286, 80, 24, 18, BS_CENTER | BS_VCENTER |
                BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
-    PUSHBUTTON "Not", IDC_BUTTON_NOT, 286, 100, 24, 18, BS_CENTER |
+    PUSHBUTTON "Nicht", IDC_BUTTON_NOT, 286, 100, 24, 18, BS_CENTER |
                BS_VCENTER | BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
     PUSHBUTTON "Int", IDC_BUTTON_INT, 286, 120, 24, 18, BS_CENTER |
                BS_VCENTER | BS_NOTIFY | BS_OWNERDRAW | WS_TABSTOP
@@ -307,18 +307,18 @@ END
 
 IDR_MENU_SCIENTIFIC_1 MENU
 BEGIN
-    POPUP "Bearbeiten"
+    POPUP "&Bearbeiten"
     BEGIN
-        MENUITEM "Kopieren\tSTRG-C", IDM_EDIT_COPY
-        MENUITEM "Einfügen\tSTRG-V", IDM_EDIT_PASTE
+        MENUITEM "&Kopieren\tStrg+C", IDM_EDIT_COPY
+        MENUITEM "&Einfügen\tStrg+V", IDM_EDIT_PASTE
     END
     POPUP "Ansicht"
     BEGIN
         MENUITEM "Standard", IDM_VIEW_STANDARD
-        MENUITEM "Wissenschaftlich", IDM_VIEW_SCIENTIFIC
+        MENUITEM "&Wissenschaftlich", IDM_VIEW_SCIENTIFIC
         MENUITEM "Konversion", IDM_VIEW_CONVERSION
         MENUITEM SEPARATOR
-        MENUITEM "Hex\tF5", IDM_VIEW_HEX, CHECKED
+        MENUITEM "&Hex\tF5", IDM_VIEW_HEX, CHECKED
         MENUITEM "Dezimal\tF6", IDM_VIEW_DEC, CHECKED
         MENUITEM "Oktal\tF7", IDM_VIEW_OCT, CHECKED
         MENUITEM "Binär\tF8", IDM_VIEW_BIN, CHECKED
@@ -329,67 +329,67 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Zifferngruppierung", IDM_VIEW_GROUP, CHECKED
     END
-    POPUP "Hilfe"
+    POPUP "&Hilfe"
     BEGIN
-        MENUITEM "Hilfethemen", IDM_HELP_HELP
+        MENUITEM "&Hilfethemen", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "Info", IDM_HELP_ABOUT
+        MENUITEM "&Über ReactOS Rechner", IDM_HELP_ABOUT
     END
 END
 
 IDR_MENU_SCIENTIFIC_2 MENU
 BEGIN
-    POPUP "Bearbeiten"
+    POPUP "&Bearbeiten"
     BEGIN
-        MENUITEM "Kopieren\tSTRG-C", IDM_EDIT_COPY
-        MENUITEM "Einfügen\tSTRG-V", IDM_EDIT_PASTE
+        MENUITEM "&Kopieren\tStrg+C", IDM_EDIT_COPY
+        MENUITEM "&Einfügen\tStrg+V", IDM_EDIT_PASTE
     END
     POPUP "Ansicht"
     BEGIN
         MENUITEM "Standard", IDM_VIEW_STANDARD
-        MENUITEM "Wissenschaftlich", IDM_VIEW_SCIENTIFIC
+        MENUITEM "&Wissenschaftlich", IDM_VIEW_SCIENTIFIC
         MENUITEM "Konversion", IDM_VIEW_CONVERSION
         MENUITEM SEPARATOR
-        MENUITEM "Hex\tF5", IDM_VIEW_HEX, CHECKED
-        MENUITEM "Dezimal\tF6", IDM_VIEW_DEC, CHECKED
+        MENUITEM "&Hex\tF5", IDM_VIEW_HEX, CHECKED
+        MENUITEM "&Dezimal\tF6", IDM_VIEW_DEC, CHECKED
         MENUITEM "Oktal\tF7", IDM_VIEW_OCT, CHECKED
         MENUITEM "Binär\tF8", IDM_VIEW_BIN, CHECKED
         MENUITEM SEPARATOR
-        MENUITEM "Qword\tF12", IDM_VIEW_QWORD, CHECKED
+        MENUITEM "&Qword\tF12", IDM_VIEW_QWORD, CHECKED
         MENUITEM "Dword\tF2", IDM_VIEW_DWORD, CHECKED
         MENUITEM "Word\tF3", IDM_VIEW_WORD, CHECKED
         MENUITEM "Byte\tF4", IDM_VIEW_BYTE, CHECKED
         MENUITEM SEPARATOR
         MENUITEM "Zifferngruppierung", IDM_VIEW_GROUP, CHECKED
     END
-    POPUP "Hilfe"
+    POPUP "&Hilfe"
     BEGIN
-        MENUITEM "Hilfethemen", IDM_HELP_HELP
+        MENUITEM "&Hilfethemen", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "Über ReactOS Rechner", IDM_HELP_ABOUT
+        MENUITEM "&Über ReactOS Rechner", IDM_HELP_ABOUT
     END
 END
 
 IDR_MENU_STANDARD MENU
 BEGIN
-    POPUP "Bearbeiten"
+    POPUP "&Bearbeiten"
     BEGIN
-        MENUITEM "Kopieren\tSTRG-C", IDM_EDIT_COPY
-        MENUITEM "Einfügen\tSTRG-V", IDM_EDIT_PASTE
+        MENUITEM "&Kopieren\tStrg+C", IDM_EDIT_COPY
+        MENUITEM "&Einfügen\tStrg+V", IDM_EDIT_PASTE
     END
     POPUP "Ansicht"
     BEGIN
         MENUITEM "Standard", IDM_VIEW_STANDARD
-        MENUITEM "Wissenschaftlich", IDM_VIEW_SCIENTIFIC
+        MENUITEM "&Wissenschaftlich", IDM_VIEW_SCIENTIFIC
         MENUITEM "Konversion", IDM_VIEW_CONVERSION
         MENUITEM SEPARATOR
         MENUITEM "Zifferngruppierung", IDM_VIEW_GROUP, CHECKED
     END
-    POPUP "Hilfe"
+    POPUP "&Hilfe"
     BEGIN
-        MENUITEM "Hilfethemen", IDM_HELP_HELP
+        MENUITEM "&Hilfethemen", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "Über ReactOS Rechner", IDM_HELP_ABOUT
+        MENUITEM "&Über ReactOS Rechner", IDM_HELP_ABOUT
     END
 END
 
@@ -476,7 +476,7 @@ END
 /* Consumptions */
 STRINGTABLE
 BEGIN
-    IDS_CONSUMPTION_KM_PER_L "Kilometer/liter"
+    IDS_CONSUMPTION_KM_PER_L "Kilometer/Liter"
     IDS_CONSUMPTION_L_PER_100_KM "Liter/100 Kilometer"
     IDS_CONSUMPTION_MILES_GALLON_UK "Meilen/Gallone (UK)"
     IDS_CONSUMPTION_MILES_GALLON_US "Meilen/Gallone (USA)"
@@ -491,15 +491,15 @@ BEGIN
     IDS_CURRENCY_CZECH_KORUNA "Tschechische Krone"
     IDS_CURRENCY_DEUTSCHE_MARK "Deutsche Mark"
     IDS_CURRENCY_DUTCH_GUILDER "Niederländische Guilder"
-    IDS_CURRENCY_ESTONIAN_KROON "Estonian kroon"
+    IDS_CURRENCY_ESTONIAN_KROON "Estnische Krone"
     IDS_CURRENCY_EURO "Euro"
     IDS_CURRENCY_FINNISH_MARKKA "Finnische Mark"
     IDS_CURRENCY_FRENCH_FRANC "Französchische Franc"
     IDS_CURRENCY_GREEK_DRACHMA "Griechische Drachme"
     IDS_CURRENCY_IRISH_POUND "Irische Pfund"
     IDS_CURRENCY_ITALIAN_LIRA "Italienische Lire"
-    IDS_CURRENCY_LATVIAN_LATS "Latvian lats"
-    IDS_CURRENCY_LITHUANIAN_LITAS "Lithuanian litas"
+    IDS_CURRENCY_LATVIAN_LATS "Lettische Lats"
+    IDS_CURRENCY_LITHUANIAN_LITAS "Litauische Litas"
     IDS_CURRENCY_LUXEMBOURG_FRANC "Luxemburgische Franc"
     IDS_CURRENCY_MALTESE_LIRA "Maltesische Lire"
     IDS_CURRENCY_PORTOGUESE_ESCUDO "Portugiesische Escudo"
@@ -518,8 +518,8 @@ BEGIN
     IDS_ENERGY_FOOT_POUNDS "Foot-Pound"
     IDS_ENERGY_IT_CALORIES "International Kalorien"
     IDS_ENERGY_IT_KILOCALORIES "International Kilokalorien"
-    IDS_ENERGY_JOULES "Joules"
-    IDS_ENERGY_KILOJOULES "Kilojoules"
+    IDS_ENERGY_JOULES "Joule"
+    IDS_ENERGY_KILOJOULES "Kilojoule"
     IDS_ENERGY_KILOWATT_HOURS "Kilowattstunden"
     IDS_ENERGY_NUTRITION_CALORIES "Ernährung Kalorien"
     IDS_ENERGY_TH_CALORIES "Thermochemische Kalorie"
@@ -540,7 +540,7 @@ BEGIN
     IDS_LENGTH_FATHOMS "Fathome"
     IDS_LENGTH_FATHOMS_HUNGARY "Fathome (Ungarn)"
     IDS_LENGTH_FEET "Fuß"
-    IDS_LENGTH_FURLONGS "Furlongs"
+    IDS_LENGTH_FURLONGS "Achtelmeile"
     IDS_LENGTH_GAN "Gan"
     IDS_LENGTH_HANDS "Hände"
     IDS_LENGTH_HUNH "Hunh"
@@ -572,7 +572,7 @@ BEGIN
     IDS_LENGTH_SUN "Sun"
     IDS_LENGTH_TSUEN "Tsuen"
     IDS_LENGTH_VA "Va"
-    IDS_LENGTH_YARDS "Yards"
+    IDS_LENGTH_YARDS "Yard"
     IDS_LENGTH_YOTE "Yote"
     IDS_LENGTH_ZHANG "Zhang"
 END
@@ -672,7 +672,7 @@ BEGIN
     IDS_VOLUME_SYOU "Syou"
     IDS_VOLUME_TANANLOUNG "Tananloung"
     IDS_VOLUME_TANG "Tang"
-    IDS_VOLUME_TO "To"
+    IDS_VOLUME_TO "Nach"
 END
 
 /* Weights */
