@@ -7,15 +7,15 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ACDC, IDI_ACDC, 7, 7, 28, 22
     LTEXT "Select the power scheme with the most appropriate settings for this computer. Note that changing the settings below will modify the selected scheme.", -1, 37, 6, 209, 36
-    GROUPBOX "P&ower schemes", -1, 6, 43, 240, 50
+    GROUPBOX "&Energieschemen", -1, 6, 43, 240, 50
     COMBOBOX IDC_ENERGYLIST, 14, 54, 224, 92, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL
-    PUSHBUTTON "&Save As...", IDC_SAVEAS_BTN, 109, 72, 70, 14, WS_DISABLED
+    PUSHBUTTON "&Speichern unter...", IDC_SAVEAS_BTN, 109, 72, 70, 14, WS_DISABLED
     PUSHBUTTON "&Löschen", IDC_DELETE_BTN, 183, 72, 55, 14, WS_DISABLED
     GROUPBOX "Unbekannt", IDC_GRPDETAIL, 6, 95, 240, 136
     LTEXT "When computer is:", IDC_SAT, 12, 109, 60, 12
-    LTEXT "Plugged in", IDC_SAC, 123, 110, 45, 15
+    LTEXT "Eingesteckt", IDC_SAC, 123, 110, 45, 15
     ICON IDI_AC, IDC_IAC, 97, 108, 21, 20
-    LTEXT "Running on batteries", IDC_SDC, 195, 110, 45, 15
+    LTEXT "Im Akkubetrieb", IDC_SDC, 195, 110, 45, 15
     ICON IDI_DC, IDC_IDC, 170, 108, 21, 20
     LTEXT "Turn off &monitor:", IDC_MONITOR, 13, 148, 84, 10
     COMBOBOX IDC_MONITORACLIST, 100, 145, 65, 150, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
@@ -36,31 +36,31 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Alarme"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Low battery alarm", -1, 6, 7, 239, 104
+    GROUPBOX "Alarm bei niedrigem Batteriestand", -1, 6, 7, 239, 104
     AUTOCHECKBOX "Activate &low battery alarm when power level reaches:", IDC_ALARM1, 15, 17, 190, 15, WS_TABSTOP
     LTEXT "Unbekannt", IDC_ALARMVALUE1, 215, 20, 20, 10
     LTEXT "0%", -1, 28, 43, 15, 10
     CONTROL "Slider1", IDC_ALARMBAR1, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 45, 170, 15
     LTEXT "100%", -1, 214, 43, 25, 10
-    PUSHBUTTON "Alar&m Action...", -1, 17, 69, 70, 14, WS_DISABLED
-    LTEXT "Notification:", -1, 95, 71, 57, 10
+    PUSHBUTTON "&Wecker Ereigniss...", -1, 17, 69, 70, 14, WS_DISABLED
+    LTEXT "Benachrichtigung:", -1, 95, 71, 57, 10
     LTEXT "Unbekannt", IDC_ALARMMSG1, 154, 71, 84, 10
-    LTEXT "Action:", -1, 95, 83, 55, 10
+    LTEXT "Aktion:", -1, 95, 83, 55, 10
     LTEXT "Unbekannt", IDC_ALARMAKTION1, 154, 83, 84, 10
-    LTEXT "Run Program:", -1, 95, 95, 55, 10
+    LTEXT "Programm ausführen:", -1, 95, 95, 55, 10
     LTEXT "Unbekannt", IDC_ALARMPROG1, 154, 95, 84, 10
-    GROUPBOX "Critical battery alarm", -1, 6, 120, 239, 106
+    GROUPBOX "Alarm bei kritischem Batteriestand", -1, 6, 120, 239, 106
     AUTOCHECKBOX "Activate &critical battery alarm when power level reaches:", IDC_ALARM2, 15, 131, 195, 15, WS_TABSTOP
     LTEXT "Unbekannt", IDC_ALARMVALUE2, 215, 134, 20, 10
     LTEXT "0%", -1, 28, 154, 15, 10
     CONTROL "Slider1", IDC_ALARMBAR2, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 158, 170, 15
     LTEXT "100%", -1, 214, 154, 25, 10
-    PUSHBUTTON "Alar&m Action...", -1, 17, 183, 70, 14, WS_DISABLED
-    LTEXT "Notification:", -1, 95, 185, 50, 10
+    PUSHBUTTON "&Wecker Ereigniss...", -1, 17, 183, 70, 14, WS_DISABLED
+    LTEXT "Benachrichtigung:", -1, 95, 185, 50, 10
     LTEXT "Unbekannt", IDC_ALARMMSG2, 154, 185, 84, 10
-    LTEXT "Action:", -1, 95, 198, 45, 10
+    LTEXT "Aktion:", -1, 95, 198, 45, 10
     LTEXT "Unbekannt", IDC_ALARMAKTION2, 154, 198, 84, 10
-    LTEXT "Run Program:", -1, 95, 211, 50, 10
+    LTEXT "Programm ausführen:", -1, 95, 211, 50, 10
     LTEXT "Unbekannt", IDC_ALARMPROG2, 154, 211, 84, 10
 END
 
@@ -72,9 +72,9 @@ BEGIN
     ICON IDI_ACDC, IDI_ACDC, 7, 7, 20, 20
     LTEXT "Select the power-saving settings you want to use.", -1, 37, 6, 207, 20
     GROUPBOX "Optionen", -1, 6, 30, 240, 65
-    AUTOCHECKBOX "Alway&s show icon on the taskbar", IDC_SYSTRAYBATTERYMETER, 17, 43, 220, 10, WS_TABSTOP
-    AUTOCHECKBOX "&Prompt for password when computer resumes from standby", IDC_PASSWORDLOGON, 17, 60, 220, 10, WS_TABSTOP
-    AUTOCHECKBOX "&Dim display when running on batteries", IDC_VIDEODIMDISPLAY, 17, 78, 220, 10, WS_TABSTOP
+    AUTOCHECKBOX "Symbol &immer in der Taskleiste anzeigen", IDC_SYSTRAYBATTERYMETER, 17, 43, 220, 10, WS_TABSTOP
+    AUTOCHECKBOX "&Kennwort anfordern wenn der Computer aus dem Standby reaktiviert wird", IDC_PASSWORDLOGON, 17, 60, 220, 10, WS_TABSTOP
+    AUTOCHECKBOX "&Bildschirm abdunkeln im Akkubetrieb", IDC_VIDEODIMDISPLAY, 17, 78, 220, 10, WS_TABSTOP
     GROUPBOX "Power buttons", -1, 6, 101, 240, 127
     LTEXT "&When I close the lid of my portable computer:", IDC_SLIDCLOSE, 15, 115, 222, 10
     COMBOBOX IDC_LIDCLOSE, 15, 127, 220, 90, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
@@ -92,9 +92,9 @@ BEGIN
     ICON IDI_HIBERNATE, IDI_HIBERNATE, 7, 7, 20, 20
     LTEXT "When your computer hibernates, it stores whatever it has in memory on your hard disk and then shuts down. When your computer comes out of hibernation, it returns to its previous state. ", -1, 37, 6, 210, 35
     GROUPBOX "In den Ruhezustand wechseln", -1, 6, 41, 240, 32
-    AUTOCHECKBOX "Enable &hibernation", IDC_HIBERNATEFILE, 17, 55, 210, 10, WS_TABSTOP
+    AUTOCHECKBOX "&Ruhezustand aktivieren", IDC_HIBERNATEFILE, 17, 55, 210, 10, WS_TABSTOP
     GROUPBOX "Disk space for hibernation", -1, 6, 80, 240, 76
-    LTEXT "Free disk space:", -1, 15, 95, 140, 10
+    LTEXT "Freier Festplattenspeicher:", -1, 15, 95, 140, 10
     LTEXT "Unbekannt", IDC_FREESPACE, 160, 95, 80, 10
     LTEXT "Disk space required to hibernate:", -1, 15, 115, 140, 10
     LTEXT "Unbekannt", IDC_SPACEFORHIBERNATEFILE, 160, 115, 80, 10
