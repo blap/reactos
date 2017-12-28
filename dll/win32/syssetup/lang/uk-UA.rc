@@ -1,12 +1,23 @@
 /*
- * PROJECT:     System setup
- * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        dll/win32/syssetup/lang/uk-UA.rc
- * PURPOSE:     Ukraianian Language File for syssetup
- * TRANSLATORS: Artem Reznikov, Igor Paliychuk
+ * Copyright (C) 2004 Filip Navara
+ * Copyright (C) 2004 Eric Kohl
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
@@ -15,7 +26,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Ласкаво просимо до майстра встановлення ReactOS.", IDC_WELCOMETITLE, 115, 8, 195, 24
     LTEXT "Цей майстер встановлює ReactOS на Ваш комп'ютер. Йому потрібно зібрати деякі відомості про Вас і Ваш комп'ютер щоб установити ReactOS належним чином.", IDC_STATIC, 115, 40, 195, 100
-    LTEXT "Натисніть ""Далі"", щоб продовжити встановлення.", IDC_STATIC, 115, 169, 195, 17
+    LTEXT "Click Next to continue with Setup.", IDC_STATIC, 115, 169, 195, 17
 END
 
 IDD_ACKPAGE DIALOGEX 0, 0, 317, 143
@@ -25,9 +36,9 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT "Розробники ReactOS хотіли б подякувати наступним Open Source проектам, що (частково) використовувалися при створенні ReactOS:", IDC_STATIC, 15, 7, 286, 19
     LISTBOX IDC_PROJECTS, 15, 30, 286, 75, LBS_NOSEL | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL
-    LTEXT "ReactOS ліцензується за GPL, так що якщо Ви хочете повторно використовувати або поширювати його (частини), Ви повинні поважати GPL.", IDC_STATIC, 15, 110, 227, 24
-    PUSHBUTTON "&Перегляд GPL...", IDC_VIEWGPL, 244, 110, 58, 19
-    LTEXT "Натисніть ""Далі"", щоб продовжити встановлення.", IDC_STATIC, 15, 136, 195, 17
+    LTEXT "ReactOS ліцензується за GPL, так що якщо Ви хочете повторно використовувати або поширювати його (частини), Ви повинні поважати GPL.", IDC_STATIC, 15, 110, 227, 19
+    PUSHBUTTON "&View GPL...", IDC_VIEWGPL, 251, 110, 50, 19
+    LTEXT "Click Next to continue with Setup.", IDC_STATIC, 15, 136, 195, 17
 END
 
 IDD_OWNERPAGE DIALOGEX 0, 0, 317, 143
@@ -51,14 +62,14 @@ BEGIN
     ICON IDI_ICON1, IDC_STATIC, 21, 7, 20, 20
     LTEXT "Введіть ім'я Вашого комп'ютера довжиною до 15 символів. Якщо Ви працюєте в мережі, ім'я Вашого комп'ютера має бути унікальним.", IDC_STATIC, 54, 7, 250, 24
     LTEXT "&Ім'я комп'ютера:", IDC_STATIC, 54, 38, 75, 8
-    EDITTEXT IDC_COMPUTERNAME, 132, 35, 163, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL | ES_UPPERCASE
+    EDITTEXT IDC_COMPUTERNAME, 165, 35, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL | ES_UPPERCASE
     ICON IDI_ICON5, IDC_STATIC, 21, 57, 20, 20
     LTEXT "Програма встановлення створить обліковий запис користувача 'Адміністратор', який дає повні права доступу до Вашого комп'ютера.", IDC_STATIC, 54, 57, 250, 25
     LTEXT "Введіть пароль адміністратора довжиною до 127 символів.", IDC_STATIC, 54, 87, 250, 8
-    LTEXT "&Пароль адміністратора:", IDC_STATIC, 54, 104, 75, 8
-    EDITTEXT IDC_ADMINPASSWORD1, 132, 101, 172, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
-    LTEXT "Пі&дтвердження:", IDC_STATIC, 54, 123, 75, 8
-    EDITTEXT IDC_ADMINPASSWORD2, 132, 120, 172, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
+    LTEXT "&Пароль адміністратора:", IDC_STATIC, 54, 104, 105, 8
+    EDITTEXT IDC_ADMINPASSWORD1, 165, 101, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
+    LTEXT "Пі&дтвердження:", IDC_STATIC, 54, 123, 105, 8
+    EDITTEXT IDC_ADMINPASSWORD2, 165, 120, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
 END
 
 IDD_LOCALEPAGE DIALOGEX 0, 0, 317, 143
@@ -67,14 +78,14 @@ CAPTION "Встановлення ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ICON4, IDC_STATIC, 21, 7, 20, 20
-    LTEXT "Мова системи має відповідати мові додатків, які ви хочете використовувати. Мова користувача задає формат виведення чисел, грошових одиниць і дат.", IDC_STATIC, 53, 5, 253, 27
+    LTEXT "The system locale should match the language of the applications you want to use. The user locale controls how numbers, currencies, and dates appear.", IDC_STATIC, 53, 7, 253, 20
     LTEXT "", IDC_LOCALETEXT, 53, 29, 250, 16
-    LTEXT "Для зміни мови системи або мови користувача натисніть ""Налаштувати"".", IDC_STATIC, 53, 60, 184, 16
-    PUSHBUTTON "На&лаштувати...", IDC_CUSTOMLOCALE, 240, 57, 57, 14
-    LTEXT "Розкладка клавіатури визначає символи, що вводяться при натисненні клавіш.", IDC_STATIC, 53, 84, 253, 18
+    LTEXT "Для зміни мови системи або мови користувача натисніть ""Налаштувати"".", IDC_STATIC, 53, 60, 196, 8
+    PUSHBUTTON "&Налаштувати...", IDC_CUSTOMLOCALE, 250, 57, 50, 14
+    LTEXT "The keyboard layout controls the characters that appear when you type.", IDC_STATIC, 53, 86, 253, 8
     LTEXT "", IDC_LAYOUTTEXT, 53, 100, 250, 16
-    LTEXT "Для зміни розкладки клавіатури натисніть ""Налаштувати"".", IDC_STATIC, 53, 126, 184, 18
-    PUSHBUTTON "Нал&аштувати...", IDC_CUSTOMLAYOUT, 240, 122, 57, 14
+    LTEXT "Для зміни розкладки клавіатури натисніть ""Налаштувати"".", IDC_STATIC, 53, 126, 184, 8
+    PUSHBUTTON "Настройка...", IDC_CUSTOMLAYOUT, 250, 122, 50, 14
 END
 
 IDD_DATETIMEPAGE DIALOGEX 0, 0, 317, 143
@@ -88,12 +99,12 @@ BEGIN
     CONTROL "", IDC_TIMEPICKER, "SysDateTimePick32", DTS_TIMEFORMAT | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 200, 17, 54, 14
     LTEXT "Часовий пояс", IDC_STATIC, 53, 42, 253, 8
     COMBOBOX IDC_TIMEZONELIST, 53, 52, 201, 93, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    AUTOCHECKBOX "Автомати&чне переведення годинника на літний/зимовий час", IDC_AUTODAYLIGHT, 53, 124, 219, 10
+    AUTOCHECKBOX "Автомати&чне переведення годинника на літний/зимовий час", IDC_AUTODAYLIGHT, 53, 124, 201, 10
 END
 
 IDD_THEMEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "Встановлення ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     PUSHBUTTON "Lautus theme", IDC_THEMEDSTYLE, 18,12, 130,120, BS_AUTORADIOBUTTON|BS_PUSHLIKE
@@ -118,7 +129,7 @@ BEGIN
     LTEXT "Завершення встановлення ReactOS", IDC_FINISHTITLE, 115, 8, 195, 24
     LTEXT "Ви успішно завершили встановлення ReactOS.\n\nПісля натиснення кнопки ""Завершити"" комп'ютер буде перезавантажений.", IDC_STATIC, 115, 40, 195, 100
     CONTROL "", IDC_RESTART_PROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 115, 138, 188, 12
-    LTEXT "Якщо в дисковод вставлений компакт-диск, вийміть його. Потім для перезавантаження Вашого комп'ютера натистніть ""Завершити"".", IDC_STATIC, 115, 163, 195, 25
+    LTEXT "If there is a CD in a drive, remove it. Then, to restart your computer, click Finish.", IDC_STATIC, 115, 169, 195, 17
 END
 
 IDD_GPL DIALOGEX 0, 0, 333, 230
@@ -152,8 +163,9 @@ BEGIN
     IDS_DATETIMESUBTITLE "Встановити правильні дату і час для Вашого комп'ютера."
     IDS_PROCESSTITLE "Реєстрація компонентів"
     IDS_PROCESSSUBTITLE "Зачекайте, будь ласка..."
-    IDS_THEMESELECTIONTITLE "Appearance"
+    IDS_THEMESELECTIONTITLE "Оформлення"
     IDS_THEMESELECTIONSUBTITLE "Select the theme you prefer."
+
 END
 
 STRINGTABLE
