@@ -1,26 +1,24 @@
-/* Russian translation by Kudratov Olimjon (olim98@bk.ru) */
-
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
-    IDS_HELP "Редактирование и повторный вызов команд ReactOS; создание макросов DOSKey.\n\
+    IDS_HELP "Manages command-line editing settings, history, and macros.\n\
 \n\
-DOSKEY [/REINSTALL] [/LISTSIZE=размер] [/MACROS[:ALL | :модуль]]\n\
-  [/HISTORY] [/INSERT | /OVERSTRIKE] [/EXENAME=модуль] [/MACROFILE=файл]\n\
-  [макрос=[текст]]\n\n\
-  /REINSTALL          Установка новой копии DOSKey.\n\
-  /LISTSIZE=размер    Размер буфера журнала команд.\n\
-  /MACROS             Вывод всех макросов DOSKey.\n\
-  /MACROS:ALL         Вывод всех макросов DOSKey для всех исполняемых\n\
-                      модулей, содержащих макросы DOSKey.\n\
-  /MACROS:модуль      Вывод всех макросов DOSKey для указанного модуля.\n\
-  /HISTORY            Вывод всех команд, хранящихся в памяти.\n\
-  /INSERT             Включение режима вставки.\n\
-  /OVERSTRIKE         Включение режима замены.\n\
-  /EXENAME=модуль     Исполняемый модуль.\n\
-  /MACROFILE=файл     Файл макросов, который следует установить.\n\
-  макрос              Имя нового макроса.\n\
-  текст               Команды, которые следует включить в макрос."
+DOSKEY [/INSERT | /OVERSTRIKE] [/EXENAME=exe] [/HISTORY] [/LISTSIZE=size]\n\
+       [/REINSTALL] [/MACROS[:exe | :ALL]] [/MACROFILE=file] [macroname=[text]]\n\
+\n\
+  /INSERT             Enables insert mode.\n\
+  /OVERSTRIKE         Disables insert mode.\n\
+  /EXENAME=exename    Sets the name of the program to view/change history\n\
+                      and macros for. The default is cmd.exe.\n\
+  /HISTORY            Displays the command history.\n\
+  /LISTSIZE=size      Sets the number of commands per history buffer.\n\
+  /REINSTALL          Clears the command history.\n\
+  /MACROS             Displays macro definitions.\n\
+  /MACROS:exename     Displays macro definitions for a specific program.\n\
+  /MACROS:ALL         Displays macro definitions for all programs.\n\
+  /MACROFILE=file     Loads macro definitions from a file.\n\
+  macroname           Specifies the name of a macro to create.\n\
+  text                Specifies the replacement text for the macro.\n"
     IDS_INVALID_MACRO_DEF "Неверный макрос: %s\n"
 END
