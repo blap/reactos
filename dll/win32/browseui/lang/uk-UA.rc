@@ -1,6 +1,22 @@
-/* Translated by Igor Paliychuk */
+/*
+ * Copyright 2009 Andrew Hill
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+ */
 
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 /* Menus */
 
@@ -62,7 +78,7 @@ BEGIN
         MENUITEM "&Додати до Обраного...", IDM_FAVORITES_ADDTOFAVORITES
         MENUITEM "&Організувати Обране...", IDM_FAVORITES_ORGANIZEFAVORITES
         MENUITEM "", -1, MFT_SEPARATOR
-        MENUITEM "(Empty)", IDM_FAVORITES_EMPTY
+        MENUITEM "(пусто)", IDM_FAVORITES_EMPTY
     END
     POPUP "&Інструменти", FCIDM_MENU_TOOLS
     BEGIN
@@ -80,7 +96,7 @@ END
 
 IDM_TASKBAR_TOOLBARS MENUEX
 BEGIN
-	POPUP "&Toolbars", -1, MFT_STRING, MFS_ENABLED, 0
+	POPUP "&Панелі інструментів", -1, MFT_STRING, MFS_ENABLED, 0
 	BEGIN
 		MENUITEM "&Desktop", IDM_TASKBAR_TOOLBARS_DESKTOP, MFT_STRING
 		MENUITEM "&Quick Launch", IDM_TASKBAR_TOOLBARS_QUICKLAUNCH, MFT_STRING
