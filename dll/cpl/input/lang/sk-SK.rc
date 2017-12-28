@@ -1,9 +1,4 @@
-/* TRANSLATOR : Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- * DATE OF TR.: 01-03-2008
- * LAST CHANGE: 14-06-2009
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 IDD_PROPPAGESETTINGS DIALOGEX 0, 0, 254, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -36,7 +31,7 @@ CAPTION "Rozšírené nastavenia klávesov"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Vypnutie funkcie Caps Lock", -1, 7, 7, 258, 26
-    AUTORADIOBUTTON "Stlačením klávesu CAPS &LOCK", IDC_PRESS_CL_KEY_RB, 14, 17, 120, 11, WS_GROUP  // Ten kláves, nie tá klávesa
+    AUTORADIOBUTTON "Stlačením klávesu CAPS &LOCK", IDC_PRESS_CL_KEY_RB, 14, 17, 120, 11, WS_GROUP
     AUTORADIOBUTTON " Stlačením klávesu SHI&FT", IDC_PRESS_SHIFT_KEY_RB, 144, 17, 120, 11, NOT WS_TABSTOP
     GROUPBOX "Klávesové skratky pre vstupné jazyky", -1, 7, 37, 258, 95
     LTEXT "Akcia", -1, 14, 47, 60, 9
@@ -105,7 +100,7 @@ BEGIN
     IDS_LANGUAGE "Jazyk"
     IDS_LAYOUT "Rozloženie klávesnice"
     IDS_REM_QUESTION "Chcete odstrániť vybrané rozloženie klávesnice?"
-    IDS_CONFIRMATION "Potvrdenie" // Confirmation
+    IDS_CONFIRMATION "Potvrdenie"
     IDS_LAYOUT_EXISTS "Toto rozloženie už existuje."
     IDS_LAYOUT_EXISTS2 "Toto rozloženie už existuje a nemôže byť pridané."
     IDS_CTRL_SHIFT "Ctrl+Shift"
