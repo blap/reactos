@@ -1,4 +1,4 @@
-LANGUAGE LANG_DUTCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
 
 IDR_MAINMENU MENU
 BEGIN
@@ -29,45 +29,45 @@ BEGIN
     MENUITEM "&Kopieren",           ID_COPY, GRAYED
     MENUITEM "&Plakken",          ID_PASTE, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Se&lectie wissen",           -1, GRAYED
+    MENUITEM "Object",           -1, GRAYED
     MENUITEM "&Alles selecteren",     ID_SELALL, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Zoeken...\tCtrl+F",-1, GRAYED
-    MENUITEM "Vo&lgende zoeken",       -1, GRAYED
-    MENUITEM "Ve&rvangen\tCtrl+H", -1, GRAYED
+    MENUITEM "Object",-1, GRAYED
+    MENUITEM "Object",       -1, GRAYED
+    MENUITEM "Object", -1, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Object Eigenschappen",-1, GRAYED
+    MENUITEM "Object",-1, GRAYED
     MENUITEM "Object",          -1, GRAYED
   END
   POPUP "Beel&d"
   BEGIN
-    MENUITEM "&Werkbalk",        -1, CHECKED
-    MENUITEM "Werkbalk opmaa&k",     -1, CHECKED
+    MENUITEM "&Liniaal",        -1, CHECKED
+    MENUITEM "&Liniaal",     -1, CHECKED
     MENUITEM "&Liniaal",          -1, CHECKED
     MENUITEM "&Statusbalk",     ID_STATUSBAR, CHECKED
   END
   POPUP "&Invoegen"
   BEGIN
-    MENUITEM "&Datum en tijd...",-1, GRAYED
+    MENUITEM "&Object...",-1, GRAYED
     MENUITEM "&Object...",       -1, GRAYED
   END
   POPUP "Opmaa&k"
   BEGIN
     MENUITEM "&Lettertype...",        -1 GRAYED
-    MENUITEM "&Opsommingsteken",     -1, GRAYED
-    MENUITEM "&Alinea...",    -1, GRAYED
+    MENUITEM "&Tabs...",     -1, GRAYED
+    MENUITEM "&Tabs...",    -1, GRAYED
     MENUITEM "&Tabs...",         -1, GRAYED
   END
   POPUP "&Venster"
   BEGIN
-    MENUITEM "&Cascade",           ID_WINDOW_CASCADE
+    MENUITEM "&Trapsgewijs",           ID_WINDOW_CASCADE
     MENUITEM "&Horizontaal schikken", ID_WINDOW_TILE_HORZ
     MENUITEM "&Verticaal schikken",   ID_WINDOW_TILE_VERT
     MENUITEM "&Pictogrammen schikken",     ID_WINDOW_ARRANGE
     MENUITEM SEPARATOR
     MENUITEM "Vo&lgende\tCtrl+F6",     ID_WINDOW_NEXT
   END
-  POPUP "&Help"
+  POPUP "&Bestand"
   BEGIN
     MENUITEM "&Info...",       ID_ABOUT
   END
