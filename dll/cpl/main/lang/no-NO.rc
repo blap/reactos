@@ -1,4 +1,4 @@
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 IDD_KEYBSPEED DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -8,14 +8,14 @@ BEGIN
     GROUPBOX "Repetisjonshastighet", -1, 5, 5, 236, 135
     ICON IDI_REPEAT_DELAY, IDC_ICON_REPEAT_DELAY, 13, 18, 15, 15
     LTEXT "Repetisjon&forsinkelse:", -1, 40, 18, 100, 10
-    LTEXT "Lang", -1, 40, 33, 52, 10
-    LTEXT "Kort", -1, 210, 33, 20, 10
-    CONTROL "", IDC_SLIDER_REPEAT_DELAY, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 75, 33, 130, 17
+    LTEXT "Lang", -1, 40, 33, 20, 10
+    LTEXT "Kort tid", -1, 200, 33, 20, 10
+    CONTROL "", IDC_SLIDER_REPEAT_DELAY, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 65, 33, 130, 17
     ICON IDI_REPEAT_RATE, IDC_ICON_REPEAT_RATE, 13, 70, 15, 15
     LTEXT "&Repetisjonshastighet:", -1, 40, 70, 100, 10
-    LTEXT "Langsom", -1, 40, 85, 62, 10
-    LTEXT "Rask", -1, 210, 85, 20, 10
-    CONTROL "", IDC_SLIDER_REPEAT_RATE, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 75, 85, 130, 17
+    LTEXT "Langsom", -1, 40, 85, 20, 10
+    LTEXT "Rask", -1, 200, 85, 20, 10
+    CONTROL "", IDC_SLIDER_REPEAT_RATE, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 65, 85, 130, 17
     LTEXT "Klikk her og hold nede en tast for å &teste repetisjonshastigheten:", -1, 15, 105, 216, 10
     EDITTEXT IDC_EDIT_REPEAT_RATE, 15, 116, 216, 14, WS_CHILD | WS_VISIBLE | WS_GROUP
     GROUPBOX "Markør&blinking:", -1, 5, 145, 236, 50
@@ -37,8 +37,8 @@ STYLE DS_SHELLFONT | WS_CAPTION | WS_SYSMENU
 CAPTION "Klikklås"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Kort tid", -1, 50, 35, 40, 10
-    LTEXT "Langt tid", -1, 157, 35, 40, 10
+    LTEXT "Kort", -1, 50, 35, 27, 10
+    LTEXT "Langt tid", -1, 157, 35, 27, 10
     CONTROL "", IDC_SLIDER_CLICK_LOCK, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 78, 35, 70, 17
     PUSHBUTTON "&OK", IDOK, 110, 59, 60, 14
     PUSHBUTTON "&Avbryt", IDCANCEL, 174, 59, 60, 14
@@ -57,9 +57,9 @@ BEGIN
     LTEXT "Merk av i denne avmerkningsboksen for å gjøre knappen til høyre til den du bruker til primærfunksjoner som å velge å dra.", -1, 10, 36, 156, 30
     GROUPBOX "Hastighet på dobbeltklikking", -1, 5, 78, 236, 70
     LTEXT "Dobbeltklikk mappen for å teste innstillingen. Hvis mappen ikke lukkes eller åpnes, kan du prøve med en langsommere innstilling.", -1, 10, 90, 156, 28
-    LTEXT "Hastig&het:   Langsom", -1, 10, 123, 90, 10
-    LTEXT "Rask", -1, 140, 130, 24, 10
-    CONTROL "", IDC_SLIDER_DOUBLE_CLICK_SPEED, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 40, 130, 90, 17
+    LTEXT "Hastig&het:   Langsom", -1, 10, 123, 50, 10
+    LTEXT "Rask", -1, 136, 123, 24, 10
+    CONTROL "", IDC_SLIDER_DOUBLE_CLICK_SPEED, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 60, 123, 70, 17
     CONTROL "", IDC_IMAGE_DOUBLE_CLICK_SPEED, "Static", SS_ICON | SS_NOTIFY | SS_CENTERIMAGE | WS_VISIBLE, 171, 87, 65, 57, WS_EX_STATICEDGE
     GROUPBOX "Klikklås", -1, 5, 150, 236, 70
     CHECKBOX "&Slå på klikklås", IDC_CHECK_CLICK_LOCK, 10, 160, 70, 20
@@ -89,7 +89,7 @@ STYLE DS_SHELLFONT | WS_CAPTION | WS_SYSMENU
 CAPTION "Lagre oppsett"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Lagre dette markøroppsettet som:", -1, 5, 5, 190, 10
+    LTEXT "Lagre dette markøroppsettet som:", -1, 5, 5, 181, 10
     EDITTEXT IDC_EDIT_SCHEME_NAME, 5, 15, 180, 15, WS_CHILD | WS_VISIBLE | WS_GROUP
     PUSHBUTTON "&OK", IDOK, 63, 35, 60, 14
     PUSHBUTTON "&Avbryt", IDCANCEL, 126, 35, 60, 14
@@ -102,7 +102,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Bevegelse", -1, 5, 5, 236, 60
     LTEXT "Ve&lg en pekehastighet:", -1, 52, 15, 110, 10
-    LTEXT "Langsom", -1, 54, 30, 40, 10
+    LTEXT "Treg", -1, 60, 30, 20, 10
     CONTROL "", IDC_SLIDER_MOUSE_SPEED, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 90, 30, 70, 17
     LTEXT "Rask", -1, 170, 30, 20, 10
     ICON IDI_MOUSE_SPEED, IDC_ICON_MOUSE_SPEED, 18, 20, 32, 32
@@ -113,7 +113,7 @@ BEGIN
     ICON IDI_MOUSE_BUTTON, IDC_ICON_SNAP_TO, 18, 83, 15, 15
     GROUPBOX "Synlighet", -1, 5, 115, 236, 95
     CHECKBOX "&Vis pekerspor:", IDC_CHECK_POINTER_TRAIL, 52, 128, 125, 10
-    LTEXT "Kort", IDC_TEXT_TRAIL_SHORT, 54, 143, 25, 10
+    LTEXT "Short", IDC_TEXT_TRAIL_SHORT, 54, 143, 25, 10
     LTEXT "Lang", IDC_TEXT_TRAIL_LONG, 157, 143, 30, 10
     ICON IDI_MOUSE_TRAILS, IDC_ICON_POINTER_TRAIL, 20, 128, 15, 15
     CONTROL "", IDC_SLIDER_POINTER_TRAIL, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 80, 143, 70, 17
@@ -133,7 +133,7 @@ BEGIN
     ICON IDI_MOUSE_WHEEL, IDC_ICON_WHEEL, 20, 20, 32, 32
     LTEXT "Rull hjulet ett hakk for å rulle:", -1, 60, 15, 150, 10
     RADIOBUTTON "Følgende &antall linjer om gangen:", IDC_RADIO_WHEEL_SCROLL_LINES, 60, 30, 150, 10, WS_VISIBLE | WS_GROUP | WS_TABSTOP
-    RADIOBUTTON "&En skjermhøyde av gangen", IDC_RADIO_WHEEL_SCROLL_PAGE, 60, 65, 150, 10
+    RADIOBUTTON "&En skjermhøyde av gangen", IDC_RADIO_WHEEL_SCROLL_PAGE, 60, 65, 90, 10
     EDITTEXT IDC_EDIT_WHEEL_SCROLL_LINES, 70, 45, 60, 15, ES_RIGHT | WS_VISIBLE | WS_GROUP | WS_TABSTOP
     CONTROL "", IDC_UPDOWN_WHEEL_SCROLL_LINES, UPDOWN_CLASS, UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_BORDER, 125, 45, 12, 12
 END
