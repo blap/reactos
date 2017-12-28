@@ -1,7 +1,4 @@
-/* Spanish Language resource file.
- * Translated by: ?? and Ismael Ferreras Morezuelas (Swyter) <2014-11-07> */
-
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 IDC_REACTOS_SNDREC32 ACCELERATORS
 BEGIN
@@ -11,7 +8,7 @@ END
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 196, 75
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Acerca de la Grabadora de sonidos de ReactOS"
+CAPTION "Acerca del Administrador de servicios"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON IDI_SNDREC32, -1, 19, 14, 21, 20
@@ -42,8 +39,8 @@ BEGIN
         MENUITEM "&Insertar archivo...", ID_EDIT_INSERTFILE
         MENUITEM "&Mezclar con archivo...", ID_EDIT_MIXFILE
         MENUITEM SEPARATOR
-        MENUITEM "&Borrar antes de la posición actual",ID_EDIT_DELETEBEFORE, GRAYED
-        MENUITEM "Borrar &tras la posición actual",ID_EDIT_DELETEAFTER, GRAYED
+        MENUITEM "&Borrar antes de la posición actual", ID_EDIT_DELETEBEFORE, GRAYED
+        MENUITEM "Borrar &tras la posición actual", ID_EDIT_DELETEAFTER, GRAYED
         MENUITEM SEPARATOR
         MENUITEM "Propiedades de a&udio", ID_EDIT_AUDIOPROPS
     END
