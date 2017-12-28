@@ -1,11 +1,4 @@
-/*
- *    Translated by TestamenT
- *    testament@users.sourceforge.net
- *    https://sourceforge.net/projects/reactospl
- *    UTF-8 conversion by Caemyr (May, 2011) 
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 STRINGTABLE
 BEGIN
@@ -31,44 +24,42 @@ STRINGTABLE
 BEGIN
 /* Please keep the spacing/formatting as per En.rc when translating */
     IDS_USAGE
-    "\nSPOSÓB UŻYCIA:\n \
-        ipconfig [/? | /all | /renew [karta] | /release [karta] |\n \
-                  /flushdns | /displaydns | /registerdns \n \
-                  /showclassid karta |\n \
-                  /setclassid karta [identyfikator_klasy] ]\n \
+    "\nUSAGE:\n \
+        ipconfig [/? | /all | /renew [adapter] | /release [adapter] |\n \
+                  /flushdns | /displaydns | /registerdns |\n \
+                  /showclassid adapter |\n \
+                  /setclassid adapter [classid] ]\n \
     \n \
-    gdzie\n \
-        karta           Nazwa połączenia\n \
-                        (dozwolone symbole zastępcze * i ?, zobacz przykłady)\n \
+    where\n \
+        adapter         Connection name\n \
+                       (wildcard characters * and ? allowed, see examples)\n \
     \n \
-         Opcje:\n \
-           /?           Wyświetla ten komunikat pomocy.\n \
-           /all         Wyświetla pełne informacje o konfiguracji.\n \
-           /release     Zwalnia adres IP dla określonej karty.\n \
-           /renew       Odnawia adres IP dla określonej karty.\n \
-           /flushdns    Czyści bufor programu rozpoznającego nazwy DNS.\n \
-           /registerdns Odświeża wszystkie dzierżawy DHCP i ponownie rejestruje nazwy DNS.\n \
-           /displaydns  Wyświetla zawartość buforu programu rozpoznającego nazwy DNS.\n \
-           /showclassid Wyświetla wszystkie identyfikatory klas DHCP dozwolone dla karty.\n \
-           /setclassid  Modyfikuje identyfikator klasy DHCP.\n \
+        Options:\n \
+           /?           Display this help message\n \
+           /all         Display full configuration information.\n \
+           /release     Release the IP address for the specified adapter.\n \
+           /renew       Renew the IP address for the specified adapter.\n \
+           /flushdns    Purges the DNS Resolver cache.\n \
+           /registerdns Refreshes all DHCP leases and re-registers DNS names.\n \
+           /displaydns  Display the contents of the DNS Resolver Cache.\n \
+           /showclassid Displays all the dhcp class IDs allowed for adapter.\n \
+           /setclassid  Modifies the dhcp class id.\n \
     \n \
-    Zachowanie domyślne to wyświetlanie tylko adresu IP, maski podsieci i bramy\n \
-    domyślnej dla każdej karty związanej z protokołem TCP/IP.\n \
+    The default is to display only the IP address, subnet mask and\n \
+    default gateway for each adapter bound to TCP/IP.\n \
     \n \
-    Jeśli dla parametrów Release i Renew nie zostanie określona nazwa karty,\n \
-    zwolnieniu lub odnowieniu ulegają dzierżawy adresów IP dla wszystkich kart\n \
-    związanych z protokołem TCP/IP.\n \
+    For Release and Renew, if no adapter name is specified, then the IP address\n \
+    leases for all adapters bound to TCP/IP will be released or renewed.\n \
     \n \
-    Jeśli dla parametru Setclassid nie zostanie określony\n \
-    identyfikator_klasy, to identyfikator_klasy jest usuwany.\n \
+    For Setclassid, if no ClassId is specified, then the ClassId is removed.\n \
     \n \
-    Przykłady:\n \
-        > ipconfig                   ... Pokazuje informacje.\n \
-        > ipconfig /all              ... Pokazuje szczegółowe informacje.\n \
-        > ipconfig /renew            ... Odnawia wszystkie karty.\n \
-        > ipconfig /renew EL*        ... Odnawia każde połączenie o nazwie\n \
-                                         zaczynającej się od EL\n \
-        > ipconfig /release *Poł*    ... Zwalnia wszystkie pasujące połączenia,\n \
-                                         np. ""Połączenie lokalne 1"" lub\n \
-                                             ""Połączenie lokalne 2""\n"
+    Examples:\n \
+        > ipconfig                   ... Show information.\n \
+        > ipconfig /all              ... Show detailed information\n \
+        > ipconfig /renew            ... renew all adapters\n \
+        > ipconfig /renew EL*        ... renew any connection that has its\n \
+                                         name starting with EL\n \
+        > ipconfig /release *Con*    ... release all matching connections,\n \
+                                         eg. """Local Area Connection 1""" or\n \
+                                             """Połączenie lokalne 2""\n"
 END
