@@ -1,0 +1,51 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+IDD_POWER_METER DIALOGEX 0, 0, 252, 218
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Pengukur daya"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL "Status daya", 1001, "Button", BS_GROUPBOX | WS_CHILD | WS_VISIBLE, 9, 20, 234, 189 
+    CONTROL "Selalu t&ampilkan ikon pada taskbar.", 1002, "Button", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 6, 6, 120, 10 
+    CONTROL "Tampilkan rincian untuk masing-masing & baterai.", 1003, "Button", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 135, 6, 120, 8 
+    CONTROL "", 1000, "Static", SS_LEFT | WS_CHILD | WS_GROUP, 11, 29, 229, 178 
+END
+
+STRINGTABLE
+BEGIN
+    //Power related strings
+    IDS_PWR_PROPERTIES        "& Sesuaikan Properti Daya"
+    IDS_PWR_METER             "& Buka Power Meter"
+    IDS_PWR_RUN               "shell32.dll,Control_RunDLL PowerCfg.cpl"
+    IDS_PWR_PERCENT_REMAINING "%.2f%% tersisa"
+    IDS_PWR_CHARGING          "%.2f%% dan pengisian"
+    IDS_PWR_UNKNOWN_REMAINING "Tidak diketahui"
+    IDS_PWR_AC "Pada daya AC"
+    IDS_PWR_HOURS_REMAINING "%1!U!:%2!02u! jam (%3!u!%%) tersisa"
+    IDS_PWR_MINUTES_REMAINING "%1!U! min (%2!u!%%) tersisa"
+
+    //Hotplug related strings
+    IDS_HOTPLUG_REMOVE_1 "Aman Hapus Perangkat Keras"
+    IDS_HOTPLUG_REMOVE_2 "&Hapus Perangkat Keras dengan Aman"
+    IDS_HOTPLUG_REMOVE_3 "Aman menghapus %s"
+    IDS_HOTPLUG_RUN "shell32.dll, Control_RunDLL hotplug.dll"
+    IDS_HOTPLUG_COMMA ", "
+    IDS_HOTPLUG_DRIVE " - Drive(%s)"
+    IDS_HOTPLUG_DRIVES " - Drive(%s)"
+    IDS_HOTPLUG_A "Sebuah:"
+    IDS_HOTPLUG_REQUIRES "Perangkat keras ini membutuhkan ""Safe Removal"""
+    IDS_HOTPLUG_CLICK "Sebelum mengeluarkan perangkat keras ini, klik ikon ini dan pilih perangkat keras yang ingin Anda hapus."
+
+    //Volume related strings
+    IDS_VOL_VOLUME "Volume"
+    IDS_VOL_ADJUST "& Sesuaikan Properti Audio"
+    IDS_VOL_OPEN "Buka Kontrol V&olume"
+    IDS_VOL_RUN "SNDVOL32.EXE"
+    IDS_VOL_MUTED "Volume (dibungkam)"
+
+    //Keyboard-Mouse related strings
+    IDS_KEYS_STICKY "Kunci lengket"
+    IDS_KEYS_MOUSE "Kunci Tetikus"
+    IDS_KEYS_FILTER "Kunci Filter"
+END
