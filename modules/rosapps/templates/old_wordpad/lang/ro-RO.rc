@@ -1,0 +1,169 @@
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
+
+IDR_MAINMENU MENU
+BEGIN
+  POPUP "&Fișier"
+  BEGIN
+    MENUITEM "N&ouă…",         ID_NEW
+    MENUITEM "&Deschidere…",        ID_OPEN
+    MENUITEM SEPARATOR
+    MENUITEM "În&chide\tCtrl+F4", ID_CLOSE, GRAYED
+    MENUITEM "Închide t&ot",      ID_CLOSEALL, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "&Păstrează",           ID_SAVE, GRAYED
+    MENUITEM "Păst&rare în…",     ID_SAVEAS, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Pre&vizionează imprimare",  ID_PRINTPRE, GRAYED
+    MENUITEM "&Imprimare…",       ID_PRINT, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "&Configurare pagină…",  ID_PAGESETUP, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "I&eșire\tAlt+F4",   ID_EXIT
+  END
+  POPUP "&Editare"
+  BEGIN
+    MENUITEM "Des&face",           ID_UNDO, GRAYED
+    MENUITEM "&Reface",           ID_REDO, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "&Decupează",            ID_CUT, GRAYED
+    MENUITEM "&Copiază",           ID_COPY, GRAYED
+    MENUITEM "&Lipește",          ID_PASTE, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "destituie",           -1, GRAYED
+    MENUITEM "Selectează t&ot",     ID_SELALL, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "destituie",-1, GRAYED
+    MENUITEM "destituie",       -1, GRAYED
+    MENUITEM "destituie", -1, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "destituie",-1, GRAYED
+    MENUITEM "destituie",          -1, GRAYED
+  END
+  POPUP "&Afișare"
+  BEGIN
+    MENUITEM "Butoane g&enerale",        -1, CHECKED
+    MENUITEM "Butoane g&enerale",     -1, CHECKED
+    MENUITEM "Butoane g&enerale",          -1, CHECKED
+    MENUITEM "&Bară de stare",     ID_STATUSBAR, CHECKED
+  END
+  POPUP "I&nserare"
+  BEGIN
+    MENUITEM "Nuanță/Saturație…",-1, GRAYED
+    MENUITEM "Nuanță/Saturație…",       -1, GRAYED
+  END
+  POPUP "Culoare"
+  BEGIN
+    MENUITEM "&Font…",        -1 GRAYED
+    MENUITEM "Rotește",     -1, GRAYED
+    MENUITEM "Rotește",    -1, GRAYED
+    MENUITEM "Rotește",         -1, GRAYED
+  END
+  POPUP "În fere&astră"
+  BEGIN
+    MENUITEM "Aranjări în casca&dă",           ID_WINDOW_CASCADE
+    MENUITEM "Aranjări &orizontale", ID_WINDOW_TILE_HORZ
+    MENUITEM "Aranjări &verticale",   ID_WINDOW_TILE_VERT
+    MENUITEM "&Aranjează pictograme",     ID_WINDOW_ARRANGE
+    MENUITEM SEPARATOR
+    MENUITEM "&Următoarea\tCtrl+F6",     ID_WINDOW_NEXT
+  END
+  POPUP "&Fișier"
+  BEGIN
+    MENUITEM "&Despre…",       ID_ABOUT
+  END
+END
+
+IDR_POPUP MENU
+BEGIN
+  POPUP "popup"
+  BEGIN
+
+    MENUITEM SEPARATOR
+
+  END
+END
+
+
+IDD_NEWDOCSEL DIALOGEX 6,6,159,67
+CAPTION "Nou"
+FONT 8, "MS Shell Dlg",0,0
+STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | DS_MODALFRAME
+BEGIN
+  LTEXT "New document Type:", IDC_STATIC, 4, 3, 72, 9
+  LISTBOX IDC_LIST, 4, 16, 104, 46, WS_TABSTOP
+  PUSHBUTTON "Con&firmă", IDOK, 112, 16, 44, 13
+  PUSHBUTTON "A&nulează", IDCANCEL, 112, 33, 44, 13
+END
+
+
+IDD_ABOUTBOX DIALOGEX 22,16,190,182
+CAPTION "Despre ImageSoft"
+FONT 8, "MS Shell Dlg",0,0
+STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | DS_MODALFRAME
+BEGIN
+  LTEXT "ImageSoft v0.1\nDrept de autor (C) 2006\nThomas Weidenmueller (w3seek@reactos.org)\nGed Murphy (gedmurphy@gmail.com)", IDC_STATIC, 48, 7, 150, 36
+  PUSHBUTTON "Î&nchide", IDOK, 65, 162, 44, 15
+  ICON IDI_ICON, IDC_STATIC, 10, 10, 7, 30
+  EDITTEXT IDC_LICENSE_EDIT, 8, 40, 174, 110, WS_VISIBLE | WS_VSCROLL | WS_TABSTOP | ES_READONLY | ES_MULTILINE
+END
+
+
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_LICENSE           "Aceast program este software liber; îl puteți redistribui și/sau modifica în termenii Licenței Publice Generale GNU publicată de Free Software Foundation; fie în versiunea 2 a Licenței, sau (la alegere) a unei versiuni ulterioare.\r\n\r\nAcest program este distribuit doar în speranța că va fi util, însă FĂRĂ NICI O GARANȚIE; nici măcar cea implicită a VANDABILITĂȚII sau a UTILITĂȚII ÎNTR-UN SCOP ANUME.  Vedeți Licența Publică Generală GNU pentru mai multe detalii.\r\n\r\nAr trebui să primiți o copie a Licenței Publice Generale împreună cu acest program; altfel, scrieți către Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+  IDS_DEFAULT_NAME      "Document %1!u!"
+  IDS_READY             " Pregătit."
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_DOC_TYPE_RICH_TEXT    "Rich Text Document"
+  IDS_DOC_TYPE_UNICODE_TEXT "Document text"
+  IDS_DOC_TYPE_TEXT         "Unicode Text Document"
+END
+
+
+
+/* Tooltips */
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_TOOLTIP_NEW       "Nou"
+  IDS_TOOLTIP_OPEN      "&Deschide"
+  IDS_TOOLTIP_SAVE      "Păstrează"
+  IDS_TOOLTIP_PRINTPRE  "Previzionează imprimare"
+  IDS_TOOLTIP_PRINT     "Imprimă"
+  IDS_TOOLTIP_CUT       "Decupează"
+  IDS_TOOLTIP_COPY      "Copy"
+  IDS_TOOLTIP_PASTE     "&Lipește"
+  IDS_TOOLTIP_UNDO      "Desface"
+  IDS_TOOLTIP_REDO      "Reface"
+END
+
+/* Hints */
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_HINT_BLANK        " "
+  IDS_HINT_NEW          " Crează un document nou."
+  IDS_HINT_OPEN         " Deschide un document existent."
+  IDS_HINT_CLOSE        " Închide fereastra."
+  IDS_HINT_CLOSEALL     " Închide toate ferestrele."
+  IDS_HINT_SAVE         " Păstrează documentul activ."
+  IDS_HINT_SAVEAS       " Păstrează documentul activ sub un nou nume."
+  IDS_HINT_PRINT        " Imprimă documentul activ."
+  IDS_HINT_PRINTPRE     " Previzionează documentul de imprimat."
+  IDS_HINT_PAGESETUP    " Changes page layout settings."
+  IDS_HINT_EXIT         " Ieșire din această aplicație."
+
+  IDS_HINT_CASCADE      " Aranjează ferestrele permițând suprapunerea."
+  IDS_HINT_TILE_HORZ    " Aranjează ferestrele fără suprapunere."
+  IDS_HINT_TILE_VERT    " Aranjează ferestrele fără suprapunere."
+  IDS_HINT_ARRANGE      " Aranjează pictogramele la baza ferestrei."
+  IDS_HINT_NEXT         " Activează următoarea fereastră."
+
+  IDS_HINT_SYS_RESTORE  " Restabilește fereastra la mărimea originală."
+  IDS_HINT_SYS_MOVE     " Mută fereastra."
+  IDS_HINT_SYS_SIZE     " Redimensionează fereastra."
+  IDS_HINT_SYS_MINIMIZE " Reduce fereastra la minim."
+  IDS_HINT_SYS_MAXIMIZE " Mărește fereastra la maxim."
+END
+
