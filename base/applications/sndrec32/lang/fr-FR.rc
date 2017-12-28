@@ -1,4 +1,4 @@
-LANGUAGE LANG_FRENCH, SUBLANG_DEFAULT
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 IDC_REACTOS_SNDREC32 ACCELERATORS
 BEGIN
@@ -8,7 +8,7 @@ END
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 196, 75
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Information à propos de l'Enregistreur de Son ReactOS"
+CAPTION "À Propos du gestionnaire de services"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON IDI_SNDREC32, -1, 19, 14, 21, 20
@@ -39,8 +39,8 @@ BEGIN
         MENUITEM "&Insérer un fichier...", ID_EDIT_INSERTFILE
         MENUITEM "&Mix with File...", ID_EDIT_MIXFILE
         MENUITEM SEPARATOR
-        MENUITEM "Delete &Before Current Position",ID_EDIT_DELETEBEFORE, GRAYED
-        MENUITEM "Delete &After Current Position",ID_EDIT_DELETEAFTER, GRAYED
+        MENUITEM "Delete &Before Current Position", ID_EDIT_DELETEBEFORE, GRAYED
+        MENUITEM "Delete &After Current Position", ID_EDIT_DELETEAFTER, GRAYED
         MENUITEM SEPARATOR
         MENUITEM "Propriétés A&udio", ID_EDIT_AUDIOPROPS
     END
