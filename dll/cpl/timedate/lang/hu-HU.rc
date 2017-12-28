@@ -1,6 +1,4 @@
-/* Hungarian translation by Robert Horvath - talley at cubeclub.hu */
-
-LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_HUNGARIAN, SUBLANG_HUNGARIAN_HUNGARY
 
 IDD_DATETIMEPAGE DIALOGEX 0, 0, 252, 146
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -40,7 +38,7 @@ BEGIN
                  IDC_AUTOSYNC, 11, 7, 241, 10, BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP
     LTEXT "Kiszolgáló:", IDC_SERVERTEXT, 34, 22, 28, 13
     PUSHBUTTON "Szinkronizáljon most", IDC_UPDATEBUTTON, 187, 22, 49, 14
-    LTEXT "", IDC_SUCSYNC, 16, 54, 214, 23
+    LTEXT "", IDC_SUCSYNC, 12, 54, 214, 23
     LTEXT "", IDC_NEXTSYNC, 12, 96, 137, 12
     LTEXT "A szinkronizálás csak akkör történhet meg, ha az internetre fel van csatlakozva a gép.", -1, 12, 114, 225, 25
 END
