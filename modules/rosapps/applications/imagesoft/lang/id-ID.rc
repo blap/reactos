@@ -1,4 +1,4 @@
-LANGUAGE LANG_INDONESIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
 
 STRINGTABLE DISCARDABLE
 BEGIN
@@ -8,87 +8,87 @@ END
 
 IDR_MAINMENU MENU
 BEGIN
-  POPUP "&File"
+  POPUP "&Berkas"
   BEGIN
-    MENUITEM "&Baru...",            ID_NEW
+    MENUITEM "&Baru...",             ID_NEW
     MENUITEM "B&uka...",            ID_OPEN
     MENUITEM SEPARATOR
     MENUITEM "&Tutup\tCtrl+F4",     ID_CLOSE,   GRAYED
-    MENUITEM "Tutup s&emua",        ID_CLOSEALL,GRAYED
+    MENUITEM "Tutup s&emua",          ID_CLOSEALL,GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Simpan",             ID_SAVE,    GRAYED
-    MENUITEM "Simpan Seb&agai...",  ID_SAVEAS,  GRAYED
+    MENUITEM "&Simpan",               ID_SAVE,    GRAYED
+    MENUITEM "Simpan Seb&agai...",         ID_SAVEAS,  GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Tin&jau Cetakan",     ID_PRINTPRE,GRAYED
+    MENUITEM "Tin&jau Cetakan",      ID_PRINTPRE,GRAYED
     MENUITEM "&Cetak...",           ID_PRINT,   GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Pr&operti...",        ID_PROP,    GRAYED
+    MENUITEM "Pr&operti...",      ID_PROP,    GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Keluar\tAlt+F4",     ID_EXIT
+    MENUITEM "&Keluar\tAlt+F4",       ID_EXIT
   END
-  POPUP "&Edit"
+  POPUP "&Sunting"
   BEGIN
-    MENUITEM "&Undo",               ID_UNDO,    GRAYED
-    MENUITEM "&Redo",               ID_REDO,    GRAYED
+    MENUITEM "&Membuka",               ID_UNDO,    GRAYED
+    MENUITEM "&Mengulang",               ID_REDO,    GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Cu&t",                ID_CUT,     GRAYED
-    MENUITEM "&Copy",               ID_COPY,    GRAYED
-    MENUITEM "&Paste",              ID_PASTE,   GRAYED
+    MENUITEM "C&ut",                ID_CUT,     GRAYED
+    MENUITEM "&Salin",               ID_COPY,    GRAYED
+    MENUITEM "&Tempel",              ID_PASTE,   GRAYED
     MENUITEM "Paste sebagai gambar &baru", ID_PASTENEWIMAGE, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Pilih &Semua",        ID_SELALL,  GRAYED
+    MENUITEM "Pilih &Semua",         ID_SELALL,  GRAYED
   END
   POPUP "&Lihat"
   BEGIN
-    MENUITEM "&Piranti",            ID_TOOLS
-    MENUITEM "&Warna",              ID_COLOR
+    MENUITEM "&Piranti",              ID_TOOLS
+    MENUITEM "&Warna",             ID_COLOR
     MENUITEM "&Histori",            ID_HISTORY
     MENUITEM "Bar &Status",         ID_STATUSBAR
   END
   POPUP "Sesu&aikan"
   BEGIN
-    MENUITEM "Kecerahan...",        ID_BRIGHTNESS
-    MENUITEM "Kontras...",          ID_CONTRAST
-    MENUITEM "Hue/Saturasi...",     -1, GRAYED
+    MENUITEM "Kecerahan...",       ID_BRIGHTNESS
+    MENUITEM "Kontras...",         ID_CONTRAST
+    MENUITEM "Hue/Saturasi...",   -1, GRAYED
     POPUP "Warna"
     BEGIN
       MENUITEM "Hitam dan Putih",   ID_BLACKANDWHITE
-      MENUITEM "Balikkan Warna",    ID_INVERTCOLORS
+      MENUITEM "Balikkan Warna",     ID_INVERTCOLORS
     END
     MENUITEM SEPARATOR
-    MENUITEM "Blur",                ID_BLUR
-    MENUITEM "Sharpen",             ID_SHARPEN
-    MENUITEM "Lembutkan Sisi",      -1, GRAYED
-    MENUITEM "Tambah Bayangan",     -1, GRAYED
+    MENUITEM "Buram",                ID_BLUR
+    MENUITEM "Pertajam",             ID_SHARPEN
+    MENUITEM "Rotasi",        -1, GRAYED
+    MENUITEM "Rotasi",          -1, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Ukuran Gambar...",    -1, GRAYED
-    MENUITEM "Flip",                -1, GRAYED
-    MENUITEM "Cermin",              -1, GRAYED
+    MENUITEM "Rotasi",       -1, GRAYED
+    MENUITEM "Rotasi",                -1, GRAYED
+    MENUITEM "Rotasi",              -1, GRAYED
     MENUITEM "Rotasi",              -1, GRAYED
 
   END
   POPUP "&Warna"
   BEGIN
-    MENUITEM "&Edit Warna...",      ID_EDITCOLOURS
+    MENUITEM "&Edit Warna...", ID_EDITCOLOURS
   END
   POPUP "&Jendela"
   BEGIN
-    MENUITEM "&Cascade",            ID_WINDOW_CASCADE
-    MENUITEM "Tile &Horisontal",    ID_WINDOW_TILE_HORZ
-    MENUITEM "Tile &Vertikal",      ID_WINDOW_TILE_VERT
-    MENUITEM "&Atur Ikon",          ID_WINDOW_ARRANGE
+    MENUITEM "&Riam",           ID_WINDOW_CASCADE
+    MENUITEM "Tile &Horisontal", ID_WINDOW_TILE_HORZ
+    MENUITEM "Tile &Vertikal",   ID_WINDOW_TILE_VERT
+    MENUITEM "&Atur Ikon",     ID_WINDOW_ARRANGE
     MENUITEM SEPARATOR
-    MENUITEM "Beriku&t\tCtrl+F6",   ID_WINDOW_NEXT
+    MENUITEM "Beriku&t\tCtrl+F6",     ID_WINDOW_NEXT
   END
   POPUP "&Bantuan"
   BEGIN
-    MENUITEM "&Tentang...",         ID_ABOUT
+    MENUITEM "&Tentang...",       ID_ABOUT
   END
 END
 
 IDR_POPUP MENU
 BEGIN
-  POPUP "popup"
+  POPUP "muncul"
   BEGIN
     MENUITEM SEPARATOR
   END
@@ -109,7 +109,7 @@ BEGIN
   CONTROL    "Biru", IDC_BRI_BLUE, "Button", BS_AUTORADIOBUTTON, 142, 64, 42, 9
   EDITTEXT   IDC_BRI_EDIT, 98, 103, 28, 13
   CONTROL    "", IDC_BRI_TRACKBAR, "msctls_trackbar32", TBS_BOTH | TBS_NOTICKS | WS_TABSTOP, 2, 105, 90, 11
-  PUSHBUTTON "OK", IDOK, 142, 88, 48, 13
+  PUSHBUTTON "Oke", IDOK, 142, 88, 48, 13
   PUSHBUTTON "Batal", IDCANCEL, 142, 105, 48, 13
 END
 
@@ -149,7 +149,7 @@ BEGIN
   CONTROL    "", IDC_UNIT, "ComboBox", WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 99, 54, 50
   LTEXT      "Besar gambar:", IDC_STATIC, 12, 125, 42, 9
   LTEXT      "", IDC_IMAGE_SIZE, 58, 125, 54, 9
-  PUSHBUTTON "OK", IDOK, 50, 144, 48, 13
+  PUSHBUTTON "Oke", IDOK, 50, 144, 48, 13
   PUSHBUTTON "Batal", IDCANCEL, 102, 144, 48, 13
 END
 
@@ -190,11 +190,11 @@ BEGIN
   IDS_TOOLTIP_SAVE      "Simpan"
   IDS_TOOLTIP_PRINTPRE  "Tinjau cetakan"
   IDS_TOOLTIP_PRINT     "Cetak"
-  IDS_TOOLTIP_CUT       "Cut"
-  IDS_TOOLTIP_COPY      "Copy"
-  IDS_TOOLTIP_PASTE     "Paste"
-  IDS_TOOLTIP_UNDO      "Undo"
-  IDS_TOOLTIP_REDO      "Redo"
+  IDS_TOOLTIP_CUT       "Potong"
+  IDS_TOOLTIP_COPY      "Salin"
+  IDS_TOOLTIP_PASTE     "Tempel"
+  IDS_TOOLTIP_UNDO      "Membatalkan"
+  IDS_TOOLTIP_REDO      "Mengulangi"
 END
 
 
