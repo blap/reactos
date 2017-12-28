@@ -1,6 +1,4 @@
-/* TRANSLATOR: 2015 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 /* Dialog */
 IDD_GUI DIALOGEX 0, 0, 240, 255
@@ -32,39 +30,39 @@ END
 /* Information and error messages */
 STRINGTABLE
 BEGIN
-    IDS_USAGE "ReactOS Kapatma Aracı\n\
+    IDS_USAGE "ReactOS Shutdown Utility\n\
 \n\
 Usage: shutdown [/?] [/i | /l | /s | /r | /g | /a | /p | /h | /e] [/f]\n\
-       [/m \\\\bilgisayar][/t xxx][/d [p|u:]xx:yy [/c ""açıklama""]]\n\
+       [/m \\\\computer][/t xxx][/d [p|u:]xx:yy [/c """açıklama"""]]\n\
 \n\
-    Değiştirgen yok ya da /?    Bu yardımı göster.\n\
-    /i      Çizgelik kullanıcı arayüzünü (GUI) göster. Bu seçenek birinci\n\
-            seçenek olmalıdır.\n\
-    /l      Yalnızca yerli dizgede oturumu kapat. /m veyâ /d ile kullanılamaz.\n\
-    /s      Bilgisayarı kapat.\n\
-    /r      Bilgisayarı yeniden başlat.\n\
-    /g      Tüm kayıtlı uygulamaları ve bilgisayarı yeniden başlat.\n\
-    /a      Gecikmiş bir kapatmayı iptal et. Yalnızca gecikme süresi esnâsında\n\
-            kullanılabilir.\n\
-    /p      Bir süre aşımı veyâ uyarı olmadan yerli bilgisayarı kapat. /d veyâ\n\
-            /f ile kullanılabilir.\n\
-    /h      Yerli bilgisayarı anıkta beklet. /f ile kullanılabilir.\n\
-    /e      Beklenmeyen bilgisayarı kapatma için nedeni belgele.\n\
-    /m \\\\bilgisayar  Varış bilgisayarını (UNC/IP adresi) belirt.\n\
-    /t xxx  Bilgisayarı kapatmadan önce xxx sâniye denli süre aşımı zamânını ayarla.\n\
-            Geçerli aralık 0'dan başlar, 315360000'a (10 yıl) dektir,\n\
-            30 ön tanımlı değer olarak.\n\
-    /c ""açıklama""  Kapatma ya da yeniden başlatma için nedeni açıkla.\n\
-            en çok 512 damgaya izin verilmiştir.\n\
-    /f      Kullanıcıları uyarmadan çalışan uygulamaları kapatmaya zorla. Başka\n\
-            bir parametre belirtmezseniz, bu seçenek ayrıca oturumu kapatacak.\n\
-    /d [p|u:]xx:yy  Kapatma ya da yeniden başlatma için neden kodu ver.\n\
-            p kapatmanın ya da yeniden başlatmanın planlanmış olduğunu belirtir.\n\
-            u nedenin kullanıcı eliyle tanımlanmış olduğunu belirtir.\n\
-            p veyâ u belirtilmezse bilgisayarı kapatma ya da yeniden başlatma\n\
-            planlanmış değildir.\n\
-            xx büyük neden kodudur (256'dan küçük artı tamsayı).\n\
-            yy küçük neden kodudur (65536'dan küçük artı tamsayı).\n"
+    No arguments or /?    Display this help.\n\
+    /i      Show the graphical user interface (GUI). This option must be the\n\
+            first one.\n\
+    /l      Log off on the local system only. Cannot be used with /m or /d.\n\
+    /s      Shutdown the computer.\n\
+    /r      Restart the computer.\n\
+    /g      Restart the computer and restart all the registered applications.\n\
+    /a      Cancel a delayed shutdown. Can only be used during the delay\n\
+            period.\n\
+    /p      Shutdown the local computer without any timeout or warning. Can be\n\
+            used with /d or /f.\n\
+    /h      Hibernate the local computer. Usable with /f.\n\
+    /e      Document the reason for the unexpected computer shutdown.\n\
+    /m \\\\computer  Specify the target computer (UNC/IP address).\n\
+    /t xxx  Set the timeout period to xxx seconds before shutting down.\n\
+            The valid range starts from 0 to 315360000 (10 years),\n\
+            30 being the default value.\n\
+    /c """açıklama"""  Comment on the reason for shutdown or restart.\n\
+            512 characters maximum allowed.\n\
+    /f      Force running applications to close without warning users. If you\n\
+            do not specify any other parameter, this option will also log off.\n\
+    /d [p|u:]xx:yy  Give the reason code for the shutdown or the restart.\n\
+            p indicates that the shutdown or the restart is planned.\n\
+            u indicates that the reason is defined by the user.\n\
+            If neither p nor u are specified, the shutdown or the restart are\n\
+            not planned.\n\
+            xx is the major reason code (positive integer smaller than 256).\n\
+            yy is the minor reason code (positive integer smaller than 65536).\n"
 
     IDS_ERROR_SHUTDOWN_REBOOT "YANLIŞLIK: Kapatma ve yeniden başlatma aynı zamanda olamaz.\n"
     IDS_ERROR_TIMEOUT "YANLIŞLIK: %u süre aşımı değeri hudutların (0-315360000) dışında.\n"
