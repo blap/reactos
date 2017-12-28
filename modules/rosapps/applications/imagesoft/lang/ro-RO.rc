@@ -1,12 +1,4 @@
-/*
- * PROJECT:     ReactOS ImageSoft
- * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        rosapps/applications/imagesoft/lang/ro-RO.rc
- * PURPOSE:     Romanian Language File for ImageSoft
- * TRANSLATOR:  Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 STRINGTABLE DISCARDABLE
 BEGIN
@@ -18,79 +10,79 @@ IDR_MAINMENU MENU
 BEGIN
   POPUP "&Fișier"
   BEGIN
-    MENUITEM "&Nou…",               ID_NEW
-    MENUITEM "&Deschidere…",        ID_OPEN
+    MENUITEM "&Nou…",             ID_NEW
+    MENUITEM "&Deschidere…",            ID_OPEN
     MENUITEM SEPARATOR
-    MENUITEM "În&chide\tCtrl+F4",   ID_CLOSE,   GRAYED
-    MENUITEM "Închide t&ot",        ID_CLOSEALL,GRAYED
+    MENUITEM "În&chide\tCtrl+F4",     ID_CLOSE,   GRAYED
+    MENUITEM "Închide t&ot",          ID_CLOSEALL,GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Pă&strează",          ID_SAVE,    GRAYED
-    MENUITEM "&Păstrare în…",       ID_SAVEAS,  GRAYED
+    MENUITEM "Pă&strează",               ID_SAVE,    GRAYED
+    MENUITEM "&Păstrare în…",         ID_SAVEAS,  GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Pre&vizionează imprimare", ID_PRINTPRE, GRAYED
-    MENUITEM "&Imprimare…",         ID_PRINT,   GRAYED
+    MENUITEM "Pre&vizionează imprimare",      ID_PRINTPRE,GRAYED
+    MENUITEM "&Imprimare…",           ID_PRINT,   GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "P&roprietăți…",       ID_PROP,    GRAYED
+    MENUITEM "P&roprietăți…",      ID_PROP,    GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "I&eșire\tAlt+F4",     ID_EXIT
+    MENUITEM "I&eșire\tAlt+F4",       ID_EXIT
   END
   POPUP "&Editare"
   BEGIN
-    MENUITEM "&Desface",            ID_UNDO,    GRAYED
-    MENUITEM "&Reface",             ID_REDO,    GRAYED
+    MENUITEM "&Desface",               ID_UNDO,    GRAYED
+    MENUITEM "&Reface",               ID_REDO,    GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Decupează",          ID_CUT,     GRAYED
-    MENUITEM "&Copie",              ID_COPY,    GRAYED
-    MENUITEM "&Lipește",            ID_PASTE,   GRAYED
+    MENUITEM "&Decupează",                ID_CUT,     GRAYED
+    MENUITEM "&Copie",               ID_COPY,    GRAYED
+    MENUITEM "&Lipește",              ID_PASTE,   GRAYED
     MENUITEM "Lipește ca &imagine nouă", ID_PASTENEWIMAGE, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Selectează t&ot",     ID_SELALL,  GRAYED
+    MENUITEM "Selectează t&ot",         ID_SELALL,  GRAYED
   END
   POPUP "&Afișare"
   BEGIN
-    MENUITEM "&Instrumente",        ID_TOOLS
+    MENUITEM "&Instrumente",              ID_TOOLS
     MENUITEM "&Culori",             ID_COLOR
     MENUITEM "Ist&oric",            ID_HISTORY
-    MENUITEM "&Bară de stare",      ID_STATUSBAR
+    MENUITEM "&Bară de stare",         ID_STATUSBAR
   END
   POPUP "&Ajustare"
   BEGIN
-    MENUITEM "Strălucire…",         ID_BRIGHTNESS
-    MENUITEM "Contrast…",           ID_CONTRAST
+    MENUITEM "Strălucire…",       ID_BRIGHTNESS
+    MENUITEM "Contrast…",         ID_CONTRAST
     MENUITEM "Nuanță/Saturație…",   -1, GRAYED
     POPUP "Culoare"
     BEGIN
-      MENUITEM "Alb-negru",         ID_BLACKANDWHITE
-      MENUITEM "Inversează culori", ID_INVERTCOLORS
+      MENUITEM "Alb-negru",   ID_BLACKANDWHITE
+      MENUITEM "Inversează culori",     ID_INVERTCOLORS
     END
     MENUITEM SEPARATOR
-    MENUITEM "Încețoșează",         ID_BLUR
-    MENUITEM "Intensifică",         ID_SHARPEN
-    MENUITEM "Margini line",        -1, GRAYED
-    MENUITEM "Adaugă umbră",        -1, GRAYED
+    MENUITEM "Încețoșează",                ID_BLUR
+    MENUITEM "Intensifică",             ID_SHARPEN
+    MENUITEM "Rotește",        -1, GRAYED
+    MENUITEM "Rotește",          -1, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Dimensiune imagine…", -1, GRAYED
-    MENUITEM "Întoarce",            -1, GRAYED
-    MENUITEM "Oglindește",          -1, GRAYED
-    MENUITEM "Rotește",             -1, GRAYED
+    MENUITEM "Rotește",       -1, GRAYED
+    MENUITEM "Rotește",                -1, GRAYED
+    MENUITEM "Rotește",              -1, GRAYED
+    MENUITEM "Rotește",              -1, GRAYED
 
   END
   POPUP "&Culori"
   BEGIN
-    MENUITEM "&Editare culori…",    ID_EDITCOLOURS
+    MENUITEM "&Editare culori…", ID_EDITCOLOURS
   END
   POPUP "Fe&restră"
   BEGIN
-    MENUITEM "În &cascadă",         ID_WINDOW_CASCADE
+    MENUITEM "În &cascadă",           ID_WINDOW_CASCADE
     MENUITEM "Suprapuse &orizontal", ID_WINDOW_TILE_HORZ
-    MENUITEM "Suprapuse &vertical", ID_WINDOW_TILE_VERT
-    MENUITEM "&Aranjează pictograme", ID_WINDOW_ARRANGE
+    MENUITEM "Suprapuse &vertical",   ID_WINDOW_TILE_VERT
+    MENUITEM "&Aranjează pictograme",     ID_WINDOW_ARRANGE
     MENUITEM SEPARATOR
-    MENUITEM "Urmă&toare\tCtrl+F6", ID_WINDOW_NEXT
+    MENUITEM "Urmă&toare\tCtrl+F6",     ID_WINDOW_NEXT
   END
   POPUP "&?"
   BEGIN
-    MENUITEM "&Despre…",            ID_ABOUT
+    MENUITEM "&Despre…",       ID_ABOUT
   END
 END
 
