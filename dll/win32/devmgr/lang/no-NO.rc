@@ -1,6 +1,4 @@
-/* Norwegain translation by Sebastian Gasiorek, 2005-11-13 */
-
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 STRINGTABLE
 BEGIN
@@ -66,9 +64,9 @@ BEGIN
     IDS_DEV_DISABLED "Denne enheten er ikke startet."
     IDS_DEV_DISABLED2 "Denne enheten er deaktivert."
     IDS_DEV_DEVLOADER_NOT_READY "Oppstartlasteren for denne enheten kan ikke laste de nødvendige filene."
-    IDS_DEV_DEVLOADER_NOT_READY2 "" /* unused */
+    IDS_DEV_DEVLOADER_NOT_READY2 """ /* unused */
     IDS_DEV_DEVLOADER_NOT_READY3 "" /* unused */
-    IDS_DEV_DEVICE_NOT_THERE "Denne enheten er heller ikke valgt, eller vil ikke fungere riktig, eller så har den ikke alle driverene som trengs."
+    IDS_DEV_DEVICE_NOT_THERE ""Denne enheten er heller ikke valgt, eller vil ikke fungere riktig, eller så har den ikke alle driverene som trengs."
     IDS_DEV_MOVED "ReactOS starter prosessen for å setter opp denne enheten."
     IDS_DEV_TOO_EARLY "ReactOS er i prosessen for å setter opp denne enheten."
     IDS_DEV_NO_VALID_LOG_CONF "ReactOS kan ikke spesifisere ressursen for denne enheten."
@@ -103,7 +101,7 @@ BEGIN
     IDS_PROP_HARDWAREIDS "Hardware IDs"
     IDS_PROP_COMPATIBLEIDS "Compatible IDs"
     IDS_PROP_MATCHINGDEVICEID "Matching Device ID"
-    IDS_PROP_SERVICE "Service"
+    IDS_PROP_SERVICE "Tjeneste"
     IDS_PROP_ENUMERATOR "Enumerator"
     IDS_PROP_CAPABILITIES "Capabilities"
     IDS_PROP_DEVNODEFLAGS "Devnode Flags"
@@ -136,7 +134,7 @@ BEGIN
     LTEXT "", IDC_MANUFACTURER, 14, 88, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_LOCATION, 14, 100, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_STATUS, 14, 112, 183, 30
-    PUSHBUTTON "&Feilsøking...", IDC_TROUBLESHOOT, 85, 140, 54, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
+    PUSHBUTTON "&Feilsøk...", IDC_TROUBLESHOOT, 80, 140, 60, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
     PUSHBUTTON "E&genskaper", IDC_PROPERTIES, 146, 140, 50, 14
 END
 
@@ -231,14 +229,12 @@ END
 
 IDD_DEVICEPOWER DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
-CAPTION "Power"
+CAPTION "Strøm"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_DEVICON, 7, 7, 20, 20
     LTEXT "", IDC_DEVNAME, 37, 9, 174, 16, SS_NOPREFIX
 END
-
-
 
 
 /*
@@ -247,9 +243,9 @@ END
 
 IDR_MAINMENU MENU
 BEGIN
-  POPUP "&File"
+  POPUP "&Fil"
   BEGIN
-    MENUITEM "E&xit",                       IDC_EXIT
+    MENUITEM "&Avslutt",                       IDC_EXIT
   END
   MENUITEM "Action",                        IDC_ACTIONMENU
   POPUP "View"
@@ -277,22 +273,22 @@ END
 STRINGTABLE DISCARDABLE
 BEGIN
   IDS_MENU_UPDATE           "Update driver software..."
-  IDS_MENU_ENABLE           "Enable"
+  IDS_MENU_ENABLE           "Aktivert"
   IDS_MENU_DISABLE          "Disable"
-  IDS_MENU_UNINSTALL        "Uninstall"
+  IDS_MENU_UNINSTALL        "Avinstallere"
   IDS_MENU_SCAN             "Scan for hardware changes"
   IDS_MENU_ADD              "Add hardware"
-  IDS_MENU_PROPERTIES       "Properties"
+  IDS_MENU_PROPERTIES       "Egenskaper"
 END
 
 STRINGTABLE DISCARDABLE
 BEGIN
-  IDS_TOOLTIP_PROPERTIES    "Properties"
+  IDS_TOOLTIP_PROPERTIES    "Egenskaper"
   IDS_TOOLTIP_SCAN          "Scan for hardware changes"
-  IDS_TOOLTIP_ENABLE        "Enable"
+  IDS_TOOLTIP_ENABLE        "Aktivert"
   IDS_TOOLTIP_DISABLE       "Disable"
   IDS_TOOLTIP_UPDATE        "Update Driver Software"
-  IDS_TOOLTIP_UNINSTALL     "Uninstall"
+  IDS_TOOLTIP_UNINSTALL     "Avinstallere"
 END
 
 /* Hints */
@@ -307,7 +303,7 @@ BEGIN
   IDS_HINT_UNINSTALL    " Uninstalls the driver for the selected device."
   IDS_HINT_ADD          " Adds a legacy (non-Plug and Play) device to the computer." 
   IDS_HINT_ABOUT        " About ReactOS Device Manager."
-  IDS_HINT_EXIT         " Exits the program."
+  IDS_HINT_EXIT         " Avslutt programmet."
 
   IDS_HINT_DEV_BY_TYPE  " Displays devices by hardware type."
   IDS_HINT_DEV_BY_CONN  " Displays devices by connection."
@@ -315,10 +311,10 @@ BEGIN
   IDS_HINT_RES_BY_CONN  " Displays resources by connection type."
   IDS_HINT_SHOW_HIDDEN  " Displays legacy devices and devices that are no longer installed."
 
-  IDS_HINT_SYS_RESTORE  " Restores this window to normal size."
-  IDS_HINT_SYS_MOVE     " Moves this window."
-  IDS_HINT_SYS_SIZE     " Resizes this window."
-  IDS_HINT_SYS_MINIMIZE " Collapses this window to an icon."
-  IDS_HINT_SYS_MAXIMIZE " Expands this window to fill this screen."
-  IDS_HINT_SYS_CLOSE    " Closes this window."
+  IDS_HINT_SYS_RESTORE  " Gjenopprett vinduet til normal størrelse."
+  IDS_HINT_SYS_MOVE     " Flytt dette vinduet."
+  IDS_HINT_SYS_SIZE     " Endre størrelsen på dette vinduet."
+  IDS_HINT_SYS_MINIMIZE " Endre størrelsen på dette vinduet til en ikon."
+  IDS_HINT_SYS_MAXIMIZE " Endre størrelsen på dette vinduet til fullskjerm."
+  IDS_HINT_SYS_CLOSE    " Lukk dette vinduet."
 END
