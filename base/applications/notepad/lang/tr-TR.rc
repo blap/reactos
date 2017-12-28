@@ -1,6 +1,4 @@
-/* TRANSLATORS: 2012 Arda Tanrıkulu (ardatan) (ardatanrikulu@gmail.com), 2013-2016 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -150,7 +148,7 @@ END
 STRINGTABLE
 BEGIN
     STRING_PAGESETUP_HEADERVALUE "&n" /* FIXME */
-    STRING_PAGESETUP_FOOTERVALUE "Sayfa &s"   /* FIXME */
+    STRING_PAGESETUP_FOOTERVALUE "Sayfa &s" /* FIXME */
     STRING_PAGESETUP_LEFTVALUE "20 mm" /* FIXME */
     STRING_PAGESETUP_RIGHTVALUE "20 mm" /* FIXME */
     STRING_PAGESETUP_TOPVALUE "25 mm" /* FIXME */
@@ -162,12 +160,17 @@ BEGIN
     STRING_UNTITLED "Adsız"
     STRING_ALL_FILES "Tüm Kütükler (*.*)"
     STRING_TEXT_FILES_TXT "Metin Belgeleri (*.txt)"
-    STRING_TOOLARGE "%s kütüğü Not Defteri için çok büyük. Lütfen başka bir düzenleyici kullanınız."
-    STRING_NOTEXT "Bir metin girmediniz. Lütfen birşeyler yazıp yeniden deneyiniz."
-    STRING_DOESNOTEXIST "%s kütüğü yok. Yeni bir kütük oluşturmak ister misiniz?"
-    STRING_NOTSAVED "%s kütüğü değiştirilmiş. Değişiklikleri saklamak ister misiniz?"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "%s bulunamadı."
-    STRING_OUT_OF_MEMORY "Bu işi bitirmek için bellek yetersiz. Kullanılabilen belleği arttırmak için bir ya da daha çok uygulama kapatınız."
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "%s bulunamadı."
     STRING_ANSI "ANSI"
     STRING_UNICODE "Evrenlik Kod"
