@@ -1,6 +1,4 @@
-/* Translator: Ștefan Fulea (stefan dot fulea at mail dot md) */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -232,22 +230,22 @@ BEGIN
     LTEXT "Porturi:", IDC_STATIC, 10, 134, 38, 8
     CONTROL "", IDC_PORT_LIST, "SysListView32", LVS_REPORT | LVS_NOSORTHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 10, 144, 261, 31
-    LTEXT "Date specifice dispozitivului:", IDC_STATIC, 10, 177, 180, 8
+    LTEXT "Date specifice dispozitivului:", IDC_STATIC, 10, 177, 80, 8
     CONTROL "", IDC_DEVICE_LIST, "SysListView32", LVS_REPORT | LVS_NOSORTHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 10, 188, 261, 31
-    GROUPBOX "Utilizare", IDC_STATIC, 10, 219, 143, 39
-    LTEXT "Nedeterminată", IDC_UNDETERMINED, 18, 230, 50, 8, WS_DISABLED
+    GROUPBOX "Utilizare", IDC_STATIC, 10, 219, 125, 39
+    LTEXT "Nedeterminată", IDC_UNDETERMINED, 18, 230, 46, 8, WS_DISABLED
     LTEXT "Partajată", IDC_SHARED, 18, 240, 48, 8, WS_DISABLED
-    LTEXT "Dispozitiv, exclusivă", IDC_DEVICE_EXCLUSIVE, 75, 230, 74, 8, WS_DISABLED
-    LTEXT "Modúl-pilot, exclusivă", IDC_DRIVER_EXCLUSIVE, 75, 240, 74, 8, WS_DISABLED
-    RTEXT "Tip interfață:", IDC_STATIC, 158, 220, 57, 8
-    LTEXT "", IDC_INTERFACETYPE, 218, 220, 66, 8
-    RTEXT "Număr magistrală:", IDC_STATIC, 155, 230, 60, 8
-    LTEXT "", IDC_BUSNUMBER, 218, 230, 66, 8
-    RTEXT "Versiune:", IDC_STATIC, 164, 240, 51, 8
-    LTEXT "", IDC_VERSION, 218, 240, 66, 8
-    RTEXT "Revizie:", IDC_STATIC, 164, 250, 51, 8
-    LTEXT "", IDC_REVISION, 218, 250, 66, 8
+    LTEXT "Device exclusive", IDC_DEVICE_EXCLUSIVE, 72, 230, 58, 8, WS_DISABLED
+    LTEXT "Driver exclusive", IDC_DRIVER_EXCLUSIVE, 72, 240, 54, 8, WS_DISABLED
+    RTEXT "Interface Type:", IDC_STATIC, 144, 220, 58, 8
+    LTEXT "", IDC_INTERFACETYPE, 205, 220, 66, 8
+    RTEXT "Bus Number:", IDC_STATIC, 151, 230, 51, 8
+    LTEXT "", IDC_BUSNUMBER, 205, 230, 66, 8
+    RTEXT "Version:", IDC_STATIC, 151, 240, 51, 8
+    LTEXT "", IDC_VERSION, 205, 240, 66, 8
+    RTEXT "Revision:", IDC_STATIC, 151, 250, 51, 8
+    LTEXT "", IDC_REVISION, 205, 250, 66, 8
     DEFPUSHBUTTON "Î&nchide", IDOK, 92, 263, 40, 14
     PUSHBUTTON "&Date…", IDC_SHOW_RESOURCE_DATA, 148, 263, 40, 14, WS_DISABLED
 END
@@ -316,7 +314,7 @@ BEGIN
     IDS_ERROR "Eroare"
     IDS_WARNING "Avertisment"
     IDS_BAD_KEY "Cheia „%s” nu poate fi citită"
-    IDS_BAD_VALUE "Valoarea „%s” nu poate fi citită"
+    IDS_BAD_VALUE "Valoare eronată pentru opțiunea %s, domeniul valid este %u - %u.\n"
     IDS_UNSUPPORTED_TYPE "Acest tip de cheie (%ld) nu poate fi editat"
     IDS_TOO_BIG_VALUE "Valoarea este prea mare (%ld)"
     IDS_MULTI_SZ_EMPTY_STRING "Data de tip REG_MULTI_SZ nu poate conține șiruri goale.\nȘirurile goale au fost eliminate din listă."
@@ -396,10 +394,10 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_IMPORT_PROMPT              "Adăugarea de informații poate în mod neintenționat modifica sau șterge valori (de registru) și cauza funcționare incorectă. Dacă nu aveți încredere în sursa acestei informații din „%s”, nu o adăugați în registru.\n\nSigur doriți să continuați?"
-    IDS_IMPORT_OK                  "Cheile și valorile conținute în „%s” au fost adăugate cu succes în registru."
-    IDS_IMPORT_ERROR               "„%s” nu a putut fi importat: Eroare la deschiderea fișierului. Poate fi o problemă a mediului de stocare, a sistemului de fișiere sau fișierul în cauză să nu existe."
-    IDS_EXPORT_ERROR               "„%s” nu a putut fi exportat: Eroare la crearea sau scrierea în fișier. Poate fi o problemă a mediului de stocare sau a sistemului de fișiere."
+    IDS_IMPORT_PROMPT "Adăugarea de informații poate în mod neintenționat modifica sau șterge valori (de registru) și cauza funcționare incorectă. Dacă nu aveți încredere în sursa acestei informații din „%s”, nu o adăugați în registru.\n\nSigur doriți să continuați?"
+    IDS_IMPORT_OK "Cheile și valorile conținute în „%s” au fost adăugate cu succes în registru."
+    IDS_IMPORT_ERROR "„%s” nu a putut fi importat: Eroare la deschiderea fișierului. Poate fi o problemă a mediului de stocare, a sistemului de fișiere sau fișierul în cauză să nu existe."
+    IDS_EXPORT_ERROR "„%s” nu a putut fi exportat: Eroare la crearea sau scrierea în fișier. Poate fi o problemă a mediului de stocare sau a sistemului de fișiere."
 END
 
 STRINGTABLE
@@ -465,7 +463,7 @@ STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_B
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Domeniul de export", IDC_STATIC, 2, 0, 366, 48
-    CONTROL "T&ot registrul", IDC_EXPORT_ALL, "Button", BS_AUTORADIOBUTTON, 10, 10, 65, 11
+    CONTROL "T&ot registrul", IDC_EXPORT_ALL, "Button", BS_AUTORADIOBUTTON, 10, 10, 29, 11
     CONTROL "&Doar ramura selectată", IDC_EXPORT_BRANCH, "Button", BS_AUTORADIOBUTTON, 10, 22, 100, 11
     EDITTEXT IDC_EXPORT_BRANCH_TEXT, 30, 34, 335, 12
 END
@@ -511,19 +509,19 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON "&Găsește", IDOK, 197, 7, 50, 14
     PUSHBUTTON "Î&nchide", IDCANCEL, 197, 24, 50, 14
-    GROUPBOX "Caută în", IDC_STATIC, 7, 25, 42, 51
-    LTEXT "&Caută conținutul:", IDC_STATIC, 7, 8, 57, 10
-    EDITTEXT IDC_FINDWHAT, 67, 7, 120, 13, ES_AUTOHSCROLL
-    CONTROL "C&hei", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 14, 36, 30, 8
-    CONTROL "&Valori", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 14, 48, 30, 8
-    CONTROL "&Date", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 14, 60, 30, 8
-    CONTROL "&Fără potriviri parțiale", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 58, 32, 94, 13
-    CONTROL "Sensi&bil la majuscule", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 58, 48, 90, 12
+    GROUPBOX "Caută în", IDC_STATIC, 7, 25, 63, 51
+    LTEXT "&Caută conținutul:", IDC_STATIC, 7, 8, 37, 10
+    EDITTEXT IDC_FINDWHAT, 47, 7, 142, 13, ES_AUTOHSCROLL
+    CONTROL "&Keys", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 14, 36, 35, 8
+    CONTROL "&Values", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 14, 48, 36, 8
+    CONTROL "&Data", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 14, 60, 42, 8
+    CONTROL "Match &whole string only", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 83, 32, 94, 13
+    CONTROL "Match &case", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 83, 48, 90, 12
 END
 
 IDD_FINDING DIALOGEX 0, 0, 145, 50
