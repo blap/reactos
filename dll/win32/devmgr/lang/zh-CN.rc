@@ -1,6 +1,4 @@
-/* Simplified Chinese translation by Henry Tang Ih 2016 (henrytang2@hotmail.com) */
-
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+LANGUAGE LANG_CHINESE_SIMPLIFIED, SUBLANG_CHINESE_SIMPLIFIED
 
 STRINGTABLE
 BEGIN
@@ -67,8 +65,6 @@ BEGIN
     IDS_DEV_DISABLED2 "此设备已被禁用。"
     IDS_DEV_DEVLOADER_NOT_READY "此设备无法加载必需的驱动程序。"
     IDS_DEV_DEVLOADER_NOT_READY2 "这个显示适配器工作正常。"
-    IDS_DEV_DEVLOADER_NOT_READY3 "此设备无法加载必需的驱动程序。"
-    IDS_DEV_DEVICE_NOT_THERE "此设备是要么不存在，工作不正常，或者没有安装所有的驱动程序。"
     IDS_DEV_MOVED "ReactOS 正在设置此设备。"
     IDS_DEV_TOO_EARLY "ReactOS 正在设置此设备。"
     IDS_DEV_NO_VALID_LOG_CONF "ReactOS 不能指定此设备的资源。"
