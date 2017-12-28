@@ -1,26 +1,25 @@
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
     IDS_USAGE "ReactOS Timeout Utility\n\
 \n\
-TIMEOUT [/?] [/T] таймаут [/NOBREAK]\n\
+TIMEOUT [/?] [/T] delay [/NOBREAK]\n\
 \n\
-Описание:\n\
-    Команда позволяет организовать режим ожидания фиксированного интервала\n\
-    времени, в секундах, либо интервала до нажатия клавиши на клавиатуре.\n\
+Description:\n\
+    This tool waits until a specified time period (in seconds) has elapsed,\n\
+    or until any key is pressed. A parameter to ignore the key press is also\n\
+    accepted.\n\
 \n\
-Синтаксис:\n\
-    /?          Показать эту справку.\n\
+Parameters:\n\
+    /?        Display this help screen.\n\
 \n\
-    /T таймаут  Время ожидания в секундах.\n\
-                Допустимый интервал: от -1 до 99999 секунд.\n\
-                Значение таймаута, равное -1 задает неограниченное время\n\
-                ожидания до нажатия клавиши.\n\
-                Ключ ""/T"" не является обязательным. Допускается указание\n\
-                значения таймера без указания ключа.\n\
+    /T delay  Specify the number of seconds to wait (-1 to 99999).\n\
+              A value of -1 means the program will wait until a key is pressed.\n\
+              Note that the """/T""" specification is optional, you can just\n\
+              specify the delay value without it.\n\
 \n\
-    /NOBREAK    Игнорировать нажатия клавиш, кроме сочетания Ctrl+C.\n\
+    /NOBREAK  Ignore all keyboard input except for Ctrl+C.\n\
 "
     IDS_ERROR_OUT_OF_RANGE "Ошибка: Значение таймера должно находиться в пределах диапазона (от -1 до 99999).\n"
     IDS_ERROR_INVALID_HANDLE_VALUE "Ошибка: Не удалось получить стандартный дескриптор консоли (ошибка %lu).\n"
