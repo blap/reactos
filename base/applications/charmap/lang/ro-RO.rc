@@ -1,10 +1,4 @@
-/*
- * FILE:             base/applications/charmap/lang/ro-RO.rc
- *                   ReactOS Project (http://www.reactos.org)
- * TRANSLATOR:       Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDD_CHARMAP DIALOGEX 6, 6, 292, 224
 FONT 8, "MS Shell Dlg", 0, 0
@@ -21,7 +15,7 @@ BEGIN
             WS_CHILD | WS_VISIBLE | WS_TABSTOP, 74, 186, 114, 13
     DEFPUSHBUTTON "S&electează", IDC_SELECT, 194, 186, 44, 13
     PUSHBUTTON "&Copiază", IDC_COPY, 242, 186, 44, 13, WS_DISABLED
-    CONTROL "Mod a&vansat", IDC_CHECK_ADVANCED, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Ad&vanced view", IDC_CHECK_ADVANCED, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 8, 208, 95, 10
 END
 
@@ -40,15 +34,15 @@ BEGIN
     EDITTEXT IDC_EDIT_UNICODE, 236, 4, 28, 12, ES_AUTOHSCROLL
 END
 
-IDD_ABOUTBOX DIALOGEX 22, 16, 270, 182
+IDD_ABOUTBOX DIALOGEX 22, 16, 210, 182
 CAPTION "Despre"
 FONT 8, "MS Shell Dlg", 0, 0
 STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | DS_MODALFRAME
 BEGIN
-    LTEXT "Hartă de caractere v0.1\nDrept de autor (C) 2007 Ged Murphy (gedmurphy@reactos.org)\nTraducere de Ștefan Fulea (stefan.fulea@mail.md)", IDC_STATIC, 48, 7, 210, 36
-    PUSHBUTTON "Î&nchide", IDOK, 105, 162, 44, 15
+    LTEXT "Hartă de caractere v0.1\nDrept de autor (C) 2007 Ged Murphy (gedmurphy@reactos.org)\nTraducere de Ștefan Fulea (stefan.fulea@mail.md)", IDC_STATIC, 48, 7, 150, 36
+    PUSHBUTTON "&Close", IDOK, 75, 162, 44, 15
     ICON IDI_ICON, IDC_STATIC, 10, 10, 7, 30
-    EDITTEXT IDC_LICENSE_EDIT, 8, 44, 254, 107, WS_VISIBLE | WS_VSCROLL |
+    EDITTEXT IDC_LICENSE_EDIT, 8, 44, 194, 107, WS_VISIBLE | WS_VSCROLL |
              WS_TABSTOP | ES_READONLY | ES_MULTILINE
 END
 
