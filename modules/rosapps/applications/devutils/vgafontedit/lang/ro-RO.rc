@@ -1,22 +1,22 @@
 /*
  * PROJECT:     ReactOS VGA Font Editor
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
- * PURPOSE:     Romanian resource file
+ * PURPOSE:     English resource file
  * COPYRIGHT:   Copyright 2008 Colin Finck (colin@reactos.org)
- * TRANSLATOR:  Ștefan Fulea (stefan dot fulea at mail dot md)
+ * TRANSLATOR:  Colin Finck
  */
 
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDD_ABOUT DIALOGEX 10, 10, 130, 62
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
-CAPTION "About"
+CAPTION "Despre"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    ICON           IDI_MAIN,                          IDC_STATIC, 10, 10, 20, 20
-    LTEXT          "Editor de font VGA ReactOS",      IDC_STATIC, 37, 10, 93, 10
+    ICON           IDI_MAIN,                     IDC_STATIC, 10, 10, 20, 20
+    LTEXT          "Editor de font VGA ReactOS",    IDC_STATIC, 37, 10, 93, 10
     LTEXT          "Drept de autor 2008 Colin Finck", IDC_STATIC, 37, 20, 93, 10
-    DEFPUSHBUTTON  "Î&nchide",                        IDCANCEL,   40, 44, 55, 15 
+    DEFPUSHBUTTON  "Î&nchide",                         IDCANCEL,   40, 44, 55, 15
 END
 
 IDD_EDITGLYPH DIALOGEX 32768, 32768, 246, 197
@@ -29,7 +29,7 @@ BEGIN
     CONTROL "", IDC_EDIT_GLYPH_PREVIEW, EDIT_GLYPH_PREVIEW_CLASSW,  0, 209, 5, 32, 32
 
     DEFPUSHBUTTON "Con&firmă", IDOK, 48, 177, 70, 14
-    PUSHBUTTON    "A&nulează", IDCANCEL, 125, 177, 70, 14
+    PUSHBUTTON "A&nulează", IDCANCEL, 125, 177, 70, 14
 END
 
 IDM_MAINMENU MENU
@@ -72,22 +72,22 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_OPENFILTER, "Toate formatele compatibile (*.bin,*.psf)|*.bin;*.psf|Fișiere de font binar (*.bin)|*.bin|Fonturi (de versiune 1) PC Screen (*.psf)|*.psf|"
-    IDS_SAVEFILTER, "Fișiere de font binar (*.bin)|*.bin|"
-    IDS_OPENERROR, "Eroare la deschiderea fișierului! (Număr de eroare %1!u!)"
-    IDS_READERROR, "Eroare la citirea fișierului! (Număr de eroare %1!u!)"
-    IDS_WRITEERROR, "Eroare la scrierea fișierului! (Număr de eroare %1!u!)"
-    IDS_UNSUPPORTEDFORMAT, "Format de fișier incompatibil!"
-    IDS_UNSUPPORTEDPSF, "Format incompatibil de font PSF! Posibilitățile editorului se limitează la fonturile 8x8 fără moduri speciale."
+    IDS_OPENFILTER, "All supported formats (*.bin,*.psf)|*.bin;*.psf|Binary Font Files (*.bin)|*.bin|PC Screen Fonts Version 1 (*.psf)|*.psf|"
+    IDS_SAVEFILTER, "Binary Font Files (*.bin)|*.bin|"
+    IDS_OPENERROR, "Error while opening the file! (Error number %1!u!)"
+    IDS_READERROR, "Error while reading the file! (Error number %1!u!)"
+    IDS_WRITEERROR, "Error while writing the file! (Error number %1!u!)"
+    IDS_UNSUPPORTEDFORMAT, "Unsupported file format!"
+    IDS_UNSUPPORTEDPSF, "Unsupported PSF font format! The editor only supports 8x8 fonts with no special modes."
     IDS_DOCNAME, "Font %1!u!"
-    IDS_SAVEPROMPT, "Modificările în fișierul „%1” încă nu au fost păstrate.\n\nDoriți păstrarea lor?"
-    IDS_APPTITLE, "Editor de font VGA ReactOS"
-    IDS_CLOSEEDIT, "Închideți mai întâi toate ferestrele de editare!"
+    IDS_SAVEPROMPT, "The file ""%1"" was modified, but not saved.\n\nDo you want to save it?"
+    IDS_APPTITLE, "ReactOS VGA Font Editor"
+    IDS_CLOSEEDIT, "Please close all open Edit windows first!"
 
-    IDS_TOOLTIP_NEW, "Nou"
-    IDS_TOOLTIP_OPEN, "Deschide"
-    IDS_TOOLTIP_SAVE, "Păstrează"
-    IDS_TOOLTIP_EDIT_GLYPH, "Editează glifă"
-    IDS_TOOLTIP_COPY, "Copiază"
-    IDS_TOOLTIP_PASTE, "Lipește"
+    IDS_TOOLTIP_NEW, "New"
+    IDS_TOOLTIP_OPEN, "Open"
+    IDS_TOOLTIP_SAVE, "Save"
+    IDS_TOOLTIP_EDIT_GLYPH, "Edit Glyph"
+    IDS_TOOLTIP_COPY, "Copy"
+    IDS_TOOLTIP_PASTE, "Paste"
 END
