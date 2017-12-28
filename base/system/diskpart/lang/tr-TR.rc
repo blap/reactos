@@ -1,16 +1,14 @@
-/* TRANSLATOR: 2015 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 /* Basic application information */
 STRINGTABLE
 BEGIN
     IDS_APP_HEADER "ReactOS DiskPart"
-    IDS_APP_USAGE "\nDisk Bölümlendirme Yorumlayıcısı.\n\n\
-Kullanım: DISKPART [/S kütük adı] [/T süre aşımı] [/?]\n\n\
-/S kütük adı\tVerilen betiği çalıştırır.\n\
-/T süre aşımı\tDiskPart kullanım örtüşmesini önlemeye sâniye olarak süre aşımı.\n\
-/?\t\tBu yardım iletisini görüntüler.\n\n"
+    IDS_APP_USAGE "\nDisk Partitioning Interpreter.\n\n\
+Usage: DISKPART [/S filename] [/T timeout] [/?]\n\n\
+/S filename\tRuns the given script.\n\
+/T timeout\tTimeout in seconds to prevent DiskPart usage overlap.\n\
+/?\t\tDisplay this help message.\n\n"
     IDS_APP_LICENSE "GNU GPL sürüm 2 altında ruhsatlanmıştır.\n"
     IDS_APP_CURR_COMPUTER "Bilgisayar üzerinde: %s\n\n"
     IDS_APP_LEAVING "\nDiskPart'tan çıkılıyor...\n"
@@ -56,7 +54,7 @@ BEGIN
     IDS_RESCAN_END "\nDiskPart yapılandırmanızı taramayı bitirdi.\n\n"
 END
 
-/* SELECT command strings */
+/* Select command strings */
 STRINGTABLE
 BEGIN
     IDS_SELECT_NO_DISK "\nŞimdilik bir disk seçilmemiş.\nLütfen bir disk seçiniz ve yeniden deneyiniz.\n\n"
@@ -89,7 +87,7 @@ BEGIN
     IDS_MSG_ARG_SYNTAX_ERROR "Bu komut için belirtilen değiştirgen(ler) geçerli değil.\nKomu türü üzerinde daha çok bilgi için:"
 END
 
-/* Help Command Descripions */
+/* Help Command Descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_DESC_ACTIVE "ACTIVE\t\t- Seçili bölümü etkin olarak imle.\n"
@@ -144,250 +142,250 @@ END
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ACTIVE "\n\
-<Buraya ACTIVE komutu yardım metnini ekleyiniz.>\n\n"
+<Add active command help text here>\n\n"
 END
 
 /* Add help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ADD "\n\
-<Buraya ADD komutu yardım metnini ekleyiniz.>\n\n"
+<Add add command help text here>\n\n"
 END
 
 /* Assign help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ASSIGN "\n\
-<Buraya ASSIGN komutu yardım metnini ekleyiniz.>\n\n"
+<Add assign command help text here>\n\n"
 END
 
 /* Attach help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ATTACH "\n\
-<Buraya ATTACH komutu yardım metnini ekleyiniz.>\n\n"
+<Add attach command help text here>\n\n"
 END
 
 /* Attributes Command Messages */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ATTRIBUTES "\n\
-<Buraya ATTRIBUTES komutu yardım metnini ekleyiniz.>\n\n"
+<Add attributes command help text here>\n\n"
 END
 
 /* Automount help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_AUTOMOUNT "\n\
-<Buraya AUTOMOUNT komutu yardım metnini ekleyiniz.>\n\n"
+<Add automount command help text here>\n\n"
 END
 
 /* Break help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_BREAK "\n\
-<Buraya BREAK komutu yardım metnini ekleyiniz.>\n\n"
+<Add break command help text here>\n\n"
 END
 
 /* Clean help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_CLEAN "\n\
-<Buraya CLEAN komutu yardım metnini ekleyiniz.>\n\n"
+<Add clean command help text here>\n\n"
 END
 
 /* Compact help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_COMPACT "\n\
-<Buraya COMPACT komutu yardım metnini ekleyiniz.>\n\n"
+<Add compact command help text here>\n\n"
 END
 
 /* Convert help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_CONVERT "\n\
-<Buraya CONVERT komutu yardım metnini ekleyiniz.>\n\n"
+<Add convert command help text here>\n\n"
 END
 
 /* Convert help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_CREATE "\n\
-<Buraya CREATE komutu yardım metnini ekleyiniz.>\n\n"
+<Add create command help text here>\n\n"
 END
 
 /* Delete help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_DELETE "\n\
-<Buraya DELETE komutu yardım metnini ekleyiniz.>\n\n"
+<Add delete command help text here>\n\n"
 END
 
 /* Delete help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_DETAIL "\n\
-<Buraya DETAIL komutu yardım metnini ekleyiniz.>\n\n"
+<Add detail command help text here>\n\n"
 END
 
 /* Detach help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_DETACH "\n\
-<Buraya DETACH komutu yardım metnini ekleyiniz.>\n\n"
+<Add detach command help text here>\n\n"
 END
 
 /* Expand help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_EXPAND "\n\
-<Buraya EXPAND komutu yardım metnini ekleyiniz.>\n\n"
+<Add expand command help text here>\n\n"
 END
 
 /* Extend help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_EXTEND "\n\
-<Buraya EXTEND komutu yardım metnini ekleyiniz.>\n\n"
+<Add extend command help text here>\n\n"
 END
 
 /* Filesystems help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_FILESYSTEMS "\n\
-<Buraya FILESYSTEMS komutu yardım metnini ekleyiniz.>\n\n"
+<Add filesystems command help text here>\n\n"
 END
 
 /* Format help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_FORMAT "\n\
-<Buraya FORMAT komutu yardım metnini ekleyiniz.>\n\n"
+<Add format command help text here>\n\n"
 END
 
 /* GPT help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_GPT "\n\
-<Buraya GPT komutu yardım metnini ekleyiniz.>\n\n"
+<Add gpt command help text here>\n\n"
 END
 
 /* Help help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_HELP "\n\
-<Buraya HELP komutu yardım metnini ekleyiniz.>\n\n"
+<Add help command help text here>\n\n"
 END
 
 /* Import help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_IMPORT "\n\
-<Buraya IMPORT komutu yardım metnini ekleyiniz.>\n\n"
+<Add import command help text here>\n\n"
 END
 
 /* Inactive help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_INACTIVE "\n\
-<Buraya INACTIVE komutu yardım metnini ekleyiniz.>\n\n"
+<Add inactive command help text here>\n\n"
 END
 
 /* List help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_LIST "\n\
-<Buraya LIST komutu yardım metnini ekleyiniz.>\n\n"
+<Add list command help text here>\n\n"
 END
 
 /* Merge help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_MERGE "\n\
-<Buraya MERGE komutu yardım metnini ekleyiniz.>\n\n"
+<Add merge command help text here>\n\n"
 END
 
 /* Offline help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_OFFLINE "\n\
-<Buraya OFFLINE komutu yardım metnini ekleyiniz.>\n\n"
+<Add OFFLINE command help text here>\n\n"
 END
 
 /* Online help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ONLINE "\n\
-<Buraya ONLINE komutu yardım metnini ekleyiniz.>\n\n"
+<Add ONLINE command help text here>\n\n"
 END
 
 /* Recover help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_RECOVER "\n\
-<Buraya RECOVER komutu yardım metnini ekleyiniz.>\n\n"
+<Add RECOVER command help text here>\n\n"
 END
 
 /* Remove help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_REMOVE "\n\
-<Buraya REMOVE komutu yardım metnini ekleyiniz.>\n\n"
+<Add REMOVE command help text here>\n\n"
 END
 
 /* Repair help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_REPAIR "\n\
-<Buraya REPAIR komutu yardım metnini ekleyiniz.>\n\n"
+<Add REPAIR command help text here>\n\n"
 END
 
 /* Rescan help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_RESCAN "\n\
-<Buraya RESCAN komutu yardım metnini ekleyiniz.>\n\n"
+<Add RESCAN command help text here>\n\n"
 END
 
 /* Retain help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_RETAIN "\n\
-<Buraya RETAIN komutu yardım metnini ekleyiniz.>\n\n"
+<Add RETAIN command help text here>\n\n"
 END
 
 /* San help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_SAN "\n\
-<Buraya SAN komutu yardım metnini ekleyiniz.>\n\n"
+<Add SAN command help text here>\n\n"
 END
 
 /* Select help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_SELECT "\n\
-<Buraya SELECT komutu yardım metnini ekleyiniz.>\n\n"
+<Add SELECT command help text here>\n\n"
 END
 
 /* Setid help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_SETID "\n\
-<Buraya SETID komutu yardım metnini ekleyiniz.>\n\n"
+<Add SETID command help text here>\n\n"
 END
 
 /* Setid help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_SHRINK "\n\
-<Buraya SHRINK komutu yardım metnini ekleyiniz.>\n\n"
+<Add SHRINK command help text here>\n\n"
 END
 
 /* Uniqueid help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_UNIQUEID "\n\
-<Buraya UNIQUEID komutu yardım metnini ekleyiniz.>\n\n"
+<Add UNIQUEID command help text here>\n\n"
 END
