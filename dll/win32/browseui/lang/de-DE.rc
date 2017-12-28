@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
 
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 /* Menus */
 
@@ -137,17 +137,17 @@ FONT 8, "MS Shell Dlg"
     LTEXT "", IDC_TEXT_LINE + 1, 7, 55, 250, 10, SS_LEFT|SS_NOPREFIX
     LTEXT "", IDC_TEXT_LINE + 2, 7, 75, 190, 10, SS_LEFT|SS_NOPREFIX
     CONTROL "", IDC_PROGRESS_BAR, PROGRESS_CLASSA, WS_BORDER, 7, 65, 190, 8
-    PUSHBUTTON "Abbrechen", IDCANCEL, 205, 65, 50, 15, WS_GROUP | WS_TABSTOP | WS_VISIBLE
+    PUSHBUTTON "Cancel", IDCANCEL, 205, 65, 50, 15, WS_GROUP | WS_TABSTOP | WS_VISIBLE
 }
 
 IDD_CUSTOMIZETOOLBAREX DIALOGEX 0, 0, 357, 33
 STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CAPTION
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    LTEXT "Te&xtoptionen:", -1, 4, 2, 53, 15
-    COMBOBOX IDC_TEXTOPTIONS, 60, 0, 123, 57, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    LTEXT "Symboloptio&nen:", -1, 4, 20, 53, 15
-    COMBOBOX IDC_ICONOPTIONS, 60, 18, 123, 57, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Te&xtoptionen:", -1, 4, 2, 48, 15
+    COMBOBOX IDC_TEXTOPTIONS, 52, 0, 123, 57, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Symboloptio&nen:", -1, 4, 20, 48, 15
+    COMBOBOX IDC_ICONOPTIONS, 52, 18, 123, 57, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
 END
 
 /* Accelerators */
@@ -306,10 +306,9 @@ BEGIN
     IDS_FORWARD "Vorwärts zu %s"
 END
 
-
 STRINGTABLE
 BEGIN
-    IDS_STANDARD_TOOLBAR, "|Zurück|Vorwärts|Übergeordneter Ordner|Suchen|Ordner|Verschieben nach|Kopieren nach|Löschen|Rückgängig|Ansicht|Stop|Aktualisieren|Startseite|Netzlaufwerk verbinden|Netzlaufwerk trennen|Favoriten|Verlauf|Vollbild|Eigenschaften|Ausschneiden|Kopieren|Einfügen|Ordneroptionen||"
+    IDS_STANDARD_TOOLBAR, "|Back|Forward|Up|Search|Folders|Move To|Copy To|Delete|Undo|Views|Stop|Refresh|Home|Map Drive|Disconnect|Favorites|History|Full Screen|Properties|Cut|Copy|Paste|Folder Options||"
 END
 
 STRINGTABLE
