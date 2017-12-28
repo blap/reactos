@@ -1,4 +1,4 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 IDR_MAINMENU MENU
 BEGIN
@@ -29,33 +29,33 @@ BEGIN
     MENUITEM "&Kopieren",           ID_COPY, GRAYED
     MENUITEM "&Einfügen",          ID_PASTE, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Löschen",           -1, GRAYED
+    MENUITEM "Objekt",           -1, GRAYED
     MENUITEM "Alles &markieren",     ID_SELALL, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&Suchen...\tStrg+F",-1, GRAYED
-    MENUITEM "Weitersuchen",       -1, GRAYED
-    MENUITEM "Erset&zen...\tStrg+H", -1, GRAYED
+    MENUITEM "Objekt",-1, GRAYED
+    MENUITEM "Objekt",       -1, GRAYED
+    MENUITEM "Objekt", -1, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Objekteigenschaften",-1, GRAYED
+    MENUITEM "Objekt",-1, GRAYED
     MENUITEM "Objekt",          -1, GRAYED
   END
   POPUP "&Ansicht"
   BEGIN
-    MENUITEM "&Symbolleiste",        -1, CHECKED
-    MENUITEM "&Formatierungsleiste",     -1, CHECKED
+    MENUITEM "&Lineal",        -1, CHECKED
+    MENUITEM "&Lineal",     -1, CHECKED
     MENUITEM "&Lineal",          -1, CHECKED
     MENUITEM "Status&leiste",     ID_STATUSBAR, CHECKED
   END
   POPUP "&Einfügen"
   BEGIN
-    MENUITEM "&Datum und Uhrzeit...",-1, GRAYED
+    MENUITEM "&Objekt...",-1, GRAYED
     MENUITEM "&Objekt...",       -1, GRAYED
   END
   POPUP "&Format"
   BEGIN
     MENUITEM "&Schriftart...",        -1 GRAYED
-    MENUITEM "Aufzählungszeichen",     -1, GRAYED
-    MENUITEM "Absatz...",    -1, GRAYED
+    MENUITEM "Tabstops...",     -1, GRAYED
+    MENUITEM "Tabstops...",    -1, GRAYED
     MENUITEM "Tabstops...",         -1, GRAYED
   END
   POPUP "&Fenster"
@@ -75,7 +75,7 @@ END
 
 IDR_POPUP MENU
 BEGIN
-  POPUP "popup"
+  POPUP "Popup"
   BEGIN
 
     MENUITEM SEPARATOR
@@ -102,7 +102,7 @@ FONT 8, "MS Shell Dlg",0,0
 STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | DS_MODALFRAME
 BEGIN
   LTEXT "WordPad II v0.1\nCopyright (C) 2006\nGed Murphy (gedmurphy@gmail.com)", IDC_STATIC, 48, 7, 150, 36
-  PUSHBUTTON "Close", IDOK, 65, 162, 44, 15
+  PUSHBUTTON "Schließen", IDOK, 65, 162, 44, 15
   ICON IDI_ICON, IDC_STATIC, 10, 10, 7, 30
   EDITTEXT IDC_LICENSE_EDIT, 8, 40, 174, 110, WS_VISIBLE | WS_VSCROLL | WS_TABSTOP | ES_READONLY | ES_MULTILINE
 END
