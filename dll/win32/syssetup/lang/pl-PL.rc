@@ -1,4 +1,23 @@
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+/*
+ * Copyright (C) 2004 Filip Navara
+ * Copyright (C) 2004 Eric Kohl
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
@@ -6,7 +25,7 @@ CAPTION "Instalator ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Witamy w programie instalacyjnym ReactOS.", IDC_WELCOMETITLE, 115, 8, 195, 24
-    LTEXT "Ten program pomoże w instalacji systemu ReactOS. W tym celu konieczne będzie zebranie informacji o twoim komputerze, by prawidłowo skonfigurować system operacyjny.", IDC_STATIC, 115, 40, 168, 100
+    LTEXT "Ten program pomoże w instalacji systemu ReactOS. W tym celu konieczne będzie zebranie informacji o twoim komputerze, by prawidłowo skonfigurować system operacyjny.", IDC_STATIC, 115, 40, 195, 100
     LTEXT "Naciśnij Dalej, by kontynuować.", IDC_STATIC, 115, 169, 195, 17
 END
 
@@ -17,7 +36,7 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT "Twórcy ReactOS chcieliby podziękować następującym projektom Open Source, których to fragmenty zostały wykorzystane do stworzenia ReactOS:", IDC_STATIC, 15, 7, 286, 19
     LISTBOX IDC_PROJECTS, 15, 30, 286, 75, LBS_NOSEL | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL
-    LTEXT "ReactOS oparty jest na licencji GPL, więc by w całości lub częściowo wykorzystać źródła ReactOS, musisz przestrzegać postanowień licencji.", IDC_STATIC, 15, 110, 247, 19
+    LTEXT "ReactOS oparty jest na licencji GPL, więc by w całości lub częściowo wykorzystać źródła ReactOS, musisz przestrzegać postanowień licencji.", IDC_STATIC, 15, 110, 227, 19
     PUSHBUTTON "Pokaż &GPL..", IDC_VIEWGPL, 251, 110, 50, 19
     LTEXT "Naciśnij Dalej, by kontynuować.", IDC_STATIC, 15, 136, 195, 17
 END
@@ -43,14 +62,14 @@ BEGIN
     ICON IDI_ICON1, IDC_STATIC, 21, 7, 20, 20
     LTEXT "Podaj nazwę komputera, nie dłuższą niż 15 znaków. Jeśli chcesz pracować w sieci, nazwa musi pozostać unikalna.", IDC_STATIC, 54, 7, 250, 24
     LTEXT "&Nazwa komputera:", IDC_STATIC, 54, 38, 75, 8
-    EDITTEXT IDC_COMPUTERNAME, 132, 35, 163, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL | ES_UPPERCASE
+    EDITTEXT IDC_COMPUTERNAME, 165, 35, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL | ES_UPPERCASE
     ICON IDI_ICON5, IDC_STATIC, 21, 57, 20, 20
     LTEXT "Program konfiguracyjny stworzy konto Administrator. Dzięki niemu uzyskasz, w razie potrzeby, pełny dostęp do systemu.", IDC_STATIC, 54, 57, 250, 25
     LTEXT "Podaj hasło administratora, nie dłuższe niż 127 znaków.", IDC_STATIC, 54, 87, 250, 8
-    LTEXT "&Hasło administratora:", IDC_STATIC, 54, 104, 75, 8
-    EDITTEXT IDC_ADMINPASSWORD1, 132, 101, 172, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
-    LTEXT "&Potwierdzenie hasła:", IDC_STATIC, 54, 123, 75, 8
-    EDITTEXT IDC_ADMINPASSWORD2, 132, 120, 172, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
+    LTEXT "&Hasło administratora:", IDC_STATIC, 54, 104, 105, 8
+    EDITTEXT IDC_ADMINPASSWORD1, 165, 101, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
+    LTEXT "&Potwierdzenie hasła:", IDC_STATIC, 54, 123, 105, 8
+    EDITTEXT IDC_ADMINPASSWORD2, 165, 120, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
 END
 
 IDD_LOCALEPAGE DIALOGEX 0, 0, 317, 143
@@ -59,14 +78,14 @@ CAPTION "Instalator ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ICON4, IDC_STATIC, 21, 7, 20, 20
-    LTEXT "Lokalizacja systemu powinna być zgodna (językowo) z aplikacjami, których planujesz używać. Lokalizacja odpowiada również za wyświetlanie danych, liczb i walut.", IDC_STATIC, 53, 7, 238, 25
+    LTEXT "Lokalizacja systemu powinna być zgodna (językowo) z aplikacjami, których planujesz używać. Lokalizacja odpowiada również za wyświetlanie danych, liczb i walut.", IDC_STATIC, 53, 7, 253, 20
     LTEXT "", IDC_LOCALETEXT, 53, 29, 250, 16
-    LTEXT "By zmienić lokalizację systemu, naciśnij Ustaw.", IDC_STATIC, 53, 60, 184, 8
-    PUSHBUTTON "&Ustaw...", IDC_CUSTOMLOCALE, 245, 57, 50, 14
+    LTEXT "By zmienić lokalizację systemu, naciśnij Ustaw.", IDC_STATIC, 53, 60, 196, 8
+    PUSHBUTTON "&Dostosuj...", IDC_CUSTOMLOCALE, 250, 57, 50, 14
     LTEXT "Układ klawiatury decyduje o przyporządkowaniu znaków pod klawisze.", IDC_STATIC, 53, 86, 253, 8
     LTEXT "", IDC_LAYOUTTEXT, 53, 100, 250, 16
     LTEXT "Aby zmienić układ klawiatury, naciśnij Ustaw.", IDC_STATIC, 53, 126, 184, 8
-    PUSHBUTTON "U&staw...", IDC_CUSTOMLAYOUT, 245, 122, 50, 14
+    PUSHBUTTON "Dostosuj...", IDC_CUSTOMLAYOUT, 250, 122, 50, 14
 END
 
 IDD_DATETIMEPAGE DIALOGEX 0, 0, 317, 143
@@ -146,6 +165,7 @@ BEGIN
     IDS_PROCESSSUBTITLE "Proszę czekać..."
     IDS_THEMESELECTIONTITLE "Wygląd"
     IDS_THEMESELECTIONSUBTITLE "Wybierz motyw, który preferujesz"
+
 END
 
 STRINGTABLE
