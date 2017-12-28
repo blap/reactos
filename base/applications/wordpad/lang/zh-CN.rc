@@ -1,9 +1,5 @@
 /*
- * wordpad (Simplified and Traditional Chinese Resource)
- *
- * Copyright 2008 Hongbo Ni <hongbo.at.njstar.com>
- * Copyright 2010 Cheer Xiao <xiaqqaix.at.gmail.com>
- * Copyright 2017 Li Keqing <auroracloud4096.at.gmail.com>
+ * Copyright 2004 by Krzysztof Foltman
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -20,81 +16,78 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
 
-/* Chinese text is encoded in UTF-8 */
-#pragma code_page(65001)
-
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+LANGUAGE LANG_CHINESE_SIMPLIFIED, SUBLANG_CHINESE_SIMPLIFIED
 
 IDM_MAINMENU MENU
 BEGIN
     POPUP "文件(&F)"
     BEGIN
-        MENUITEM "新建(&N)...\tCtrl+N", ID_FILE_NEW
-        MENUITEM "打开(&O)...\tCtrl+O", ID_FILE_OPEN
-        MENUITEM "保存(&S)\tCtrl+S", ID_FILE_SAVE
-        MENUITEM "另存为(&A)...", ID_FILE_SAVEAS
+        MENUITEM "新建(&N)...\tCtrl+N",       ID_FILE_NEW
+        MENUITEM "打开(&O)...\tCtrl+O",      ID_FILE_OPEN
+        MENUITEM "保存(&S)\tCtrl+S",         ID_FILE_SAVE
+        MENUITEM "另存为(&A)...",           ID_FILE_SAVEAS
         MENUITEM SEPARATOR
-        MENUITEM "打印(&P)...\tCtrl+P", ID_PRINT
-        MENUITEM "打印预览(&W)...", ID_PREVIEW
-        MENUITEM "页面设置(&E)...", ID_PRINTSETUP
+        MENUITEM "打印(&P)...\tCtrl+P",     ID_PRINT
+        MENUITEM "打印预览(&W)...",        ID_PREVIEW
+        MENUITEM "页面设置(&E)...",        ID_PRINTSETUP
         MENUITEM SEPARATOR
-        MENUITEM "退出(&X)", ID_FILE_EXIT
+        MENUITEM "退出(&X)",                 ID_FILE_EXIT
     END
     POPUP "编辑(&E)"
     BEGIN
-        MENUITEM "撤销(&U)\tCtrl+Z", ID_EDIT_UNDO
-        MENUITEM "重做(&E)\tCtrl+Y", ID_EDIT_REDO
+        MENUITEM "撤销(&U)\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "重做(&E)\tCtrl+Y",               ID_EDIT_REDO
         MENUITEM SEPARATOR
-        MENUITEM "剪切(&T)\tCtrl+X", ID_EDIT_CUT
-        MENUITEM "复制(&C)\tCtrl+C", ID_EDIT_COPY
-        MENUITEM "粘贴(&P)\tCtrl+V", ID_EDIT_PASTE
-        MENUITEM "删除(&D)\tDEL", ID_EDIT_CLEAR
-        MENUITEM "全选(&S)\tCtrl+A", ID_EDIT_SELECTALL
+        MENUITEM "剪切(&T)\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "复制(&C)\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "删除(&D)\tDEL",                 ID_EDIT_CLEAR
+        MENUITEM "全选(&S)\tCtrl+A",         ID_EDIT_SELECTALL
         MENUITEM SEPARATOR
-        MENUITEM "查找(&F)...\tCtrl+F", ID_FIND
-        MENUITEM "找下一个(&N)\tF3", ID_FIND_NEXT
-        MENUITEM "替换(&R)...\tCtrl+H", ID_REPLACE
+        MENUITEM "查找(&F)...\tCtrl+F",            ID_FIND
+        MENUITEM "找下一个(&N)\tF3",              ID_FIND_NEXT
+        MENUITEM "替换(&R)...\tCtrl+H",         ID_REPLACE
         MENUITEM SEPARATOR
-        MENUITEM "只读(&O)", ID_EDIT_READONLY
-        MENUITEM "已改动(&M)", ID_EDIT_MODIFIED
+        MENUITEM "只读(&O)",                  ID_EDIT_READONLY
+        MENUITEM "已改动(&M)",                   ID_EDIT_MODIFIED
         MENUITEM SEPARATOR
         POPUP "其他(&X)"
         BEGIN
-            MENUITEM "选中信息(&I)", ID_EDIT_SELECTIONINFO /* 准确性待议 */
-            MENUITEM "文字格式(&F)", ID_EDIT_CHARFORMAT
-            MENUITEM "默认格式(&D)", ID_EDIT_DEFCHARFORMAT
-            MENUITEM "段落格式(&H)", ID_EDIT_PARAFORMAT
-            MENUITEM "获取文字(&G)", ID_EDIT_GETTEXT
+            MENUITEM "Selection &info",             ID_EDIT_SELECTIONINFO
+            MENUITEM "文字格式(&F)",           ID_EDIT_CHARFORMAT
+            MENUITEM "默认格式(&D)",           ID_EDIT_DEFCHARFORMAT
+            MENUITEM "段落格式(&H)",           ID_EDIT_PARAFORMAT
+            MENUITEM "获取文字(&G)",                   ID_EDIT_GETTEXT
         END
     END
     POPUP "视图(&V)"
     BEGIN
-        MENUITEM "工具栏(&T)", ID_TOGGLE_TOOLBAR
-        MENUITEM "格式工具栏(&F)", ID_TOGGLE_FORMATBAR
-        MENUITEM "标尺(&R)", ID_TOGGLE_RULER
-        MENUITEM "状态栏(&S)", ID_TOGGLE_STATUSBAR
+        MENUITEM "工具栏(&T)",        ID_TOGGLE_TOOLBAR
+        MENUITEM "格式工具栏(&F)",     ID_TOGGLE_FORMATBAR
+        MENUITEM "标尺(&R)",          ID_TOGGLE_RULER
+        MENUITEM "状态栏(&S)",     ID_TOGGLE_STATUSBAR
         MENUITEM SEPARATOR
-        MENUITEM "选项(&O)...", ID_VIEWPROPERTIES
+        MENUITEM "选项(&O)...",     ID_VIEWPROPERTIES
     END
     POPUP "插入(&I)"
     BEGIN
-        MENUITEM "日期时间(&D)...", ID_DATETIME
+        MENUITEM "日期时间(&D)...",  ID_DATETIME
     END
     POPUP "格式(&O)"
     BEGIN
-        MENUITEM "字体(&F)..", ID_FONTSETTINGS
-        MENUITEM "项目符号(&B)", ID_BULLET
-        MENUITEM "段落(&P)...", ID_PARAFORMAT
-        MENUITEM "制表位(&T)...", ID_TABSTOPS
+        MENUITEM "字体(&F)..",                     ID_FONTSETTINGS
+        MENUITEM "项目符号(&B)",               ID_BULLET
+        MENUITEM "段落(&P)...",                ID_PARAFORMAT
+        MENUITEM "制表位(&T)...",                     ID_TABSTOPS
         POPUP "背景(&D)"
         BEGIN
-            MENUITEM "系统(&S)\tCtrl+1", ID_BACK_1
-            MENUITEM "淡黄色(&P)\tCtrl+2", ID_BACK_2
+            MENUITEM "系统(&S)\tCtrl+1",         ID_BACK_1
+            MENUITEM "淡黄色(&P)\tCtrl+2",    ID_BACK_2
         END
     END
     POPUP "帮助(&H)"
     BEGIN
-        MENUITEM "关于 &Wine 写字板", ID_ABOUT
+        MENUITEM "关于 &Wine 写字板",      ID_ABOUT
     END
 END
 
@@ -102,12 +95,12 @@ IDM_POPUP MENU
 BEGIN
     POPUP ""
     BEGIN
-        MENUITEM "剪切(&T)", ID_EDIT_CUT
-        MENUITEM "复制(&C)", ID_EDIT_COPY
-        MENUITEM "粘贴(&P)", ID_EDIT_PASTE
+        MENUITEM "剪切(&T)",                ID_EDIT_CUT
+        MENUITEM "复制(&C)",               ID_EDIT_COPY
+        MENUITEM "粘贴(&P)",              ID_EDIT_PASTE
         MENUITEM SEPARATOR
-        MENUITEM "项目符号(&B)",       ID_BULLET
-        MENUITEM "段落(&P)...",        ID_PARAFORMAT
+        MENUITEM "项目符号(&B)",      ID_BULLET
+        MENUITEM "段落(&P)...",       ID_PARAFORMAT
     END
 END
 
@@ -115,23 +108,23 @@ IDM_COLOR_POPUP MENU
 BEGIN
     POPUP ""
     BEGIN
-        MENUITEM "黑色",      ID_COLOR_BLACK /* 未找到“标准译名表” */
+        MENUITEM "Black",      ID_COLOR_BLACK
         MENUITEM "栗色",     ID_COLOR_MAROON
         MENUITEM "绿色",      ID_COLOR_GREEN
-        MENUITEM "橄榄色",       ID_COLOR_OLIVE
-        MENUITEM "藏青",        ID_COLOR_NAVY
-        MENUITEM "紫色",      ID_COLOR_PURPLE
-        MENUITEM "鸭翅绿",        ID_COLOR_TEAL
-        MENUITEM "灰色",        ID_COLOR_GRAY
-        MENUITEM "银色",      ID_COLOR_SILVER
-        MENUITEM "红色",         ID_COLOR_RED
-        MENUITEM "青柠色",        ID_COLOR_LIME
-        MENUITEM "黄色",      ID_COLOR_YELLOW
-        MENUITEM "蓝色",        ID_COLOR_BLUE
-        MENUITEM "洋红",     ID_COLOR_FUCHSIA /* =magenta? */
-        MENUITEM "水绿",        ID_COLOR_AQUA
-        MENUITEM "白色",       ID_COLOR_WHITE
-        MENUITEM "自动",   ID_COLOR_AUTOMATIC
+        MENUITEM "橄榄色",      ID_COLOR_OLIVE
+        MENUITEM "藏青",       ID_COLOR_NAVY
+        MENUITEM "紫色",     ID_COLOR_PURPLE
+        MENUITEM "鸭翅绿",       ID_COLOR_TEAL
+        MENUITEM "灰色",       ID_COLOR_GRAY
+        MENUITEM "银色",     ID_COLOR_SILVER
+        MENUITEM "红色",        ID_COLOR_RED
+        MENUITEM "青柠色",       ID_COLOR_LIME
+        MENUITEM "黄色",     ID_COLOR_YELLOW
+        MENUITEM "蓝色",       ID_COLOR_BLUE
+        MENUITEM "Fuchsia",    ID_COLOR_FUCHSIA
+        MENUITEM "水绿",       ID_COLOR_AQUA
+        MENUITEM "白色",      ID_COLOR_WHITE
+        MENUITEM "自动",  ID_COLOR_AUTOMATIC
     END
 END
 
@@ -199,7 +192,7 @@ END
 IDD_DATETIME DIALOGEX 30, 20, 130, 80
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "日期和时间"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT        "可选格式",-1,3,2,100,15
     LISTBOX      IDC_DATETIME,3,12,80,65,LBS_NOINTEGRALHEIGHT | LBS_NOTIFY
@@ -210,7 +203,7 @@ END
 IDD_NEWFILE DIALOGEX 30, 20, 140, 80
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "新建"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT        "新文件类型",-1,3,2,100,15
     LISTBOX      IDC_NEWFILE,3,12,90,65,LBS_NOINTEGRALHEIGHT
@@ -221,7 +214,7 @@ END
 IDD_PARAFORMAT DIALOGEX 30, 20, 220, 110
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "段落格式"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "缩进", -1, 10, 10, 140, 68
     LTEXT "左", -1, 15, 22, 60, 13
@@ -239,7 +232,7 @@ END
 IDD_TABSTOPS DIALOGEX 30, 20, 200, 110
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "制表位"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "制表位宽度", -1, 10, 10, 120, 90
     COMBOBOX IDC_TABSTOPS, 20, 20, 100, 60, CBS_SIMPLE
@@ -253,7 +246,7 @@ END
 IDD_FORMATOPTS DIALOGEX 0, 0, 280, 110
 STYLE DS_SHELLFONT | DS_SYSMODAL
 CAPTION ""
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "自动换行", -1, 5, 10, 145, 85
     RADIOBUTTON "不要自动换行", IDC_PAGEFMT_WN, 10, 25, 138, 15
