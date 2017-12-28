@@ -1,8 +1,4 @@
-/* TRANSLATOR : Ardit Dani (Ard1t) (ardit.dani@gmail.com)
- * DATE OF TRANSLATION:  23-01-2014
-*/
-
-LANGUAGE LANG_ALBANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ALBANIAN, SUBLANG_ALBANIAN_ALBANIA
 
 102 DIALOGEX 0, 0, 255, 265
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -30,7 +26,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "", 1029, 5, 5, 241, 35, NOT WS_GROUP
     LTEXT "Lidhje:", -1, 5, 46, 238, 10
-    CONTROL "List1", 1677, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000440D, 5, 57, 240, 57
+    CONTROL "Lista1", 1677, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000440D, 5, 57, 240, 57
     AUTOCHECKBOX "&Mos më pyesni përsëri deri në herën tjetër që unë lidhem", 1022, 8, 125, 235, 10
     PUSHBUTTON "&Cilësime", 1026, 7, 149, 60, 14
     DEFPUSHBUTTON "&Lidhu...", 1024, 117, 149, 60, 14
@@ -252,7 +248,7 @@ BEGIN
     EDITTEXT 1104, 102, 57, 154, 14, ES_AUTOHSCROLL
     LTEXT "&Fjalëkalim:", 1112, 9, 80, 92, 8
     EDITTEXT 1103, 102, 76, 154, 14, ES_PASSWORD | ES_AUTOHSCROLL
-    LTEXT "Do&main:", 1110, 9, 99, 91, 8
+    LTEXT "Faqe:", 1110, 9, 99, 91, 8
     EDITTEXT 1102, 102, 95, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN, 9, 116, 247, 1
     AUTOCHECKBOX "&Ruaj këtë emër përdoruesi dhe fjalëkalim për përdoruesit e mëposhtme:", 1101, 12, 123, 243, 13, BS_LEFT | BS_TOP | BS_MULTILINE | WS_GROUP
@@ -275,7 +271,7 @@ BEGIN
     EDITTEXT 1104, 104, 57, 154, 14, ES_AUTOHSCROLL
     LTEXT "&Fjalëkalim:", 1112, 10, 80, 92, 8
     EDITTEXT 1103, 104, 76, 154, 14, ES_PASSWORD | ES_AUTOHSCROLL
-    LTEXT "Do&main:", 1110, 10, 100, 92, 8
+    LTEXT "Faqe:", 1110, 10, 100, 92, 8
     EDITTEXT 1102, 104, 95, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN, 11, 116, 247, 1
     AUTOCHECKBOX "&Ruaj këtë emër përdoruesi dhe fjalëkalim për përdoruesit e mëposhtme:", 1101, 16, 124, 239, 13, BS_LEFT | BS_TOP | BS_MULTILINE | WS_GROUP
@@ -494,7 +490,7 @@ BEGIN
     AUTORADIOBUTTON "Përhere më thirr prapa tek numrat(ë) më poshtë:", 1042, 7, 74, 219, 10, BS_TOP | BS_MULTILINE
     CONTROL "", 1037, "SYSLISTVIEW32", WS_BORDER | WS_GROUP | WS_TABSTOP | 0x00008401, 16, 88, 204, 94
     PUSHBUTTON "&Modifiko...", 1039, 96, 190, 60, 14
-    PUSHBUTTON "&Delete", 1038, 159, 190, 60, 14
+    PUSHBUTTON "&Fshi", 1038, 159, 190, 60, 14
 END
 
 149 DIALOGEX 6, 18, 317, 142
@@ -1002,7 +998,7 @@ BEGIN
     LTEXT "&Përdorues:", 1413, 14, 64, 84, 8
     EDITTEXT 1104, 102, 62, 154, 14, ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 9, 82, 247, 1
-    DEFPUSHBUTTON "&Dial", 1590, 8, 89, 60, 14
+    DEFPUSHBUTTON "&Bjeri", 1590, 8, 89, 60, 14
     PUSHBUTTON "Anulo", 1591, 71, 89, 60, 14
     PUSHBUTTON "Karakteristika", 1107, 133, 89, 60, 14
     PUSHBUTTON "&Ndihmë", 1592, 195, 89, 60, 14
@@ -1020,7 +1016,7 @@ BEGIN
     LTEXT "Th&irr:", 1412, 10, 91, 92, 10
     COMBOBOX 1416, 105, 88, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 7, 107, 251, 1
-    DEFPUSHBUTTON "&Dial", 1590, 8, 113, 60, 14
+    DEFPUSHBUTTON "&Bjeri", 1590, 8, 113, 60, 14
     PUSHBUTTON "Anulo", 1591, 71, 113, 60, 14
     PUSHBUTTON "Karakteristika", 1107, 134, 113, 60, 14
     PUSHBUTTON "&Ndihmë", 1592, 197, 113, 60, 14
@@ -1130,7 +1126,7 @@ BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
     LTEXT "&Përdorues:", 1413, 10, 67, 91, 10
     EDITTEXT 1104, 104, 64, 154, 14, ES_AUTOHSCROLL
-    LTEXT "Faqe:", 1110, 10, 86, 91, 8
+    LTEXT "Faqja:", 1110, 10, 86, 91, 8
     EDITTEXT 1102, 104, 83, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 103, 248, 1
     LTEXT "Th&irr:", 1412, 10, 115, 91, 8
@@ -1150,7 +1146,7 @@ BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
     LTEXT "&Përdorues:", 1413, 10, 68, 92, 10
     EDITTEXT 1104, 104, 65, 154, 14, ES_AUTOHSCROLL
-    LTEXT "Faqe:", 1110, 10, 90, 91, 8
+    LTEXT "Do&main:", 1110, 10, 90, 91, 8
     EDITTEXT 1102, 104, 86, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 106, 248, 1
     LTEXT "Th&irr:", 1412, 10, 118, 92, 8
@@ -1253,7 +1249,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "&Zgjidhni shërbimet që punojnë për rrjetin tuaj që përdoruesit e internetit mund të kenë akses.", -1, 7, 5, 216, 22
     LTEXT "Shërbime:", -1, 7, 27, 143, 8
-    CONTROL "Lista1", 1560, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000441D, 7, 37, 215, 155, WS_EX_CLIENTEDGE
+    CONTROL "List1", 1560, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000441D, 7, 37, 215, 155, WS_EX_CLIENTEDGE
     PUSHBUTTON "Shto...", 1561, 7, 197, 67, 14
     PUSHBUTTON "Modifiko...", 1563, 80, 197, 67, 14
     PUSHBUTTON "Fshi", 1562, 153, 197, 67, 14
@@ -1387,7 +1383,7 @@ CAPTION "Lidhu %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "D&ial:", 1412, 14, 63, 86, 8
+    LTEXT "Bjeri:", 1412, 14, 63, 86, 8
     COMBOBOX 1416, 104, 60, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 80, 248, 1
     DEFPUSHBUTTON "&Thirr", 1590, 9, 87, 60, 14
@@ -1433,7 +1429,7 @@ BEGIN
     EDITTEXT 1104, 104, 63, 154, 14, ES_AUTOHSCROLL
     LTEXT "&Fjalëkalim:", 1112, 10, 85, 92, 8
     EDITTEXT 1103, 104, 82, 154, 14, ES_PASSWORD | ES_AUTOHSCROLL
-    LTEXT "Faqja:", 1110, 10, 104, 92, 8
+    LTEXT "Do&main:", 1110, 10, 104, 92, 8
     EDITTEXT 1102, 104, 101, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN, 10, 121, 248, 1
     AUTOCHECKBOX "&Ruaj këtë emër përdoruesi dhe fjalëkalim për përdoruesit e mëposhtme:", 1101, 12, 127, 242, 13, BS_LEFT | BS_TOP | BS_MULTILINE | WS_GROUP
@@ -2046,7 +2042,7 @@ BEGIN
     434 "Formo Numrin %1...\0"
     435 "Lidhu mbi X.25 tek %1...\0"
     436 "Pas-lidhëse përmes %1...\0"
-    437 "Para-lidhëse përmes %1...\0"
+    437 "437   (OEM - Amerikane)"
     438 "Lidhur.\0"
     439 "Pajisja lidhur.\0"
     440 "Shkëputur.\0"
@@ -2109,7 +2105,7 @@ BEGIN
     497 "X.25 PAD\0"
     498 "Ju mund të leni burimet kompjutera të tjerë akses përmes kësaj lidhje formuese.\0"
     499 "Përzgjedhje VPN Server\0"
-    500 "Nuk mund të mundësojë mbi-kërkesën formimi i numrit.\0"
+    500 "500   (IBM EBCDIC - Internacionale)"
     501 "Cili është emri ose adresa e serverit VPN?\0"
     502 "Nuk mund të gjymtojë mbi-kërkesën formimi i numrit.\0"
     503 "Rrjeti Publik\0"
