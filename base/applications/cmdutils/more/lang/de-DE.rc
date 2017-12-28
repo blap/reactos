@@ -1,15 +1,14 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "Zeigt Daten seitenweise auf dem Bildschirm an.\n\n\
-  MORE < [Laufwerk:][Pfad]Dateiname\n\
-  Befehl | MORE \n\
-  MORE [Laufwerk:][Pfad]Dateiname\n\n\
-  [Laufwerk:][Pfad]Dateiname Eine Datei, deren Inhalt angezeigt werden soll.\n\
-  Befehl\t\t     Ein Befehl, dessen Ausgabe angezeigt werden soll.\n\n\
-  An der Eingabeaufforderung ""-- Fortsetzung --"" kann eine beliebige\n\
-  Taste gedrückt werden, um die nächste Seite anzuzeigen.\n"
+    IDS_USAGE "Displays data page-by-page on the screen.\n\n\
+  MORE < [Drive:][Path]File name\n\
+  Command | MORE \n\
+  MORE [Drive:][Path]File name\n\n\
+  [Drive:][Path]File name    A file, whose content shall be displayed.\n\
+  Command\t\t     A command, whose output shall be displayed.\n\n\
+  At the prompt """-- Continue --"" you can press any key to show the next page.\n"
     IDS_CONTINUE "-- Fortsetzung --"
     IDS_CONTINUE_PROGRESS "-- Fortsetzung (%d%%) --"
     IDS_FILE_ACCESS "Auf die Datei %s kann nicht zugegriffen werden.\n"
