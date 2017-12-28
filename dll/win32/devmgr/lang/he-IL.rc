@@ -1,6 +1,4 @@
-/* Hebrew translation by Baruch Rutman */
-
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 STRINGTABLE
 BEGIN
@@ -66,9 +64,9 @@ BEGIN
     IDS_DEV_DISABLED "This device is not started."
     IDS_DEV_DISABLED2 "This device is disabled."
     IDS_DEV_DEVLOADER_NOT_READY "The loaders for this device cannot load the required drivers."
-    IDS_DEV_DEVLOADER_NOT_READY2 "" /* unused */
+    IDS_DEV_DEVLOADER_NOT_READY2 """ /* unused */
     IDS_DEV_DEVLOADER_NOT_READY3 "" /* unused */
-    IDS_DEV_DEVICE_NOT_THERE "This device is either not present, not working properly, or does not have all the drivers installed."
+    IDS_DEV_DEVICE_NOT_THERE ""This device is either not present, not working properly, or does not have all the drivers installed."
     IDS_DEV_MOVED "ReactOS is in the process of setting up this device."
     IDS_DEV_TOO_EARLY "ReactOS is in the process of setting up this device."
     IDS_DEV_NO_VALID_LOG_CONF "ReactOS can't specify the resources for this device."
@@ -103,7 +101,7 @@ BEGIN
     IDS_PROP_HARDWAREIDS "Hardware IDs"
     IDS_PROP_COMPATIBLEIDS "Compatible IDs"
     IDS_PROP_MATCHINGDEVICEID "Matching Device ID"
-    IDS_PROP_SERVICE "Service"
+    IDS_PROP_SERVICE "שירות"
     IDS_PROP_ENUMERATOR "Enumerator"
     IDS_PROP_CAPABILITIES "Capabilities"
     IDS_PROP_DEVNODEFLAGS "Devnode Flags"
@@ -136,7 +134,7 @@ BEGIN
     LTEXT "", IDC_MANUFACTURER, 14, 88, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_LOCATION, 14, 100, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_STATUS, 14, 112, 183, 30
-    PUSHBUTTON "פתירת בעיות...", IDC_TROUBLESHOOT, 85, 140, 54, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
+    PUSHBUTTON "פתוח בעיות...", IDC_TROUBLESHOOT, 80, 140, 60, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
     PUSHBUTTON "מאפיינים", IDC_PROPERTIES, 146, 140, 50, 14
 END
 
@@ -218,7 +216,7 @@ END
 
 IDD_DEVICERESOURCES DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
-CAPTION "Resources"
+CAPTION "משאבים"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_DEVICON, 7, 7, 20, 20
@@ -239,16 +237,15 @@ BEGIN
 END
 
 
-
 /*
  This code relates to the device manager GUI
  */
 
 IDR_MAINMENU MENU
 BEGIN
-  POPUP "&File"
+  POPUP "&קובץ"
   BEGIN
-    MENUITEM "E&xit",                       IDC_EXIT
+    MENUITEM "&יציאה",                       IDC_EXIT
   END
   MENUITEM "Action",                        IDC_ACTIONMENU
   POPUP "View"
@@ -276,22 +273,22 @@ END
 STRINGTABLE DISCARDABLE
 BEGIN
   IDS_MENU_UPDATE           "Update driver software..."
-  IDS_MENU_ENABLE           "Enable"
+  IDS_MENU_ENABLE           "אפשר"
   IDS_MENU_DISABLE          "Disable"
-  IDS_MENU_UNINSTALL        "Uninstall"
+  IDS_MENU_UNINSTALL        "הסרה"
   IDS_MENU_SCAN             "Scan for hardware changes"
   IDS_MENU_ADD              "Add hardware"
-  IDS_MENU_PROPERTIES       "Properties"
+  IDS_MENU_PROPERTIES       "מאפייני"
 END
 
 STRINGTABLE DISCARDABLE
 BEGIN
-  IDS_TOOLTIP_PROPERTIES    "Properties"
+  IDS_TOOLTIP_PROPERTIES    "מאפייני"
   IDS_TOOLTIP_SCAN          "Scan for hardware changes"
-  IDS_TOOLTIP_ENABLE        "Enable"
+  IDS_TOOLTIP_ENABLE        "אפשר"
   IDS_TOOLTIP_DISABLE       "Disable"
   IDS_TOOLTIP_UPDATE        "Update Driver Software"
-  IDS_TOOLTIP_UNINSTALL     "Uninstall"
+  IDS_TOOLTIP_UNINSTALL     "הסרה"
 END
 
 /* Hints */
@@ -321,4 +318,3 @@ BEGIN
   IDS_HINT_SYS_MAXIMIZE " Expands this window to fill this screen."
   IDS_HINT_SYS_CLOSE    " Closes this window."
 END
-
