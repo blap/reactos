@@ -1,9 +1,28 @@
-LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+/*
+ * Copyright (C) 2004 Filip Navara
+ * Copyright (C) 2004 Eric Kohl
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+LANGUAGE LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "ReactOS セットアップ"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "ReactOSセットアップ ウィザードへようこそ。", IDC_WELCOMETITLE, 115, 8, 195, 24
     LTEXT "このウィザードでは、ReactOS をコンピュータにインストールします。ReactOS を正しくセットアップするために、ユーザーとコンピュータに関する情報を集める必要があります。", IDC_STATIC, 115, 40, 195, 100
@@ -13,7 +32,7 @@ END
 IDD_ACKPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "ReactOS セットアップ"
-FONT 9, "MS UI Gothic", 0, 0, 0x0
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT "ReactOS の開発者より、下記のオープンソース プロジェクトに感謝の意を表明します。これらのすべてまたは一部は ReactOS の開発に利用されました。", IDC_STATIC, 15, 7, 286, 19
     LISTBOX IDC_PROJECTS, 15, 30, 286, 75, LBS_NOSEL | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL
@@ -25,7 +44,7 @@ END
 IDD_OWNERPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "ReactOS セットアップ"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ICON2, IDC_STATIC, 21, 7, 20, 20
     LTEXT "名前と会社名または組織名を入力して下さい。", IDC_STATIC, 54, 7, 242, 21
@@ -38,7 +57,7 @@ END
 IDD_COMPUTERPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "ReactOS セットアップ"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ICON1, IDC_STATIC, 21, 7, 20, 20
     LTEXT "コンピュータ名を半角 63 文字以内で入力して下さい。コンピュータがネットワーク上にある場合は、名前が重複しないようにして下さい。", IDC_STATIC, 54, 7, 250, 24
@@ -56,23 +75,23 @@ END
 IDD_LOCALEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "ReactOS セットアップ"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ICON4, IDC_STATIC, 21, 7, 20, 20
     LTEXT "システムのロケールを、アプリケーションで使用したい言語に設定して下さい。ユーザー ロケールは、数値、通貨、日付の表示方法を制御します。", IDC_STATIC, 53, 7, 253, 20
     LTEXT "", IDC_LOCALETEXT, 53, 29, 250, 16
-    LTEXT "システム、ユーザー ロケール設定変更には [カスタマイズ] をクリックします。", IDC_STATIC, 53, 50, 166, 25
-    PUSHBUTTON "カスタマイズ(&C)...", IDC_CUSTOMLOCALE, 220, 52, 80, 14
-    LTEXT "キーボード レイアウトは、キーを押したときにどの文字が入力されるかを制御します。", IDC_STATIC, 53, 81, 253, 20
-    LTEXT "", IDC_LAYOUTTEXT, 53, 106, 250, 14
-    LTEXT "キーボード レイアウト変更には [カスタマイズ] をクリックします。", IDC_STATIC, 53, 120, 166, 25
-    PUSHBUTTON "カスタマイズ(&U)...", IDC_CUSTOMLAYOUT, 220, 122, 80, 14
+    LTEXT "To change system or user locale settings, click Customize.", IDC_STATIC, 53, 60, 196, 8
+    PUSHBUTTON "&Customize...", IDC_CUSTOMLOCALE, 250, 57, 50, 14
+    LTEXT "The keyboard layout controls the characters that appear when you type.", IDC_STATIC, 53, 86, 253, 8
+    LTEXT "", IDC_LAYOUTTEXT, 53, 100, 250, 16
+    LTEXT "To change the keyboard layout, click Customize.", IDC_STATIC, 53, 126, 184, 8
+    PUSHBUTTON "カスタマイズ...", IDC_CUSTOMLAYOUT, 250, 122, 50, 14
 END
 
 IDD_DATETIMEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "ReactOS セットアップ"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ICON3, IDC_STATIC, 21, 10, 20, 20
     LTEXT "日付と時刻:", IDC_STATIC, 53, 7, 253, 8
@@ -86,7 +105,7 @@ END
 IDD_THEMEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "ReactOS セットアップ"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     PUSHBUTTON "Lautus テーマ", IDC_THEMEDSTYLE, 18,12, 130,120, BS_AUTORADIOBUTTON|BS_PUSHLIKE
     PUSHBUTTON "クラシック テーマ", IDC_CLASSICSTYLE, 175,12, 130,120, BS_AUTORADIOBUTTON|BS_PUSHLIKE
@@ -95,7 +114,7 @@ END
 IDD_PROCESSPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "ReactOS セットアップ"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "", IDC_ACTIVITY, 53, 7, 253, 20
     LTEXT "", IDC_ITEM, 53, 29, 253, 20
@@ -105,7 +124,7 @@ END
 IDD_FINISHPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "ReactOS セットアップの完了"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "ReactOS セットアップ ウィザードの完了", IDC_FINISHTITLE, 115, 8, 195, 24
     LTEXT "ReactOS セットアップが正常に完了しました。\n\n[完了] をクリックすると、コンピュータを再起動します。", IDC_STATIC, 115, 40, 195, 100
@@ -116,7 +135,7 @@ END
 IDD_GPL DIALOGEX 0, 0, 333, 230
 STYLE DS_SHELLFONT | DS_CENTER | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "GNU 一般公衆利用許諾書"
-FONT 9, "MS UI Gothic"
+FONT 8, "MS Shell Dlg"
 BEGIN
     EDITTEXT IDC_GPL_TEXT, 7, 7, 319, 190, ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
     DEFPUSHBUTTON "OK", IDOK, 141, 209, 50, 14
@@ -125,7 +144,7 @@ END
 IDD_STATUSWINDOW_DLG DIALOGEX 0, 0, 274, 26
 STYLE NOT WS_VISIBLE | DS_CENTER | DS_MODALFRAME | DS_SHELLFONT | WS_BORDER | WS_CAPTION | WS_DLGFRAME | WS_POPUP
 CAPTION "お待ち下さい..."
-FONT 9, "MS UI Gothic", 400, 0, 1
+FONT 8, "MS Shell Dlg", 400, 0, 1
 BEGIN
     LTEXT "", IDC_STATUSLABEL, 7, 8, 234, 12, SS_WORDELLIPSIS
 END
@@ -146,6 +165,7 @@ BEGIN
     IDS_PROCESSSUBTITLE "お待ち下さい..."
     IDS_THEMESELECTIONTITLE "外観"
     IDS_THEMESELECTIONSUBTITLE "好きなテーマをお選び下さい"
+
 END
 
 STRINGTABLE
