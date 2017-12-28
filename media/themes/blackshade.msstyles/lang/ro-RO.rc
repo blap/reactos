@@ -1,5 +1,4 @@
-/* Translator: Ștefan Fulea (stefan dot fulea at mail dot md) */
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 STRINGTABLE
 {
@@ -14,25 +13,25 @@ STRINGTABLE
 STRINGTABLE
 {
 3000, "Normal"
-3001, "Mare"
-3002, "Foarte mare"
+3001, "Large Fonts"
+3002, "Extra Large Fonts"
 }
 
 STRINGTABLE
 {
 4000, "Normal"
-4001, "Mare"
-4002, "Foarte mare"
+4001, "Large Fonts"
+4002, "Extra Large Fonts"
 }
 
 STRINGTABLE
 {
 5000, "Black Shade"
-5001, "Stil vizual"
-5002, "Fundația ReactOS"
-5003, "Imagini de David Quintana <gigaherz@gmail.com>"
-5004, "Imagini publicate sub CC-BY-SA 4.0"
+5001, "Visual Style"
+5002, "ReactOS Foundation"
+5003, "Images by David Quintana <gigaherz@gmail.com>"
+5004, "Images released under CC-BY-SA 4.0"
 5005, "http://www.reactos.org"
 5006, "1.0"
-5007, "Stil vizual pentru ReactOS"
+5007, "Visual Style for ReactOS"
 }
