@@ -1,9 +1,4 @@
-/* TRANSLATOR : Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- * DATE OF TR.: 18-09-2008
- * LAST CHANGE: 02-05-2009
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 IDR_MAINMENU MENU
 BEGIN
@@ -15,7 +10,7 @@ BEGIN
     END
     POPUP "Akcia"
     BEGIN
-        MENUITEM "Pripojiť sa na...", ID_CONNECT, GRAYED //Connect to...
+        MENUITEM "Pripojiť sa na...", ID_CONNECT, GRAYED
         MENUITEM SEPARATOR
         MENUITEM "Spustiť", ID_START, GRAYED
         MENUITEM "Zastaviť", ID_STOP, GRAYED
@@ -31,7 +26,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Vlastnosti...", ID_PROP, GRAYED
     END
-    POPUP "&Zobraziť" //View , Vzhľad ?
+    POPUP "&Zobraziť"
     BEGIN
         MENUITEM "Veľké ikony", ID_VIEW_LARGE
         MENUITEM "Malé ikony", ID_VIEW_SMALL
@@ -91,7 +86,7 @@ BEGIN
     COMBOBOX IDC_START_TYPE, 70, 107, 176, 40, WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST
     PUSHBUTTON "Spustiť", IDC_START, 6, 155, 54, 15, WS_DISABLED
     PUSHBUTTON "Zastaviť", IDC_STOP, 68, 155, 54, 15, WS_DISABLED
-    PUSHBUTTON "Pozastaviť", IDC_PAUSE , 130, 155, 54, 15, WS_DISABLED
+    PUSHBUTTON "&Pause", IDC_PAUSE, 130, 155, 54, 15, WS_DISABLED
     PUSHBUTTON "Pokračovať", IDC_RESUME, 192, 155, 54, 15, WS_DISABLED
     LTEXT "Názov služby:", IDC_STATIC, 4, 11, 53, 11
     LTEXT "Display name:", IDC_STATIC, 4, 29, 53, 11
@@ -123,7 +118,7 @@ BEGIN
     EDITTEXT IDC_LOGON_PASSWORD2, 72, 86, 104, 14, ES_LEFT | ES_PASSWORD | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP
     LTEXT "You can enable or disable this service for the hardware profiles listed below:", IDC_STATIC, 7, 114, 210, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
     CONTROL "", IDC_LOGON_HWPROFILE, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP, 7, 124, 238, 65
-    PUSHBUTTON "&Enable", IDC_LOGON_HWENABLE, 116, 197, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_DISABLED
+    PUSHBUTTON "Po&voliť", IDC_LOGON_HWENABLE, 116, 197, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_DISABLED
     PUSHBUTTON "&Disable", IDC_LOGON_HWDISABLE, 185, 197, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_DISABLED
 END
 
@@ -156,7 +151,7 @@ BEGIN
 END
 
 IDD_DLG_DEPEND DIALOGEX 6, 6, 253, 225
-CAPTION "Závislosti" //Dependencies
+CAPTION "Závislosti"
 FONT 8, "MS Shell Dlg", 0, 0
 STYLE DS_SHELLFONT | WS_BORDER | WS_VISIBLE | WS_DLGFRAME | WS_SYSMENU | WS_GROUP | WS_TABSTOP
 BEGIN
@@ -245,8 +240,8 @@ BEGIN
     IDS_FIRSTCOLUMN "Názov"
     IDS_SECONDCOLUMN "Popis"
     IDS_THIRDCOLUMN "Stav"
-    IDS_FOURTHCOLUMN "Typ spustenia" //Spôsob spustenia
-    IDS_FITHCOLUMN "Prihlásený ako" //Log On As
+    IDS_FOURTHCOLUMN "Typ spustenia"
+    IDS_FITHCOLUMN "Prihlásený ako"
 END
 
 STRINGTABLE
@@ -255,7 +250,7 @@ BEGIN
     IDS_SERVICES_STOPPED "Zastavená"
     IDS_SERVICES_AUTO "Automaticky"
     IDS_SERVICES_MAN "Ručne"
-    IDS_SERVICES_DIS "Zablokovaná" //Disabled
+    IDS_SERVICES_DIS "Zablokovaná"
 END
 
 STRINGTABLE
@@ -263,7 +258,7 @@ BEGIN
     IDS_NUM_SERVICES "Počet služieb: %d"
     IDS_STOP_DEPENDS "When %s stops, these other services will also stop"
     IDS_NO_DEPENDS "<Žiadne závislosti>"
-    IDS_LICENSE "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
+    IDS_LICENSE "Tento program je voľný softvér; môžete ho šíriť a/alebo modifikovať podľa podmienok GNU Všeobecnej verejnej licencie (GNU General Public License) ako bola zverejnená nadáciou Free Software Foundation; buď verzie 2 tejto licencie, alebo (podľa Vášho uváženia) niektorej neskoršej verzie.\r\n\r\nTento program je distribuovaný v nádeji, že bude užitočný, avšak BEZ AKEJKOĽVEK ZÁRUKY; rovnako bez záruky PREDAJNOSTI alebo VHODNOSTI PRE URČITÝ ÚČEL. Pre viac detailov si pozrite GNU Všeobecnú verejnú licenciu (GNU General Public License).\r\n\r\nKópiu Všeobecnej verejnej licencie GNU ste mali dostať spolu s týmto programom; ak nie, napíšte si o ňu na Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
 END
 
 STRINGTABLE
