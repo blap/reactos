@@ -1,12 +1,22 @@
 /*
- *    Translated by Caemyr - Olaf Siejka (May, 2011)
- *    Use ReactOS forum PM or IRC to contact me
- *    http://www.reactos.org
- *    IRC: irc.freenode.net #reactos-pl;
- *    UTF-8 conversion by Caemyr (May, 2011)
+ * Copyright 2009 Andrew Hill
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
 
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 /* Menus */
 
@@ -97,21 +107,21 @@ END
 
 IDM_BAND_MENU MENUEX
 BEGIN
-	MENUITEM "Pok&aż tytuł", IDM_BAND_TITLE
-	MENUITEM "&Zamknij pasek narzędzi", IDM_BAND_CLOSE
+	MENUITEM "Sho&w Title", IDM_BAND_TITLE
+	MENUITEM "&Close Toolbar", IDM_BAND_CLOSE
 END
 
 IDM_POPUPMENU MENUEX DISCARDABLE
 BEGIN
     POPUP ""
     BEGIN
-        POPUP "&Widok", IDM_VIEW_MENU
+        POPUP "&View", IDM_VIEW_MENU
         BEGIN
-            MENUITEM "&Duże ikony", IDM_LARGE_ICONS
-            MENUITEM "&Małe ikony", IDM_SMALL_ICONS
+            MENUITEM "&Large Icons", IDM_LARGE_ICONS
+            MENUITEM "&Small Icons", IDM_SMALL_ICONS
         END
-        MENUITEM "&Otwórz folder", IDM_OPEN_FOLDER
-        MENUITEM "Pokaż &tekst", IDM_SHOW_TEXT
+        MENUITEM "&Open Folder", IDM_OPEN_FOLDER
+        MENUITEM "&Show Text", IDM_SHOW_TEXT
     END    
 END
 
@@ -127,7 +137,7 @@ FONT 8, "MS Shell Dlg"
     LTEXT "", IDC_TEXT_LINE + 1, 7, 55, 250, 10, SS_LEFT|SS_NOPREFIX
     LTEXT "", IDC_TEXT_LINE + 2, 7, 75, 190, 10, SS_LEFT|SS_NOPREFIX
     CONTROL "", IDC_PROGRESS_BAR, PROGRESS_CLASSA, WS_BORDER, 7, 65, 190, 8
-    PUSHBUTTON "Anuluj", IDCANCEL, 205, 65, 50, 15, WS_GROUP | WS_TABSTOP | WS_VISIBLE
+    PUSHBUTTON "Cancel", IDCANCEL, 205, 65, 50, 15, WS_GROUP | WS_TABSTOP | WS_VISIBLE
 }
 
 IDD_CUSTOMIZETOOLBAREX DIALOGEX 0, 0, 357, 33
@@ -298,7 +308,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_STANDARD_TOOLBAR, "|Wstecz|Dalej|W górę|Wyszukaj|Foldery|Przemieść do|Kopiuj do|Usuń|Cofnij|Widoki|Stop|Odśwież|Strona główna|Mapa dysków|Rozłącz|Ulubione|Historia|Pełny ekran|Właściwości|Wytnij|Kopiuj|Wklej|Opcje folderów||"
+    IDS_STANDARD_TOOLBAR, "|Back|Forward|Up|Search|Folders|Move To|Copy To|Delete|Undo|Views|Stop|Refresh|Home|Map Drive|Disconnect|Favorites|History|Full Screen|Properties|Cut|Copy|Paste|Folder Options||"
 END
 
 STRINGTABLE
