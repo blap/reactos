@@ -1,31 +1,24 @@
-/*
- * PROJECT:     ReactOS DOSKey
- * FILE:        base/applications/cmdutils/doskey/lang/sv-SE.rc
- * PURPOSE:     Swedish resource file
- * Translation: Jaix Bly
- */
-
-LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
 
 STRINGTABLE
 BEGIN
-    IDS_HELP "Hanterar commandoradseditering; settings, history, and macros.\n\
+    IDS_HELP "Manages command-line editing settings, history, and macros.\n\
 \n\
 DOSKEY [/INSERT | /OVERSTRIKE] [/EXENAME=exe] [/HISTORY] [/LISTSIZE=size]\n\
        [/REINSTALL] [/MACROS[:exe | :ALL]] [/MACROFILE=file] [macroname=[text]]\n\
 \n\
-  /INSERT             Sätter på insert mode.\n\
-  /OVERSTRIKE         Stänger av insert mode.\n\
-  /EXENAME=exename    Ställer in vilket program som ska visas/ändra historia\n\
-                      och macros för. Standardinställning är cmd.exe.\n\
-  /HISTORY            Visar kommando historian.\n\
-  /LISTSIZE=size      Ställer in antal kommandon per historebuffer.\n\
-  /REINSTALL          Rensar kommandohistorien.\n\
-  /MACROS             Visa makrodefinitioner.\n\
-  /MACROS:exename     Visa makrodefinitioner för ett specifikt program.\n\
-  /MACROS:ALL         Visa makrodefinitioner för all program.\n\
-  /MACROFILE=file     Laddar makrodefinitioner från file.\n\
-  macroname           Specificerar namnet på ett makro man vill skapa.\n\
-  text                Specificerar utbytestexten för macrot.\n"
+  /INSERT             Enables insert mode.\n\
+  /OVERSTRIKE         Disables insert mode.\n\
+  /EXENAME=exename    Sets the name of the program to view/change history\n\
+                      and macros for. The default is cmd.exe.\n\
+  /HISTORY            Displays the command history.\n\
+  /LISTSIZE=size      Sets the number of commands per history buffer.\n\
+  /REINSTALL          Clears the command history.\n\
+  /MACROS             Displays macro definitions.\n\
+  /MACROS:exename     Displays macro definitions for a specific program.\n\
+  /MACROS:ALL         Displays macro definitions for all programs.\n\
+  /MACROFILE=file     Loads macro definitions from a file.\n\
+  macroname           Specifies the name of a macro to create.\n\
+  text                Specifies the replacement text for the macro.\n"
     IDS_INVALID_MACRO_DEF "Ogiltig makrodefinition: %s\n"
 END
