@@ -1,9 +1,4 @@
-/*
- * Translators: Petru Dimitriu (petrimetri at gmail dot com)
- *              Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -133,16 +128,16 @@ BEGIN
     PUSHBUTTON "A&nulează", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
 END
 
-IDD_ABOUTBOX DIALOGEX 22, 16, 294, 170
+IDD_ABOUTBOX DIALOGEX 22, 16, 284, 170
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "Despre Carnețelul ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL "Carnețelul ReactOS v1.0\r\nDrept de autor 1997,98 Marcel Baur\r\nDrept de autor 2000 Mike McCormack\r\nDrept de autor 2002 Sylvain Petreolle\r\nDrept de autor 2002 Andriy Palamarchuk\r\n", -1, "Static", SS_LEFTNOWORDWRAP | WS_GROUP, 46, 7, 242, 39
+    CONTROL "Carnețelul ReactOS v1.0\r\nDrept de autor 1997,98 Marcel Baur\r\nDrept de autor 2000 Mike McCormack\r\nDrept de autor 2002 Sylvain Petreolle\r\nDrept de autor 2002 Andriy Palamarchuk\r\n", -1, "Static", SS_LEFTNOWORDWRAP | WS_GROUP, 46, 7, 232, 39
     CONTROL " ", -1, "Static", 0x50000000, 8, 48, 272, 11
-    DEFPUSHBUTTON "Î&nchide", IDOK, 119, 149, 44, 15, WS_GROUP
+    DEFPUSHBUTTON "Î&nchide", IDOK, 114, 149, 44, 15, WS_GROUP
     ICON IDI_NPICON, -1, 12, 9, 20, 30
-    EDITTEXT IDC_LICENSE, 8, 64, 282, 81, ES_MULTILINE | ES_READONLY | WS_VSCROLL
+    EDITTEXT IDC_LICENSE, 8, 64, 272, 81, ES_MULTILINE | ES_READONLY | WS_VSCROLL
 END
 
 STRINGTABLE
@@ -165,17 +160,17 @@ BEGIN
     STRING_UNTITLED "Neintitulat"
     STRING_ALL_FILES "Orice fișier (*.*)"
     STRING_TEXT_FILES_TXT "Fișiere text (*.txt)"
-    STRING_TOOLARGE "Fișierul „%s” este prea mare.\n \
-Încercați un alt editor."
-    STRING_NOTEXT "Nu ați scris nimic. \
-\nScrieți ceva apoi încercați din nou."
-    STRING_DOESNOTEXIST "Fișierul „%s”\nnu există.\n\n \
-Creați un nou fișier ?"
-    STRING_NOTSAVED "Fișierul „%s” a fost modificat!\n\n \
-Păstrați modificările aduse?"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "„%s” nu poate fi găsit."
-    STRING_OUT_OF_MEMORY "Nu există suficientă memorie pentru a efectua această operație. \
-\nÎnchideți una sau mai multe aplicații pentru a elibera memorie."
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "„%s” nu poate fi găsit"
     STRING_ANSI "ANSI"
     STRING_UNICODE "Unicode"
