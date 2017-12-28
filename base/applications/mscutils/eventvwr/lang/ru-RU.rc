@@ -1,6 +1,12 @@
-/* Russian translation by Dmitry Chapyshev, Artem Reznikov, Kudratov Olimjon (olim98@bk.ru) */
+/*
+ * PROJECT:    ReactOS Event Viewer
+ * LICENSE:    GPL - See COPYING in the top level directory
+ * FILE:       base/applications/mscutils/eventvwr/lang/en-US.rc
+ * PURPOSE:    English Language File for ReactOS Event Viewer
+ * TRANSLATOR: Marc Piulachs
+ */
 
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 IDM_EVENTVWR MENU
 BEGIN
@@ -52,30 +58,30 @@ CAPTION "Свойства события"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "EvtDetailsCtrl", IDC_STATIC, 0, 0, 266, 215
-    PUSHBUTTON "П&омощь", IDHELP, 8, 220, 55, 14
+    PUSHBUTTON "П&омощь", IDHELP, 8, 220, 50, 14
     DEFPUSHBUTTON "&Закрыть", IDOK, 208, 220, 50, 14
 END
 
-IDD_EVENTDETAILS_CTRL DIALOGEX 0, 0, 300, 215
+IDD_EVENTDETAILS_CTRL DIALOGEX 0, 0, 266, 215
 STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_CLIPCHILDREN
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Дата:", IDC_STATIC, 8, 5, 41, 8
-    EDITTEXT IDC_EVENTDATESTATIC, 61, 5, 47, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "Источник:", IDC_STATIC, 118, 5, 36, 8
-    EDITTEXT IDC_EVENTSOURCESTATIC, 155, 5, 82, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "Время:", IDC_STATIC, 8, 15, 41, 8
-    EDITTEXT IDC_EVENTTIMESTATIC, 61, 15, 47, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "Категория:", IDC_STATIC, 118, 15, 46, 8
-    EDITTEXT IDC_EVENTCATEGORYSTATIC, 155, 15, 82, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "Тип:", IDC_STATIC, 8, 25, 41, 8
-    EDITTEXT IDC_EVENTTYPESTATIC, 61, 25, 47, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "Код (ID):", IDC_STATIC, 118, 25, 46, 8
-    EDITTEXT IDC_EVENTIDSTATIC, 155, 25, 82, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "&Пользователь:", IDC_STATIC, 8, 35, 51, 8
-    EDITTEXT IDC_EVENTUSERSTATIC, 61, 35, 152, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "&Компьютер:", IDC_STATIC, 8, 45, 51, 8
-    EDITTEXT IDC_EVENTCOMPUTERSTATIC, 61, 45, 152, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
+    LTEXT "Дата:", IDC_STATIC, 8, 5, 31, 8
+    EDITTEXT IDC_EVENTDATESTATIC, 46, 5, 47, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
+    LTEXT "Source:", IDC_STATIC, 103, 5, 36, 8
+    EDITTEXT IDC_EVENTSOURCESTATIC, 140, 5, 82, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
+    LTEXT "Время:", IDC_STATIC, 8, 15, 31, 8
+    EDITTEXT IDC_EVENTTIMESTATIC, 46, 15, 47, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
+    LTEXT "Категория:", IDC_STATIC, 103, 15, 36, 8
+    EDITTEXT IDC_EVENTCATEGORYSTATIC, 140, 15, 82, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
+    LTEXT "Тип:", IDC_STATIC, 8, 25, 31, 8
+    EDITTEXT IDC_EVENTTYPESTATIC, 46, 25, 47, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
+    LTEXT "Event ID:", IDC_STATIC, 103, 25, 36, 8
+    EDITTEXT IDC_EVENTIDSTATIC, 140, 25, 82, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
+    LTEXT "&Пользователь:", IDC_STATIC, 8, 35, 36, 8
+    EDITTEXT IDC_EVENTUSERSTATIC, 46, 35, 152, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
+    LTEXT "&Компьютер:", IDC_STATIC, 8, 45, 36, 8
+    EDITTEXT IDC_EVENTCOMPUTERSTATIC, 46, 45, 152, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
 
     PUSHBUTTON "", IDC_PREVIOUS, 230, 5, 28, 14, BS_ICON
     PUSHBUTTON "", IDC_NEXT, 230, 21, 28, 14, BS_ICON
@@ -84,9 +90,9 @@ BEGIN
     LTEXT "&Описание:", IDC_STATIC, 8, 65, 39, 8
     CONTROL "", IDC_EVENTTEXTEDIT, RICHEDIT_CLASS, ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL | WS_BORDER, 8, 76, 250, 60
 
-    LTEXT "&Данные:", IDC_DETAILS_STATIC, 8, 140, 30, 8
-    CONTROL "&Байты", IDC_BYTESRADIO, "Button", BS_AUTORADIOBUTTON, 49, 140, 34, 8
-    CONTROL "&Слова", IDC_WORDRADIO, "Button", BS_AUTORADIOBUTTON, 87, 140, 34, 8
+    LTEXT "&Данные:", IDC_DETAILS_STATIC, 8, 140, 20, 8
+    CONTROL "&Bytes", IDC_BYTESRADIO, "Button", BS_AUTORADIOBUTTON, 39, 140, 34, 8
+    CONTROL "&Word", IDC_WORDRADIO, "Button", BS_AUTORADIOBUTTON, 77, 140, 34, 8
     EDITTEXT IDC_EVENTDATAEDIT, 8, 150, 250, 60, ES_MULTILINE | ES_AUTOHSCROLL | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL | WS_BORDER
 END
 
@@ -135,7 +141,7 @@ BEGIN
     IDS_APP_TITLE_EX "%s - %s журнал на \\\\"
     IDS_STATUS_MSG "%s содержит %lu событие(ий) (listed: %lu)"
     IDS_LOADING_WAIT "Идет загрузка. Подождите..."
-    IDS_NO_ITEMS "Нет элементов для отображения в этом представлении." // "No events in this log."
+    IDS_NO_ITEMS "Нет элементов для отображения в этом представлении."" // ""No events in this log."
     IDS_EVENTLOG_SYSTEM "Системный журнал"
     IDS_EVENTLOG_APP "Журнал приложений"
     IDS_EVENTLOG_USER "Пользовательский журнал"
@@ -157,7 +163,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_BYTES_FORMAT "байт" // "%s bytes"
+    IDS_BYTES_FORMAT "байт"" // ""%s bytes"
     // "%1!ls! (%2!ls! bytes)"
 END
 
@@ -175,15 +181,15 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_COPY "Тип события:        %s\r\n\
-Источник события:   %s\r\n\
-Категория события:  %s\r\n\
-ID события:         %s\r\n\
-Дата:               %s\r\n\
-Время:              %s\r\n\
-Пользователь:       %s\r\n\
-Компьютер:          %s\r\n\
-Описание:\n%s"
+    IDS_COPY "Event Type:     %s\r\n\
+Event Source:   %s\r\n\
+Event Category: %s\r\n\
+Event ID:       %s\r\n\
+Date:           %s\r\n\
+Time:           %s\r\n\
+User:           %s\r\n\
+Computer:       %s\r\n\
+Description:\r\n%s"
 END
 
 STRINGTABLE
