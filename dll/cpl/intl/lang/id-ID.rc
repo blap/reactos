@@ -1,0 +1,216 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+IDD_GENERALPAGE DIALOGEX 0, 0, 246, 230
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Pilihan Regional"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX "Standar dan format", -1, 5, 5, 234, 162
+    LTEXT "Pilihan ini mempengaruhi bagaimana beberapa program memformat angka, mata uang, tanggal, dan waktu.", -1, 14, 17, 220, 25
+    LTEXT "&Pilih item yang sesuai dengan propertinya, atau klik Customize untuk memilih format anda sendiri:", -1, 14, 37, 220, 22
+    COMBOBOX IDC_LANGUAGELIST, 14, 56, 160, 160, CBS_DROPDOWNLIST | CBS_SORT | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    PUSHBUTTON "Customi&ze...", IDC_SETUP_BUTTON, 178, 56, 52, 13
+    LTEXT "Sampel", -1, 14, 73, 70, 10
+    LTEXT "Nomor:", -1, 16, 86, 48, 10
+    LTEXT "Moneter:", -1, 16, 101, 48, 10
+    LTEXT "Waktu:", -1, 16, 116, 48, 10
+    LTEXT "Kencan singkat:", -1, 16, 131, 48, 10
+    LTEXT "Tanggal yang panjang:", -1, 16, 146, 48, 10
+    EDITTEXT IDC_NUMSAMPLE_EDIT, 89, 86, 140, 12, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
+    EDITTEXT IDC_MONEYSAMPLE_EDIT, 89, 101, 140, 12, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
+    EDITTEXT IDC_TIMESAMPLE_EDIT, 89, 116, 140, 12, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
+    EDITTEXT IDC_SHORTTIMESAMPLE_EDIT, 89, 131, 140, 12, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
+    EDITTEXT IDC_FULLTIMESAMPLE_EDIT, 89, 146, 140, 12, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
+    GROUPBOX "Lokasi Geografis", -1, 5, 172, 234, 55
+    LTEXT "Siap&kan lokasi anda sehingga beberapa layanan dapat memberi anda informasi lokal; misalnya laporan berita dan cuaca.", -1, 14, 184, 210, 24
+    COMBOBOX IDC_LOCATION_COMBO, 14, 207, 217, 160, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP | CBS_SORT
+END
+
+IDD_LANGUAGESPAGE DIALOGEX 0, 0, 246, 230
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Languages"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX "Bahasa dan layanan input teks", -1, 5, 5, 234, 52
+    LTEXT "Untuk melihat atau mengubah metode input bahasa atau teks tekan ""Details...""", -1, 12, 15, 220, 18
+    PUSHBUTTON "De&tail...", IDC_DETAIL_BUTTON, 177, 34, 54, 14
+    GROUPBOX "Dukungan bahasa tambahan", -1, 5, 62, 234, 82
+    LTEXT "Sebagian besar bahasa terinstal secara default. Untuk menginstal bahasa tambahan, pilih kotak centang yang sesuai di bawah ini.", -1, 12, 72, 220, 18
+    AUTOCHECKBOX "I&nstall Berkas untuk skrip kompleks dan kanan-ke-kiri bahasa", IDC_INST_FILES_FOR_RTOL_LANG, 12, 92, 215, 22, BS_MULTILINE | BS_TOP
+    AUTOCHECKBOX "In&stall file untuk bahasa Asia Timur", IDC_INST_FILES_FOR_ASIAN, 12, 114, 180, 22, BS_MULTILINE | BS_TOP
+END
+
+IDD_ADVANCEDPAGE DIALOGEX 0, 0, 246, 230
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Maju"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX "Bahasa untuk program non-Unicode", -1, 5, 5, 234, 90
+    COMBOBOX IDC_LANGUAGE_COMBO, 14, 75, 217, 160, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP | CBS_SORT
+    LTEXT "Pengaturan sistem ini memungkinkan program non-Unicode menampilkan menu dan dialog dalam bahasa ibu mereka. Ini tidak mempengaruhi program Unicode, namun berlaku untuk semua pengguna komputer ini.", -1, 14, 18, 223, 33
+    LTEXT "&Pilih bahasa untuk cocok dengan versi bahasa program non-Unicode yang ingin Anda gunakan:", -1, 14, 55, 223, 18
+    GROUPBOX "&Tabel konversi halaman kode", -1, 5, 101, 234, 88
+    CONTROL "", IDC_CONV_TABLES, "SysListView32", LVS_REPORT | LVS_SORTASCENDING | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP, 14, 114, 217, 70
+    GROUPBOX "Pengaturan akun pengguna default", -1, 5, 193, 234, 32
+    AUTOCHECKBOX "Terapkan semua pengaturan ke akun pengguna saat ini dan ke &default", IDC_APPLY_CUR_USER_DEF_PROFILE, 12, 201, 220, 22, BS_MULTILINE | BS_TOP
+END
+
+IDD_NUMBERSPAGE DIALOGEX 0, 0, 246, 234
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Numbers"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX "Penampilan sampel", -1, 7, 7, 230, 53, WS_CHILD | WS_VISIBLE
+    LTEXT "Positif:", -1, 13, 21, 31, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    EDITTEXT IDC_NUMBERSPOSSAMPLE, 43, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
+    LTEXT "Negatif:", -1, 120, 21, 31, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    EDITTEXT IDC_NUMBERSNEGSAMPLE, 154, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
+    LTEXT "&Decimal simbol:", -1, 8, 67, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_NUMBERDSYMBOL, 137, 65, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "No. of digi&ts setelah decimal:", -1, 8, 83, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_NUMBERSNDIGDEC, 137, 81, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "Digit &pengelompokan simbol:", -1, 8, 100, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_NUMBERSDIGITGRSYM, 137, 97, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "D&igit pengelompokan:", -1, 8, 117, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_NUMBERSDGROUPING, 137, 113, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "N&egative tanda simbol:", -1, 8, 134, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_NUMBERSNSIGNSYM, 137, 129, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "Angka negatif &format:", -1, 8, 149, 100, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_NUMBERSNNUMFORMAT, 137, 145, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "Menampilkan terkemuka &nol:", -1, 8, 166, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_NUMBERSDISPLEADZER, 137, 161, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "&Pemisah daftar:", -1, 8, 181, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_NUMBERSLSEP, 137, 177, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "&Pengukuran sistem:", -1, 8, 197, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_NUMBERSMEASSYS, 137, 193, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+END
+
+IDD_CURRENCYPAGE DIALOGEX 0, 0, 246, 234
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Currency"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX "Penampilan sampel", -1, 7, 7, 230, 33, WS_CHILD | WS_VISIBLE
+    LTEXT "Positif:", -1, 13, 21, 27, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    EDITTEXT IDC_CURRENCYPOSSAMPLE, 43, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
+    LTEXT "Negatif:", -1, 120, 21, 30, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    EDITTEXT IDC_CURRENCYNEGSAMPLE, 154, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
+    LTEXT "&Currency symbol:", -1, 10, 51, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_CURRENCYSYMBOL, 134, 49, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "&Positive Amount:", -1, 10, 68, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_CURRENCYPOSVALUE, 134, 66, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "&Negative Amount:", -1, 10, 85, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_CURRENCYNEGVALUE, 134, 83, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "&Decimal separator:", -1, 10, 111, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_CURRENCYDECSEP, 134, 109, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "&Number of fractional digits:", -1, 10, 128, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_CURRENCYDECNUM, 134, 126, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "&Grouping symbol:", -1, 10, 156, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_CURRENCYGRPSEP, 134, 154, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    LTEXT "D&igit pengelompokan:", -1, 10, 173, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_CURRENCYGRPNUM, 134, 171, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+END
+
+IDD_TIMEPAGE DIALOGEX 0, 0, 246, 234
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Waktu"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX "Penampilan sampel", -1, 7, 7, 230, 33, WS_CHILD | WS_VISIBLE
+    LTEXT "Sampel waktu:", -1, 13, 21, 54, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    EDITTEXT IDC_TIMESAMPLE, 68, 19, 84, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
+    LTEXT "&Format waktu:", -1, 13, 52, 130, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_TIMEFORMAT, 149, 50, 84, 100, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_TABSTOP
+    LTEXT "Waktu &pemisah:", -1, 13, 70, 130, 10, WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_TIMESEPARATOR, 149, 68, 84, 100, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP
+    LTEXT "A&M simbol:", -1, 13, 88, 130, 10, WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_TIMEAMSYMBOL, 149, 86, 84, 100, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP
+    LTEXT "&PM simbol:", -1, 13, 106, 130, 10, WS_VISIBLE | WS_GROUP
+    COMBOBOX IDC_TIMEPMSYMBOL, 149, 104, 84, 100, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP
+    GROUPBOX "", -1, 7, 140, 230, 80, WS_VISIBLE
+    LTEXT "Time format notation\n\n\
+h = hour    m = minute    s = second    t = am or pm\n\n\
+h = 12 hour   H = 24 hour\n\
+hh, mm, ss = leading zero   h, m, s = no leading zero", -1, 13, 150, 214, 50, WS_CHILD | WS_VISIBLE | WS_GROUP
+END
+
+IDD_DATEPAGE DIALOGEX 0, 0, 246, 234
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Tanggal"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX "Kalender", -1, 7, 7, 230, 74
+    LTEXT "Jika tahun diketik sebagai dua digit, kemudian menganggap itu adalah &tahun antara:", -1, 13, 18, 215, 8
+    EDITTEXT IDC_FIRSTYEAR_EDIT, 13, 30, 36, 12, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_DISABLED
+    LTEXT "dan", -1, 55, 32, 17, 8
+    EDITTEXT IDC_SECONDYEAR_EDIT, 77, 30, 36, 12, ES_LEFT | ES_NUMBER | WS_GROUP
+    CONTROL "",IDC_SCR_MAX_YEAR, "msctls_updown32", UDS_NOTHOUSANDS | UDS_WRAP | UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_CHILD | WS_VISIBLE, 113, 30, 10, 12
+    LTEXT "&Jenis kalender:", -1, 13, 48, 56, 10
+    COMBOBOX IDC_CALTYPE_COMBO, 77, 46, 153, 100, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP | WS_DISABLED
+    LTEXT "&Kalender Islam:", -1, 13, 65, 60, 12
+    COMBOBOX IDC_HIJCHRON_COMBO, 77, 64, 153, 100, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP | WS_DISABLED
+    GROUPBOX "Kencan sebentar lagi", -1, 7, 83, 230, 81
+    LTEXT "Contoh:", -1, 13, 95, 63, 10
+    EDITTEXT IDC_SHRTDATESAMPLE_EDIT, 77, 93, 153, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
+    LTEXT "Contoh - kanan ke kiri membaca:", -1, 13, 109, 60, 16
+    EDITTEXT IDC_SHRTDATERTOL_EDIT, 77, 111, 153, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP | WS_DISABLED
+    LTEXT "&Format tanggal pendek:", -1, 13, 131, 60, 10
+    COMBOBOX IDC_SHRTDATEFMT_COMBO, 77, 129, 153, 100, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP | WS_VISIBLE
+    LTEXT "&Pemisah tanggal komponen:", -1, 13, 148, 113, 10
+    COMBOBOX IDC_SHRTDATESEP_COMBO, 180, 146, 51, 100, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP | WS_VISIBLE
+    GROUPBOX "Tanggal yang panjang", -1, 7, 167, 230, 64
+    LTEXT "Contoh:", -1, 13, 179, 61, 10
+    EDITTEXT IDC_LONGDATESAMPLE_EDIT, 77, 177, 153, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
+    LTEXT "Contoh - kanan ke kiri membaca:", -1, 13, 193, 61, 16
+    EDITTEXT IDC_LONGDATERTOL_EDIT, 77, 195, 153, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP | WS_DISABLED
+    LTEXT "&Format tanggal yang panjang:", -1, 13, 215, 60, 10
+    COMBOBOX IDC_LONGDATEFMT_COMBO, 77, 213, 153, 100, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP | WS_VISIBLE
+END
+
+IDD_SORTPAGE DIALOGEX 0, 0, 246, 234
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Mengurutkan"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX "Mengurutkan", -1, 7, 7, 230, 74
+    LTEXT "Metode penyortiran menentukan urutan pemilahan karakter, kata, file dan folder.", -1, 14, 17, 220, 25
+    LTEXT "Cari metode pengurutan untuk bahasa anda:", -1, 14, 37, 220, 22
+    COMBOBOX IDC_SORTLIST_COMBO, 14, 56, 217, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUSTOMIZE_TITLE "Menyesuaikan Opsi Regional"
+    IDS_SPAIN "Spanyol (Spanyol)"
+    IDS_METRIC "Metrik"
+    IDS_IMPERIAL "Imperial"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CPLNAME "Pilihan Regional"
+    IDS_CPLDESCRIPTION "Pilih bahasa dan format nomor, mata uang, waktu dan tanggal."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_APPLY_DEFAULT_TITLE "Ubah pengaturan default"
+    IDS_APPLY_DEFAULT_TEXT "Pengaturan akan diterapkan ke akun pengguna default.\n\n\
+Perubahan ini berlaku untuk layar masuk dan akun pengguna baru.\n\
+Komputer harus di-reboot, untuk menerapkan perubahan pada beberapa layanan sistem."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ERROR "Salah"
+    IDS_ERROR_SYMBOL_SEPARATE "Pemisah komponen tanggal pendek mengandung simbol yang salah(s)"
+    IDS_ERROR_SYMBOL_FORMAT_SHORT "Format tanggal pendek berisi simbol yang salah(s)"
+    IDS_ERROR_SYMBOL_FORMAT_LONG "Format tanggal yang panjang berisi simbol yang salah(s)"
+    IDS_ERROR_OEM_CODE_PAGE "Ada masalah pada saat membaca halaman kode OEM"
+    IDS_ERROR_ANSI_CODE_PAGE "Ada masalah saat membaca halaman kode ANSI"
+    IDS_ERROR_INT_KEY_REG "Tombol pembuka masalah: HKCU\\Control Panel\\International"
+    IDS_ERROR_DEF_INT_KEY_REG "Tombol pembuka masalah: HKU\\.DEFAULT\\Control Panel\\International"
+    IDS_ERROR_NLS_KEY_REG "Tombol pembuka masalah: HKLM\\SYSTEM\\CurrentControlSet\\Control\\NLS\\Language"
+    IDS_ERROR_NLS_CODE_REG "Tombol pembuka masalah: HKLM\\SYSTEM\\CurrentControlSet\\Control\\NLS\\CodePage"
+    IDS_ERROR_INPUT_DLL "Tidak dapat untuk memulai input.dll"
+END
