@@ -1,9 +1,4 @@
-/* TRANSLATOR : Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- * DATE OF TR.: 07-07-2008
- * LAST CHANGE: 29-07-2010 
- */ 
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -96,11 +91,11 @@ IDR_POPUP_MENUS MENU
 BEGIN
     POPUP ""
     BEGIN
-    MENUITEM "&Zmeniť", ID_EDIT_MODIFY
-    MENUITEM "Zmeniť bináre údaje", ID_EDIT_MODIFY_BIN
+        MENUITEM "&Zmeniť", ID_EDIT_MODIFY
+        MENUITEM "Zmeniť bináre údaje", ID_EDIT_MODIFY_BIN
         MENUITEM SEPARATOR
-    MENUITEM "&Vymazať\tDel", ID_EDIT_DELETE
-    MENUITEM "&Premenovať", ID_EDIT_RENAME
+        MENUITEM "&Vymazať\tDel", ID_EDIT_DELETE
+        MENUITEM "&Premenovať", ID_EDIT_RENAME
     END
     POPUP ""
     BEGIN
@@ -134,16 +129,16 @@ BEGIN
         MENUITEM "&Premenovať", ID_TREE_RENAME
         MENUITEM SEPARATOR
         MENUITEM "&Export", ID_TREE_EXPORT
-        MENUITEM "&Permissions...", ID_TREE_PERMISSIONS, GRAYED
+        MENUITEM "&Oprávnenia...", ID_TREE_PERMISSIONS, GRAYED
         MENUITEM SEPARATOR
-        MENUITEM "&Copy Key Name", ID_EDIT_COPYKEYNAME
+        MENUITEM "&Kopírovať názov kľúča", ID_EDIT_COPYKEYNAME
     END
     POPUP ""
     BEGIN
         MENUITEM "C&ut", ID_HEXEDIT_CUT
         MENUITEM "&Copy", ID_HEXEDIT_COPY
         MENUITEM "&Paste", ID_HEXEDIT_PASTE
-        MENUITEM "&Delete", ID_HEXEDIT_DELETE
+        MENUITEM "O&dstrániť", ID_HEXEDIT_DELETE
         MENUITEM SEPARATOR
         MENUITEM "Select &All", ID_HEXEDIT_SELECT_ALL
     END
@@ -180,7 +175,7 @@ END
 
 IDD_EDIT_BIN_DATA DIALOGEX 32, 24, 252, 174
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_NOIDLEMSG | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Úprava binárnej hodnoty" //upraviť, upravenie
+CAPTION "Úprava binárnej hodnoty"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Value &name:", IDC_STATIC, 6, 6, 134, 8
@@ -481,7 +476,7 @@ BEGIN
     LTEXT "&Key:", IDC_STATIC, 4, 4, 15, 8, SS_LEFT
     EDITTEXT IDC_EDIT_KEY, 23, 2, 167, 13
     DEFPUSHBUTTON "OK", IDOK, 140, 17, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 89, 17, 50, 14
+    PUSHBUTTON "Zrušiť", IDCANCEL, 89, 17, 50, 14
 END
 
 IDD_ADDFAVORITES DIALOGEX 0, 0, 186, 46
@@ -513,15 +508,15 @@ CAPTION "Find"
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON "&Find Next", IDOK, 197, 7, 50, 14
-    PUSHBUTTON "Zrušiť", IDCANCEL, 197, 24, 50, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 197, 24, 50, 14
     GROUPBOX "Look at", IDC_STATIC, 7, 25, 63, 51
     LTEXT "Fi&nd what:", IDC_STATIC, 7, 8, 37, 10
     EDITTEXT IDC_FINDWHAT, 47, 7, 142, 13, ES_AUTOHSCROLL
-    CONTROL "&Kľúče", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Keys", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 36, 35, 8
-    CONTROL "&Hodnoty", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Values", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 48, 36, 8
-    CONTROL "Ú&daje", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Data", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 60, 42, 8
     CONTROL "Match &whole string only", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 32, 94, 13
@@ -543,7 +538,7 @@ END
 /*
  *STRINGTABLE
  *BEGIN
- *    ID_HELP_HELPTOPICS "Otvorí pomocníka pre Editor registrov."
- *    ID_HELP_ABOUT "Zobrazuje informácie programu, číslo verzie a autorské práva."
+ *    ID_HELP_HELPTOPICS "Opens Registry Editor Help."
+ *    ID_HELP_ABOUT "Displays program information, version number, and copyright."
  *END
  */
