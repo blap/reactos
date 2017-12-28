@@ -1,0 +1,79 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+IDC_REACTOS_SNDREC32 ACCELERATORS
+BEGIN
+    "?", IDM_ABOUT, ASCII, ALT
+    "/", IDM_ABOUT, ASCII, ALT
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 196, 75
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tentang Manajer Layanan"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON IDI_SNDREC32, -1, 19, 14, 21, 20
+    LTEXT "ReactOS Perekam Suara, versi 1.0", IDC_STATIC, 56, 16, 114, 8, SS_NOPREFIX
+    LTEXT "Hak cipta (C) 2009", IDC_STATIC, 56, 25, 114, 8
+    DEFPUSHBUTTON "Oke", IDOK, 139, 54, 50, 14, WS_GROUP
+END
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Baru", ID_FILE_NEW
+        MENUITEM "&Terbuka...", ID_FILE_OPEN
+        MENUITEM "&Simpan", ID_FILE_SAVE, GRAYED
+        MENUITEM "Simpan & Sebagai...", ID_FILE_SAVEAS, GRAYED
+        MENUITEM "&Memulihkan...", ID_FILE_RESTORE, GRAYED
+        MENUITEM "Properti", ID_FILE_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "&Keluar", ID_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy", ID_EDIT_COPY
+        MENUITEM "&Tempel Masukan", ID_EDIT_PASTE, GRAYED
+        MENUITEM "Tempel Mi&x", ID_EDIT_PASTEMIX, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Menyisipkan File...", ID_EDIT_INSERTFILE
+        MENUITEM "&Campuran dengan File...", ID_EDIT_MIXFILE
+        MENUITEM SEPARATOR
+        MENUITEM "Menghapus &sebelum posisi saat ini", ID_EDIT_DELETEBEFORE, GRAYED
+        MENUITEM "Menghapus &setelah posisi saat ini", ID_EDIT_DELETEAFTER, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "S&uara properti", ID_EDIT_AUDIOPROPS
+    END
+    POPUP "Efe&k"
+    BEGIN
+        MENUITEM "&Meningkatkan Volume (oleh 25%)", ID_EFFECTS_INCVOL
+        MENUITEM "&Mengurangi Volume", ID_EFFECTS_DECVOL
+        MENUITEM SEPARATOR
+        MENUITEM "I&ncrease Speed (by 100%)", ID_EFFECTS_INCSPD
+        MENUITEM "D&ecrease Speed", ID_EFFECTS_DECSPD
+        MENUITEM SEPARATOR
+        MENUITEM "&Add Echo", ID_EFFECTS_ECHO
+        MENUITEM "&Reverse", ID_EFFECTS_REVERSE
+    END
+    POPUP "&?"
+    BEGIN
+        MENUITEM "&Tentang", ID_ABOUT
+    END
+END
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE "Perekam Suara"
+    IDC_REACTOS_SNDREC32 "REACTOS_SNDREC32"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRPOS "Posisi: %.2f s"
+    IDS_STRDUR "Panjang: %.2f s"
+    IDS_STRBUF "Buffer: %.2f kb"
+    IDS_STRFMT "%.1f kHz %u bits"
+    IDS_STRMONO "mono"
+    IDS_STRSTEREO "stereo"
+    IDS_STRCHAN "%s"
+END
