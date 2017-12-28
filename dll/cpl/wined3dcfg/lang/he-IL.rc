@@ -1,4 +1,4 @@
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 IDD_PROPPAGEGENERAL DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -32,6 +32,6 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_CPLNAME "WineD3D Options"
-    IDS_CPLDESCRIPTION "Configures WineD3D runtime settings."
+    IDS_CPLNAME "התקני קול ושמע"
+    IDS_CPLDESCRIPTION "Changes the sound scheme for your computer, or configure the settings for your speakers and recording devices."
 END
