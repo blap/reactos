@@ -1,3 +1,8 @@
 files:
   - source: /**/en-US.rc
+    ignore:
+      - /dll/win32/ieframe
+      - /boot/
+      - /modules/rostests
+      - /modules/rosapps/templates
     translation: /**/%locale%.rc
