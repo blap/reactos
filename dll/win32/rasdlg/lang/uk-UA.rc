@@ -1,12 +1,4 @@
-/*
- * PROJECT:    Remote Access Common Dialog API
- * LICENSE:    GPL - See COPYING in the top level directory
- * FILE:       dll/win32/rasdlg/lang/uk-UA.rc
- * PURPOSE:    Ukraianian Language File for rasdlg
- * TRANSLATOR: Artem Reznikov
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 102 DIALOGEX 0, 0, 255, 265
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -145,7 +137,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Відповідний виклик"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Ви маєте право на зворотний виклик із боку сервера.  Якщо натиснути кнопку ""OK"", сервер зробить зворотний виклик за вказаним нижче номером.  Щоб відмовитися від зворотного виклику, натисніть кнопку ""Скасувати"".", 1066, 5, 5, 221, 39, SS_NOPREFIX
+    LTEXT "You have 'Set By Caller' callback privilege on the server.  Press OK and the server will call you back at the number below.  Press Cancel to skip callback.", 1066, 5, 5, 221, 39, SS_NOPREFIX
     LTEXT "&Введіть номер телефону вашого модема:", 1067, 5, 46, 222, 8, NOT WS_GROUP
     EDITTEXT 1065, 5, 57, 221, 14, ES_AUTOHSCROLL
     DEFPUSHBUTTON "OK", 1, 100, 85, 60, 14, WS_GROUP
@@ -535,7 +527,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Введіть назву для цього підключення:", -1, 8, 4, 190, 8
     EDITTEXT 1114, 8, 17, 190, 12, ES_AUTOHSCROLL
-    LTEXT "Щоб зберегти значок підключення до папці ""Мережні підключення"", натисніть кнопку ""Готово"".", -1, 8, 38, 193, 8
+    LTEXT "Click Finish to save it in the Network Connections folder.", -1, 8, 38, 193, 8
     LTEXT "Щоб змінити властивості цього підключення, виділіть його та виберіть із меню ""Файл"" команду ""Властивості"".", -1, 8, 58, 193, 16
 END
 
@@ -714,7 +706,7 @@ BEGIN
     LTEXT "Введіть номер телефону. ", -1, 7, 4, 306, 14
     LTEXT "Номер &телефону:", 1308, 7, 19, 130, 8
     EDITTEXT 1304, 7, 30, 304, 14, ES_AUTOHSCROLL
-    LTEXT "Можливо, знадобиться додати ""1"", код міста або обидва значення. Щоб визначити, чи це потрібно, наберіть комбінацію номера й коду на своєму телефоні. Якщо чутно звук модема, комбінацію вибрано правильно.", -1, 20, 50, 291, 53
+    LTEXT "You might need to include a ""1"" or the area code, or both. If you are not sure you need the extra numbers, dial the phone number on your telephone. If you hear a modem sound, the number dialed is correct.", -1, 20, 50, 291, 53
 END
 
 169 DIALOGEX 6, 18, 235, 135
@@ -937,7 +929,7 @@ BEGIN
     LTEXT "Виберіть роль для цього комп'ютера:", -1, 10, 5, 275, 9
     AUTORADIOBUTTON "&Ведений комп'ютер", 1483, 31, 20, 265, 10, BS_TOP | BS_MULTILINE | WS_GROUP
     AUTORADIOBUTTON "&Провідний комп'ютер", 1484, 31, 44, 265, 10, BS_TOP | BS_MULTILINE
-    LTEXT "Цей комп'ютер містить інформацію, до якої потрібно отримати доступ.", -1, 45, 31, 253, 13, NOT WS_GROUP | WS_TABSTOP
+    LTEXT "This computer has the information you want to access.", -1, 43, 31, 253, 13, NOT WS_GROUP | WS_TABSTOP
     LTEXT "Цей комп'ютер використовується для доступу до інформації на веденому комп'ютері.", -1, 43, 56, 253, 23, NOT WS_GROUP
 END
 
@@ -1036,13 +1028,13 @@ CAPTION "Підключення до %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "&Користувач:", 1413, 12, 67, 87, 8
+    LTEXT "Користувач:", 1413, 10, 67, 87, 8
     EDITTEXT 1104, 103, 63, 154, 14, ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 9, 84, 248, 1
     LTEXT "Н&абрати:", 1412, 11, 96, 48, 8
     COMBOBOX 1416, 103, 92, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     LTEXT "&Місце виклику:", 1415, 10, 114, 46, 8
-    COMBOBOX 1414, 102, 110, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
+    COMBOBOX 1414, 103, 110, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "&Правила", 1108, 193, 110, 64, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 7, 130, 250, 1
     DEFPUSHBUTTON "&Виклик", 1590, 6, 136, 60, 14
@@ -1134,7 +1126,7 @@ BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
     LTEXT "&Користувач:", 1413, 10, 67, 91, 10
     EDITTEXT 1104, 104, 64, 154, 14, ES_AUTOHSCROLL
-    LTEXT "До&мен:", 1110, 11, 86, 91, 8
+    LTEXT "До&мен:", 1110, 10, 86, 91, 8
     EDITTEXT 1102, 104, 83, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 103, 248, 1
     LTEXT "Н&абрати:", 1412, 10, 115, 91, 8
@@ -1216,7 +1208,7 @@ BEGIN
     LTEXT "п&орт TCP:", -1, 7, 100, 28, 8
     EDITTEXT 1569, 50, 97, 162, 14, ES_AUTOHSCROLL
     LTEXT "пор&т UDP:", -1, 7, 121, 30, 8
-    EDITTEXT 1551, 51, 117, 162, 14, ES_AUTOHSCROLL
+    EDITTEXT 1551, 50, 117, 162, 14, ES_AUTOHSCROLL
     DEFPUSHBUTTON "OK", 1, 90, 144, 60, 14
     PUSHBUTTON "Скасувати", 2, 154, 144, 60, 14
 END
@@ -2050,7 +2042,7 @@ BEGIN
     434 "Набір номера %1...\0"
     435 "Підключення через X.25 до %1...\0"
     436 "Післяпідключення через %1...\0"
-    437 "Передпідключення через %1...\0"
+    437 "437   (OEM - США)"
     438 "Підключення виконано.\0"
     439 "Пристрій підключений.\0"
     440 "Вимкнено.\0"
@@ -2113,7 +2105,7 @@ BEGIN
     497 "X.25 PAD\0"
     498 "Можна надати доступ до ресурсів комп'ютера іншим комп'ютерам за допомогою цього підключення віддаленого доступу.\0"
     499 "Вибір VPN-сервера\0"
-    500 "Неможливо дозволити виклик на вимогу.\0"
+    500 "500   (IBM EBCDIC - Міжнародна)"
     501 "Укажіть ім'я або адресу VPN-сервера.\0"
     502 "Неможливо заборонити виклик на вимогу.\0"
     503 "Публічна мережа\0"
