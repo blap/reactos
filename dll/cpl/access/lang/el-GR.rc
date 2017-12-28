@@ -1,4 +1,4 @@
-LANGUAGE LANG_GREEK, SUBLANG_DEFAULT
+LANGUAGE LANG_GREEK, SUBLANG_GREEK_GREECE
 
 IDD_PROPPAGEKEYBOARD DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -54,7 +54,7 @@ BEGIN
     PUSHBUTTON "&Ρυθμίσεις", IDC_CONTRAST_BUTTON, 144, 49, 90, 14
     GROUPBOX "Επιλογές δρομέα", -1, 6, 79, 234, 115
     LTEXT "Μετακινήστε τα ρυθμιστικά, ώστε να αλλάξετε την ταχύτητα με την οποία αναβοσβήνει ο δρομένας (ρυθμός εναλλαγής φωτεινότητας) και το πλάτος του δρομέα.",
-          -1, 12, 88, 222, 29
+          -1, 12, 88, 222, 20
     CTEXT "Ρυθμός εναλλαγής φωτεινότητας:", -1, 12, 115, 222, 11
     LTEXT "Κανένας", -1, 18, 130, 36, 11
     LTEXT "Υψηλός", -1, 192, 130, 36, 11
