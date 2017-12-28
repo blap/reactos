@@ -1,9 +1,9 @@
 /*
- * PROJECT:    PAINT for ReactOS
- * LICENSE:    LGPL
- * FILE:       base/applications/mspaint/lang/pt-BR.rc
- * PURPOSE:    Portuguese Brazilian Language resource file
- * TRANSLATOR: Wagner Leandro Bueno Angelo
+ * PROJECT:     PAINT for ReactOS
+ * LICENSE:     LGPL
+ * FILE:        base/applications/mspaint/lang/en-US.rc
+ * PURPOSE:     US-English Language resource file
+ * TRANSLATORS: first times touched from en-GB.rc file by Mario Kacmar
  */
 
 LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
@@ -17,13 +17,13 @@ BEGIN
         MENUITEM "&Salvar\tCtrl+S", IDM_FILESAVE
         MENUITEM "Salvar &como...", IDM_FILESAVEAS
         MENUITEM SEPARATOR
-        MENUITEM "From Scanner or Camera...", IDM_FILEFROMSCANNERORCAMERA
+        MENUITEM "Do Scanner ou Câmera...", IDM_FILEFROMSCANNERORCAMERA
         MENUITEM SEPARATOR
-        MENUITEM "Page View", IDM_FILEPAGEVIEW
-        MENUITEM "Page Setup...", IDM_FILEPAGESETUP
+        MENUITEM "Visualização de página", IDM_FILEPAGEVIEW
+        MENUITEM "Configuração de Página...", IDM_FILEPAGESETUP
         MENUITEM "Print...\tCtrl+P", IDM_FILEPRINT
         MENUITEM SEPARATOR
-        MENUITEM "Send...", IDM_FILESEND
+        MENUITEM "Enviar...", IDM_FILESEND
         MENUITEM SEPARATOR
         MENUITEM "Definir como plano de fundo (Lado a lado)", IDM_FILEASWALLPAPERPLANE
         MENUITEM "Definir como plano de fundo (Centralizado)", IDM_FILEASWALLPAPERCENTERED
@@ -68,8 +68,8 @@ BEGIN
                 MENUITEM "800%", IDM_VIEWZOOM800
             END
             MENUITEM SEPARATOR
-            MENUITEM "Exibir grade\tCtrl+G", IDM_VIEWSHOWGRID
-            MENUITEM "Exibir miniatura", IDM_VIEWSHOWMINIATURE
+            MENUITEM "Exibir &grade\tCtrl+G", IDM_VIEWSHOWGRID
+            MENUITEM "Exibir &miniatura", IDM_VIEWSHOWMINIATURE
         END
         MENUITEM "E&xibir bitmap\tCtrl+F", IDM_VIEWFULLSCREEN
     END
@@ -77,7 +77,7 @@ BEGIN
     BEGIN
         MENUITEM "Inverter/&girar...\tCtrl+R", IDM_IMAGEROTATEMIRROR
         MENUITEM "&Alongar/inclinar...\tCtrl+W", IDM_IMAGESTRETCHSKEW
-        MENUITEM "Cortar", IDM_IMAGECROP
+        MENUITEM "&Cortar", IDM_IMAGECROP
         MENUITEM "&Inverter cores\tCtrl+I", IDM_IMAGEINVERTCOLORS
         MENUITEM "A&tributos...\tCtrl+E", IDM_IMAGEATTRIBUTES
         MENUITEM "&Limpar imagem\tCtrl+Shft+N", IDM_IMAGEDELETEIMAGE
@@ -87,12 +87,12 @@ BEGIN
     BEGIN
         MENUITEM "&Editar cores...", IDM_COLORSEDITPALETTE
         MENUITEM SEPARATOR
-        MENUITEM "Modern palette", IDM_COLORSMODERNPALETTE
-        MENUITEM "Old palette", IDM_COLORSOLDPALETTE
+        MENUITEM "Paleta Moderna", IDM_COLORSMODERNPALETTE
+        MENUITEM "Paleta Antiga", IDM_COLORSOLDPALETTE
     END
     POPUP "&Ajuda"
     BEGIN
-        MENUITEM "&Tópicos da Ajuda", IDM_HELPHELPTOPICS
+        MENUITEM "&Tópicos de Ajuda", IDM_HELPHELPTOPICS
         MENUITEM SEPARATOR
         MENUITEM "So&bre", IDM_HELPINFO
     END
@@ -129,7 +129,7 @@ BEGIN
     GROUPBOX "Inverter ou girar", IDD_MIRRORROTATEGROUP, 6, 6, 112, 86
     AUTORADIOBUTTON "Inverter &horizontalmente", IDD_MIRRORROTATERB1, 12, 18, 100, 10, WS_GROUP
     AUTORADIOBUTTON "Inverter &verticalmente", IDD_MIRRORROTATERB2, 12, 30, 100, 10
-    AUTORADIOBUTTON "&Girar", IDD_MIRRORROTATERB3, 12, 42, 100, 10
+    AUTORADIOBUTTON "&Girar em um ângulo de", IDD_MIRRORROTATERB3, 12, 42, 100, 10
     AUTORADIOBUTTON "&90°", IDD_MIRRORROTATERB4, 42, 54, 50, 10, WS_GROUP | WS_DISABLED
     AUTORADIOBUTTON "&180°", IDD_MIRRORROTATERB5, 42, 66, 50, 10, WS_DISABLED
     AUTORADIOBUTTON "&270°", IDD_MIRRORROTATERB6, 42, 78, 50, 10, WS_DISABLED
@@ -145,13 +145,13 @@ BEGIN
     EDITTEXT IDD_ATTRIBUTESEDIT1, 48, 40, 35, 12
     EDITTEXT IDD_ATTRIBUTESEDIT2, 128, 40, 35, 12
     LTEXT "&Largura:", IDD_ATTRIBUTESTEXT1, 10, 40, 35, 10
-    LTEXT "Altura:", IDD_ATTRIBUTESTEXT2, 90, 40, 35, 10
-    LTEXT "Data do arquivo:", IDD_ATTRIBUTESTEXT3, 10, 5, 60, 10
-    LTEXT "Tamanho do arquivo:", IDD_ATTRIBUTESTEXT4, 10, 15, 60, 10
-    LTEXT "Resolução:", IDD_ATTRIBUTESTEXT5, 10, 25, 60, 10
+    LTEXT "&Altura:", IDD_ATTRIBUTESTEXT2, 90, 40, 35, 10
+    LTEXT "Data do &arquivo:", IDD_ATTRIBUTESTEXT3, 10, 5, 60, 10
+    LTEXT "&Tamanho do arquivo:", IDD_ATTRIBUTESTEXT4, 10, 15, 60, 10
+    LTEXT "&Resolução:", IDD_ATTRIBUTESTEXT5, 10, 25, 60, 10
     LTEXT "não disponível", IDD_ATTRIBUTESTEXT6, 60, 5, 90, 10
-    LTEXT "não disponível", IDD_ATTRIBUTESTEXT7, 60, 15, 90, 10
-    LTEXT "não disponível", IDD_ATTRIBUTESTEXT8, 60, 25, 90, 10
+    LTEXT "Não disponível", IDD_ATTRIBUTESTEXT7, 60, 15, 90, 10
+    LTEXT "Não disponível", IDD_ATTRIBUTESTEXT8, 60, 25, 90, 10
     GROUPBOX "Unidades", IDD_ATTRIBUTESGROUP1, 6, 57, 158, 27
     AUTORADIOBUTTON "P&olegadas", IDD_ATTRIBUTESRB1, 12, 69, 45, 10, WS_GROUP
     AUTORADIOBUTTON "c&m", IDD_ATTRIBUTESRB2, 62, 69, 45, 10
@@ -182,11 +182,11 @@ BEGIN
     ICON IDI_HORZSKEW, IDD_STRETCHSKEWICONHSKEW, 12, 88, 32, 32
     LTEXT "Horizontal:", IDD_STRETCHSKEWTEXTHSKEW, 45, 94, 40, 10
     EDITTEXT IDD_STRETCHSKEWEDITHSKEW, 90, 93, 32, 12
-    LTEXT "degrees", IDD_STRETCHSKEWTEXTHDEG, 125, 94, 30, 10
+    LTEXT "graus", IDD_STRETCHSKEWTEXTHDEG, 125, 94, 30, 10
     ICON IDI_VERTSKEW, IDD_STRETCHSKEWICONVSKEW, 12, 113, 32, 32
     LTEXT "Vertical:", IDD_STRETCHSKEWTEXTVSKEW, 45, 119, 40, 10
     EDITTEXT IDD_STRETCHSKEWEDITVSKEW, 90, 118, 32, 12
-    LTEXT "degrees", IDD_STRETCHSKEWTEXTVDEG, 125, 119, 30, 10
+    LTEXT "graus", IDD_STRETCHSKEWTEXTVDEG, 125, 119, 30, 10
     DEFPUSHBUTTON "OK", IDOK, 170, 8, 48, 14
     PUSHBUTTON "Cancelar", IDCANCEL, 170, 24, 48, 14
 END
@@ -198,31 +198,31 @@ BEGIN
     IDS_INFOTITLE "Paint para ReactOS"
     IDS_INFOTEXT "Paint para ReactOS está disponível sob a licença GNU Lesser General Public License (LGPL, visite www.gnu.org)"
     IDS_SAVEPROMPTTEXT "Salvar as alterações em %s?"
-    IDS_DEFAULTFILENAME "Imagem.bmp"
+    IDS_DEFAULTFILENAME "Semnome.bmp"
     IDS_MINIATURETITLE "Miniatura"
     IDS_TOOLTIP1 "Selecionar forma livre"
-    IDS_TOOLTIP2 "Selecionar"
-    IDS_TOOLTIP3 "Apagador/Apagador de cor"
+    IDS_TOOLTIP2 "Seleção"
+    IDS_TOOLTIP3 "Apagador de cor"
     IDS_TOOLTIP4 "Preencher com cor"
     IDS_TOOLTIP5 "Selecionar cor"
-    IDS_TOOLTIP6 "Lente de aumento"
+    IDS_TOOLTIP6 "Zoom"
     IDS_TOOLTIP7 "Lápis"
     IDS_TOOLTIP8 "Pincel"
     IDS_TOOLTIP9 "Spray"
     IDS_TOOLTIP10 "Texto"
-    IDS_TOOLTIP11 "Linnha"
-    IDS_TOOLTIP12 "Curva"
+    IDS_TOOLTIP11 "Linha"
+    IDS_TOOLTIP12 "Curva de Bézier"
     IDS_TOOLTIP13 "Retângulo"
     IDS_TOOLTIP14 "Polígono"
-    IDS_TOOLTIP15 "Ellipse"
+    IDS_TOOLTIP15 "Elipse"
     IDS_TOOLTIP16 "Retângulo arredondado"
     IDS_ALLFILES "Todos os arquivos"
     IDS_ALLPICTUREFILES "All Picture Files"
     IDS_FILESIZE "%d bytes"
     IDS_PRINTRES "%d x %d pixels per meter"
-    IDS_INTNUMBERS "Please enter integral numbers only!"
-    IDS_PERCENTAGE "The percentage must be between 1 and 500."
-    IDS_ANGLE "The angle must be between -89 and 89."
-    IDS_LOADERRORTEXT "The file %s could not be loaded."
+    IDS_INTNUMBERS "Por favor insira apenas números inteiros!"
+    IDS_PERCENTAGE "O percentual deve ser entre 1 e 500."
+    IDS_ANGLE "O ângulo deve ser entre -89 e 89."
+    IDS_LOADERRORTEXT "O arquivo %s não pôde ser carregado."
     IDS_ENLARGEPROMPTTEXT "The image in the clipboard is larger than the bitmap.\nWould you like the bitmap enlarged?"
 END
