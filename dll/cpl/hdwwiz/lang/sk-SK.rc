@@ -1,13 +1,8 @@
-/* TRANSLATOR : Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- * DATE OF TR.: 02-02-2008
- * LAST CHANGE: 10-01-2009
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 IDD_STARTPAGE DIALOGEX 0, 0, 317, 186
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Sprievodca pridaním hardvéru" // Add Hardware Wizard
+CAPTION "Sprievodca pridaním hardvéru"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Víta Vás sprievodca pridaním hardvéru", IDC_FINISHTITLE, 114, 8, 203, 24
@@ -16,7 +11,7 @@ BEGIN
     LTEXT "2) Vyriešiť problémy, ktoré môžete mať s Vaším hardvérom.", -1, 121, 78, 185, 16
     ICON IDI_WARNINGICON, IDC_WARNINGICON, 124, 109, 20, 20
     LTEXT "Ak bolo spolu s Vaším hardvérom dodané aj inštalačné CD, odporúča sa, aby ste klikli na tlačidlo Zrušiť pre zatvorenie tohto sprievodcu a použili CD od výrobcu pre nainštalovanie tohto hardvéru.", 503, 150, 106, 155, 50
-    LTEXT "Pre pokračovanie kliknite na tlačidlo Ďalej.", -1, 114, 166, 193, 8 // Pokračujte stlačením tlačidla Ďalej.
+    LTEXT "Pre pokračovanie kliknite na tlačidlo Ďalej.", -1, 114, 166, 193, 8
 END
 
 IDD_SEARCHPAGE DIALOGEX 0, 0, 317, 143
@@ -33,7 +28,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYS
 CAPTION "Sprievodca pridaním hardvéru"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Pripojili ste už tento hardvér k Vášmu počítaču?", -1, 20, 11, 275, 8 // tento = daný
+    LTEXT "Pripojili ste už tento hardvér k Vášmu počítaču?", -1, 20, 11, 275, 8
     AUTORADIOBUTTON "Án&o, už som pripojil hardvér", IDC_CONNECTED, 29, 23, 266, 8, WS_GROUP
     AUTORADIOBUTTON "&Nie, zatiaľ som nepridal hardvér", IDC_NOTCONNECTED, 29, 35, 266, 8
 END
@@ -97,7 +92,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYS
 CAPTION "Sprievodca pridaním hardvéru"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Dokončenie sprievodcu pridaním hardvéru", IDC_FINISHTITLE, 114, 8, 203, 24 // Completing the Add Hardware Wizard
+    LTEXT "Dokončenie sprievodcu pridaním hardvéru", IDC_FINISHTITLE, 114, 8, 203, 24
     LTEXT "Úspešne ste dokončili sprievodcu pridaním hardvéru.", -1, 114, 32, 193, 19
     LTEXT "", IDC_STATUSTEXT, 114, 70, 193, 92
     LTEXT "Pre zatvorenie tohto sprievodcu kliknite na tlačidlo Dokončiť.", -1, 114, 166, 132, 8
@@ -128,7 +123,7 @@ END
 
 IDD_NOTCONNECTEDPAGE DIALOGEX 0, 0, 317, 186
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Sprievodca pridaním hardvéru"
+CAPTION "Add Hardware Wizard"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Cannot Continue the Add Hardware Wizard", IDC_FINISHTITLE, 114, 8, 203, 28
