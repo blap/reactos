@@ -1,0 +1,8 @@
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_DESCRIPTION "Fractal de cilindros"
+    IDS_TITLE       "Sobre"
+    IDS_TEXT        "Fractal de cilindros por unC0Rr.\nEspecialmente para o ReactOS."
+END
