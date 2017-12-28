@@ -1,4 +1,4 @@
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 IDD_DISPLAYADAPTER DIALOGEX 0, 0, 252, 226
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -41,8 +41,8 @@ BEGIN
     IDES_REFRESHRATEFMT "%d Hertz"
     IDS_4BPP "16 Colori"
     IDS_8BPP "256 Colori"
-    IDS_15BPP "High Color (15 bit)"
-    IDS_16BPP "High Color (16 bit)"
-    IDS_24BPP "True Color (24 bit)"
+    IDS_15BPP "32,768 colori (15 bit)"
+    IDS_16BPP "65.536 colori (16 bit)"
+    IDS_24BPP "16,777,216 colori (24 bit)"
     IDS_32BPP "True Color (32 bit)"
 END
