@@ -1,14 +1,4 @@
-/*
- *    Translated by TestamenT
- *    testament@users.sourceforge.net
- *    https://sourceforge.net/projects/reactospl
- *    UTF-8 conversion by Caemyr (May, 2011)
- *    Updated by Saibamen - Adam Stachowicz (saibamenppl@gmail.com) (April, 2014)
- *    Updated by wojo664 - Wojtek Kozłowski (wojo664@gmail.com, wojtekkozlo664@op.pl) (April, 2014)
- */
-
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 IDD_STATUSWINDOW_DLG DIALOGEX 0, 0, 275, 80
 STYLE NOT WS_VISIBLE | DS_CENTER | DS_MODALFRAME | DS_SHELLFONT | WS_BORDER | WS_CAPTION | WS_DLGFRAME | WS_POPUP
@@ -26,7 +16,7 @@ FONT 8, "MS Shell Dlg", 400, 0, 1
 BEGIN
     CONTROL IDI_ROSLOGO, IDC_ROSLOGO, "Static", SS_BITMAP, 0, 0, 275, 54
     ICON IDI_KEYBOARD, IDC_STATIC, 7, 55, 32, 32
-    LTEXT "Proszę wcisnąć kombinację klawiszy Ctrl-Alt-Del", IDC_STATIC, 38, 60, 144, 14
+    LTEXT "Proszę wcisnąć kombinację klawiszy Ctrl-Alt-Del",IDC_STATIC, 38, 60, 144, 14
 END
 
 IDD_LOGGEDOUT_DLG DIALOGEX 0, 0, 275, 147
@@ -35,13 +25,13 @@ CAPTION "Logowanie"
 FONT 8, "MS Shell Dlg", 400, 0, 1
 BEGIN
     CONTROL IDI_ROSLOGO, IDC_ROSLOGO, "Static", SS_BITMAP, 0, 0, 275, 54
-    LTEXT "Nazwa użytkownika:", IDC_STATIC, 6, 60, 70, 8
-    EDITTEXT IDC_USERNAME, 73, 57, 142, 14, ES_AUTOHSCROLL
+    LTEXT "Nazwa użytkownika:", IDC_STATIC, 6, 60, 52, 8
+    EDITTEXT IDC_USERNAME, 60, 57, 155, 14, ES_AUTOHSCROLL
     LTEXT "Hasło:", IDC_STATIC, 6, 78, 52, 8
-    EDITTEXT IDC_PASSWORD, 73, 76, 142, 14, ES_AUTOHSCROLL | ES_PASSWORD
+    EDITTEXT IDC_PASSWORD, 60, 76, 155, 14, ES_AUTOHSCROLL | ES_PASSWORD
     LTEXT "Zaloguj do:", IDC_STATIC, 6, 96, 52, 8
-    COMBOBOX IDC_LOGON_TO, 73, 95, 142, 14, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    PUSHBUTTON "OK", IDOK, 106, 122, 50, 14, BS_DEFPUSHBUTTON
+    COMBOBOX IDC_LOGON_TO, 60, 95, 155, 14, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON "OK",IDOK, 106, 122, 50, 14, BS_DEFPUSHBUTTON
     PUSHBUTTON "Anuluj", IDCANCEL, 160, 122, 50, 14
     PUSHBUTTON "Wyłącz", IDC_SHUTDOWN, 214, 122, 50, 14
 END
@@ -57,11 +47,11 @@ BEGIN
     LTEXT "<Logon date>", IDC_LOGONDATE, 15, 94, 245, 8
     CTEXT "Co chcesz teraz zrobić?", IDC_STATIC, 10, 119, 255, 8
     PUSHBUTTON "Zablokuj komputer", IDC_LOCK, 10, 135, 76, 14
-    PUSHBUTTON "Wyloguj", IDC_LOGOFF, 90, 135, 70, 14
-    PUSHBUTTON "Wyłącz", IDC_SHUTDOWN, 170, 135, 70, 14
+    PUSHBUTTON "&Log Off...", IDC_LOGOFF, 100, 135, 75, 14
+    PUSHBUTTON "Wyłącz", IDC_SHUTDOWN, 189, 135, 76, 14
     PUSHBUTTON "Zmień hasło", IDC_CHANGEPWD, 10, 154, 76, 14
-    PUSHBUTTON "Menedżer zadań", IDC_TASKMGR, 90, 154, 70, 14
-    PUSHBUTTON "Anuluj", IDCANCEL, 170, 154, 70, 14
+    PUSHBUTTON "&Task Manager", IDC_TASKMGR, 100, 154, 75, 14
+    PUSHBUTTON "Anuluj", IDCANCEL, 189, 154, 76, 14
 END
 
 IDD_LOCKED_DLG DIALOGEX 0, 0, 275, 121
@@ -71,9 +61,9 @@ FONT 8, "MS Shell Dlg", 400, 0, 1
 BEGIN
     CONTROL IDI_ROSLOGO, IDC_ROSLOGO, "Static", SS_BITMAP, 0, 0, 275, 54
     ICON IDI_LOCKICON, -1, 7, 59, 20, 20
-    LTEXT "Ten komputer jest używany i został zablokowany.", IDC_STATIC, 37, 61, 231, 8
+    LTEXT "Ten komputer jest używany i został zablokowany.", IDC_STATIC, 36, 61, 232, 8
     LTEXT "Wiadomość", IDC_LOCKMSG, 37, 75, 231, 26
-    LTEXT "Naciśnij Ctrl-Alt-Del aby odblokować ten komputer.", IDC_STATIC, 37, 106, 231, 8
+    LTEXT "Press Ctrl-Alt-Del to unlock this computer.", IDC_STATIC, 36, 106, 232, 8
 END
 
 IDD_UNLOCK_DLG DIALOGEX 0, 0, 275, 179
@@ -83,7 +73,7 @@ FONT 8, "MS Shell Dlg", 400, 0, 1
 BEGIN
     CONTROL IDI_ROSLOGO, IDC_ROSLOGO, "Static", SS_BITMAP, 0, 0, 275, 54
     ICON IDI_LOCKICON, -1, 7, 59, 20, 20
-    LTEXT "Ten komputer jest używany i został zablokowany.", IDC_STATIC, 36, 61, 232, 8
+    LTEXT "This computer is in use and has been locked.", IDC_STATIC, 36, 61, 232, 8
     LTEXT "Wiadomość", IDC_LOCKMSG, 36, 75, 232, 26
     LTEXT "Nazwa użytkownika:", IDC_STATIC, 36, 107, 40, 8
     EDITTEXT IDC_USERNAME, 84, 104, 119, 14, ES_AUTOHSCROLL
@@ -126,6 +116,7 @@ END
 
 IDD_SHUTDOWN_DLG DIALOGEX 0, 0, 275, 146
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
+// STYLE NOT WS_VISIBLE | DS_CENTER | DS_MODALFRAME | DS_SHELLFONT | WS_BORDER | WS_CAPTION | WS_DLGFRAME | WS_POPUP
 CAPTION "Zamknij ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
@@ -188,7 +179,7 @@ STRINGTABLE
 BEGIN
     IDS_SHUTDOWN_LOGOFF "Wyloguj ""%s"""
     IDS_SHUTDOWN_SHUTDOWN "Wyłącz"
-    IDS_SHUTDOWN_RESTART "Restart"
+    IDS_SHUTDOWN_RESTART "Uruchom ponownie"
     IDS_SHUTDOWN_SLEEP "Uśpij"
     IDS_SHUTDOWN_HIBERNATE "Hibernacja"
     /* Shut down descriptions */
