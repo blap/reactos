@@ -1,4 +1,4 @@
-LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
 
 /* Dialog */
 IDD_GUI DIALOGEX 0, 0, 240, 255
@@ -33,7 +33,7 @@ BEGIN
     IDS_USAGE "ReactOS Shutdown Utility\n\
 \n\
 Usage: shutdown [/?] [/i | /l | /s | /r | /g | /a | /p | /h | /e] [/f]\n\
-       [/m \\\\computer][/t xxx][/d [p|u:]xx:yy [/c ""comment""]]\n\
+       [/m \\\\computer][/t xxx][/d [p|u:]xx:yy [/c """comment"""]]\n\
 \n\
     No arguments or /?    Display this help.\n\
     /i      Show the graphical user interface (GUI). This option must be the\n\
@@ -52,7 +52,7 @@ Usage: shutdown [/?] [/i | /l | /s | /r | /g | /a | /p | /h | /e] [/f]\n\
     /t xxx  Set the timeout period to xxx seconds before shutting down.\n\
             The valid range starts from 0 to 315360000 (10 years),\n\
             30 being the default value.\n\
-    /c ""comment""  Comment on the reason for shutdown or restart.\n\
+    /c """comment"""  Comment on the reason for shutdown or restart.\n\
             512 characters maximum allowed.\n\
     /f      Force running applications to close without warning users. If you\n\
             do not specify any other parameter, this option will also log off.\n\
