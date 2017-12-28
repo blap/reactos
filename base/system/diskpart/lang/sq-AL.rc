@@ -1,8 +1,4 @@
-/* TRANSLATOR : Ardit Dani (Ard1t) (ardit.dani@gmail.com) 
- * DATE OF TR:  29-11-2013
-*/
-
-LANGUAGE LANG_ALBANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ALBANIAN, SUBLANG_ALBANIAN_ALBANIA
 
 /* Basic application information */
 STRINGTABLE
@@ -13,10 +9,10 @@ Usage: DISKPART [/S filename] [/T timeout] [/?]\n\n\
 /S filename\tRuns the given script.\n\
 /T timeout\tTimeout in seconds to prevent DiskPart usage overlap.\n\
 /?\t\tDisplay this help message.\n\n"
-    IDS_APP_LICENSE, "Liçensuar mbi GNU GPLv2\n"
-    IDS_APP_CURR_COMPUTER, "Në kompjuter: %s\n\n"
-    IDS_APP_LEAVING, "\nDil DiskPart...\n"
-    IDS_APP_PROMPT, "DISKPART> "
+    IDS_APP_LICENSE "Licensed under the GNU GPLv2\n"
+    IDS_APP_CURR_COMPUTER "On computer: %s\n\n"
+    IDS_APP_LEAVING "\nLeaving DiskPart...\n"
+    IDS_APP_PROMPT "DISKPART> "
 END
 
 /* Disk Information Labels */
@@ -58,7 +54,7 @@ BEGIN
     IDS_RESCAN_END "\nDiskPart has finished scanning your configuration.\n\n"
 END
 
-/* SELECT command strings */
+/* Select command strings */
 STRINGTABLE
 BEGIN
     IDS_SELECT_NO_DISK "\nThere is no disk currently selected.\nPlease select a disk and try again.\n\n"
@@ -91,7 +87,7 @@ BEGIN
     IDS_MSG_ARG_SYNTAX_ERROR "Argumente(t) e specifikuara per kete komande nuk jane të vlefshme.\nPër më shume informacione mbi komanden shkruani:"
 END
 
-/* Help Command Descripions */
+/* Help Command Descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_DESC_ACTIVE "ACTIVE\t\t- Shënon particionin ndarjen zgjedhur si aktive.\n"
@@ -146,250 +142,250 @@ END
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ACTIVE "\n\
-<Shto tekstin e ndihmes për komandën «active»>\n\n"
+<Add active command help text here>\n\n"
 END
 
 /* Add help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ADD "\n\
-<Shto tekstin e ndihmes për komandën «add»>\n\n"
+<Add add command help text here>\n\n"
 END
 
 /* Assign help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ASSIGN "\n\
-<Shto tekstin e ndihmes për komandën «assign»>\n\n"
+<Add assign command help text here>\n\n"
 END
 
 /* Attach help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ATTACH "\n\
-<Shto tekstin e ndihmes për komandën «attach»>\n\n"
+<Add attach command help text here>\n\n"
 END
 
 /* Attributes Command Messages */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ATTRIBUTES "\n\
-<Shto tekstin e ndihmes për komandën «attributes»>\n\n"
+<Add attributes command help text here>\n\n"
 END
 
 /* Automount help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_AUTOMOUNT "\n\
-<Shto tekstin e ndihmes për komandën «automount»>\n\n"
+<Add automount command help text here>\n\n"
 END
 
 /* Break help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_BREAK "\n\
-<Shto tekstin e ndihmes për komandën «break»>\n\n"
+<Add break command help text here>\n\n"
 END
 
 /* Clean help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_CLEAN "\n\
-<Shto tekstin e ndihmes për komandën «clean»>\n\n"
+<Add clean command help text here>\n\n"
 END
 
 /* Compact help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_COMPACT "\n\
-<Shto tekstin e ndihmes për komandën «compact»>\n\n"
+<Add compact command help text here>\n\n"
 END
 
 /* Convert help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_CONVERT "\n\
-<Shto tekstin e ndihmes për komandën «convert»>\n\n"
+<Add convert command help text here>\n\n"
 END
 
 /* Convert help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_CREATE "\n\
-<Shto tekstin e ndihmes për komandën «create»>\n\n"
+<Add create command help text here>\n\n"
 END
 
 /* Delete help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_DELETE "\n\
-<Shto tekstin e ndihmes për komandën «delete»>\n\n"
+<Add delete command help text here>\n\n"
 END
 
 /* Delete help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_DETAIL "\n\
-<Shto tekstin e ndihmes për komandën «detail»>\n\n"
+<Add detail command help text here>\n\n"
 END
 
 /* Detach help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_DETACH "\n\
-<Shto tekstin e ndihmes për komandën «detach»>\n\n"
+<Add detach command help text here>\n\n"
 END
 
 /* Expand help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_EXPAND "\n\
-<Shto tekstin e ndihmes për komandën «expand»>\n\n"
+<Add expand command help text here>\n\n"
 END
 
 /* Extend help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_EXTEND "\n\
-<Shto tekstin e ndihmes për komandën «extend»>\n\n"
+<Add extend command help text here>\n\n"
 END
 
 /* Filesystems help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_FILESYSTEMS "\n\
-<Shto tekstin e ndihmes për komandën «filesystems»>\n\n"
+<Add filesystems command help text here>\n\n"
 END
 
 /* Format help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_FORMAT "\n\
-<Shto tekstin e ndihmes për komandën «format»>\n\n"
+<Add format command help text here>\n\n"
 END
 
 /* GPT help description */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_GPT "\n\
-<Shto tekstin e ndihmes për komandën «gpt»>\n\n"
+<Add gpt command help text here>\n\n"
 END
 
 /* Help help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_HELP "\n\
-<Shto tekstin e ndihmes për komandën «help»>\n\n"
+<Add help command help text here>\n\n"
 END
 
 /* Import help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_IMPORT "\n\
-<Shto tekstin e ndihmes për komandën «import»>\n\n"
+<Add import command help text here>\n\n"
 END
 
 /* Inactive help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_INACTIVE "\n\
-<Shto tekstin e ndihmes për komandën «inactive»>\n\n"
+<Add inactive command help text here>\n\n"
 END
 
 /* List help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_LIST "\n\
-<Shto tekstin e ndihmes për komandën «list»>\n\n"
+<Add list command help text here>\n\n"
 END
 
 /* Merge help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_MERGE "\n\
-<Shto tekstin e ndihmes për komandën «merge»>\n\n"
+<Add merge command help text here>\n\n"
 END
 
 /* Offline help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_OFFLINE "\n\
-<Shto tekstin e ndihmes për komandën «OFFLINE»>\n\n"
+<Add OFFLINE command help text here>\n\n"
 END
 
 /* Online help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_ONLINE "\n\
-<Shto tekstin e ndihmes për komandën «ONLINE»>\n\n"
+<Add ONLINE command help text here>\n\n"
 END
 
 /* Recover help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_RECOVER "\n\
-<Shto tekstin e ndihmes për komandën «RECOVER»>\n\n"
+<Add RECOVER command help text here>\n\n"
 END
 
 /* Remove help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_REMOVE "\n\
-<Shto tekstin e ndihmes për komandën «REMOVE»>\n\n"
+<Add REMOVE command help text here>\n\n"
 END
 
 /* Repair help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_REPAIR "\n\
-<Shto tekstin e ndihmes për komandën «REPAIR»>\n\n"
+<Add REPAIR command help text here>\n\n"
 END
 
 /* Rescan help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_RESCAN "\n\
-<Shto tekstin e ndihmes për komandën «RESCAN»>\n\n"
+<Add RESCAN command help text here>\n\n"
 END
 
 /* Retain help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_RETAIN "\n\
-<Shto tekstin e ndihmes për komandën «RETAIN»>\n\n"
+<Add RETAIN command help text here>\n\n"
 END
 
 /* San help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_SAN "\n\
-<Shto tekstin e ndihmes për komandën «SAN»>\n\n"
+<Add SAN command help text here>\n\n"
 END
 
 /* Select help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_SELECT "\n\
-<Shto tekstin e ndihmes për komandën «SELECT»>\n\n"
+<Add SELECT command help text here>\n\n"
 END
 
 /* Setid help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_SETID "\n\
-<Shto tekstin e ndihmes për komandën «SETID»>\n\n"
+<Add SETID command help text here>\n\n"
 END
 
 /* Setid help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_SHRINK "\n\
-<Shto tekstin e ndihmes për komandën «SHRINK»>\n\n"
+<Add SHRINK command help text here>\n\n"
 END
 
 /* Uniqueid help descriptions */
 STRINGTABLE
 BEGIN
     IDS_HELP_CMD_UNIQUEID "\n\
-<Shto tekstin e ndihmes për komandën «UNIQUEID»>\n\n"
+<Add UNIQUEID command help text here>\n\n"
 END
