@@ -1,9 +1,4 @@
-/*  TRANSLATOR : Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- *  DATE OF TR.: 12-03-2009
- *  LAST CHANGE: 12-03-2009
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 IDR_MAINMENU MENU
 BEGIN
@@ -21,7 +16,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Repea&t\tCtrl+T", IDM_REPEAT
     END
-    POPUP "&View"
+    POPUP "&Zobraziť"
     BEGIN
         MENUITEM "Single-Window &Mode", IDM_SWITCHVIEW
     END
@@ -49,7 +44,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_MODE_UNKNOWN "Unknown"
+    IDS_MODE_UNKNOWN "Neznámy"
     IDS_MODE_OPEN "Opened"
     IDS_MODE_STOP "Stopped"
     IDS_MODE_PLAY "Playing"
