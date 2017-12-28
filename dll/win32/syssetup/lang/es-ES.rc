@@ -1,5 +1,23 @@
-/* Spanish translation created by ??? and refurbished by Ismael Ferreras Morezuelas (2014-12-30) */
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+/*
+ * Copyright (C) 2004 Filip Navara
+ * Copyright (C) 2004 Eric Kohl
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
@@ -30,9 +48,9 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ICON2, IDC_STATIC, 21, 7, 20, 20
     LTEXT "Escriba su nombre completo y el nombre de su compañia u organización.", IDC_STATIC, 54, 7, 242, 21
-    LTEXT "No&mbre:", IDC_STATIC, 83, 37, 44, 8, SS_RIGHT
+    LTEXT "Na&me:", IDC_STATIC, 54, 37, 44, 8
     EDITTEXT IDC_OWNERNAME, 132, 35, 163, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "&Organización:", IDC_STATIC, 83, 57, 44, 8,  SS_RIGHT
+    LTEXT "&Organization:", IDC_STATIC, 54, 57, 44, 8
     EDITTEXT IDC_OWNERORGANIZATION, 132, 55, 163, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL
 END
 
@@ -43,15 +61,15 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ICON1, IDC_STATIC, 21, 7, 20, 20
     LTEXT "Escriba un nombre para su equipo que sea de 15 caracteres o menos. Si se encuentra conectado a una red, el nombre tiene que ser único.", IDC_STATIC, 54, 7, 250, 24
-    LTEXT "Nombre del &equipo:", IDC_STATIC, 53, 38, 75, 8, SS_RIGHT
-    EDITTEXT IDC_COMPUTERNAME, 132, 35, 163, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL | ES_UPPERCASE
+    LTEXT "&Computer Name:", IDC_STATIC, 54, 38, 75, 8
+    EDITTEXT IDC_COMPUTERNAME, 165, 35, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL | ES_UPPERCASE
     ICON IDI_ICON5, IDC_STATIC, 21, 57, 20, 20
     LTEXT "El instalador creará un perfil de usuario en su equipo llamado Administrador. Puede utilizar este perfil si necesita acceso completo a su equipo.", IDC_STATIC, 54, 57, 250, 25
     LTEXT "Escriba una contraseña para este perfil de 127 caracteres o menos.", IDC_STATIC, 54, 87, 250, 8
-    LTEXT "Contraseña de &Administrador:", IDC_STATIC, 25, 104, 104, 8, SS_RIGHT
-    EDITTEXT IDC_ADMINPASSWORD1, 132, 101, 172, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
-    LTEXT "&Repita la contraseña:", IDC_STATIC, 54, 123, 75, 8, SS_RIGHT
-    EDITTEXT IDC_ADMINPASSWORD2, 132, 120, 172, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
+    LTEXT "&Administrator Password:", IDC_STATIC, 54, 104, 105, 8
+    EDITTEXT IDC_ADMINPASSWORD1, 165, 101, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
+    LTEXT "&Repita la contraseña:", IDC_STATIC, 54, 123, 105, 8
+    EDITTEXT IDC_ADMINPASSWORD2, 165, 120, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
 END
 
 IDD_LOCALEPAGE DIALOGEX 0, 0, 317, 143
@@ -60,14 +78,14 @@ CAPTION "Instalación de ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ICON4, IDC_STATIC, 21, 7, 20, 20
-    LTEXT "Las opciones regionales y de idioma permiten configurar la forma en la que se representan fechas, números, monedas y horas. También permite compatibilizar con otros idiomas y cambiar los ajustes de ubicación.", IDC_STATIC, 53, 6, 253, 30
-    LTEXT "", IDC_LOCALETEXT, 53, 34, 250, 16
-    LTEXT "Para modificar esta configuración, pulse Modificar.", IDC_STATIC, 53, 60, 184, 8
-    PUSHBUTTON "&Modificar...", IDC_CUSTOMLOCALE, 245, 57, 50, 14
-    LTEXT "La distribución del teclado determina el caracter que se muestra al presionar cada tecla.", IDC_STATIC, 53, 86, 253, 32
-    LTEXT "", IDC_LAYOUTTEXT, 53, 109, 250, 16
+    LTEXT "The system locale should match the language of the applications you want to use. The user locale controls how numbers, currencies, and dates appear.", IDC_STATIC, 53, 7, 253, 20
+    LTEXT "", IDC_LOCALETEXT, 53, 29, 250, 16
+    LTEXT "Para modificar esta configuración, pulse Modificar.", IDC_STATIC, 53, 60, 196, 8
+    PUSHBUTTON "Personalizar...", IDC_CUSTOMLOCALE, 250, 57, 50, 14
+    LTEXT "La distribución del teclado determina el caracter que se muestra al presionar cada tecla.", IDC_STATIC, 53, 86, 253, 8
+    LTEXT "", IDC_LAYOUTTEXT, 53, 100, 250, 16
     LTEXT "Para cambiar la distribución del teclado, pulse Modificar.", IDC_STATIC, 53, 126, 184, 8
-    PUSHBUTTON "&Modificar...", IDC_CUSTOMLAYOUT, 245, 122, 50, 14
+    PUSHBUTTON "Personalizar...", IDC_CUSTOMLAYOUT, 250, 122, 50, 14
 END
 
 IDD_DATETIMEPAGE DIALOGEX 0, 0, 317, 143
@@ -81,12 +99,12 @@ BEGIN
     CONTROL "", IDC_TIMEPICKER, "SysDateTimePick32", DTS_TIMEFORMAT | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 200, 17, 54, 14
     LTEXT "Zona horaria", IDC_STATIC, 53, 42, 253, 8
     COMBOBOX IDC_TIMEZONELIST, 53, 52, 201, 93, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    AUTOCHECKBOX "Ajustar el reloj automáticamente durante el horario de verano", IDC_AUTODAYLIGHT, 53, 124, 230, 10 //201
+    AUTOCHECKBOX "Ajustar el reloj automáticamente durante el horario de verano", IDC_AUTODAYLIGHT, 53, 124, 201, 10
 END
 
 IDD_THEMEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "Instalación de ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     PUSHBUTTON "Lautus theme", IDC_THEMEDSTYLE, 18,12, 130,120, BS_AUTORADIOBUTTON|BS_PUSHLIKE
@@ -120,7 +138,7 @@ CAPTION "Licencia Pública General de GNU"
 FONT 8, "MS Shell Dlg"
 BEGIN
     EDITTEXT IDC_GPL_TEXT, 7, 7, 319, 190, ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
-    DEFPUSHBUTTON   "Aceptar", IDOK, 141, 209, 50, 14
+    DEFPUSHBUTTON "Aceptar", IDOK, 141, 209, 50, 14
 END
 
 IDD_STATUSWINDOW_DLG DIALOGEX 0, 0, 274, 26
@@ -145,8 +163,9 @@ BEGIN
     IDS_DATETIMESUBTITLE "Fije la fecha y hora correcta de su equipo."
     IDS_PROCESSTITLE "Registrando componentes"
     IDS_PROCESSSUBTITLE "Espere un momento..."
-    IDS_THEMESELECTIONTITLE "Appearance"
+    IDS_THEMESELECTIONTITLE "Apariencia"
     IDS_THEMESELECTIONSUBTITLE "Select the theme you prefer."
+
 END
 
 STRINGTABLE
