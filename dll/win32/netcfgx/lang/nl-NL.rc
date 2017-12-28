@@ -1,4 +1,4 @@
-LANGUAGE LANG_DUTCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
 
 IDD_TCPIP_BASIC_DLG DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -6,23 +6,23 @@ CAPTION "Algemeen"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Een IP-adres kan automatisch worden toegewezen aan deze computer. Als uw netwerk dit niet automatisch doet kunt u het adres zelf invullen.", -1, 9, 9, 235, 27
-    CONTROL "&Automatisch een IP-adres verkrijgen", IDC_USEDHCP, "BUTTON", BS_AUTORADIOBUTTON | WS_GROUP, 14, 43, 210, 12
+    CONTROL "&Automatisch een IP-adres verkrijgen", IDC_USEDHCP, "BUTTON", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 14, 43, 210, 12
     GROUPBOX "", -1, 9, 61, 228, 70, BS_GROUPBOX
     CONTROL "&Een IP-adres opgeven:", IDC_NODHCP, "BUTTON", BS_AUTORADIOBUTTON, 14, 59, 120, 12
     LTEXT "IP-adres:", -1, 14, 75, 135, 8
     CONTROL "", IDC_IPADDR, "SysIPAddress32", WS_TABSTOP, 144, 75 - 2, 85, 12
-    LTEXT "Subnetmasker:", -1, 14, 90, 135, 8
+    LTEXT "Subnet mask:", -1, 14, 90, 135, 8
     CONTROL "", IDC_SUBNETMASK, "SysIPAddress32", WS_TABSTOP, 144, 90 - 2, 85, 12
-    LTEXT "Standaardgateway:", -1, 14, 105, 135, 8
+    LTEXT "Default gateway:", -1, 14, 105, 135, 8
     CONTROL "", IDC_DEFGATEWAY, "SysIPAddress32", WS_TABSTOP, 144, 105 - 2, 85, 12
-    CONTROL "DNS-serveradres automatisch verkrijgen", IDC_AUTODNS, "BUTTON", BS_AUTORADIOBUTTON | WS_GROUP, 14, 139, 210, 12
+    CONTROL "Obtain the DNS server address automatically", IDC_AUTODNS, "BUTTON", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 14, 139, 210, 12
     GROUPBOX "", -1, 9, 157, 228, 47, BS_GROUPBOX
     CONTROL "De volgende DNS-serveradressen gebruiken:", IDC_FIXEDDNS, "BUTTON", BS_AUTORADIOBUTTON, 14, 155, 152, 12
     LTEXT "Voorkeurs-DNS-server:", -1, 14, 171, 135, 8
     CONTROL "", IDC_DNS1, "SysIPAddress32", WS_TABSTOP, 144, 171 - 2, 85, 12
-    LTEXT "Alternatieve-DNS-server:", -1, 14, 186, 135, 8
+    LTEXT "Alternate DNS server:", -1, 14, 186, 135, 8
     CONTROL "", IDC_DNS2, "SysIPAddress32", WS_TABSTOP, 144, 186 - 2, 85, 12
-    PUSHBUTTON "&Geavanceerd", IDC_ADVANCED, 186, 209, 50, 14, WS_TABSTOP
+    PUSHBUTTON "&Advanced", IDC_ADVANCED, 186, 209, 50, 14, WS_TABSTOP
 END
 
 IDD_TCPIP_ALTCF_DLG DIALOGEX 0, 0, 246, 228
@@ -97,7 +97,7 @@ END
 
 IDD_TCPIP_ADVOPT_DLG DIALOGEX 0, 0, 247, 247
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
-CAPTION "Options"
+CAPTION "Opties"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LISTBOX IDC_OPTLIST, 5, 30, 230, 70
@@ -113,7 +113,7 @@ CAPTION "TCP/IP Address"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "", IDC_IPADDR, "SysIPAddress32", WS_TABSTOP, 96, 15, 85, 12
-    LTEXT "IP address:", -1, 5, 15, 70, 12
+    LTEXT "IP-adres:", -1, 5, 15, 70, 12
     LTEXT "Subnet mask:", -1, 5, 30, 70, 12
     CONTROL "", IDC_SUBNETMASK, "SysIPAddress32", WS_TABSTOP, 96, 30, 85, 12
     DEFPUSHBUTTON "", IDC_OK, 50, 50, 50, 14, WS_TABSTOP
