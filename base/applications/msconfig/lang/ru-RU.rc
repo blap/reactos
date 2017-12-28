@@ -1,6 +1,4 @@
-/* Russian language resource file (Dmitry Chapyshev, 2007-06-10) */
-
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 IDD_MSCONFIG_DIALOG DIALOGEX 0, 0, 378, 220
 STYLE DS_SHELLFONT | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP |
@@ -68,8 +66,8 @@ STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_CLIPCHILDREN
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Варианты запуска", -1, 10, 10, 340, 150, 0, WS_EX_TRANSPARENT
-    CONTROL "&Обычный запуск - загрузка всех драйверов устройств и запуск всех служб", IDC_CBX_NORMAL_START, "Button", 0x50010009, 20, 30, 280, 10
-    CONTROL "&Диагностический запуск - загрузка только основных драйверов и запуск основных служб", IDC_CBX_DIAGNOSTIC_START, "Button", 0x50010009, 20, 45, 325, 10
+    CONTROL "&Обычный запуск - загрузка всех драйверов устройств и запуск всех служб", IDC_CBX_NORMAL_START, "Button", 0x50010009, 20, 30, 260, 10
+    CONTROL "&Диагностический запуск - загрузка только основных драйверов и запуск основных служб", IDC_CBX_DIAGNOSTIC_START, "Button", 0x50010009, 20, 45, 260, 10
     CONTROL "&Выборочный запуск:", IDC_CBX_SELECTIVE_STARTUP, "Button", 0x50010009, 20, 60, 260, 10
     AUTOCHECKBOX "О&брабатывать файл SYSTEM.INI", IDC_CBX_SYSTEM_INI, 30, 80, 260, 10
     AUTOCHECKBOX "&Загружать системные службы", IDC_CBX_SYSTEM_SERVICE, 30, 95, 260, 10
@@ -82,10 +80,10 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LISTBOX IDC_LIST_BOX, 10, 10, 340, 50, WS_CHILD | WS_VISIBLE | WS_TABSTOP |
             LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL
-    PUSHBUTTON "&Проверить все пути загрузки", IDC_BTN_CHECK_BOOT_PATH, 10, 65, 110, 12
-    PUSHBUTTON "П&о умолчанию", IDC_BTN_SET_DEFAULT_BOOT, 125, 65, 70, 12
-    PUSHBUTTON "&Вверх", IDC_BTN_MOVE_UP_BOOT_OPTION, 200, 65, 70, 12
-    PUSHBUTTON "В&низ", IDC_BTN_MOVE_DOWN_BOOT_OPTION, 275, 65, 70, 12
+    PUSHBUTTON "&Проверить все пути загрузки", IDC_BTN_CHECK_BOOT_PATH, 10, 65, 70, 12
+    PUSHBUTTON "&Использовать по умолчанию", IDC_BTN_SET_DEFAULT_BOOT, 100, 65, 70, 12
+    PUSHBUTTON "Вв&ерх", IDC_BTN_MOVE_UP_BOOT_OPTION, 190, 65, 70, 12
+    PUSHBUTTON "В&низ", IDC_BTN_MOVE_DOWN_BOOT_OPTION, 280, 65, 70, 12
     GROUPBOX "Параметры загрузки", -1, 10, 80, 250, 90, 0, WS_EX_TRANSPARENT
     CHECKBOX "/SA&FEBOOT", IDC_CBX_SAFE_BOOT, 15, 90, 55, 10
     CHECKBOX "/&NOGUIBOOT", IDC_CBX_NO_GUI_BOOT, 15, 105, 60, 10
@@ -93,9 +91,9 @@ BEGIN
     CHECKBOX "/BAS&EVIDEO", IDC_CBX_BASE_VIDEO, 15, 135, 55, 10
     CHECKBOX "/S&OS", IDC_CBX_SOS, 15, 150, 50, 10
     PUSHBUTTON "&Дополнительно...", IDC_BTN_ADVANCED_OPTIONS, 100, 150, 70, 12
-    LTEXT "&Таймаут:", -1, 280, 82, 30, 10
-    EDITTEXT IDC_TXT_BOOT_TIMEOUT, 280, 93, 25, 12, ES_LEFT
-    LTEXT "сек.", -1, 310, 91, 15, 10
+    LTEXT "&Таймаут:", -1, 280, 91, 30, 10
+    EDITTEXT IDC_TXT_BOOT_TIMEOUT, 310, 90, 25, 12, ES_LEFT
+    LTEXT "sec.", -1, 340, 91, 15, 10
 END
 
 IDD_FREELDR_ADVANCED_PAGE DIALOGEX 0, 0, 175, 175
