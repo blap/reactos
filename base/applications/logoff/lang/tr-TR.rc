@@ -1,12 +1,10 @@
-/* TRANSLATOR: 2015 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "Bir oturum sonlandırır.\n\n\
-  /v\t\tYapılacak eylemler üzerine bilgi görüntüler.\n\
-  /?\t\tBu bilgiyi gösterir.\n\n"
+    IDS_USAGE "Terminates a session.\n\n\
+  /v\t\tDisplays information about the actions performed.\n\
+  /?\t\tShows this information.\n\n"
     IDS_LOGOFF_REMOTE "Uzak makinede oturum sonlandırılıyor."
     IDS_LOGOFF_LOCAL "Bu makinede şimdiki oturum sonlandırılıyor."
     IDS_ILLEGAL_PARAM "Geçersiz değişken(ler)\n"
