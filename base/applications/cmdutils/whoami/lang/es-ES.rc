@@ -1,5 +1,4 @@
-/* Spanish translation by Swyter */
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 STRINGTABLE
 BEGIN
@@ -38,20 +37,19 @@ BEGIN
     IDS_ERROR_INVALIDSYNTAX "ERROR: sintaxis no válida.\nEscriba ""WHOAMI /?"" para obtener detalles de uso.\n"
     IDS_ERROR_INVALIDARG "ERROR: Argumento u opción no válido - ""%s"".\nEscriba ""WHOAMI /?"" para su uso.\n"
     IDS_ERROR_NH_LIST "ERROR: no se puede usar el modificador /NH con el formato LIST.\nEscriba ""WHOAMI /?"" para obtener detalles de uso.\n"
-    IDS_HELP "DESCRIPCIÓN:\n\
-  Muestra información sobre el usuario local, sus privilegios y grupos.\n\
-  Si no se añaden argumentos se mostrará el usuario y dominio actual.\n\
+    IDS_HELP "DESCRIPTION:\n\
+  Display user, group and privileges information for the local logged-on user.\n\
+  If no arguments are provided, displays the current domain and user name.\n\
 \n\
-  Los formatos disponibles para '/fo' son 'csv', 'list' y 'table'.\n\
-  Por defecto los datos se muestran en una tabla (opción 'table').\n\
-  Puedes utilizar '/nh' para ocultar los encabezados. \n\
+  Available output formats for the '/fo' option are 'csv', 'list' and 'table'.\n\
+  Use '/nh' to hide headers. By default the data is displayed in a table.\n\
 \n\
-SINTAXIS:\n\
+SYNTAX:\n\
   whoami [/upn | /fqdn | /logonid] \n\
-  whoami {[/user] [/groups] [/priv]} [/fo <Formato>] [/nh] \n\
-  whoami /all [/fo <Formato>] [/nh] \n\
+  whoami {[/user] [/groups] [/priv]} [/fo <Format>] [/nh] \n\
+  whoami /all [/fo <Format>] [/nh] \n\
 \n\
-EJEMPLOS: \n\
+EXAMPLES: \n\
   whoami /groups /priv /nh /fo csv \n\
   whoami /logonid \n\
   whoami \n"
