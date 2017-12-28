@@ -1,4 +1,4 @@
-LANGUAGE LANG_DUTCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -18,7 +18,7 @@ BEGIN
     BEGIN
         MENUITEM "&Afsluiten", ID_REGISTRY_EXIT
     END
-    POPUP "&Help"
+    POPUP "&Bestand"
     BEGIN
         MENUITEM "&Info", ID_HELP_ABOUT
     END
@@ -34,7 +34,7 @@ BEGIN
         MENUITEM "Load Hive...", ID_REGISTRY_LOADHIVE, GRAYED
         MENUITEM "Unload Hive...", ID_REGISTRY_UNLOADHIVE, GRAYED
         MENUITEM SEPARATOR
-        MENUITEM "Verbinding &maken met netwerkregister...", ID_REGISTRY_CONNECTNETWORKREGISTRY, GRAYED
+        MENUITEM "Verbinding &maken met netwerkregister...", ID_REGISTRY_CONNECTNETWORKREGISTRY
         MENUITEM "Verbinding &verbreken met netwerkregister...", ID_REGISTRY_DISCONNECTNETWORKREGISTRY, GRAYED
         MENUITEM SEPARATOR
         MENUITEM "Af&drukken...\tCtrl+P", ID_REGISTRY_PRINT, GRAYED
@@ -79,7 +79,7 @@ BEGIN
         MENUITEM "&Toevoegen aan favorieten", ID_FAVOURITES_ADDTOFAVOURITES, GRAYED
         MENUITEM "&Verwijderen uit favorieten", ID_FAVOURITES_REMOVEFAVOURITE, GRAYED
     END
-    POPUP "&Help"
+    POPUP "&Bestand"
     BEGIN
         MENUITEM "&Help-onderwerpen", ID_HELP_HELPTOPICS
         MENUITEM SEPARATOR
@@ -91,21 +91,21 @@ IDR_POPUP_MENUS MENU
 BEGIN
     POPUP ""
     BEGIN
-        MENUITEM "&Modify", ID_EDIT_MODIFY
+        MENUITEM "&Wijzigen", ID_EDIT_MODIFY
         MENUITEM "Modify Binary Data", ID_EDIT_MODIFY_BIN
         MENUITEM SEPARATOR
-        MENUITEM "&Delete\tDel", ID_EDIT_DELETE
-        MENUITEM "&Rename", ID_EDIT_RENAME
+        MENUITEM "&Verwijderen\tDel", ID_EDIT_DELETE
+        MENUITEM "&Naam wijzigen", ID_EDIT_RENAME
     END
     POPUP ""
     BEGIN
-        POPUP "&New"
+        POPUP "&Nieuw"
         BEGIN
-            MENUITEM "&Key", ID_EDIT_NEW_KEY
+            MENUITEM "&Sleutel", ID_EDIT_NEW_KEY
             MENUITEM SEPARATOR
-            MENUITEM "&String Value", ID_EDIT_NEW_STRINGVALUE
-            MENUITEM "&Binary Value", ID_EDIT_NEW_BINARYVALUE
-            MENUITEM "&DWORD Value", ID_EDIT_NEW_DWORDVALUE
+            MENUITEM "&Tekenreekswaarde", ID_EDIT_NEW_STRINGVALUE
+            MENUITEM "&Binaire waarde", ID_EDIT_NEW_BINARYVALUE
+            MENUITEM "&DWORD-waarde", ID_EDIT_NEW_DWORDVALUE
             MENUITEM "&Multi-String Value", ID_EDIT_NEW_MULTISTRINGVALUE
             MENUITEM "&Expandable String Value", ID_EDIT_NEW_EXPANDABLESTRINGVALUE
         END
@@ -113,25 +113,25 @@ BEGIN
     POPUP ""
     BEGIN
         MENUITEM "Expand/Collapse", ID_TREE_EXPANDBRANCH
-        POPUP "&New"
+        POPUP "&Nieuw"
         BEGIN
-            MENUITEM "&Key", ID_EDIT_NEW_KEY
+            MENUITEM "&Sleutel", ID_EDIT_NEW_KEY
             MENUITEM SEPARATOR
-            MENUITEM "&String Value", ID_EDIT_NEW_STRINGVALUE
-            MENUITEM "&Binary Value", ID_EDIT_NEW_BINARYVALUE
-            MENUITEM "&DWORD Value", ID_EDIT_NEW_DWORDVALUE
+            MENUITEM "&Tekenreekswaarde", ID_EDIT_NEW_STRINGVALUE
+            MENUITEM "&Binaire waarde", ID_EDIT_NEW_BINARYVALUE
+            MENUITEM "&DWORD-waarde", ID_EDIT_NEW_DWORDVALUE
             MENUITEM "&Multi-String Value", ID_EDIT_NEW_MULTISTRINGVALUE
             MENUITEM "&Expandable String Value", ID_EDIT_NEW_EXPANDABLESTRINGVALUE
         END
         MENUITEM "&Zoeken...", ID_EDIT_FIND
         MENUITEM SEPARATOR
         MENUITEM "&Delete", ID_TREE_DELETE
-        MENUITEM "&Rename", ID_TREE_RENAME
+        MENUITEM "&Naam wijzigen", ID_TREE_RENAME
         MENUITEM SEPARATOR
         MENUITEM "&Export", ID_TREE_EXPORT
         MENUITEM "&Permissions...", ID_TREE_PERMISSIONS, GRAYED
         MENUITEM SEPARATOR
-        MENUITEM "&Copy Key Name", ID_EDIT_COPYKEYNAME
+        MENUITEM "&Sleutelnaam kopiëren", ID_EDIT_COPYKEYNAME
     END
     POPUP ""
     BEGIN
