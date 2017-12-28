@@ -1,12 +1,4 @@
-/*
- * PROJECT:    ReactOS Telephone API UI DLL
- * LICENSE:    GPL - See COPYING in the top level directory
- * FILE:       dll/win32/tapiui/lang/uk-UA.rc
- * PURPOSE:    Ukraianian Language File for tapiui
- * TRANSLATOR: Artem Reznikov
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 101 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -58,7 +50,7 @@ END
 
 103 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Правила набору коду міста"
+CAPTION "Мережні підключення"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Правило набору коду міста визначає спосіб набору номерів із таким самим або іншим кодом міста.", 2000, 7, 7, 238, 16
@@ -73,10 +65,10 @@ END
 
 104 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Телефонна картка"
+CAPTION "Помилки групи ліній"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Виберіть телефонну картку, яка використовуватиметься, або натисніть кнопку ""Створити"", щоб додати іншу картку.", 2000, 7, 7, 238, 8
+    LTEXT "Select the calling card you will use, or click New to add a different card.", 2000, 7, 7, 238, 8
     LTEXT "&Типи карток:", -1, 7, 23, 238, 8
     CONTROL "", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000400D, 7, 34, 238, 63, WS_EX_CLIENTEDGE
     PUSHBUTTON "&Створити...", 1030, 87, 103, 50, 14
@@ -116,7 +108,7 @@ END
 
 106 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Міжміські"
+CAPTION "Завершення підключення"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Номер для ви&ходу на міжміську лінію:", -1, 7, 7, 238, 8
@@ -158,7 +150,7 @@ END
 
 108 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Місцеві"
+CAPTION "Зміна пароля"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Номер для ви&ходу на місцеву лінію:", -1, 7, 7, 238, 8
@@ -180,7 +172,7 @@ END
 109 DIALOGEX 0, 0, 252, 257
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Нове правило набору коду міста"
+CAPTION "Зміна пароля"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Це правило застосовуватиметься лише до дзвінків з указаними кодом міста й префіксом.", 2000, 7, 6, 238, 16
@@ -224,7 +216,7 @@ END
 111 DIALOGEX 0, 0, 252, 124
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Очікування"
+CAPTION "Помилка підключення: %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Виберіть тип очікуваного сигналу перед продовженням набору номера.", 2000, 7, 7, 238, 16
@@ -241,7 +233,7 @@ END
 112 DIALOGEX 0, 0, 252, 111
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Номер призначення"
+CAPTION "Автоматичне виконання дзвінків"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "На цьому кроці слід указати спосіб набору номера за використання телефонної картки.  Які частини номера слід набирати?", 2000, 7, 7, 238, 24
@@ -268,7 +260,7 @@ END
 
 114 DIALOGEX 20, 15, 252, 127
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
-CAPTION "Установка служби доступу"
+CAPTION "Віддалений доступ до мережі"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Виберіть зі списку службу доступу, яку потрібно установити, й натисніть кнопку ""Додати"".", 2000, 7, 7, 241, 8
@@ -281,7 +273,7 @@ END
 115 DIALOGEX 10, 10, 303, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Відомості про розташування"
+CAPTION "Підключення до %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 302, 302, "STATIC", SS_BITMAP, 10, 10, 88, 155
@@ -333,11 +325,11 @@ END
 STRINGTABLE
 BEGIN
     1 "Телефон і модем"
-    2 "Настройка правил набору номера та інших параметрів використання модема."
+    2 "WORKGROUP"
     3 "Розташування"
-    4 "Щоб створити нове розташування, натисніть кнопку ""Створити""."
-    5 "Нове розташування"
-    6 "Змінити розташування"
+    4 "Зміна імені комп'ютера"
+    5 "Робоча група:"
+    6 "Домен:"
     7 "Нова телефонна картка"
     8 "Змінити телефонну картку"
     9 "Код міста"
@@ -353,10 +345,10 @@ BEGIN
     19 "Набрати лише номер"
     20 "Усі"
     21 "Вибраний"
-    22 "Змінити правило набору коду міста"
-    23 "Виберіть зі списку правило, щоб переглянути його опис, або натисніть кнопку ""Створити"", щоб додати нове правило."
-    24 "Набрати ""%2"" і код міста перед номером для всіх номерів із кодом міста %1."
-    25 "Набрати ""%2"" перед номером для всіх номерів із кодом міста %1."
+    22 "Вас вітає робоча група %1."
+    23 "Вас вітає домен %1."
+    24 "Слід перезапустити комп'ютер, щоб ці зміни набрали сили."
+    25 "Можна знінити ім'я і членство цього комп'ютера. Зміни можуть вплинути на доступ до мережних ресурсів."
     26 "Набрати код міста перед номером для всіх номерів із кодом міста %1."
     27 "Набрати лише номер телефону для всіх номерів із кодом міста %1."
     28 "Набрати ""%2"" і код міста перед номером для номерів із кодом міста %1, які містять указані префікси."
