@@ -1,8 +1,4 @@
-/* TRANSLATOR : Ardit Dani (Ard1t) (ardit.dani@gmail.com)
- * DATE OF TRANSLATION:  18-01-2014
-*/
-
-LANGUAGE LANG_ALBANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ALBANIAN, SUBLANG_ALBANIAN_ALBANIA
 
 IDD_PROPPAGESETTINGS DIALOGEX 0, 0, 254, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -25,7 +21,7 @@ CAPTION "Cilësimet Avancume"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Konfigurimet Sistemit", -1, 7, 7, 240, 70
-    AUTOCHECKBOX "&Fik shërbimet e avancuara tekstit", IDC_TURNOFFTEXTSVCS_CB, 14, 20, 130, 12
+    AUTOCHECKBOX "&Fik shërbimet e avancuara tekstit", IDC_TURNOFFTEXTSVCS_CB, 14, 20, 220, 12
     LTEXT "Zgjidhni këtë kuti kontrolli për të fikur shërbimet e avancuara me tekst në të gjitha programet.\nKjo nuk është e rekomanduar për përdoruesit e Azisë Lindore për shkak se kjo e mbyll tabelen e gjuhës.", -1, 14, 40, 230, 35
 END
 
