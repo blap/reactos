@@ -10,45 +10,45 @@ BEGIN
     END
     POPUP "&Programme"
     BEGIN
-        MENUITEM "&Installieren\tCtrl+Enter", ID_INSTALL
-        MENUITEM "&Deinstallieren\tCtrl+Del", ID_UNINSTALL
+        MENUITEM "&Installieren\tStrg+Enter", ID_INSTALL
+        MENUITEM "&Deinstallieren\tStrg+Entf", ID_UNINSTALL
         MENUITEM "&Ändern", ID_MODIFY
         MENUITEM SEPARATOR
         MENUITEM "Aus &Registry entfernen", ID_REGREMOVE
         MENUITEM SEPARATOR
         MENUITEM "&Aktualisieren\tF5", ID_REFRESH
         MENUITEM SEPARATOR
-        MENUITEM "Da&tenbank aktualisieren\tCtrl+F5", ID_RESETDB
+        MENUITEM "Da&tenbank aktualisieren\tStrg+F5", ID_RESETDB
     END
     POPUP "Hilfe"
     BEGIN
         MENUITEM "Hilfe\tF1", ID_HELP, GRAYED
-        MENUITEM "Über", ID_ABOUT
+        MENUITEM "&Über", ID_ABOUT
     END
 END
 
 IDR_LINKMENU MENU
 BEGIN
-    POPUP "popup"
+    POPUP "Popup"
     BEGIN
         MENUITEM "&Öffne den Link in einem Browser", ID_OPEN_LINK
-        MENUITEM "&Kopiere den Link in die Zwischenablage", ID_COPY_LINK
+        MENUITEM "Link in die Zwischenablage &kopieren", ID_COPY_LINK
     END
 END
 
 IDR_APPLICATIONMENU MENU
 BEGIN
-    POPUP "popup"
+    POPUP "Popup"
     BEGIN
-        MENUITEM "&Installieren\tCtrl+Enter", ID_INSTALL
-        MENUITEM "&Deinstallieren\tCtrl+Del", ID_UNINSTALL
+        MENUITEM "&Installieren\tStrg+Enter", ID_INSTALL
+        MENUITEM "&Deinstallieren\tStrg+Entf", ID_UNINSTALL
         MENUITEM "&Ändern", ID_MODIFY
         MENUITEM SEPARATOR
         MENUITEM "Aus &Registry entfernen", ID_REGREMOVE
         MENUITEM SEPARATOR
         MENUITEM "&Aktualisieren\tF5", ID_REFRESH
         MENUITEM SEPARATOR
-        MENUITEM "Da&tenbank aktualisieren\tCtrl+F5", ID_RESETDB
+        MENUITEM "Da&tenbank aktualisieren\tStrg+F5", ID_RESETDB
     END
 END
 
@@ -135,7 +135,7 @@ BEGIN
     IDS_INFO_PUBLISHER "\nVertrieb: "
     IDS_INFO_HELPLINK "\nHilfe-Link: "
     IDS_INFO_HELPPHONE "\nHilfe-Telefonnr.: "
-    IDS_INFO_README "\nReadme: "
+    IDS_INFO_README "\nLiesmich: "
     IDS_INFO_REGOWNER "\nregistrierter Eigentümer: "
     IDS_INFO_PRODUCTID "\nProdukt-ID: "
     IDS_INFO_CONTACT "\nKontakt: "
@@ -228,7 +228,7 @@ STRINGTABLE
 BEGIN
     IDS_LICENSE_OPENSOURCE "Open Source"
     IDS_LICENSE_FREEWARE "Freeware"
-    IDS_LICENSE_TRIAL "Trial/Demo"
+    IDS_LICENSE_TRIAL "Testversion/Demo"
 END
 
 STRINGTABLE
