@@ -1,9 +1,4 @@
-/* TRANSLATOR : Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- * DATE OF TR.: 30-05-2008
- * LAST CHANGE: 31-05-2010
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 STRINGTABLE
 BEGIN
@@ -24,10 +19,10 @@ BEGIN
     IDS_TROUBLESHOOTDEV "&Riešenie problémov..."
     IDS_ENABLEDEV "E&nable Device"
     IDS_REINSTALLDRV "Re&install Driver"
-    IDS_PROPERTIES "P&roperties"
+    IDS_PROPERTIES "Vl&astnosti"
     IDS_UPDATEDRV "&Aktualizovať ovládač..."
     IDS_REBOOT "Restart &Computer..."
-    IDS_NOTAVAILABLE "Nie je k dispozícii" //Not available
+    IDS_NOTAVAILABLE "Nie je k dispozícii"
     IDS_NOTDIGITALLYSIGNED "Digitálne nepodpísaný"
     IDS_NODRIVERS "No driver files are required or have been loaded for this device."
     IDS_RESOURCE_COLUMN "Resource type"
@@ -69,9 +64,9 @@ BEGIN
     IDS_DEV_DISABLED "Toto zariadenie nie je spustené."
     IDS_DEV_DISABLED2 "Toto zariadenie je zakázané."
     IDS_DEV_DEVLOADER_NOT_READY "The loaders for this device cannot load the required drivers."
-    IDS_DEV_DEVLOADER_NOT_READY2 "" /* unused */
+    IDS_DEV_DEVLOADER_NOT_READY2 """ /* unused */
     IDS_DEV_DEVLOADER_NOT_READY3 "" /* unused */
-    IDS_DEV_DEVICE_NOT_THERE "This device is either not present, not working properly, or does not have all the drivers installed."
+    IDS_DEV_DEVICE_NOT_THERE ""This device is either not present, not working properly, or does not have all the drivers installed."
     IDS_DEV_MOVED "ReactOS is in the process of setting up this device."
     IDS_DEV_TOO_EARLY "ReactOS is in the process of setting up this device."
     IDS_DEV_NO_VALID_LOG_CONF "ReactOS can't specify the resources for this device."
@@ -106,7 +101,7 @@ BEGIN
     IDS_PROP_HARDWAREIDS "Hardware IDs"
     IDS_PROP_COMPATIBLEIDS "Compatible IDs"
     IDS_PROP_MATCHINGDEVICEID "Matching Device ID"
-    IDS_PROP_SERVICE "Service"
+    IDS_PROP_SERVICE "Služba"
     IDS_PROP_ENUMERATOR "Enumerator"
     IDS_PROP_CAPABILITIES "Capabilities"
     IDS_PROP_DEVNODEFLAGS "Devnode Flags"
@@ -139,7 +134,7 @@ BEGIN
     LTEXT "", IDC_MANUFACTURER, 14, 88, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_LOCATION, 14, 100, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_STATUS, 14, 112, 183, 30
-    PUSHBUTTON "&Riešenie problémov...", IDC_TROUBLESHOOT, 85, 140, 54, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
+    PUSHBUTTON "&Riešenie problémov...", IDC_TROUBLESHOOT, 80, 140, 60, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
     PUSHBUTTON "Vl&astnosti", IDC_PROPERTIES, 146, 140, 50, 14
 END
 
@@ -158,7 +153,7 @@ BEGIN
     EDITTEXT IDC_DEVLOCATION, 100, 67, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     GROUPBOX "Stav zariadenia", IDC_DEVSTATUSGROUP, 7, 83, 238, 100
     EDITTEXT IDC_DEVSTATUS, 14, 96, 224, 61, NOT WS_TABSTOP | ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
-    PUSHBUTTON "&Riešenie problémov...", IDC_DEVPROBLEM, 148, 163, 90, 15
+    PUSHBUTTON "&Troubleshoot...", IDC_DEVPROBLEM, 148, 163, 90, 15
     LTEXT "&Využitie zariadenia:", IDC_DEVUSAGELABEL, 7, 188, 222, 8, WS_DISABLED
     COMBOBOX IDC_DEVUSAGE, 7, 198, 239, 40, CBS_DROPDOWNLIST | WS_VSCROLL | WS_DISABLED
 END
@@ -170,13 +165,13 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_DEVICON, 7, 7, 20, 20
     LTEXT "", IDC_DEVNAME, 37, 9, 174, 16, SS_NOPREFIX
-    LTEXT "Poskytovateľ ovládača:", -1, 34, 39, 60, 8, SS_NOPREFIX
+    LTEXT "Driver provider:", -1, 37, 39, 60, 8, SS_NOPREFIX
     EDITTEXT IDC_DRVPROVIDER, 100, 39, 146, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Dátum ovládača:", -1, 34, 53, 60, 8, SS_NOPREFIX
+    LTEXT "Driver date:", -1, 37, 53, 60, 8, SS_NOPREFIX
     EDITTEXT IDC_DRVDATE, 100, 53, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Verzia ovládača:", -1, 34, 67, 60, 8, SS_NOPREFIX
+    LTEXT "Driver version:", -1, 37, 67, 60, 8, SS_NOPREFIX
     EDITTEXT IDC_DRVVERSION, 100, 67, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Digitálne podpísal:", -1, 34, 81, 60, 8, SS_NOPREFIX
+    LTEXT "Digitálne podpísal:", -1, 37, 81, 60, 8, SS_NOPREFIX
     EDITTEXT IDC_DIGITALSIGNER, 100, 81, 145, 12, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     PUSHBUTTON "&Driver Details...", IDC_DRIVERDETAILS, 7, 106, 75, 15
     LTEXT "To view details about the driver files.", -1, 91, 110, 154, 17, SS_NOPREFIX
@@ -195,14 +190,14 @@ BEGIN
     CONTROL "", IDC_DRIVERFILES, "SysListView32", LVS_REPORT | LVS_NOCOLUMNHEADER |
             LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_SORTASCENDING |
             LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP, 7, 46, 209, 80
-    LTEXT "Poskytovateľ:", -1, 14, 134, 66, 8
-    EDITTEXT IDC_FILEPROVIDER, 80, 134, 137, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Verzia súboru:", -1, 14, 150, 66, 8
-    EDITTEXT IDC_FILEVERSION, 80, 150, 137, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Autorské práva:", -1, 14, 166, 66, 8
-    EDITTEXT IDC_FILECOPYRIGHT, 80, 166, 137, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
-    LTEXT "Digitálne podpísal:", -1, 14, 182, 66, 8
-    EDITTEXT IDC_DIGITALSIGNER, 80, 182, 137, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "Poskytovateľ:", -1, 14, 134, 50, 8
+    EDITTEXT IDC_FILEPROVIDER, 66, 134, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "Verzia súboru:", -1, 14, 150, 50, 8
+    EDITTEXT IDC_FILEVERSION, 66, 150, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "Autorské práva:", -1, 14, 166, 50, 8
+    EDITTEXT IDC_FILECOPYRIGHT, 66, 166, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT "Digital Signer:", -1, 14, 182, 50, 8
+    EDITTEXT IDC_DIGITALSIGNER, 66, 182, 155, 8, NOT WS_TABSTOP | NOT WS_BORDER | ES_AUTOHSCROLL | ES_READONLY
     DEFPUSHBUTTON "OK", IDOK, 167, 208, 50, 14
 END
 
@@ -234,13 +229,12 @@ END
 
 IDD_DEVICEPOWER DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
-CAPTION "Power"
+CAPTION "Výkon"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_DEVICON, 7, 7, 20, 20
     LTEXT "", IDC_DEVNAME, 37, 9, 174, 16, SS_NOPREFIX
 END
-
 
 
 /*
@@ -249,9 +243,9 @@ END
 
 IDR_MAINMENU MENU
 BEGIN
-  POPUP "&File"
+  POPUP "&Súbor"
   BEGIN
-    MENUITEM "E&xit",                       IDC_EXIT
+    MENUITEM "S&končiť",                       IDC_EXIT
   END
   MENUITEM "Action",                        IDC_ACTIONMENU
   POPUP "View"
@@ -281,20 +275,20 @@ BEGIN
   IDS_MENU_UPDATE           "Update driver software..."
   IDS_MENU_ENABLE           "Enable"
   IDS_MENU_DISABLE          "Disable"
-  IDS_MENU_UNINSTALL        "Uninstall"
+  IDS_MENU_UNINSTALL        "Odinštalovať"
   IDS_MENU_SCAN             "Scan for hardware changes"
   IDS_MENU_ADD              "Add hardware"
-  IDS_MENU_PROPERTIES       "Properties"
+  IDS_MENU_PROPERTIES       "Vlastnosti"
 END
 
 STRINGTABLE DISCARDABLE
 BEGIN
-  IDS_TOOLTIP_PROPERTIES    "Properties"
+  IDS_TOOLTIP_PROPERTIES    "Vlastnosti"
   IDS_TOOLTIP_SCAN          "Scan for hardware changes"
   IDS_TOOLTIP_ENABLE        "Enable"
   IDS_TOOLTIP_DISABLE       "Disable"
   IDS_TOOLTIP_UPDATE        "Update Driver Software"
-  IDS_TOOLTIP_UNINSTALL     "Uninstall"
+  IDS_TOOLTIP_UNINSTALL     "Odinštalovať"
 END
 
 /* Hints */
@@ -317,10 +311,10 @@ BEGIN
   IDS_HINT_RES_BY_CONN  " Displays resources by connection type."
   IDS_HINT_SHOW_HIDDEN  " Displays legacy devices and devices that are no longer installed."
 
-  IDS_HINT_SYS_RESTORE  " Restores this window to normal size."
-  IDS_HINT_SYS_MOVE     " Moves this window."
-  IDS_HINT_SYS_SIZE     " Resizes this window."
-  IDS_HINT_SYS_MINIMIZE " Collapses this window to an icon."
-  IDS_HINT_SYS_MAXIMIZE " Expands this window to fill this screen."
-  IDS_HINT_SYS_CLOSE    " Closes this window."
+  IDS_HINT_SYS_RESTORE  " Obnoví veľkosť tohto okna na normálnu."
+  IDS_HINT_SYS_MOVE     " Presunie toto okno."
+  IDS_HINT_SYS_SIZE     " Zmení veľkosť tohto okna."
+  IDS_HINT_SYS_MINIMIZE " Zbalí toto okno do ikony."
+  IDS_HINT_SYS_MAXIMIZE " Zväčší veľkosť tohto okna tak, aby vyplnilo obrazovku."
+  IDS_HINT_SYS_CLOSE    " Zavrie toto okno."
 END
