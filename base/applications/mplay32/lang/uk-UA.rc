@@ -1,12 +1,4 @@
-/*
- * PROJECT:    ReactOS MPlay32
- * LICENSE:    GPL - See COPYING in the top level directory
- * FILE:       base/applications/mplay32/lang/uk-UA.rc
- * PURPOSE:    Ukraianian Language File for ReactOS MPlay32
- * TRANSLATOR: Sakara Yevhen
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDR_MAINMENU MENU
 BEGIN
@@ -24,7 +16,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Repea&t\tCtrl+T", IDM_REPEAT
     END
-    POPUP "&View"
+    POPUP "&Вигляд"
     BEGIN
         MENUITEM "Single-Window &Mode", IDM_SWITCHVIEW
     END
@@ -52,7 +44,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_MODE_UNKNOWN "Unknown"
+    IDS_MODE_UNKNOWN "Невідомо"
     IDS_MODE_OPEN "Opened"
     IDS_MODE_STOP "Stopped"
     IDS_MODE_PLAY "Playing"
