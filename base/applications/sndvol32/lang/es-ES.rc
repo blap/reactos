@@ -1,6 +1,4 @@
-/* Spanish language file by Javier Remacha <2007-2008> and Ismael Ferreras Morezuelas <2014-11-07>  */
-
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 IDM_MAINMENU MENU
 BEGIN
@@ -22,8 +20,7 @@ END
 STRINGTABLE
 BEGIN
     IDS_SNDVOL32 "Control de volumen"
-    IDS_NOMIXERDEVICES "¡No hay dispositivos mezcladores activos en este momento! \n\
-La aplicación se cerrará ahora."
+    IDS_NOMIXERDEVICES "There are no active mixer devices available! The application will now exit."
 END
 
 IDD_PREFERENCES DIALOGEX 0, 0, 224, 250
