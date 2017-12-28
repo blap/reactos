@@ -1,0 +1,27 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+BEGIN
+    IDS_INVALIDFORMAT "Format entri %1 RunEx atau RunOnceEx tidak valid. Sebuah bar vertikal ('|') diperlukan setelah nama fungsi dan fungsi perlu mendukung parameter WinMain()."
+    IDS_LOADERROR "Terjadi kesalahan saat memuat %1. File mungkin belum terinstal atau telah rusak."
+    IDS_CALLERROR "Terjadi kesalahan atau pengecualian saat memanggil fungsinya %1 in %2."
+    IDS_INCORRECTFORMAT "Format perintah RunEx atau RunOnceEx berikut ini salah: %1. Perintah eksekusi shell harus dimulai dengan ||."
+    IDS_NOEXPORT "Tidak dapat memanggil fungsi %1 di file %2 karena fungsi itu tidak ada atau tidak diekspor."
+    IDS_EXECUTEERROR "Terjadi kesalahan atau pengecualian saat mengeksekusi %1."
+    IDS_NOFUNCTION "Tidak dapat menemukan fungs %1 di file %2."
+    IDS_NODEPENDENCY "Tidak dapat memuat file ketergantungan %1."
+    IDS_SETUPERROR "Terjadi kesalahan saat menyiapkan %1. Kesalahan ini telah dicatat, instalasi akan berlanjut"
+    IDS_INCOMPLETE "Pemasangan aplikasi sebelumnya belum selesai.\n\nmasuk dengan akun Administrator untuk menyelesaikan pemasangan."
+    IDS_SETUP "Setup ReactOS"
+    IDS_SERVICEERROR "Beberapa layanan tidak bisa dimulai. Mempersiapkan perlu me-restart sistem anda untuk memulai layanan."
+END
+
+IDD_DIALOG DIALOGEX 0, 0, 206, 166
+STYLE DS_MODALFRAME | DS_NOIDLEMSG | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Setup ReactOS"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "ReactOS sekarang menyiapkan item berikut:", -1, 36, 13, 163, 11
+    LISTBOX IDC_LB_ITEMS, 36, 32, 163, 127, LBS_NOTIFY | LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    ICON IDI_ICON, -1, 7, 7, 20, 20
+END
