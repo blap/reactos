@@ -5,11 +5,11 @@ STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Einstellungen"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Select the services that you want for each input language shown in the list.\nUse the Add and Remove buttons to modify this list.", -1, 9, 6, 238, 25
+    LTEXT "Wählen Sie die Dienste aus, die Sie für die Eingabesprachen in der Liste verwenden wollen.\nVerwenden Sie ""Hinzufügen"" und ""Entfernen"", um die Liste zu bearbeiten.", -1, 9, 6, 238, 25
     CONTROL "TEXT", IDC_KEYLAYOUT_LIST, "SYSLISTVIEW32", WS_BORDER | WS_VSCROLL | WS_TABSTOP | LVS_SINGLESEL | LVS_NOSORTHEADER | LVS_SHOWSELALWAYS | LVS_REPORT, 8, 36, 237, 101
-    PUSHBUTTON "&Als Standard", IDC_SET_DEFAULT, 101, 159, 144, 14
+    PUSHBUTTON "Als &Standard", IDC_SET_DEFAULT, 101, 159, 144, 14
     PUSHBUTTON "&Hinzufügen...", IDC_ADD_BUTTON, 27, 142, 70, 14
-    PUSHBUTTON "Ent&fernen", IDC_REMOVE_BUTTON, 101, 142, 70, 14
+    PUSHBUTTON "&Entfernen", IDC_REMOVE_BUTTON, 101, 142, 70, 14
     PUSHBUTTON "&Eigenschaften...", IDC_PROP_BUTTON, 175, 142, 70, 14
     GROUPBOX "Einstellungen", -1, 7, 185, 240, 36
     PUSHBUTTON "&Tasteneinstellungen...", IDC_KEY_SET_BTN, 14, 198, 110, 14
@@ -124,7 +124,7 @@ BEGIN
     IDS_BELGIAN_COMMA_LAYOUT "Belgisch (Komma)"
     IDS_BELGIAN_FRENCH_LAYOUT "Belgisch (Wallonisch)"
     IDS_BELGIAN_LAYOUT "Belgisch (Punkt)"
-    IDS_BENGALI_LAYOUT "Bengali"
+    IDS_BENGALI_LAYOUT "Bengalisch"
     IDS_BULGARIAN_LAYOUT "Bulgarisch"
     IDS_BULGARIAN_BDS_LAYOUT "Bulgarisch BDS 5237-1978"
     IDS_BULGARIAN_LATIN_LAYOUT "Bulgarisch (Lateinisch)"
@@ -229,7 +229,7 @@ BEGIN
     IDS_SWISS_GERMAN_LAYOUT "Deutsch (Schweiz)"
     IDS_SYRIAC_LAYOUT "Syrisch"
     IDS_SYRIAC_PHONETIC_LAYOUT "Syrisch (Phonetisch)"
-    IDS_TAMIL_LAYOUT "Tamil"
+    IDS_TAMIL_LAYOUT "Tamilisch"
     IDS_TATAR_LAYOUT "Tatarisch"
     IDS_TELUGU_LAYOUT "Telugu"
     IDS_THAI_KEDMANEE_LAYOUT "Thai Kedmanee"
