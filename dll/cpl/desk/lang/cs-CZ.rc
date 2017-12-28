@@ -1,10 +1,4 @@
-/* FILE:       dll/cpl/desk/lang/cs-CZ.rc
- * TRANSLATOR: Radek Liska aka Black_Fox (radekliska at gmail dot com)
- * UPDATED:    2015-04-12
- * THANKS TO:  potapnik, who translated major part of this file
- */
-
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 IDD_BACKGROUND DIALOGEX 0, 0, 246, 204
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -106,7 +100,7 @@ BEGIN
     CONTROL "Použít následující metodu vyhlazování &hran obrazovkových písem", IDC_EFFAPPEARANCE_SMOOTHING,
             "button", BS_AUTOCHECKBOX | WS_TABSTOP, 10, 42, 267, 19
     COMBOBOX IDC_EFFAPPEARANCE_SMOOTHINGTYPE, 20, 62, 95, 19, CBS_DROPDOWNLIST |
-             CBS_HASSTRINGS | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+             CBS_HASSTRINGS | WS_CHILD | WS_VSCROLL | WS_TABSTOP
     CONTROL "Použít velké &ikony", IDC_EFFAPPEARANCE_LARGEICONS, "button",
             BS_AUTOCHECKBOX | WS_TABSTOP | WS_DISABLED, 10, 80, 267, 19
     CONTROL "Zobrazovat &stíny pod nabídkami", IDC_EFFAPPEARANCE_SETDROPSHADOW,
