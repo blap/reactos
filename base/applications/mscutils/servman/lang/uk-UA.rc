@@ -1,12 +1,4 @@
-/*
- * PROJECT:     ReactOS Device Management
- * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        base/applications/mscutils/servman/lang/uk-UA.rc
- * PURPOSE:     Ukraianian Language File for devmgmt
- * TRANSLATORS: Artem Reznikov, Igor Paliychuk
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDR_MAINMENU MENU
 BEGIN
@@ -72,7 +64,7 @@ BEGIN
 END
 
 IDD_ABOUTBOX DIALOGEX 22, 16, 190, 182
-CAPTION "Про програму ""Диспетчер керування службами"""
+CAPTION "Про програму "
 FONT 8, "MS Shell Dlg", 0, 0
 STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | DS_MODALFRAME
 BEGIN
@@ -126,7 +118,7 @@ BEGIN
     EDITTEXT IDC_LOGON_PASSWORD2, 72, 86, 104, 14, ES_LEFT | ES_PASSWORD | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP
     LTEXT "You can enable or disable this service for the hardware profiles listed below:", IDC_STATIC, 7, 114, 210, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
     CONTROL "", IDC_LOGON_HWPROFILE, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP, 7, 124, 238, 65
-    PUSHBUTTON "&Enable", IDC_LOGON_HWENABLE, 116, 197, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_DISABLED
+    PUSHBUTTON "&Ввімкнути", IDC_LOGON_HWENABLE, 116, 197, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_DISABLED
     PUSHBUTTON "&Disable", IDC_LOGON_HWDISABLE, 185, 197, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_DISABLED
 END
 
@@ -334,7 +326,7 @@ END
 /* Application title */
 STRINGTABLE
 BEGIN
-    IDS_APPNAME "Диспетчер керування службами ReactOS"
+    IDS_APPNAME "WineMine"
 END
 
 STRINGTABLE
