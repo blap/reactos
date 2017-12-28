@@ -1,6 +1,4 @@
-/* Translation and UTF-8 Conversion by mkbu95 <mkbu95@gmail.com> (May, 2012) */
-
-LANGUAGE LANG_PORTUGUESE, SUBLANG_NEUTRAL
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
 
 STRINGTABLE
 BEGIN
@@ -19,14 +17,14 @@ BEGIN
     IDS_SCROLLBOTTOM "Rolar até o fim"
     IDS_SCROLLPAGE_UP "Page up"
     IDS_SCROLLPAGE_DOWN "Page down"
-    IDS_SCROLLUP "Scroll up"
-    IDS_SCROLLDOWN "Scroll down"
+    IDS_SCROLLUP "Rolar para cima"
+    IDS_SCROLLDOWN "Rolar para baixo"
 */
-    IDS_TERMINAL_TITLE "ReactOS Console"
+    IDS_TERMINAL_TITLE "Console do ReactOS"
 END
 
 STRINGTABLE
 BEGIN
     IDS_MARK_TITLE "Mark"
-    IDS_SELECT_TITLE "Select"
+    IDS_SELECT_TITLE "Selecionar"
 END
