@@ -1,4 +1,4 @@
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -100,7 +100,7 @@ BEGIN
     EDITTEXT 0x143, 58, 147, 173, 12, WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
     PUSHBUTTON "Help", IDHELP, 8, 170, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 198, 170, 50, 14, BS_PUSHBUTTON
-    PUSHBUTTON "Cancel", IDCANCEL, 254, 170, 50, 14
+    PUSHBUTTON "Скасувати", IDCANCEL, 254, 170, 50, 14
     PUSHBUTTON "P&rinter...", psh3, 310, 170, 50, 14
 END
 
@@ -113,7 +113,7 @@ BEGIN
     COMBOBOX ID_ENCODING, 54, 0, 156, 80, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
     LTEXT "Кодування:", 0x155, 5, 2, 41, 12
     COMBOBOX ID_EOLN, 54, 18, 156, 80, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    LTEXT "Кінець рядка:", 0x156, 5, 20, 47, 12
+    LTEXT "Кінець рядка:", 0x156, 5, 20, 41, 12
 END
 
 /* Dialog 'Go To' */
@@ -125,7 +125,7 @@ BEGIN
     EDITTEXT ID_LINENUMBER, 54, 10, 106, 12, WS_CHILD | WS_BORDER | WS_TABSTOP
     LTEXT "Номер рядка:", 0x155, 5, 12, 41, 12, WS_CHILD | WS_TABSTOP | ES_NUMBER
     DEFPUSHBUTTON "OK", IDOK, 75, 30, 40, 15, WS_CHILD | WS_TABSTOP
-    PUSHBUTTON "Скасувати", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
 END
 
 IDD_ABOUTBOX DIALOGEX 22, 16, 284, 170
@@ -160,17 +160,17 @@ BEGIN
     STRING_UNTITLED "Без заголовка"
     STRING_ALL_FILES "Усі файли (*.*)"
     STRING_TEXT_FILES_TXT "Текстові файли (*.txt)"
-    STRING_TOOLARGE "Файл '%s' завеликий для блокнота.\n \
-Будь ласка використайте інший редактор."
-    STRING_NOTEXT "Ви не ввели ніякого тексту. \
-\nБудь ласка введіть що-небудь і спробуйте ще раз"
-    STRING_DOESNOTEXIST "Файл '%s'\nне існує\n\n \
-Хочете створити новий файл ?"
-    STRING_NOTSAVED "Файл '%s'\nбув змінений\n\n \
-Хочете зберегти зміни ?"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "'%s' can not be found."
-    STRING_OUT_OF_MEMORY "Недостатньо пам'яті для виконання операції.\
-\nЗакрийте один або декілька додатків і повторіть спробу."
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "Не можу знайти '%s'"
     STRING_ANSI "ANSI"
     STRING_UNICODE "Юнікод"
