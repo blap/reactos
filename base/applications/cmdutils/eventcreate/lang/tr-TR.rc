@@ -1,54 +1,52 @@
-/* TRANSLATOR: 2016 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 STRINGTABLE
 BEGIN
     IDS_USAGE "Kullanım bilgisi için ""EVENTCREATE /?"" yazınız.\n"
     IDS_HELP "\n\
-EVENTCREATE [/S bilgisayar [/U [etki alanı\\]kullanıcı [/P şifre]]] \n\
-            /ID olay kimliği {[/L kayıt adı] | [/SO kaynak]} /T tür /C ulam\n\
-            /D tanım\n\
+EVENTCREATE [/S computer [/U [domain\\]user [/P password]]] /ID EventID\n\
+            {[/L logname] | [/SO source]} /T type /C category /D description\n\
 \n\
-Tanım:\n\
-    Bu araç, bir yöneticiye belirli bir olay kaydı içinde husûsî bir olay\n\
-    oluşturmayı sağlar.\n\
+Description:\n\
+    This tool enables an administrator to create a custom event in\n\
+    a specified event log.\n\
 \n\
-Değişkenler:\n\
-    /S  bilgisayar        Bağlanacak uzak bilgisayarı belirtir.\n\
+Parameters:\n\
+    /S  computer          Specifies the remote computer where to connect.\n\
 \n\
-    /U  [etki alanı\\]kullanıcı Altında komutun çalışacağı kullanıcı hesâbını\n\
-                                belirtir.\n\
+    /U  [domain\\]user     Specifies the user account under which the command\n\
+                          should execute.\n\
 \n\
-    /P  [şifre]           Kullanıcı hesâbının şifresini belirtir.\n\
-                          Kullanılmazsa girdi için sorar.\n\
+    /P  [password]        Specifies the password of the user account.\n\
+                          Prompts for input if omitted.\n\
 \n\
-    /L  kayıt adı         Oluşturulacak olayın kayıt adını belirtir.\n\
-                          Geçerli adlar şunlardır:\n\
+    /L  logname           Specifies the name of the log where the event will be\n\
+                          created. The valid names are:\n\
                           Application, System, Security\n\
-                          (İkincisi yalnızca DİZGE hesâbına ayrılmıştır.)\n\
+                          (the latter is reserved only for the SYSTEM account).\n\
 \n\
-    /SO kaynak            Olay için kullanılacak kaynak adını belirtir.\n\
-                          (Belirtilmezse ön tanımlı kaynak adı\n\
-                          'eventcreate' olacaktır.)\n\
-                          Geçerli bir kaynak, rastgele bir dizgi olabilir ve olayı\n\
-                          oluşturan uygulamayı veyâ bileşeni belirtmelidir.\n\
+    /SO source            Specifies the source name to use for the event\n\
+                          (if not specified, the default source name\n\
+                           will be 'eventcreate').\n\
+                          A valid source can be any string and should represent\n\
+                          the application or the component that is generating\n\
+                          the event.\n\
 \n\
-    /T  tür               Oluşturulacak olayın türünü belirtir.\n\
-                          Geçerli türler: SUCCESS, ERROR, WARNING,\n\
+    /T  type              Specifies the type of event to create.\n\
+                          The valid types are: SUCCESS, ERROR, WARNING,\n\
                           INFORMATION.\n\
 \n\
-    /C  ulam              Olaya göre olay ulamını (tamsayı) belirtir.\n\
+    /C  category          Specifies the event category (integer) for the event.\n\
 \n\
-    /ID olay kimliği      Olaya göre olay kimliğini belirtir. Bu\n\
-                          0 ile 65535 arasında bir tamsayı olmalıdır.\n\
+    /ID EventID           Specifies the event ID for the event. This must be\n\
+                          an integer between 0 and 65535.\n\
 \n\
-    /D  tanım             Yeni oluşturulan olay için kullanılacak\n\
-                          tanımı belirtir.\n\
+    /D  description       Specifies the description to use for the newly\n\
+                          created event.\n\
 \n\
-    /?                    Bu yardım görüntülüğünü görüntüler.\n\
+    /?                    Displays this help screen.\n\
 "
-    IDS_INVALIDSWITCH "Geçersiz değişken - ""%s"".\n"
+    IDS_INVALIDSWITCH "Geçersiz seçenek - /%c\n"
     IDS_BADSYNTAX_0 "Geçersiz komut yatacı yazımı.\n"
     IDS_BADSYNTAX_1 "Geçersiz komut yatacı yazımı. ""%s"" seçeneği bir değer gerektirir.\n"
     IDS_BADSYNTAX_2 "Geçersiz komut yatacı yazımı. ""%s"" seçeneği için değer boş olamaz.\n"
@@ -56,7 +54,7 @@ Değişkenler:\n\
     IDS_BADSYNTAX_4 "Geçersiz komut yatacı yazımı. ""%s"" seçeneği için değer belirtilemiyor.\n"
     IDS_BADSYNTAX_5 "Geçersiz komut yatacı yazımı. ""%s"" seçeneğine %lu kezden çok izin verilmiyor.\n"
     IDS_BADSYNTAX_6 "Geçersiz komut yatacı yazımı. Zorunlu ""%s"" seçeneği yok.\n"
-    // IDS_BADSYNTAX_7 "Geçersiz komut yatacı yazımı. ""%s"" seçeneği için değer izin verilen aralığın dışında.\n"
+    // IDS_BADSYNTAX_7 "Geçersiz komut yatacı yazımı. ""%s"" seçeneği için değer %d ile %d arasında olmalı.\n"
     IDS_BADSYNTAX_7 "Geçersiz komut yatacı yazımı. ""%s"" seçeneği için değer %d ile %d arasında olmalı.\n"
 
     IDS_LOG_NOT_FOUND """%s"" kaydı yok. Olay oluşturulamıyor.\n"
@@ -69,4 +67,3 @@ Değişkenler:\n\
     IDS_SUCCESS_3   "İşlem başarılı: ""%s"" türünde bir olay ""%s"" kaydında ""%s"" kaynağıyla oluşturuldu.\n"
     IDS_SWITCH_UNIMPLEMENTED """%s"" seçeneği şimdilik desteklenmiyor, sıkıntı için üzgünüm!\n"
 END
-
