@@ -1,0 +1,319 @@
+/*
+ * Copyright 2009 Andrew Hill
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+ */
+
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+/* Menus */
+
+IDM_CABINET_CONTEXTMENU MENUEX
+BEGIN
+    POPUP "", 264,MFT_STRING,MFS_ENABLED
+    BEGIN
+        MENUITEM "&Standard Buttons", IDM_TOOLBARS_STANDARDBUTTONS, MFT_STRING, MFS_ENABLED
+        MENUITEM "&Address Bar", IDM_TOOLBARS_ADDRESSBAR, MFT_STRING, MFS_ENABLED
+        MENUITEM "&Links", IDM_TOOLBARS_LINKSBAR, MFT_STRING, MFS_ENABLED
+        MENUITEM "", -1, MFT_SEPARATOR
+        MENUITEM "Mengunci Alat&bar", IDM_TOOLBARS_LOCKTOOLBARS, MFT_STRING, MFS_ENABLED
+        MENUITEM "&Sesuaikan...", IDM_TOOLBARS_CUSTOMIZE, MFT_STRING, MFS_ENABLED
+        MENUITEM "&Label Teks", IDM_TOOLBARS_TEXTLABELS, MFT_STRING, MFS_ENABLED
+        MENUITEM "&Go Button", IDM_TOOLBARS_GOBUTTON, MFT_STRING, MFS_ENABLED
+    END
+END
+
+IDM_CABINET_MAINMENU MENUEX
+BEGIN
+    POPUP "&File", FCIDM_MENU_FILE
+    BEGIN
+        MENUITEM "", -1, MFT_SEPARATOR
+        MENUITEM "Tutup", IDM_FILE_CLOSE
+    END
+    POPUP "&File", FCIDM_MENU_EDIT
+    BEGIN
+        MENUITEM "", -1, MFT_SEPARATOR
+    END
+    POPUP "&Lihat", FCIDM_MENU_VIEW
+    BEGIN
+        POPUP "&Toolbars", IDM_VIEW_TOOLBARS
+        BEGIN
+            MENUITEM "", -1, MFT_SEPARATOR
+        END
+        MENUITEM "Status &Bar", IDM_VIEW_STATUSBAR
+        POPUP "&Explorer Bar", IDM_VIEW_EXPLORERBAR
+        BEGIN
+            MENUITEM "&Search\tCtrl+E", IDM_EXPLORERBAR_SEARCH
+            MENUITEM "&Favorites\tCtrl+I", IDM_EXPLORERBAR_FAVORITES
+            MENUITEM "&Media", IDM_EXPLORERBAR_MEDIA
+            MENUITEM "Riwayat\tCtrl+H", IDM_EXPLORERBAR_HISTORY
+            MENUITEM "F&olders", IDM_EXPLORERBAR_FOLDERS
+            MENUITEM "", IDM_EXPLORERBAR_SEPARATOR
+        END
+        MENUITEM "", FCIDM_MENU_VIEW_SEP_OPTIONS, MFT_SEPARATOR
+        POPUP "G&o To", FCIDM_MENU_EXPLORE
+        BEGIN
+            MENUITEM "&Back\tAlt+Left Arrow", IDM_GOTO_BACK
+            MENUITEM "&Forward\tAlt+Right Arrow", IDM_GOTO_FORWARD
+            MENUITEM "&Up One Level", IDM_GOTO_UPONELEVEL
+            MENUITEM "", -1, MFT_SEPARATOR
+            MENUITEM "&Home Page\tAlt+Home", IDM_GOTO_HOMEPAGE
+        END
+        MENUITEM "&Refresh", IDM_VIEW_REFRESH
+    END
+    POPUP "F&avorites", FCIDM_MENU_FAVORITES
+    BEGIN
+        MENUITEM "&Tambahkan ke Favorit...", IDM_FAVORITES_ADDTOFAVORITES
+        MENUITEM "&Mengatur Favorit...", IDM_FAVORITES_ORGANIZEFAVORITES
+        MENUITEM "", -1, MFT_SEPARATOR
+        MENUITEM "(Kosong)", IDM_FAVORITES_EMPTY
+    END
+    POPUP "&Peralatan", FCIDM_MENU_TOOLS
+    BEGIN
+        MENUITEM "Peta &Drive Jaringan...", IDM_TOOLS_MAPNETWORKDRIVE
+        MENUITEM "&Putus Drive Jaringan...", IDM_TOOLS_DISCONNECTNETWORKDRIVE
+        MENUITEM "&Synchronize...", IDM_TOOLS_SYNCHRONIZE
+        MENUITEM "", -1, MFT_SEPARATOR
+        MENUITEM "Pilihan &folder...", IDM_TOOLS_FOLDEROPTIONS
+    END
+    POPUP "&File", FCIDM_MENU_HELP
+    BEGIN
+        MENUITEM "&Tentang ReactOS", IDM_HELP_ABOUT
+    END
+END
+
+IDM_TASKBAR_TOOLBARS MENUEX
+BEGIN
+	POPUP "&Toolbars", -1, MFT_STRING, MFS_ENABLED, 0
+	BEGIN
+		MENUITEM "&Desktop", IDM_TASKBAR_TOOLBARS_DESKTOP, MFT_STRING
+		MENUITEM "&Quick Launch", IDM_TASKBAR_TOOLBARS_QUICKLAUNCH, MFT_STRING
+		MENUITEM "", -1, MFT_SEPARATOR, MFS_ENABLED
+		MENUITEM "&New Toolbar...", IDM_TASKBAR_TOOLBARS_NEW, MFT_STRING
+	END
+END
+
+IDM_BAND_MENU MENUEX
+BEGIN
+	MENUITEM "Sho&w Title", IDM_BAND_TITLE
+	MENUITEM "&Close Toolbar", IDM_BAND_CLOSE
+END
+
+IDM_POPUPMENU MENUEX DISCARDABLE
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "&View", IDM_VIEW_MENU
+        BEGIN
+            MENUITEM "&Large Icons", IDM_LARGE_ICONS
+            MENUITEM "&Small Icons", IDM_SMALL_ICONS
+        END
+        MENUITEM "&Open Folder", IDM_OPEN_FOLDER
+        MENUITEM "&Show Text", IDM_SHOW_TEXT
+    END    
+END
+
+/* Dialogs */
+
+IDD_PROGRESS_DLG DIALOGEX 0, 0, 260, 85
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION ""
+FONT 8, "MS Shell Dlg"
+{
+    CONTROL "", IDC_ANIMATION, ANIMATE_CLASSA, 0, 12, 10, 236, 30 /* TODO: style */
+    LTEXT "", IDC_TEXT_LINE,     7, 45, 250, 10, SS_LEFT|SS_NOPREFIX
+    LTEXT "", IDC_TEXT_LINE + 1, 7, 55, 250, 10, SS_LEFT|SS_NOPREFIX
+    LTEXT "", IDC_TEXT_LINE + 2, 7, 75, 190, 10, SS_LEFT|SS_NOPREFIX
+    CONTROL "", IDC_PROGRESS_BAR, PROGRESS_CLASSA, WS_BORDER, 7, 65, 190, 8
+    PUSHBUTTON "Cancel", IDCANCEL, 205, 65, 50, 15, WS_GROUP | WS_TABSTOP | WS_VISIBLE
+}
+
+IDD_CUSTOMIZETOOLBAREX DIALOGEX 0, 0, 357, 33
+STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CAPTION
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT "Te&xt pilihan:", -1, 4, 2, 48, 15
+    COMBOBOX IDC_TEXTOPTIONS, 52, 0, 123, 57, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Ico&n pilihan:", -1, 4, 20, 48, 15
+    COMBOBOX IDC_ICONOPTIONS, 52, 18, 123, 57, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+/* Accelerators */
+
+IDR_ACCELERATORS ACCELERATORS
+BEGIN
+    VK_F5, IDM_VIEW_REFRESH, VIRTKEY, NOINVERT
+    VK_F5, IDM_VIEW_REFRESH, VIRTKEY, CONTROL, NOINVERT
+    "R", IDM_VIEW_REFRESH, VIRTKEY, CONTROL, NOINVERT
+    VK_HOME, IDM_GOTO_HOMEPAGE, VIRTKEY, ALT, NOINVERT
+    "D", IDM_FAVORITES_ADDTOFAVORITES, VIRTKEY, CONTROL, NOINVERT
+    "B", IDM_FAVORITES_ORGANIZEFAVORITES, VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT, IDM_GOTO_BACK, VIRTKEY, ALT
+    VK_RIGHT, IDM_GOTO_FORWARD, VIRTKEY, ALT
+    VK_UP, IDM_GOTO_UPONELEVEL, VIRTKEY, ALT
+    VK_BACK, 41010, NOINVERT, VIRTKEY
+    "W", IDM_FILE_CLOSE, VIRTKEY, CONTROL, NOINVERT
+    "E", IDM_EXPLORERBAR_SEARCH, VIRTKEY, CONTROL, NOINVERT
+    "I", IDM_EXPLORERBAR_FAVORITES, VIRTKEY, CONTROL, NOINVERT
+    "H", IDM_EXPLORERBAR_HISTORY, VIRTKEY, CONTROL, NOINVERT
+END
+
+/* Strings */
+
+STRINGTABLE
+BEGIN
+    IDS_CANCELLING "Membatalkan..."
+    IDS_REMAINING  "Sisa"
+END
+
+STRINGTABLE
+BEGIN
+    800 "Berisi perintah untuk memanipulasi item yang dipilih."
+END
+
+STRINGTABLE
+BEGIN
+    864 "Berisi perintah edit."
+END
+
+STRINGTABLE
+BEGIN
+    928 "Berisi perintah untuk memanipulasi tampilan."
+END
+
+STRINGTABLE
+BEGIN
+    992 "Berisi perintah alat."
+END
+
+STRINGTABLE
+BEGIN
+    1056 "Berisi perintah untuk menampilkan bantuan."
+END
+
+STRINGTABLE
+BEGIN
+    9025 "Tutup jendela."
+    9026 "Naik satu tingkat."
+END
+
+STRINGTABLE
+BEGIN
+    9121 "Menyambungkan ke drive jaringan."
+    9122 "Memutuskan koneksi dari drive jaringan."
+END
+
+STRINGTABLE
+BEGIN
+    9250 "Menampilkan informasi program, nomor versi, dan hak cipta."
+    9252 "Menampilkan informasi untuk debugging."
+END
+
+STRINGTABLE
+BEGIN
+    9281 "Pergi ke halaman sebelumnya."
+    9282 "Pergi ke halaman berikutnya."
+    9283 "Memungkinkan Anda untuk mengubah pengaturan."
+    9285 "Pergi ke beranda Anda."
+END
+
+STRINGTABLE
+BEGIN
+    9362 "Membuka folder Favorites."
+    9363 "Menambahkan halaman ini ke daftar Favorit Anda."
+END
+
+STRINGTABLE
+BEGIN
+    9505 "Menunjukkan atau menyembunyikan toolbar."
+    9506 "Menunjukkan atau menyembunyikan status bar."
+    9508 "Menampilkan toolbar Buttons Standar."
+    9509 "Menampilkan Alamat bar."
+    9510 "Menampilkan bilah Tautan Cepat."
+    9516 "Mengunci ukuran dan posisi toolbar."
+END
+
+STRINGTABLE
+BEGIN
+    9533 "Menyesuaikan toolbar."
+END
+
+STRINGTABLE
+BEGIN
+    9552 "Menunjukkan atau menyembunyikan bilah penjelajah."
+    9553 "Menunjukkan bilah Pencarian."
+    9554 "Menunjukkan bilah Favorit."
+    9555 "Menunjukkan bilah riwayat."
+    9557 "Menunjukkan bilah Folder."
+    9559 "Menampilkan Media Bar."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SMALLICONS "Ikon kecil"
+    IDS_LARGEICONS "Ikon besar"
+    IDS_SHOWTEXTLABELS "Tampilkan label teks"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_NOTEXTLABELS "Tidak ada label teks"
+    IDS_SELECTIVETEXTONRIGHT "Teks selektif di kanan"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GOBUTTONLABEL "Pergi"
+    IDS_GOBUTTONTIPTEMPLATE "Buka ""%s"""
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SEARCHLABEL "Pencarian"
+    IDS_ADDRESSBANDLABEL "Alamat"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FOLDERSLABEL "Folder"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HISTORYTEXT "Riwayat\tCtrl+H"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_UP "Naik"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_BACK "Kembali ke %s"
+    IDS_FORWARD "Teruskan ke %s"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STANDARD_TOOLBAR, "|Back|Forward|Up|Search|Folders|Move To|Copy To|Delete|Undo|Views|Stop|Refresh|Home|Map Drive|Disconnect|Favorites|History|Full Screen|Properties|Cut|Copy|Paste|Folder Options||"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_BROWSEFORNEWTOOLAR "Pilih folder"
+    IDS_TOOLBAR_ERR_TITLE "Toolbar"
+    IDS_TOOLBAR_ERR_TEXT "Tidak bisa membuat toolbar."
+END
