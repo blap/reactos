@@ -1,9 +1,4 @@
-/* TRANSLATOR : Ardit Dani (Ard1t) (ardit.dani@gmail.com)
- * DATE OF TRANSLATION:  18-01-2014
-*/
-
-
-LANGUAGE LANG_ALBANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ALBANIAN, SUBLANG_ALBANIAN_ALBANIA
 
 IDD_PROPPAGEPOWERSCHEMES DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -52,11 +47,11 @@ BEGIN
     LTEXT "i panjohur", IDC_ALARMMSG1, 154, 71, 84, 10
     LTEXT "Veprim:", -1, 95, 83, 55, 10
     LTEXT "i panjohur", IDC_ALARMAKTION1, 154, 83, 84, 10
-    LTEXT "Run Program:", -1, 95, 95, 55, 10
+    LTEXT "Ekzekuto Programin:", -1, 95, 95, 55, 10
     LTEXT "i panjohur", IDC_ALARMPROG1, 154, 95, 84, 10
     GROUPBOX "Alarm Kritik baterie", -1, 6, 120, 239, 106
-    AUTOCHECKBOX "Aktivizo alarmin kritik baterie kur niveli i energjisë arrin:", IDC_ALARM2, 15, 131, 180, 15, WS_TABSTOP
-    LTEXT "i panjohur", IDC_ALARMVALUE2, 209, 133, 33, 10
+    AUTOCHECKBOX "Aktivizo alarmin kritik baterie kur niveli i energjisë arrin:", IDC_ALARM2, 15, 131, 195, 15, WS_TABSTOP
+    LTEXT "P'anjohur", IDC_ALARMVALUE2, 215, 134, 20, 10
     LTEXT "0%", -1, 28, 154, 15, 10
     CONTROL "Slider1", IDC_ALARMBAR2, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 158, 170, 15
     LTEXT "100%", -1, 214, 154, 25, 10
@@ -65,7 +60,7 @@ BEGIN
     LTEXT "i panjohur", IDC_ALARMMSG2, 154, 185, 84, 10
     LTEXT "Veprim:", -1, 95, 198, 45, 10
     LTEXT "i panjohur", IDC_ALARMAKTION2, 154, 198, 84, 10
-    LTEXT "Ekzekuto Programin:", -1, 95, 211, 50, 10
+    LTEXT "Run Program:", -1, 95, 211, 50, 10
     LTEXT "i panjohur", IDC_ALARMPROG2, 154, 211, 84, 10
 END
 
@@ -108,8 +103,8 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_CPLNAME_1 "Opsionet e energjisë"
-    IDS_CPLDESCRIPTION_1 "Konfiguro parametrat e kursimit të energjisë për kompjuterin tuaj."
+    IDS_CPLNAME_1 "Menaxher License"
+    IDS_CPLDESCRIPTION_1 "Menaxher License"
     IDS_PROCENT "%i%%"
     IDS_SOUND "Zëri"
     IDS_TEXT "Teksti"
