@@ -1,4 +1,4 @@
-LANGUAGE LANG_THAI, SUBLANG_DEFAULT
+LANGUAGE LANG_THAI, SUBLANG_THAI_THAILAND
 
 STRINGTABLE DISCARDABLE
 BEGIN
@@ -10,61 +10,61 @@ IDR_MAINMENU MENU
 BEGIN
   POPUP "แ&ฟ้ม"
   BEGIN
-    MENUITEM "ใ&หม่...",            ID_NEW
+    MENUITEM "ใ&หม่...",             ID_NEW
     MENUITEM "เ&ปิด...",            ID_OPEN
     MENUITEM SEPARATOR
-    MENUITEM "ปิ&ด\tCtrl+F4",       ID_CLOSE,   GRAYED
-    MENUITEM "ปิด&ทั้งหมด",         ID_CLOSEALL,GRAYED
+    MENUITEM "ปิ&ด\tCtrl+F4",     ID_CLOSE,   GRAYED
+    MENUITEM "ปิด&ทั้งหมด",          ID_CLOSEALL,GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&บันทึก",             ID_SAVE,    GRAYED
-    MENUITEM "บัน&ทึก เป็น...",     ID_SAVEAS,  GRAYED
+    MENUITEM "&บันทึก",               ID_SAVE,    GRAYED
+    MENUITEM "บัน&ทึก เป็น...",         ID_SAVEAS,  GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&ภาพก่อนพิมพ์",       ID_PRINTPRE,GRAYED
+    MENUITEM "&ภาพก่อนพิมพ์",      ID_PRINTPRE,GRAYED
     MENUITEM "&พิมพ์...",           ID_PRINT,   GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "&คุณสมบัติ...",       ID_PROP,    GRAYED
+    MENUITEM "&คุณสมบัติ...",      ID_PROP,    GRAYED
     MENUITEM SEPARATOR
     MENUITEM "&ออกจากโปรแกรม\tAlt+F4",       ID_EXIT
   END
   POPUP "แ&ก้ไข"
   BEGIN
-    MENUITEM "เ&ลิกทำ",             ID_UNDO,    GRAYED
-    MENUITEM "&ย้อนกลับ",           ID_REDO,    GRAYED
+    MENUITEM "เ&ลิกทำ",               ID_UNDO,    GRAYED
+    MENUITEM "&ย้อนกลับ",               ID_REDO,    GRAYED
     MENUITEM SEPARATOR
     MENUITEM "&ตัด",                ID_CUT,     GRAYED
-    MENUITEM "&คัดลอก",             ID_COPY,    GRAYED
-    MENUITEM "&วาง",                ID_PASTE,   GRAYED
+    MENUITEM "&คัดลอก",               ID_COPY,    GRAYED
+    MENUITEM "&วาง",              ID_PASTE,   GRAYED
     MENUITEM "วา&งเป็นภาพใหม่", ID_PASTENEWIMAGE, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "เลือกทั้งหม&ด",       ID_SELALL,  GRAYED
+    MENUITEM "เลือกทั้งหม&ด",         ID_SELALL,  GRAYED
   END
   POPUP "&มุมมอง"
   BEGIN
-    MENUITEM "เครื่องมื&อ",         ID_TOOLS
-    MENUITEM "&สี",                 ID_COLOR
+    MENUITEM "เครื่องมื&อ",              ID_TOOLS
+    MENUITEM "&สี",             ID_COLOR
     MENUITEM "&ประวัติ",            ID_HISTORY
-    MENUITEM "แ&ถบสถานะ",           ID_STATUSBAR
+    MENUITEM "แ&ถบสถานะ",         ID_STATUSBAR
   END
   POPUP "&ปรับแต่ง"
   BEGIN
-    MENUITEM "ความสว่าง...",        ID_BRIGHTNESS
-    MENUITEM "ความชัด...",          ID_CONTRAST
-    MENUITEM "ความเข้มแสง/ความอิ่มตัว...", -1, GRAYED
+    MENUITEM "ความสว่าง...",       ID_BRIGHTNESS
+    MENUITEM "ความชัด...",         ID_CONTRAST
+    MENUITEM "ความเข้มแสง/ความอิ่มตัว...",   -1, GRAYED
     POPUP "สี"
     BEGIN
-      MENUITEM "ภาพขาวดำ",          ID_BLACKANDWHITE
-      MENUITEM "แปลงสี",            ID_INVERTCOLORS
+      MENUITEM "ภาพขาวดำ",   ID_BLACKANDWHITE
+      MENUITEM "แปลงสี",     ID_INVERTCOLORS
     END
     MENUITEM SEPARATOR
-    MENUITEM "ทำให้มัว",            ID_BLUR
-    MENUITEM "ทำให้คมชัด",          ID_SHARPEN
-    MENUITEM "ทำให้ขอบนุ่ม",        -1, GRAYED
-    MENUITEM "เพิ่มเงา",            -1, GRAYED
+    MENUITEM "ทำให้มัว",                ID_BLUR
+    MENUITEM "ทำให้คมชัด",             ID_SHARPEN
+    MENUITEM "หมุน",        -1, GRAYED
+    MENUITEM "หมุน",          -1, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "ขนาดภาพ...",          -1, GRAYED
-    MENUITEM "กลับทิศทาง",          -1, GRAYED
-    MENUITEM "กลับด้าน",            -1, GRAYED
+    MENUITEM "หมุน",       -1, GRAYED
     MENUITEM "หมุน",                -1, GRAYED
+    MENUITEM "หมุน",              -1, GRAYED
+    MENUITEM "หมุน",              -1, GRAYED
 
   END
   POPUP "&สี"
@@ -73,9 +73,9 @@ BEGIN
   END
   POPUP "&หน้าต่าง"
   BEGIN
-    MENUITEM "&ซ้อนกัน",            ID_WINDOW_CASCADE
-    MENUITEM "วางเรียงแนว&นอน",     ID_WINDOW_TILE_HORZ
-    MENUITEM "วางเรียงแนว&ตั้ง",    ID_WINDOW_TILE_VERT
+    MENUITEM "&ซ้อนกัน",           ID_WINDOW_CASCADE
+    MENUITEM "วางเรียงแนว&นอน", ID_WINDOW_TILE_HORZ
+    MENUITEM "วางเรียงแนว&ตั้ง",   ID_WINDOW_TILE_VERT
     MENUITEM "จัดเรียงสัญ&รูป",     ID_WINDOW_ARRANGE
     MENUITEM SEPARATOR
     MENUITEM "&ถัดไป\tCtrl+F6",     ID_WINDOW_NEXT
@@ -103,10 +103,10 @@ BEGIN
   LTEXT      "", IDC_PICPREVIEW, 0, 1, 132, 96, SS_OWNERDRAW | SS_SUNKEN
   LTEXT      "รูปแบบสี:", IDC_STATIC, 135, 5, 36, 9
   GROUPBOX   "", IDC_BRI_GROUP, 138 ,30, 50, 48
-  CONTROL    "ทุกสี (RGB)", IDC_BRI_FULL, "ปุ่มกด", BS_AUTORADIOBUTTON, 138, 18, 46, 9
+  CONTROL    "ทุกสี (RGB)", IDC_BRI_FULL, "Button", BS_AUTORADIOBUTTON, 138, 18, 46, 9
   CONTROL    "แดง", IDC_BRI_RED, "Button", BS_AUTORADIOBUTTON, 142, 38, 42, 9
-  CONTROL    "เขียว", IDC_BRI_GREEN, "ปุ่มกด", BS_AUTORADIOBUTTON, 142, 51, 42, 9
-  CONTROL    "น้ำเงิน", IDC_BRI_BLUE, "ปุ่มกด", BS_AUTORADIOBUTTON, 142, 64, 42, 9
+  CONTROL    "เขียว", IDC_BRI_GREEN, "Button", BS_AUTORADIOBUTTON, 142, 51, 42, 9
+  CONTROL    "น้ำเงิน", IDC_BRI_BLUE, "Button", BS_AUTORADIOBUTTON, 142, 64, 42, 9
   EDITTEXT   IDC_BRI_EDIT, 98, 103, 28, 13
   CONTROL    "", IDC_BRI_TRACKBAR, "msctls_trackbar32", TBS_BOTH | TBS_NOTICKS | WS_TABSTOP, 2, 105, 90, 11
   PUSHBUTTON "ตกลง", IDOK, 142, 88, 48, 13
@@ -135,7 +135,7 @@ BEGIN
   EDITTEXT   IDC_IMAGE_NAME_EDIT,  58, 3, 94, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP
   GROUPBOX   "คุณสมบัติของขนาดพื้นที่ภาพ", IDC_STATIC, 4, 22, 148, 98
   LTEXT      "ประเภทรูปภาพ:", IDC_STATIC, 12, 36, 42, 9
-  CONTROL    "", IDC_IMAGETYPE, "กล่องเครื่องมือ", WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 35, 88, 54
+  CONTROL    "", IDC_IMAGETYPE, "ComboBox", WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 35, 88, 54
   LTEXT      "ความกว้าง:", IDC_STATIC, 12, 51, 42, 9
   EDITTEXT   IDC_WIDTH_EDIT, 58, 49, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
   LTEXT      "", IDC_WIDTH_STAT, 94, 51, 40, 9
@@ -146,7 +146,7 @@ BEGIN
   EDITTEXT   IDC_RES_EDIT, 58, 83, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
   LTEXT      "", IDC_RES_STAT, 94, 84, 40, 9
   LTEXT      "หน่วย:", IDC_STATIC, 12, 99, 42, 9
-  CONTROL    "", IDC_UNIT, "กล่องเครื่องมือ", WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 99, 54, 50
+  CONTROL    "", IDC_UNIT, "ComboBox", WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 99, 54, 50
   LTEXT      "ขนาดภาพ:", IDC_STATIC, 12, 125, 42, 9
   LTEXT      "", IDC_IMAGE_SIZE, 58, 125, 54, 9
   PUSHBUTTON "ตกลง", IDOK, 50, 144, 48, 13
