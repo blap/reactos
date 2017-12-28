@@ -1,11 +1,7 @@
-/* TRANSLATOR : Ardit Dani (Ard1t) (ardit.dani@gmail.com) 
- * DATE OF TR:  29-11-2013
-*/
-
-LANGUAGE LANG_ALBANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ALBANIAN, SUBLANG_ALBANIAN_ALBANIA
 
 STRINGTABLE
 BEGIN
-    IDS_DESCRIPTION "Logon ScreenSaver"
+    IDS_DESCRIPTION "3D Tekst ScreenSaver"
     IDS_TEXT "opsionet nuk duhen tE jene te vendosura."
 END
