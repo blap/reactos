@@ -1,12 +1,12 @@
 /*
  * PROJECT:     ReactOS VGA Font Editor
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
- * PURPOSE:     Dialog for editing a glyph
+ * PURPOSE:     English resource file
  * COPYRIGHT:   Copyright 2008 Colin Finck (colin@reactos.org)
- * TRANSLATOR:  Paolo Devoti
+ * TRANSLATOR:  Colin Finck
  */
 
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 IDD_ABOUT DIALOGEX 10, 10, 130, 62
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
@@ -56,38 +56,38 @@ BEGIN
 
     POPUP "&Finestre"
     BEGIN
-    MENUITEM "&Sovrapponi",           ID_WINDOW_CASCADE
-    MENUITEM "Affianca &Orizzontalmente", ID_WINDOW_TILE_HORZ
-    MENUITEM "Affianca &Verticalmente",   ID_WINDOW_TILE_VERT
-    MENUITEM "&Disponi Icone",     ID_WINDOW_ARRANGE
-    MENUITEM SEPARATOR
-    MENUITEM "Succ&essiva\tCtrl+F6",     ID_WINDOW_NEXT
+        MENUITEM "&Sovrapponi", ID_WINDOW_CASCADE
+        MENUITEM "Affianca &Orizzontalmente", ID_WINDOW_TILE_HORZ
+        MENUITEM "Affianca &Verticalmente", ID_WINDOW_TILE_VERT
+        MENUITEM "&Disponi Icone", ID_WINDOW_ARRANGE
+        MENUITEM SEPARATOR
+        MENUITEM "Succ&essiva\tCtrl+F6", ID_WINDOW_NEXT
     END
 
-  POPUP "&Aiuto"
-  BEGIN
-    MENUITEM "&Informazioni su...",       ID_HELP_ABOUT
-  END
+    POPUP "&Aiuto"
+    BEGIN
+        MENUITEM "&Informazioni su...", ID_HELP_ABOUT
+    END
 END
 
 STRINGTABLE
 BEGIN
-    IDS_OPENFILTER, "Tutti i formati supportati (*.bin,*.psf)|*.bin;*.psf|Font binari (*.bin)|*.bin|Font per schermo PC Versione 1 (*.psf)|*.psf|"
-    IDS_SAVEFILTER, "Font binari (*.bin)|*.bin|"
-    IDS_OPENERROR, "Errore durante l'apertura del file! (Errore numero %1!u!)"
-    IDS_READERROR, "Errore durante la lettura del file! (Errore numero %1!u!)"
-    IDS_WRITEERROR, "Errore durante la scrittura del file! (Errore numero %1!u!)"
-    IDS_UNSUPPORTEDFORMAT, "Formato non supportato!"
-    IDS_UNSUPPORTEDPSF, "Formato font PSF non supportato! L'editor supporta esclusivamente i font 8x8 senza modi speciali."
+    IDS_OPENFILTER, "All supported formats (*.bin,*.psf)|*.bin;*.psf|Binary Font Files (*.bin)|*.bin|PC Screen Fonts Version 1 (*.psf)|*.psf|"
+    IDS_SAVEFILTER, "Binary Font Files (*.bin)|*.bin|"
+    IDS_OPENERROR, "Error while opening the file! (Error number %1!u!)"
+    IDS_READERROR, "Error while reading the file! (Error number %1!u!)"
+    IDS_WRITEERROR, "Error while writing the file! (Error number %1!u!)"
+    IDS_UNSUPPORTEDFORMAT, "Unsupported file format!"
+    IDS_UNSUPPORTEDPSF, "Unsupported PSF font format! The editor only supports 8x8 fonts with no special modes."
     IDS_DOCNAME, "Font %1!u!"
-    IDS_SAVEPROMPT, "Il file ""%1"" è stato modificato, ma non salvato.\n\nVolete salvarlo ora?"
+    IDS_SAVEPROMPT, "The file ""%1"" was modified, but not saved.\n\nDo you want to save it?"
     IDS_APPTITLE, "ReactOS VGA Font Editor"
-    IDS_CLOSEEDIT, "Prima chiudere tutte le finestre di Edit!"
+    IDS_CLOSEEDIT, "Please close all open Edit windows first!"
 
-    IDS_TOOLTIP_NEW, "Nuovo"
-    IDS_TOOLTIP_OPEN, "Apri"
-    IDS_TOOLTIP_SAVE, "Salva"
+    IDS_TOOLTIP_NEW, "New"
+    IDS_TOOLTIP_OPEN, "Open"
+    IDS_TOOLTIP_SAVE, "Save"
     IDS_TOOLTIP_EDIT_GLYPH, "Edit Glyph"
-    IDS_TOOLTIP_COPY, "Copia"
-    IDS_TOOLTIP_PASTE, "Incolla"
+    IDS_TOOLTIP_COPY, "Copy"
+    IDS_TOOLTIP_PASTE, "Paste"
 END
