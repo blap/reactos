@@ -10,7 +10,7 @@ BEGIN
     IDS_NETHOOD "Sieci"
     IDS_PRINTHOOD "Drukarki"
     IDS_RECENT "Ostatnie"
-    IDS_SENDTO "Wyślij do"
+    IDS_SENDTO "Wyślij Do"
     IDS_TEMPLATES "Szablony"
     IDS_STARTMENU "Menu Start"
     IDS_PROGRAMS "Menu Start\\Programy"
@@ -19,6 +19,6 @@ BEGIN
     IDS_LOCALAPPDATA "Ustawienia lokalne\\Dane aplikacji"
     IDS_TEMP "Ustawienia lokalne\\Temp"
     IDS_CACHE "Ustawienia lokalne\\Temporary Internet Files"
-    IDS_HISTORY "Ustawienia Lokalne\\Historia"
+    IDS_HISTORY "Ustawienia lokalne\\Historia"
     IDS_COOKIES "Ciasteczka"
 END
