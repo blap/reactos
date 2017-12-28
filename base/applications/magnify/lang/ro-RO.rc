@@ -1,9 +1,4 @@
-/*
- * Translators: Petru Dimitriu (petrimetri at gmail dot com)
- *              Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDC_MAGNIFIER MENU
 BEGIN
