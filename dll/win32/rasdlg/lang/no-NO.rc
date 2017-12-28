@@ -1,4 +1,4 @@
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 102 DIALOGEX 0, 0, 255, 265
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -542,7 +542,7 @@ BEGIN
     PUSHBUTTON "&Ned", 1131, 210, 36, 16, 14, BS_ICON
     AUTOCHECKBOX "A&lle enheter ringer samme nummere", 1119, 9, 66, 133, 14, BS_TOP | BS_MULTILINE
     PUSHBUTTON "K&onfigurer...", 1130, 144, 66, 60, 14
-    GROUPBOX "Sample type", 1125, 8, 84, 215, 100, WS_GROUP
+    GROUPBOX "Utvalg type", 1125, 8, 84, 215, 100, WS_GROUP
     LTEXT "O&mråde:", 1133, 17, 102, 52, 8
     COMBOBOX 1122, 17, 112, 52, 110, CBS_DROPDOWN | WS_VSCROLL | NOT WS_TABSTOP
     LTEXT "&Telefonnummer:", 1135, 71, 102, 139, 8
@@ -578,7 +578,7 @@ END
 
 157 DIALOGEX 6, 18, 235, 160
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
-CAPTION "Appearance"
+CAPTION "Utseende"
 FONT 8, "MS Shell Dlg"
 BEGIN
     AUTOCHECKBOX "&Forhåndsvis telefonnummer før ringing", 1142, 8, 10, 224, 10, WS_GROUP
@@ -592,7 +592,7 @@ END
 
 158 DIALOGEX 6, 18, 235, 160
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
-CAPTION "Appearance"
+CAPTION "Utseende"
 FONT 8, "MS Shell Dlg"
 BEGIN
     AUTOCHECKBOX "&Forhåndsvis telefonnummer før ringing", 1142, 8, 10, 223, 10, WS_GROUP
@@ -929,7 +929,7 @@ BEGIN
     LTEXT "Velg en rolle som du ønsker for denne datamaskinen:", -1, 10, 5, 275, 9
     AUTORADIOBUTTON "&Host", 1483, 31, 20, 265, 10, BS_TOP | BS_MULTILINE | WS_GROUP
     AUTORADIOBUTTON "&Gjest", 1484, 31, 44, 265, 10, BS_TOP | BS_MULTILINE
-    LTEXT "Denne datamaskinen har informasjonen du ønsker tilgang til.", -1, 45, 31, 253, 13, NOT WS_GROUP | WS_TABSTOP
+    LTEXT "This computer has the information you want to access.", -1, 43, 31, 253, 13, NOT WS_GROUP | WS_TABSTOP
     LTEXT "Denne datamaskinen er brukt for å få tilgang til informasjon på host datamaskinen.", -1, 43, 56, 253, 23, NOT WS_GROUP
 END
 
@@ -1028,16 +1028,16 @@ CAPTION "Koble til %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "&Brukernavn:", 1413, 12, 67, 87, 8
+    LTEXT "Brukernavn:", 1413, 10, 67, 87, 8
     EDITTEXT 1104, 103, 63, 154, 14, ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 9, 84, 248, 1
-    LTEXT "D&ial:", 1412, 11, 96, 48, 8
+    LTEXT "R&inging:", 1412, 11, 96, 48, 8
     COMBOBOX 1416, 103, 92, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     LTEXT "Ringing &fra:", 1415, 10, 114, 46, 8
-    COMBOBOX 1414, 102, 110, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
+    COMBOBOX 1414, 103, 110, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "Ringing &regler", 1108, 193, 110, 64, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 7, 130, 250, 1
-    DEFPUSHBUTTON "&Dial", 1590, 6, 136, 60, 14
+    DEFPUSHBUTTON "&Ringing", 1590, 6, 136, 60, 14
     PUSHBUTTON "Avbryt", 1591, 69, 136, 60, 14
     PUSHBUTTON "Eg&enskaper", 1107, 132, 136, 60, 14
     PUSHBUTTON "&Hjelp", 1592, 196, 136, 60, 14
@@ -1112,7 +1112,7 @@ BEGIN
     LTEXT "Do&mene:", 1110, 12, 82, 90, 8
     EDITTEXT 1102, 104, 79, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 99, 248, 1
-    DEFPUSHBUTTON "&Dial", 1590, 9, 106, 61, 14
+    DEFPUSHBUTTON "&Ringing", 1590, 9, 106, 61, 14
     PUSHBUTTON "Avbryt", 1591, 72, 106, 60, 14
     PUSHBUTTON "Eg&enskaper", 1107, 135, 106, 60, 14
     PUSHBUTTON "&Hjelp", 1592, 198, 106, 60, 14
@@ -1126,13 +1126,13 @@ BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
     LTEXT "&Brukernavn:", 1413, 10, 67, 91, 10
     EDITTEXT 1104, 104, 64, 154, 14, ES_AUTOHSCROLL
-    LTEXT "Do&mene:", 1110, 11, 86, 91, 8
+    LTEXT "Do&mene:", 1110, 10, 86, 91, 8
     EDITTEXT 1102, 104, 83, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 103, 248, 1
-    LTEXT "D&ial:", 1412, 10, 115, 91, 8
+    LTEXT "R&inging:", 1412, 10, 115, 91, 8
     COMBOBOX 1416, 104, 111, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 132, 248, 1
-    DEFPUSHBUTTON "&Dial", 1590, 8, 139, 60, 14
+    DEFPUSHBUTTON "&Ringing", 1590, 8, 139, 60, 14
     PUSHBUTTON "Avbryt", 1591, 71, 139, 60, 14
     PUSHBUTTON "Eg&enskaper", 1107, 134, 139, 60, 14
     PUSHBUTTON "&Hjelp", 1592, 198, 139, 60, 14
@@ -1149,13 +1149,13 @@ BEGIN
     LTEXT "Do&mene:", 1110, 10, 90, 91, 8
     EDITTEXT 1102, 104, 86, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 106, 248, 1
-    LTEXT "D&ial:", 1412, 10, 118, 92, 8
+    LTEXT "R&inging:", 1412, 10, 118, 92, 8
     COMBOBOX 1416, 104, 114, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     LTEXT "Ringing &fra:", 1415, 10, 137, 91, 8
     COMBOBOX 1414, 104, 134, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "Ringing &regler", 1108, 194, 134, 65, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 154, 248, 1
-    DEFPUSHBUTTON "&Dial", 1590, 8, 162, 60, 14
+    DEFPUSHBUTTON "&Ringing", 1590, 8, 162, 60, 14
     PUSHBUTTON "Avbryt", 1591, 71, 162, 60, 14
     PUSHBUTTON "Eg&enskaper", 1107, 134, 162, 60, 14
     PUSHBUTTON "&Hjelp", 1592, 198, 162, 60, 14
@@ -1172,7 +1172,7 @@ BEGIN
     PUSHBUTTON "&Ned", 1131, 208, 36, 16, 14, BS_ICON
     AUTOCHECKBOX "A&lle enheter call samme nummere", 1119, 7, 65, 131, 21, BS_TOP | BS_MULTILINE
     PUSHBUTTON "K&onfigurer...", 1130, 140, 66, 60, 14
-    GROUPBOX "Utvalg type", 1125, 7, 87, 213, 56, WS_GROUP
+    GROUPBOX "Sample type", 1125, 7, 87, 213, 56, WS_GROUP
     LTEXT "&Telefonnummer:", 1135, 19, 102, 191, 8
     EDITTEXT 1123, 17, 112, 138, 14, ES_AUTOHSCROLL
     PUSHBUTTON "Alter&nativer", 1129, 161, 112, 50, 14
@@ -1208,7 +1208,7 @@ BEGIN
     LTEXT "T&CP:", -1, 7, 100, 28, 8
     EDITTEXT 1569, 50, 97, 162, 14, ES_AUTOHSCROLL
     LTEXT "UD&P:", -1, 7, 121, 30, 8
-    EDITTEXT 1551, 51, 117, 162, 14, ES_AUTOHSCROLL
+    EDITTEXT 1551, 50, 117, 162, 14, ES_AUTOHSCROLL
     DEFPUSHBUTTON "OK", 1, 90, 144, 60, 14
     PUSHBUTTON "Avbryt", 2, 154, 144, 60, 14
 END
@@ -1407,13 +1407,13 @@ BEGIN
     AUTORADIOBUTTON "Bare m&eg", 1622, 26, 119, 225, 11, BS_LEFT | BS_TOP | BS_MULTILINE | WS_GROUP
     AUTORADIOBUTTON "&Alle som bruker denne datamaskinen", 1623, 26, 133, 225, 11, BS_LEFT | BS_TOP | BS_MULTILINE
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 149, 248, 1
-    LTEXT "D&ial:", 1412, 14, 161, 87, 8
+    LTEXT "R&inging:", 1412, 14, 161, 87, 8
     COMBOBOX 1416, 104, 157, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     LTEXT "Ringing &fra:", 1415, 14, 178, 88, 8
     COMBOBOX 1414, 104, 175, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "Ringing &Regler", 1108, 193, 175, 65, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 196, 248, 1
-    DEFPUSHBUTTON "&Dial", 1590, 9, 202, 60, 14, WS_GROUP
+    DEFPUSHBUTTON "&Ringing", 1590, 9, 202, 60, 14, WS_GROUP
     PUSHBUTTON "Avbryt", 1591, 72, 202, 60, 14
     PUSHBUTTON "Eg&enskaper", 1107, 135, 202, 60, 14
     PUSHBUTTON "&Hjelp", 1592, 198, 202, 60, 14
@@ -1436,13 +1436,13 @@ BEGIN
     AUTORADIOBUTTON "Bare m&eg", 1622, 24, 141, 227, 11, BS_LEFT | BS_TOP | BS_MULTILINE | WS_GROUP
     AUTORADIOBUTTON "&Alle som bruker denne datamaskinen", 1623, 24, 155, 230, 11, BS_LEFT | BS_TOP | BS_MULTILINE
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 170, 248, 1
-    LTEXT "D&ial:", 1412, 14, 182, 87, 8
+    LTEXT "R&inging:", 1412, 14, 182, 87, 8
     COMBOBOX 1416, 104, 178, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     LTEXT "Ringing &fra:", 1415, 14, 198, 87, 8
     COMBOBOX 1414, 104, 195, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "Ringing &regler", 1108, 193, 195, 65, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 215, 248, 1
-    DEFPUSHBUTTON "&Dial", 1590, 8, 221, 60, 14, WS_GROUP
+    DEFPUSHBUTTON "&Ringing", 1590, 8, 221, 60, 14, WS_GROUP
     PUSHBUTTON "Avbryt", 1591, 71, 221, 60, 14
     PUSHBUTTON "Eg&enskaper", 1107, 134, 221, 60, 14
     PUSHBUTTON "&Hjelp", 1592, 198, 221, 60, 14
@@ -1533,7 +1533,7 @@ BEGIN
     EDITTEXT 1470, 7, 17, 193, 14, ES_AUTOHSCROLL
     PUSHBUTTON "&Legg til", 1471, 77, 36, 60, 14
     PUSHBUTTON "&Erstatt", 1472, 141, 36, 60, 14
-    LTEXT "Sample text", 1473, 7, 57, 193, 8
+    LTEXT "Enkelt tekst", 1473, 7, 57, 193, 8
     LISTBOX 1474, 7, 68, 193, 145, WS_VSCROLL | WS_TABSTOP
     PUSHBUTTON "", 1475, 206, 68, 51, 14, BS_BITMAP | WS_GROUP
     PUSHBUTTON "&Ned", 1476, 206, 86, 51, 14, BS_BITMAP
@@ -1955,6 +1955,7 @@ BEGIN
     313 "Sikre mitt passord og min data\0"
     314 "The %1 protocol cannot be selected because it is not installed or is disabled for Remote Access.  To change, in Control Panel start Network, choose Services page, Remote Access Properties, and press the Network button.\0"
     315 "Kan ikke lagre vise data.\0"
+    316 "Cannot display data.\0"
     317 "Kan ikke få auto-dial informasjon.\0"
     318 "Kan ikke laste dialog.\0"
     319 "Kan ikke deaktiver delt tilgang.\0"
@@ -2171,7 +2172,7 @@ BEGIN
     1532 "Tilkobling type\0"
     1533 "Select the type of demand dial interface you want to create.\0"
     1534 "Velg en enhet\0"
-    1535 "This is the device that will be used to make the connection.\0"
+    1535 "Dette er enheten som vil bli brukt for å lage en tilkobling.\0"
     1536 "Phone Number\0"
     1537 "Enter the phone number of the remote server or router you are calling.\0"
     1538 "VPN Type\0"
@@ -2180,7 +2181,7 @@ BEGIN
     1541 "What is the name or address of the remote router?\0"
     1544 "IP Addresse\0"
     1545 "Configure this router's IP address for this interface.\0"
-    1546 "Name Server Addresses\0"
+    1546 "Navn Server Addresser\0"
     1547 "Configure DNS and WINS addresses for use by this interface.\0"
     1548 "Router Scripting\0"
     1549 "You can set up a scripting for connecting to the remote router.\0"
