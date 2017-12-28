@@ -1,25 +1,20 @@
-/* Hungarian translation by Peter Nagy <nagylakas@gmail.com> */
-
-LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_HUNGARIAN, SUBLANG_HUNGARIAN_HUNGARY
 
 STRINGTABLE
 BEGIN
-    STRING_HELP "Használat: %s kötet: [-FS:állományrendszer] [-V:címke] [-Q] [-A:méret] [-C]\n\n\
-  [kötet:]         A meghajtóbetûjelet adja meg (kettõsponttal a végén).\n\
-  -FS:állományrendszer Az állományrendszer típusát adja meg (%s).\n\
-  -V:címke         A Kötetcímke neve.\n\
-  -Q               Gyorsformázást hajt végre.\n\
-  -A:méret         Felülbírálja az alapértelmezett szektorcsoport-\n\
-                   méretet. Általános használathoz az alapértelmezett\n\
-                   értékek ajánlottak.\n\
-                   Az NTFS a következõ értékeket támogatja: 512, 1024, 2048,\n\
-                   4096, 8192, 16K, 32K, 64K.\n\
-                   A FAT a következõ értékeket támogatja: 8192, 16K, 32K, 64K,\n\
-                   128K, 256K.\n\
-                   NTFS-tömörítés nem lehetséges 4096 bájtnál nagyobb\n\
-                   szektorcsoportoknál.\n\
-  -C               Az új köteten létrehozott állományok alapból tömörítve jönnek\n\
-                   létre.\n\n"
+    STRING_HELP "Usage: %s drive: [-FS:file-system] [-V:label] [-Q] [-A:size] [-C]\n\n\
+  [drive:]         Specifies the drive to format.\n\
+  -FS:file-system  Specifies the type of file system (%s).\n\
+  -V:label         Specifies volume label.\n\
+  -Q               Performs a quick format.\n\
+  -A:size          Overrides the default allocation unit size. Default settings\n\
+                   are strongly recommended for general use\n\
+                   NTFS supports 512, 1024, 2048, 4096, 8192, 16K, 32K, 64K.\n\
+                   FAT supports 8192, 16K, 32K, 64K, 128K, 256K.\n\
+                   NTFS compression is not supported for allocation unit sizes\n\
+                   above 4096.\n\
+  -C               Files created on the new volume will be compressed by\n\
+                   default.\n\n"
     STRING_COMPLETE "%lu százalék befejezve.\r"
     STRING_FORMAT_FAIL "A FormatEx végrehajtása sikertelenül fejezõdött be.\n\n"
     STRING_NO_SUPPORT "A Mûvelet Nem Támogatott"
@@ -33,8 +28,8 @@ BEGIN
     STRING_FILESYSTEM "A állományrendszer típusa %s.\n"
     STRING_LABEL_NAME_EDIT "Adja meg a címkét az alábbi meghajtóhoz: %C: "
     STRING_ERROR_LABEL "Érvénytelen címkét adott meg a meghajtóhoz.\n"
-    STRING_YN_FORMAT "\nFIGYELMEZTETÉS: A NEM CSERÉLHETÕ LEMEZMEGHAJTÓN (%C:) MINDEN ADAT EL FOG VESZNI.\n\
-                        \nFolytatja a formázást (I/N)? "
+    STRING_YN_FORMAT "\nWARNING, ALL DATA ON NON_REMOVABLE DISK\n\
+DRIVE %C: WILL BE LOST!\nProceed with Format (Y/N)? "
     STRING_YES_NO_FAQ "IN"
     STRING_VERIFYING "Ellenõrzés"
     STRING_FAST_FMT "Gyorsformázás"
