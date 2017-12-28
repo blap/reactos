@@ -1,4 +1,4 @@
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 MENU_001 MENUEX
 BEGIN
@@ -36,7 +36,7 @@ BEGIN
         MENUITEM "", -1, MFT_SEPARATOR
         MENUITEM "Oppdater", FCIDM_SHVIEW_REFRESH
         MENUITEM "", -1, MFT_SEPARATOR
-        MENUITEM "Lim inn", FCIDM_SHVIEW_INSERT
+        MENUITEM "Sett inn", FCIDM_SHVIEW_INSERT
         MENUITEM "Lim inn som snarvei", FCIDM_SHVIEW_INSERTLINK
     END
 END
@@ -44,11 +44,11 @@ END
 /* menubar EDIT menu */
 MENU_003 MENU
 BEGIN
-    MENUITEM "&Undo\tCtrl+Z", FCIDM_SHVIEW_UNDO
+    MENUITEM "Angre\tCtrl+Z", FCIDM_SHVIEW_UNDO
     MENUITEM SEPARATOR
-    MENUITEM "Cu&t\tCtrl+X", FCIDM_SHVIEW_CUT
-    MENUITEM "&Copy\tCtrl+C", FCIDM_SHVIEW_COPY
-    MENUITEM "&Paste\tCtrl+V", FCIDM_SHVIEW_INSERT
+    MENUITEM "Klipp ut\tCtrl+X", FCIDM_SHVIEW_CUT
+    MENUITEM "Kopier\tCtrl+C", FCIDM_SHVIEW_COPY
+    MENUITEM "Lim inn\tCtrl+V", FCIDM_SHVIEW_INSERT
     MENUITEM "Paste &shortcut", FCIDM_SHVIEW_INSERTLINK
     MENUITEM SEPARATOR
     MENUITEM "Copy to &folder...", FCIDM_SHVIEW_COPYTO
@@ -66,6 +66,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Klipp &ut", IDM_CUT
         MENUITEM "&Kopier", IDM_COPY
+        MENUITEM "Lim inn", IDM_INSERT
         MENUITEM SEPARATOR
         MENUITEM "&Opprett snarvei", IDM_CREATELINK
         MENUITEM "&Slett", IDM_DELETE
@@ -80,8 +81,8 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "Bla etter mappe"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    DEFPUSHBUTTON "OK", 1, 80, 176, 50, 12, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
-    PUSHBUTTON "Avbryt", 2, 134, 176, 50, 12, WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON "OK", 1, 60, 175, 60, 15, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON "Avbryt", 2, 125, 175, 60, 15, WS_GROUP | WS_TABSTOP
     LTEXT "", IDC_BROWSE_FOR_FOLDER_TITLE, 4, 4, 180, 12
     LTEXT "", IDC_BROWSE_FOR_FOLDER_STATUS, 4, 25, 180, 12
     CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP, 4, 40, 180, 120
@@ -158,12 +159,12 @@ BEGIN
     LTEXT "Skriv inn navnet på programmet, mappen, dokumentet etter Internett-ressursen du ønsker å åpne.", 12289, 36, 11, 182, 18
     LTEXT "&Åpne:", 12305, 7, 39, 24, 10
     CONTROL "", IDC_RUNDLG_EDITPATH, "COMBOBOX", WS_TABSTOP | WS_GROUP | WS_VSCROLL | WS_VISIBLE | CBS_AUTOHSCROLL | CBS_DROPDOWN, 36, 37, 183, 100
-    DEFPUSHBUTTON "OK", IDOK, 62, 63, 50, 14, WS_TABSTOP
-    PUSHBUTTON "Avbryt", IDCANCEL, 116, 63, 50, 14, WS_TABSTOP
-    PUSHBUTTON "&Bla gjennom .", 12288, 170, 63, 54, 14, WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 36, 63, 59, 14, WS_TABSTOP
+    PUSHBUTTON "Avbryt", IDCANCEL, 98, 63, 59, 14, WS_TABSTOP
+    PUSHBUTTON "&Utforsk...", 12288, 160, 63, 59, 14, WS_TABSTOP
 END
 
-IDD_SHORTCUT_PROPERTIES DIALOGEX 0, 0, 240, 130
+IDD_SHORTCUT_PROPERTIES DIALOGEX 0, 0, 235, 215
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
 CAPTION "Snarvei"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
@@ -186,9 +187,9 @@ BEGIN
     COMBOBOX 14017, 79, 134, 150, 14, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
     LTEXT "K&ommentar:", 14018, 8, 154, 68, 10
     EDITTEXT 14019, 79, 152, 150, 14, ES_AUTOHSCROLL
-    PUSHBUTTON "&Finn mål...", 14020, 10, 115, 63, 14, ES_LEFT
-    PUSHBUTTON "&Endre ikon...", 14021, 83, 115, 63, 14, ES_LEFT
-    PUSHBUTTON "A&vansert...", 14022, 156, 115, 63, 14, ES_LEFT
+    PUSHBUTTON "&Find Target...", 14020, 9, 172, 70, 14, ES_LEFT
+    PUSHBUTTON "&Change Icon...", 14021, 84, 172, 70, 14, ES_LEFT
+    PUSHBUTTON "Avansert", 14022, 159, 172, 70, 14, ES_LEFT
 END
 
 IDD_SHORTCUT_EXTENDED_PROPERTIES DIALOGEX 0, 0, 230, 150
@@ -201,8 +202,8 @@ BEGIN
     CHECKBOX "Kjør som administrator", 14000, 25, 50, 150, 10
     LTEXT "Med dette valget kan du kjøre denne snarveien med som en administrator, mens du beskytter din datamaskin og data fra uautorisert program aktivitet.", -1, 50, 60, 175, 40
     CHECKBOX "Kjør i seperat minneplass", 14001, 25, 100, 150, 10, WS_DISABLED
-    PUSHBUTTON "OK", IDOK, 25, 120, 50, 15, WS_VISIBLE
-    PUSHBUTTON "Avbryt", IDCANCEL, 120, 120, 50, 15, WS_VISIBLE
+    PUSHBUTTON "OK", 1, 63, 124, 50, 15, WS_VISIBLE
+    PUSHBUTTON "Avbryt", 2, 120, 124, 50, 15, WS_VISIBLE
 END
 
 IDD_FOLDER_PROPERTIES DIALOGEX 0, 0, 240, 205
@@ -231,7 +232,7 @@ BEGIN
     AUTOCHECKBOX "&Bare-lesbar", 14021, 56, 152, 70, 10
     AUTOCHECKBOX "&Skjult", 14022, 56, 166, 70, 10
     AUTOCHECKBOX "&Arkiv", 14023, 56, 180, 70, 10
-    PUSHBUTTON "A&dvanced...", 14028, 158, 150, 70, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+    PUSHBUTTON "Avansert", 14028, 158, 150, 70, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
 END
 
 IDD_FILE_PROPERTIES DIALOGEX 0, 0, 240, 205
@@ -246,7 +247,7 @@ BEGIN
     CONTROL "Fil", 14005, "edit", ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP, 68, 35, 160, 10
     LTEXT "Åpne med:", 14006, 8, 53, 50, 10
     ICON "", 14025, 68, 52, 11, 10, NOT WS_VISIBLE
-    PUSHBUTTON "&Change...", 14024, 168, 50, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+    PUSHBUTTON "&Endre...", 14024, 168, 50, 60, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
     EDITTEXT 14007, 68, 53, 90, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | ES_AUTOHSCROLL | NOT WS_TABSTOP
     LTEXT "", -1, 8, 68, 221, 1, SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE
     LTEXT "Lokalisjon:", 14008, 8, 75, 45, 10
@@ -267,7 +268,7 @@ BEGIN
     AUTOCHECKBOX "&Bare-lesbar", 14021, 58, 189, 67, 10
     AUTOCHECKBOX "&Skjult", 14022, 126, 189, 50, 10
     AUTOCHECKBOX "&Arkiv", 14023, 181, 189, 49, 10
-    PUSHBUTTON "A&dvanced...", 14028, 180, 185, 50, 15, WS_TABSTOP
+    PUSHBUTTON "Avansert", 14028, 180, 185, 50, 15, WS_TABSTOP
 END
 
 IDD_FILE_VERSION DIALOGEX 0, 0, 235, 215
@@ -390,9 +391,9 @@ BEGIN
     LTEXT "Velg programmet du vil bruke for å åpne denne filen:", -1, 44, 12, 211, 10
     LTEXT "Fil:    ", 14001, 44, 25, 188, 20
     GROUPBOX "&Program", -1, 7, 42, 249, 187
-    CONTROL "Programs", 14002, WC_TREEVIEW, WS_BORDER | WS_TABSTOP | TVS_SHOWSELALWAYS, 16 ,57, 230, 130
+    CONTROL "Programmer", 14002, WC_TREEVIEW, WS_BORDER | WS_TABSTOP | TVS_SHOWSELALWAYS, 16 ,57, 230, 130
     AUTOCHECKBOX "&Alltid bruk valgte program for å åpne denne filtypen", 14003, 20, 193, 225, 10
-    PUSHBUTTON "&Utforsk...", 14004, 198, 207, 50, 14
+    PUSHBUTTON "&Browse...", 14004, 198, 207, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 150, 236, 50, 14
     PUSHBUTTON "Avbryt", IDCANCEL, 206, 236, 50, 14
 END
@@ -412,10 +413,10 @@ BEGIN
     AUTORADIOBUTTON "Åpne hver mapper i sitt egen &vindu", IDC_FOLDER_OPTIONS_OWNWINDOW, 40, 82, 140, 10
     GROUPBOX "Klikk enheter som følgende", -1, 7, 110, 249, 60
     CONTROL "", IDC_FOLDER_OPTIONS_CLICKICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 120, 21, 20
-    AUTORADIOBUTTON "&Enkelt-klikk for å åpne en enhet (peker for å velge)", IDC_FOLDER_OPTIONS_SINGLECLICK, 40, 120, 190, 10, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "Understrek ikon titteler konsekvent med min &utforsker", IDC_FOLDER_OPTIONS_ULBROWSER, 50, 132, 190, 10
-    AUTORADIOBUTTON "Understrek ikon titteler bare mens jeg &peker på dem", IDC_FOLDER_OPTIONS_ULPOINT, 50, 144, 190, 10
-    AUTORADIOBUTTON "&Dobbelt klikk for å åpne enheten (Enkelt-klikk for å velge)", IDC_FOLDER_OPTIONS_DOUBLECLICK, 40, 156, 194, 10
+    AUTORADIOBUTTON "&Enkelt-klikk for å åpne en enhet (peker for å velge)", IDC_FOLDER_OPTIONS_SINGLECLICK, 40, 120, 170, 10, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "Understrek ikon titteler konsekvent med min &utforsker", IDC_FOLDER_OPTIONS_ULBROWSER, 50, 132, 170, 10
+    AUTORADIOBUTTON "Understrek ikon titteler bare mens jeg &peker på dem", IDC_FOLDER_OPTIONS_ULPOINT, 50, 144, 170, 10
+    AUTORADIOBUTTON "&Dobbelt klikk for å åpne enheten (Enkelt-klikk for å velge)", IDC_FOLDER_OPTIONS_DOUBLECLICK, 40, 156, 170, 10
     PUSHBUTTON "&Bruk standard", 14011, 180, 180, 60, 14, WS_TABSTOP
 END
 
@@ -479,9 +480,9 @@ CAPTION "Logg av ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
-    LTEXT "Er du sikker på at du vil logge av?", -1, 43, 11, 140, 22
-    DEFPUSHBUTTON "&Logg av", IDOK, 57, 40, 60, 14
-    PUSHBUTTON "Avbryt", IDCANCEL, 122, 40, 60, 14
+    LTEXT "Are you sure you want to log off?", -1, 49, 15, 131, 8
+    DEFPUSHBUTTON "&Log Off", IDOK, 49, 38, 43, 14
+    PUSHBUTTON "Avbryt", IDCANCEL, 99, 38, 43, 14
 END
 
 IDD_DISCONNECT DIALOGEX 0, 0, 188, 60
@@ -549,7 +550,7 @@ BEGIN
     CONTROL "", 1003, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 32, 43, 187, 96
     AUTOCHECKBOX "&Alltid utfør den valgte handlingen", 1004, 32, 143, 190, 8
     DEFPUSHBUTTON "OK", IDOK, 94, 160, 60, 14
-    PUSHBUTTON "Avbryt", IDCANCEL, 159, 160, 60, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 159, 160, 60, 14
 END
 
 IDD_SHUTDOWN DIALOGEX 0, 0, 211, 103
@@ -562,7 +563,7 @@ BEGIN
     COMBOBOX 8224, 39, 20, 165, 200, CBS_DROPDOWNLIST | WS_VSCROLL
     LTEXT "Behandle din sesjon, din datamaskin bruker lite strøm når data er i minnet. Datamaskinen vil våkne hvis du trykker på en tast eller beveger på musen.", 8225, 39, 40, 167, 37
     DEFPUSHBUTTON "OK", 1, 7, 82, 60, 14, WS_GROUP
-    PUSHBUTTON "Avbryt", IDCANCEL, 75, 82, 60, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 75, 82, 60, 14
     PUSHBUTTON "&Hjelp", IDHELP, 144, 82, 60, 14
 END
 
@@ -571,7 +572,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBL
 CAPTION "Format"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    DEFPUSHBUTTON "&Start", IDOK, 53, 198, 60, 14
+    DEFPUSHBUTTON "Start", IDOK, 53, 198, 60, 14
     PUSHBUTTON "&Lukk", IDCANCEL, 118, 198, 60, 14
     LTEXT "Ka&pasitet:", -1, 7, 6, 169, 9
     COMBOBOX 28673, 7, 17, 170, 200, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
@@ -594,9 +595,9 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON "Start", IDOK, 63, 95, 60, 14
     GROUPBOX "Alternativer for diskkontroll", -1, 7, 6, 179, 40
-    PUSHBUTTON "Avbryt", IDCANCEL, 128, 95, 60, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 128, 95, 60, 14
     AUTOCHECKBOX "Reparer feil i filsysten automatisk", 14000, 12, 15, 155, 10
-    AUTOCHECKBOX "&Søk etter og forsøk å reparere skadet sektorer", 14001, 16, 30, 165, 10
+    AUTOCHECKBOX "&Scan for and attempt recovery of bad sectors", 14001, 12, 30, 165, 10
     CONTROL "", 14002, "MSCTLS_PROGRESS32", 16, 7, 50, 179, 8
     LTEXT "", 14003, 60, 80, 170, 10
 END
@@ -612,7 +613,7 @@ BEGIN
     LTEXT "Select an icon from the list below:", -1, 7, 36, 179, 10
     LISTBOX IDC_PICKICON_LIST, 7, 47, 181, 120, LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | LBS_DISABLENOSCROLL | WS_HSCROLL | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 81, 179, 50, 14
-    PUSHBUTTON "Avbryt", IDCANCEL, 135, 179, 50, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 135, 179, 50, 14
 END
 
 IDD_NOOPEN DIALOGEX 0, 0, 240, 75
@@ -683,7 +684,7 @@ BEGIN
     IDS_FORMATDRIVE "Formatering..."
     IDS_RENAME "Endre navn"
     IDS_PASTE "Sett inn"
-    IDS_EJECT "Eject"
+    IDS_EJECT "Løs ut"
     IDS_DISCONNECT "Disconnect"
 
     IDS_CREATEFOLDER_DENIED "Unable to create the folder '%1'"
@@ -717,7 +718,7 @@ BEGIN
     /* Run File dialog */
     IDS_RUNDLG_ERROR "Unable to display Run File dialog box (internal error)"
     IDS_RUNDLG_BROWSE_ERROR "Unable to display Browse dialog box (internal error)"
-    IDS_RUNDLG_BROWSE_CAPTION "Browse"
+    IDS_RUNDLG_BROWSE_CAPTION "Bla gjennom"
     IDS_RUNDLG_BROWSE_FILTER "Executable Files (*.exe)\0*.exe\0All Files (*.*)\0*.*\0"
 
     /* shell folder path default values */
@@ -757,7 +758,7 @@ BEGIN
     IDS_DRIVE_NETWORK "Nettverk disk"
     IDS_DRIVE_FLOPPY "3.5 Floppy"
     IDS_DRIVE_REMOVABLE "Removable Disk"
-    IDS_FS_UNKNOWN "Unknown"
+    IDS_FS_UNKNOWN "Ukjent"
 
     /* Open With */
     IDS_OPEN_WITH "Åpne med"
@@ -797,7 +798,7 @@ BEGIN
     IDS_TTF_FILE "TrueType skrift fil"
     IDS_OTF_FILE "OpenType skrift fil"
     IDS_HLP_FILE "Hjelp fil"
-    IDS_ICO_FILE "Icon"
+    IDS_ICO_FILE "Symbol"
     IDS_INI_FILE "Konfigurasjon innstilling"
     IDS_LNK_FILE "Snarvei"
     IDS_PIF_FILE "NT VDM Program Information File"
@@ -834,9 +835,9 @@ BEGIN
 
     IDS_BYTES_FORMAT "bytes"
     IDS_UNKNOWN_APP "Unknown application"
-    IDS_EXE_DESCRIPTION "Description:"
+    IDS_EXE_DESCRIPTION "Beskrivelse:"
 
-    IDS_MENU_EMPTY "(Empty)"
+    IDS_MENU_EMPTY "(Tom)"
     IDS_OBJECTS "%d Objects"
     IDS_OBJECTS_SELECTED "%d Objects Selected"
 
