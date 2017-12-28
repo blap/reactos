@@ -1,11 +1,4 @@
-/*
- * PROJECT:     ReactOS CALC
- * FILE:        base/applications/calc/lang/sv-SE.rc
- * PURPOSE:     Swedish resource file
- * Translation: Jaix Bly
- */
-
-LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
 
 /* Dialogs */
 
@@ -242,7 +235,7 @@ BEGIN
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 276, 24, 40, 17
     CONTROL "CE", IDC_BUTTON_CE, "Button", BS_OWNERDRAW | BS_CENTER |
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 232, 24, 40, 17
-    CONTROL "Backsteg", IDC_BUTTON_BACK, "Button", BS_OWNERDRAW | BS_CENTER |
+    CONTROL "Back", IDC_BUTTON_BACK, "Button", BS_OWNERDRAW | BS_CENTER |
             BS_VCENTER | BS_NOTIFY | WS_TABSTOP, 188, 24, 40,17
     RTEXT "", IDC_TEXT_OUTPUT, 5, 1, 312, 14, SS_CENTERIMAGE, WS_EX_CLIENTEDGE
     CONTROL "7", IDC_BUTTON_7, "Button", BS_OWNERDRAW | BS_CENTER |
