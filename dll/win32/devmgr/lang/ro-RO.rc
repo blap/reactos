@@ -1,9 +1,4 @@
-/*
- * Translators: Petru Dimitriu (petrimetri at gmail dot com)
- *              Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 STRINGTABLE
 BEGIN
@@ -69,9 +64,9 @@ BEGIN
     IDS_DEV_DISABLED "Acest dispozitiv nu este pornit."
     IDS_DEV_DISABLED2 "Acest dispozitiv este dezactivat."
     IDS_DEV_DEVLOADER_NOT_READY "Nu au putut fi încărcate toate modulele-pilot necesare."
-    IDS_DEV_DEVLOADER_NOT_READY2 "" /* unused */
+    IDS_DEV_DEVLOADER_NOT_READY2 """ /* unused */
     IDS_DEV_DEVLOADER_NOT_READY3 "" /* unused */
-    IDS_DEV_DEVICE_NOT_THERE "Acest dispozitiv fie nu este prezent, fie nu funcționează corect, fie nu are instalate toate modulele-pilot."
+    IDS_DEV_DEVICE_NOT_THERE ""Acest dispozitiv fie nu este prezent, fie nu funcționează corect, fie nu are instalate toate modulele-pilot."
     IDS_DEV_MOVED "Pentru moment acest dispozitiv încă nu este pe deplin instalat."
     IDS_DEV_TOO_EARLY "Pentru moment acest dispozitiv încă nu este pe deplin instalat."
     IDS_DEV_NO_VALID_LOG_CONF "Nu au putut fi specificate resoursele necesare pentru acest dispozitiv."
@@ -139,7 +134,7 @@ BEGIN
     LTEXT "", IDC_MANUFACTURER, 14, 88, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_LOCATION, 14, 100, 183, 10, SS_ENDELLIPSIS
     LTEXT "", IDC_STATUS, 14, 112, 183, 30
-    PUSHBUTTON "&Depanare…", IDC_TROUBLESHOOT, 85, 140, 54, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
+    PUSHBUTTON "&Depanare…", IDC_TROUBLESHOOT, 80, 140, 60, 14, BS_PUSHBUTTON | WS_CHILD | WS_DISABLED | WS_TABSTOP
     PUSHBUTTON "P&roprietăți", IDC_PROPERTIES, 146, 140, 50, 14
 END
 
@@ -242,8 +237,6 @@ BEGIN
 END
 
 
-
-
 /*
  This code relates to the device manager GUI
  */
@@ -252,21 +245,21 @@ IDR_MAINMENU MENU
 BEGIN
   POPUP "&Fișier"
   BEGIN
-    MENUITEM "I&eșire",                     IDC_EXIT
+    MENUITEM "I&eșire",                       IDC_EXIT
   END
-  MENUITEM "A&cțiune",                       IDC_ACTIONMENU
+  MENUITEM "A&cțiune",                        IDC_ACTIONMENU
   POPUP "&Afișare"
   BEGIN
-    MENUITEM "Dispozitive după tip",        IDC_DEVBYTYPE
-    MENUITEM "Dispozitive după conexiune",  IDC_DEVBYCONN
-    MENUITEM "Resurse după tip",            IDC_RESBYTYPE, GRAYED
-    MENUITEM "Resurse după conexiune",      IDC_RESBYCONN, GRAYED
+    MENUITEM "Dispozitive după tip",             IDC_DEVBYTYPE
+    MENUITEM "Dispozitive după conexiune",       IDC_DEVBYCONN
+    MENUITEM "Resurse după tip",           IDC_RESBYTYPE, GRAYED
+    MENUITEM "Resurse după conexiune",     IDC_RESBYCONN, GRAYED
     MENUITEM SEPARATOR
     MENUITEM "Dispozitive ascunse",         IDC_SHOWHIDDEN
   END
   POPUP "Aj&utor"
   BEGIN
-    MENUITEM "&Despre",                     IDC_ABOUT
+    MENUITEM "&Despre",                       IDC_ABOUT
   END
 END
 
