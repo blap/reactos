@@ -1,4 +1,4 @@
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 IDD_FIRSTPAGE DIALOGEX 0, 0, 380, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -27,7 +27,7 @@ BEGIN
     LTEXT "Cet assistant vous aide à créer des raccourcis vers des programmes, des fichiers, des dossiers, des ordinateurs,\nou des adresses Internet locaux ou sur le réseau.", -1, 120, 15, 200, 30
     LTEXT "Entrez la localisation de l'élément :", -1, 120, 50, 120, 10
     EDITTEXT IDC_SHORTCUT_LOCATION, 120, 65, 150, 15, ES_LEFT
-    PUSHBUTTON "Parcourir...", IDC_SHORTCUT_BROWSE, 272, 65, 60, 15, ES_LEFT
+    PUSHBUTTON "Parcourir...", IDC_SHORTCUT_BROWSE, 272, 65, 55, 15, ES_LEFT
     LTEXT "Cliquez sur Suivant pour continuer.", -1, 120, 97, 162, 10
 END
 
@@ -49,8 +49,8 @@ BEGIN
     LTEXT "&To remove an item from the Start menu, select the item and click Remove.", -1, 10, 10, 192, 16
     CONTROL "List1", IDC_STARTMENU_TREE, "SysListView32", LVS_REPORT | LVS_SHOWSELALWAYS |
             LVS_SORTASCENDING | WS_BORDER | WS_TABSTOP, 10, 32, 192, 138
-    PUSHBUTTON "&Remove", IDC_REMOVE_ENTRIES, 98, 176, 50, 14, WS_GROUP | WS_TABSTOP
-    DEFPUSHBUTTON "Close", IDOK, 152, 176, 50, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON "&Supprimer", IDC_REMOVE_ENTRIES, 98, 176, 50, 14, WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON "Fermer", IDOK, 152, 176, 50, 14, WS_GROUP | WS_TABSTOP
 END
 
 ID_DWL_GECKO_DIALOG DIALOGEX  0, 0, 260, 95
