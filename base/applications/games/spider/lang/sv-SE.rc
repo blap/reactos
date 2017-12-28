@@ -1,11 +1,12 @@
 /*
- * PROJECT: Spider Solitaire
- * LICENSE: See COPYING in top level directory
- * FILE:    base/applications/games/spider/lang/sv-SE.rc
- * PURPOSE: Swedish Language File for Spider Solitaire
+ * PROJECT:    Spider Solitaire
+ * LICENSE:    See COPYING in top level directory
+ * FILE:       base/applications/games/spider/lang/en-US.rc
+ * PURPOSE:    English Language File for Spider Solitaire
+ * TRANSLATOR: Gregor Schneider
  */
 
-LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
 
 /* Dialogs */
 
