@@ -1,4 +1,4 @@
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 IDD_PROPPAGEKEYBOARD DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -8,18 +8,18 @@ BEGIN
     GROUPBOX "Залипание клавиш", -1, 6, 11, 234, 62
     LTEXT "Ввод сочетаний с клавишами Shift, Ctrl или Alt путем последовательного нажатия клавиш.",
           -1, 12, 20, 222, 29
-    AUTOCHECKBOX "&Залипание клавиш", IDC_STICKY_BOX, 12, 53, 126, 14
-    PUSHBUTTON "&Настройка", IDC_STICKY_BUTTON, 149, 53, 85, 14
+    AUTOCHECKBOX "&Use StickyKeys", IDC_STICKY_BOX, 12, 49, 126, 14
+    PUSHBUTTON "Н&астройка", IDC_STICKY_BUTTON, 144, 49, 90, 14
     GROUPBOX "Фильтрация ввода", -1, 6, 79, 234, 67
     LTEXT "Игнорирование случайных кратковременных или повторных нажатий клавиш.",
           -1, 12, 89, 222, 29
-    AUTOCHECKBOX "Использовать &фильтрацию ввода", IDC_FILTER_BOX, 12, 125, 134, 14
-    PUSHBUTTON "Н&астройка", IDC_FILTER_BUTTON, 149, 125, 85, 14
+    AUTOCHECKBOX "Use &FilterKeys", IDC_FILTER_BOX, 12, 121, 126, 14
+    PUSHBUTTON "S&ettings", IDC_FILTER_BUTTON, 144, 121, 90, 14
     GROUPBOX "Озвучивание переключения режимов", -1, 6, 145, 234, 62
     LTEXT "Озвучивание нажатия клавиш переключения режимов Caps Lock, Num Lock и Scroll Lock.",
           -1, 12, 161, 222, 20
-    AUTOCHECKBOX "&Озвучивание", IDC_TOGGLE_BOX, 12, 188, 126, 14
-    PUSHBUTTON "На&стройка", IDC_TOGGLE_BUTTON, 149, 188, 85, 14
+    AUTOCHECKBOX "Use &ToggleKeys", IDC_TOGGLE_BOX, 12, 184, 126, 14
+    PUSHBUTTON "Setti&ngs", IDC_TOGGLE_BUTTON, 144, 184, 90, 14
     AUTOCHECKBOX "&Дополнительные сведения о работе с клавиатурой", IDC_KEYBOARD_EXTRA,
                  6, 212, 234, 14
 END
@@ -32,13 +32,13 @@ BEGIN
     GROUPBOX "Визуальное оповещение", -1, 6, 11, 234, 98
     LTEXT "Сопровождение звуковых сигналов визуальным оповещением.",
           -1, 12, 20, 222, 29
-    AUTOCHECKBOX "В&изуальное оповещение", IDC_SENTRY_BOX, 12, 49, 100, 14
+    AUTOCHECKBOX "В&изуальное оповещение", IDC_SENTRY_BOX, 12, 49, 90, 14
     LTEXT "Оповещение пользователя:", IDC_SENTRY_TEXT, 12, 72, 222, 11
     COMBOBOX IDC_SENTRY_COMBO, 12, 83, 222, 56,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
     GROUPBOX "Субтитры", -1, 6, 115, 234, 67
     LTEXT "Сопровождение звуков и речи субтитрами.",
-          -1, 12, 125, 222, 22
+          -1, 12, 125, 222, 29
     AUTOCHECKBOX "С&убтитры", IDC_SSHOW_BOX, 12, 148, 222, 14
 END
 
@@ -86,8 +86,8 @@ CAPTION "Общие"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "Автоматический сброс", -1, 6, 11, 234, 47
-    AUTOCHECKBOX "&Отключать при простое в течение:",
-                 IDC_RESET_BOX, 12, 20, 222, 14
+    AUTOCHECKBOX "&Turn off accessibility features after idle for:",
+                 IDC_RESET_BOX, 12, 18, 222, 14
     COMBOBOX IDC_RESET_COMBO, 24, 38, 60, 47,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
     GROUPBOX "Уведомление", -1, 6, 63, 234, 47
@@ -96,9 +96,10 @@ BEGIN
     AUTOCHECKBOX "Выдавать звуковой сигнал при изменении р&ежима", IDC_NOTIFICATION_SOUND,
                  12, 90, 222, 14
     GROUPBOX "Альтернативные устройства ввода", -1, 6, 115, 234, 47
-    LTEXT "Использование альтернативных устройств ввода, заменяющих мышь и клавиатуру.", -1, 12, 124, 222, 18
-    AUTOCHECKBOX "&Альтернативные устройства ввода", IDC_SERIAL_BOX, 12, 142, 138, 14
-    PUSHBUTTON "На&стройка", IDC_SERIAL_BUTTON, 153, 142, 81, 14
+    LTEXT "Использование альтернативных устройств ввода, заменяющих мышь и клавиатуру.",
+          -1, 12, 124, 222, 20
+    AUTOCHECKBOX "&Альтернативные устройства ввода", IDC_SERIAL_BOX, 12, 142, 126, 14
+    PUSHBUTTON "S&ettings", IDC_SERIAL_BUTTON, 144, 142, 90, 14
     GROUPBOX "Административные параметры", -1, 6, 169, 234, 47
     AUTOCHECKBOX "Применить &к рабочему столу входа в систему", IDC_ADMIN_LOGON_BOX,
                  12, 178, 222, 14
@@ -137,12 +138,14 @@ BEGIN
     GROUPBOX "Включение режима", -1, 6, 11, 234, 62
     LTEXT "Включение режима фильтрации:  \nудерживание клавиши <Shift справа> в течение 8 секунд.",
           -1, 12, 20, 222, 29
-    AUTOCHECKBOX "&Использовать такой способ включения", IDC_FILTER_ACTIVATE_CHECK, 12, 49, 154, 14
+    AUTOCHECKBOX "&Использовать такой способ включения", IDC_FILTER_ACTIVATE_CHECK, 12, 49, 126, 14
     GROUPBOX "Параметры фильтрации", -1, 6, 79, 234, 79
-    AUTORADIOBUTTON "Игнорировать &повторные нажатия", IDC_FILTER_BOUNCE_RADIO, 12, 90, 141, 11, WS_GROUP | WS_TABSTOP
-    AUTORADIOBUTTON "Игнорировать &краткие нажатия; замедлить повтор", IDC_FILTER_REPEAT_RADIO, 12, 106, 142, 20, BS_TOP | BS_MULTILINE
-    PUSHBUTTON "&Настройка", IDC_FILTER_BOUNCE_BUTTON, 159, 88, 75, 14, WS_GROUP
-    PUSHBUTTON "Н&астройка", IDC_FILTER_REPEAT_BUTTON, 159, 106, 75, 14, WS_GROUP
+    AUTORADIOBUTTON "Ign&ore repeated keystrokes", IDC_FILTER_BOUNCE_RADIO,
+                    12, 91, 120, 11, WS_GROUP | WS_TABSTOP
+    AUTORADIOBUTTON "Игнорировать &краткие нажатия; замедлить повтор", IDC_FILTER_REPEAT_RADIO,
+                    12, 106, 120, 20, BS_TOP | BS_MULTILINE
+    PUSHBUTTON "Н&астройка", IDC_FILTER_BOUNCE_BUTTON, 144, 88, 90, 14, WS_GROUP
+    PUSHBUTTON "S&ettings", IDC_FILTER_REPEAT_BUTTON, 144, 106, 90, 14, WS_GROUP
     LTEXT "&Область проверки параметров фильтрации:", -1, 12, 129, 222, 11
     EDITTEXT IDC_FILTER_TEST_EDIT, 12, 138, 222, 14, WS_GROUP | ES_AUTOHSCROLL
     GROUPBOX "Уведомление", -1, 6, 161, 234, 41
@@ -195,7 +198,7 @@ BEGIN
     AUTOCHECKBOX "&Использовать такой способ включения", IDC_MOUSEKEYS_ACTIVATE_CHECK,
                  12, 49, 222, 14
     GROUPBOX "Скорость перемещения указателя", -1, 6, 83, 234, 83
-    LTEXT "&Максимальная:", -1, 12, 96, 50, 11
+    LTEXT "&Максимальная:", -1, 12, 96, 48, 11
     LTEXT "ниже", -1, 66, 96, 18, 11
     CONTROL "", IDC_MOUSEKEYS_SPEED_TRACK, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP,
             90, 94, 114, 20
@@ -207,10 +210,11 @@ BEGIN
     LTEXT "выше", -1, 204, 123, 18, 11
     AUTOCHECKBOX "<CTRL> - ус&корение, <SHIFT> - замедление движения", IDC_MOUSEKEYS_SPEED_CHECK,
                  12, 142, 222, 14
-    LTEXT "Использовать управление с клавиатуры, если <Num Lock>:", -1, 6, 171, 118, 19
-    AUTORADIOBUTTON "&включен", IDC_MOUSEKEYS_ON_RADIO, 129, 174, 49, 11
-    AUTORADIOBUTTON "о&тключен", IDC_MOUSEKEYS_OFF_RADIO, 182, 174, 52, 11
-    AUTOCHECKBOX "&Отображать состояние режима управления на экране", IDC_MOUSEKEYS_STATUS_CHECK, 6, 190, 220, 14
+    LTEXT "Использовать управление с клавиатуры, если <Num Lock>:", -1, 6, 171, 120, 11
+    AUTORADIOBUTTON "O&n", IDC_MOUSEKEYS_ON_RADIO, 162, 171, 30, 11
+    AUTORADIOBUTTON "Of&f", IDC_MOUSEKEYS_OFF_RADIO, 198, 171, 30, 11
+    AUTOCHECKBOX "&Show MouseKey status on screen", IDC_MOUSEKEYS_STATUS_CHECK,
+                 6, 184, 222, 14
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
     PUSHBUTTON "Отмена", IDCANCEL, 189, 207, 50, 14
 END
@@ -236,13 +240,14 @@ CAPTION "Дополнительные параметры режима фильт
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Повтор символов", -1, 6, 11, 234, 106
-    LTEXT "Изменение параметров работы с клавиатурой:",-1, 12, 20, 190, 11
-    AUTORADIOBUTTON "&нет повторов при удерживании клавиш", IDC_REPEAT_NOREPEAT_RADIO, 12, 32, 160, 11, WS_GROUP
+    LTEXT "Изменение параметров работы с клавиатурой:",
+          -1, 12, 20, 222, 20
+    AUTORADIOBUTTON "&нет повторов при удерживании клавиш", IDC_REPEAT_NOREPEAT_RADIO, 12, 32, 78, 11, WS_GROUP
     AUTORADIOBUTTON "за&медление повторов", IDC_REPEAT_REPEAT_RADIO, 12, 45, 131, 11
-    LTEXT "&Задержка перед началом повтора символа:", -1, 24, 60, 167, 11
+    LTEXT "&Задержка перед началом повтора символа:", -1, 24, 60, 60, 11
     COMBOBOX IDC_REPEAT_DELAY_COMBO, 24, 71, 210, 56,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
-    LTEXT "С&корость повтора:", -1, 24, 89, 89, 11
+    LTEXT "С&корость повтора:", -1, 24, 89, 60, 11
     COMBOBOX IDC_REPEAT_REPEAT_COMBO, 24, 100, 210, 65,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
     GROUPBOX "Медленное нажатие клавиш", -1, 6, 124, 234, 42
@@ -260,12 +265,13 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Настройка альтернативного устройства ввода"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Параметры", -1, 6, 6, 234, 92
-    LTEXT "Укажите порт, к которому присоединено альтернативное устройство ввода.", -1, 12, 16, 222, 20
-    LTEXT "&Последовательный порт:", -1, 12, 34, 222, 10
+    GROUPBOX "Serial Keys", -1, 6, 11, 234, 92
+    LTEXT "Choose the port where you connect an alternative input device.",
+          -1, 12, 20, 222, 20
+    LTEXT "&Последовательный порт:", -1, 12, 34, 222, 20
     COMBOBOX IDC_SERIAL_PORT_COMBO, 12, 45, 222, 56,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
-    LTEXT "&Скорость (бит/с):", -1, 12, 65, 222, 10
+    LTEXT "&Скорость (бит/с):", -1, 12, 65, 222, 20
     COMBOBOX IDC_SERIAL_BAUD_COMBO, 12, 76, 222, 74,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
