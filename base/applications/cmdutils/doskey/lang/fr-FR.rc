@@ -1,24 +1,24 @@
-LANGUAGE LANG_FRENCH, SUBLANG_DEFAULT
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 STRINGTABLE
 BEGIN
-    IDS_HELP "Gère les paramètres d'édition en ligne de commande de l'historique et des macros.\n\
+    IDS_HELP "Manages command-line editing settings, history, and macros.\n\
 \n\
 DOSKEY [/INSERT | /OVERSTRIKE] [/EXENAME=exe] [/HISTORY] [/LISTSIZE=size]\n\
        [/REINSTALL] [/MACROS[:exe | :ALL]] [/MACROFILE=file] [macroname=[text]]\n\
 \n\
-  /INSERT             Active le mode insertion.\n\
-  /OVERSTRIKE         Désactive le mode insertion.\n\
-  /EXENAME=exename    Définit le nom du programme pour afficher/modifier l'historique\n\
-                      et les macros. La valeur par défaut est cmd.exe.\n\
-  /HISTORY            Affiche l'historique des commandes.\n\
-  /LISTSIZE=size      Définit le nombre de commandes par tampon d'historique.\n\
-  /REINSTALL          Efface l'historique des commandes.\n\
-  /MACROS             Affiche les définitions de macros.\n\
-  /MACROS:exename     Affiche les définitions de macros pour un programme spécifique.\n\
-  /MACROS:ALL         Affiche les définitions de macros pour tous les programmes.\n\
-  /MACROFILE=file     Charge les définitions de macros à partir d'un fichier.\n\
-  macroname           Définit le nom d'une macro à créer.\n\
-  text                Définit le texte de remplacement pour la macro.\n"
+  /INSERT             Enables insert mode.\n\
+  /OVERSTRIKE         Disables insert mode.\n\
+  /EXENAME=exename    Sets the name of the program to view/change history\n\
+                      and macros for. The default is cmd.exe.\n\
+  /HISTORY            Displays the command history.\n\
+  /LISTSIZE=size      Sets the number of commands per history buffer.\n\
+  /REINSTALL          Clears the command history.\n\
+  /MACROS             Displays macro definitions.\n\
+  /MACROS:exename     Displays macro definitions for a specific program.\n\
+  /MACROS:ALL         Displays macro definitions for all programs.\n\
+  /MACROFILE=file     Loads macro definitions from a file.\n\
+  macroname           Specifies the name of a macro to create.\n\
+  text                Specifies the replacement text for the macro.\n"
     IDS_INVALID_MACRO_DEF "Définition de macro invalide: %s\n"
 END
