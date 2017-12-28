@@ -1,4 +1,4 @@
-LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_BULGARIAN, SUBLANG_BULGARIAN_BULGARIA
 
 STRINGTABLE DISCARDABLE
 BEGIN
@@ -7,7 +7,6 @@ BEGIN
 END
 
 IDR_MAINMENU MENU
-
 BEGIN
   POPUP "&Файл"
   BEGIN
@@ -27,7 +26,6 @@ BEGIN
     MENUITEM SEPARATOR
     MENUITEM "Из&ход\tAlt+F4",       ID_EXIT
   END
-
   POPUP "&Обработка"
   BEGIN
     MENUITEM "&Отмяна",               ID_UNDO,    GRAYED
@@ -40,7 +38,6 @@ BEGIN
     MENUITEM SEPARATOR
     MENUITEM "Избор на вси&чки",         ID_SELALL,  GRAYED
   END
-
   POPUP "Из&глед"
   BEGIN
     MENUITEM "&Средства",              ID_TOOLS
@@ -48,7 +45,6 @@ BEGIN
     MENUITEM "&Дневник",            ID_HISTORY
     MENUITEM "Лента състояние",         ID_STATUSBAR
   END
-
   POPUP "&Настройка"
   BEGIN
     MENUITEM "Яркост...",       ID_BRIGHTNESS
@@ -62,16 +58,15 @@ BEGIN
     MENUITEM SEPARATOR
     MENUITEM "Размиване",                ID_BLUR
     MENUITEM "Изостряне",             ID_SHARPEN
-    MENUITEM "Заобляне на ръбовете",        -1, GRAYED
-    MENUITEM "Добавяне на сянка",          -1, GRAYED
+    MENUITEM "Завъртане",        -1, GRAYED
+    MENUITEM "Завъртане",          -1, GRAYED
     MENUITEM SEPARATOR
-    MENUITEM "Размер на изображението",       -1, GRAYED
-    MENUITEM "Обръщане",                -1, GRAYED
-    MENUITEM "Огледало",              -1, GRAYED
+    MENUITEM "Завъртане",       -1, GRAYED
+    MENUITEM "Завъртане",                -1, GRAYED
+    MENUITEM "Завъртане",              -1, GRAYED
     MENUITEM "Завъртане",              -1, GRAYED
 
   END
-
   POPUP "&Цветове"
   BEGIN
     MENUITEM "&Обработка на цветовете...", ID_EDITCOLOURS
@@ -100,18 +95,18 @@ BEGIN
 END
 
 
-IDD_BRIGHTNESS DIALOGEX 6, 5, 220, 120
+IDD_BRIGHTNESS DIALOGEX 6, 5, 193, 120
 CAPTION "Яркост"
 FONT 8,"MS Shell Dlg", 0, 0
 STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | DS_MODALFRAME
 BEGIN
   LTEXT      "", IDC_PICPREVIEW, 0, 1, 132, 96, SS_OWNERDRAW | SS_SUNKEN
-  LTEXT      "Цветова форма:", IDC_STATIC, 135, 5, 60, 9
-  GROUPBOX   "", IDC_BRI_GROUP, 138 ,30, 77, 48
-  CONTROL    "Пълноцветно (ЧЗС)", IDC_BRI_FULL, "Button", BS_AUTORADIOBUTTON, 138, 18, 80, 9
-  CONTROL    "Червено", IDC_BRI_RED, "Button", BS_AUTORADIOBUTTON, 142, 38, 55, 9
-  CONTROL    "Зелено", IDC_BRI_GREEN, "Button", BS_AUTORADIOBUTTON, 142, 51, 55, 9
-  CONTROL    "Синьо", IDC_BRI_BLUE, "Button", BS_AUTORADIOBUTTON, 142, 64, 55, 9
+  LTEXT      "Цветова форма:", IDC_STATIC, 135, 5, 36, 9
+  GROUPBOX   "", IDC_BRI_GROUP, 138 ,30, 50, 48
+  CONTROL    "Пълноцветно (ЧЗС)", IDC_BRI_FULL, "Button", BS_AUTORADIOBUTTON, 138, 18, 46, 9
+  CONTROL    "Червено", IDC_BRI_RED, "Button", BS_AUTORADIOBUTTON, 142, 38, 42, 9
+  CONTROL    "Зелено", IDC_BRI_GREEN, "Button", BS_AUTORADIOBUTTON, 142, 51, 42, 9
+  CONTROL    "Синьо", IDC_BRI_BLUE, "Button", BS_AUTORADIOBUTTON, 142, 64, 42, 9
   EDITTEXT   IDC_BRI_EDIT, 98, 103, 28, 13
   CONTROL    "", IDC_BRI_TRACKBAR, "msctls_trackbar32", TBS_BOTH | TBS_NOTICKS | WS_TABSTOP, 2, 105, 90, 11
   PUSHBUTTON "Добре", IDOK, 142, 88, 48, 13
@@ -131,29 +126,29 @@ BEGIN
 END
 
 
-IDD_IMAGE_PROP DIALOGEX 6, 5, 170, 163
+IDD_IMAGE_PROP DIALOGEX 6, 5, 156, 163
 CAPTION "Свойства на изображението"
 FONT 8,"MS Shell Dlg",0,0
 STYLE DS_SHELLFONT | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | DS_MODALFRAME
 BEGIN
   LTEXT      "Име:", IDC_STATIC, 12, 5, 38, 9
-  EDITTEXT   IDC_IMAGE_NAME_EDIT,  68, 3, 94, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP
-  GROUPBOX   "Свойства на платното", IDC_STATIC, 4, 22, 162, 98
+  EDITTEXT   IDC_IMAGE_NAME_EDIT,  58, 3, 94, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  GROUPBOX   "Свойства на платното", IDC_STATIC, 4, 22, 148, 98
   LTEXT      "Вид:", IDC_STATIC, 12, 36, 42, 9
   CONTROL    "", IDC_IMAGETYPE, "ComboBox", WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 35, 88, 54
   LTEXT      "Ширина:", IDC_STATIC, 12, 51, 42, 9
-  EDITTEXT   IDC_WIDTH_EDIT, 68, 49, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
+  EDITTEXT   IDC_WIDTH_EDIT, 58, 49, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
   LTEXT      "", IDC_WIDTH_STAT, 94, 51, 40, 9
   LTEXT      "Височина:", IDC_STATIC, 12, 68, 42, 9
-  EDITTEXT   IDC_HEIGHT_EDIT, 68, 66, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
+  EDITTEXT   IDC_HEIGHT_EDIT, 58, 66, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
   LTEXT      "", IDC_HEIGHT_STAT, 94, 68, 40, 9
-  LTEXT      "Разделителна способност:", IDC_STATIC, 12, 82, 46, 18
-  EDITTEXT   IDC_RES_EDIT, 68, 83, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
+  LTEXT      "Resolution:", IDC_STATIC, 12, 84, 42, 9
+  EDITTEXT   IDC_RES_EDIT, 58, 83, 32, 13, WS_CHILD | WS_VISIBLE | WS_TABSTOP | ES_NUMBER
   LTEXT      "", IDC_RES_STAT, 94, 84, 40, 9
   LTEXT      "Единици:", IDC_STATIC, 12, 99, 42, 9
   CONTROL    "", IDC_UNIT, "ComboBox", WS_CHILD | WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 99, 54, 50
   LTEXT      "Размери:", IDC_STATIC, 12, 125, 42, 9
-  LTEXT      "", IDC_IMAGE_SIZE, 68, 125, 54, 9
+  LTEXT      "", IDC_IMAGE_SIZE, 58, 125, 54, 9
   PUSHBUTTON "Добре", IDOK, 50, 144, 48, 13
   PUSHBUTTON "Отказ", IDCANCEL, 102, 144, 48, 13
 END
