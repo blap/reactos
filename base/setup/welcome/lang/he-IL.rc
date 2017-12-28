@@ -1,6 +1,4 @@
-/* Translated by Baruch Rutman */
-
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 /* String Tables */
 
