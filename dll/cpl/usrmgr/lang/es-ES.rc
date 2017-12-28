@@ -1,6 +1,4 @@
-/* Spanish translation by Ismael Ferreras Morezuelas (Swyter) */
-
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 /* Dialogs */
 
@@ -35,7 +33,7 @@ STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Otros"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Este espacio está en blanco por el momento.", IDC_STATIC, 50, 90, 154, 8, SS_CENTER
+    LTEXT "This space is intentionally left blank", IDC_STATIC, 66, 90, 112, 8
 END
 
 IDD_USER_GENERAL DIALOGEX 0, 0, 252, 223
@@ -73,13 +71,13 @@ CAPTION "Perfil"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Perfil de usuario", -1, 7, 7, 238, 54
-    LTEXT "Ruta al perfil:", -1, 16, 22, 55, 8, SS_RIGHT
+    LTEXT "Ruta al perfil:", -1, 16, 22, 55, 8
     EDITTEXT IDC_USER_PROFILE_PATH, 78, 19, 160, 13, ES_AUTOHSCROLL
-    LTEXT "Script de inicio:", -1, 16, 40, 55, 8, SS_RIGHT
+    LTEXT "Script de inicio:", -1, 16, 40, 55, 8
     EDITTEXT IDC_USER_PROFILE_SCRIPT, 78, 37, 160, 13, ES_AUTOHSCROLL
     GROUPBOX "Carpeta particular ", -1, 7, 68, 238, 54
-    AUTORADIOBUTTON "Ruta local:", IDC_USER_PROFILE_LOCAL, 16, 83, 60, 10, SS_RIGHT
-    AUTORADIOBUTTON "Conectar:", IDC_USER_PROFILE_REMOTE, 16, 100, 60, 10, SS_RIGHT
+    AUTORADIOBUTTON "Ruta local:", IDC_USER_PROFILE_LOCAL, 16, 83, 60, 10
+    AUTORADIOBUTTON "Conectar:", IDC_USER_PROFILE_REMOTE, 16, 100, 60, 10
     EDITTEXT IDC_USER_PROFILE_LOCAL_PATH, 78, 81, 160, 13, ES_AUTOHSCROLL
     COMBOBOX IDC_USER_PROFILE_DRIVE, 78, 99, 26, 160, CBS_DROPDOWNLIST | CBS_SORT |
              WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
