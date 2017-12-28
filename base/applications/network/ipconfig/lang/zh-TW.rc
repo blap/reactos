@@ -1,6 +1,4 @@
-/* Traditional Chinese translation by Henry Tang Ih 2016 (henrytang2@hotmail.com) */
-
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+LANGUAGE LANG_CHINESE_TRADITIONAL, SUBLANG_CHINESE_TRADITIONAL
 
 STRINGTABLE
 BEGIN
@@ -26,42 +24,42 @@ STRINGTABLE
 BEGIN
 /* Please keep the spacing/formatting as per En.rc when translating */
     IDS_USAGE
-    "\n用法：\n \
-        ipconfig [/? | /all | /renew [配接器] | /release [配接器] |\n \
+    "\nUSAGE:\n \
+        ipconfig [/? | /all | /renew [adapter] | /release [adapter] |\n \
                   /flushdns | /displaydns | /registerdns |\n \
-                  /showclassid 配接器 |\n \
-                  /setclassid 配接器 [类ID] ]\n \
+                  /showclassid adapter |\n \
+                  /setclassid adapter [classid] ]\n \
     \n \
-    其中\n \
-        配接器          連接名稱\n \
-                       (萬用字元 * 和 ？ 是被允許的，參見示例)\n \
+    where\n \
+        adapter         Connection name\n \
+                       (wildcard characters * and ? allowed, see examples)\n \
     \n \
-        選項：\n \
-           /?           顯示這個説明資訊。\n \
-           /all         顯示完全的配置資訊。\n \
-           /release     釋放指定配接器的 IP 位址。\n \
-           /renew       更新指定配接器的 IP 位址。\n \
-           /flushdns    清除 DNS 解析程式緩存。\n \
-           /registerdns 刷新所有的 DHCP 租約，重新註冊的 DNS 名稱。\n \
-           /displaydns  顯示 DNS 緩存中的內容。\n \
-           /showclassid 顯示所有被指定配接器允許的 DHCP 類 ID。\n \
-           /setclassid  修改 DHCP 類 ID。\n \
+        Options:\n \
+           /?           Display this help message\n \
+           /all         Display full configuration information.\n \
+           /release     Release the IP address for the specified adapter.\n \
+           /renew       Renew the IP address for the specified adapter.\n \
+           /flushdns    Purges the DNS Resolver cache.\n \
+           /registerdns Refreshes all DHCP leases and re-registers DNS names.\n \
+           /displaydns  Display the contents of the DNS Resolver Cache.\n \
+           /showclassid Displays all the dhcp class IDs allowed for adapter.\n \
+           /setclassid  Modifies the dhcp class id.\n \
     \n \
-    該程式的預設行為是僅顯示每個綁定到 TCP/IP 的配接器的 IP 位址，子網路遮罩\n \
-    和預設閘道。\n \
+    The default is to display only the IP address, subnet mask and\n \
+    default gateway for each adapter bound to TCP/IP.\n \
     \n \
-    對於釋放和更新操作，如果沒有指定配接器名稱，那麼所有綁定到 TCP/IP 的配接器\n \
-    的 IP 位址將會被釋放或更新。\n \
+    For Release and Renew, if no adapter name is specified, then the IP address\n \
+    leases for all adapters bound to TCP/IP will be released or renewed.\n \
     \n \
-    對於設置類 ID 操作，如果沒有指定類 ID，那麼類 ID 將被刪除。\n \
+    For Setclassid, if no ClassId is specified, then the ClassId is removed.\n \
     \n \
-    示例：\n \
-        > ipconfig                   ... 顯示資訊\n \
-        > ipconfig /all              ... 顯示詳細資訊\n \
-        > ipconfig /renew            ... 更新所有配接器\n \
-        > ipconfig /renew EL*        ... 更新所有名稱以 EL 開頭\n \
-                                         的連接\n \
-        > ipconfig /release *Con*    ... 釋放所有匹配的連接，\n \
-                                         如 ""Local Area Connection 1"" 或\n \
-                                             ""Local Area Connection 2""\n"
+    Examples:\n \
+        > ipconfig                   ... Show information.\n \
+        > ipconfig /all              ... Show detailed information\n \
+        > ipconfig /renew            ... renew all adapters\n \
+        > ipconfig /renew EL*        ... renew any connection that has its\n \
+                                         name starting with EL\n \
+        > ipconfig /release *Con*    ... release all matching connections,\n \
+                                         eg. """Local Area Connection 1""" or\n \
+                                             """Local Area Connection 2""\n"
 END
