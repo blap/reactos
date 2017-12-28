@@ -1,13 +1,4 @@
-/*
- *    Translated by Saibamen - Adam Stachowicz (Apr, 2011)
- *    Use ReactOS forum PM, IRC or saibamenppl at gmail.com to contact me
- *    http://www.reactos.org
- *    IRC: irc.freenode.net #reactos-pl;
- *    UTF-8 conversion by Caemyr (May, 2011)
- *    Update by wojo664 and Saibamen (May 2014)
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 IDC_REACTOS_SNDREC32 ACCELERATORS
 BEGIN
@@ -17,7 +8,7 @@ END
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 196, 75
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Informacje o Rejestratorze Dźwięku ReactOS"
+CAPTION "Menedżer Usług - informacje"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON IDI_SNDREC32, -1, 19, 14, 21, 20
@@ -48,8 +39,8 @@ BEGIN
         MENUITEM "&Wstaw plik...", ID_EDIT_INSERTFILE
         MENUITEM "&Miksuj z plikiem...", ID_EDIT_MIXFILE
         MENUITEM SEPARATOR
-        MENUITEM "Kasuj &przed obecną pozycją",ID_EDIT_DELETEBEFORE, GRAYED
-        MENUITEM "Kasuj &za obecną pozycją",ID_EDIT_DELETEAFTER, GRAYED
+        MENUITEM "Kasuj &przed obecną pozycją", ID_EDIT_DELETEBEFORE, GRAYED
+        MENUITEM "Kasuj &za obecną pozycją", ID_EDIT_DELETEAFTER, GRAYED
         MENUITEM SEPARATOR
         MENUITEM "Właściwości a&udio", ID_EDIT_AUDIOPROPS
     END
@@ -61,7 +52,7 @@ BEGIN
         MENUITEM "&Przyśpiesz (o 100%)", ID_EFFECTS_INCSPD
         MENUITEM "&Zwolnij", ID_EFFECTS_DECSPD
         MENUITEM SEPARATOR
-        MENUITEM "&Dodaj echo",  ID_EFFECTS_ECHO
+        MENUITEM "&Dodaj echo", ID_EFFECTS_ECHO
         MENUITEM "&Odwróć", ID_EFFECTS_REVERSE
     END
     POPUP "?"
