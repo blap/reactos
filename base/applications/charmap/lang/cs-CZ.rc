@@ -1,9 +1,4 @@
-/* FILE:        applications/charmap/lang/cs-CZ.rc
- * TRANSLATOR:  Radek Liska aka Black_Fox (radekliska at gmail dot com)
- * UPDATED:     2011-03-31
- */
-
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 IDD_CHARMAP DIALOGEX 6, 6, 292, 224
 FONT 8, "MS Shell Dlg", 0, 0
@@ -20,7 +15,7 @@ BEGIN
             WS_CHILD | WS_VISIBLE | WS_TABSTOP, 74, 186, 114, 13
     DEFPUSHBUTTON "Označit", IDC_SELECT, 194, 186, 44, 13
     PUSHBUTTON "Kopírovat", IDC_COPY, 242, 186, 44, 13, WS_DISABLED
-    CONTROL "Rozšířené zobrazení", IDC_CHECK_ADVANCED, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Ad&vanced view", IDC_CHECK_ADVANCED, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 8, 208, 95, 10
 END
 
