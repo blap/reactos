@@ -1,6 +1,12 @@
-/* Ukraianian translation by Rostislav Zabolotny, Artem Reznikov, Igor Paliychuk */
+/*
+ * PROJECT:    ReactOS Event Viewer
+ * LICENSE:    GPL - See COPYING in the top level directory
+ * FILE:       base/applications/mscutils/eventvwr/lang/en-US.rc
+ * PURPOSE:    English Language File for ReactOS Event Viewer
+ * TRANSLATOR: Marc Piulachs
+ */
 
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDM_EVENTVWR MENU
 BEGIN
@@ -8,7 +14,7 @@ BEGIN
     BEGIN
         MENUITEM "&Open...", IDM_OPEN_EVENTLOG
         MENUITEM "Save &Event Log as...", IDM_SAVE_EVENTLOG
-        MENUITEM "&Close", IDM_CLOSE_EVENTLOG
+        MENUITEM "Закрити", IDM_CLOSE_EVENTLOG
         MENUITEM SEPARATOR
         MENUITEM "C&lear all Events", IDM_CLEAR_EVENTS
         MENUITEM "&Rename\tF2", IDM_RENAME_EVENTLOG
@@ -71,7 +77,7 @@ BEGIN
     LTEXT "Тип:", IDC_STATIC, 8, 25, 31, 8
     EDITTEXT IDC_EVENTTYPESTATIC, 46, 25, 47, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "ID Події:", IDC_STATIC, 103, 25, 36, 8
-    EDITTEXT  IDC_EVENTIDSTATIC, 140, 25, 82, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
+    EDITTEXT IDC_EVENTIDSTATIC, 140, 25, 82, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "&Користувач:", IDC_STATIC, 8, 35, 36, 8
     EDITTEXT IDC_EVENTUSERSTATIC, 46, 35, 152, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "Ко&мп'ютер:", IDC_STATIC, 8, 45, 36, 8
@@ -101,7 +107,7 @@ BEGIN
     EDITTEXT IDC_LOGNAME, 67, 23, 178, 12, ES_LEFT | ES_AUTOHSCROLL | ES_READONLY | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP
     LTEXT "Log &file:", IDC_STATIC, 7, 41, 60, 8
     EDITTEXT IDC_LOGFILE, 67, 39, 178, 12, ES_LEFT | ES_AUTOHSCROLL | ES_READONLY | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP
-    LTEXT "Size:", IDC_STATIC, 7, 57, 60, 8
+    LTEXT "Розмір:", IDC_STATIC, 7, 57, 60, 8
     EDITTEXT IDC_SIZE_LABEL, 67, 57, 178, 12, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "Created:", IDC_STATIC, 7, 69, 60, 8
     EDITTEXT IDC_CREATED_LABEL, 67, 69, 178, 12, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
@@ -135,7 +141,7 @@ BEGIN
     IDS_APP_TITLE_EX "%s - %s Log on \\\\"
     IDS_STATUS_MSG "%s has %lu event(s) (listed: %lu)"
     IDS_LOADING_WAIT "Завантаження Звіту подій. Будь ласка, зачекайте..."
-    IDS_NO_ITEMS "There are no items to show in this view." // "No events in this log."
+    IDS_NO_ITEMS "There are no items to show in this view."" // ""No events in this log."
     IDS_EVENTLOG_SYSTEM "System Logs"
     IDS_EVENTLOG_APP "Application Logs"
     IDS_EVENTLOG_USER "User Logs"
@@ -157,7 +163,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_BYTES_FORMAT "bytes" // "%s bytes"
+    IDS_BYTES_FORMAT "bytes"" // ""%s bytes"
     // "%1!ls! (%2!ls! bytes)"
 END
 
