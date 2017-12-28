@@ -1,6 +1,4 @@
-/* TRANSLATOR: 2015 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 STRINGTABLE
 BEGIN
@@ -39,19 +37,19 @@ BEGIN
     IDS_ERROR_INVALIDSYNTAX "YANLIŞLIK: Geçersiz yazım.\nKullanım için ""WHOAMI /?"" yazınız.\n"
     IDS_ERROR_INVALIDARG "YANLIŞLIK: Geçersiz değiştirgen ya da seçenek: ""%s"".\nKullanım için ""WHOAMI /?"" yazınız.\n"
     IDS_ERROR_NH_LIST "YANLIŞLIK: /NH seçeneği LIST biçimiyle kullanılamıyor.\nKullanım için ""WHOAMI /?"" yazınız.\n"
-    IDS_HELP "TANIM:\n\
-  Yerli oturumda olan kullanıcı için kullanıcı, takım ve ayrıcalıklar bilgilerini görüntüle.\n\
-  Bir değiştirgen sağlanmamışsa şimdiki etki alanını ve kullanıcı adını görüntüler.\n\
+    IDS_HELP "DESCRIPTION:\n\
+  Display user, group and privileges information for the local logged-on user.\n\
+  If no arguments are provided, displays the current domain and user name.\n\
 \n\
-  ""/fo"" seçeneği için kullanılabilir çıkış biçimleri ""csv"", ""list"" ve ""table""dır.\n\
-  Başlıkları gizlemek için ""/nh"" kullanınız. Ön tanımlı olarak veri bir çizelge içinde görüntülenmiştir.\n\
+  Available output formats for the '/fo' option are 'csv', 'list' and 'table'.\n\
+  Use '/nh' to hide headers. By default the data is displayed in a table.\n\
 \n\
-YAZIM:\n\
+SYNTAX:\n\
   whoami [/upn | /fqdn | /logonid] \n\
-  whoami {[/user] [/groups] [/priv]} [/fo <Biçim>] [/nh] \n\
-  whoami /all [/fo <Biçim>] [/nh] \n\
+  whoami {[/user] [/groups] [/priv]} [/fo <Format>] [/nh] \n\
+  whoami /all [/fo <Format>] [/nh] \n\
 \n\
-ÖRNEKLER: \n\
+EXAMPLES: \n\
   whoami /groups /priv /nh /fo csv \n\
   whoami /logonid \n\
   whoami \n"
