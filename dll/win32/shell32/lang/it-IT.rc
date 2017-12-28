@@ -1,4 +1,4 @@
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 MENU_001 MENUEX
 BEGIN
@@ -36,7 +36,7 @@ BEGIN
         MENUITEM "", -1, MFT_SEPARATOR
         MENUITEM "Aggiorna", FCIDM_SHVIEW_REFRESH
         MENUITEM "", -1, MFT_SEPARATOR
-        MENUITEM "Incolla", FCIDM_SHVIEW_INSERT
+        MENUITEM "Inserisci", FCIDM_SHVIEW_INSERT
         MENUITEM "Crea Collegamento", FCIDM_SHVIEW_INSERTLINK
     END
 END
@@ -66,6 +66,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&Taglia", IDM_CUT
         MENUITEM "&Copia", IDM_COPY
+        MENUITEM "Incolla", IDM_INSERT
         MENUITEM SEPARATOR
         MENUITEM "&Crea Collegamento", IDM_CREATELINK
         MENUITEM "&Cancella", IDM_DELETE
@@ -80,8 +81,8 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "Sfoglia Cartella"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    DEFPUSHBUTTON "OK", 1, 80, 176, 50, 12, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
-    PUSHBUTTON "Annulla", 2, 134, 176, 50, 12, WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON "OK", 1, 60, 175, 60, 15, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON "Annulla", 2, 125, 175, 60, 15, WS_GROUP | WS_TABSTOP
     LTEXT "", IDC_BROWSE_FOR_FOLDER_TITLE, 4, 4, 180, 12
     LTEXT "", IDC_BROWSE_FOR_FOLDER_STATUS, 4, 25, 180, 12
     CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP, 4, 40, 180, 120
@@ -95,7 +96,7 @@ BEGIN
     LTEXT "", IDC_BROWSE_FOR_FOLDER_TITLE, 10, 8, 198, 24
     LTEXT "", IDC_BROWSE_FOR_FOLDER_STATUS, 10, 25, 198, 12
     LTEXT "Cartella:", IDC_BROWSE_FOR_FOLDER_FOLDER, 10, 152, 40, 12
-    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS  | WS_BORDER | WS_TABSTOP, 12, 38, 194, 105
+    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | WS_BORDER | WS_TABSTOP, 12, 38, 194, 105
     EDITTEXT IDC_BROWSE_FOR_FOLDER_FOLDER_TEXT, 46, 150, 160, 14, WS_BORDER | WS_GROUP | WS_TABSTOP
     PUSHBUTTON "&Crea una nuova cartella", IDC_BROWSE_FOR_FOLDER_NEW_FOLDER, 12, 174, 77, 14, WS_GROUP | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 102, 174, 50, 14, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
@@ -158,13 +159,13 @@ BEGIN
     LTEXT "Digitare il nome del programma, della cartella, del documento o della risorsa Internet, e ReactOS la aprirà.", 12289, 36, 11, 182, 18
     LTEXT "&Apri:", 12305, 7, 39, 24, 10
     CONTROL "", IDC_RUNDLG_EDITPATH, "COMBOBOX", WS_TABSTOP | WS_GROUP | WS_VSCROLL | WS_VISIBLE | CBS_AUTOHSCROLL | CBS_DROPDOWN, 36, 37, 183, 100
-    DEFPUSHBUTTON "OK", IDOK, 62, 63, 50, 14, WS_TABSTOP
-    PUSHBUTTON "Annulla", IDCANCEL, 116, 63, 50, 14, WS_TABSTOP
-    PUSHBUTTON "&Esplora...", 12288, 170, 63, 50, 14, WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 36, 63, 59, 14, WS_TABSTOP
+    PUSHBUTTON "Annulla", IDCANCEL, 98, 63, 59, 14, WS_TABSTOP
+    PUSHBUTTON "&Sfoglia...", 12288, 160, 63, 59, 14, WS_TABSTOP
 END
 
 IDD_SHORTCUT_PROPERTIES DIALOGEX 0, 0, 235, 215
-STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
 CAPTION "Collegamento"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
@@ -392,7 +393,7 @@ BEGIN
     GROUPBOX "&Programmi", -1, 7, 42, 249, 187
     CONTROL "Programs", 14002, WC_TREEVIEW, WS_BORDER | WS_TABSTOP | TVS_SHOWSELALWAYS, 16 ,57, 230, 130
     AUTOCHECKBOX "&Usare sempre il programma selezionato per aprire questo tipo di file", 14003, 20, 193, 225, 10
-    PUSHBUTTON "&Sfoglia...", 14004, 198, 207, 50, 14
+    PUSHBUTTON "&Browse...", 14004, 198, 207, 50, 14
     DEFPUSHBUTTON "OK", IDOK, 150, 236, 50, 14
     PUSHBUTTON "Annulla", IDCANCEL, 206, 236, 50, 14
 END
@@ -404,19 +405,19 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "Attività", -1, 7, 10, 249, 45
     CONTROL "", IDC_FOLDER_OPTIONS_TASKICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 25, 21, 20
-    AUTORADIOBUTTON "Mostrare le attività comuni nelle cartelle", IDC_FOLDER_OPTIONS_COMMONTASKS, 40, 25, 200, 10, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "Utilizzare le cartelle nella forma 'ReactOS class&ic' ", IDC_FOLDER_OPTIONS_CLASSICFOLDERS, 40, 37, 200, 10
+    AUTORADIOBUTTON "Mostrare le attività comuni nelle cartelle", IDC_FOLDER_OPTIONS_COMMONTASKS, 40, 25, 120, 10, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "Utilizzare le cartelle nella forma 'ReactOS class&ic' ", IDC_FOLDER_OPTIONS_CLASSICFOLDERS, 40, 37, 120, 10
     GROUPBOX "Sfoglia cartelle", -1, 7, 60, 249, 45, WS_TABSTOP
     CONTROL "", IDC_FOLDER_OPTIONS_FOLDERICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 70, 21, 20
-    AUTORADIOBUTTON "Aprire ogni cartella nella stessa finestra", IDC_FOLDER_OPTIONS_SAMEWINDOW, 40, 70, 200, 10, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "Aprire ogni cartella in una nuova finestra", IDC_FOLDER_OPTIONS_OWNWINDOW, 40, 82, 200, 10
+    AUTORADIOBUTTON "Aprire ogni cartella nella stessa finestra", IDC_FOLDER_OPTIONS_SAMEWINDOW, 40, 70, 140, 10, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "Aprire ogni cartella in una nuova finestra", IDC_FOLDER_OPTIONS_OWNWINDOW, 40, 82, 140, 10
     GROUPBOX "Click sugli elementi come segue", -1, 7, 110, 249, 60
     CONTROL "", IDC_FOLDER_OPTIONS_CLICKICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 120, 21, 20
-    AUTORADIOBUTTON "&Click singolo per aprire un elemento (seleziona ed apre)", IDC_FOLDER_OPTIONS_SINGLECLICK, 40, 120, 200, 10, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "Sottolinea i titoli delle icone in modo coerente con il &browser", IDC_FOLDER_OPTIONS_ULBROWSER, 50, 132, 200, 10
-    AUTORADIOBUTTON "Sottolinea i titoli delle icone solo se &selezionate", IDC_FOLDER_OPTIONS_ULPOINT, 50, 144, 200, 10
-    AUTORADIOBUTTON "&Doppio click per aprire un elemento (click singolo per selezionare)", IDC_FOLDER_OPTIONS_DOUBLECLICK, 40, 156, 200, 10
-    PUSHBUTTON "&Ripristina le impostazioni predefinite", 14011, 120, 180, 120, 14, WS_TABSTOP
+    AUTORADIOBUTTON "&Click singolo per aprire un elemento (seleziona ed apre)", IDC_FOLDER_OPTIONS_SINGLECLICK, 40, 120, 170, 10, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "Sottolinea i titoli delle icone in modo coerente con il &browser", IDC_FOLDER_OPTIONS_ULBROWSER, 50, 132, 170, 10
+    AUTORADIOBUTTON "Sottolinea i titoli delle icone solo se &selezionate", IDC_FOLDER_OPTIONS_ULPOINT, 50, 144, 170, 10
+    AUTORADIOBUTTON "&Doppio click per aprire un elemento (click singolo per selezionare)", IDC_FOLDER_OPTIONS_DOUBLECLICK, 40, 156, 170, 10
+    PUSHBUTTON "&Ripristina le impostazioni predefinite", 14011, 180, 180, 60, 14, WS_TABSTOP
 END
 
 IDD_FOLDER_OPTIONS_VIEW DIALOGEX 0, 0, 264, 256
@@ -427,11 +428,11 @@ BEGIN
     GROUPBOX "Vista delle cartelle", -1, 7, 10, 249, 60
     ICON IDI_SHELL_PROGRAMS_FOLDER2, IDC_STATIC, 20, 20, 21, 20
     LTEXT "Potete applicare la modalità di visualizzazione attuale\na tutte le cartelle.", -1, 60, 20, 180, 20
-    PUSHBUTTON "Applicare a &tutte le cartelle", 14001, 40, 50, 100, 14, WS_TABSTOP
-    PUSHBUTTON "&Ripristina tutte le cartelle", 14002, 150, 50, 100, 14, WS_TABSTOP
+    PUSHBUTTON "Apply to A&ll Folders", 14001, 60, 50, 80, 14, WS_TABSTOP
+    PUSHBUTTON "&Ripristina tutte le cartelle", 14002, 150, 50, 80, 14, WS_TABSTOP
     LTEXT "Impostazioni avanzate:", -1, 7, 80, 100, 10
     CONTROL "", 14003, "SysTreeView32", WS_BORDER | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP | TVS_DISABLEDRAGDROP | TVS_LINESATROOT, 7, 90, 249, 120
-    PUSHBUTTON "Ripristina come predefinite", 14004, 160, 210, 100, 14, WS_TABSTOP
+    PUSHBUTTON "&Ripristinare i valori predefiniti", 14004, 177, 215, 80, 14, WS_TABSTOP
 END
 
 IDD_FOLDER_OPTIONS_FILETYPES DIALOGEX 0, 0, 264, 256
@@ -478,10 +479,10 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Chiudi sessione di ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    ICON IDI_SHELL_LOGOFF, IDC_STATIC, 7, 7, 20, 20
-    LTEXT "Siete sicuro di voler chiudere la sessione?", -1, 35, 16, 146, 8
-    DEFPUSHBUTTON "&Chiudi sessione", IDOK, 35, 39, 55, 14
-    PUSHBUTTON "Annulla", IDCANCEL, 95, 39, 50, 14
+    ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
+    LTEXT "Sei sicuro di volerti disconettere?", -1, 49, 15, 131, 8
+    DEFPUSHBUTTON "&Log Off", IDOK, 49, 38, 43, 14
+    PUSHBUTTON "Annulla", IDCANCEL, 99, 38, 43, 14
 END
 
 IDD_DISCONNECT DIALOGEX 0, 0, 188, 60
@@ -506,7 +507,7 @@ BEGIN
     AUTORADIOBUTTON "Selezionare una azione da &eseguire:", 1005, 14, 54, 202, 10, WS_GROUP
     CONTROL "LIST2", 1002, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 22, 66, 192, 107
     AUTORADIOBUTTON "&Chiedere ogni volta quale azione eseguire", 1006, 14, 177, 202, 10
-    PUSHBUTTON "&Ripristina le impostazioni predefinite", 1008, 108, 197, 110, 14, WS_DISABLED
+    PUSHBUTTON "&Restore Defaults", 1008, 108, 197, 110, 14, WS_DISABLED
 END
 
 IDD_MIXED_CONTENT1 DIALOGEX 0, 0, 227, 207
@@ -562,7 +563,7 @@ BEGIN
     COMBOBOX 8224, 39, 20, 165, 200, CBS_DROPDOWNLIST | WS_VSCROLL
     LTEXT "Mantenere la vostra sessione, il computer acceso a bassa potenza con i dati in memoria. Il computer si riattiverà quando è premuto un taso o mosso il mouse.", 8225, 39, 40, 167, 37
     DEFPUSHBUTTON "OK", 1, 7, 82, 60, 14, WS_GROUP
-    PUSHBUTTON "Annulla", IDCANCEL, 75, 82, 60, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 75, 82, 60, 14
     PUSHBUTTON "&Aiuto", IDHELP, 144, 82, 60, 14
 END
 
@@ -594,9 +595,9 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON "Inizia", IDOK, 63, 95, 60, 14
     GROUPBOX "Opzioni per la verifica del disco", -1, 7, 6, 179, 40
-    PUSHBUTTON "Annulla", IDCANCEL, 128, 95, 60, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 128, 95, 60, 14
     AUTOCHECKBOX "Correggi automaticamente gli errori", 14000, 12, 15, 155, 10
-    AUTOCHECKBOX "&Cerca i settori difettosi e tenta di correggerli", 14001, 16, 30, 165, 10
+    AUTOCHECKBOX "&Scan for and attempt recovery of bad sectors", 14001, 12, 30, 165, 10
     CONTROL "", 14002, "MSCTLS_PROGRESS32", 16, 7, 50, 179, 8
     LTEXT "", 14003, 60, 80, 170, 10
 END
@@ -612,7 +613,7 @@ BEGIN
     LTEXT "Select an icon from the list below:", -1, 7, 36, 179, 10
     LISTBOX IDC_PICKICON_LIST, 7, 47, 181, 120, LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | LBS_DISABLENOSCROLL | WS_HSCROLL | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 81, 179, 50, 14
-    PUSHBUTTON "Annulla", IDCANCEL, 135, 179, 50, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 135, 179, 50, 14
 END
 
 IDD_NOOPEN DIALOGEX 0, 0, 240, 75
@@ -683,7 +684,7 @@ BEGIN
     IDS_FORMATDRIVE "Formatta..."
     IDS_RENAME "Rinomina"
     IDS_PASTE "Inserisci"
-    IDS_EJECT "Eject"
+    IDS_EJECT "Espelli"
     IDS_DISCONNECT "Disconnect"
 
     IDS_CREATEFOLDER_DENIED "Unable to create the folder '%1'"
