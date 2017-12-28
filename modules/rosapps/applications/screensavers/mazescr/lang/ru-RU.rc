@@ -1,12 +1,4 @@
-/*
- * PROJECT:     ReactOS Default ScreenSaver
- * LICENSE:     Public Domain
- * FILE:        applications/screensavers/mazescr/lang/ru-RU.rc
- * PURPOSE:     Russian Language File for Maze ScreenSaver
- * TRANSLATOR:  Sergey Stopkin
- */
-
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 IDD_DLG_SCREEN DIALOGEX DISCARDABLE  0, 0, 276, 112
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
@@ -47,7 +39,7 @@ BEGIN
     DEFPUSHBUTTON   "OK",IDOK,87,100,56,14
 END
 
-STRINGTABLE DISCARDABLE
+STRINGTABLE DISCARDABLE 
 BEGIN
     IDS_DESCRIPTION         "Заставка ""Лабиринт"""
 END
