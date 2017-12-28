@@ -1,10 +1,4 @@
-/* 
- * FILE:        dll/win32/tapiui/lang/ro-RO.rc
- *              ReactOS Project (http://www.reactos.org)
- * TRANSLATOR:  Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 101 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -18,7 +12,7 @@ BEGIN
     PUSHBUTTON "No&uă…", 1030, 87, 155, 50, 14
     PUSHBUTTON "&Modificare…", 1031, 141, 155, 50, 14
     PUSHBUTTON "&Elimină", 1032, 195, 155, 50, 14
-    LTEXT "Numărul de telefon va fi apelat astfel:", 1052, 7, 181, 180, 8
+    LTEXT "Numărul de telefon va fi apelat astfel:", 1052, 7, 181, 100, 8
     LTEXT "", 1053, 14, 195, 224, 16
 END
 
@@ -50,13 +44,13 @@ BEGIN
     LTEXT "Apel prin:", -1, 14, 195, 40, 8
     AUTORADIOBUTTON "T&on", 1036, 58, 194, 50, 10, NOT WS_TABSTOP
     AUTORADIOBUTTON "&Puls", 1037, 112, 194, 50, 10, NOT WS_TABSTOP
-    LTEXT "Numărul de telefon va fi apelat astfel:", 1052, 7, 219, 180, 8
+    LTEXT "Numărul de telefon va fi apelat astfel:", 1052, 7, 219, 100, 8
     LTEXT "", 1053, 14, 232, 224, 16
 END
 
 103 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Reguli și coduri interurbane"
+CAPTION "Conexiuni de rețea"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "O regulă de apel desemnează modul în care sunt formate numerele în cazul apelurilor atât în interiorul cât și exteriorul regiunii în care vă aflați.", 2000, 7, 7, 238, 16
@@ -71,7 +65,7 @@ END
 
 104 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Cartelă de apel"
+CAPTION "Tratare erori de conectare"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Alegeți o cartelă de apel existentă, sau adăugați o nouă cartelă.", 2000, 7, 7, 238, 8
@@ -114,13 +108,13 @@ END
 
 106 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Apeluri interurbane"
+CAPTION "Conectare realizată"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Numărul de acces pentru apelurile interurbane:", -1, 7, 7, 238, 8
     EDITTEXT 1044, 7, 18, 140, 14, ES_AUTOHSCROLL
     LTEXT "Utilizați butoanele de mai jos pentru a specifica pașii necesari efectuării de apeluri interurbane.  Introduceți acești pași exact în ordinea apariției lor pe cartela de apel.", 2000, 7, 40, 238, 24
-    LTEXT "Pașii de utili&zare a cartelei:", -1, 7, 72, 120, 8
+    LTEXT "Pașii de utili&zare a cartelei:", -1, 7, 72, 80, 8
     CONTROL "List1", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000400D, 7, 83, 184, 74, WS_EX_CLIENTEDGE
     PUSHBUTTON "Mută s&us", 1022, 195, 83, 50, 14
     PUSHBUTTON "Mută j&os", 1023, 195, 101, 50, 14
@@ -141,7 +135,7 @@ BEGIN
     LTEXT "Numărul de acces pentru apeluri internaționale:", -1, 7, 7, 238, 8
     EDITTEXT 1045, 7, 18, 140, 14, ES_AUTOHSCROLL
     LTEXT "Utilizați butoanele de mai jos pentru a specifica pașii necesari efectuării de apeluri internaționale.  Introduceți acești pași exact în ordinea apariției lor pe cartela de apel.", 2000, 7, 40, 244, 24
-    LTEXT "Pașii de utili&zare a cartelei:", -1, 7, 72, 120, 8
+    LTEXT "Pașii de utili&zare a cartelei:", -1, 7, 72, 80, 8
     CONTROL "List1", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000400D, 7, 83, 184, 74, WS_EX_CLIENTEDGE
     PUSHBUTTON "Mută s&us", 1022, 195, 83, 50, 14
     PUSHBUTTON "Mută j&os", 1023, 195, 101, 50, 14
@@ -156,7 +150,7 @@ END
 
 108 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Apeluri locale"
+CAPTION "Schimbare parolă"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Numărul de acces pentru apeluri locale:", -1, 7, 7, 238, 8
@@ -178,7 +172,7 @@ END
 109 DIALOGEX 0, 0, 252, 257
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Reguli pentru cod nou de regiune"
+CAPTION "Schimbare parolă"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Această regulă va fi aplicată doar apelurilor către codul de regiune și prefixele pe care le veți specifica mai jos.", 2000, 7, 6, 238, 16
@@ -190,12 +184,12 @@ BEGIN
     AUTORADIOBUTTON "Include &doar prefixele enumerate mai jos:", 1015, 14, 104, 224, 12, NOT WS_TABSTOP
     LTEXT "&Prefixe incluse:", 1057, 26, 117, 119, 8
     CONTROL "List1", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000411D, 25, 128, 66, 32, WS_EX_CLIENTEDGE
-    PUSHBUTTON "&Adăugare…", 1005, 95, 128, 70, 14
-    PUSHBUTTON "&Elimină", 1024, 95, 146, 70, 14
+    PUSHBUTTON "&Adăugare…", 1005, 95, 128, 50, 14
+    PUSHBUTTON "&Elimină", 1024, 95, 146, 50, 14
     LTEXT "În cazul apelurilor ce conțin prefixele menționate:", -1, 14, 184, 224, 8
-    AUTOCHECKBOX "Apelea&ză:", 1012, 14, 198, 50, 12
-    EDITTEXT 1007, 66, 196, 42, 14, ES_AUTOHSCROLL
-    AUTOCHECKBOX "Include și codul de &regiune", 1029, 14, 214, 120, 12
+    AUTOCHECKBOX "Apelea&ză:", 1012, 14, 198, 30, 12
+    EDITTEXT 1007, 46, 196, 42, 14, ES_AUTOHSCROLL
+    AUTOCHECKBOX "Include și codul de &regiune", 1029, 14, 214, 85, 12
     DEFPUSHBUTTON "Con&firmă", 1, 141, 236, 50, 14
     PUSHBUTTON "A&nulează", 2, 195, 236, 50, 14
     RTEXT "Cod regiune", 2001, 133, 31, 51, 8
@@ -222,7 +216,7 @@ END
 111 DIALOGEX 0, 0, 252, 124
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Așteptare"
+CAPTION "Eroare de conectare la %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Stabiliți normele perioadei de așteptare (în cazul în care este necesară), în procesul de execuție a secvenței de apel.", 2000, 7, 7, 238, 16
@@ -230,7 +224,7 @@ BEGIN
     AUTORADIOBUTTON "Așteaptă completarea mesajului &vocal", 1016, 7, 47, 238, 10, NOT WS_TABSTOP
     AUTORADIOBUTTON "Așteaptă o anumită perioa&dă de timp:", 1048, 7, 63, 238, 10, NOT WS_TABSTOP
     EDITTEXT 1050, 18, 77, 36, 14, ES_AUTOHSCROLL | WS_GROUP
-    CONTROL "Spin1", 1049, "msctls_updown32", 0x00000036, 42, 77, 11, 14
+    CONTROL "Spin1", 1049, "msctls_updown32", 0x00000036, 42, 78, 11, 14
     LTEXT "se&cunde", -1, 58, 81, 187, 8
     DEFPUSHBUTTON "Con&firmă", 1, 141, 103, 50, 14
     PUSHBUTTON "A&nulează", 2, 195, 103, 50, 14
@@ -239,7 +233,7 @@ END
 112 DIALOGEX 0, 0, 252, 111
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Număr destinație"
+CAPTION "Apelare și închidere automată"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Acest pas va stabili numărul destinație care va fi apelat în secvența cartelei de apel.  Cum doriți să fie efectuată apelarea numărului destinație?", 2000, 7, 7, 238, 24
@@ -256,17 +250,17 @@ CAPTION "Avansate"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON 201, 2000, 7, 7, 20, 20
-    LTEXT "În acest calculator sunt disponibili următorii furnizori de servicii de telefonie:", -1, 40, 7, 205, 24
+    LTEXT "În acest calculator sunt disponibili următorii furnizori de servicii de telefonie:", -1, 40, 7, 205, 8
     LTEXT "F&urnizori:", -1, 7, 35, 238, 8
     LISTBOX 1033, 7, 46, 238, 147, LBS_STANDARD | LBS_NOINTEGRALHEIGHT | WS_TABSTOP
-    PUSHBUTTON "A&dăugare…", 1005, 57, 197, 60, 14
-    PUSHBUTTON "&Elimină", 1024, 121, 197, 60, 14
-    PUSHBUTTON "&Configurare…", 1031, 185, 197, 60, 14
+    PUSHBUTTON "A&dăugare…", 1005, 87, 197, 50, 14
+    PUSHBUTTON "&Elimină", 1024, 141, 197, 50, 14
+    PUSHBUTTON "&Configure...", 1031, 195, 197, 50, 14
 END
 
 114 DIALOGEX 20, 15, 252, 127
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
-CAPTION "Adăugare furnizor"
+CAPTION "Rețea comutată"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Alegeți un furnizor din lista de mai jos, apoi apăsați „Adaugă”", 2000, 7, 7, 241, 8
@@ -279,7 +273,7 @@ END
 115 DIALOGEX 10, 10, 303, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Informații locale"
+CAPTION "Conectare %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 302, 302, "STATIC", SS_BITMAP, 10, 10, 88, 155
@@ -318,7 +312,7 @@ END
 
 500 DIALOGEX 0, 0, 235, 88
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "ReactOS Explorer"
+CAPTION "Explorator ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON 504, 501, 13, 14, 21, 20
@@ -331,11 +325,11 @@ END
 STRINGTABLE
 BEGIN
     1 "Opțiuni de telefon și modem"
-    2 "Configurează regulile de apel și parametrii de utilizare a modemului."
+    2 "GRUPDELUCRU"
     3 "Locația"
-    4 "Pentru a adăuga o nouă locație, apăsați „Nouă”."
-    5 "Locație nouă"
-    6 "Editare locație"
+    4 "Schimbarea identității calculatorului"
+    5 "Grup de lucru:"
+    6 "Domeniu:"
     7 "Cartelă de apel nouă"
     8 "Editarea cartelei de apel"
     9 "Codul regiunii"
@@ -351,10 +345,10 @@ BEGIN
     19 "Apelare doar număr"
     20 "Toate"
     21 "Selectate"
-    22 "Modifică regula codului de regiune"
-    23 "Alegeți o regulă în lista de mai sus pentru a-i vedea descrierea, sau apăsați „Nouă” pentru a adăuga o regulă."
-    24 "Formează '%2' plus codul regiunii înaintea numărului pentru toate apelurile din codul regional %1."
-    25 "Formează '%2' înaintea numărului pentru toate apelurile din codul regional %1."
+    22 "Bun venit în grupul de lucru „%1”."
+    23 "Bun venit în domeniul „%1”."
+    24 "Repornirea calculatorului este necesară pentru a aplica schimbările aduse."
+    25 "Puteți schimba numele și apartenența acestui calculator la un domeniu sau grup de lucru. Schimbările pot afecta accesul la resursele rețelei."
     26 "Formează codul de regiune înaintea numărului pentru toate apelurile din codul regional %1."
     27 "Formează doar numărul pentru toate apelurile din codul regional %1."
     28 "Formează '%2' plus codul de regiune înaintea numărului pentru apelurile din codul regional %1, conținând prefixele specificate."
