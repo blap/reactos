@@ -60,6 +60,6 @@ BEGIN
         > ipconfig /renew EL*        ... renew any connection that has its\n \
                                          name starting with EL\n \
         > ipconfig /release *Con*    ... release all matching connections,\n \
-                                         eg. """Local Area Connection 1""" or\n \
+                                         eg. """Lokale Verbindung 1""" or\n \
                                              """Lokale Verbindung 2""\n"
 END
