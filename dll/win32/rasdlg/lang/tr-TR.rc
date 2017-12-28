@@ -1,6 +1,4 @@
-/* TRANSLATOR: 2014, 2015 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 102 DIALOGEX 0, 0, 255, 265
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -1227,7 +1225,7 @@ BEGIN
     LTEXT "&Bu Hizmetin Bulunduğu Giriş Numarası:", -1, 7, 85, 203, 8
     EDITTEXT 1553, 7, 97, 113, 14, ES_AUTOHSCROLL | ES_NUMBER
     AUTORADIOBUTTON "&TCP", 1554, 128, 99, 30, 10, NOT WS_TABSTOP
-    AUTORADIOBUTTON "&UDP", 1555, 166, 99, 31, 10, NOT WS_TABSTOP
+    AUTORADIOBUTTON "U&DP", 1555, 166, 99, 31, 10, NOT WS_TABSTOP
     DEFPUSHBUTTON "Tamam", 1, 86, 143, 60, 14
     PUSHBUTTON "İptal", 2, 150, 143, 60, 14
 END
@@ -1445,7 +1443,7 @@ BEGIN
     PUSHBUTTON "Çe&virme Kâideleri", 1108, 193, 195, 65, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 215, 248, 1
     DEFPUSHBUTTON "Çev&ir", 1590, 8, 221, 60, 14, WS_GROUP
-    PUSHBUTTON "Cancel", 1591, 71, 221, 60, 14
+    PUSHBUTTON "İptal", 1591, 71, 221, 60, 14
     PUSHBUTTON "&Husûsiyetler", 1107, 134, 221, 60, 14
     PUSHBUTTON "Ya&rdım", 1592, 198, 221, 60, 14
 END
@@ -2044,7 +2042,7 @@ BEGIN
     434 "%1 çevriliyor...\0"
     435 "%1'e X.25 boyunca bağlanılıyor...\0"
     436 "%1 boyunca sonradan bağlanılıyor...\0"
-    437 "%1 boyunca önceden bağlanılıyor...\0"
+    437 "437   (OEM - Amerika Birleşik Devletleri)"
     438 "Bağlandı.\0"
     439 "Aygıt bağlandı.\0"
     440 "Bağlantısı kesildi.\0"
@@ -2107,7 +2105,7 @@ BEGIN
     497 "X.25 PAD\0"
     498 "Bu çevirmeli bağlantıdan başka bilgisayarların kaynaklara erişmesine izin verebilirsiniz.\0"
     499 "VPN Sunucusu Seçimi\0"
-    500 "İstek üzerine çevirme etkinleştirilemiyor.\0"
+    500 "500   (IBM EBCDIC - Uluslararası)"
     501 "VPN sunucusunun adı ya da adresi ne?\0"
     502 "İsteğe bağlı çevirme edilginleştirilemiyor.\0"
     503 "Umûmî Ağ\0"
