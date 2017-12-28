@@ -1,9 +1,12 @@
 /*
- * Translators: Petru Dimitriu (petrimetri at gmail dot com)
- *              Ștefan Fulea (stefan dot fulea at mail dot md)
+ * PROJECT:    ReactOS Event Viewer
+ * LICENSE:    GPL - See COPYING in the top level directory
+ * FILE:       base/applications/mscutils/eventvwr/lang/en-US.rc
+ * PURPOSE:    English Language File for ReactOS Event Viewer
+ * TRANSLATOR: Marc Piulachs
  */
 
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDM_EVENTVWR MENU
 BEGIN
@@ -120,11 +123,11 @@ BEGIN
     LTEXT "Kio", IDC_STATIC, 130, 122, 20, 8
     LTEXT "Când dimensiunea maximă este atinsă:", IDC_STATIC, 17, 140, 219, 8
     CONTROL "Suprascrie evenimentele cân&d este necesar", IDC_OVERWRITE_AS_NEEDED, "Button", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 17, 155, 219, 10
-    CONTROL "Suprascrie evenimentele mai &vechi de", IDC_OVERWRITE_OLDER_THAN, "Button", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 17, 168, 155, 10
-    EDITTEXT IDC_EDIT_EVENTS_AGE, 175, 165, 35, 14, ES_LEFT | ES_NUMBER | WS_GROUP
+    CONTROL "Suprascrie evenimentele mai &vechi de", IDC_OVERWRITE_OLDER_THAN, "Button", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 17, 168, 102, 10
+    EDITTEXT IDC_EDIT_EVENTS_AGE, 122, 165, 35, 14, ES_LEFT | ES_NUMBER | WS_GROUP
     CONTROL "", IDC_UPDOWN_EVENTS_AGE, UPDOWN_CLASS, UDS_SETBUDDYINT | UDS_ALIGNRIGHT |
-            UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_GROUP, 104, 165, 10, 14
-    LTEXT "zile", IDC_STATIC, 215, 168, 20, 8
+            UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_GROUP, 157, 165, 10, 14
+    LTEXT "days", IDC_STATIC, 162, 168, 20, 8
     CONTROL "Inter&zice suprascrierea\n(gestiune manuală de jurnal)", IDC_NO_OVERWRITE, "Button", BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP | WS_TABSTOP, 17, 180, 143, 20
     PUSHBUTTON "&Opțiuni implicite", IDC_RESTOREDEFAULTS, 166, 183, 70, 14
     AUTOCHECKBOX "Conexiune de &bandă limitată", IDC_LOW_SPEED_CONNECTION, 7, 217, 167, 10
@@ -138,7 +141,7 @@ BEGIN
     IDS_APP_TITLE_EX "%s - %s autentificat pe \\\\"
     IDS_STATUS_MSG "%s are %lu (de) eveniment(e) (afișate: %lu)"
     IDS_LOADING_WAIT "Jurnal de evenimente în încărcare. Așteptați…"
-    IDS_NO_ITEMS "Nu există elemente de afișat." // "No events in this log."
+    IDS_NO_ITEMS "Nu există elemente de afișat."" // ""No events in this log."
     IDS_EVENTLOG_SYSTEM "Jurnale de sistem"
     IDS_EVENTLOG_APP "Jurnale de aplicație"
     IDS_EVENTLOG_USER "Jurnale de utilizator"
@@ -160,7 +163,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_BYTES_FORMAT "octeți" // "%s bytes"
+    IDS_BYTES_FORMAT "octeți"" // ""%s bytes"
     // "%1!ls! (%2!ls! bytes)"
 END
 
@@ -178,15 +181,15 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_COPY "Tip eveniment:       %s\r\n\
-Sursă eveniment:     %s\r\n\
-Categorie eveniment: %s\r\n\
-ID eveniment:        %s\r\n\
-Dată:                %s\r\n\
-Oră:                 %s\r\n\
-Utilizator:          %s\r\n\
-Calculator:          %s\r\n\
-Descriere :\r\n%s"
+    IDS_COPY "Event Type:     %s\r\n\
+Event Source:   %s\r\n\
+Event Category: %s\r\n\
+Event ID:       %s\r\n\
+Date:           %s\r\n\
+Time:           %s\r\n\
+User:           %s\r\n\
+Computer:       %s\r\n\
+Description:\r\n%s"
 END
 
 STRINGTABLE
