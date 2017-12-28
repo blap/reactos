@@ -1,4 +1,4 @@
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 IDD_PROPPAGEKEYBOARD DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -114,7 +114,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Keys", -1, 6, 11, 234, 62
     LTEXT "Premere lo shift cinque volter per abilitare la funzione di blocco dei tasti.",
-          -1, 12, 20, 234, 29
+          -1, 12, 20, 222, 29
     AUTOCHECKBOX "A&ctivate sticky keys", IDC_STICKY_ACTIVATE_CHECK, 12, 49, 222, 14
     GROUPBOX "Opzioni", -1, 6, 83, 234, 44
     AUTOCHECKBOX "&Premere il tasto modificatore due volte per bloccarlo", IDC_STICKY_LOCK_CHECK,
@@ -138,7 +138,7 @@ BEGIN
     GROUPBOX "Scorciatoie della tastiera", -1, 6, 11, 234, 62
     LTEXT "La scorciatoia per i filtri è:  \nTenere premuto lo <Shift destro> per otto secondi.",
           -1, 12, 20, 222, 29
-    AUTOCHECKBOX "&Use shortcut", IDC_FILTER_ACTIVATE_CHECK, 12, 49, 126, 14
+    AUTOCHECKBOX "&Usare la scorciatoia", IDC_FILTER_ACTIVATE_CHECK, 12, 49, 126, 14
     GROUPBOX "Opzioni dei filtri", -1, 6, 79, 234, 79
     AUTORADIOBUTTON "Ign&ora i tasti ripetuti", IDC_FILTER_BOUNCE_RADIO,
                     12, 91, 120, 11, WS_GROUP | WS_TABSTOP
@@ -195,7 +195,7 @@ BEGIN
     GROUPBOX "Scorciatoia da tastiera", -1, 6, 11, 234, 62
     LTEXT "La scorciatoia per i tasti del mouse è:  \nPremere <Alt Sinistro+Shift Sinistro+BlocNum>.",
           -1, 12, 20, 222, 29
-    AUTOCHECKBOX "&Usare la scorciatoia", IDC_MOUSEKEYS_ACTIVATE_CHECK,
+    AUTOCHECKBOX "&Use shortcut", IDC_MOUSEKEYS_ACTIVATE_CHECK,
                  12, 49, 222, 14
     GROUPBOX "Velocità del puntatore", -1, 6, 83, 234, 83
     LTEXT "&Velocità massima:", -1, 12, 96, 48, 11
