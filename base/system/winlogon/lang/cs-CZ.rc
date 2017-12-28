@@ -1,4 +1,4 @@
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 IDD_SHUTDOWNCOMPUTER DIALOGEX 45, 22, 164, 52
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
@@ -17,7 +17,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Dynamická knihovna %s selhala při nahrávaní.", IDC_GINALOADFAILED, 39, 16, 156, 24
     LTEXT "Kontaktujte správce počítače pro nahrazení dynamickě knihovny nebo obnovte původní dynamickou knihovnu.", IDC_GINALOADFAILEDCONTACT, 39, 53, 151, 25
-    DEFPUSHBUTTON "&Restart", 1, 80, 91, 68, 14
+    DEFPUSHBUTTON "&Restartovat", 1, 80, 91, 68, 14
 END
 
 STRINGTABLE
