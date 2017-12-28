@@ -2,7 +2,7 @@ LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 STRINGTABLE
 BEGIN
-    IDS_EDIT "Bearbeiten"
+    IDS_EDIT "&Bearbeiten"
     IDS_MARK "Markieren"
     IDS_COPY "Kopieren\tEnter"
     IDS_PASTE "Einfügen"
@@ -10,7 +10,7 @@ BEGIN
     IDS_SCROLL "Scrollen"
     IDS_FIND "Suchen..."
     IDS_DEFAULTS "Standardwerte"
-    IDS_PROPERTIES "Eigenschaften"
+    IDS_PROPERTIES "&Eigenschaften"
 /*
     IDS_SCROLLHERE "Hier scrollen"
     IDS_SCROLLTOP "Ganz nach oben scrollen"
