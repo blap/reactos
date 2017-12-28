@@ -1,4 +1,4 @@
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 IDD_MAIN DIALOGEX 0, 0, 375, 103
 STYLE DS_SHELLFONT | DS_CENTERMOUSE | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE |
@@ -20,7 +20,7 @@ BEGIN
     LTEXT           "Velg en handling:",-1,159,40,73,8
     CONTROL         "Prosess1",IDC_PROGRESS,"msctls_progress32",WS_BORDER |
                     0x1,7,71,320,10
-    CONTROL         "Statisk",IDC_STATUS,"Statisk",SS_LEFTNOWORDWRAP |
+    CONTROL         "Statisk",IDC_STATUS,"Static",SS_LEFTNOWORDWRAP |
                     SS_SUNKEN | WS_GROUP,7,86,359,10
     LTEXT           "Jeg er en ape, hør meg eeK",IDC_WISECRACKS,78,15,115,8
     LTEXT           "100.00%",IDC_PERCENT,337,71,30,8,0,WS_EX_RIGHT
@@ -80,5 +80,5 @@ BEGIN
     LTEXT           "Average fragments per file",-1,205,73,75,20
     LTEXT           "XX.X% av disse filene på denne stasjonen er fragmentert. Det er anbefalt at du utfører en SSSSSSS defragmentasjon.",
                     IDC_RECOMMEND,7,106,391,38,SS_SUNKEN
-    LTEXT           "Anbefalinger:",-1,7,96,62,8
+    LTEXT           "Anbefalinger:",-1,7,96,75,8
 END
