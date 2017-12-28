@@ -5,13 +5,13 @@ BEGIN
     POPUP "&Datei"
     BEGIN
         MENUITEM "&Neu\tStrg+N", IDM_FILE_NEW
-        MENUITEM "Ö&ffnen...\tStrg+O", IDM_FILE_OPEN
+        MENUITEM "&Öffnen...\tStrg+O", IDM_FILE_OPEN
         MENUITEM SEPARATOR
         MENUITEM "B&eenden\tAlt+F4", IDM_FILE_EXIT
     END
     POPUP "&Hilfe"
     BEGIN
-        MENUITEM "Ü&ber ReactOS Management Console", IDM_HELP_ABOUT
+        MENUITEM "&Über ReactOS Management Console", IDM_HELP_ABOUT
     END
 END
 
@@ -20,8 +20,8 @@ BEGIN
     POPUP "&Datei"
     BEGIN
         MENUITEM "&Neu\tStrg+N", IDM_FILE_NEW
-        MENUITEM "Ö&ffnen\tStrg+O", IDM_FILE_OPEN
-        MENUITEM "Speichern", IDM_FILE_SAVE
+        MENUITEM "&Öffnen...\tStrg+O", IDM_FILE_OPEN
+        MENUITEM "&Speichern", IDM_FILE_SAVE
         MENUITEM "Speichern unter...", IDM_FILE_SAVEAS
         MENUITEM SEPARATOR
         MENUITEM "B&eenden\tAlt+F4", IDM_FILE_EXIT
@@ -32,12 +32,12 @@ BEGIN
     END
     POPUP "&Hilfe"
     BEGIN
-        MENUITEM "Ü&ber ReactOS Management Console", IDM_HELP_ABOUT
+        MENUITEM "&Über ReactOS Management Console", IDM_HELP_ABOUT
     END
 END
 
 STRINGTABLE
 BEGIN
     IDS_APPTITLE "ReactOS Management Console"
-    IDS_CONSOLETITLE "Console%1!u!"
+    IDS_CONSOLETITLE "Konsole%1!u!"
 END
