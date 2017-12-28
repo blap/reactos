@@ -1,4 +1,4 @@
-LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_HUNGARIAN, SUBLANG_HUNGARIAN_HUNGARY
 
 IDD_KEYBSPEED DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -159,7 +159,7 @@ BEGIN
     IDS_SIZEALL "Move"
     IDS_UPARROW "Alternative Select"
     IDS_HAND "Link Select"
-    IDS_NONE "(None)"
+    IDS_NONE "(Nincs)"
     IDS_SYSTEM_SCHEME "(system scheme)"
     IDS_BROWSE_FILTER "Cursors (*.ani, *.cur)\0*.ani;*.cur\0Animated Cursors (*.ani)\0*.ani\0Static Cursors (*.cur)\0*.cur\0All Files\0*.*\0\0"
     IDS_BROWSE_TITLE "Browse"
