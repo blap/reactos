@@ -1,4 +1,4 @@
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 IDR_MAINMENU MENU
 BEGIN
@@ -16,7 +16,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Repea&t\tCtrl+T", IDM_REPEAT
     END
-    POPUP "&View"
+    POPUP "&Visualizza"
     BEGIN
         MENUITEM "Single-Window &Mode", IDM_SWITCHVIEW
     END
@@ -44,11 +44,11 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_MODE_UNKNOWN "Unknown"
+    IDS_MODE_UNKNOWN "Sconosciuto"
     IDS_MODE_OPEN "Opened"
-    IDS_MODE_STOP "Stopped"
+    IDS_MODE_STOP "Arrestato"
     IDS_MODE_PLAY "Playing"
-    IDS_MODE_PAUSE "Paused"
+    IDS_MODE_PAUSE "Fermato"
     IDS_MODE_RECORD "Recording"
     IDS_MODE_SEEK "Seeking"
     IDS_MODE_NOT_READY "Not ready"
