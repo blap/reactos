@@ -1,6 +1,6 @@
-// Norwegian (N.O.) resources
+// English (U.S.) resources
 
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 STRINGTABLE DISCARDABLE
 BEGIN
@@ -12,7 +12,7 @@ BEGIN
    IDS_COLUMN_CPU          "Prosesor"
    IDS_COLUMN_MEM          "Minnebruk"
    IDS_COLUMN_MEM_UNIT		"KB"
-   IDS_COLUMN_PF           "Page Faults"
+   IDS_COLUMN_PF           "Side mangel"
 
    IDS_IDLE_PROCESS        "System Idle Process"
    IDS_YES                 "J"
