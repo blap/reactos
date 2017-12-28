@@ -1,0 +1,28 @@
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+
+STRINGTABLE
+BEGIN
+    IDS_APPTITLE "ReactOS Picture and Fax Viewer"
+    IDS_SETASDESKBG "Definir como papel de parede da Área de Trabalho"
+    IDS_PREVIEW "Visualizar"
+    /* Tooltips */
+    IDS_TOOLTIP_NEXT_PIC "Próxima Imagem"
+    IDS_TOOLTIP_PREV_PIC "Imagem Anterior"
+    IDS_TOOLTIP_ZOOM_IN "Zoom In (+)"
+    IDS_TOOLTIP_ZOOM_OUT "Zoom Out (-)"
+    IDS_TOOLTIP_ROT_CLOCKW "Rotate Clockwise (Ctrl+K)"
+    IDS_TOOLTIP_ROT_COUNCW "Rotate Counterclockwise (Ctrl+L)"
+    IDS_TOOLTIP_PRINT "Imprimir (Ctrl+P)"
+    IDS_TOOLTIP_SAVEAS "Salvar como... (Ctrl + S)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_EMF_FILE    "EMF Image"
+    IDS_GIF_FILE    "GIF Image"
+    IDS_JPG_FILE    "JPEG Image"
+    IDS_BMP_FILE    "Bitmap Image"
+    IDS_PNG_FILE    "PNG Image"
+    IDS_TIF_FILE    "TIF Image"
+    IDS_WMF_FILE    "WMF Image"
+END
