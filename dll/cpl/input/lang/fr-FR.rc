@@ -1,4 +1,4 @@
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 IDD_PROPPAGESETTINGS DIALOGEX 0, 0, 254, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -34,7 +34,7 @@ BEGIN
     AUTORADIOBUTTON "Presser &la touche VERR MAJ", IDC_PRESS_CL_KEY_RB, 14, 17, 120, 11, WS_GROUP
     AUTORADIOBUTTON "Presser la touche MAJ", IDC_PRESS_SHIFT_KEY_RB, 144, 17, 120, 11, NOT WS_TABSTOP
     GROUPBOX "Touches de raccourci pour la saisie des langues", -1, 7, 37, 258, 95
-    LTEXT "Action", -1, 14, 47, 60, 9
+    LTEXT "&Quelle tâche voulez-vous que ces ordinateurs exécutent ?", -1, 14, 47, 60, 9
     RTEXT "Séquence de touches", -1, 177, 47, 79, 9
     CONTROL "", IDC_KEY_LISTVIEW, "SysListView32", LVS_REPORT | LVS_NOCOLUMNHEADER | LVS_AUTOARRANGE | LVS_SINGLESEL, 14, 57, 244, 52, WS_EX_CLIENTEDGE
     PUSHBUTTON "&Changer la séquence de touches...", IDC_CHANGE_KEY_SEQ_BTN, 152, 113, 106, 14, WS_GROUP
@@ -109,7 +109,6 @@ BEGIN
     IDS_REBOOT_NOW, "Reboot now?"
 END
 
-/* FIXME : À améliorer/compléter */
 STRINGTABLE
 BEGIN
     IDS_ALBANIAN_LAYOUT "Albanais"
