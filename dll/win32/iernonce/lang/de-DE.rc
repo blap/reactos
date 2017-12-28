@@ -3,14 +3,14 @@ LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 STRINGTABLE
 BEGIN
     IDS_INVALIDFORMAT "The format of the %1 RunEx or RunOnceEx entry was invalid. A vertical bar ('|') is needed after the function name and the function needs to support WinMain() parameters."
-    IDS_LOADERROR "An error occurred loading %1. The file may not have been installed or it has been corrupted."
-    IDS_CALLERROR "An error or exception occurred while calling the function %1 in %2."
+    IDS_LOADERROR "Ein Fehler ist aufgetreten beim Laden von %1. Die Datei wurde möglicherweise nicht Installiert oder ist beschädigt."
+    IDS_CALLERROR "Ein Fehler ist aufgetreten beim Aufruf der Funktion %1 in %2."
     IDS_INCORRECTFORMAT "The format of the following RunEx or RunOnceEx command is incorrect: %1. The shell execute command must start with ||."
     IDS_NOEXPORT "Unable to call the function %1 in the file %2 because that function does not exist or is not exported."
-    IDS_EXECUTEERROR "An error or exception occurred while executing %1."
+    IDS_EXECUTEERROR "Ein Fehler ist aufgetreten während dem Ausführen von %1."
     IDS_NOFUNCTION "Unable to find the function %1 in the file %2."
     IDS_NODEPENDENCY "Unable to load the dependency file %1."
-    IDS_SETUPERROR "An error has occurred while setting up %1. This error has been logged, the installation will continue"
+    IDS_SETUPERROR "Fehler ist aufgetreten beim Einrichten von %1. Der Fehler wurde protokolliert, die Installation wird fortgesetzt"
     IDS_INCOMPLETE "The previous installation of an application has not been completed.\n\nLogon with an Administrator account to complete the installation."
     IDS_SETUP "ReactOS-Installation"
     IDS_SERVICEERROR "Some services could not be started. Setup needs to restart your system in order to start the services."
