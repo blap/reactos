@@ -1,6 +1,4 @@
-/* Translation and UTF-8 Conversion by mkbu95 <mkbu95@gmail.com> (August, 2011) */
-
-LANGUAGE LANG_PORTUGUESE, SUBLANG_NEUTRAL
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
 
 IDR_MAINMENU MENU
 BEGIN
@@ -34,7 +32,7 @@ BEGIN
     POPUP "popup"
     BEGIN
         MENUITEM "A&brir endereço no navegador", ID_OPEN_LINK
-        MENUITEM "&Copiar endereço", ID_COPY_LINK
+        MENUITEM "&Copiar endereço para área de transferência", ID_COPY_LINK
     END
 END
 
@@ -64,12 +62,12 @@ BEGIN
     AUTOCHECKBOX "&Atualizar esta lista de programas ao iniciar", IDC_UPDATE_AVLIST, 15, 29, 222, 12
     AUTOCHECKBOX "&Registro de instalação e remoção de programas", IDC_LOG_ENABLED, 15, 46, 219, 12
     GROUPBOX "Baixando", -1, 4, 65, 240, 51
-    LTEXT "Pasta de download:", -1, 16, 75, 100, 9
+    LTEXT "Pasta de downloads:", -1, 16, 75, 100, 9
     EDITTEXT IDC_DOWNLOAD_DIR_EDIT, 15, 86, 166, 12, WS_CHILD | WS_VISIBLE | WS_GROUP | ES_AUTOHSCROLL
     PUSHBUTTON "&Escolher", IDC_CHOOSE, 187, 85, 50, 14
-    AUTOCHECKBOX "&Deletar instalador após a instalação do programa", IDC_DEL_AFTER_INSTALL, 16, 100, 218, 12
+    AUTOCHECKBOX "E&xcluir o instalador do programa após a instalação", IDC_DEL_AFTER_INSTALL, 16, 100, 218, 12
     GROUPBOX "Proxy", -1, 4, 116, 240, 76
-    CONTROL "System proxy settings", IDC_PROXY_DEFAULT, "Button", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 15, 130, 210, 10
+    CONTROL "Configurações de proxy do sistema", IDC_PROXY_DEFAULT, "Button", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 15, 130, 210, 10
     CONTROL "Direct (No proxy)", IDC_NO_PROXY, "Button", BS_AUTORADIOBUTTON | WS_TABSTOP, 15, 145, 210, 10
     CONTROL "Proxy", IDC_USE_PROXY, "Button", BS_AUTORADIOBUTTON | WS_TABSTOP, 15, 160, 74, 10
     EDITTEXT IDC_PROXY_SERVER, 90, 160, 147, 12, ES_AUTOHSCROLL | WS_DISABLED
@@ -92,9 +90,9 @@ BEGIN
     PUSHBUTTON "Cancelar", IDCANCEL, 150, 78, 60, 14
 END
 
-IDD_DOWNLOAD_DIALOG DIALOGEX 0, 0, 220, 72
-STYLE DS_SHELLFONT | DS_CENTER | WS_BORDER | WS_CAPTION | WS_POPUP | WS_SYSMENU | WS_VISIBLE
-CAPTION "Download %ls..."
+IDD_DOWNLOAD_DIALOG DIALOGEX 0, 0, 220, 220
+STYLE DS_SHELLFONT | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION | WS_VISIBLE 
+CAPTION "Baixando %ls..."
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "Progress1", IDC_DOWNLOAD_PROGRESS, "msctls_progress32", WS_BORDER | PBS_SMOOTH, 10, 10, 200, 12
@@ -139,14 +137,14 @@ BEGIN
     IDS_INFO_HELPPHONE "\nTelefone de Contato: "
     IDS_INFO_README "\nLeia-me: "
     IDS_INFO_REGOWNER "\nProprietário Registrado: "
-    IDS_INFO_PRODUCTID "\nID do Produto: "
+    IDS_INFO_PRODUCTID "\nIdentificação do Produto: "
     IDS_INFO_CONTACT "\nContato: "
     IDS_INFO_UPDATEINFO "\nInformações de Atualização: "
     IDS_INFO_INFOABOUT "\nInformações Sobre: "
     IDS_INFO_COMMENTS "\nComentários: "
     IDS_INFO_INSTLOCATION "\nLocal de Instalação: "
     IDS_INFO_INSTALLSRC "\nInstalar Código-Fonte: "
-    IDS_INFO_UNINSTALLSTR "\nDesinstalar String: "
+    IDS_INFO_UNINSTALLSTR "\nCaminho do desinstalador: "
     IDS_INFO_MODIFYPATH "\nModificar Caminho: "
     IDS_INFO_INSTALLDATE "\nData de Instalação: "
 END
@@ -157,9 +155,9 @@ BEGIN
     IDS_AINFO_AVAILABLEVERSION "\nAvailable Version: "
     IDS_AINFO_DESCRIPTION "\nDescrição: "
     IDS_AINFO_SIZE "\nTamanho: "
-    IDS_AINFO_URLSITE "\nPágina: "
+    IDS_AINFO_URLSITE "\nPágina Inicial: "
     IDS_AINFO_LICENSE "\nLicença: "
-    IDS_AINFO_URLDOWNLOAD "\nTransferir: "
+    IDS_AINFO_URLDOWNLOAD "\nBaixar: "
     IDS_AINFO_LANGUAGES "\nLanguages: "
 END
 
@@ -168,9 +166,9 @@ BEGIN
     IDS_CAT_AUDIO "Áudio"
     IDS_CAT_DEVEL "Desenvolvimento"
     IDS_CAT_DRIVERS "Drivers"
-    IDS_CAT_EDU "Educação"
+    IDS_CAT_EDU "Entretenimento educativo"
     IDS_CAT_ENGINEER "Engenharia"
-    IDS_CAT_FINANCE "Financeiro"
+    IDS_CAT_FINANCE "Finanças"
     IDS_CAT_GAMES "Jogos & Diversão"
     IDS_CAT_GRAPHICS "Gráficos"
     IDS_CAT_INTERNET "Internet & Rede"
@@ -189,7 +187,7 @@ BEGIN
     IDS_INSTALL "Instalar"
     IDS_UNINSTALL "Desinstalar"
     IDS_MODIFY "Modificar"
-    IDS_APPS_COUNT "Número de aplicativos: %d; Selected: %d"
+    IDS_APPS_COUNT "Número de aplicativos: %d; Selecionados: %d"
     IDS_WELCOME_TITLE "Bem-vindo(a) a Central de Aplicativos ReactOS!\n\n"
     IDS_WELCOME_TEXT "Escolha uma categoria à esquerda, então escolha um aplicativo para instalar ou desinstalar.\nWeb Site ReactOS: "
     IDS_WELCOME_URL "http://www.reactos.org"
@@ -201,34 +199,34 @@ BEGIN
     IDS_CHOOSE_FOLDER_ERROR "A pasta especificada não existe. Deseja criá-la?"
     IDS_APP_REG_REMOVE "Você tem certeza que deseja apagar as informações do programa instalado do registro?"
     IDS_INFORMATION "Informações"
-    IDS_UNABLE_TO_DOWNLOAD "Unable to download the package! Address not found!"
-    IDS_UNABLE_TO_DOWNLOAD2 "Unable to download the package! Check Internet Connection!"
+    IDS_UNABLE_TO_DOWNLOAD "Não foi possível baixar o pacote! Endereço não encontrado!"
+    IDS_UNABLE_TO_DOWNLOAD2 "Não é possível baixar o pacote! Verifique a Conexão de Internet!"
     IDS_UNABLE_TO_REMOVE "Não foi possível remover as informações do programa do registro!"
-    IDS_UNABLE_TO_INSTALL "Unable to open installer!"
-    IDS_CERT_DOES_NOT_MATCH "SSL certificate verification failed."
-    IDS_INTEG_CHECK_TITLE "Verifying package integrity..."
-    IDS_INTEG_CHECK_FAIL "The package did not pass the integrity check, it may have been corrupted or tampered with during downloading. Running the software is not recommended."
-    IDS_INTERRUPTED_DOWNLOAD "The download was interrupted. Check connection to Internet."
-    IDS_UNABLE_TO_WRITE "Unable to write to disk. Disk may be at capacity."
-    IDS_SELECT_ALL "Select/Deselect All"
-    IDS_INSTALL_SELECTED "Install Selected"
+    IDS_UNABLE_TO_INSTALL "Não é possível abrir o instalador!"
+    IDS_CERT_DOES_NOT_MATCH "Falha na verificação do certificado SSL."
+    IDS_INTEG_CHECK_TITLE "Verificando integridade do pacote..."
+    IDS_INTEG_CHECK_FAIL "Esse pacote não passou na verificação de integridade, ele pode ter sido corrompido ou adulterado durante o donwload. Executar esse software não é recomendado."
+    IDS_INTERRUPTED_DOWNLOAD "O download foi interrompido. Cheque sua conexão com a Internet."
+    IDS_UNABLE_TO_WRITE "Não foi possível gravar no disco. O disco pode estar cheio."
+    IDS_SELECT_ALL "Marcar/Desmarcar todos"
+    IDS_INSTALL_SELECTED "Instalar Selecionados"
 END
 
 STRINGTABLE
 BEGIN
-    IDS_STATUS_INSTALLED "Installed"
-    IDS_STATUS_NOTINSTALLED "Not installed"
-    IDS_STATUS_DOWNLOADED "Downloaded"
-    IDS_STATUS_UPDATE_AVAILABLE "Update available"
-    IDS_STATUS_DOWNLOADING "Downloading…"
-    IDS_STATUS_INSTALLING "Installing…"
-    IDS_STATUS_WAITING "Waiting to install…"
-    IDS_STATUS_FINISHED "Finished"
+    IDS_STATUS_INSTALLED "Instalado"
+    IDS_STATUS_NOTINSTALLED "Não instalado"
+    IDS_STATUS_DOWNLOADED "Baixado"
+    IDS_STATUS_UPDATE_AVAILABLE "Atualização Disponível"
+    IDS_STATUS_DOWNLOADING "Baixando…"
+    IDS_STATUS_INSTALLING "Instalando…"
+    IDS_STATUS_WAITING "Esperando para instalar…"
+    IDS_STATUS_FINISHED "Concluído"
 END
 
 STRINGTABLE
 BEGIN
-    IDS_LICENSE_OPENSOURCE "Open Source"
+    IDS_LICENSE_OPENSOURCE "Código Aberto"
     IDS_LICENSE_FREEWARE "Freeware"
     IDS_LICENSE_TRIAL "Trial/Demo"
 END
@@ -239,12 +237,12 @@ BEGIN
     IDS_LANGUAGE_NO_TRANSLATION "Supports other languages"
     IDS_LANGUAGE_ENGLISH_TRANSLATION "Supports English"
     IDS_LANGUAGE_SINGLE "Single language"
-    IDS_LANGUAGE_MORE_PLACEHOLDER " (+%d more)"
-    IDS_LANGUAGE_AVAILABLE_PLACEHOLDER " (+%d available)"
+    IDS_LANGUAGE_MORE_PLACEHOLDER " (+%d mais)"
+    IDS_LANGUAGE_AVAILABLE_PLACEHOLDER " (+%d disponível)"
 END
 
 STRINGTABLE
 BEGIN
-    IDS_DL_DIALOG_DB_DISP "Applications Database"
-    IDS_DL_DIALOG_DB_DOWNLOAD_DISP "Updating Database..."
+    IDS_DL_DIALOG_DB_DISP "Banco de Dados de Aplicativos"
+    IDS_DL_DIALOG_DB_DOWNLOAD_DISP "Atualizando o Banco de Dados..."
 END
