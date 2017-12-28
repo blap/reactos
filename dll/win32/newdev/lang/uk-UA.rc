@@ -1,19 +1,11 @@
-/*
- * PROJECT:     New device installer
- * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        dll/win32/newdev/lang/uk-UA.rc
- * PURPOSE:     Ukraianian Language File for newdev
- * TRANSLATORS: Artem Reznikov, Igor Paliychuk
- */
-
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "Встановлення пристрою"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Ласкаво просимо", IDC_WELCOMETITLE, 120, 8, 195, 16
+    LTEXT "Ласкаво просимо", IDC_WELCOMETITLE, 120, 8, 195, 24
     LTEXT "Цей майстер встановлює новий драйвер пристрою для:", IDC_STATIC, 120, 21, 195, 16
     LTEXT "Натисніть ""Далі"" для продовження.", IDC_STATIC, 120, 169, 195, 16
     LTEXT "НЕВІДОМИЙ ПРИСТРІЙ", IDC_DEVICE, 148, 36, 147, 12
@@ -29,7 +21,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Встановлення не вдалося", IDC_FINISHTITLE, 120, 8, 195, 16
     LTEXT "Пристрій не встановлено, тому що драйвер не знайдено.", IDC_STATIC, 120, 32, 195, 16
-    LTEXT "Натисніть ""Назад"", якщо у Вас є диск з драйвером або Ви знаєте шлях до драйвера.", IDC_STATIC, 120, 98, 195, 16
+    LTEXT "Click on Back if you have a driver disk or know the path to the driver.", IDC_STATIC, 120, 98, 195, 16
     CONTROL "Більше не показувати цей діалог", IDC_DONOTSHOWDLG, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 120, 170, 195, 12
 END
 
