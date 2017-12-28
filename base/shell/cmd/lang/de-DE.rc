@@ -280,7 +280,7 @@ If neither /H or /J is specified, a symbolic link is created."
   %13s bytes total virtual memory.\n\
   %13s bytes available virtual memory.\n"
     STRING_MISC_HELP1 "Drücken Sie eine beliebige Taste . . ."
-    STRING_MOVE_HELP1 "Überschreiben %s (Ja/Nein/Alle)? "
+    STRING_MOVE_HELP1 "%s überschreiben (Ja/Nein/Alle)? "
     STRING_MOVE_HELP2 "Moves files and renames files and directories.\n\n\
 To move one or more files:\n\
 MOVE [/N][drive:][path]filename1[,...] destination\n\n\
@@ -378,8 +378,8 @@ REPLACE [drive1:][path1]filename [drive2:][path2] [/P] [/R] [/S] [/W] [/U]\n\n\
     STRING_REPLACE_HELP6 "Ersetze %s\n"
     STRING_REPLACE_HELP7 "Keine Dateien hinzugefügt\n"
     STRING_REPLACE_HELP8 "%lu Datei(en) hinzugefügt\n"
-    STRING_REPLACE_HELP9 "Füge %s hinzu (J/N)? "
-    STRING_REPLACE_HELP10 "Ersetze %s (J/N)? "
+    STRING_REPLACE_HELP9 "%s hinzufügen (J/N)? "
+    STRING_REPLACE_HELP10 "%s ersetzen (J/N)? "
     STRING_REPLACE_HELP11 "Füge %s hinzu\n"
     STRING_SHIFT_HELP "Changes the position of replaceable parameters in a batch file.\n\n\
 SHIFT [DOWN]"
@@ -395,7 +395,7 @@ Type SET without parameters to display the current environment variables.\n"
     STRING_START_HELP1 "Starts a command.\n\n\
 START [""title""] [/D path] [/I] [/B] [/MIN] [/MAX] [/WAIT]\n\
       [command/program] [parameters]\n\n\
-  """options"""     Title of the window.\n\
+  """Titel"""     Title of the window.\n\
   path        Specifies the startup directory.\n\
   I           Uses the original environment given to cmd.exe,\n\
               instead of the current environment.\n\
