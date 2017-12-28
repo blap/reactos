@@ -1,12 +1,12 @@
 /*
- * PROJECT:    Solitaire
- * LICENSE:    Freeware, permission to use under Public Domain
- * FILE:       base/applications/games/solitaire/lang/th-TH.rc
- * PURPOSE:    Thai Language File for Solitaire
- * TRANSLATOR: Sumath Aowsakulsutthi
-*/
+ * PROJECT:     Solitaire
+ * LICENSE:     Freeware, permission to use under Public Domain
+ * FILE:        base/applications/games/solitaire/lang/en-US.rc
+ * PURPOSE:     English Language File for Solitaire
+ * PROGRAMMERS: Daniel "EmuandCo" Reimer (reimer.daniel@freenet.de)
+ */
 
-LANGUAGE LANG_THAI, SUBLANG_DEFAULT
+LANGUAGE LANG_THAI, SUBLANG_THAI_THAILAND
 
 /* Dialogs */
 
@@ -19,7 +19,7 @@ BEGIN
     AUTORADIOBUTTON "Draw &One", IDC_OPT_DRAWONE, 14, 19, 70, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "Draw &Three", IDC_OPT_DRAWTHREE, 14, 32, 70, 10
     GROUPBOX "Scoring", -1, 100, 7, 75, 53
-    AUTORADIOBUTTON "&Standard", IDC_OPT_STANDARD, 107, 19, 60, 10, WS_GROUP | WS_TABSTOP
+    AUTORADIOBUTTON "&มาตรฐาน", IDC_OPT_STANDARD, 107, 19, 60, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "&Vegas", IDC_OPT_VEGAS, 107, 32, 60, 10
     AUTORADIOBUTTON "&None", IDC_OPT_NOSCORE, 107, 45, 60, 10
     AUTOCHECKBOX "&Show Time", IDC_OPT_SHOWTIME, 7 ,51 ,65 ,10, WS_TABSTOP
