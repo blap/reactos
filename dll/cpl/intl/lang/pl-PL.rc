@@ -1,12 +1,4 @@
-/*
- *    Translated by Caemyr - Olaf Siejka (Jan, 2008; May 2010)
- *    Use ReactOS forum PM or IRC to contact me
- *    http://www.reactos.org
- *    IRC: irc.freenode.net #reactos-pl;
- *    UTF-8 conversion by Caemyr (May, 2011)
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 IDD_GENERALPAGE DIALOGEX 0, 0, 246, 230
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -29,8 +21,8 @@ BEGIN
     EDITTEXT IDC_TIMESAMPLE_EDIT, 89, 116, 140, 12, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
     EDITTEXT IDC_SHORTTIMESAMPLE_EDIT, 89, 131, 140, 12, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
     EDITTEXT IDC_FULLTIMESAMPLE_EDIT, 89, 146, 140, 12, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
-    GROUPBOX "Lokalizacja geograficzna", -1, 5, 171, 234, 55
-    LTEXT "Ustaw swoją obecną lokalizację, by pewne usługi mogły dostarczać lokalnych informacji; na przykład wiadomości i prognozy pogody.", -1, 14, 180, 215, 24
+    GROUPBOX "Geographic location", -1, 5, 172, 234, 55
+    LTEXT "Se&t up your location so that some services can supply you with local information; for example, news and weather reports.", -1, 14, 184, 210, 24
     COMBOBOX IDC_LOCATION_COMBO, 14, 207, 217, 160, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP | CBS_SORT
 END
 
@@ -44,8 +36,8 @@ BEGIN
     PUSHBUTTON "&Szczegóły...", IDC_DETAIL_BUTTON, 177, 34, 54, 14
     GROUPBOX "Obsługa języków dodatkowych", -1, 5, 62, 234, 82
     LTEXT "Większość języków jest instalowana domyślnie. Aby zainstalować języki dodatkowe, zaznacz poniżej odpowiednie pole wyboru.", -1, 12, 72, 220, 18
-    CHECKBOX "Instalacja języków &o złożonej pisowni i języków z pisownią od prawej do lewej", IDC_INST_FILES_FOR_RTOL_LANG, 12, 92, 215, 22, BS_MULTILINE | BS_TOP
-    CHECKBOX "Instalacja języków &wschodnioazjatyckich", IDC_INST_FILES_FOR_ASIAN, 12, 114, 180, 22, BS_MULTILINE | BS_TOP
+    AUTOCHECKBOX "I&nstall files for complex script and right-to-left languages", IDC_INST_FILES_FOR_RTOL_LANG, 12, 92, 215, 22, BS_MULTILINE | BS_TOP
+    AUTOCHECKBOX "In&stall files for East Asian languages", IDC_INST_FILES_FOR_ASIAN, 12, 114, 180, 22, BS_MULTILINE | BS_TOP
 END
 
 IDD_ADVANCEDPAGE DIALOGEX 0, 0, 246, 230
@@ -60,7 +52,7 @@ BEGIN
     GROUPBOX "Tabele konwersji stron kodowych", -1, 5, 101, 234, 88
     CONTROL "", IDC_CONV_TABLES, "SysListView32", LVS_REPORT | LVS_SORTASCENDING | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP, 14, 114, 217, 70
     GROUPBOX "Domyślne ustawienia konta użytkownika", -1, 5, 193, 234, 32
-    CHECKBOX "Zastosuj wszystkie ustawienia do bieżącego konta użytkownika i do domyślnego profilu użytkownika.", IDC_APPLY_CUR_USER_DEF_PROFILE, 12, 201, 220, 22, BS_MULTILINE | BS_TOP
+    AUTOCHECKBOX "Apply all settings to the current user account and to the &default", IDC_APPLY_CUR_USER_DEF_PROFILE, 12, 201, 220, 22, BS_MULTILINE | BS_TOP
 END
 
 IDD_NUMBERSPAGE DIALOGEX 0, 0, 246, 234
@@ -70,12 +62,12 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Przykład", -1, 7, 7, 230, 53, WS_CHILD | WS_VISIBLE
     LTEXT "Dodatnie:", -1, 13, 21, 31, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
-    EDITTEXT IDC_NUMBERSPOSSAMPLE, 48, 19, 67, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
+    EDITTEXT IDC_NUMBERSPOSSAMPLE, 43, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
     LTEXT "Ujemne:", -1, 120, 21, 31, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     EDITTEXT IDC_NUMBERSNEGSAMPLE, 154, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
     LTEXT "Symbol &dziesiętny:", -1, 8, 67, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_NUMBERDSYMBOL, 137, 65, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "&Liczba cyfr po symbolu dziesiętnym:", -1, 8, 83, 124, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "&Liczba cyfr po symbolu dziesiętnym:", -1, 8, 83, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_NUMBERSNDIGDEC, 137, 81, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
     LTEXT "&Symbol grupowania cyfr:", -1, 8, 100, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_NUMBERSDIGITGRSYM, 137, 97, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
@@ -99,23 +91,23 @@ CAPTION "Waluta"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Przykład", -1, 7, 7, 230, 33, WS_CHILD | WS_VISIBLE
-    LTEXT "Dodatnie:", -1, 13, 21, 31, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Dodatnie:", -1, 13, 21, 27, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     EDITTEXT IDC_CURRENCYPOSSAMPLE, 43, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
-    LTEXT "Ujemne:", -1, 120, 21, 31, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Ujemne:", -1, 120, 21, 30, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     EDITTEXT IDC_CURRENCYNEGSAMPLE, 154, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
-    LTEXT "Symbol &waluty:", -1, 10, 51, 111, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Symbol &waluty:", -1, 10, 51, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_CURRENCYSYMBOL, 134, 49, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "F&ormat liczb dodatnich:", -1, 10, 68, 111, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "F&ormat liczb dodatnich:", -1, 10, 68, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_CURRENCYPOSVALUE, 134, 66, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "&Format liczb ujemnych:", -1, 10, 85, 111, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "&Format liczb ujemnych:", -1, 10, 85, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_CURRENCYNEGVALUE, 134, 83, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "Symbol &dziesiętny:", -1, 10, 111, 111, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Symbol &dziesiętny:", -1, 10, 111, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_CURRENCYDECSEP, 134, 109, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
     LTEXT "&Liczba cyfr po symbolu dziesiętnym:", -1, 10, 128, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_CURRENCYDECNUM, 134, 126, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "Symbol grupowania &cyfr:", -1, 10, 156, 111, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Symbol grupowania &cyfr:", -1, 10, 156, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_CURRENCYGRPSEP, 134, 154, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "&Grupowanie cyfr:", -1, 10, 173, 111, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "&Grupowanie cyfr:", -1, 10, 173, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_CURRENCYGRPNUM, 134, 171, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
 END
 
@@ -153,9 +145,9 @@ BEGIN
     LTEXT "do", -1, 55, 32, 17, 8
     EDITTEXT IDC_SECONDYEAR_EDIT, 77, 30, 36, 12, ES_LEFT | ES_NUMBER | WS_GROUP
     CONTROL "",IDC_SCR_MAX_YEAR, "msctls_updown32", UDS_NOTHOUSANDS | UDS_WRAP | UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_CHILD | WS_VISIBLE, 113, 30, 10, 12
-    LTEXT "Rodzaj kalendarza:", -1, 13, 48, 64, 10
+    LTEXT "Rodzaj kalendarza:", -1, 13, 48, 56, 10
     COMBOBOX IDC_CALTYPE_COMBO, 77, 46, 153, 100, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP | WS_DISABLED
-    LTEXT "Kalendarz muzułmański:", -1, 13, 62, 60, 16
+    LTEXT "&Muslim Calendar:", -1, 13, 65, 60, 12
     COMBOBOX IDC_HIJCHRON_COMBO, 77, 64, 153, 100, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP | WS_DISABLED
     GROUPBOX "Format daty krótkiej", -1, 7, 83, 230, 81
     LTEXT "Przykład:", -1, 13, 95, 63, 10
