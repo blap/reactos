@@ -1,10 +1,4 @@
-/*
- *    Translated by Polish Translation Team (Apr, 2007)
- *    https://sourceforge.net/projects/reactospl
- *    UTF-8 conversion by Caemyr (May, 2011)
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 /* String Tables */
 
