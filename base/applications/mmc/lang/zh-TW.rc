@@ -1,12 +1,4 @@
-/*
- * PROJECT:    ReactOS Management Console
- * LICENSE:    GPL - See COPYING in the top level directory
- * FILE:       base/applications/mmc/lang/zh-TW.rc
- * PURPOSE:    Chinese (Traditional) Language File for Management Console
- * TRANSLATOR: Elton Chung aka MfldElton <elton328@gmail.com>
- */
-
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+LANGUAGE LANG_CHINESE_TRADITIONAL, SUBLANG_CHINESE_TRADITIONAL
 
 IDM_CONSOLE_SMALL MENU
 BEGIN
