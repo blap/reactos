@@ -1,6 +1,4 @@
-/* Translated by Radek Liska aka Black_Fox (radekliska at gmail dot com) */
-
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 STRINGTABLE
 BEGIN
