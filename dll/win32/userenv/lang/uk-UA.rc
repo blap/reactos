@@ -1,4 +1,4 @@
-LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_UKRAINIAN, SUBLANG_UKRAINIAN_UKRAINE
 
 STRINGTABLE
 BEGIN
@@ -7,8 +7,8 @@ BEGIN
     IDS_DESKTOP "Робочий стіл"
     IDS_FAVORITES "Обране"
     IDS_MYDOCUMENTS "Мої документи"
-    IDS_NETHOOD "NetHood"
-    IDS_PRINTHOOD "PrintHood"
+    IDS_NETHOOD "Мережне оточення"
+    IDS_PRINTHOOD "Принтери"
     IDS_RECENT "Recent"
     IDS_SENDTO "Відправити"
     IDS_TEMPLATES "Шаблони"
