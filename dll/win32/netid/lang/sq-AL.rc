@@ -1,8 +1,4 @@
-/* TRANSLATOR : Ardit Dani (Ard1t) (ardit.dani@gmail.com)
- * DATE OF TRANSLATION:  23-01-2014
-*/
-
-LANGUAGE LANG_ALBANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ALBANIAN, SUBLANG_ALBANIAN_ALBANIA
 
 IDD_PROPPAGECOMPUTER DIALOGEX 0, 0, 256, 218
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -74,11 +70,11 @@ BEGIN
     25 "Ju mund të ndryshoni emrin dhe anëtarësimin e këtij kompjuteri. Ndryshimet mund të ndikojnë në hyrjet e burimeve në rrjet."
     1021 "Shenime: Vetëm Administratorët mund të ndryshojnë identifikimin e këtij kompjuteri."
     1022 "Shenim: Identifikimi i kompjuterit nuk mund të ndryshohet sepse:"
-    1030 "Emri i ri kompjuterik ""%s"" përmban karaktere të cilat nuk janë të lejuara. Karakterët të cilat nuk janë të lejuar përfshijnë ` ~ ! @ # $ %% ^ & * ( ) = + _ [ ] { } \\ | ; : ' "" , . < > / and ?"
+    1030 "The new computer name ""%s"" contains characters which are not allowed. Characters which are not allowed include ` ~ ! @ # $ %% ^ & * ( ) = + _ [ ] { } \\ | ; : ' "" , . < > / and ?"
     /* Windows allows using these characters, although it displays a warning message.
        Forbidding the use of these characters means incompatibility with Windows. */
-    3210 "&Detaje >>"
-    3220 "<< &Detaje"
-    4000 "Informacion"
-    4001 "Nuk mund të vihet një emër i ri kompjuterik!"
+    3210 "&Details >>"
+    3220 "<< &Details"
+    4000 "Information"
+    4001 "Can't set new a computer name!"
 END
