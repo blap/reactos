@@ -1,6 +1,4 @@
-/* Translator: Ștefan Fulea (stefan dot fulea at mail dot md) */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 IDD_GENERALPAGE DIALOGEX 0, 0, 246, 230
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -10,14 +8,14 @@ BEGIN
     GROUPBOX "Standarde și formate", -1, 5, 5, 234, 162
     LTEXT "Această opțiune afectează modul în care numerele, valutele, data și ora sunt reprezentare în anumite aplicații.", -1, 14, 17, 220, 25
     LTEXT "Alegeți o configurație prestabilită sau specificați una particularizată pentru formatele de afișare:", -1, 14, 37, 220, 22
-    COMBOBOX IDC_LANGUAGELIST, 14, 56, 150, 160, CBS_DROPDOWNLIST | CBS_SORT | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    PUSHBUTTON "&Particularizare…", IDC_SETUP_BUTTON, 168, 56, 62, 13
+    COMBOBOX IDC_LANGUAGELIST, 14, 56, 160, 160, CBS_DROPDOWNLIST | CBS_SORT | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
+    PUSHBUTTON "Customi&ze...", IDC_SETUP_BUTTON, 178, 56, 52, 13
     LTEXT "Exemple", -1, 14, 73, 70, 10
-    LTEXT "Număr:", -1, 16, 86, 68, 10
-    LTEXT "Valută:", -1, 16, 101, 68, 10
-    LTEXT "Timp:", -1, 16, 116, 68, 10
-    LTEXT "Dată (compact):", -1, 16, 131, 68, 10
-    LTEXT "Dată (extensiv):", -1, 16, 146, 68, 10
+    LTEXT "Număr:", -1, 16, 86, 48, 10
+    LTEXT "Valută:", -1, 16, 101, 48, 10
+    LTEXT "Timp:", -1, 16, 116, 48, 10
+    LTEXT "Dată (compact):", -1, 16, 131, 48, 10
+    LTEXT "Dată (extensiv):", -1, 16, 146, 48, 10
     EDITTEXT IDC_NUMSAMPLE_EDIT, 89, 86, 140, 12, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
     EDITTEXT IDC_MONEYSAMPLE_EDIT, 89, 101, 140, 12, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
     EDITTEXT IDC_TIMESAMPLE_EDIT, 89, 116, 140, 12, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
@@ -37,9 +35,9 @@ BEGIN
     LTEXT "Pentru a vedea/modifica limbile de introducere și serviciile de text, apăsați „Detalii”", -1, 12, 15, 220, 18
     PUSHBUTTON "&Detalii…", IDC_DETAIL_BUTTON, 177, 34, 54, 14
     GROUPBOX "Compatibilitate lingvistică suplimentară", -1, 5, 62, 234, 82
-    LTEXT "ReactOS posedă în mod implicit compatibilitate pentru majoritatea limbilor. În caz de necesitate, această compatibilitate poate fi extinsă prin instalarea de fișiere suplimentare.", -1, 12, 72, 220, 25
-    CHECKBOX "Instalează fișierele pentru script-uri comple&xe și pentru limbile cu scriere inversă", IDC_INST_FILES_FOR_RTOL_LANG, 12, 100, 215, 22, BS_MULTILINE | BS_TOP
-    CHECKBOX "Instalează fișierele pentru limbile din &estul Asiei", IDC_INST_FILES_FOR_ASIAN, 12, 119, 180, 22, BS_MULTILINE | BS_TOP
+    LTEXT "ReactOS posedă în mod implicit compatibilitate pentru majoritatea limbilor. În caz de necesitate, această compatibilitate poate fi extinsă prin instalarea de fișiere suplimentare.", -1, 12, 72, 220, 18
+    AUTOCHECKBOX "I&nstall files for complex script and right-to-left languages", IDC_INST_FILES_FOR_RTOL_LANG, 12, 92, 215, 22, BS_MULTILINE | BS_TOP
+    AUTOCHECKBOX "In&stall files for East Asian languages", IDC_INST_FILES_FOR_ASIAN, 12, 114, 180, 22, BS_MULTILINE | BS_TOP
 END
 
 IDD_ADVANCEDPAGE DIALOGEX 0, 0, 246, 230
@@ -54,7 +52,7 @@ BEGIN
     GROUPBOX "Tabele de conversie cod-pagină", -1, 5, 101, 234, 88
     CONTROL "", IDC_CONV_TABLES, "SysListView32", LVS_REPORT | LVS_SORTASCENDING | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP, 14, 114, 217, 70
     GROUPBOX "Opțiuni implicite pentru conturi de utilizator", -1, 5, 193, 234, 32
-    CHECKBOX "Apli&că aceste opțiuni atât pentru contul de utilizator curent cât și pentru cel implicit", IDC_APPLY_CUR_USER_DEF_PROFILE, 12, 201, 220, 22, BS_MULTILINE | BS_TOP
+    AUTOCHECKBOX "Apply all settings to the current user account and to the &default", IDC_APPLY_CUR_USER_DEF_PROFILE, 12, 201, 220, 22, BS_MULTILINE | BS_TOP
 END
 
 IDD_NUMBERSPAGE DIALOGEX 0, 0, 246, 234
@@ -67,23 +65,23 @@ BEGIN
     EDITTEXT IDC_NUMBERSPOSSAMPLE, 43, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
     LTEXT "Negativ:", -1, 120, 21, 31, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     EDITTEXT IDC_NUMBERSNEGSAMPLE, 154, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
-    LTEXT "S&eparatorul de fracție zecimală:", -1, 8, 67, 120, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "S&eparatorul de fracție zecimală:", -1, 8, 67, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_NUMBERDSYMBOL, 137, 65, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "&Precizia fracționară (nr. cifre):", -1, 8, 83, 120, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "&Precizia fracționară (nr. cifre):", -1, 8, 83, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_NUMBERSNDIGDEC, 137, 81, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "Simbolul de grupare a &cifrelor:", -1, 8, 100, 120, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Simbolul de grupare a &cifrelor:", -1, 8, 100, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_NUMBERSDIGITGRSYM, 137, 97, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "&Modul de grupare a cifrelor:", -1, 8, 117, 120, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "&Modul de grupare a cifrelor:", -1, 8, 117, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_NUMBERSDGROUPING, 137, 113, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "Simbolul pentru semnul negati&v:", -1, 8, 134, 120, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Simbolul pentru semnul negati&v:", -1, 8, 134, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_NUMBERSNSIGNSYM, 137, 129, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "F&ormatul numerelor negative:", -1, 8, 149, 120, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "F&ormatul numerelor negative:", -1, 8, 149, 100, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_NUMBERSNNUMFORMAT, 137, 145, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "&Zero întreg din fracție:", -1, 8, 166, 120, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "&Zero întreg din fracție:", -1, 8, 166, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_NUMBERSDISPLEADZER, 137, 161, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "Sepa&rator listă:", -1, 8, 181, 120, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Sepa&rator listă:", -1, 8, 181, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_NUMBERSLSEP, 137, 177, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
-    LTEXT "Sistemul de măs&ură:", -1, 8, 197, 120, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Sistemul de măs&ură:", -1, 8, 197, 96, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_NUMBERSMEASSYS, 137, 193, 100, 83, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
 END
 
@@ -93,9 +91,9 @@ CAPTION "Valută"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Exemplu de sumă", -1, 7, 7, 230, 33, WS_CHILD | WS_VISIBLE
-    LTEXT "Pozitivă:", -1, 13, 21, 31, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Pozitivă:", -1, 13, 21, 27, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     EDITTEXT IDC_CURRENCYPOSSAMPLE, 43, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
-    LTEXT "Negativă:", -1, 120, 21, 31, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Negativă:", -1, 120, 21, 30, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     EDITTEXT IDC_CURRENCYNEGSAMPLE, 154, 19, 72, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP
     LTEXT "Simbolul &valutei:", -1, 10, 51, 121, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
     COMBOBOX IDC_CURRENCYSYMBOL, 134, 49, 100, 83, CBS_DROPDOWN | WS_CHILD | WS_VISIBLE | WS_TABSTOP | WS_VSCROLL
@@ -158,7 +156,7 @@ BEGIN
     EDITTEXT IDC_SHRTDATERTOL_EDIT, 77, 111, 153, 14, ES_READONLY | WS_CHILD | WS_VISIBLE | WS_GROUP | NOT WS_TABSTOP | WS_DISABLED
     LTEXT "Format compact:", -1, 13, 131, 60, 10
     COMBOBOX IDC_SHRTDATEFMT_COMBO, 77, 129, 153, 100, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP | WS_VISIBLE
-    LTEXT "Separator pentru componentele datei:", -1, 13, 148, 133, 10
+    LTEXT "Separator pentru componentele datei:", -1, 13, 148, 113, 10
     COMBOBOX IDC_SHRTDATESEP_COMBO, 180, 146, 51, 100, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP | WS_VISIBLE
     GROUPBOX "Format extensiv pentru dată", -1, 7, 167, 230, 64
     LTEXT "Exemplu:", -1, 13, 179, 61, 10
@@ -190,8 +188,8 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_CPLNAME         "Opțiuni regionale"
-    IDS_CPLDESCRIPTION  "Configurarea limbii și formatarea numerelor, valutelor, datei și orei."
+    IDS_CPLNAME "Opțiuni regionale"
+    IDS_CPLDESCRIPTION "Configurarea limbii și formatarea numerelor, valutelor, datei și orei."
 END
 
 STRINGTABLE
