@@ -1,0 +1,68 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+BEGIN
+    IDS_USAGE "Configure System Devices.\n\n\
+Device Status:     MODE [device] [/STATUS]\n\
+Serial port:       MODE COMm[:] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s]\n\
+                                [to=on|off] [xon=on|off] [odsr=on|off]\n\
+                                [octs=on|off] [dtr=on|off|hs]\n\
+                                [rts=on|off|hs|tg] [idsr=on|off]\n\
+Redirect printing: MODE LPTn[:]=COMm[:]\n\
+Select code page:  MODE CON[:] CP SELECT=yyy\n\
+Code page status:  MODE CON[:] CP [/STATUS]\n\
+Display mode:      MODE CON[:] [COLS=c] [LINES=n]\n\
+Typematic rate:    MODE CON[:] [RATE=r DELAY=d]\n"
+
+    IDS_QUERY_SERIAL_FOUND "    Menemukan serial perangkat - %s\n"
+    IDS_QUERY_PRINTER_FOUND "    Menemukan perangkat printer -%s\n"
+    IDS_QUERY_PARALLEL_FOUND "    Menemukan perangkat paralel -%s\n"
+    IDS_QUERY_DOSDEV_FOUND "    Ditemukan perangkat DOS -%s\n"
+    // IDS_QUERY_MISC_FOUND "    Ditemukan perangkat lain -%s\n"
+
+    // IDS_QUERY_DEVICE_FOUND "    Ditemukan perangkat %s - %s\n"
+    // IDS_SERIAL  "serial"
+    // IDS_PRINTER "paralel"
+    // IDS_OTHER   "lainnya"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DEVICE_STATUS_HEADER "Status untuk perangkat %s:"
+
+    IDS_COM_STATUS_BAUD             "    Baud:            %ld\n"
+    IDS_COM_STATUS_PARITY           "    Paritas:%s\n"
+    IDS_COM_STATUS_DATA_BITS        "    Data Bits:       %d\n"
+    IDS_COM_STATUS_STOP_BITS        "    Berhenti Bits:%s\n"
+    IDS_COM_STATUS_TIMEOUT          "    Waktu habis:%s\n"
+    IDS_COM_STATUS_XON_XOFF         "    XON / XOFF:%s \n"
+    IDS_COM_STATUS_CTS_HANDSHAKING  "    CTS tangan hak:%s \n"
+    IDS_COM_STATUS_DSR_HANDSHAKING  "    DSR tangan hak:%s\n"
+    IDS_COM_STATUS_DSR_SENSITIVITY  "    Sensitivitas DSR:%s\n"
+    IDS_COM_STATUS_DTR_CIRCUIT      "    Sirkuit DTR:%s\n"
+    IDS_COM_STATUS_RTS_CIRCUIT      "    RTS sirkuit:%s\n"
+
+    IDS_CONSOLE_STATUS_LINES    "    Baris:%d\n"
+    IDS_CONSOLE_STATUS_COLS     "    Kolom: %d\n"
+    IDS_CONSOLE_KBD_RATE        "    Tingkat keyboard: %ld\n"
+    IDS_CONSOLE_KBD_DELAY       "    Penundaan keyboard:%ld\n"
+    IDS_CONSOLE_CODEPAGE        "    Halaman kode:%d\n"
+
+    IDS_PRINTER_OUTPUT_NOT_REROUTED     "    Printer output tidak sedang diarahkan.\n"
+    IDS_PRINTER_OUTPUT_REROUTED_SERIAL  "    Output printer dialihkan ke port serial%s.\n"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ERROR_QUERY_DEVICES "KESALAHAN: Tidak dapat meminta perangkat DOS (0x%lx).\n"
+    IDS_ERROR_QUERY_DEVICES_FORM "    Permintaan Dos Device W (%s) mengembalikan bentuk yang tidak dikenal%s.\n"
+    IDS_ERROR_SET_PARALLEL_STATE "Setel Negara Paralel (%d) - Tentukan DosDevice (%s) (0x%lx) \n"
+    IDS_ERROR_INVALID_PARAMETER "KESALAHAN: Parameter tidak valid -%s\n"
+    IDS_ERROR_ILLEGAL_DEVICE_NAME "KESALAHAN: Nama perangkat ilegal -%s (0x%lx) \n"
+    IDS_ERROR_STATUS_GET_DEVICE "ERROR: Gagal mendapatkan status untuk perangkat COM%d:\n"
+    IDS_ERROR_STATUS_SET_DEVICE "ERROR: Gagal menyetel status untuk perangkat COM%d: \n"
+    IDS_ERROR_INVALID_PARITY_BITS "KESALAHAN: Nilai tidak valid untuk Parity Bits%d: \n"
+    IDS_ERROR_INVALID_STOP_BITS "KESALAHAN: Nilai tidak valid untuk Berhenti Bits%d: \n"
+    IDS_ERROR_NO_MEMORY "KESALAHAN: Memori tidak cukup.\n"
+    IDS_ERROR_SCREEN_LINES_COL "ERROR: Layar tidak dapat diatur ke jumlah baris dan kolom yang ditentukan.\n"
+END
