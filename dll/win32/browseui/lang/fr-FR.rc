@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
 
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 /* Menus */
 
@@ -137,7 +137,7 @@ FONT 8, "MS Shell Dlg"
     LTEXT "", IDC_TEXT_LINE + 1, 7, 55, 250, 10, SS_LEFT|SS_NOPREFIX
     LTEXT "", IDC_TEXT_LINE + 2, 7, 75, 190, 10, SS_LEFT|SS_NOPREFIX
     CONTROL "", IDC_PROGRESS_BAR, PROGRESS_CLASSA, WS_BORDER, 7, 65, 190, 8
-    PUSHBUTTON "Annuler", IDCANCEL, 205, 65, 50, 15, WS_GROUP | WS_TABSTOP | WS_VISIBLE
+    PUSHBUTTON "Cancel", IDCANCEL, 205, 65, 50, 15, WS_GROUP | WS_TABSTOP | WS_VISIBLE
 }
 
 IDD_CUSTOMIZETOOLBAREX DIALOGEX 0, 0, 357, 33
@@ -308,7 +308,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_STANDARD_TOOLBAR, "|Retour|Avancer|Dossier parent|Recherche|Dossiers|Aller vers|Copier dans|Supprimer|Annuler|Affichage|Stop|Rafraîchir|Home|Map Drive|Déconnecter|Favoris|Historique|Plein écran|Propriétés|Couper|Copier|Coller|Options des dossiers||"
+    IDS_STANDARD_TOOLBAR, "|Back|Forward|Up|Search|Folders|Move To|Copy To|Delete|Undo|Views|Stop|Refresh|Home|Map Drive|Disconnect|Favorites|History|Full Screen|Properties|Cut|Copy|Paste|Folder Options||"
 END
 
 STRINGTABLE
