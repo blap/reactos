@@ -1,4 +1,4 @@
-LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_BULGARIAN, SUBLANG_BULGARIAN_BULGARIA
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -99,8 +99,8 @@ BEGIN
     LTEXT "&Footer:", 0x142, 8, 149, 40, 15
     EDITTEXT 0x143, 58, 147, 173, 12, WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
     PUSHBUTTON "Help", IDHELP, 8, 170, 50, 14
-    DEFPUSHBUTTON "OK", IDOK, 198, 170, 50, 14, BS_PUSHBUTTON
-    PUSHBUTTON "Cancel", IDCANCEL, 254, 170, 50, 14
+    DEFPUSHBUTTON "Добре", IDOK, 198, 170, 50, 14, BS_PUSHBUTTON
+    PUSHBUTTON "Отказ", IDCANCEL, 254, 170, 50, 14
     PUSHBUTTON "P&rinter...", psh3, 310, 170, 50, 14
 END
 
@@ -110,10 +110,10 @@ STYLE DS_SHELLFONT | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_S
 FONT 8, "MS Shell Dlg"
 CAPTION "Знаков набор"
 BEGIN
-    COMBOBOX ID_ENCODING, 65, 0, 145, 80, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
-    LTEXT "Знаков набор:", 0x155, 5, 2, 60, 12
-    COMBOBOX ID_EOLN, 65, 18, 145, 80, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    LTEXT "Знак за нов ред:", 0x156, 5, 20, 60, 12
+    COMBOBOX ID_ENCODING, 54, 0, 156, 80, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Знаков набор:", 0x155, 5, 2, 41, 12
+    COMBOBOX ID_EOLN, 54, 18, 156, 80, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT "Знак за нов ред:", 0x156, 5, 20, 41, 12
 END
 
 /* Dialog 'Go To' */
@@ -124,8 +124,8 @@ CAPTION "Отиване на ред"
 BEGIN
     EDITTEXT ID_LINENUMBER, 54, 10, 106, 12, WS_CHILD | WS_BORDER | WS_TABSTOP
     LTEXT "Ред номер:", 0x155, 5, 12, 41, 12, WS_CHILD | WS_TABSTOP | ES_NUMBER
-    DEFPUSHBUTTON "Добре", IDOK, 75, 30, 40, 15, WS_CHILD | WS_TABSTOP
-    PUSHBUTTON "Отказ", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 75, 30, 40, 15, WS_CHILD | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
 END
 
 IDD_ABOUTBOX DIALOGEX 22, 16, 284, 170
@@ -160,17 +160,17 @@ BEGIN
     STRING_UNTITLED "Без име"
     STRING_ALL_FILES "Всички файлове (*.*)"
     STRING_TEXT_FILES_TXT "Словесни файлове (*.txt)"
-    STRING_TOOLARGE "Файлът '%s' е твърде голям за бележника.\n \
-Използвайте друг обработчик."
-    STRING_NOTEXT "Не сте въвел текст. \
-\nНапишете нещо и опитайте пак."
-    STRING_DOESNOTEXIST "Файлът '%s'\nне съществува\n\n \
-Искате ли да създадете нов файл?"
-    STRING_NOTSAVED "Файлът '%s'\nе бил променен\n\n \
-Искате ли да запишете промените?"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "'%s' не може да бъде открит."
-    STRING_OUT_OF_MEMORY "Няма достатъчно памет за приключване на\
-задачата. \nЗатворете едно или повече приложения,\n за да освободите памет."
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "Не мога да открия '%s'"
     STRING_ANSI "ANSI"
     STRING_UNICODE "Уникод"
