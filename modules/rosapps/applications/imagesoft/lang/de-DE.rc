@@ -11,10 +11,10 @@ BEGIN
   POPUP "&Datei"
   BEGIN
     MENUITEM "&Neu...",             ID_NEW
-    MENUITEM "Ö&ffnen...",            ID_OPEN
+    MENUITEM "&Öffnen...",            ID_OPEN
     MENUITEM SEPARATOR
-    MENUITEM "Sch&ließen\tStrg+F4",     ID_CLOSE,   GRAYED
-    MENUITEM "&Alle Schließen",          ID_CLOSEALL,GRAYED
+    MENUITEM "&Schließen\tStrg+F4",     ID_CLOSE,   GRAYED
+    MENUITEM "A&lle Schließen",          ID_CLOSEALL,GRAYED
     MENUITEM SEPARATOR
     MENUITEM "&Speichern",               ID_SAVE,    GRAYED
     MENUITEM "Speichern &unter...",         ID_SAVEAS,  GRAYED
@@ -40,10 +40,10 @@ BEGIN
   END
   POPUP "&Ansicht"
   BEGIN
-    MENUITEM "E&xtras",              ID_TOOLS
+    MENUITEM "&Werkzeuge",              ID_TOOLS
     MENUITEM "&Farben",             ID_COLOR
     MENUITEM "&Verlauf",            ID_HISTORY
-    MENUITEM "Status&leiste",         ID_STATUSBAR
+    MENUITEM "&Statusleiste",         ID_STATUSBAR
   END
   POPUP "&Anpassen"
   BEGIN
@@ -69,7 +69,7 @@ BEGIN
   END
   POPUP "&Farben"
   BEGIN
-    MENUITEM "&Edit Colors...", ID_EDITCOLOURS
+    MENUITEM "Farben &Bearbeiten...", ID_EDITCOLOURS
   END
   POPUP "&Fenster"
   BEGIN
@@ -80,7 +80,7 @@ BEGIN
     MENUITEM SEPARATOR
     MENUITEM "Nächs&tes\tStrg+F6",     ID_WINDOW_NEXT
   END
-  POPUP "&Datei"
+  POPUP "&Hilfe"
   BEGIN
     MENUITEM "&Info...",       ID_ABOUT
   END
@@ -88,7 +88,7 @@ END
 
 IDR_POPUP MENU
 BEGIN
-  POPUP "popup"
+  POPUP "Popup"
   BEGIN
     MENUITEM SEPARATOR
   END
@@ -103,7 +103,7 @@ BEGIN
   LTEXT      "", IDC_PICPREVIEW, 0, 1, 132, 96, SS_OWNERDRAW | SS_SUNKEN
   LTEXT      "Color form:", IDC_STATIC, 135, 5, 36, 9
   GROUPBOX   "", IDC_BRI_GROUP, 138 ,30, 50, 48
-  CONTROL    "Full (RGB)", IDC_BRI_FULL, "Button", BS_AUTORADIOBUTTON, 138, 18, 46, 9
+  CONTROL    "Voll (RGB)", IDC_BRI_FULL, "Button", BS_AUTORADIOBUTTON, 138, 18, 46, 9
   CONTROL    "Rot", IDC_BRI_RED, "Button", BS_AUTORADIOBUTTON, 142, 38, 42, 9
   CONTROL    "Grün", IDC_BRI_GREEN, "Button", BS_AUTORADIOBUTTON, 142, 51, 42, 9
   CONTROL    "Blau", IDC_BRI_BLUE, "Button", BS_AUTORADIOBUTTON, 142, 64, 42, 9
@@ -216,13 +216,13 @@ BEGIN
   IDS_HINT_TOOLS        " Shows or hides the tools floating window."
   IDS_HINT_COLORS       " Shows or hides the colors floating window."
   IDS_HINT_HISTORY      " Shows or hides the history floating window."
-  IDS_HINT_STATUS       " Shows or hides the status bar."
+  IDS_HINT_STATUS       " Zeigt oder versteckt die Statusleiste."
 
-  IDS_HINT_CASCADE      " Arrange windows so they overlap."
-  IDS_HINT_TILE_HORZ    " Arrange windows as non-overlapping tiles."
-  IDS_HINT_TILE_VERT    " Arrange windows as non-overlapping tiles."
-  IDS_HINT_ARRANGE      " Arrange icons at the bottom of the window."
-  IDS_HINT_NEXT         " Activates the next window."
+  IDS_HINT_CASCADE      " Ordnet die Fenster so an, dass sie überlappen."
+  IDS_HINT_TILE_HORZ    " Ordnet die Fenster so an, dass sie nicht-überlappen."
+  IDS_HINT_TILE_VERT    " Ordnet die Fenster so an, dass sie nicht-überlappen."
+  IDS_HINT_ARRANGE      " Ordnet Symbole am Fuß des Fensters an."
+  IDS_HINT_NEXT         " Aktiviert das nächste Fenster."
 
   IDS_HINT_SYS_RESTORE  " Stellt die Normalgröße dieses Fensters wieder her."
   IDS_HINT_SYS_MOVE     " Verschiebt dieses Fenster."
