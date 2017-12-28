@@ -1,4 +1,4 @@
-LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_BULGARIAN, SUBLANG_BULGARIAN_BULGARIA
 
 IDD_PROPPAGESETTINGS DIALOGEX 0, 0, 254, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -37,7 +37,7 @@ BEGIN
     LTEXT "Действие", -1, 14, 47, 60, 9
     RTEXT "Клавишни &съчетания", -1, 177, 47, 79, 9
     CONTROL "", IDC_KEY_LISTVIEW, "SysListView32", LVS_REPORT | LVS_NOCOLUMNHEADER | LVS_AUTOARRANGE | LVS_SINGLESEL, 14, 57, 244, 52, WS_EX_CLIENTEDGE
-    PUSHBUTTON "Про&мяна на клавишното съчетание", IDC_CHANGE_KEY_SEQ_BTN, 128, 113, 130, 14, WS_GROUP
+    PUSHBUTTON "&Change Key Sequence...", IDC_CHANGE_KEY_SEQ_BTN, 152, 113, 106, 14, WS_GROUP
     DEFPUSHBUTTON "Добре", IDOK, 66, 140, 70, 14
     PUSHBUTTON "Отказ", IDCANCEL, 146, 140, 70, 14
 END
@@ -47,7 +47,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | DS_NOIDLEMSG | DS_CONTEXTHELP | WS_POPUPWIN
 CAPTION "Добавяне език на писане"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Език на &въвеждане:", -1, 7, 7, 90, 10
+    LTEXT "Език на &въвеждане:", -1, 7, 7, 61, 10
     COMBOBOX IDC_INPUT_LANG_COMBO, 7, 17, 212, 150, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL
     LTEXT "Клавиатурна подредба/IME:", -1, 7, 36, 110, 10
     COMBOBOX IDC_KEYBOARD_LO_COMBO, 7, 47, 212, 150, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL
@@ -80,7 +80,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | DS_NOIDLEMSG | DS_CONTEXTHELP | WS_POPUPWIN
 CAPTION "Свойства на езика на въвеждане"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Език на писане", -1, 7, 7, 55, 8
+    LTEXT "Език на писане", -1, 7, 7, 61, 8
     LTEXT "", IDC_INPUT_LANG_STR, 73, 7, 129, 8
     LTEXT "Клавиатурна подредба/IME:", -1, 7, 21, 110, 10
     COMBOBOX IDC_KB_LAYOUT_IME_COMBO, 7, 32, 212, 150, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL
@@ -90,22 +90,22 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_CPLSYSTEMNAME        "Словесни услуги и езици на въвеждане"
+    IDS_CPLSYSTEMNAME "Словесни услуги и езици на въвеждане"
     IDS_CPLSYSTEMDESCRIPTION "Нагласяване на настройките за езиците на въвеждане."
-    IDS_KEYBOARD             "Клавиатура"
-    IDS_NONE                 "(Няма)"
-    IDS_UNKNOWN              "(Неизвестно)"
-    IDS_RESTART              "Искате ли да презапуснете компютъра още сега?"
-    IDS_WHATS_THIS           "Какво е това?"
-    IDS_LANGUAGE             "Език"
-    IDS_LAYOUT               "Клавиатурна подредба"
-    IDS_REM_QUESTION         "Искате ли да премахнете избраната подредба?"
-    IDS_CONFIRMATION         "Потвърждение"
-    IDS_LAYOUT_EXISTS        "Подредбата вече съществува."
-    IDS_LAYOUT_EXISTS2       "Подредбата вече съществува и не може да бъде добавена."
+    IDS_KEYBOARD "Клавиатура"
+    IDS_NONE "(Няма)"
+    IDS_UNKNOWN "(Неизвестно)"
+    IDS_RESTART "Искате ли да презапуснете компютъра още сега?"
+    IDS_WHATS_THIS "Какво е това?"
+    IDS_LANGUAGE "Език"
+    IDS_LAYOUT "Клавиатурна подредба"
+    IDS_REM_QUESTION "Искате ли да премахнете избраната подредба?"
+    IDS_CONFIRMATION "Потвърждение"
+    IDS_LAYOUT_EXISTS "Подредбата вече съществува."
+    IDS_LAYOUT_EXISTS2 "Подредбата вече съществува и не може да бъде добавена."
     IDS_CTRL_SHIFT "Ctrl+Shift"
-    IDS_LEFT_ALT_SHIFT       "Ляв Alt+Shift"
-    IDS_SWITCH_BET_INLANG    "Превключване на езиците за въвеждане"
+    IDS_LEFT_ALT_SHIFT "Ляв Alt+Shift"
+    IDS_SWITCH_BET_INLANG "Превключване на езиците за въвеждане"
     IDS_REBOOT_NOW, "Reboot now?"
 END
 
