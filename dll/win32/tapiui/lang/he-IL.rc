@@ -1,4 +1,4 @@
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 101 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -9,9 +9,9 @@ BEGIN
     LTEXT "The list below displays the locations you have specified. Select the location from which you are dialing.", -1, 35, 7, 210, 16
     LTEXT "&Locations:", -1, 7, 35, 210, 8
     CONTROL "", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000011D, 7, 46, 238, 105, WS_EX_CLIENTEDGE
-    PUSHBUTTON "&New...", 1030, 87, 155, 50, 14
-    PUSHBUTTON "&Edit...", 1031, 141, 155, 50, 14
-    PUSHBUTTON "&Delete", 1032, 195, 155, 50, 14
+    PUSHBUTTON "חדש...", 1030, 87, 155, 50, 14
+    PUSHBUTTON "עריכה...", 1031, 141, 155, 50, 14
+    PUSHBUTTON "מחק", 1032, 195, 155, 50, 14
     LTEXT "Phone number will be dialed as:", 1052, 7, 181, 100, 8
     LTEXT "", 1053, 14, 195, 224, 16
 END
@@ -50,16 +50,16 @@ END
 
 103 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Area Code Rules"
+CAPTION "חיבורי רשת"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "An area code rule determines how phone numbers are dialed from your current area code to other area codes and within your area code.", 2000, 7, 7, 238, 16
     LTEXT "Area &code rules:", -1, 7, 31, 238, 8
     CONTROL "", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000801D, 7, 42, 238, 99, WS_EX_CLIENTEDGE
-    PUSHBUTTON "&New...", 1030, 87, 147, 50, 14
-    PUSHBUTTON "&Edit...", 1031, 141, 147, 50, 14
-    PUSHBUTTON "&Delete", 1032, 195, 147, 50, 14
-    GROUPBOX "Description", 2006, 7, 166, 238, 45
+    PUSHBUTTON "חדש...", 1030, 87, 147, 50, 14
+    PUSHBUTTON "עריכה...", 1031, 141, 147, 50, 14
+    PUSHBUTTON "מחק", 1032, 195, 147, 50, 14
+    GROUPBOX "תיאור", 2006, 7, 166, 238, 45
     LTEXT "", 1039, 14, 180, 224, 24
 END
 
@@ -71,9 +71,9 @@ BEGIN
     LTEXT "Select the calling card you will use, or click New to add a different card.", 2000, 7, 7, 238, 8
     LTEXT "Card &Types:", -1, 7, 23, 238, 8
     CONTROL "", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000400D, 7, 34, 238, 63, WS_EX_CLIENTEDGE
-    PUSHBUTTON "&New...", 1030, 87, 103, 50, 14
-    PUSHBUTTON "&Edit...", 1031, 141, 103, 50, 14
-    PUSHBUTTON "&Delete", 1032, 195, 103, 50, 14
+    PUSHBUTTON "חדש...", 1030, 87, 103, 50, 14
+    PUSHBUTTON "עריכה...", 1031, 141, 103, 50, 14
+    PUSHBUTTON "מחק", 1032, 195, 103, 50, 14
     LTEXT "A&ccount number:", -1, 7, 127, 91, 8
     EDITTEXT 1018, 102, 125, 143, 12, ES_AUTOHSCROLL
     LTEXT "&Personal ID Number (PIN):", -1, 7, 145, 91, 8
@@ -108,7 +108,7 @@ END
 
 106 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Long Distance"
+CAPTION "ההתחברות הושלמה"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Access number for &long distance calls:", -1, 7, 7, 238, 8
@@ -116,9 +116,9 @@ BEGIN
     LTEXT "Use the buttons below to enter the dialing steps for making long-distance calls.  Enter these steps in the exact order as they appear on your calling card.", 2000, 7, 40, 238, 24
     LTEXT "Calling ca&rd dialing steps:", -1, 7, 72, 80, 8
     CONTROL "List1", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000400D, 7, 83, 184, 74, WS_EX_CLIENTEDGE
-    PUSHBUTTON "Move &Up", 1022, 195, 83, 50, 14
+    PUSHBUTTON "הזז למעלה", 1022, 195, 83, 50, 14
     PUSHBUTTON "&Move Down", 1023, 195, 101, 50, 14
-    PUSHBUTTON "&Delete", 1024, 195, 119, 50, 14
+    PUSHBUTTON "מחק", 1024, 195, 119, 50, 14
     PUSHBUTTON "Access &Number", 1025, 7, 161, 90, 14
     PUSHBUTTON "A&ccount Number", 1018, 101, 161, 90, 14
     PUSHBUTTON "&PIN", 1019, 7, 179, 90, 14
@@ -137,9 +137,9 @@ BEGIN
     LTEXT "Use the buttons below to enter the dialing steps for making international calls.  Enter these steps in the exact order as they appear on your calling card.", 2000, 7, 40, 244, 24
     LTEXT "Calling ca&rd dialing steps:", -1, 7, 72, 80, 8
     CONTROL "List1", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000400D, 7, 83, 184, 74, WS_EX_CLIENTEDGE
-    PUSHBUTTON "Move &Up", 1022, 195, 83, 50, 14
+    PUSHBUTTON "הזז למעלה", 1022, 195, 83, 50, 14
     PUSHBUTTON "&Move Down", 1023, 195, 101, 50, 14
-    PUSHBUTTON "&Delete", 1024, 195, 119, 50, 14
+    PUSHBUTTON "מחק", 1024, 195, 119, 50, 14
     PUSHBUTTON "Access &Number", 1025, 7, 161, 90, 14
     PUSHBUTTON "A&ccount Number", 1018, 101, 161, 90, 14
     PUSHBUTTON "&PIN", 1019, 7, 179, 90, 14
@@ -158,9 +158,9 @@ BEGIN
     LTEXT "Use the buttons below to enter the dialing steps for making local calls. Enter these steps in the exact order as they appear on your calling card. To make local calls without using your calling card, leave this section blank.", 2000, 7, 40, 238, 24
     LTEXT "Calling ca&rd dialing steps:", -1, 7, 72, 238, 8
     CONTROL "List1", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000400D, 7, 83, 184, 74, WS_EX_CLIENTEDGE
-    PUSHBUTTON "Move &Up", 1022, 195, 83, 50, 14
+    PUSHBUTTON "הזז למעלה", 1022, 195, 83, 50, 14
     PUSHBUTTON "&Move Down", 1023, 195, 101, 50, 14
-    PUSHBUTTON "&Delete", 1024, 195, 119, 50, 14
+    PUSHBUTTON "מחק", 1024, 195, 119, 50, 14
     PUSHBUTTON "Access &Number", 1025, 7, 161, 90, 14
     PUSHBUTTON "A&ccount Number", 1018, 101, 161, 90, 14
     PUSHBUTTON "&PIN", 1019, 7, 179, 90, 14
@@ -172,7 +172,7 @@ END
 109 DIALOGEX 0, 0, 252, 257
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "New Area Code Rule"
+CAPTION "שינוי סיסמה"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "This area code rule will only apply to calls made to the area code and prefix combination you specify below.", 2000, 7, 6, 238, 16
@@ -184,7 +184,7 @@ BEGIN
     AUTORADIOBUTTON "Include &only the prefixes in the list below:", 1015, 14, 104, 224, 12, NOT WS_TABSTOP
     LTEXT "&Prefixes to include:", 1057, 26, 117, 119, 8
     CONTROL "List1", 1033, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000411D, 25, 128, 66, 32, WS_EX_CLIENTEDGE
-    PUSHBUTTON "&Add...", 1005, 95, 128, 50, 14
+    PUSHBUTTON "הוסף...", 1005, 95, 128, 50, 14
     PUSHBUTTON "D&elete", 1024, 95, 146, 50, 14
     LTEXT "When dialing phone numbers that contain the prefixes above:", -1, 14, 184, 224, 8
     AUTOCHECKBOX "&Dial:", 1012, 14, 198, 30, 12
@@ -216,7 +216,7 @@ END
 111 DIALOGEX 0, 0, 252, 124
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Wait for"
+CAPTION "שגיאה בהתחברות אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Select the type of prompt to wait for before continuing with the dialing sequence.", 2000, 7, 7, 238, 16
@@ -233,7 +233,7 @@ END
 112 DIALOGEX 0, 0, 252, 111
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Destination number"
+CAPTION "חיוג וניתוק אוטומטי"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "This step will place the destination number that you will be dialing into the calling card sequence.  When dialing the destination number, which parts of the number do you want to dial?", 2000, 7, 7, 238, 24
@@ -253,8 +253,8 @@ BEGIN
     LTEXT "The following telephony providers are installed on this computer:", -1, 40, 7, 205, 8
     LTEXT "&Providers:", -1, 7, 35, 238, 8
     LISTBOX 1033, 7, 46, 238, 147, LBS_STANDARD | LBS_NOINTEGRALHEIGHT | WS_TABSTOP
-    PUSHBUTTON "A&dd...", 1005, 87, 197, 50, 14
-    PUSHBUTTON "&Remove", 1024, 141, 197, 50, 14
+    PUSHBUTTON "הוסף...", 1005, 87, 197, 50, 14
+    PUSHBUTTON "הסר", 1024, 141, 197, 50, 14
     PUSHBUTTON "&Configure...", 1031, 195, 197, 50, 14
 END
 
@@ -266,14 +266,14 @@ BEGIN
     LTEXT "Select the provider you wish to install from the list below, and click Add.", 2000, 7, 7, 241, 8
     LTEXT "&Telephony providers:", -1, 7, 23, 144, 10
     LISTBOX 1055, 7, 34, 238, 74, LBS_STANDARD | WS_TABSTOP
-    PUSHBUTTON "&Add", 1005, 141, 106, 50, 14
+    PUSHBUTTON "הוסף", 1005, 141, 106, 50, 14
     DEFPUSHBUTTON "Cancel", 2, 195, 106, 50, 14
 END
 
 115 DIALOGEX 10, 10, 303, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "Location Information"
+CAPTION "התחבר אל %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 302, 302, "STATIC", SS_BITMAP, 10, 10, 88, 155
@@ -325,9 +325,9 @@ END
 STRINGTABLE
 BEGIN
     1 "אפשרויות טלפון ומודם"
-    2 "Configure dialing rules and properties for using your modem."
+    2 "WORKGROUP"
     3 "מיקום"
-    4 "To create a new location, click New."
+    4 "Computer Name Changes"
     5 "מיקום חדש"
     6 "עריכת מיקום"
     7 "New Calling Card"
@@ -345,10 +345,10 @@ BEGIN
     19 "Dial number only"
     20 "הכל"
     21 "נבחר"
-    22 "Edit Area Code Rule"
-    23 "Select a rule in the list above to view its description, or click New to add a rule."
-    24 "Dial '%2' plus the area code before the number for all calls within the %1 area code."
-    25 "Dial '%2' before the number for all calls within the %1 area code."
+    22 "ברוך הבא לקבוצת העבודה 1%"
+    23 "ברוך הבא למתחם 1%"
+    24 "You must restart this computer for the changes to take effect."
+    25 "You can change the name and the membership of this computer. Changes may affect access to network resources."
     26 "Dial the area code before the number for all calls within the %1 area code."
     27 "Dial only the number for all calls within the %1 area code."
     28 "Dial '%2' plus the area code before the number for calls within the %1 area code, containing the prefixes you specified."
