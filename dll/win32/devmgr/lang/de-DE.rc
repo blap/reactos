@@ -102,7 +102,7 @@ BEGIN
     IDS_PROP_COMPATIBLEIDS "Kompatible IDs"
     IDS_PROP_MATCHINGDEVICEID "Passende Geräte-ID"
     IDS_PROP_SERVICE "Dienst"
-    IDS_PROP_ENUMERATOR "Enumerator"
+    IDS_PROP_ENUMERATOR "Emulator"
     IDS_PROP_CAPABILITIES "Eigenschaften"
     IDS_PROP_DEVNODEFLAGS "DevNode-Flags"
     IDS_PROP_CONFIGFLAGS "Config-Flags"
@@ -259,7 +259,7 @@ BEGIN
   END
   POPUP "&Hilfe"
   BEGIN
-    MENUITEM "Ü&ber",                       IDC_ABOUT
+    MENUITEM "&Über",                       IDC_ABOUT
   END
 END
 
