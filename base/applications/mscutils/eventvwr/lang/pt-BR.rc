@@ -1,14 +1,20 @@
-/* Portuguese Brazilian translation by Matheus Macabu */
+/*
+ * PROJECT:    ReactOS Event Viewer
+ * LICENSE:    GPL - See COPYING in the top level directory
+ * FILE:       base/applications/mscutils/eventvwr/lang/en-US.rc
+ * PURPOSE:    English Language File for ReactOS Event Viewer
+ * TRANSLATOR: Marc Piulachs
+ */
 
-LANGUAGE LANG_PORTUGUESE, SUBLANG_NEUTRAL
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
 
 IDM_EVENTVWR MENU
 BEGIN
     POPUP "&Registro"
     BEGIN
-        MENUITEM "&Open...", IDM_OPEN_EVENTLOG
+        MENUITEM "&Abrir...", IDM_OPEN_EVENTLOG
         MENUITEM "Save &Event Log as...", IDM_SAVE_EVENTLOG
-        MENUITEM "&Close", IDM_CLOSE_EVENTLOG
+        MENUITEM "&Fechar", IDM_CLOSE_EVENTLOG
         MENUITEM SEPARATOR
         MENUITEM "C&lear all Events", IDM_CLEAR_EVENTS
         MENUITEM "&Rename\tF2", IDM_RENAME_EVENTLOG
@@ -18,10 +24,10 @@ BEGIN
     END
     POPUP "&Visualizar"
     BEGIN
-        MENUITEM "&Newest first", IDM_LIST_NEWEST
-        MENUITEM "&Oldest first", IDM_LIST_OLDEST
+        MENUITEM "&Recentes primeiro", IDM_LIST_NEWEST
+        MENUITEM "&Antigos primeiro", IDM_LIST_OLDEST
         MENUITEM SEPARATOR
-        MENUITEM "&Details...\tEnter", IDM_EVENT_DETAILS
+        MENUITEM "&Detalhes...\tEnter", IDM_EVENT_DETAILS
         MENUITEM SEPARATOR
         MENUITEM "&Atualizar\tF5", IDM_REFRESH
     END
@@ -62,7 +68,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Data:", IDC_STATIC, 8, 5, 31, 8
     EDITTEXT IDC_EVENTDATESTATIC, 46, 5, 47, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "Fonte:", IDC_STATIC, 103, 5, 36, 8
+    LTEXT "Origem:", IDC_STATIC, 103, 5, 36, 8
     EDITTEXT IDC_EVENTSOURCESTATIC, 140, 5, 82, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "Tempo:", IDC_STATIC, 8, 15, 31, 8
     EDITTEXT IDC_EVENTTIMESTATIC, 46, 15, 47, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
@@ -70,7 +76,7 @@ BEGIN
     EDITTEXT IDC_EVENTCATEGORYSTATIC, 140, 15, 82, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "Tipo:", IDC_STATIC, 8, 25, 31, 8
     EDITTEXT IDC_EVENTTYPESTATIC, 46, 25, 47, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "EventID:", IDC_STATIC, 103, 25, 36, 8
+    LTEXT "Código do evento:", IDC_STATIC, 103, 25, 36, 8
     EDITTEXT IDC_EVENTIDSTATIC, 140, 25, 82, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     LTEXT "&Usuário:", IDC_STATIC, 8, 35, 36, 8
     EDITTEXT IDC_EVENTUSERSTATIC, 46, 35, 152, 8, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
@@ -92,7 +98,7 @@ END
 
 IDD_LOGPROPERTIES_GENERAL DIALOGEX 0, 0, 252, 234
 STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION
-CAPTION "General"
+CAPTION "Geral"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "&Display name:", IDC_STATIC, 7, 9, 60, 8
@@ -101,13 +107,13 @@ BEGIN
     EDITTEXT IDC_LOGNAME, 67, 23, 178, 12, ES_LEFT | ES_AUTOHSCROLL | ES_READONLY | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP
     LTEXT "Log &file:", IDC_STATIC, 7, 41, 60, 8
     EDITTEXT IDC_LOGFILE, 67, 39, 178, 12, ES_LEFT | ES_AUTOHSCROLL | ES_READONLY | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP
-    LTEXT "Size:", IDC_STATIC, 7, 57, 60, 8
+    LTEXT "Tamanho:", IDC_STATIC, 7, 57, 60, 8
     EDITTEXT IDC_SIZE_LABEL, 67, 57, 178, 12, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "Created:", IDC_STATIC, 7, 69, 60, 8
+    LTEXT "Criado:", IDC_STATIC, 7, 69, 60, 8
     EDITTEXT IDC_CREATED_LABEL, 67, 69, 178, 12, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "Modified:", IDC_STATIC, 7, 81, 60, 8
+    LTEXT "Modificado:", IDC_STATIC, 7, 81, 60, 8
     EDITTEXT IDC_MODIFIED_LABEL, 67, 81, 178, 12, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
-    LTEXT "Accessed:", IDC_STATIC, 7, 93, 60, 8
+    LTEXT "Acessado:", IDC_STATIC, 7, 93, 60, 8
     EDITTEXT IDC_ACCESSED_LABEL, 67, 93, 178, 12, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP | ES_AUTOHSCROLL
     GROUPBOX "Log size", IDC_STATIC, 7, 106, 238, 99
     LTEXT "&Maximum log size:", IDC_STATIC, 17, 122, 58, 8
@@ -123,7 +129,7 @@ BEGIN
             UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_GROUP, 157, 165, 10, 14
     LTEXT "days", IDC_STATIC, 162, 168, 20, 8
     CONTROL "Do &not overwrite events\n(clear log manually)", IDC_NO_OVERWRITE, "Button", BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP | WS_TABSTOP, 17, 180, 143, 20
-    PUSHBUTTON "&Restore Defaults", IDC_RESTOREDEFAULTS, 166, 183, 70, 14
+    PUSHBUTTON "&Restaurar Padrões", IDC_RESTOREDEFAULTS, 166, 183, 70, 14
     AUTOCHECKBOX "Using a lo&w-speed connection", IDC_LOW_SPEED_CONNECTION, 7, 217, 167, 10
     PUSHBUTTON "&Clear Log", ID_CLEARLOG, 195, 213, 50, 14
 END
@@ -135,11 +141,11 @@ BEGIN
     IDS_APP_TITLE_EX "%s - %s Log on \\\\"
     IDS_STATUS_MSG "%s has %lu event(s) (listed: %lu)"
     IDS_LOADING_WAIT "Carregando Registros de Eventos. Por favor aguarde..."
-    IDS_NO_ITEMS "There are no items to show in this view." // "No events in this log."
-    IDS_EVENTLOG_SYSTEM "System Logs"
-    IDS_EVENTLOG_APP "Application Logs"
-    IDS_EVENTLOG_USER "User Logs"
-    IDS_EVENTSTRINGIDNOTFOUND "A descrição para Event ID ( %lu ) em Fonte ( %s ) não foi encontrado. O computador local talvez não possua a informação de registro necessária ou mensagem de arquivos DLL para exibir mensagens de um computador remoto.\n\nThe following information is part of the event:\n\n"
+    IDS_NO_ITEMS "There are no items to show in this view."" // ""No events in this log."
+    IDS_EVENTLOG_SYSTEM "Registros do sistema"
+    IDS_EVENTLOG_APP "Registros de aplicativos"
+    IDS_EVENTLOG_USER "Registro de usuários"
+    IDS_EVENTSTRINGIDNOTFOUND "A descrição do evento ( %lu ) em ( %s ) não foi encontrada. O computador local talvez não possua a informação de registro necessária ou mensagem de arquivos DLL para exibir mensagens de um computador remoto.\n\nA seguinte informação é parte do evento:\n\n"
     IDS_CLEAREVENTS_MSG "Do you want to save this event log before clearing it?"
     IDS_SAVE_FILTER "Event Log (*.evt)\0*.evt\0"
 END
@@ -157,7 +163,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_BYTES_FORMAT "bytes" // "%s bytes"
+    IDS_BYTES_FORMAT "bytes"" // ""%s bytes"
     // "%1!ls! (%2!ls! bytes)"
 END
 
@@ -166,7 +172,7 @@ BEGIN
     IDS_COLUMNTYPE "Tipo"
     IDS_COLUMNDATE "Data"
     IDS_COLUMNTIME "Hora"
-    IDS_COLUMNSOURCE "Fonte"
+    IDS_COLUMNSOURCE "Origem"
     IDS_COLUMNCATEGORY "Categoria"
     IDS_COLUMNEVENT "Evento"
     IDS_COLUMNUSER "Usuário"
