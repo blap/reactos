@@ -1,6 +1,4 @@
-/* TRANSLATOR: 2013-2015 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 229, 98
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
@@ -9,8 +7,8 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON            IDI_APPICON, IDC_STATIC, 14, 14, 20, 20
     LTEXT           "Dizge Yapılandırma İzlencesi\nSürüm 1.0", IDC_STATIC, 42, 14, 182, 17, SS_NOPREFIX
-//  "Telif Hakkı: ReactOS Takımı 2005-"COPYRIGHT_YEAR"\n"
-    LTEXT           "Telif Hakkı: ReactOS Takımı 2005-2015\n\
+//  "Copyright (C) ReactOS Team 2005-"COPYRIGHT_YEAR"\n"
+    LTEXT           "Copyright (C) ReactOS Team 2005-2015\n\
 Christoph von Wittich (Christoph@ApiViewer.de)\n\
 Gregor Schneider (Gregor.Schneider@reactos.org)\n\
 Hermès BÉLUSCA - MAÏTO (hermes.belusca@sfr.fr)",
@@ -200,7 +198,7 @@ STRINGTABLE
 BEGIN
     IDS_MSCONFIG            "Dizge Yapılandırma İzlencesi"
     IDS_MSCONFIG_2          "Dizge Yapılandırması"
-    IDS_ABOUT               "&Üzerine...\tShift+F1"
+    IDS_ABOUT               "&Üzerine..."
 END
 
 STRINGTABLE
