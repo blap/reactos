@@ -1,0 +1,56 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+BEGIN
+    IDS_USER_HEADER "INFORMASI PENGGUNA"
+    IDS_GROU_HEADER "INFORMASI KELOMPOK"
+    IDS_PRIV_HEADER "INFORMASI PRIVILEGES"
+    IDS_COL_USER_NAME "Nama pengguna"
+    IDS_COL_GROUP_NAME "Nama grup"
+    IDS_COL_TYPE "Jenis"
+    IDS_COL_SID "SID"
+    IDS_COL_ATTRIB "Atribut"
+    IDS_COL_PRIV_NAME "Nama hak istimewa"
+    IDS_COL_DESCRIPTION "Deskripsi"
+    IDS_COL_STATE "Negara"
+    IDS_TP_WELL_KNOWN_GROUP "Kelompok yang terkenal"
+    IDS_TP_ALIAS "Alias"
+    IDS_TP_LABEL "Label"
+
+    /* [!] important note from the programmer: the program tries to remove
+       the last ', ' after concatenating, so keep than in mind when translating.
+
+       you can test your translation of these attributes by using 'whoami /groups' */
+
+    IDS_ATTR_GROUP_MANDATORY "Kelompok wajib, "
+    IDS_ATTR_GROUP_ENABLED_BY_DEFAULT "Diaktifkan secara default, "
+    IDS_ATTR_GROUP_ENABLED "Diaktifkan grup, "
+    IDS_ATTR_GROUP_OWNER "Pemilik grup, "
+    IDS_UNKNOWN_DESCRIPTION "???"
+    IDS_STATE_ENABLED "Diaktifkan"
+    IDS_STATE_DISABLED "Dimatikan"
+    IDS_ERROR_UPN "ERROR: Tidak dapat menggunakan User Principal Name (UPN)\n sebagai pengguna log masuk saat ini bukan pengguna domain.\n"
+    IDS_ERROR_FQDN "KESALAHAN: Tidak dapat mendapatkan Nama Distributed Terkualifikasi Penuh (FQDN) karena pengguna \nlogged-on saat ini bukan pengguna domain. \n"
+    IDS_ERROR_VALUEXPECTED "KESALAHAN: Sintaks tidak valid Nilai yang diharapkan untuk '/fo'.\nType ""WHOAMI /?"" untuk penggunaan. \n"
+    IDS_ERROR_VALUENOTALLOWED "KESALAHAN: Sintaks tidak valid Nilai '%s' tidak diizinkan untuk opsi '/ fo'. \nType ""WHOAMI /?"" untuk penggunaan. \n"
+    IDS_ERROR_1TIMES "KESALAHAN: Sintaks tidak valid Pilihan '%s' tidak diizinkan lebih dari waktu '1'. \nType ""WHOAMI /?"" untuk penggunaan. \n"
+    IDS_ERROR_INVALIDSYNTAX "KESALAHAN: Sintaks tidak valid. \nType ""WHOAMI /?"" untuk penggunaan. \n"
+    IDS_ERROR_INVALIDARG "KESALAHAN: Argumen / opsi tidak valid - '%s'. \nType ""WHOAMI /?"" untuk penggunaan. \n"
+    IDS_ERROR_NH_LIST "KESALAHAN: / NH switch tidak dapat digunakan dengan format LIST. \nType ""WHOAMI /?"" untuk penggunaan.\n"
+    IDS_HELP "DESCRIPTION:\n\
+  Display user, group and privileges information for the local logged-on user.\n\
+  If no arguments are provided, displays the current domain and user name.\n\
+\n\
+  Available output formats for the '/fo' option are 'csv', 'list' and 'table'.\n\
+  Use '/nh' to hide headers. By default the data is displayed in a table.\n\
+\n\
+SYNTAX:\n\
+  whoami [/upn | /fqdn | /logonid] \n\
+  whoami {[/user] [/groups] [/priv]} [/fo <Format>] [/nh] \n\
+  whoami /all [/fo <Format>] [/nh] \n\
+\n\
+EXAMPLES: \n\
+  whoami /groups /priv /nh /fo csv \n\
+  whoami /logonid \n\
+  whoami \n"
+END
