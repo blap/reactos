@@ -1,6 +1,5 @@
 /*
  * Copyright 2004 by Krzysztof Foltman
- * Copyright 2006,2007 by YunSong Hwang
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -17,22 +16,22 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
 
-LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+LANGUAGE LANG_KOREAN, SUBLANG_KOREAN
 
 IDM_MAINMENU MENU
 BEGIN
     POPUP "파일(&F)"
     BEGIN
-        MENUITEM "새 파일(&N)...\tCtrl+N",          ID_FILE_NEW
+        MENUITEM "새 파일(&N)...\tCtrl+N",       ID_FILE_NEW
         MENUITEM "열기(&O)...\tCtrl+O",      ID_FILE_OPEN
         MENUITEM "저장(&S)\tCtrl+S",         ID_FILE_SAVE
-        MENUITEM "다른 이름으로 저장(&A)...", ID_FILE_SAVEAS
+        MENUITEM "다른 이름으로 저장(&A)...",           ID_FILE_SAVEAS
         MENUITEM SEPARATOR
-        MENUITEM "인쇄(&P)...\tCtrl+P",    ID_PRINT
-        MENUITEM "인쇄 미리보기(&W)...",    ID_PREVIEW
-        MENUITEM " 인쇄 설정(&E)...",       ID_PRINTSETUP
+        MENUITEM "인쇄(&P)...\tCtrl+P",     ID_PRINT
+        MENUITEM "인쇄 미리보기(&W)...",        ID_PREVIEW
+        MENUITEM " 인쇄 설정(&E)...",        ID_PRINTSETUP
         MENUITEM SEPARATOR
-        MENUITEM "나가기(&X)",         ID_FILE_EXIT
+        MENUITEM "나가기(&X)",                 ID_FILE_EXIT
     END
     POPUP "편집(&E)"
     BEGIN
@@ -45,9 +44,9 @@ BEGIN
         MENUITEM "지우기(&C)\tDEL",                 ID_EDIT_CLEAR
         MENUITEM "모두 선택(&S)\tCtrl+A",         ID_EDIT_SELECTALL
         MENUITEM SEPARATOR
-        MENUITEM "찾기(&F)...\tCtrl+F",         ID_FIND
+        MENUITEM "찾기(&F)...\tCtrl+F",            ID_FIND
         MENUITEM "다음 찾기(&N)\tF3",              ID_FIND_NEXT
-        MENUITEM " 바꾸기(&R)...\tCtrl+H",      ID_REPLACE
+        MENUITEM " 바꾸기(&R)...\tCtrl+H",         ID_REPLACE
         MENUITEM SEPARATOR
         MENUITEM "읽기 전용(&O)",                  ID_EDIT_READONLY
         MENUITEM "수정 가능(&M)",                   ID_EDIT_MODIFIED
@@ -64,11 +63,11 @@ BEGIN
     POPUP "보기(&V)"
     BEGIN
         MENUITEM "도구바(&T)",        ID_TOGGLE_TOOLBAR
-        MENUITEM "형식바(&F)",      ID_TOGGLE_FORMATBAR
+        MENUITEM "형식바(&F)",     ID_TOGGLE_FORMATBAR
         MENUITEM "눈금바(&R)",          ID_TOGGLE_RULER
-        MENUITEM "상태바(&S)",      ID_TOGGLE_STATUSBAR
+        MENUITEM "상태바(&S)",     ID_TOGGLE_STATUSBAR
         MENUITEM SEPARATOR
-        MENUITEM " 옵션(&O)...",  ID_VIEWPROPERTIES
+        MENUITEM " 옵션(&O)...",     ID_VIEWPROPERTIES
     END
     POPUP "삽입(&I)"
     BEGIN
@@ -76,14 +75,14 @@ BEGIN
     END
     POPUP "형식(&O)"
     BEGIN
-        MENUITEM "글꼴(&F)...",                  ID_FONTSETTINGS
+        MENUITEM "글꼴(&F)...",                     ID_FONTSETTINGS
         MENUITEM "강조 점(&U)",               ID_BULLET
-        MENUITEM "단락(&P)...",             ID_PARAFORMAT
-        MENUITEM "탭(&T)...",                  ID_TABSTOPS
+        MENUITEM "단락(&P)...",                ID_PARAFORMAT
+        MENUITEM "탭(&T)...",                     ID_TABSTOPS
         POPUP "배경(&B)"
         BEGIN
             MENUITEM "시스템(&S)\tCtrl+1",         ID_BACK_1
-            MENUITEM "노랑색으로(&P)\tCtrl+2",           ID_BACK_2
+            MENUITEM "노랑색으로(&P)\tCtrl+2",    ID_BACK_2
         END
     END
     POPUP "도움말(&H)"
@@ -96,12 +95,12 @@ IDM_POPUP MENU
 BEGIN
     POPUP ""
     BEGIN
-        MENUITEM "잘라내기(&T)",          ID_EDIT_CUT
-        MENUITEM "복사(&C)",             ID_EDIT_COPY
-        MENUITEM "붙여넣기(&P)",          ID_EDIT_PASTE
+        MENUITEM "잘라내기(&T)",                ID_EDIT_CUT
+        MENUITEM "복사(&C)",               ID_EDIT_COPY
+        MENUITEM "붙여넣기(&P)",              ID_EDIT_PASTE
         MENUITEM SEPARATOR
-        MENUITEM "강조점(&B)",       ID_BULLET
-        MENUITEM "단락(&P)...",     ID_PARAFORMAT
+        MENUITEM "강조점(&B)",      ID_BULLET
+        MENUITEM "단락(&P)...",       ID_PARAFORMAT
     END
 END
 
@@ -109,23 +108,23 @@ IDM_COLOR_POPUP MENU
 BEGIN
     POPUP ""
     BEGIN
-        MENUITEM "검정",         ID_COLOR_BLACK
-        MENUITEM "밤색",         ID_COLOR_MAROON
-        MENUITEM "녹색",         ID_COLOR_GREEN
-        MENUITEM "올리브색",     ID_COLOR_OLIVE
-        MENUITEM "짙은 남색",    ID_COLOR_NAVY
-        MENUITEM "심홍색",       ID_COLOR_PURPLE
-        MENUITEM "검은 물오리색",ID_COLOR_TEAL
-        MENUITEM "회색",         ID_COLOR_GRAY
-        MENUITEM "은색",         ID_COLOR_SILVER
-        MENUITEM "빨강",         ID_COLOR_RED
+        MENUITEM "검정",      ID_COLOR_BLACK
+        MENUITEM "밤색",     ID_COLOR_MAROON
+        MENUITEM "녹색",      ID_COLOR_GREEN
+        MENUITEM "올리브색",      ID_COLOR_OLIVE
+        MENUITEM "짙은 남색",       ID_COLOR_NAVY
+        MENUITEM "심홍색",     ID_COLOR_PURPLE
+        MENUITEM "검은 물오리색",       ID_COLOR_TEAL
+        MENUITEM "회색",       ID_COLOR_GRAY
+        MENUITEM "은색",     ID_COLOR_SILVER
+        MENUITEM "빨강",        ID_COLOR_RED
         MENUITEM "라임색",       ID_COLOR_LIME
-        MENUITEM "노랑",         ID_COLOR_YELLOW
-        MENUITEM "파랑",         ID_COLOR_BLUE
-        MENUITEM "자홍색",       ID_COLOR_FUCHSIA
-        MENUITEM "물색",         ID_COLOR_AQUA
-        MENUITEM "하양",         ID_COLOR_WHITE
-        MENUITEM "자동",         ID_COLOR_AUTOMATIC
+        MENUITEM "노랑",     ID_COLOR_YELLOW
+        MENUITEM "파랑",       ID_COLOR_BLUE
+        MENUITEM "자홍색",    ID_COLOR_FUCHSIA
+        MENUITEM "물색",       ID_COLOR_AQUA
+        MENUITEM "하양",      ID_COLOR_WHITE
+        MENUITEM "자동",  ID_COLOR_AUTOMATIC
     END
 END
 
@@ -193,7 +192,7 @@ END
 IDD_DATETIME DIALOGEX 30, 20, 130, 80
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "날짜와 시간"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT        "가능한 형식",-1,3,2,100,15
     LISTBOX      IDC_DATETIME,3,12,80,65,LBS_NOINTEGRALHEIGHT | LBS_NOTIFY
@@ -204,7 +203,7 @@ END
 IDD_NEWFILE DIALOGEX 30, 20, 140, 80
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "새 문서"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT        "새 문서 형식",-1,3,2,100,15
     LISTBOX      IDC_NEWFILE,3,12,90,65,LBS_NOINTEGRALHEIGHT
@@ -215,7 +214,7 @@ END
 IDD_PARAFORMAT DIALOGEX 30, 20, 220, 110
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "단락 형식"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "들여쓰기", -1, 10, 10, 140, 68
     LTEXT "왼쪽", -1, 15, 22, 60, 13
@@ -233,7 +232,7 @@ END
 IDD_TABSTOPS DIALOGEX 30, 20, 200, 110
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "탭"
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "탭 정지", -1, 10, 10, 120, 90
     COMBOBOX IDC_TABSTOPS, 20, 20, 100, 60, CBS_SIMPLE
@@ -247,7 +246,7 @@ END
 IDD_FORMATOPTS DIALOGEX 0, 0, 280, 110
 STYLE DS_SHELLFONT | DS_SYSMODAL
 CAPTION ""
-FONT 9, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "줄 넘기기", -1, 5, 10, 145, 85
     RADIOBUTTON "줄넘기지 않음", IDC_PAGEFMT_WN, 10, 25, 138, 15
