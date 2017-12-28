@@ -1,4 +1,4 @@
-LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_BULGARIAN, SUBLANG_BULGARIAN_BULGARIA
 
 IDD_NETPROPERTIES DIALOGEX 0, 0, 246, 246
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
@@ -19,7 +19,7 @@ BEGIN
     CHECKBOX "Уведомяване при ограничена или липсваща свързаност", IDC_NOTIFYNOCONNECTION, 9, 220, 230, 12, BS_AUTOCHECKBOX | WS_TABSTOP
 END
 
-IDD_STATUS DIALOGEX 0, 0, 200, 180
+IDD_STATUS DIALOGEX 0, 0, 200, 280
 STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION | DS_MODALFRAME | WS_SYSMENU
 CAPTION "Общи"
 FONT 8, "MS Shell Dlg"
@@ -33,11 +33,11 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Свързване", -1, 9, 8, 182, 58, BS_GROUPBOX
     LTEXT "Състояние:", -1, 19, 20, 60, 8
-    LTEXT "Продължителност:", -1, 19, 34, 65, 8
+    LTEXT "Продължителност:", -1, 19, 34, 60, 8
     LTEXT "Скорост:", -1, 19, 48, 60, 8
     GROUPBOX "Дейност", -1, 9, 74, 182, 70, BS_GROUPBOX
     RTEXT "Пратени", -1, 26, 90, 60, 8
-    ICON "", IDC_NETSTAT, 110, 85, 18, 20
+    ICON "", IDC_NETSTAT, 110, 85, 32, 32
     LTEXT "Получени", -1, 149, 90, 37, 8
     LTEXT "Байта:", -1, 17, 115, 32, 8
     RTEXT "000.000.000", IDC_SEND, 63, 115, 44, 8
@@ -78,7 +78,7 @@ END
 
 IDD_NETWORKSETTINGSPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "Настройка на РеактОС"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_NET_SETUP, IDC_STATIC, 21, 10, 20, 20
@@ -91,22 +91,22 @@ END
 
 IDD_NETWORKCOMPONENTPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "Настройка на РеактОС"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "For Device:", IDC_STATIC, 33, 2, 100, 20
     LTEXT "n/a", IDC_NETWORK_DEVICE, 75, 2, 253, 20
-    LTEXT "Components checked are used by this connection:", IDC_STATIC, 33, 12, 253, 20
+    LTEXT "Отметнатите съставки се използват от това свързване:", IDC_STATIC, 33, 12, 253, 20
     CONTROL "", IDC_COMPONENT_LIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP, 33, 22, 250, 50
     PUSHBUTTON "&Install...", IDC_NETWORK_INSTALL, 122, 75, 50, 14, WS_DISABLED | WS_TABSTOP
-    PUSHBUTTON "&Uninstall", IDC_NETWORK_UNINSTALL, 177, 75, 50, 14, WS_DISABLED | WS_TABSTOP
+    PUSHBUTTON "&Махане", IDC_NETWORK_UNINSTALL, 177, 75, 50, 14, WS_DISABLED | WS_TABSTOP
     PUSHBUTTON "&Properties", IDC_NETWORK_PROPERTIES, 232, 75, 50, 14, WS_DISABLED | WS_TABSTOP
-    GROUPBOX "Description", IDC_STATIC, 33, 90, 250, 50, BS_GROUPBOX
+    GROUPBOX "Описание", IDC_STATIC, 33, 90, 250, 50, BS_GROUPBOX
 END
 
 IDD_NETWORKDOMAINPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "Настройка на РеактОС"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Do you want this computer to be a member of a domain?\n\
@@ -171,6 +171,6 @@ BEGIN
     IDS_NETWORKCOMPONENTSUBTITLE "Determine which networking components are used on your computer. To add new components, click on Install."
     IDS_NETWORKDOMAINTITLE "Workgroup or Computer Domain"
     IDS_NETWORKDOMAINSUBTITLE "A domain is a group of computers defined by a network administrator. A workgroup is a group of computers sharing the same workgroup name."
-    IDS_REACTOS_SETUP "ReactOS Setup"
+    IDS_REACTOS_SETUP "Настройка на РеактОС"
     IDS_WZD_DOMAIN_NAME "Setup cannot continue until you\nenter the name of your domain\nor workgroup."
 END
