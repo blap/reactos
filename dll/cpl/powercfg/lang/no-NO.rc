@@ -1,6 +1,4 @@
-/* Norwegian translation by LMH1 */
-
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 IDD_PROPPAGEPOWERSCHEMES DIALOGEX 0, 0, 252, 237
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -44,7 +42,7 @@ BEGIN
     LTEXT "0%", -1, 28, 43, 15, 10
     CONTROL "Slider1", IDC_ALARMBAR1, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 45, 170, 15
     LTEXT "100%", -1, 214, 43, 25, 10
-    PUSHBUTTON "Alar&m handling...", -1, 17, 69, 70, 14,WS_DISABLED
+    PUSHBUTTON "Alar&m handling...", -1, 17, 69, 70, 14, WS_DISABLED
     LTEXT "Varsel:", -1, 95, 71, 57, 10
     LTEXT "Ukjent", IDC_ALARMMSG1, 154, 71, 84, 10
     LTEXT "Handling:", -1, 95, 83, 55, 10
@@ -52,8 +50,8 @@ BEGIN
     LTEXT "Kjør Program:", -1, 95, 95, 55, 10
     LTEXT "Ukjent", IDC_ALARMPROG1, 154, 95, 84, 10
     GROUPBOX "Kritisk batteri alarm", -1, 6, 120, 239, 106
-    AUTOCHECKBOX "Aktivere svakt batteri alarm mens strømnivået passerer:", IDC_ALARM2, 15, 131, 180, 15, WS_TABSTOP
-    LTEXT "Ukjent", IDC_ALARMVALUE2, 209, 133, 33, 10
+    AUTOCHECKBOX "Aktivere svakt batteri alarm mens strømnivået passerer:", IDC_ALARM2, 15, 131, 195, 15, WS_TABSTOP
+    LTEXT "Ukjent", IDC_ALARMVALUE2, 215, 134, 20, 10
     LTEXT "0%", -1, 28, 154, 15, 10
     CONTROL "Slider1", IDC_ALARMBAR2, "msctls_trackbar32", TBS_HORZ | TBS_AUTOTICKS | WS_TABSTOP, 42, 158, 170, 15
     LTEXT "100%", -1, 214, 154, 25, 10
@@ -105,8 +103,8 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_CPLNAME_1 "Strømvalg"
-    IDS_CPLDESCRIPTION_1 "Konfigurere energi-sparing innstillinger for din datamaskin."
+    IDS_CPLNAME_1 "Lisens Behandler"
+    IDS_CPLDESCRIPTION_1 "Lisens Behandler"
     IDS_PROCENT "%i%%"
     IDS_SOUND "Lyd"
     IDS_TEXT "Tekst"
