@@ -1,6 +1,4 @@
-/* Hungarian translation by Robert Horvath - talley at cubeclub.hu */
-
-LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_HUNGARIAN, SUBLANG_HUNGARIAN_HUNGARY
 
 /* Dialogs */
 
@@ -33,26 +31,26 @@ END
 
 SYSMENU MENU
 BEGIN
-    MENUITEM "&Vissza állít", SC_RESTORE
-    MENUITEM "Át &helyez", SC_MOVE
-    MENUITEM "&Méret", SC_SIZE
-    MENUITEM "&Kis méret", SC_MINIMIZE
-    MENUITEM "&Nagy méret", SC_MAXIMIZE
+    MENUITEM "&Restore", SC_RESTORE
+    MENUITEM "&Move", SC_MOVE
+    MENUITEM "&Size", SC_SIZE
+    MENUITEM "Mi&nimize", SC_MINIMIZE
+    MENUITEM "Ma&ximize", SC_MAXIMIZE
     MENUITEM SEPARATOR
-    MENUITEM "&Bezár\tAlt+F4", SC_CLOSE
+    MENUITEM "&Close\tAlt+F4", SC_CLOSE
 END
 
 SYSMENUMDI MENU
 BEGIN
-    MENUITEM "&Vissza állít", SC_RESTORE
-    MENUITEM "Át &helyez", SC_MOVE
-    MENUITEM "&Méret", SC_SIZE
-    MENUITEM "&Kis méret", SC_MINIMIZE
-    MENUITEM "&Nagy méret", SC_MAXIMIZE
+    MENUITEM "&Restore", SC_RESTORE
+    MENUITEM "&Move", SC_MOVE
+    MENUITEM "&Size", SC_SIZE
+    MENUITEM "Mi&nimize", SC_MINIMIZE
+    MENUITEM "Ma&ximize", SC_MAXIMIZE
     MENUITEM SEPARATOR
-    MENUITEM "&Bezár\tCtrl+F4", SC_CLOSE
+    MENUITEM "&Close\tCtrl+F4", SC_CLOSE
     MENUITEM SEPARATOR
-    MENUITEM "&Előre\tCtrl+F6", SC_NEXTWINDOW
+    MENUITEM "Nex&t\tCtrl+F6", SC_NEXTWINDOW
 END
 
 /* Strings */
