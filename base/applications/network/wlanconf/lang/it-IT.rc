@@ -1,16 +1,16 @@
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "\nConfigurazione adattatore WLAN.\n\n\
+    IDS_USAGE "\nConfigure a WLAN adapter.\n\n\
 WLANCONF [-c SSID [-w WEP] [-a]] [-d] [-s]\n\n\
-\t-c SSID\t\tConnessione a SSID indicato,\n\
-\t-w WEP\t\tSpecifica una chiave WEP da usare.\n\
-\t-a\t\tSpecifica la rete di destinazione ad-hoc\n\
-\t-d\t\tDisconnetti dall'AP corrente.\n\
-\t-s\t\tEsegue la scansione e visualizza un elenco \n\
-\t\t\tdi punti di accesso raggiungibili.\n\n\
-In assenza di parametri verranno stampate le informazioni relative alla connessione WLAN corrente\n"
+\t-c SSID\t\tConnects to a supplied SSID,\n\
+\t-w WEP\t\tSpecifies a WEP key to use.\n\
+\t-a\t\tSpecifies the target network is ad-hoc\n\
+\t-d\t\tDisconnects from the current AP.\n\
+\t-s\t\tScans and displays a list of access points\n\
+\t\t\tin range.\n\n\
+Passing no parameters will print information about the current WLAN connection\n"
     IDS_NO_NETWORK "Nessuna rete trovata\n"
     IDS_NO_WLAN_ADAPTER "Impossibile trovare un adattatore WLAN sul sistema\n"
     IDS_SUCCESS "Operazione completata con successo.\n"
