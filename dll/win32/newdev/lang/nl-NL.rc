@@ -1,18 +1,11 @@
-/*
-* PROJECT:    ReactOS New device installer
-* COPYRIGHT:  See COPYING in the top level directory
-* FILE:       dll/win32/newdev/lang/nl-NL.rc
-* TRANSLATOR: Maurus Cuelenaere
-*/
-
-LANGUAGE LANG_DUTCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "Installatie apparaat"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Welkom", IDC_WELCOMETITLE, 120, 8, 195, 16
+    LTEXT "Welkom", IDC_WELCOMETITLE, 120, 8, 195, 24
     LTEXT "Deze wizard installeert een nieuwe driver voor:", IDC_STATIC, 120, 21, 195, 16
     LTEXT "Klik op Volgende om verder te gaan.", IDC_STATIC, 120, 169, 195, 16
     LTEXT "ONBEKEND APPARAAT", IDC_DEVICE, 148, 36, 147, 12
