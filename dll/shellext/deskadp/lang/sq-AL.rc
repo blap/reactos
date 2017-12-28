@@ -1,8 +1,4 @@
-/* TRANSLATOR : Ardit Dani (Ard1t) (ardit.dani@gmail.com)
-* DATE OF TR: 29-11-2013
-*/
-
-LANGUAGE LANG_ALBANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ALBANIAN, SUBLANG_ALBANIAN_ALBANIA
 
 IDD_DISPLAYADAPTER DIALOGEX 0, 0, 252, 226
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -43,10 +39,10 @@ BEGIN
     IDS_MODEFMT "%d by %d, %s, %s"
     IDS_DEFREFRESHRATE "Default Refresh"
     IDES_REFRESHRATEFMT "%d Hertz"
-    IDS_4BPP "16 Colors"
-    IDS_8BPP "256 Colors"
-    IDS_15BPP "High Color (15 bit)"
-    IDS_16BPP "High Color (16 bit)"
-    IDS_24BPP "True Color (24 bit)"
+    IDS_4BPP "16 Ngjyra"
+    IDS_8BPP "256 Ngjyra"
+    IDS_15BPP "32,768 Ngjyra (15 bit)"
+    IDS_16BPP "65,536 Ngjyra (16 bit)"
+    IDS_24BPP "16,777,216 Ngjyra (24 bit)"
     IDS_32BPP "True Color (32 bit)"
 END
