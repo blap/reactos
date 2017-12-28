@@ -1,0 +1,25 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+BEGIN
+    IDS_USAGE "\nPemakaian: arping [-t] [-n count] -s sumber-ip tujuan-host \n\n\
+Pilihan:\n\
+    -t Ping host yang ditentukan sampai berhenti. \n\
+                   Untuk berhenti - ketik Control-C.\n\
+    -n count Jumlah probe untuk dikirim.\n\
+    -s Gunakan IP sumber ini.\n\n\0"
+    IDS_BAD_OPTION_FORMAT "Format pilihan buruk %1.\n\0"
+    IDS_BAD_OPTION "Pilihan buruk %1.\n\0"
+    IDS_BAD_PARAMETER "Parameter buruk %1.\n\0"
+    IDS_DEST_MUST_BE_SPECIFIED "Nama atau alamat IP host tujuan harus ditentukan.\n\0"
+    IDS_COULD_NOT_INIT_WINSOCK "Tidak bisa menginisialisasi winsock dll.\n\0"
+    IDS_UNKNOWN_HOST "Tuan rumah yang tidak diketahui %1.\n\0"
+    IDS_SRC_MUST_BE_SPECIFIED "Alamat IP host sumber harus ditentukan.\n\0"
+    IDS_BAD_VALUE_OPTION_N "Nilai buruk pilihan -n, batasan valid adalah dari 1 ke %1! u!.\n\0"
+    IDS_ARPING_TO_FROM "ARPING %1 dari %2\n\0"
+    IDS_MS "ms\0"
+    IDS_1MS "1ms\0"
+    IDS_REPLY_FROM "Unicast balasan dari %1 [%2] %3%4\n\0"
+    IDS_ARPING_STATISTICS "Kirim %1!u! maksud\n\
+Terima %2!u! respon(s)\n\0"
+END
