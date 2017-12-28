@@ -1,11 +1,11 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 IDD_PROPPAGESETTINGS DIALOGEX 0, 0, 254, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Einstellungen"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Wählen Sie die Dienste aus, die Sie für die Eingabesprachen in der Liste verwenden wollen.\nVerwenden Sie ""Hinzufügen"" und ""Entfernen"", um die Liste zu bearbeiten.", -1, 9, 6, 238, 25
+    LTEXT "Select the services that you want for each input language shown in the list.\nUse the Add and Remove buttons to modify this list.", -1, 9, 6, 238, 25
     CONTROL "TEXT", IDC_KEYLAYOUT_LIST, "SYSLISTVIEW32", WS_BORDER | WS_VSCROLL | WS_TABSTOP | LVS_SINGLESEL | LVS_NOSORTHEADER | LVS_SHOWSELALWAYS | LVS_REPORT, 8, 36, 237, 101
     PUSHBUTTON "&Als Standard", IDC_SET_DEFAULT, 101, 159, 144, 14
     PUSHBUTTON "&Hinzufügen...", IDC_ADD_BUTTON, 27, 142, 70, 14
@@ -72,7 +72,7 @@ BEGIN
     AUTORADIOBUTTON "S&trg", IDC_CTRL_LAYOUT, 30, 81, 30, 11
     AUTORADIOBUTTON "A&lt links", IDC_LEFT_ALT_LAYOUT, 30, 95, 44, 12
     DEFPUSHBUTTON "OK", IDOK, 172, 9, 50, 14
-    PUSHBUTTON "Abbrechen", IDCANCEL, 172, 27, 52, 14
+    PUSHBUTTON "Abbrechen", IDCANCEL, 172, 27, 50, 14
 END
 
 IDD_INPUT_LANG_PROP DIALOGEX 20, 20, 227, 75
