@@ -1,10 +1,4 @@
-/* FILE:       dll/win32/shell32/lang/cs-CZ.rc
- * TRANSLATOR: Radek Liska aka Black_Fox (radekliska at gmail dot com)
- * UPDATED:    2015-04-12
- * THANKS TO:  navaraf, who translated major part of this file
- */
-
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 MENU_001 MENUEX
 BEGIN
@@ -42,7 +36,7 @@ BEGIN
         MENUITEM "", -1, MFT_SEPARATOR
         MENUITEM "A&ktualizovat", FCIDM_SHVIEW_REFRESH
         MENUITEM "", -1, MFT_SEPARATOR
-        MENUITEM "V&ložit", FCIDM_SHVIEW_INSERT
+        MENUITEM "Vložit", FCIDM_SHVIEW_INSERT
         MENUITEM "Vložit zást&upce", FCIDM_SHVIEW_INSERTLINK
     END
 END
@@ -72,6 +66,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Vyj&mout", IDM_CUT
         MENUITEM "&Kopírovat", IDM_COPY
+        MENUITEM "V&ložit", IDM_INSERT
         MENUITEM SEPARATOR
         MENUITEM "Vytvořit zástupc&e", IDM_CREATELINK
         MENUITEM "O&dstranit", IDM_DELETE
@@ -86,8 +81,8 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "Procházet..."
 FONT 8, "MS Shell Dlg"
 BEGIN
-    DEFPUSHBUTTON "OK", 1, 80, 176, 50, 12, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
-    PUSHBUTTON "Storno", 2, 134, 176, 50, 12, WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON "OK", 1, 60, 175, 60, 15, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON "Storno", 2, 125, 175, 60, 15, WS_GROUP | WS_TABSTOP
     LTEXT "", IDC_BROWSE_FOR_FOLDER_TITLE, 4, 4, 180, 12
     LTEXT "", IDC_BROWSE_FOR_FOLDER_STATUS, 4, 25, 180, 12
     CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP, 4, 40, 180, 120
@@ -101,7 +96,7 @@ BEGIN
     LTEXT "", IDC_BROWSE_FOR_FOLDER_TITLE, 10, 8, 198, 24
     LTEXT "", IDC_BROWSE_FOR_FOLDER_STATUS, 10, 25, 198, 12
     LTEXT "Složka:", IDC_BROWSE_FOR_FOLDER_FOLDER, 10, 152, 40, 12
-    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS  | WS_BORDER | WS_TABSTOP, 12, 38, 194, 105
+    CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | WS_BORDER | WS_TABSTOP, 12, 38, 194, 105
     EDITTEXT IDC_BROWSE_FOR_FOLDER_FOLDER_TEXT, 46, 150, 160, 14, WS_BORDER | WS_GROUP | WS_TABSTOP
     PUSHBUTTON "&Vytvořit novou složku", IDC_BROWSE_FOR_FOLDER_NEW_FOLDER, 12, 174, 77, 14, WS_GROUP | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 102, 174, 50, 14, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
@@ -164,9 +159,9 @@ BEGIN
     LTEXT "Zadejte název programu, složky, dokumentu, nebo zdroje v síti Internet a ReactOS jej pro vás otevře.", 12289, 36, 11, 182, 18
     LTEXT "&Otevřít:", 12305, 7, 39, 24, 10
     CONTROL "", IDC_RUNDLG_EDITPATH, "COMBOBOX", WS_TABSTOP | WS_GROUP | WS_VSCROLL | WS_VISIBLE | CBS_AUTOHSCROLL | CBS_DROPDOWN, 36, 37, 183, 100
-    DEFPUSHBUTTON "OK", IDOK, 62, 63, 50, 14, WS_TABSTOP
-    PUSHBUTTON "Storno", IDCANCEL, 116, 63, 50, 14, WS_TABSTOP
-    PUSHBUTTON "&Procházet...", 12288, 170, 63, 50, 14, WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 36, 63, 59, 14, WS_TABSTOP
+    PUSHBUTTON "Storno", IDCANCEL, 98, 63, 59, 14, WS_TABSTOP
+    PUSHBUTTON "&Procházet...", 12288, 160, 63, 59, 14, WS_TABSTOP
 END
 
 IDD_SHORTCUT_PROPERTIES DIALOGEX 0, 0, 235, 215
@@ -267,7 +262,7 @@ BEGIN
     LTEXT "Změněno:", 14016, 8, 147, 45, 10
     EDITTEXT 14017, 68, 147, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "Otevřeno:", 14018, 8, 163, 45, 10
-    EDITTEXT 14019, 68, 160, 163, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT 14019, 68, 163, 160, 10, ES_LEFT | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "", -1, 8, 179, 221, 1, SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE
     LTEXT "Atributy:", 14020, 8, 189, 45, 10
     AUTOCHECKBOX "&Jen pro čtení", 14021, 58, 189, 67, 10
@@ -412,7 +407,7 @@ BEGIN
     CONTROL "", IDC_FOLDER_OPTIONS_TASKICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 25, 21, 20
     AUTORADIOBUTTON "&Zobrazit běžné operace ve složkách", IDC_FOLDER_OPTIONS_COMMONTASKS, 40, 25, 120, 10, WS_TABSTOP | WS_GROUP
     AUTORADIOBUTTON "Použít klas&ické složky ReactOS", IDC_FOLDER_OPTIONS_CLASSICFOLDERS, 40, 37, 120, 10
-    GROUPBOX "Procházení složek", -1, 7, 60, 249, 45, WS_TABSTOP | WS_GROUP
+    GROUPBOX "Procházení složek", -1, 7, 60, 249, 45, WS_TABSTOP
     CONTROL "", IDC_FOLDER_OPTIONS_FOLDERICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 70, 21, 20
     AUTORADIOBUTTON "Otevírat každou složku ve stejné&m okně", IDC_FOLDER_OPTIONS_SAMEWINDOW, 40, 70, 140, 10, WS_TABSTOP | WS_GROUP
     AUTORADIOBUTTON "Ote&vírat každou složku ve svém vlastním okně", IDC_FOLDER_OPTIONS_OWNWINDOW, 40, 82, 140, 10
@@ -485,14 +480,14 @@ CAPTION "Odhlásit se ze systému ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
-    LTEXT "Opravdu se chcete odhlásit?", -1, 35, 16, 146, 8
-    DEFPUSHBUTTON "&Odhlásit", IDOK, 41, 39, 50, 14
-    PUSHBUTTON "Storno", IDCANCEL, 95, 39, 50, 14
+    LTEXT "Opravdu se chcete odhlásit?", -1, 49, 15, 131, 8
+    DEFPUSHBUTTON "&Log Off", IDOK, 49, 38, 43, 14
+    PUSHBUTTON "Storno", IDCANCEL, 99, 38, 43, 14
 END
 
 IDD_DISCONNECT DIALOGEX 0, 0, 188, 60
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Odpojit se od systému ReactOS" //jak to prelozit, kde to v realu uvidim?
+CAPTION "Disconnect ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_DISCONN, IDC_STATIC, 8, 6, 21, 20
@@ -602,7 +597,7 @@ BEGIN
     GROUPBOX "Možnosti kontroly disku", -1, 7, 6, 179, 40
     PUSHBUTTON "Storno", IDCANCEL, 128, 95, 60, 14
     AUTOCHECKBOX "Automaticky opravovat chyby", 14000, 12, 15, 155, 10
-    AUTOCHECKBOX "&Vyhledat a pokusit se obnovit vadné sektory", 14001, 16, 30, 165, 10
+    AUTOCHECKBOX "&Scan for and attempt recovery of bad sectors", 14001, 12, 30, 165, 10
     CONTROL "", 14002, "MSCTLS_PROGRESS32", 16, 7, 50, 179, 8
     LTEXT "", 14003, 60, 80, 170, 10
 END
@@ -651,7 +646,7 @@ BEGIN
     IDS_SHV_COLUMN_CATEGORY "Kategorie"
     IDS_SHV_COLUMN_DELFROM "Původní umístění"
     IDS_SHV_COLUMN_DELDATE "Odstraněno"
-    IDS_SHV_COLUMN_FONTTYPE "Druh písma" //fonttype
+    IDS_SHV_COLUMN_FONTTYPE "Druh písma"
     IDS_SHV_COLUMN_WORKGROUP "Pracovní skupina"
     IDS_SHV_COLUMN_NETLOCATION "Síťové umístění"
     IDS_SHV_COLUMN_DOCUMENTS "Dokumenty"
@@ -689,7 +684,7 @@ BEGIN
     IDS_FORMATDRIVE "Formátovat..."
     IDS_RENAME "Přejmenovat"
     IDS_PASTE "Vložit"
-    IDS_EJECT "Eject"
+    IDS_EJECT "Vysunout"
     IDS_DISCONNECT "Disconnect"
 
     IDS_CREATEFOLDER_DENIED "Složku '%1' nebylo možné vytvořit"
@@ -811,7 +806,7 @@ BEGIN
     IDS_SYS_FILE "Systémový soubor"
     IDS_VXD_FILE "Virtuální ovladač zařízení"
     IDS_ANY_FILE "Soubor %s"
-	
+
     IDS_OPEN_VERB "Otevřít"
     IDS_EXPLORE_VERB "Prozkoumat"
     IDS_RUNAS_VERB "Spustit jako..."
@@ -845,4 +840,24 @@ BEGIN
     IDS_MENU_EMPTY "(Prázdné)"
     IDS_OBJECTS "Položek: %d"
     IDS_OBJECTS_SELECTED "Položek vybráno: %d"
+
+    IDS_ADVANCED_FOLDER "Files and Folders"
+    IDS_ADVANCED_NET_CRAWLER "Automatically search for network folders and printers"
+    IDS_ADVANCED_FOLDER_SIZE_TIP "Display file size information in folder tips"
+    IDS_ADVANCED_FRIENDLY_TREE "Display simple folder view in Explorer's Folders list"
+    IDS_ADVANCED_WEB_VIEW_BARRICADE "Display the contents of system folders"
+    IDS_ADVANCED_SHOW_FULL_PATH_ADDRESS "Display the full path in address bar"
+    IDS_ADVANCED_SHOW_FULL_PATH "Display the full path in the title bar"
+    IDS_ADVANCED_DISABLE_THUMB_CACHE "Do not cache thumbnails"
+    IDS_ADVANCED_HIDDEN "Hidden files and folders"
+    IDS_ADVANCED_DONT_SHOW_HIDDEN "Do not show hidden files and folders"
+    IDS_ADVANCED_SHOW_HIDDEN "Show hidden files and folders"
+    IDS_ADVANCED_HIDE_FILE_EXT "Hide extensions for known file types"
+    IDS_ADVANCED_SUPER_HIDDEN "Hide protected operating system files (Recommended)"
+    IDS_ADVANCED_DESKTOP_PROCESS "Launch folder windows in a separate process"
+    IDS_ADVANCED_CLASSIC_VIEW_STATE "Remember each folder's view settings"
+    IDS_ADVANCED_PERSIST_BROWSERS "Restore previous folder windows at logon"
+    IDS_ADVANCED_CONTROL_PANEL_IN_MY_COMPUTER "Show Control Panel in My Computer"
+    IDS_ADVANCED_SHOW_COMP_COLOR "Show encrypted or compressed NTFS files in color"
+    IDS_ADVANCED_SHOW_INFO_TIP "Show pop-up description for folder and desktop items"
 END
