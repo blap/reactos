@@ -1,6 +1,4 @@
-/* Russian translation by Kudratov Olimjon (olim98@bk.ru) */
-
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 BEGIN
@@ -20,8 +18,8 @@ BEGIN
      *   If you translate the administrator account name, keep IDS_USER_ADMINISTRATOR_NAME and
      *   syssetup.dll:IDS_ADMINISTRATOR_NAME synchronized.
      */
-    IDS_USER_ADMINISTRATOR_NAME "Administrator"// Не изменять, иначе будут глюки с нерусскими программами
+    IDS_USER_ADMINISTRATOR_NAME "Administrator"
     IDS_USER_ADMINISTRATOR_COMMENT "Встроенная учетная запись администратора компьютера/домена."
-    IDS_USER_GUEST_NAME "Guest"// Не изменять, иначе будут глюки с нерусскими программами
+    IDS_USER_GUEST_NAME "Guest"
     IDS_USER_GUEST_COMMENT "Встроенная учетная запись для доступа гостей к компьютеру или домену."
 END
