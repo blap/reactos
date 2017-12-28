@@ -1,4 +1,4 @@
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 STRINGTABLE
 {
@@ -17,8 +17,8 @@ STRINGTABLE
     STRING_UNHANDLED_TYPE, "reg: Неизвестный тип данных реестра [/t 0x%1!x!, /d %2]\n"
     STRING_OVERWRITE_VALUE, "Параметр '%1' уже существует. Заменить?"
     STRING_YESNO, "(Y-да/N-нет)"
-    STRING_YES, "Y"
-    STRING_NO, "N"
+    STRING_YES, "Н"
+    STRING_NO, "T"
     STRING_CANCELLED, "Операция отменена\n"
     STRING_DEFAULT_VALUE, "(по умолчанию)"
     STRING_DELETE_VALUE, "Удалить раздел реестра '%1' без возможности восстановления?"
