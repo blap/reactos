@@ -1,0 +1,8 @@
+LANGUAGE LANG_INDONESIAN, SUBLANG_INDONESIAN_INDONESIA
+
+STRINGTABLE
+BEGIN
+    IDS_USAGE "Cetak nama host saat ini.\n\nnamahost"
+    IDS_NOSET "nama host -s tidak didukung."
+    IDS_ERROR "Kesalahan Win32"
+END
