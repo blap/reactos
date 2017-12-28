@@ -1,4 +1,4 @@
-LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_BULGARIAN, SUBLANG_BULGARIAN_BULGARIA
 
 STRINGTABLE
 BEGIN
@@ -9,12 +9,12 @@ BEGIN
     IDS_ACCESS_DENIED "Access denied - %s\n"
     IDS_DRIVE_ALREADY_SUBSTED "Устройството вече е подложено на SUBST\n"
     IDS_FAILED_WITH_ERRORCODE "Грешка номер: 0x%x: %s\n"
-    IDS_USAGE "Обвързва път с име на устройство (дял).\n\n\
+    IDS_USAGE "Associates a path with a drive letter.\n\n\
 SUBST [drive1: [drive2:]path]\n\
 SUBST drive1: /D\n\n\
-  drive1:        Указва мнимото устройство и пъта, с който искате да обвържете пътя.\n\
-  [drive2:]path  Указва действително устройство и пътя, с който искате да обвържете\n\
-                 мнимо устройство.\n\
-  /D             Изтрива заместеното (мнимо) устройство.\n\n\
-Напишете „SUBST“ без ключове, за да се изведе списък с текущите мними устройства.\n"
+  drive1:        Specifies a virtual drive to which you want to assign a path.\n\
+  [drive2:]path  Specifies a physical drive and path you want to assign to\n\
+                 a virtual drive.\n\
+  /D             Deletes a substituted (virtual) drive.\n\n\
+Type SUBST with no parameters to display a list of current virtual drives.\n"
 END
