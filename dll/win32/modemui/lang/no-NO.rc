@@ -1,4 +1,4 @@
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 IDM_MENU MENU
 BEGIN
@@ -263,7 +263,7 @@ BEGIN
     261 "Maskinvare"
     262 "Ingen"
     263 "On"
-    264 "Low"
+    264 "Lav"
     265 "V.23 (Minitel)"
     266 "Standard"
     267 "Non-standard (Bell, HST)"
@@ -286,9 +286,9 @@ BEGIN
     465 "Standard EC"
     466 "Forced EC"
     467 "Cellular"
-    468 "Disabled"
+    468 "Deaktivert"
     469 "Enabled"
-    470 "Disabled"
+    470 "Deaktivert"
     480 "AUTO  (1 Ch.)"
     481 "AUTO  (2 Ch.)"
     482 "PPP   (56K)"
@@ -379,7 +379,7 @@ BEGIN
     3205 "38.4K Baud"
     3206 "57.6K Baud"
     3207 "No response"
-    3212 "Command"
+    3212 "Kommando"
     3213 "Response"
     3214 "The port that the modem is attached could not be opened. This may be the result of a hardware conflict. Check the device manager to verify all devices are functional."
     3215 "The port that the modem is using is currently open by another application. Exit any application that may currently be using the port."
@@ -391,7 +391,7 @@ BEGIN
     3236 "The modem failed to respond. Make sure it is properly connected and turned on.  If it is an internal modem or is connected, verify that the interrupt for the port is properly set."
     3237 "COMMAND NOT SUPPORTED"
     3238 "Field"
-    3239 "Value"
+    3239 "Verdi"
     3240 " Default Preferences"
     3241 " Connection Preferences"
     6144 "Japan"
