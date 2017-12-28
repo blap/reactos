@@ -1,16 +1,11 @@
-/* Spanish Language resource file
- *
- * Traducido por: ??? e Ismael Ferreras Morezuelas 2014-12-30
- */
-
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "Instalación de dispositivos"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Bienvenido", IDC_WELCOMETITLE, 120, 8, 195, 16
+    LTEXT "Bienvenido", IDC_WELCOMETITLE, 120, 8, 195, 24
     LTEXT "Este asistente le ayudará a instalar un nuevo controlador de dispositivo para:", IDC_STATIC, 120, 21, 195, 16
     LTEXT "Haga clic en Siguiente para continuar.", IDC_STATIC, 120, 169, 195, 16
     LTEXT "Dispositivo desconocido", IDC_DEVICE, 148, 36, 147, 12
