@@ -1,4 +1,4 @@
-LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 IDM_MENU MENU
 BEGIN
@@ -25,7 +25,7 @@ BEGIN
     LTEXT "Auf &Kreditkartensignal:", 1007, 16, 55, 109, 8, NOT WS_VISIBLE
     EDITTEXT 1008, 133, 52, 26, 12, ES_RIGHT | NOT WS_VISIBLE | WS_GROUP
     CONTROL "", 1009, "MSCTLS_UPDOWN32", NOT WS_VISIBLE | WS_BORDER | WS_GROUP | 0x00000036, 159, 52, 12, 12
-    LTEXT "Sekunden warten", 1010, 165, 54, 60, 8, NOT WS_VISIBLE
+    LTEXT "seconds", 1010, 173, 54, 40, 8, NOT WS_VISIBLE
     GROUPBOX "&Länder-/Regionauswahl", 1012, 6, 80, 225, 75
     COMBOBOX 1013, 18, 99, 203, 50, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "&Porteinstellungen...", 1100, 107, 170, 125, 14
@@ -37,7 +37,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Allgemein"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Port:", 1018, 9, 8, 32, 10
+    LTEXT "Anschluss:", 1018, 9, 8, 32, 10
     LTEXT "COM Port", 1095, 48, 8, 181, 10
     GROUPBOX "&Lautstärke", 1029, 10, 21, 218, 48
     CONTROL "", 1032, "MSCTLS_TRACKBAR32", WS_GROUP | WS_TABSTOP | 0x00000001, 84, 40, 66, 20
@@ -84,14 +84,14 @@ CAPTION "Verschiedene Rufsignale"
 FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "", 1068, 10, 7, 218, 87
-    AUTOCHECKBOX "&Telefonleitung verfügt über verschiedene Rufsignale", 1069, 19, 7, 181, 10
+    AUTOCHECKBOX "&Telefonleitung verfügt über verschiedene Rufsignale", 1069, 19, 7, 177, 10
     CTEXT "Rufsignalfolge", -1, 20, 21, 74, 8
     CTEXT "Art des Anrufs", -1, 96, 21, 65, 8
-    LTEXT "&Einfaches Klingeln:", 1088, 20, 37, 65, 8
+    LTEXT "&Einfaches Klingeln:", 1088, 20, 37, 53, 8
     COMBOBOX 1091, 96, 37, 65, 61, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "&Doppeltes Klingeln:", 1089, 20, 57, 65, 8
+    LTEXT "&Doppeltes Klingeln:", 1089, 20, 57, 53, 8
     COMBOBOX 1092, 96, 55, 65, 61, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
-    LTEXT "D&reifaches Klingeln:", 1090, 20, 76, 65, 8
+    LTEXT "D&reifaches Klingeln:", 1090, 20, 76, 53, 8
     COMBOBOX 1093, 96, 73, 65, 61, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
 END
 
@@ -124,7 +124,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Allgemein"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    AUTOCHECKBOX "&Vermittlungsunterstütztes (manuelles) Wählen", 1002, 19, 22, 160, 10
+    AUTOCHECKBOX "&Vermittlungsunterstütztes (manuelles) Wählen", 1002, 19, 22, 150, 10
     AUTOCHECKBOX "&Trennen nach Leerlauf von:", 1042, 19, 38, 143, 10
     EDITTEXT 1043, 168, 35, 25, 13, ES_AUTOHSCROLL | ES_NUMBER
     LTEXT "&Wählvorgang abbrechen nach:", -1, 19, 56, 147, 10
@@ -139,7 +139,7 @@ BEGIN
     COMBOBOX 1031, 114, 155, 84, 61, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
     GROUPBOX "Anrufeinstellungen", 1060, 11, 7, 217, 66
     LTEXT "min", 1044, 195, 38, 22, 8
-    LTEXT "sec", 1041, 195, 56, 22, 8
+    LTEXT "secs", 1041, 194, 56, 22, 8
     GROUPBOX "Datenverbindungseinstellungen", -1, 11, 82, 217, 94
 END
 
@@ -193,7 +193,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
 CAPTION "Warnung"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    AUTOCHECKBOX "Diese Meldung nicht mehr anzeigen", 1109, 17, 73, 125, 10
+    AUTOCHECKBOX "Diese Meldung nicht mehr anzeigen", 1109, 17, 73, 118, 10
     DEFPUSHBUTTON "OK", 1, 302, 84, 50, 14
     LTEXT "Einige Modems können Initialisierungszeichenfolgen dieser Länge nicht verarbeiten.", -1, 50, 27, 304, 8
     LTEXT "Nähere Informationen können Sie von dem Modemhersteller erhalten.", -1, 50, 41, 304, 8
