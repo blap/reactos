@@ -1,6 +1,4 @@
-/* Translated by: Mateus de Lima (aka wavemaster) <mateusloliveira [@] hotmail.com> */
-
-LANGUAGE LANG_PORTUGUESE, SUBLANG_NEUTRAL
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
 
 IDD_MSCONFIG_DIALOG DIALOGEX 0, 0, 378, 220
 STYLE DS_SHELLFONT | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP |
@@ -10,7 +8,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "Tab1", IDC_TAB, "SysTabControl32", WS_TABSTOP, 2, 2, 374, 195
     DEFPUSHBUTTON "OK", IDOK, 211, 201, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
-    PUSHBUTTON "Ajuda", IDC_BTN_HELP, 2, 201, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+    PUSHBUTTON "A&juda", IDC_BTN_HELP, 2, 201, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
     PUSHBUTTON "Cancelar", IDCANCEL, 267, 201, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
     PUSHBUTTON "Aplicar", IDC_BTN_APPLY, 323, 201, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
 END
@@ -69,8 +67,8 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Seleção de inicialização", -1, 10, 10, 340, 150, 0, WS_EX_TRANSPARENT
     CONTROL "&Inicialização normal - carregar todos os drivers de dispositivo e serviços", IDC_CBX_NORMAL_START, "Button", 0x50010009, 20, 30, 260, 10
-    CONTROL "I&nicialização de diagnóstico - carregar apenas dispositivos e serviços básicos", IDC_CBX_DIAGNOSTIC_START, "Button", 0x50010009, 20, 45, 260, 10
-    CONTROL "Ini&cialização seletiva", IDC_CBX_SELECTIVE_STARTUP, "Button", 0x50010009, 20, 60, 260, 10
+    CONTROL "Inicialização de &diagnóstico - carregar apenas dispositivos e serviços básicos", IDC_CBX_DIAGNOSTIC_START, "Button", 0x50010009, 20, 45, 260, 10
+    CONTROL "Inicialização &seletiva", IDC_CBX_SELECTIVE_STARTUP, "Button", 0x50010009, 20, 60, 260, 10
     AUTOCHECKBOX "&Processar o arquivo SYSTEM.INI", IDC_CBX_SYSTEM_INI, 30, 80, 260, 10
     AUTOCHECKBOX "Carr&egar serviços do sistema", IDC_CBX_SYSTEM_SERVICE, 30, 95, 260, 10
     AUTOCHECKBOX "Carregar i&tens de inicialização", IDC_CBX_STARTUP_ITEM, 30, 110, 260, 10
@@ -95,7 +93,7 @@ BEGIN
     PUSHBUTTON "Opçõe&s avançadas...", IDC_BTN_ADVANCED_OPTIONS, 100, 150, 70, 12
     LTEXT "&Tempo limite:", -1, 280, 91, 30, 10
     EDITTEXT IDC_TXT_BOOT_TIMEOUT, 310, 90, 25, 12, ES_LEFT
-    LTEXT "segundos", -1, 340, 91, 15, 10
+    LTEXT "seg.", -1, 340, 91, 15, 10
 END
 
 IDD_FREELDR_ADVANCED_PAGE DIALOGEX 0, 0, 175, 175
@@ -139,7 +137,7 @@ BEGIN
     IDS_SERVICES_COLUMN_SERVICE "Serviço"
     IDS_SERVICES_COLUMN_REQ "Essencial"
     IDS_SERVICES_COLUMN_VENDOR "Fabricante"
-    IDS_SERVICES_COLUMN_STATUS "Status"
+    IDS_SERVICES_COLUMN_STATUS "Estado"
 END
 
 STRINGTABLE
