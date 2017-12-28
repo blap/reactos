@@ -1,14 +1,12 @@
 /*
- *    Translated by TestamenT & xrogers
- *    testament@users.sourceforge.net
- *    https://sourceforge.net/projects/reactospl
- *    Updated by Caemyr (olaf_siejka@o2.pl), Nov, 2008
- *    Updated by Saibamen - Adam Stachowicz (saibamenppl@gmail.com) (Apr, 2011)
- *    UTF-8 conversion by Caemyr (May, 2011)
- *    updated by Wojciech Kozłowski (wojo664@gmail.com) (April, 2014)
+ * PROJECT:     Solitaire
+ * LICENSE:     Freeware, permission to use under Public Domain
+ * FILE:        base/applications/games/solitaire/lang/en-US.rc
+ * PURPOSE:     English Language File for Solitaire
+ * PROGRAMMERS: Daniel "EmuandCo" Reimer (reimer.daniel@freenet.de)
  */
 
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 /* Dialogs */
 
@@ -23,9 +21,9 @@ BEGIN
     GROUPBOX "Punktowanie", -1, 100, 7, 75, 53
     AUTORADIOBUTTON "&Standardowe", IDC_OPT_STANDARD, 107, 19, 60, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "&Vegas", IDC_OPT_VEGAS, 107, 32, 60, 10
-	 AUTORADIOBUTTON "&Brak", IDC_OPT_NOSCORE, 107, 45, 60, 10
-    AUTOCHECKBOX "&Pokazuj czas gry", IDC_OPT_SHOWTIME, 7 ,51 ,65 ,10, WS_TABSTOP
-    AUTOCHECKBOX "Pokazuj pa&sek stanu", IDC_OPT_STATUSBAR, 7, 66, 77, 10, WS_TABSTOP
+    AUTORADIOBUTTON "&Brak", IDC_OPT_NOSCORE, 107, 45, 60, 10
+    AUTOCHECKBOX "&Show Time", IDC_OPT_SHOWTIME, 7 ,51 ,65 ,10, WS_TABSTOP
+    AUTOCHECKBOX "Pokazuj pa&sek stanu", IDC_OPT_STATUSBAR, 7, 66, 64, 10, WS_TABSTOP
     AUTOCHECKBOX "Pamiętaj punkty", IDC_OPT_KEEPSCORE, 100, 66, 65, 10, WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 35, 97, 50, 14
     PUSHBUTTON "Anuluj", IDCANCEL, 101, 97, 50, 14
