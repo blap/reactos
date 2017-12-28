@@ -1,4 +1,23 @@
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+/*
+ * Copyright (C) 2004 Filip Navara
+ * Copyright (C) 2004 Eric Kohl
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 IDD_WELCOMEPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
@@ -43,14 +62,14 @@ BEGIN
     ICON IDI_ICON1, IDC_STATIC, 21, 7, 20, 20
     LTEXT "Skriv inn et navn for din datamaskin som er 15 karakterer eller mindre. Hvis du er på et nettverk, så må ditt datamaskin navn være unikt.", IDC_STATIC, 54, 7, 250, 24
     LTEXT "&Datamaskin navn:", IDC_STATIC, 54, 38, 75, 8
-    EDITTEXT IDC_COMPUTERNAME, 132, 35, 163, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL | ES_UPPERCASE
+    EDITTEXT IDC_COMPUTERNAME, 165, 35, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_AUTOHSCROLL | ES_UPPERCASE
     ICON IDI_ICON5, IDC_STATIC, 21, 57, 20, 20
     LTEXT "Installasjonen vil lage en brukerkonto som blir kalt Administrator. Du kan bruke denne kontoen hvis du trenger full adgang til din datamaskin.", IDC_STATIC, 54, 57, 250, 25
     LTEXT "Skriv inn et Administrator passord som er 127 karakterer eller mindre.", IDC_STATIC, 54, 87, 250, 8
-    LTEXT "&Administrator passord:", IDC_STATIC, 54, 104, 75, 8
-    EDITTEXT IDC_ADMINPASSWORD1, 132, 101, 172, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
-    LTEXT "B&ekreft passord:", IDC_STATIC, 54, 123, 75, 8
-    EDITTEXT IDC_ADMINPASSWORD2, 132, 120, 172, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
+    LTEXT "&Administrator passord:", IDC_STATIC, 54, 104, 105, 8
+    EDITTEXT IDC_ADMINPASSWORD1, 165, 101, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
+    LTEXT "B&ekreft passord:", IDC_STATIC, 54, 123, 105, 8
+    EDITTEXT IDC_ADMINPASSWORD2, 165, 120, 148, 14, WS_VISIBLE | WS_TABSTOP | ES_PASSWORD
 END
 
 IDD_LOCALEPAGE DIALOGEX 0, 0, 317, 143
@@ -59,14 +78,14 @@ CAPTION "ReactOS installasjon"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_ICON4, IDC_STATIC, 21, 7, 20, 20
-    LTEXT "Systemets språk og region burde samsvare med språket på programmene du vil bruke. Innstillingene for språk og region kontrollerer hvordan tall, valutaer, og dato vises.", IDC_STATIC, 55, 7, 259, 24
-    LTEXT "", IDC_LOCALETEXT, 53, 32, 250, 18
-    LTEXT "For å forandre systemets språk og region instilling, Trykk på Tilpass.", IDC_STATIC, 53, 60, 184, 8
-    PUSHBUTTON "&Tilpass...", IDC_CUSTOMLOCALE, 245, 57, 50, 14
+    LTEXT "The system locale should match the language of the applications you want to use. The user locale controls how numbers, currencies, and dates appear.", IDC_STATIC, 53, 7, 253, 20
+    LTEXT "", IDC_LOCALETEXT, 53, 29, 250, 16
+    LTEXT "For å forandre systemets språk og region instilling, Trykk på Tilpass.", IDC_STATIC, 53, 60, 196, 8
+    PUSHBUTTON "&Tilpass...", IDC_CUSTOMLOCALE, 250, 57, 50, 14
     LTEXT "Tastatur oppsettet kontrollerer karakterene som kommer opp når du trykker.", IDC_STATIC, 53, 86, 253, 8
     LTEXT "", IDC_LAYOUTTEXT, 53, 100, 250, 16
     LTEXT "For å forandre tastatur oppsettet, trykk på Tilpass.", IDC_STATIC, 53, 126, 184, 8
-    PUSHBUTTON "T&ilpass...", IDC_CUSTOMLAYOUT, 245, 122, 50, 14
+    PUSHBUTTON "Tilpasning...", IDC_CUSTOMLAYOUT, 250, 122, 50, 14
 END
 
 IDD_DATETIMEPAGE DIALOGEX 0, 0, 317, 143
@@ -85,7 +104,7 @@ END
 
 IDD_THEMEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
     PUSHBUTTON "Lautus theme", IDC_THEMEDSTYLE, 18,12, 130,120, BS_AUTORADIOBUTTON|BS_PUSHLIKE
@@ -108,7 +127,7 @@ CAPTION "Fullfører ReactOS installasjonen"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Fullfører ReactOS installasjons veiviser", IDC_FINISHTITLE, 115, 8, 195, 24
-    LTEXT "Installasjonen av ReactOS er fullført.\n\nNår du trykker på fullfør, vil datamaskinen bli startet på nytt.", IDC_STATIC, 115, 40, 205, 100
+    LTEXT "Installasjonen av ReactOS er fullført.\n\nNår du trykker på fullfør, vil datamaskinen bli startet på nytt.", IDC_STATIC, 115, 40, 195, 100
     CONTROL "", IDC_RESTART_PROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 115, 138, 188, 12
     LTEXT "Fjern en eventuell CD-ROM fra stasjonen. Klikk Fullfør for å starte datamaskinen på nytt.", IDC_STATIC, 115, 169, 195, 17
 END
@@ -144,8 +163,9 @@ BEGIN
     IDS_DATETIMESUBTITLE "Still inn dato og tid for din datamaskin."
     IDS_PROCESSTITLE "Bearbeid side tittel"
     IDS_PROCESSSUBTITLE "Bearbeider side undertittel"
-    IDS_THEMESELECTIONTITLE "Appearance"
+    IDS_THEMESELECTIONTITLE "Utseende"
     IDS_THEMESELECTIONSUBTITLE "Select the theme you prefer."
+
 END
 
 STRINGTABLE
