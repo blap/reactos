@@ -1,4 +1,4 @@
-LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_NORWEGIAN, SUBLANG_DEFAULT
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -138,7 +138,7 @@ BEGIN
         MENUITEM "C&ut", ID_HEXEDIT_CUT
         MENUITEM "&Copy", ID_HEXEDIT_COPY
         MENUITEM "&Paste", ID_HEXEDIT_PASTE
-        MENUITEM "&Delete", ID_HEXEDIT_DELETE
+        MENUITEM "&Slett", ID_HEXEDIT_DELETE
         MENUITEM SEPARATOR
         MENUITEM "Select &All", ID_HEXEDIT_SELECT_ALL
     END
@@ -476,7 +476,7 @@ BEGIN
     LTEXT "&Key:", IDC_STATIC, 4, 4, 15, 8, SS_LEFT
     EDITTEXT IDC_EDIT_KEY, 23, 2, 167, 13
     DEFPUSHBUTTON "OK", IDOK, 140, 17, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 89, 17, 50, 14
+    PUSHBUTTON "Avbryt", IDCANCEL, 89, 17, 50, 14
 END
 
 IDD_ADDFAVORITES DIALOGEX 0, 0, 186, 46
@@ -508,20 +508,20 @@ CAPTION "Søk"
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON "&Søk neste", IDOK, 197, 7, 50, 14
-    PUSHBUTTON "Avbryt", IDCANCEL, 197, 24, 50, 14
+    PUSHBUTTON "Cancel", IDCANCEL, 197, 24, 50, 14
     GROUPBOX "Se på", IDC_STATIC, 7, 25, 63, 51
     LTEXT "&Søk etter:", IDC_STATIC, 7, 8, 37, 10
     EDITTEXT IDC_FINDWHAT, 47, 7, 142, 13, ES_AUTOHSCROLL
-    CONTROL "&Nøkler", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Keys", IDC_LOOKAT_KEYS, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 36, 35, 8
-    CONTROL "&Verdier", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
+    CONTROL "&Values", IDC_LOOKAT_VALUES, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 48, 36, 8
     CONTROL "&Data", IDC_LOOKAT_DATA, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 14, 60, 42, 8
-    CONTROL "S&øk etter hele strenger", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
+    CONTROL "Match &whole string only", IDC_MATCHSTRING, "Button", BS_AUTOCHECKBOX |
             WS_TABSTOP, 83, 32, 94, 13
-    CONTROL "Sk&ill mellom store og små bokstaver", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
-            WS_TABSTOP, 83, 48, 130, 12
+    CONTROL "Match &case", IDC_MATCHCASE, "Button", BS_AUTOCHECKBOX |
+            WS_TABSTOP, 83, 48, 90, 12
 END
 
 IDD_FINDING DIALOGEX 0, 0, 145, 50
@@ -538,7 +538,7 @@ END
 /*
  *STRINGTABLE
  *BEGIN
- *    ID_HELP_HELPTOPICS "Åpne registerredigering hjelpen."
- *    ID_HELP_ABOUT "Vis program informasjon, versjon nummer, og enerett."
+ *    ID_HELP_HELPTOPICS "Opens Registry Editor Help."
+ *    ID_HELP_ABOUT "Displays program information, version number, and copyright."
  *END
  */
