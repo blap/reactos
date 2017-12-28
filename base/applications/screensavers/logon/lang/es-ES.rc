@@ -1,10 +1,7 @@
-/* Spanish Language resource file.
- * Translated by: ?? and Ismael Ferreras Morezuelas <2014-11-07> */
-
-LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
 
 STRINGTABLE
 BEGIN
-    IDS_DESCRIPTION "Logotipo de ReactOS"
+    IDS_DESCRIPTION "Salvapantallas de texto en 3D"
     IDS_TEXT "No se necesita configurar ninguna opción."
 END
