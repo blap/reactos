@@ -1,10 +1,10 @@
 /*
- * FILE:        base/applications/network/ping/lang/zh-TW.rc
- * PURPOSE:     Chinese (Traditional) translations for ReactOS Ping Command
+ * FILE:        base/applications/network/ping/lang/es-US.rc
+ * PURPOSE:     English translations for ReactOS Ping Command
  * TRANSLATORS:
  */
 
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+LANGUAGE LANG_CHINESE_TRADITIONAL, SUBLANG_CHINESE_TRADITIONAL
 
 STRINGTABLE
 BEGIN
