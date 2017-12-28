@@ -1,4 +1,4 @@
-LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
 
 IDD_POWER_METER DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
@@ -45,7 +45,7 @@ BEGIN
     IDS_VOL_MUTED "Volume (muet)"
 
     //Keyboard-Mouse related strings
-    IDS_KEYS_STICKY "StickyKeys"
-    IDS_KEYS_MOUSE "MouseKeys"
-    IDS_KEYS_FILTER "FilterKeys"
+    IDS_KEYS_STICKY "Touches rémanantes"
+    IDS_KEYS_MOUSE "Touches souris"
+    IDS_KEYS_FILTER "Touches filtres"
 END
