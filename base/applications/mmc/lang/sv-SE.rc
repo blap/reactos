@@ -1,6 +1,4 @@
-/* Swedish translation by Jaix Bly */
-
-LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
 
 IDM_CONSOLE_SMALL MENU
 BEGIN
@@ -28,7 +26,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&Avsluta\tAlt+F4", IDM_FILE_EXIT
     END
-    POPUP "&Windows"
+    POPUP "&Fönster"
     BEGIN
         MENUITEM "List", IDM_WINDOWS_LIST
     END
