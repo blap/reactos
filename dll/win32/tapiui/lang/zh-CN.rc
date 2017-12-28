@@ -1,6 +1,4 @@
-/* Simplified Chinese translation by Henry Tang Ih 2015 (henrytang2@hotmail.com) */
-
-LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+LANGUAGE LANG_CHINESE_SIMPLIFIED, SUBLANG_CHINESE_SIMPLIFIED
 
 101 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -52,7 +50,7 @@ END
 
 103 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "区号规则"
+CAPTION "网络连接"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "区号规则确定电话号码的拨号方式从你当前的地区代码于其他地区代码和区号中。", 2000, 7, 7, 238, 16
@@ -67,7 +65,7 @@ END
 
 104 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "电话卡"
+CAPTION "线路绑定错误"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "选择您将使用的电话卡，或单击新建添加不同的卡。", 2000, 7, 7, 238, 8
@@ -110,7 +108,7 @@ END
 
 106 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "长途"
+CAPTION "连接完成"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "长途电话访问号码:(&L)", -1, 7, 7, 238, 8
@@ -152,7 +150,7 @@ END
 
 108 DIALOGEX 0, 0, 252, 218
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "本地电话"
+CAPTION "更改密码"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "本地电话访问号码:(&L)", -1, 7, 7, 238, 8
@@ -174,7 +172,7 @@ END
 109 DIALOGEX 0, 0, 252, 257
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "新的区号规则"
+CAPTION "更改密码"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "此区号规则只适用于电话的区号和您在下面指定的前缀组合作出。", 2000, 7, 6, 238, 16
@@ -218,7 +216,7 @@ END
 111 DIALOGEX 0, 0, 252, 124
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "等待"
+CAPTION "连接到 %1 时出错"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "选择提示继续拨号序列之前等待的类型。", 2000, 7, 7, 238, 16
@@ -235,7 +233,7 @@ END
 112 DIALOGEX 0, 0, 252, 111
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "目标号码"
+CAPTION "自动拨号和挂"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "此步骤将把您将拨入电话卡序列的目标数。当拨打目标号码，你想拨数中的哪些部分?:", 2000, 7, 7, 238, 24
@@ -262,7 +260,7 @@ END
 
 114 DIALOGEX 20, 15, 252, 127
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
-CAPTION "添加提供程序"
+CAPTION "拨号网络"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "选择你想从下面列表中安装的提供程序并单击添加。", 2000, 7, 7, 241, 8
@@ -275,7 +273,7 @@ END
 115 DIALOGEX 10, 10, 303, 228
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 EXSTYLE WS_EX_CONTEXTHELP
-CAPTION "位置信息"
+CAPTION "连接 %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 302, 302, "STATIC", SS_BITMAP, 10, 10, 88, 155
@@ -327,11 +325,11 @@ END
 STRINGTABLE
 BEGIN
     1 "电话和调制解调器选项"
-    2 "配置拨号规则和使用调制解调器的属性。"
+    2 "WORKGROUP"
     3 "位置"
-    4 "若要创建一个新的位置，单击新建。"
-    5 "新位置"
-    6 "编辑位置"
+    4 "计算机名称更改"
+    5 "工作组:"
+    6 "域:"
     7 "新名片"
     8 "编辑名片"
     9 "区号"
@@ -347,10 +345,10 @@ BEGIN
     19 "拨打号码而已"
     20 "全部"
     21 "选择"
-    22 "编辑区号规则"
-    23 "上面可以查看其描述的列表中选择一个规则或单击新建添加一个规则。"
-    24 "拨打 '%2' 再加上之前的所有 %1 区号之内的电话号码的区号。"
-    25 "%1 区号之内的电话号码前拨打 '%2'。"
+    22 "欢迎到 %1 工作组。"
+    23 "欢迎到域 %1。"
+    24 "您必须重新启动该计算机以使更改生效。"
+    25 "您可以更改名称和这台计算机的会员。更改可能会影响对网络资源的访问。"
     26 "拨 %1 区号之内的电话号码前区码。"
     27 "拨 %1 区号之内的电话号码。"
     28 "拨打 '%2' 再加上之前的 %1 区号之内的电话号码包含您指定的前缀的区号。"
