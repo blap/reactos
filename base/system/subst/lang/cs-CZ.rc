@@ -1,4 +1,4 @@
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 STRINGTABLE
 BEGIN
@@ -9,12 +9,12 @@ BEGIN
     IDS_ACCESS_DENIED "Přistup odepřen - %s\n"
     IDS_DRIVE_ALREADY_SUBSTED "Jednotka je již substituována\n"
     IDS_FAILED_WITH_ERRORCODE "Selhalo s chybou 0x%x: %s\n"
-    IDS_USAGE "Přiřadí cestě písmeno jednotky.\n\n\
-SUBST [jednotka1: [jednotka2:]cesta]\n\
-SUBST jednotka: /D\n\n\
-  jednotka1:         Určuje virtuální jednoku, ke které bude přiřazena cesta.\n\
-  [jednotka2:]cesta  Určuje fyzickou jednotku a cestu, kterou chcete přiřadit\n\
-                     k virtuální jednotce.\n\
-  /D                 Odstraní substituovanou (virtuální) jednotku.\n\n\
-Příkaz SUBST bez parametrů vypíše seznam virtuálních jednotek.\n"
+    IDS_USAGE "Associates a path with a drive letter.\n\n\
+SUBST [drive1: [drive2:]path]\n\
+SUBST drive1: /D\n\n\
+  drive1:        Specifies a virtual drive to which you want to assign a path.\n\
+  [drive2:]path  Specifies a physical drive and path you want to assign to\n\
+                 a virtual drive.\n\
+  /D             Deletes a substituted (virtual) drive.\n\n\
+Type SUBST with no parameters to display a list of current virtual drives.\n"
 END
