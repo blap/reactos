@@ -1,4 +1,4 @@
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -160,18 +160,17 @@ BEGIN
     STRING_UNTITLED "Bez názvu"
     STRING_ALL_FILES "Všechny soubory (*.*)"
     STRING_TEXT_FILES_TXT "Textové soubory (*.txt)"
-    STRING_TOOLARGE "Soubor '%s' je pro notepad příliš velký.\n \
-Použijte jiný editor, prosím."
-    STRING_NOTEXT "Nebyl zadán žádný text. \
-\nVložte nějaký text a zkuste to znovu."
-    STRING_DOESNOTEXIST "Soubor '%s'\nneexistuje.\n\n \
-Chcete ho vytvořit ?"
-    STRING_NOTSAVED "Soubor '%s'\nbyl změněn.\n\n \
-Chcete uložit změny ?"
+    STRING_TOOLARGE "File '%s' is too large for notepad.\n \
+Please use a different editor."
+    STRING_NOTEXT "You didn't enter any text. \
+\nPlease type something and try again"
+    STRING_DOESNOTEXIST "File '%s'\ndoes not exist\n\n \
+Do you want to create a new file ?"
+    STRING_NOTSAVED "File '%s'\nhas been modified\n\n \
+Would you like to save the changes ?"
     STRING_NOTFOUND "'%s' nebyl nalezen."
-    STRING_OUT_OF_MEMORY "Není dost paměti na dokončení této úlohy. \
-\nUzavřete jednu či více aplikací, abyste získali více  \nvolné \
-paměti."
+    STRING_OUT_OF_MEMORY "Not enough memory to complete this \
+task. \nClose one or more applications to increase the amount of \nfree memory."
     STRING_CANNOTFIND "Nelze nalézt '%s'"
     STRING_ANSI "ANSI"
     STRING_UNICODE "Unicode"
