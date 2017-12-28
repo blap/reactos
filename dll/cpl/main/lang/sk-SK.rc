@@ -1,31 +1,26 @@
-/* TRANSLATOR : Mário Kačmár /Mario Kacmar/ aka Kario (kario@szm.sk)
- * DATE OF TR.: 02-02-2008
- * LAST CHANGE: 14-06-2009
- */
-
-LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
+LANGUAGE LANG_SLOVAK, SUBLANG_SLOVAK_SLOVAKIA
 
 IDD_KEYBSPEED DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Rýchlosť"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Opakovanie znakov", -1, 5, 5, 230, 130
-    ICON IDI_REPEAT_DELAY, IDC_ICON_REPEAT_DELAY, 15, 15, 15, 15
-    LTEXT "Oneskorenie pre&d opakovaním:", -1, 40, 15, 50, 10
-    LTEXT "dlhé", -1, 40, 30, 20, 10
-    LTEXT "krátke", -1, 200, 30, 20, 10
-    CONTROL "", IDC_SLIDER_REPEAT_DELAY, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 65, 30, 130, 17
-    ICON IDI_REPEAT_RATE, IDC_ICON_REPEAT_RATE, 15, 70, 15, 15
-    LTEXT "&Rýchlosť opakovania:", -1, 40, 70, 50, 10
-    LTEXT "malá", -1, 40, 85, 20, 10 // pomaly
-    LTEXT "veľká", -1, 200, 85, 20, 10 // rýchlo
+    GROUPBOX "Opakovanie znakov", -1, 5, 5, 236, 135
+    ICON IDI_REPEAT_DELAY, IDC_ICON_REPEAT_DELAY, 13, 18, 15, 15
+    LTEXT "Repeat &delay:", -1, 40, 18, 100, 10
+    LTEXT "Long", -1, 40, 33, 20, 10
+    LTEXT "Short", -1, 200, 33, 20, 10
+    CONTROL "", IDC_SLIDER_REPEAT_DELAY, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 65, 33, 130, 17
+    ICON IDI_REPEAT_RATE, IDC_ICON_REPEAT_RATE, 13, 70, 15, 15
+    LTEXT "&Rýchlosť opakovania:", -1, 40, 70, 100, 10
+    LTEXT "malá", -1, 40, 85, 20, 10
+    LTEXT "veľká", -1, 200, 85, 20, 10
     CONTROL "", IDC_SLIDER_REPEAT_RATE, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 65, 85, 130, 17
-    LTEXT "Kliknite sem a podržte kláves k o&testovaniu rýchlosti opakovania:", -1, 15, 105, 150, 10
-    EDITTEXT IDC_EDIT_REPEAT_RATE, 15, 115, 200, 15, WS_CHILD | WS_VISIBLE | WS_GROUP
-    GROUPBOX "&Blikanie kurzora:", -1, 5, 145, 230, 50
+    LTEXT "Kliknite sem a podržte kláves k o&testovaniu rýchlosti opakovania:", -1, 15, 105, 216, 10
+    EDITTEXT IDC_EDIT_REPEAT_RATE, 15, 116, 216, 14, WS_CHILD | WS_VISIBLE | WS_GROUP
+    GROUPBOX "&Blikanie kurzora:", -1, 5, 145, 236, 50
     LTEXT "", IDC_TEXT_CURSOR_BLINK, 20, 165, 1, 8
-    LTEXT "žiadne", -1, 40, 165, 30, 10
+    LTEXT "žiadne", -1, 40, 165, 25, 10
     LTEXT "rýchle", -1, 200, 165, 30, 10
     CONTROL "", IDC_SLIDER_CURSOR_BLINK, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 65, 165, 130, 17
 END
@@ -46,7 +41,7 @@ BEGIN
     LTEXT "Long", -1, 157, 35, 27, 10
     CONTROL "", IDC_SLIDER_CLICK_LOCK, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 78, 35, 70, 17
     PUSHBUTTON "&OK", IDOK, 110, 59, 60, 14
-    PUSHBUTTON "&Zrušiť", IDCANCEL, 175, 75, 50, 15
+    PUSHBUTTON "&Zrušiť", IDCANCEL, 174, 59, 60, 14
     LTEXT "&Adjust how long you need to hold down a mouse or trackball button before your click is locked", -1, 37, 5, 200, 27
     ICON IDI_LOOK_KEY, IDC_ICON_CLICK_LOCK, 5, 5, 15, 15
 END
@@ -79,8 +74,8 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Scheme", -1, 5, 5, 181, 45
     COMBOBOX IDC_COMBO_CURSOR_SCHEME, 12, 15, 167, 200, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
-    PUSHBUTTON "Sa&ve As...", IDC_BUTTON_SAVEAS_SCHEME, 65, 31, 60, 14
-    PUSHBUTTON "&Delete", IDC_BUTTON_DELETE_SCHEME, 128, 31, 50, 14
+    PUSHBUTTON "Uložiť &ako...", IDC_BUTTON_SAVEAS_SCHEME, 65, 31, 60, 14
+    PUSHBUTTON "O&dstrániť", IDC_BUTTON_DELETE_SCHEME, 128, 31, 50, 14
     CONTROL "", IDC_IMAGE_CURRENT_CURSOR, "Static", SS_ICON | SS_CENTERIMAGE | WS_VISIBLE, 196, 9, 45, 41, WS_EX_STATICEDGE
     LTEXT "&Customize", -1, 5, 57, 60, 10
     LISTBOX IDC_LISTBOX_CURSOR, 5, 68, 236, 124, WS_VISIBLE | WS_BORDER | WS_TABSTOP | WS_VSCROLL | LBS_OWNERDRAWFIXED | LBS_NOTIFY
@@ -94,10 +89,10 @@ STYLE DS_SHELLFONT | WS_CAPTION | WS_SYSMENU
 CAPTION "Uloženie schémy"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Uložiť túto schému ukazovateľov ako:", -1, 5, 5, 100, 10
+    LTEXT "Uložiť túto schému ukazovateľov ako:", -1, 5, 5, 181, 10
     EDITTEXT IDC_EDIT_SCHEME_NAME, 5, 15, 180, 15, WS_CHILD | WS_VISIBLE | WS_GROUP
     PUSHBUTTON "&OK", IDOK, 63, 35, 60, 14
-    PUSHBUTTON "&Zrušiť", IDCANCEL, 115, 45, 50, 15
+    PUSHBUTTON "&Zrušiť", IDCANCEL, 126, 35, 60, 14
 END
 
 IDD_PAGE_OPTION DIALOGEX 0, 0, 246, 228
@@ -134,7 +129,7 @@ STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
 CAPTION "Koliesko"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Rolovanie", -1, 5, 5, 230, 80
+    GROUPBOX "Rolovanie", -1, 5, 5, 236, 80
     ICON IDI_MOUSE_WHEEL, IDC_ICON_WHEEL, 20, 20, 32, 32
     LTEXT "Roll the wheel one notch to scroll", -1, 60, 15, 150, 10
     RADIOBUTTON "The following &number of lines at a time:", IDC_RADIO_WHEEL_SCROLL_LINES, 60, 30, 150, 10, WS_VISIBLE | WS_GROUP | WS_TABSTOP
