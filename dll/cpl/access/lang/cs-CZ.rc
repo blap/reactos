@@ -1,4 +1,4 @@
-LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+LANGUAGE LANG_CZECH, SUBLANG_CZECH_CZECH_REPUBLIC
 
 IDD_PROPPAGEKEYBOARD DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -17,9 +17,9 @@ BEGIN
     PUSHBUTTON "N&astavení", IDC_FILTER_BUTTON, 144, 121, 90, 14
     GROUPBOX "Ozvučení kláves", -1, 6, 145, 234, 62
     LTEXT "Použijte funkci Ozvučení kláves, chcete-li být upozorněni na stisk kláves Caps Lock, Num Lock a Scroll Lock zvukovým signálem.",
-          -1, 12, 161, 222, 26
-    AUTOCHECKBOX "Používat funkci O&zvučení kláves", IDC_TOGGLE_BOX, 12, 186, 126, 14
-    PUSHBUTTON "Na&stavení", IDC_TOGGLE_BUTTON, 144, 186, 90, 14
+          -1, 12, 161, 222, 20
+    AUTOCHECKBOX "Use &ToggleKeys", IDC_TOGGLE_BOX, 12, 184, 126, 14
+    PUSHBUTTON "Setti&ngs", IDC_TOGGLE_BUTTON, 144, 184, 90, 14
     AUTOCHECKBOX "&V programech zobrazovat dodatečnou nápovědu ke klávesám.", IDC_KEYBOARD_EXTRA,
                  6, 212, 234, 14
 END
@@ -32,7 +32,7 @@ BEGIN
     GROUPBOX "Funkce Popis zvuku", -1, 6, 11, 234, 98
     LTEXT "Použijte funkci Zobrazení zvuku, pokud chcete aby ReactOS vizuálně upozorňoval na každý zvuk vydaný systémem.",
           -1, 12, 20, 222, 29
-    AUTOCHECKBOX "&Používat funkci Popis zvuku", IDC_SENTRY_BOX, 12, 49, 120, 14
+    AUTOCHECKBOX "&Používat funkci Popis zvuku", IDC_SENTRY_BOX, 12, 49, 90, 14
     LTEXT "Use the following warning:", IDC_SENTRY_TEXT, 12, 72, 222, 11
     COMBOBOX IDC_SENTRY_COMBO, 12, 83, 222, 56,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
@@ -116,7 +116,7 @@ BEGIN
     LTEXT "Press the SHIFT-Key 5 times in order to activate the Sticky Keys feature.",
           -1, 12, 20, 222, 29
     AUTOCHECKBOX "A&ctivate sticky keys", IDC_STICKY_ACTIVATE_CHECK, 12, 49, 222, 14
-    GROUPBOX "Options", -1, 6, 83, 234, 44
+    GROUPBOX "Možnosti", -1, 6, 83, 234, 44
     AUTOCHECKBOX "&Press modifier key twice to lock", IDC_STICKY_LOCK_CHECK,
                  12, 94, 222, 14
     AUTOCHECKBOX "&Turn StickyKeys off if two keys are pressed at once", IDC_STICKY_UNLOCK_CHECK,
@@ -127,7 +127,7 @@ BEGIN
     AUTOCHECKBOX "&Show StickyKeys status on screen", IDC_STICKY_STATUS_CHECK,
                  12, 160, 222, 14
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "Storno", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_FILTERKEYSOPTIONS DIALOGEX 0, 0, 246, 228
@@ -144,8 +144,8 @@ BEGIN
                     12, 91, 120, 11, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "Ig&nore quick keystrokes and slow down the repeat rate", IDC_FILTER_REPEAT_RADIO,
                     12, 106, 120, 20, BS_TOP | BS_MULTILINE
-    PUSHBUTTON "&Settings", IDC_FILTER_BOUNCE_BUTTON, 144, 88, 90, 14, WS_GROUP
-    PUSHBUTTON "S&ettings", IDC_FILTER_REPEAT_BUTTON, 144, 106, 90, 14, WS_GROUP
+    PUSHBUTTON "&Nastavení", IDC_FILTER_BOUNCE_BUTTON, 144, 88, 90, 14, WS_GROUP
+    PUSHBUTTON "N&astavení", IDC_FILTER_REPEAT_BUTTON, 144, 106, 90, 14, WS_GROUP
     LTEXT "&Click here and type here to test the settings:", -1, 12, 129, 222, 11
     EDITTEXT IDC_FILTER_TEST_EDIT, 12, 138, 222, 14, WS_GROUP | ES_AUTOHSCROLL
     GROUPBOX "Notifications", -1, 6, 161, 234, 41
@@ -154,7 +154,7 @@ BEGIN
     AUTOCHECKBOX "S&how FilterKey status on screen", IDC_FILTER_STATUS_CHECK,
                  12, 188, 222, 10
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "Storno", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_TOGGLEKEYSOPTIONS DIALOGEX 0, 0, 246, 228
@@ -167,7 +167,7 @@ BEGIN
           -1, 12, 20, 222, 29
     AUTOCHECKBOX "Use &shortcut", IDC_TOGGLE_ACTIVATE_CHECK, 12, 49, 222, 14
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "Storno", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_CONTRASTOPTIONS DIALOGEX 0, 0, 246, 228
@@ -184,7 +184,7 @@ BEGIN
     COMBOBOX IDC_CONTRAST_COMBO, 12, 103, 222, 56,
              CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "Storno", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_MOUSEKEYSOPTIONS DIALOGEX 0, 0, 246, 228
@@ -216,7 +216,7 @@ BEGIN
     AUTOCHECKBOX "&Show MouseKey status on screen", IDC_MOUSEKEYS_STATUS_CHECK,
                  6, 184, 222, 14
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "Storno", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_BOUNCEKEYSOPTIONS DIALOGEX 0, 0, 246, 228
@@ -231,7 +231,7 @@ BEGIN
     LTEXT "&Test area:", -1, 6, 68, 48, 11
     EDITTEXT IDC_BOUNCE_TEST_EDIT, 60, 65, 180, 14, ES_AUTOHSCROLL
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "Storno", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_REPEATKEYSOPTIONS DIALOGEX 0, 0, 246, 228
@@ -257,7 +257,7 @@ BEGIN
     LTEXT "&Test area:", -1, 6, 178, 48, 11
     EDITTEXT IDC_REPEAT_TEST_EDIT, 60, 180, 180, 14, ES_AUTOHSCROLL
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "Storno", IDCANCEL, 189, 207, 50, 14
 END
 
 IDD_SERIALKEYSOPTIONS DIALOGEX 0, 0, 246, 228
@@ -275,7 +275,7 @@ BEGIN
     COMBOBOX IDC_SERIAL_BAUD_COMBO, 12, 76, 222, 74,
              CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
     DEFPUSHBUTTON "OK", IDOK, 135, 207, 50, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 189, 207, 50, 14
+    PUSHBUTTON "Storno", IDCANCEL, 189, 207, 50, 14
 END
 
 STRINGTABLE
@@ -286,6 +286,6 @@ BEGIN
     IDS_SENTRY_TITLE "Flash the titlebar"
     IDS_SENTRY_WINDOW "Flash the active window"
     IDS_SENTRY_DISPLAY "Flash the desktop"
-    IDS_SECONDS "Seconds"
-    IDS_MINUTES "Minutes"
+    IDS_SECONDS "Sekundy"
+    IDS_MINUTES "Minuty"
 END
