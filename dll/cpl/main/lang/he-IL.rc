@@ -1,6 +1,4 @@
-/* Translated by Baruch Rutman */
-
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 IDD_KEYBSPEED DIALOGEX 0, 0, 246, 228
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
@@ -60,7 +58,7 @@ BEGIN
     GROUPBOX "Double-click speed", -1, 5, 78, 236, 70
     LTEXT "Double-click the folder to test your settings. If the folder does not open or close, try using a slower setting.", -1, 10, 90, 156, 28
     LTEXT "Spee&d:   Slow", -1, 10, 123, 50, 10
-    LTEXT "Fast", -1, 136, 123, 24, 10
+    LTEXT "מהיר", -1, 136, 123, 24, 10
     CONTROL "", IDC_SLIDER_DOUBLE_CLICK_SPEED, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 60, 123, 70, 17
     CONTROL "", IDC_IMAGE_DOUBLE_CLICK_SPEED, "Static", SS_ICON | SS_NOTIFY | SS_CENTERIMAGE | WS_VISIBLE, 171, 87, 65, 57, WS_EX_STATICEDGE
     GROUPBOX "ClickLock", -1, 5, 150, 236, 70
@@ -104,9 +102,9 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "תנועה", -1, 5, 5, 236, 60
     LTEXT "Sele&ct a pointer speed:", -1, 52, 15, 110, 10
-    LTEXT "Slow", -1, 60, 30, 20, 10
+    LTEXT "איטית", -1, 60, 30, 20, 10
     CONTROL "", IDC_SLIDER_MOUSE_SPEED, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 90, 30, 70, 17
-    LTEXT "Fast", -1, 170, 30, 20, 10
+    LTEXT "מהיר", -1, 170, 30, 20, 10
     ICON IDI_MOUSE_SPEED, IDC_ICON_MOUSE_SPEED, 18, 20, 32, 32
     CHECKBOX "&Enhance pointer precision", IDC_CHECK_POINTER_PRECISION, 52, 50, 140, 10
     GROUPBOX "Snap To", -1, 5, 70, 236, 40
@@ -115,8 +113,8 @@ BEGIN
     ICON IDI_MOUSE_BUTTON, IDC_ICON_SNAP_TO, 18, 83, 15, 15
     GROUPBOX "Visibility", -1, 5, 115, 236, 95
     CHECKBOX "&Display pointer trails:", IDC_CHECK_POINTER_TRAIL, 52, 128, 125, 10
-    LTEXT "Short", IDC_TEXT_TRAIL_SHORT, 54, 143, 25, 10
-    LTEXT "Long", IDC_TEXT_TRAIL_LONG, 157, 143, 30, 10
+    LTEXT "קצר", IDC_TEXT_TRAIL_SHORT, 54, 143, 25, 10
+    LTEXT "ארוך", IDC_TEXT_TRAIL_LONG, 157, 143, 30, 10
     ICON IDI_MOUSE_TRAILS, IDC_ICON_POINTER_TRAIL, 20, 128, 15, 15
     CONTROL "", IDC_SLIDER_POINTER_TRAIL, "msctls_trackbar32", TBS_AUTOTICKS | WS_TABSTOP, 80, 143, 70, 17
     CHECKBOX "&Hide pointer while typing", IDC_CHECK_HIDE_POINTER, 52, 163, 130, 10
