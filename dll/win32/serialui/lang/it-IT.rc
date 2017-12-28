@@ -1,12 +1,4 @@
-/*
- * PROJECT:    ReactOS Console Configuration DLL
- * LICENSE:    GPL - See COPYING in the top level directory
- * FILE:       dll/win32/serialui/lang/it-IT.rc
- * PURPOSE:    Italian resource file
- * TRANSLATOR: Paolo Devoti, devotip at tiscali.it, 2007-11-02
- */
-
-LANGUAGE LANG_ITALIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
 
 STRINGTABLE
 BEGIN
