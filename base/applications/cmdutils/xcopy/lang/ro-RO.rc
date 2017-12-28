@@ -1,5 +1,4 @@
-/* Translator: Ștefan Fulea (stefan dot fulea at mail dot md) */
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 STRINGTABLE
 {
@@ -8,9 +7,11 @@ STRINGTABLE
     STRING_PAUSE,    "Apăsați pe «Enter» pentru a începe copierea\n"
     STRING_SIMCOPY,  "%1!d! fișier(e) ar fi copiat(e)\n"
     STRING_COPY,     "%1!d! fișier(e) copiat(e)\n"
-    STRING_QISDIR,   "«%1» este un nume de fișier sau un director\ndin destinație?\n(F - Fișier, D - Director)\n"
-    STRING_SRCPROMPT,"%1? (Da|Nu)\n"
-    STRING_OVERWRITE,"Suprascrieți %1? (Da|Nu|Toate)\n"
+    STRING_QISDIR,   "Is '%1' a filename or directory\n\
+                     on the target?\n\
+                     (F - File, D - Directory)\n"
+    STRING_SRCPROMPT,"%1? (Yes|No)\n"
+    STRING_OVERWRITE,"Overwrite %1? (Yes|No|All)\n"
     STRING_COPYFAIL, "Copierea «%1» în «%2» a eșuat cu cod de retur %3!d!\n"
     STRING_OPENFAIL, "Deschiderea «%1» a eșuat\n"
     STRING_READFAIL, "Citirea «%1» a eșuat\n"
@@ -21,36 +22,36 @@ STRINGTABLE
     STRING_DIR_CHAR, "D"
 
     STRING_HELP,
-"XCOPY - Copiază fișiere sau arbori de directoare sursă într-o destinație.\n\
+"XCOPY - Copies source files or directory trees to a destination.\n\
 \n\
-Sintaxă:\n\
-XCOPY sursă [destinație] [/I] [/S] [/Q] [/F] [/L] [/W] [/T] [/N] [/U]\n\
+Syntax:\n\
+XCOPY source [destination] [/I] [/S] [/Q] [/F] [/L] [/W] [/T] [/N] [/U]\n\
 \t     [/R] [/H] [/C] [/P] [/A] [/M] [/E] [/D] [/Y] [/-Y]\n\
-\nCu:\n\
 \n\
-[/I]  Creează director dacă destinația nu există și copiază două sau\n\
-\tmai multe fișiere.\n\
-[/S]  Copiază directoarele și subdirectoarele.\n\
-[/E]  Copiază directoarele și subdirectoarele, inclusiv pe cele goale.\n\
-[/Q]  Nu afișa numele în timpul copierii.\n\
-[/F]  Arată numele întreg pentru sursă și destinație în timpul copierii.\n\
-[/L]  Simulează operațiunea, afișând numele care ar fi copiate.\n\
-[/W]  Solicită confirmarea înainte de a începe copierea.\n\
-[/T]  Creează o structură de directoare goale, dar nu copiază fișiere.\n\
-[/Y]  Nu solicita confirmarea la suprascrierea fișierelor.\n\
-[/-Y] Solicită confirmarea la suprascrierea fișierelor.\n\
-[/P]  Solicită confirmarea înainte de copierea fiecărui fișier sursă.\n\
-[/N]  Copiază utilizând prescurtări de nume.\n\
-[/U]  Copiază numai fișierele care există deja în destinație.\n\
-[/R]  Suprascrie orice fișiere cu protecție la modificări.\n\
-[/H]  Include în copie fișierele ascunse și de sistem.\n\
-[/C]  Continuă chiar dacă apare o eroare în timpul copierii.\n\
-[/A]  Copiază numai fișierele cu atributul de arhivă activat.\n\
-[/M]  Copiază numai fișierele cu atributul de arhivă activat, dezactivează\n\
-\tapoi atributul.\n\
-[/D | /D:m-d-y] Copiază fișierele noi sau pe cele modificate după data\n\
-\t\tspecificată. Dacă nu este specificată nici o dată, copiază\n\
-\t\tnumai dacă fișierul destinație este mai vechi decât fișierul\n\
-\t\tsursă.\n\n"
+Where:\n\
+\n\
+[/I]  Assume directory if destination does not exist and copying two or\n\
+\tmore files.\n\
+[/S]  Copy directories and subdirectories.\n\
+[/E]  Copy directories and subdirectories, including any empty ones.\n\
+[/Q]  Do not list names during copy, that is be quiet.\n\
+[/F]  Show full source and destination names during copy.\n\
+[/L]  Simulate operation, showing names which would be copied.\n\
+[/W]  Prompts before beginning the copy operation.\n\
+[/T]  Creates empty directory structure but does not copy files.\n\
+[/Y]  Suppress prompting when overwriting files.\n\
+[/-Y] Enable prompting when overwriting files.\n\
+[/P]  Prompts on each source file before copying.\n\
+[/N]  Copy using short names.\n\
+[/U]  Copy only files which already exist in destination.\n\
+[/R]  Overwrite any read only files.\n\
+[/H]  Include hidden and system files in the copy.\n\
+[/C]  Continue even if an error occurs during the copy.\n\
+[/A]  Only copy files with archive attribute set.\n\
+[/M]  Only copy files with archive attribute set, removes the\n\
+\tarchive attribute.\n\
+[/D | /D:m-d-y] Copy new files or those modified after the supplied date.\n\
+\t\tIf no date is supplied, only copy if destination is older\n\
+\t\tthan source.\n\n"
 
 }
