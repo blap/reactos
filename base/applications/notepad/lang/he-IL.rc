@@ -1,4 +1,4 @@
-LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
 
 ID_ACCEL ACCELERATORS
 BEGIN
@@ -99,8 +99,8 @@ BEGIN
     LTEXT "&Footer:", 0x142, 8, 149, 40, 15
     EDITTEXT 0x143, 58, 147, 173, 12, WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL
     PUSHBUTTON "Help", IDHELP, 8, 170, 50, 14
-    DEFPUSHBUTTON "OK", IDOK, 198, 170, 50, 14, BS_PUSHBUTTON
-    PUSHBUTTON "Cancel", IDCANCEL, 254, 170, 50, 14
+    DEFPUSHBUTTON "אישור", IDOK, 198, 170, 50, 14, BS_PUSHBUTTON
+    PUSHBUTTON "ביטול", IDCANCEL, 254, 170, 50, 14
     PUSHBUTTON "P&rinter...", psh3, 310, 170, 50, 14
 END
 
@@ -123,9 +123,9 @@ FONT 8, "MS Shell Dlg"
 CAPTION "מעבר אל שורה"
 BEGIN
     EDITTEXT ID_LINENUMBER, 54, 10, 106, 12, WS_CHILD | WS_BORDER | WS_TABSTOP
-    LTEXT "מספר שורה:", 0x155, 3, 12, 43, 11, WS_CHILD | WS_TABSTOP | ES_NUMBER
-    DEFPUSHBUTTON "אישור", IDOK, 75, 30, 40, 15, WS_CHILD | WS_TABSTOP
-    PUSHBUTTON "ביטול", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
+    LTEXT "Line number:", 0x155, 5, 12, 41, 12, WS_CHILD | WS_TABSTOP | ES_NUMBER
+    DEFPUSHBUTTON "OK", IDOK, 75, 30, 40, 15, WS_CHILD | WS_TABSTOP
+    PUSHBUTTON "Cancel", IDCANCEL, 120, 30, 40, 15, WS_CHILD | WS_TABSTOP
 END
 
 IDD_ABOUTBOX DIALOGEX 22, 16, 284, 170
@@ -142,7 +142,8 @@ END
 
 STRINGTABLE
 BEGIN
-    STRING_LICENSE "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
+    STRING_LICENSE "תוכנית זו היא תוכנה חופשית; אתה יכול להפיצו מחדש ו / או לשנות אותו תחת תנאי הרישיון הציבורי הכללי של גנו כפי שפורסם על ידי קרן התוכנה החופשית; או גירסה 2 של הרישיון, או (לפי בחירתך) כל גרסה מאוחרת יותר. \ r \ n \ r \ n תוכנית זו מופצת בתקווה שזה יהיה שימושי, אך ללא אחריות כלשהי; אפילו ללא אחריות מרומזת של סחירות או התאמה למטרה מסוימת. עיין ברישיון הציבורי הכללי של GNU לפרטים נוספים. \ R \ n \ r \ n היית אמור לקבל עותק של הרישיון הציבורי הכללי של GNU יחד עם תוכנית זו; אם לא, לכתוב את קרן תוכנה חופשית, Inc, 51 פרנקלין רחוב, קומה 5, בוסטון, MA 02110-1301 ארה""ב.
+"
 END
 
 STRINGTABLE
