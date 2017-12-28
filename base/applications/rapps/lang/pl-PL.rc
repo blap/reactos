@@ -1,12 +1,4 @@
-/*
- *    Translated by Caemyr - Olaf Siejka (Aug, 2009)
- *    Use ReactOS forum PM or IRC to contact me
- *    Updated by Saibamen - Adam Stachowicz (saibamenppl@gmail.com) (Apr, 2011)
- *    http://www.reactos.org
- *    IRC: irc.freenode.net #reactos-pl;
- */
-
-LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
 
 IDR_MAINMENU MENU
 BEGIN
@@ -71,7 +63,7 @@ BEGIN
     AUTOCHECKBOX "Zap&isuj dziennik instalacji i usuwania programów", IDC_LOG_ENABLED, 15, 46, 219, 12
     GROUPBOX "Pobieranie", -1, 4, 65, 240, 51
     LTEXT "Katalog dla pobranych plików:", -1, 16, 75, 100, 9
-    EDITTEXT IDC_DOWNLOAD_DIR_EDIT, 15, 86, 166, 12, WS_CHILD | WS_VISIBLE | WS_GROUP
+    EDITTEXT IDC_DOWNLOAD_DIR_EDIT, 15, 86, 166, 12, WS_CHILD | WS_VISIBLE | WS_GROUP | ES_AUTOHSCROLL
     PUSHBUTTON "&Wybierz", IDC_CHOOSE, 187, 85, 50, 14
     AUTOCHECKBOX "&Usuń instalatory programów po ich zainstalowaniu", IDC_DEL_AFTER_INSTALL, 16, 100, 218, 12
     GROUPBOX "Proxy", -1, 4, 116, 240, 76
@@ -98,8 +90,8 @@ BEGIN
     PUSHBUTTON "Anuluj", IDCANCEL, 150, 78, 60, 14
 END
 
-IDD_DOWNLOAD_DIALOG DIALOGEX 0, 0, 220, 72
-STYLE DS_SHELLFONT | DS_CENTER | WS_BORDER | WS_CAPTION | WS_POPUP | WS_SYSMENU | WS_VISIBLE
+IDD_DOWNLOAD_DIALOG DIALOGEX 0, 0, 220, 220
+STYLE DS_SHELLFONT | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION | WS_VISIBLE 
 CAPTION "Pobierz %ls..."
 FONT 8, "MS Shell Dlg"
 BEGIN
