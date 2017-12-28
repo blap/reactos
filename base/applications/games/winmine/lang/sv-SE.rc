@@ -1,4 +1,4 @@
-LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
 
 STRINGTABLE
 BEGIN
@@ -22,7 +22,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "A&vsluta\tAlt+X", IDM_EXIT
     END
-    POPUP "&Info"
+    POPUP "Info"
     BEGIN
         MENUITEM "&Snabbaste tider...", IDM_TIMES
         MENUITEM "&Om", IDM_ABOUT
@@ -63,7 +63,7 @@ CAPTION "Anpassat spel"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Rader", -1, 5, 5, 30, 10
-    LTEXT "Kolumner", -1, 5, 35, 35, 10
+    LTEXT "Kolumner", -1, 5, 35, 30, 10
     LTEXT "Minor", -1, 5, 65, 30, 10
     EDITTEXT IDC_EDITROWS, 5, 15, 20, 12, ES_NUMBER
     EDITTEXT IDC_EDITCOLS, 5, 45, 20, 12, ES_NUMBER
