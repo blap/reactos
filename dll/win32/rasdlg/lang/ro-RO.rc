@@ -1,10 +1,4 @@
-/* 
- * FILE:       dll/win32/rasdlg/lang/ro-RO.rc
- *             ReactOS Project (http://www.reactos.org)
- * TRANSLATOR: Ștefan Fulea (stefan dot fulea at mail dot md)
- */
-
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 102 DIALOGEX 0, 0, 255, 265
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
@@ -62,8 +56,8 @@ BEGIN
     LTEXT "&Criptarea datelor:", 1546, 7, 5, 247, 10
     COMBOBOX 1495, 7, 17, 247, 76, CBS_DROPDOWNLIST | WS_VSCROLL | NOT WS_TABSTOP
     AUTORADIOBUTTON "Protocolul de Autentificare E&xtensibil (EAP)", 1544, 17, 47, 226, 8, WS_GROUP
-    LTEXT "Tipul de EAP", -1, 18, 64, 45, 8, NOT WS_VISIBLE | NOT WS_GROUP
-    COMBOBOX 1034, 63, 62, 181, 42, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
+    LTEXT "Tipul de EAP", -1, 18, 64, 35, 8, NOT WS_VISIBLE | NOT WS_GROUP
+    COMBOBOX 1034, 53, 62, 191, 42, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "P&roprietăți", 1035, 184, 77, 60, 14
     AUTORADIOBUTTON "P&ermite aceste protocoale", 1545, 17, 92, 224, 10
     AUTOCHECKBOX "&Parolă necriptată  (PAP)", 1491, 28, 105, 215, 10, BS_TOP | BS_MULTILINE | WS_GROUP
@@ -326,7 +320,7 @@ BEGIN
     COMBOBOX 1153, 76, 7, 148, 42, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
     AUTOCHECKBOX "N&egociază tipul liniei", 1150, 23, 26, 199, 10, BS_TOP | BS_MULTILINE | WS_GROUP
     GROUPBOX "    ", 1152, 8, 48, 214, 51, WS_GROUP
-    AUTOCHECKBOX "Utili&zează protocol proprietar vechi", 1149, 17, 48, 112, 10, BS_TOP | BS_MULTILINE
+    AUTOCHECKBOX "Utili&zează protocol proprietar vechi", 1149, 17, 48, 102, 10, BS_TOP | BS_MULTILINE
     LTEXT "&Canale de utilizare:", 1154, 16, 65, 100, 8, NOT WS_GROUP
     EDITTEXT 1151, 119, 61, 94, 14, ES_AUTOHSCROLL
     AUTOCHECKBOX "&Activează compresia oferită de modem", 1148, 16, 82, 198, 10, BS_TOP | BS_MULTILINE
@@ -630,8 +624,8 @@ BEGIN
     AUTORADIOBUTTON "&Avansată (configurație particularizată)", 1541, 14, 102, 198, 8, BS_NOTIFY
     LTEXT "&Validează identitatea mea astfel:", 1537, 26, 29, 187, 8, NOT WS_GROUP
     COMBOBOX 1178, 26, 40, 184, 78, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    AUTOCHECKBOX "&Utilizează automat datele de autentificare din ReactOS (și domeniul dacă e cazul)", 1174, 26, 58, 184, 18, BS_TOP | BS_MULTILINE
-    AUTOCHECKBOX "Solicită c&riptarea datelor\n(deconectează dacă nu este posibil)", 1169, 26, 82, 183, 18, BS_TOP | BS_MULTILINE
+    AUTOCHECKBOX "&Utilizează automat datele de autentificare din ReactOS (și domeniul dacă e cazul)", 1174, 26, 58, 184, 20, BS_TOP | BS_MULTILINE
+    AUTOCHECKBOX "Solicită c&riptarea datelor\n(deconectează dacă nu este posibil)", 1169, 26, 82, 183, 10, BS_TOP | BS_MULTILINE
     LTEXT "Utilizarea acestor opțiuni cere cunoștințe ale protocoalelor de securitate.", 1539, 15, 114, 134, 20
     PUSHBUTTON "&Opțiuni…", 1180, 151, 115, 60, 14
     GROUPBOX "Autentificare interactivă și automatizată", 1177, 8, 146, 215, 62, WS_GROUP
@@ -756,7 +750,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "După conectare, unele servere de linie comutată vă pot cere o autentificare interactivă. Puteți executa un script pentru a răspunde automat.", 1339, 5, 3, 309, 27
     AUTOCHECKBOX "&Afișează fereastra terminal", 1462, 15, 31, 162, 10
-    AUTOCHECKBOX "E&xecută scriptul:", 1463, 15, 45, 78, 10
+    AUTOCHECKBOX "E&xecută scriptul:", 1463, 15, 45, 58, 10
     COMBOBOX 1334, 30, 60, 275, 88, CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "&Editare…", 1335, 180, 77, 60, 14
     PUSHBUTTON "Spe&cificare…", 1465, 244, 77, 60, 14
@@ -839,7 +833,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Securitate"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Politica de autentificare și criptare", 1367, 6, 8, 216, 98, WS_GROUP
+    GROUPBOX "Politica de autentificare și criptare", 1367, 7, 8, 200, 98, WS_GROUP
     AUTORADIOBUTTON "Acceptă &orice autentificare, inclusiv necriptată", 1370, 14, 24, 183, 10
     AUTORADIOBUTTON "Acceptă &doar autentificarea criptată", 1373, 14, 39, 183, 10
     AUTORADIOBUTTON "Acceptă doar autentificare criptată &MS", 1374, 14, 53, 184, 10
@@ -848,7 +842,7 @@ BEGIN
     AUTOCHECKBOX "Utilizează n&umele și parola utilizatorului curent", 1366, 31, 91, 165, 10
     PUSHBUTTON "&Elimină parolele", 1369, 6, 114, 100, 14, WS_GROUP
     PUSHBUTTON "A&vansate…", 1368, 109, 114, 60, 14, NOT WS_VISIBLE | WS_DISABLED
-    AUTOCHECKBOX "Detectea&ză partajarea de fișiere și imprimante înainte de apelare", 1365, 7, 134, 218, 10, NOT WS_VISIBLE | WS_DISABLED
+    AUTOCHECKBOX "Detect &file and print sharing before dialing", 1365, 14, 134, 193, 10, NOT WS_VISIBLE | WS_DISABLED
 END
 
 183 DIALOGEX 6, 18, 317, 144
@@ -908,14 +902,14 @@ BEGIN
     EDITTEXT 1393, 97, 87, 115, 14, ES_PASSWORD | ES_AUTOHSCROLL
     LTEXT "&Domeniu:", 1395, 7, 108, 53, 8, NOT WS_GROUP
     EDITTEXT 1392, 97, 105, 115, 14, ES_UPPERCASE | ES_AUTOHSCROLL
-    AUTOCHECKBOX "Păstrea&ză numele și parola de utilizator", 1391, 65, 125, 143, 10, BS_TOP | BS_MULTILINE
+    AUTOCHECKBOX "&Save user name and  password", 1391, 85, 125, 123, 10, BS_TOP | BS_MULTILINE
     DEFPUSHBUTTON "Con&firmă", 1, 87, 146, 60, 14, WS_GROUP
     PUSHBUTTON "A&nulează", 2, 151, 146, 60, 14
     CONTROL "", 1398, "STATIC", SS_ETCHEDHORZ | WS_GROUP, 7, 140, 205, 1
     LTEXT "Specificați (opțional) un nume de domeniu.\nNumele de domenii nu sunt obligatorii pentru conexiunile la Internet.", -1, 8, 38, 209, 26
 END
 
-502 DIALOGEX 20, 60, 245, 73
+502 DIALOGEX 20, 60, 215, 73
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Opțiuni PPP"
 FONT 8, "MS Shell Dlg"
@@ -923,8 +917,8 @@ BEGIN
     AUTOCHECKBOX "&Activează extensiile LCP", 1423, 9, 7, 200, 10, BS_TOP | BS_MULTILINE
     AUTOCHECKBOX "A&ctivează rutina de compresie", 1424, 9, 22, 201, 10, BS_TOP | BS_MULTILINE
     AUTOCHECKBOX "N&egociază legături simple în cazul legăturilor multiple", 1557, 9, 37, 202, 10, BS_TOP | BS_MULTILINE
-    DEFPUSHBUTTON "Con&firmă", 1, 102, 53, 60, 14
-    PUSHBUTTON "A&nulează", 2, 178, 53, 60, 14
+    DEFPUSHBUTTON "Con&firmă", 1, 82, 53, 60, 14
+    PUSHBUTTON "A&nulează", 2, 148, 53, 60, 14
 END
 
 509 DIALOGEX 0, 0, 317, 143
@@ -935,7 +929,7 @@ BEGIN
     LTEXT "Specificați rolul acestui calculator:", -1, 10, 5, 275, 9
     AUTORADIOBUTTON "&Gazdă", 1483, 31, 20, 265, 10, BS_TOP | BS_MULTILINE | WS_GROUP
     AUTORADIOBUTTON "&Oaspete", 1484, 31, 44, 265, 10, BS_TOP | BS_MULTILINE
-    LTEXT "Acest calculator deține informații pe care doriți să le accesați.", -1, 45, 31, 253, 13, NOT WS_GROUP | WS_TABSTOP
+    LTEXT "This computer has the information you want to access.", -1, 43, 31, 253, 13, NOT WS_GROUP | WS_TABSTOP
     LTEXT "Acest calculator este utilizat pentru a accesa informații din calculatorul gazdă.", -1, 43, 56, 253, 23, NOT WS_GROUP
 END
 
@@ -954,7 +948,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     GROUPBOX "Privelegii de autentificare", 1582, 8, 10, 213, 63
     LTEXT "Ne-administratorilor le este permisă crearea sau modificarea conexiunilor înainte de autentificare.", 1581, 16, 21, 194, 30
-    AUTOCHECKBOX "&Permite crearea și modificarea conexiunilor înainte de autentificare", 1497, 16, 46, 195, 18, BS_TOP | BS_MULTILINE
+    AUTOCHECKBOX "Allo&w creating and modifying connections before logon", 1497, 16, 56, 195, 10, BS_TOP | BS_MULTILINE
 END
 
 532 DIALOGEX 0, 0, 263, 263
@@ -1034,13 +1028,13 @@ CAPTION "Conectare %1"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
-    LTEXT "N&umele de utilizator:", 1413, 12, 67, 87, 8
+    LTEXT "Nume utilizator:", 1413, 10, 67, 87, 8
     EDITTEXT 1104, 103, 63, 154, 14, ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 9, 84, 248, 1
     LTEXT "Ap&elează:", 1412, 11, 96, 48, 8
     COMBOBOX 1416, 103, 92, 154, 112, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
     LTEXT "Apelează &din:", 1415, 10, 114, 46, 8
-    COMBOBOX 1414, 102, 110, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
+    COMBOBOX 1414, 103, 110, 87, 112, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     PUSHBUTTON "&Reguli de apel", 1108, 193, 110, 64, 14
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 7, 130, 250, 1
     DEFPUSHBUTTON "&Apelează", 1590, 6, 136, 60, 14
@@ -1132,7 +1126,7 @@ BEGIN
     CONTROL 1678, 1100, "STATIC", SS_BITMAP, 0, 0, 265, 50
     LTEXT "N&umele de utilizator:", 1413, 10, 67, 91, 10
     EDITTEXT 1104, 104, 64, 154, 14, ES_AUTOHSCROLL
-    LTEXT "&Domeniul:", 1110, 11, 86, 91, 8
+    LTEXT "&Domeniul:", 1110, 10, 86, 91, 8
     EDITTEXT 1102, 104, 83, 154, 14, ES_UPPERCASE | ES_AUTOHSCROLL
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 10, 103, 248, 1
     LTEXT "Ap&elează:", 1412, 10, 115, 91, 8
@@ -1214,7 +1208,7 @@ BEGIN
     LTEXT "TC&P:", -1, 7, 100, 28, 8
     EDITTEXT 1569, 50, 97, 162, 14, ES_AUTOHSCROLL
     LTEXT "U&DP:", -1, 7, 121, 30, 8
-    EDITTEXT 1551, 51, 117, 162, 14, ES_AUTOHSCROLL
+    EDITTEXT 1551, 50, 117, 162, 14, ES_AUTOHSCROLL
     DEFPUSHBUTTON "Con&firmă", 1, 90, 144, 60, 14
     PUSHBUTTON "A&nulează", 2, 154, 144, 60, 14
 END
@@ -1303,9 +1297,9 @@ BEGIN
     AUTORADIOBUTTON "&Avansată (particularizată)", 1541, 14, 100, 197, 8, BS_NOTIFY
     LTEXT "&Validează-mi identitatea în felul următor:", 1537, 26, 29, 183, 8, NOT WS_GROUP
     COMBOBOX 1178, 26, 40, 184, 78, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    AUTOCHECKBOX "Utilizează a&utomat numele și parola de utilizator ReactOS (și domeniul dacă există)", 1174, 26, 59, 182, 18, BS_TOP | BS_MULTILINE
-    AUTOCHECKBOX "Solicită &criptarea datelor (deconectează dacă nu este posibil)", 1169, 26, 81, 182, 18, BS_TOP | BS_MULTILINE
-    LTEXT "Utilizarea acestor opțiuni cere cunoștințe ale protocoalelor de securitate.", 1539, 26, 111, 182, 18
+    AUTOCHECKBOX "Utilizează a&utomat numele și parola de utilizator ReactOS (și domeniul dacă există)", 1174, 26, 59, 182, 20, BS_TOP | BS_MULTILINE
+    AUTOCHECKBOX "Solicită c&riptarea datelor\n(deconectează dacă nu este posibil)", 1169, 26, 83, 182, 10, BS_TOP | BS_MULTILINE
+    LTEXT "Utilizarea acestor opțiuni cere cunoștințe ale protocoalelor de securitate.", 1539, 26, 111, 136, 20
     PUSHBUTTON "&Opțiuni…", 1180, 151, 134, 60, 14
     PUSHBUTTON "Opțiuni I&PSec…", 1598, 126, 163, 85, 14
 END
@@ -1340,8 +1334,8 @@ BEGIN
     PUSHBUTTON "Spe&cificare…", 1639, 153, 108, 60, 14
     LTEXT "&Limită dimensiune:", -1, 14, 133, 67, 8
     EDITTEXT 1640, 86, 130, 50, 14, ES_AUTOHSCROLL | ES_NUMBER
-    LTEXT "kocteți", -1, 140, 133, 25, 8
-    PUSHBUTTON "Restabilește &valori implicite", 1643, 115, 197, 105, 14
+    LTEXT "kocteți", -1, 140, 133, 20, 8
+    PUSHBUTTON "&Valori implicite", 1643, 135, 197, 85, 14
 END
 
 572 DIALOGEX 0, 0, 230, 215
@@ -1462,7 +1456,7 @@ BEGIN
     LTEXT "Introduceți n&umele gazdei sau adresa IP a destinației:\n(de ex. reactos.org sau 145.52.0.1)", 1430, 7, 5, 217, 18
     EDITTEXT 1427, 7, 25, 215, 14, ES_AUTOHSCROLL
     GROUPBOX "Preconectare", 1431, 9, 48, 213, 78
-    LTEXT "Înainte de a încerca stabilirea aceastei conexiuni virtuale, este posibilă mai întâi stabilirea unei conexiuni la o rețea publică, cum ar fi rețeaua Internet.", 1432, 17, 60, 199, 24
+    LTEXT "ReactOS can first connect the public network, such as the Internet, before trying to establish this virtual connection.", 1432, 17, 63, 199, 24
     AUTOCHECKBOX "&Prestabilește această conexiune:", 1428, 19, 89, 183, 10
     COMBOBOX 1429, 29, 103, 182, 87, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | NOT WS_TABSTOP
     AUTOCHECKBOX "Afișea&ză pictogramă în zona de notificare pe durata conectării", 1120, 10, 192, 213, 13
@@ -1541,7 +1535,7 @@ BEGIN
     PUSHBUTTON "Înlo&cuiește", 1472, 141, 36, 60, 14
     LTEXT "Text exemplu", 1473, 7, 57, 193, 8
     LISTBOX 1474, 7, 68, 193, 145, WS_VSCROLL | WS_TABSTOP
-    PUSHBUTTON "S&us", 1475, 206, 68, 51, 14, BS_BITMAP | WS_GROUP
+    PUSHBUTTON "", 1475, 206, 68, 51, 14, BS_BITMAP | WS_GROUP
     PUSHBUTTON "J&os", 1476, 206, 86, 51, 14, BS_BITMAP
     PUSHBUTTON "&Elimină", 1477, 141, 215, 60, 14
     CONTROL "", 1479, "STATIC", SS_ETCHEDHORZ, 7, 233, 249, 1
@@ -1592,7 +1586,7 @@ BEGIN
     AUTORADIOBUTTON "Rețea privată prin Int&ernet.", 1489, 24, 34, 206, 10, NOT WS_TABSTOP
     AUTORADIOBUTTON "Conectare &directă la un alt calculator.", 1490, 24, 59, 157, 10, NOT WS_TABSTOP
     AUTORADIOBUTTON "Conectare prin legătură de &bandă largă.", 1491, 24, 83, 273, 10, NOT WS_TABSTOP
-    LTEXT "Conectează utilizând linia telefonică (modem sau ISDN).", -1, 45, 21, 256, 8
+    LTEXT "Conectează utilizând linia telefonică (modem sau ISDN).", -1, 45, 21, 156, 8
     LTEXT "Crează o conexiune de Rețea Virtuală Privată (VPN) prin Internet.", -1, 45, 46, 266, 8
     LTEXT "Conectare prin portul serial, paralel sau infraroșu.", -1, 45, 71, 266, 8
     LTEXT "Conectare prin legătura de bandă largă.", -1, 45, 95, 266, 8
@@ -2035,7 +2029,7 @@ BEGIN
     421 "Recepția rezultatelor de înregistrare…\0"
     422 "Transmiterea informațiilor de retroapel…\0"
     423 "Transmiterea noii parole…\0"
-    424 "Calcularea vitezei legăturii…\0"
+    424 "424   (IBM EBCDIC - ebraic)"
     425 "Verificarea stării de autentificare…\0"
     426 "Înregistrarea calculatorului în rețea…\0"
     427 "Reîncercarea autentificării…\0"
@@ -2048,7 +2042,7 @@ BEGIN
     434 "Apelarea %1…\0"
     435 "Conectarea prin X.25 la %1…\0"
     436 "Postconectarea prin %1…\0"
-    437 "Preconectarea prin %1…\0"
+    437 "437   (OEM - SUA)"
     438 "Conectat.\0"
     439 "Dispozitiv conectat.\0"
     440 "Deconectat.\0"
@@ -2111,7 +2105,7 @@ BEGIN
     497 "X.25 PAD\0"
     498 "Puteți permite altor calculatoare accesarea resurselor prin această conexiune de linie comutată.\0"
     499 "Alegerea serverului VPN\0"
-    500 "Apelarea la cerere nu a putut fi activată.\0"
+    500 "500   (IBM EBCDIC - internațional)"
     501 "Care este numele sau adresa serverului VPN?\0"
     502 "Apelarea la cerere nu a putut fi dezactivată.\0"
     503 "Rețea publică\0"
