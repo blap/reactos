@@ -1,9 +1,9 @@
 /* FontSub by Katayama Hirofumi MZ
- *
+ * 
  * To the extent possible under law, the person who associated CC0 with
  * FontSub has waived all copyright and related or neighboring rights
  * to FontSub.
- *
+ * 
  * You should have received a copy of the CC0 legalcode along with this
  * work.  If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
  */
@@ -11,7 +11,7 @@
 /* UTF-8 */
 #pragma code_page(65001)
 
-LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_RUSSIAN, SUBLANG_RUSSIAN_RUSSIA
 
 1 MENU
 BEGIN
@@ -55,23 +55,23 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_TITLE,          "Редактор таблицы соответствия шрифтов"
-    IDS_FONTNAME,       "Шрифт"
-    IDS_SUBSTITUTE,     "Замена"
-    IDS_ENTERNAME,      "(Пожалуйста, выберите шрифт...)"
-    IDS_IMPORT,         "Импорт"
-    IDS_EXPORT,         "Экспорт"
-    IDS_CANTIMPORT,     "Не удалось импортировать."
-    IDS_CANTEXPORT,     "Не удалось экспортировать."
-    IDS_INPFILTER,      "Файлы реестра (*.reg)|*.reg|Все файлы (*.*)|*.*|"
-    IDS_OUTFILTER,      "Файлы реестра (*.reg)|*.reg|"
-    IDS_QUERYUPDATE,    "Информация о соответствии шрифтов была обновлена.\r\nОбновить значения реестра сейчас?"
-    IDS_ALREADYEXISTS,  "Шрифт с таким именем уже используется."
-    IDS_ENTERNAME2,     "Введите имя шрифта."
-    IDS_QUERYDELETE,    "Вы действительно хотите удалить этот элемент?"
-    IDS_CANTOPENKEY,    "Не удалось открыть ключ реестра."
-    IDS_REBOOTNOW,      "Реестр был обновлен. Перезагрузить систему сейчас?"
-    IDS_ABOUT,          "FontSub (Редактор таблицы соответствия шрифтов) Версия 0.5\r\nот Katayama Hirofumi MZ и команды ReactOS.\r\n\r\nДанное программное обеспечение выпущено\r\nпод лицензией CC0 1.0."
+    IDS_TITLE,          "Font Substitutes Editor"
+    IDS_FONTNAME,       "Font Name"
+    IDS_SUBSTITUTE,     "Substitute"
+    IDS_ENTERNAME,      "(Please enter a font name...)"
+    IDS_IMPORT,         "Import"
+    IDS_EXPORT,         "Export"
+    IDS_CANTIMPORT,     "Could not import."
+    IDS_CANTEXPORT,     "Could not export."
+    IDS_INPFILTER,      "Registry Files (*.reg)|*.reg|All Files (*.*)|*.*|"
+    IDS_OUTFILTER,      "Registry Files (*.reg)|*.reg|"
+    IDS_QUERYUPDATE,    "Substitutes info has been modified. Update registry now?"
+    IDS_ALREADYEXISTS,  "The same name already exists."
+    IDS_ENTERNAME2,     "Enter the font name."
+    IDS_QUERYDELETE,    "Do you really want to delete this item?"
+    IDS_CANTOPENKEY,    "Could not open the registry key."
+    IDS_REBOOTNOW,      "Registry was updated. Reboot system now?"
+    IDS_ABOUT,          "FontSub (Font Substitute Editor) Version 0.5\r\nby Katayama Hirofumi MZ and The ReactOS Team\r\n\r\nThis software was released under CC0 1.0 license."
 END
 
 IDD_ADD DIALOGEX 0, 0, 315, 65
