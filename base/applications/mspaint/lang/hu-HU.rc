@@ -1,4 +1,12 @@
-LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
+/*
+ * PROJECT:     PAINT for ReactOS
+ * LICENSE:     LGPL
+ * FILE:        base/applications/mspaint/lang/en-US.rc
+ * PURPOSE:     US-English Language resource file
+ * TRANSLATORS: first times touched from en-GB.rc file by Mario Kacmar
+ */
+
+LANGUAGE LANG_HUNGARIAN, SUBLANG_HUNGARIAN_HUNGARY
 
 ID_MENU MENU
 BEGIN
