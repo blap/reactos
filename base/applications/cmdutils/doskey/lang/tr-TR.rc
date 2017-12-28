@@ -1,26 +1,24 @@
-/* TRANSLATOR: 2015 Erdem Ersoy (eersoy93) (erdemersoy@live.com) */
-
-LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
 
 STRINGTABLE
 BEGIN
-    IDS_HELP "Komut yatacı düzenleme ayarlarını, geçmişi ve makroları yönetir.\n\
+    IDS_HELP "Manages command-line editing settings, history, and macros.\n\
 \n\
-DOSKEY [/INSERT | /OVERSTRIKE] [/EXENAME=exe] [/HISTORY] [/LISTSIZE=boyut]\n\
-       [/REINSTALL] [/MACROS[:exe | :ALL]] [/MACROFILE=kütük] [makro adı=[metin]]\n\
+DOSKEY [/INSERT | /OVERSTRIKE] [/EXENAME=exe] [/HISTORY] [/LISTSIZE=size]\n\
+       [/REINSTALL] [/MACROS[:exe | :ALL]] [/MACROFILE=file] [macroname=[text]]\n\
 \n\
-  /INSERT             Ekleme kipini etkinleştirir.\n\
-  /OVERSTRIKE         Ekleme kipini edilginleştirir.\n\
-  /EXENAME=exe adı    İlgili geçmişi ve makroları görüntülemek ya da değiştirmek\n\
-                      için izlencenin adını ayarlar. Ön tanımlı cmd.exe'dir.\n\
-  /HISTORY            Komut geçmişini görüntüler.\n\
-  /LISTSIZE=boyut     Geçmiş arabelleği başına komut sayısını ayarlar.\n\
-  /REINSTALL          Komut geçmişini siler.\n\
-  /MACROS             Makro tanımlarını görüntüler.\n\
-  /MACROS:exe adı     Belirli bir izlence için makro tanımlarını görüntüler.\n\
-  /MACROS:ALL         Tüm izlenceler için makro tanımlarını görüntüler.\n\
-  /MACROFILE=kütük    Bir kütükten makro tanımlarını yükler.\n\
-  makro adı           Oluşturmak için bir makro adını belirtir.\n\
-  metin               Makro için yerine geçme metnini belirtir.\n"
+  /INSERT             Enables insert mode.\n\
+  /OVERSTRIKE         Disables insert mode.\n\
+  /EXENAME=exename    Sets the name of the program to view/change history\n\
+                      and macros for. The default is cmd.exe.\n\
+  /HISTORY            Displays the command history.\n\
+  /LISTSIZE=size      Sets the number of commands per history buffer.\n\
+  /REINSTALL          Clears the command history.\n\
+  /MACROS             Displays macro definitions.\n\
+  /MACROS:exename     Displays macro definitions for a specific program.\n\
+  /MACROS:ALL         Displays macro definitions for all programs.\n\
+  /MACROFILE=file     Loads macro definitions from a file.\n\
+  macroname           Specifies the name of a macro to create.\n\
+  text                Specifies the replacement text for the macro.\n"
     IDS_INVALID_MACRO_DEF "Geçersiz makro tanımı: %s\n"
 END
