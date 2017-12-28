@@ -11,7 +11,7 @@
 /* UTF-8 */
 #pragma code_page(65001)
 
-LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+LANGUAGE LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN
 
 1 MENU
 BEGIN
@@ -55,29 +55,29 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_TITLE,          "フォント代替エディタ"
-    IDS_FONTNAME,       "フォント名"
-    IDS_SUBSTITUTE,     "代替名"
-    IDS_ENTERNAME,      "(フォント名を入力して下さい...)"
-    IDS_IMPORT,         "インポート"
-    IDS_EXPORT,         "エクスポート"
-    IDS_CANTIMPORT,     "インポートできません。"
-    IDS_CANTEXPORT,     "エクスポートできません。"
-    IDS_INPFILTER,      "レジストリ ファイル (*.reg)|*.reg|すべてのファイル (*.*)|*.*|"
-    IDS_OUTFILTER,      "レジストリ ファイル (*.reg)|*.reg|"
-    IDS_QUERYUPDATE,    "代替情報は変更されています。レジストリを更新しますか？"
-    IDS_ALREADYEXISTS,  "すでに同じ名前が存在します。"
-    IDS_ENTERNAME2,     "フォント名を入力して下さい。"
-    IDS_QUERYDELETE,    "本当にこの項目を削除したいですか？"
-    IDS_CANTOPENKEY,    "レジストリキーが開けませんでした。"
-    IDS_REBOOTNOW,      "レジストリが更新されました。Windowsを再起動しますか？"
+    IDS_TITLE,          "Font Substitutes Editor"
+    IDS_FONTNAME,       "Font Name"
+    IDS_SUBSTITUTE,     "Substitute"
+    IDS_ENTERNAME,      "(Please enter a font name...)"
+    IDS_IMPORT,         "Import"
+    IDS_EXPORT,         "Export"
+    IDS_CANTIMPORT,     "Could not import."
+    IDS_CANTEXPORT,     "Could not export."
+    IDS_INPFILTER,      "Registry Files (*.reg)|*.reg|All Files (*.*)|*.*|"
+    IDS_OUTFILTER,      "Registry Files (*.reg)|*.reg|"
+    IDS_QUERYUPDATE,    "Substitutes info has been modified. Update registry now?"
+    IDS_ALREADYEXISTS,  "The same name already exists."
+    IDS_ENTERNAME2,     "Enter the font name."
+    IDS_QUERYDELETE,    "Do you really want to delete this item?"
+    IDS_CANTOPENKEY,    "Could not open the registry key."
+    IDS_REBOOTNOW,      "Registry was updated. Reboot system now?"
     IDS_ABOUT,          "FontSub (Font Substitute Editor) Version 0.5\r\nby Katayama Hirofumi MZ and The ReactOS Team\r\n\r\nThis software was released under CC0 1.0 license."
 END
 
 IDD_ADD DIALOGEX 0, 0, 315, 65
 STYLE DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
 CAPTION "代替項目を追加する"
-FONT 10, "MS UI Gothic"
+FONT 10, "MS Shell Dlg"
 BEGIN
     CONTROL "フォント名(&N):", -1, "STATIC", SS_RIGHT | SS_CENTERIMAGE | WS_CHILD | WS_VISIBLE | WS_GROUP, 5, 5, 55, 15
     CONTROL "", cmb1, "ComboBoxEx32", CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 70, 6, 120, 120
@@ -92,7 +92,7 @@ END
 IDD_EDIT DIALOGEX 0, 0, 315, 65
 STYLE DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
 CAPTION "代替項目を編集する"
-FONT 10, "MS UI Gothic"
+FONT 10, "MS Shell Dlg"
 BEGIN
     CONTROL "フォント名(&N):", -1, "STATIC", SS_RIGHT | SS_CENTERIMAGE | WS_CHILD | WS_VISIBLE | WS_GROUP, 5, 5, 55, 15
     CONTROL "", edt1, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_BORDER | WS_TABSTOP, 70, 6, 120, 14
