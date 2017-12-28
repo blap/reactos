@@ -1,21 +1,14 @@
-/*
- * PROJECT:     ReactOS RAPPS
- * FILE:        base/applications/cmdutils/more/lang/sv-SE.rc
- * PURPOSE:     Swedish resource file
- * Translation: Jaix Bly
- */
-
-LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "Visa data sida-efter-sida på skärmen.\n\n\
-  MORE < [Enhet:][Mapp]Filnamn\n\
-  Kommando | MORE \n\
-  MORE [Enhet:][Mapp]Filnamn\n\n\
-  [Enhet:][Mapp]Filnamn    En fil, Välj innehåll som skall visas.\n\
-  Kommando\t\t     Ett kommando, Välj vad som skall visas.\n\n\
-  vid prompten ""-- Fortsätt --"" du kan trycka valfri knapp för att visa nästa sida.\n"
+    IDS_USAGE "Displays data page-by-page on the screen.\n\n\
+  MORE < [Drive:][Path]File name\n\
+  Command | MORE \n\
+  MORE [Drive:][Path]File name\n\n\
+  [Drive:][Path]File name    A file, whose content shall be displayed.\n\
+  Command\t\t     A command, whose output shall be displayed.\n\n\
+  At the prompt """-- Continue --"" you can press any key to show the next page.\n"
     IDS_CONTINUE "-- Fortsätt --"
     IDS_CONTINUE_PROGRESS "-- Fortsätt (%d%%) --"
     IDS_FILE_ACCESS "Får inte tillgång till filen %s.\n"
