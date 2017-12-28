@@ -1,26 +1,18 @@
-/* Ștefan Fulea (stefan dot fulea at mail dot md) */
-LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 STRINGTABLE
 BEGIN
-    IDS_USAGE "Configurează dispozitive de sistem.\n\n\
-Interogarea stării unui dispozitiv:\n\
-    MODE [dispozitiv] [/STATUS]\n\n\
-Configurarea portului serial:\n\
-    MODE COMm[:] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s]\n\
-                 [to=on|off] [xon=on|off] [odsr=on|off]\n\
-                 [octs=on|off] [dtr=on|off|hs]\n\
-                 [rts=on|off|hs|tg] [idsr=on|off]\n\n\
-Redirecția portului paralel:\n\
-    MODE LPTn[:]=COMm[:]\n\n\
-Selecția unui cod de pagină:\n\
-    MODE CON[:] CP SELECT=yyy\n\n\
-Starea codului de pagină:\n\
-    MODE CON[:] CP [/STATUS]\n\n\
-Modul de afișare:\n\
-    MODE CON[:] [COLS=c] [LINES=n]\n\n\
-Rata de repetiție la menținerea unei taste apăsate:\n\
-    MODE CON[:] [RATE=r DELAY=d]\n"
+    IDS_USAGE "Configure System Devices.\n\n\
+Device Status:     MODE [device] [/STATUS]\n\
+Serial port:       MODE COMm[:] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s]\n\
+                                [to=on|off] [xon=on|off] [odsr=on|off]\n\
+                                [octs=on|off] [dtr=on|off|hs]\n\
+                                [rts=on|off|hs|tg] [idsr=on|off]\n\
+Redirect printing: MODE LPTn[:]=COMm[:]\n\
+Select code page:  MODE CON[:] CP SELECT=yyy\n\
+Code page status:  MODE CON[:] CP [/STATUS]\n\
+Display mode:      MODE CON[:] [COLS=c] [LINES=n]\n\
+Typematic rate:    MODE CON[:] [RATE=r DELAY=d]\n"
 
     IDS_QUERY_SERIAL_FOUND "    Depistat dispozitiv la portul serial - %s\n"
     IDS_QUERY_PRINTER_FOUND "    Depistat dispozitiv de imprimare - %s\n"
@@ -52,8 +44,8 @@ BEGIN
 
     IDS_CONSOLE_STATUS_LINES    "    Linii:             %d\n"
     IDS_CONSOLE_STATUS_COLS     "    Coloane:           %d\n"
-    IDS_CONSOLE_KBD_DELAY       "    Întârziere taste:  %ld\n"
     IDS_CONSOLE_KBD_RATE        "    Rată taste:        %ld\n"
+    IDS_CONSOLE_KBD_DELAY       "    Întârziere taste:  %ld\n"
     IDS_CONSOLE_CODEPAGE        "    Cod de pagină:     %d\n"
 
     IDS_PRINTER_OUTPUT_NOT_REROUTED     "    Ieșirea de imprimantă nu este redirecționată.\n"
@@ -72,4 +64,5 @@ BEGIN
     IDS_ERROR_INVALID_PARITY_BITS "EROARE: Valoare eronată pentru biții de paritate %d:\n"
     IDS_ERROR_INVALID_STOP_BITS "EROARE: Valoare eronată pentru biții delimitori %d:\n"
     IDS_ERROR_NO_MEMORY "ERAORE: Nu există suficientă memorie.\n"
+    IDS_ERROR_SCREEN_LINES_COL "ERROR: The screen cannot be set to the number of lines and columns specified.\n"
 END
