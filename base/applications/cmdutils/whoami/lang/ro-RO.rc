@@ -1,5 +1,4 @@
-/* Translator: Ștefan Fulea (stefan dot fulea at mail dot md) */
-LANGUAGE LANG_ROMANIAN, SUBLANG_DEFAULT
+LANGUAGE LANG_ROMANIAN, SUBLANG_ROMANIAN_ROMANIA
 
 STRINGTABLE
 BEGIN
@@ -38,20 +37,19 @@ BEGIN
     IDS_ERROR_INVALIDSYNTAX "EROARE: Sintaxă eronată.\nTastați ""WHOAMI /?"" pentru informații de utilizare.\n"
     IDS_ERROR_INVALIDARG "EROARE: Argument/opțiune eronat(ă) - «%s».\nTastați ""WHOAMI /?"" pentru informații de utilizare.\n"
     IDS_ERROR_NH_LIST "EROARE: Opțiunea /NH nu poate fi utilizată în formatul LIST.\nTastați ""WHOAMI /?"" pentru informații de utilizare.\n"
-    IDS_HELP "DESCRIERE:\n\
-  Afișează informațiile de utilizator, de grup, și de privilegii pentru un\n\
-  utilizator autentificat local. Dacă nu sunt furnizate argumente, vor fi\n\
-  afișate numele și domeniul utilizatorului curent.\n\
-  \n\
-  Formatele disponibile pentru opțiunea «/fo» sunt «csv», «list», și «table».\n\
-  Argumentul «/nh» ascunde anteturile. Datele sunt implicit afișate tabelar.\n\
-  \n\
-            SINTAXĂ:\n\
+    IDS_HELP "DESCRIPTION:\n\
+  Display user, group and privileges information for the local logged-on user.\n\
+  If no arguments are provided, displays the current domain and user name.\n\
+\n\
+  Available output formats for the '/fo' option are 'csv', 'list' and 'table'.\n\
+  Use '/nh' to hide headers. By default the data is displayed in a table.\n\
+\n\
+SYNTAX:\n\
   whoami [/upn | /fqdn | /logonid] \n\
   whoami {[/user] [/groups] [/priv]} [/fo <Format>] [/nh] \n\
   whoami /all [/fo <Format>] [/nh] \n\
-  \n\
-            EXEMPLE: \n\
+\n\
+EXAMPLES: \n\
   whoami /groups /priv /nh /fo csv \n\
   whoami /logonid \n\
   whoami \n"
